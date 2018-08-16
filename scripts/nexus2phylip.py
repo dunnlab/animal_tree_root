@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import sys
 import os
-from nexus import NexusReader
+from nexus import NexusReader # https://pypi.org/project/python-nexus/
 
 in_filename = sys.argv[1]
 out_phylip = sys.argv[2]
