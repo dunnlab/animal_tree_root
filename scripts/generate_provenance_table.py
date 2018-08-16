@@ -19,7 +19,11 @@ def get_names(file_name):
         names = [t.name for t in phy]
     elif file_name.endswith('.nex'):
         nex = NexusReader(file_name)
-        names = [t for t in nex.taxa]
+        try:
+            names = [t for t in nex.taxa]
+        except AttributeError as e:
+            # when there isn't a separate taxa block, get names from sequences
+            names = [block[0] for block in nex.blocks['data']]
     return names
 
 def get_tax_id(query_name):
