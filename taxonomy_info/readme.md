@@ -13,7 +13,7 @@ cd taxonomy_info/
 # rm *.pickle taxon_table.tsv provenance_table.log
 ./gen_prov_table.sh
 ```
-The script looks in the `considered_data` directory for `.phy` and `.nex` files, and stderr and stdout from the script running gets saved to `provenance_table.log`. The taxonomy table gets saved to `taxon_table.tsv`. 
+The script looks in the `considered_data` directory for `.phy` and `.nex` files, and stderr and stdout from the script running gets saved to `provenance_table.log`. It will try looking up each name from `manual_taxonomy_map.tsv` and the cached names in the pickles saved in this directory befor making queries to NCBI. The taxonomy table gets saved to `taxon_table.tsv`. 
 
 `taxon_table.tsv` is A tab-separated table where each row corresponds to a sample in the matrices that got read in. NCBI ID and Lineage information are `nan` and `na` respectively when the name -> ID search fails. The output table has the following columns gets generated:
 
