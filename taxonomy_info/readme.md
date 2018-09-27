@@ -20,11 +20,11 @@ The script looks in the `considered_data` directory for `.phy` and `.nex` files,
 | Column Name | Description |
 |---|---|
 | `original_matrix` | name of the original matrix file |
-| `matrix_name` | name from the original matrix |
+| `relabelled_name` | If the sample was manually assigned a name, this is it |
+| `clade_assignment` | one of the following, gleaned from the lineage info: Cnidaria, Bilateria, Placozoa, Porifera, Ctenophora, Choanoflagellida, Filasterea, Filasterea, Ichthyosporea, Fungi,  |
 | `ncbi_tax_id` | NCBI Taxonomy ID of the  |
 | `ncbi_taxonomy` | All the lineage info for this sample |
-| `relabelled_name` | If the sample was manually assigned a name, this is it |
-| `clade_assignment` | dummy field right now, currently matches `matrix_name` |
+| `matrix_name` | name from the original matrix |
 
 ### Taxa that need a human eye
 
