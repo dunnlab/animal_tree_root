@@ -56,8 +56,9 @@ def get_names(file_name):
 def get_tax_id(query_name):
     """sanitize query name, search for and return NCBI ID"""
     query_name = query_name.rstrip('_.0123456789')
-    if query_name.endswith('_sp'):
-        query_name[:-3]
+    for trim in ['_sp', '_species']:
+        if query_name.endswith(trim):
+            query_name = query_name[:-len(trim)]
     query_term = re.sub('[ _-]', '+', query_name)
     search = Entrez.esearch(term = query_term, db = "taxonomy", retmode = "xml")
     record = Entrez.read(search)
@@ -91,7 +92,7 @@ def get_manual_entries():
     manual = dict()
     for line in fh:
         tmp = line.rstrip().split()
-        manual[tmp[1]] = tmp[2]
+        manual[tmp[1]] = {'manuscript':tmp[0], 'species':tmp[2]}
     return manual
 
 if __name__ == '__main__':
@@ -114,8 +115,10 @@ if __name__ == '__main__':
             print("Error loading", file_name, ":\n", e)
         for original_name in names_list:
             if original_name in manual_entries:
-                known_ids[original_name] = get_tax_id(manual_entries[original_name])
-            elif original_name not in known_ids:
+                if manual_entries[original_name]['manuscript'] in file_name:
+                    known_ids[original_name] = get_tax_id(manual_entries[original_name]['species'])
+            
+            if original_name not in known_ids:
                 known_ids[original_name] = get_tax_id(original_name)
 
             if known_ids[original_name] not in known_tax:
