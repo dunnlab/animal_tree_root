@@ -1,0 +1,14 @@
+../scripts/prepare_phylip.py -i ../considered_data/Borowiec2015/Best108.nex -o phylips -t ../taxonomy_info/taxon_table.tsv
+../scripts/prepare_phylip.py -i ../considered_data/Borowiec2015/Total1080.nex -o phylips -t ../taxonomy_info/taxon_table.tsv
+../scripts/prepare_phylip.py -i ../considered_data/Chang2015/Chang2015.nex -o phylips -t ../taxonomy_info/taxon_table.tsv
+../scripts/prepare_phylip.py -i ../considered_data/Dunn2008/Dunn2008.nex -o phylips -t ../taxonomy_info/taxon_table.tsv
+../scripts/prepare_phylip.py -i ../considered_data/Hejnol2009/Hejnol2009.nex -o phylips -t ../taxonomy_info/taxon_table.tsv
+../scripts/prepare_phylip.py -i ../considered_data/Moroz2014/ED3a.phy -o phylips -t ../taxonomy_info/taxon_table.tsv
+../scripts/prepare_phylip.py -i ../considered_data/Moroz2014/ED3d.phy -o phylips -t ../taxonomy_info/taxon_table.tsv
+../scripts/prepare_phylip.py -i ../considered_data/Nosenko2013/nonribosomal_9187_smatrix.phy -o phylips -t ../taxonomy_info/taxon_table.tsv
+../scripts/prepare_phylip.py -i ../considered_data/Nosenko2013/ribosomal_11057_smatrix.phy -o phylips -t ../taxonomy_info/taxon_table.tsv
+../scripts/prepare_phylip.py -i ../considered_data/Nosenko2013/ribosomal_14615_smatrix.phy -o phylips -t ../taxonomy_info/taxon_table.tsv
+../scripts/prepare_phylip.py -i ../considered_data/Philippe2009/Philippe2009.nex -o phylips -t ../taxonomy_info/taxon_table.tsv
+../scripts/prepare_phylip.py -i ../considered_data/Ryan2013/genome.opisthokonta.nex -o phylips -t ../taxonomy_info/taxon_table.tsv
+../scripts/prepare_phylip.py -i ../considered_data/Simion2017/supermatrix_97sp_401632pos_1719genes.phy -o phylips -t ../taxonomy_info/taxon_table.tsv
+../scripts/prepare_phylip.py -i ../considered_data/Whelan2015/Datset20_Uncertain_LBAgenesHeteroRemoved_LBAtaxa.phy -o phylips -t ../taxonomy_info/taxon_table.tsv
