@@ -1,0 +1,33 @@
+---
+csl: plos.csl
+output:
+  github_document: default
+  html_document: default
+  pdf_document: default
+bibliography: manuscript.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	message = FALSE,
+	warning = FALSE,
+	echo=FALSE,
+	dpi=300,
+	cache=TRUE
+	)
+```
+
+```{r preliminaries}
+library( tidyverse )
+library( magrittr )
+```
+
+# Rooting the animal tree of life
+
+## Introduction
+
+There has long been uncertainty about the relationship of Ctenophora to other animals [@Wallberg:2004ws].
+
+## Published analyses
+
+## References
