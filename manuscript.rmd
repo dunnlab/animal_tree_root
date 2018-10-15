@@ -29,18 +29,27 @@ unresolved_color = "#6F94CD"
 
 papers = read_tsv( "tables/papers.tsv" )
 datasets = read_tsv( "tables/datasets.tsv" )
-analyses = read_tsv( "tables/analyses.tsv" )
+analyses = 
+	read_tsv( "tables/analyses.tsv", col_types = 'icccccccccclnnnnccc' ) %>%
+	mutate( taxon_sampling = factor( taxon_sampling, levels= c( 'Choanimalia', 'Holozoa', 'Opisthokonta' ) ) )
 
 bootstrap_threshold = 90
 posterior_prob_threshold = 95
 
-analyses$Result = "Unresolved"
-analyses$Result[ ( analyses$Inference == "Bayesian" ) & (analyses$support_porifera_sister >= posterior_prob_threshold) ] = "Porifera-sister"
-analyses$Result[ ( analyses$Inference == "Bayesian" ) & (analyses$support_ctenophora_sister >= posterior_prob_threshold) ] = "Ctenophora-sister"
-analyses$Result = factor( analyses$Result )
+analyses$result = "Unresolved"
+analyses$result[ ( analyses$inference == "Bayesian" ) & (analyses$support_porifera_sister >= posterior_prob_threshold) ] = "Porifera-sister"
+analyses$result[ ( analyses$inference == "Bayesian" ) & (analyses$support_ctenophora_sister >= posterior_prob_threshold) ] = "Ctenophora-sister"
+analyses$result[ ( analyses$inference == "ML" ) &       (analyses$support_porifera_sister >= bootstrap_threshold) ] = "Porifera-sister"
+analyses$result[ ( analyses$inference == "ML" ) &       (analyses$support_ctenophora_sister >= bootstrap_threshold) ] = "Ctenophora-sister"
+analyses$result = factor( analyses$result )
+
+analyses$model_summary = analyses$model_rate_matrix
+long_summary = paste(analyses$model_rate_matrix, analyses$model_equilibrium, sep="+")
+analyses$model_summary[ ! is.na(analyses$model_equilibrium) ] = long_summary[ ! is.na(analyses$model_equilibrium) ]
+analyses$model_summary[ grepl("WAG", analyses$model_summary) ] = "WAG" # Simplify WAG
+analyses$model_summary = factor( analyses$model_summary, levels=c("GTR+CAT", "F81+CAT", "LG", "WAG") )
 
 ```
-
 
 # Rooting the animal tree of life
 
@@ -49,5 +58,14 @@ analyses$Result = factor( analyses$Result )
 There has long been uncertainty about the relationship of Ctenophora to other animals [@Wallberg:2004ws].
 
 ## Published analyses
+
+```{r support}
+
+analyses %>% 
+	ggplot( aes(x=model_summary, y=taxon_sampling, col=result) ) +
+		geom_jitter( width = 0.20, height = 0.20, alpha=0.7, size=2 ) +
+		theme_classic()
+```
+
 
 ## References

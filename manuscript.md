@@ -10,6 +10,8 @@ There has long been uncertainty about the relationship of Ctenophora to other an
 Published analyses
 ------------------
 
+![](manuscript_files/figure-markdown_github/support-1.png)
+
 References
 ----------
 
