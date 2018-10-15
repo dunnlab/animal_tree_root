@@ -22,6 +22,26 @@ library( tidyverse )
 library( magrittr )
 ```
 
+```{r}
+cteno_color = "#F8766D"
+poro_color = "#00BA38"
+unresolved_color = "#6F94CD"
+
+papers = read_tsv( "tables/papers.tsv" )
+datasets = read_tsv( "tables/datasets.tsv" )
+analyses = read_tsv( "tables/analyses.tsv" )
+
+bootstrap_threshold = 90
+posterior_prob_threshold = 95
+
+analyses$Result = "Unresolved"
+analyses$Result[ ( analyses$Inference == "Bayesian" ) & (analyses$support_porifera_sister >= posterior_prob_threshold) ] = "Porifera-sister"
+analyses$Result[ ( analyses$Inference == "Bayesian" ) & (analyses$support_ctenophora_sister >= posterior_prob_threshold) ] = "Ctenophora-sister"
+analyses$Result = factor( analyses$Result )
+
+```
+
+
 # Rooting the animal tree of life
 
 ## Introduction
