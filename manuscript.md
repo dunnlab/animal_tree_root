@@ -2,12 +2,25 @@
 Rooting the animal tree of life
 ===============================
 
+Casey W. Dunn<sup>1</sup>\*, Benjamin Evans<sup>2</sup>, and Yuanning Li<sup>1</sup>
+
+<sup>1</sup>Department of Ecology and Evolutionary Biology, Yale University
+
+<sup>2</sup>Yale Center for Research Computing, Yale University
+
+\* Corresponding author, <casey.dunn@yale.edu>
+
+Abstract
+--------
+
 Introduction
 ------------
 
 There has long been uncertainty about the relationship of Ctenophora to other animals \[1\].
 
 Defining Porifera-sister and Ctenophora-sister... XXX Explain that it is about support for calde of all animals except Ctenophora or Porifera...
+
+![](figures/Figure_overview.png) **Fig XXOverview.** (A) The Ctenophora-sister hypothesis posits that there is a clade (designated by the orange node) that includes all animals except Ctenophora, and that Ctenophora is sister to this clade. (B) The Porifera-sister hypothesis posits that there is a clade (designated by the green node) that includes all animals except Porifera, and that Porifera is sister to this clade. Testing these hypotheses requires evaluating the support for each of these alternative nodes. (C) A ctenophore. (D) A sponge.
 
 Variation across studies
 ------------------------
@@ -57,9 +70,53 @@ Sensitivity to ingroup sampling has recieved less attention than sensitivity to 
 Overview of published analyses
 ------------------------------
 
+### Alignment overlap
+
+### Support for Porifera-sister and Ctenophora-sister
+
 ![](manuscript_files/figure-markdown_github/support-1.png)
 
-A total of 134 analyses were transcribed from the literature.
+A total of 137 analyses were transcribed from the literature.
+
+New analyses of published matrices
+----------------------------------
+
+One of the challenges of interpretting support for the placement of the animal root across studies is that different programs, sofware versions, and settings have been used across studies, and phylogenetic analysis decisions have been approached in very different ways. Here we reanalyze the primary matrices from each study under consistent conditions with iqtree. We selected this tool because it has greater model flexibility than other tools and is very fast.
+
+We
+
+### Comparison of iqtree and phylobayes results
+
+New analyses of new matrices
+----------------------------
+
+The current state of understanding
+----------------------------------
+
+Next steps
+----------
+
+Conclusion
+----------
+
+Methods
+-------
+
+All files associated with this analysis are available at <https://github.com/caseywdunn/animal_root>
+
+### Data wrangling
+
+### Matrix comparison and annotation
+
+### Phylogenetic analyses
+
+Ackowledgements
+---------------
+
+Author contributions
+
+Supplemental Information
+------------------------
 
 Details of published analyses
 -----------------------------
