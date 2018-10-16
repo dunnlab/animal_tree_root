@@ -30,7 +30,7 @@ unresolved_color = "#6F94CD"
 papers = read_tsv( "tables/papers.tsv" )
 datasets = read_tsv( "tables/datasets.tsv" )
 analyses = 
-	read_tsv( "tables/analyses.tsv", col_types = 'icccccccccclnnnnccc' ) %>%
+	read_tsv( "tables/analyses.tsv", col_types = 'iccccccccccclnnnncc' ) %>%
 	mutate( taxon_sampling = factor( taxon_sampling, levels= c( 'Choanimalia', 'Holozoa', 'Opisthokonta' ) ) )
 
 bootstrap_threshold = 90
@@ -67,5 +67,8 @@ analyses %>%
 		theme_classic()
 ```
 
+
+
+A total of `r nrow(analyses)` analyses were transcribed from the literature.
 
 ## References

@@ -12,6 +12,8 @@ Published analyses
 
 ![](manuscript_files/figure-markdown_github/support-1.png)
 
+A total of 134 analyses were transcribed from the literature.
+
 References
 ----------
 
