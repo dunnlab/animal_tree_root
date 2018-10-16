@@ -63,19 +63,36 @@ Defining Porifera-sister and Ctenophora-sister... XXX Explain that it is about s
 
 ### Models of molecular evolution
 
-Exchangability... F81 [@Felsenstein:1981vk] corresponds to equal rates between all states.
+Models of molecular evolution have several components that each consider different aspects of the evolutionary process. The models that have been used to model protein evolution in studies of the animal root have largely differed according to three components: the exchangability matrix $E$, the rate of evolution, and the state equilibrium frequencies $\Pi$.
 
-Equilibrium heterogenaity across sites
+The Exchangeability matrix $E$ describes the rate at which one amino acid changes to another. Exchangability matrices have been used in the studies under consideration here include:
 
-Rate heterogeneity across sites
+- F81 [@Felsenstein:1981vk] corresponds to equal rates between all states. The F81 matrix is also sometimes referred to as the Poisson matrix. It has no free parameters to estimate since all off-diagonal elements are set to 1.
 
-The models that are applied in practice area heavily influenced by engineering and computational costs , as well as convention. For example, on the questions considered here F81 and GTR exchangability matrices have only been used in combination with CAT site heterogeneous models of equilibrium frequency. LG and WAG exchangability matrices have only been used with site homogenous estimates of equilibrium frequency. This is further confused by the abreviations that are used for models. Papers often discuss CAT and WAG models as if they are exclusive, but these particular terms apply to non-exclusive model components-- CAT refers to variation across sites and WAG a particular exchangability matrix. CAT is generally shorthand for F81+CAT and WAG is shorthand for WAG+homogenous equilibrium frequency estimation. One could, though, run a WAG+CAT model.
+- WAG [@Whelan:2001ds] is an emprically derived exchangability matrix based on a dataset of 182 globular protein families. It has no free parameters to estimate since all off-diagonal elements are set according to values estimated from this particular sample dataset.
+
+- LG [@Le:2008fp], like WAG, is an emprically derived exchangability matrix. It is based on a much larger set of genes, and variation in rates across sites was taken into consideration when it was calculated. It has no free parameters to estimate since all off-diagonal elements are set according to values estimated from this particular sample dataset.
+
+- GTR, the General Time Reversible exchangability matrix, has free parameters for all off-diagonal elements that describe the exchangability of different amino acids. It is consrained so that changes are reversible, *i.e.* the rates above the diagonal are the same as those below the diagonal. This leaves 190 parameters that must be estimated from the data long with the other model parameters and the phylogenetic tree topology. This estimation requires a considerable amount of data and computational power, but if successful has the advantage of being based on the dataset at hand rather than a different dataset (as for LG and WAG).
+
+While the exchancheability matrix describes the relative rate of different changes between amino acids, the actual rate can be further scaled. There are couple approaches that have been used in the studies considered here:
+
+- Site homogenous rates. The rates of evolution are assumed to be the same at all sites in the amino acid alignment.
+
+- Gamma rate heterogeneity. Each site is assigned to a different rate class with its own rate value. This accommodates different rates of evolution across different sites. Gamma is used so commonly that sometimes it isn't even specified, making it difficult at times to know if a study uses Gamma or not.
+
+The vector of equilibrium frequencies $\Pi$ describes the stationary frequency of amino acids. There are a few approaches that have been used across the studies considered here:
+
+- Empirical site homogenous. The frequency of each amino acid is observed from the matrix under consideration and applied to homogenously to all sites in the matrix.
+
+- Estimated site homogenous. The frequency of each amino acid is inferred along with other model parameters, under the assumption that it is the same at all sites.
+
+- CAT site heterogeneous [@Lartillot:2004dq]. Each site is assigned to a class with its own equilibrium frequencies. The number of classes, assignment of sites to classes, and equilibrium frequencies within the data are all estimated in a Bayesian framework.
+
+
+Models can be assembled by selecting different options for all these different components. The models that are applied in practice area heavily influenced by engineering and computational costs, as well as convention. For example, on the questions considered here F81 and GTR exchangability matrices have only been used in combination with CAT site heterogeneous models of equilibrium frequency. LG and WAG exchangability matrices have only been used with site homogenous estimates of equilibrium frequency. This is further confused by the abreviations that are used for models. Papers often discuss CAT and WAG models as if they are exclusive, but these particular terms apply to non-exclusive model components-- CAT refers to variation across sites and WAG a particular exchangability matrix. CAT is generally shorthand for F81+CAT and WAG is shorthand for WAG+homogenous equilibrium frequency estimation. One could, though, run a WAG+CAT model.
 
 To avoid confusion on this point, we always specify the exchangability matrix first, followed by modifiers that describe accomodation of heterogeneity in equilibrium frequencies (*e.g.*, CAT) or rate (*e.g.*, Gamma). If there are no modifiers, then it is implied that site homogenous models are used.
-
-
-
-
 
 ### Gene sampling
 
