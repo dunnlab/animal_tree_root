@@ -148,7 +148,8 @@ names( clade_colors ) = clades
 taxa = 
 	read_tsv("taxonomy_info/taxon_table.tsv") %>% 
 	distinct( relabelled_name, clade_assignment, ncbi_tax_id ) %>%
-	dplyr::rename( taxon=relabelled_name, clade=clade_assignment )
+	dplyr::rename( taxon=relabelled_name, clade=clade_assignment ) %>%
+	mutate( clade = factor( clade, levels=clades )  )
 
 ```
 
@@ -159,8 +160,13 @@ a_file = "~/Desktop/animal_root/blast/phylips/Chang2015_Chang2015.phy"
 p_file = "~/Desktop/animal_root/blast/phylips/Chang2015_Chang2015.nex"
 msa = PartitionedMultipleAlignment( a_file, p_file, taxa )
 
-#D= data.frame( name= rownames( msa ), clade= msa@taxon_map )
-#D
+D=clade_rects(msa)
+
+ggplot() + 
+	scale_x_continuous(name="x") + 
+	scale_y_continuous(name="y") +
+	geom_rect(data=D, mapping=aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax, fill=clade )) + 
+	scale_fill_discrete(guide = guide_legend(reverse=TRUE))
 ```
 
 
