@@ -6,11 +6,12 @@ colnames = ['qseqid', 'sseqid', 'pident', 'length', 'mismatch', 'gapopen', 'qsta
 qseq_colnames = ['mscript1', 'dataset1', 'taxon1', 'taxid1', 'part1']
 sseq_colnames = ['mscript2', 'dataset2', 'taxon2', 'taxid2', 'part2']
 pident_cutoff = 95.0
+evalue_cutoff = 1e-25
 
 for i, infile in enumerate(sorted(glob('blast/results/*_permissive.txt'))):
     # first file
     df_tmp = pd.read_csv(infile, sep='\t', names=colnames)
-    df_tmp = df_tmp[ df_tmp['pident']>pident_cutoff ]
+    df_tmp = df_tmp[ (df_tmp['pident']>pident_cutoff) & (df_tmp['evalue']<evalue_cutoff) ]
 
     qseq = df_tmp['qseqid'].str.split(':', expand=True)
     qseq.columns = qseq_colnames
@@ -23,9 +24,9 @@ for i, infile in enumerate(sorted(glob('blast/results/*_permissive.txt'))):
     else:
         df = pd.concat((df, df_tmp))
 
-parts_graph = df[ ['mscript1', 'dataset1', 'part1', 'mscript2', 'dataset2', 'part2'] ].drop_duplicates()
+parts_graph = df.groupby(['mscript1', 'dataset1', 'part1', 'mscript2', 'dataset2', 'part2']).size().reset_index(name='count')
 parts_graph.to_csv('blast/graphs/partitions_graph.tsv', sep='\t', index=False)
-taxon_graph = df[ ['mscript1', 'dataset1', 'taxon1', 'mscript2', 'dataset2', 'taxon2'] ].drop_duplicates()
+taxon_graph = df.groupby(['mscript1', 'dataset1', 'taxon1', 'mscript2', 'dataset2', 'taxon2']).size().reset_index(name='count')
 taxon_graph.to_csv('blast/graphs/taxon_graph.tsv', sep='\t', index=False)
 
 cross_mscript = df[(df['taxon1'] == df['taxon2']) & (df['mscript1'] != df['mscript2'])]
