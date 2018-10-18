@@ -9,6 +9,10 @@
 ../scripts/prepare_phylip.py -i ../considered_data/Nosenko2013/ribosomal_11057_smatrix.phy -o phylips -t ../taxonomy_info/taxon_table.tsv
 ../scripts/prepare_phylip.py -i ../considered_data/Nosenko2013/ribosomal_14615_smatrix.phy -o phylips -t ../taxonomy_info/taxon_table.tsv
 ../scripts/prepare_phylip.py -i ../considered_data/Philippe2009/Philippe2009.nex -o phylips -t ../taxonomy_info/taxon_table.tsv
-../scripts/prepare_phylip.py -i ../considered_data/Ryan2013/genome.opisthokonta.nex -o phylips -t ../taxonomy_info/taxon_table.tsv
+../scripts/prepare_phylip.py -i ../considered_data/Ryan2013/est.opisthokonta.nex -o phylips -t ../taxonomy_info/taxon_table.tsv
 ../scripts/prepare_phylip.py -i ../considered_data/Simion2017/supermatrix_97sp_401632pos_1719genes.phy -o phylips -t ../taxonomy_info/taxon_table.tsv
 ../scripts/prepare_phylip.py -i ../considered_data/Whelan2015/Datset20_Uncertain_LBAgenesHeteroRemoved_LBAtaxa.phy -o phylips -t ../taxonomy_info/taxon_table.tsv
+../scripts/prepare_phylip.py -i ../considered_data/Whelan2015/Dataset10_CertainPruned_LBAtaxa_LBAandHeteroGenesPruned.phy -o phylips -t ../taxonomy_info/taxon_table.tsv
+../scripts/prepare_phylip.py -i ../considered_data/Whelan2015/Dataset1_FullData.phy -o phylips -t ../taxonomy_info/taxon_table.tsv
+../scripts/prepare_phylip.py -i ../considered_data/Whelan2017/Metazoa_Choano_RCFV_strict.phy -o phylips -t ../taxonomy_info/taxon_table.tsv
+../scripts/prepare_phylip.py -i ../considered_data/Whelan2017/Metazoa_full.phy -o phylips -t ../taxonomy_info/taxon_table.tsv
