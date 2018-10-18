@@ -153,6 +153,17 @@ taxa =
 ```
 
 
+```{r}
+
+a_file = "~/Desktop/animal_root/blast/phylips/Chang2015_Chang2015.phy"
+p_file = "~/Desktop/animal_root/blast/phylips/Chang2015_Chang2015.nex"
+msa = PartitionedMultipleAlignment( a_file, p_file, taxa )
+
+#D= data.frame( name= rownames( msa ), clade= msa@taxon_map )
+#D
+```
+
+
 
 XXX
 

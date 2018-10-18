@@ -74,6 +74,85 @@ Overview of published analyses
 
 ### Alignment composition
 
+    ##                             name            clade
+    ## 1                  Acanthoeca_sp Choanoflagellida
+    ## 2           Acropora_cervicornis         Cnidaria
+    ## 3             Exaiptasia_pallida         Cnidaria
+    ## 4         Amoebidium_parasiticum    Ichthyosporea
+    ## 5       Amphimedon_queenslandica         Porifera
+    ## 6          Aphrocallistes_vastus         Porifera
+    ## 7                 Aurelia_aurita         Cnidaria
+    ## 8               Beroe_abyssicola       Ctenophora
+    ## 9               Bolocera_tuediae         Cnidaria
+    ## 10          Botryllus_schlosseri        Bilateria
+    ## 11        Branchiostoma_floridae        Bilateria
+    ## 12     Buddenbrockia_plumatellae         Cnidaria
+    ## 13              Capitella_teleta        Bilateria
+    ## 14         Capsaspora_owczarzaki       Filasterea
+    ## 15             Chondrilla_nucula         Porifera
+    ## 16            Ciona_intestinalis        Bilateria
+    ## 17          Clytia_hemisphaerica         Cnidaria
+    ## 18         Corticium_candelabrum         Porifera
+    ## 19        Craspedacusta_sowerbii         Cnidaria
+    ## 20             Crassostrea_gigas        Bilateria
+    ## 21              Cyanea_capillata         Cnidaria
+    ## 22                 Daphnia_pulex        Bilateria
+    ## 23             Ectopleura_larynx         Cnidaria
+    ## 24          Edwardsiella_lineata         Cnidaria
+    ## 25              Enteromyxum_leei         Cnidaria
+    ## 26            Ephydatia_muelleri         Porifera
+    ## 27           Eunicella_cavolinii         Cnidaria
+    ## 28       Euplectella_aspergillum         Porifera
+    ## 29           Euplokamis_dunlapae       Ctenophora
+    ## 30            Gorgonia_ventalina         Cnidaria
+    ## 31            Helobdella_robusta        Bilateria
+    ## 32                  Homo_sapiens        Bilateria
+    ## 33            Hormathia_digitata         Cnidaria
+    ## 34                Hydra_vulgaris         Cnidaria
+    ## 35         Hydractinia_polyclina         Cnidaria
+    ## 36               Tritia_obsoleta        Bilateria
+    ## 37             Ixodes_scapularis        Bilateria
+    ## 38                  Kudoa_iwatai         Cnidaria
+    ## 39         Latimeria_menadoensis        Bilateria
+    ## 40          Leucetta_chagosensis         Porifera
+    ## 41            Ministeria_vibrans       Filasterea
+    ## 42             Mnemiopsis_leidyi       Ctenophora
+    ## 43          Monosiga_brevicollis Choanoflagellida
+    ## 44                Monosiga_ovata Choanoflagellida
+    ## 45           Orbicella_faveolata         Cnidaria
+    ## 46          Myxobolus_cerebralis         Cnidaria
+    ## 47                Nanomia_bijuga         Cnidaria
+    ## 48           Nasonia_vitripennis        Bilateria
+    ## 49        Nematostella_vectensis         Cnidaria
+    ## 50              Octopus_vulgaris        Bilateria
+    ## 51             Oscarella_carmela         Porifera
+    ## 52             Oscarella_carmela         Porifera
+    ## 53               Patiria_miniata        Bilateria
+    ## 54    Pediculus_humanus_corporis        Bilateria
+    ## 55            Petromyzon_marinus        Bilateria
+    ## 56           Petrosia_ficiformis         Porifera
+    ## 57          Pleurobrachia_pileus       Ctenophora
+    ## 58        Pocillopora_damicornis         Cnidaria
+    ## 59         Polypodium_hydriforme         Cnidaria
+    ## 60         Porites_australiensis         Cnidaria
+    ## 61      Saccoglossus_kowalevskii        Bilateria
+    ## 62                Salpingoeca_sp Choanoflagellida
+    ## 63      Sarcotragus_fasciculatus         Porifera
+    ## 64          Sphaeroforma_arctica    Ichthyosporea
+    ## 65          Sphaeromyxa_zaharoni         Cnidaria
+    ## 66      Stephanoeca_diplocostata Choanoflagellida
+    ## 67         Stomolophus_meleagris         Cnidaria
+    ## 68            Strigamia_maritima        Bilateria
+    ## 69 Strongylocentrotus_purpuratus        Bilateria
+    ## 70                Sycon_ciliatum         Porifera
+    ## 71                 Sycon_coactum         Porifera
+    ## 72 Tetracapsuloides_bryosalmonae         Cnidaria
+    ## 73         Thelohanellus_kitauei         Cnidaria
+    ## 74          Trichoplax_adhaerens         Placozoa
+    ## 75         Tripedalia_cystophora         Cnidaria
+    ## 76                Urticina_eques         Cnidaria
+    ## 77         Vallicula_multiformis       Ctenophora
+
 XXX
 
 **Fig XXTaxon\_composition.** Each of the primary matrices considered here, color coded by taxon sampling. Horizontal size is proportional to the number of genes (XXOr should it be sites?) sampled, vertical size to the number of taxa sampled.
