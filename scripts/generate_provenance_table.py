@@ -7,6 +7,7 @@ import sys
 import glob
 import urllib
 import pickle
+from collections import defaultdict
 from nexus import NexusReader # https://pypi.org/project/python-nexus/
 from Bio import SeqIO
 from Bio import Entrez
@@ -30,12 +31,12 @@ def get_pickles():
     if os.path.isfile('known_ids.pickle'):
         k_ids = pickle.load(open('known_ids.pickle', 'rb'))
     else:
-        k_ids = {} 
+        k_ids = defaultdict(lambda: {})
 
     if os.path.isfile('known_tax.pickle'):
         k_tax = pickle.load(open('known_tax.pickle', 'rb'))
     else:
-        k_tax = {}
+        k_tax = defaultdict(lambda: {})
     return k_ids, k_tax
 
 def get_names(file_name):
@@ -89,10 +90,10 @@ def get_clade(lineage):
 def get_manual_entries():
     fh = open('manual_taxonomy_map.tsv')
     fh.readline() # discard header
-    manual = dict()
+    manual = defaultdict(lambda: {})
     for line in fh:
-        tmp = line.rstrip().split()
-        manual[tmp[1]] = {'manuscript':tmp[0], 'species':tmp[2]}
+        tmp = line.rstrip().split('\t')
+        manual[tmp[0]][tmp[1]] = tmp[2]
     return manual
 
 if __name__ == '__main__':
@@ -106,7 +107,9 @@ if __name__ == '__main__':
     print(sep.join(table_columns), file=table_out)
 
     # glob hack to match nex and phy
-    for file_name in glob.glob('../considered_data/**/*.[pn][eh][xy]', recursive=True):
+    for file_name in sorted(glob.glob('../considered_data/**/*.[pn][eh][xy]', recursive=True)):
+        tmp_meta = file_name.split('/')
+        manuscript = tmp_meta[2]
         names_list = []
         print("Reading file", file_name)
         try:
@@ -114,26 +117,28 @@ if __name__ == '__main__':
         except Exception as e:
             print("Error loading", file_name, ":\n", e)
         for original_name in names_list:
-            if original_name in manual_entries:
-                if manual_entries[original_name]['manuscript'] in file_name:
-                    known_ids[original_name] = get_tax_id(manual_entries[original_name]['species'])
+            new_name = 'na'
+            manual = False
+            if original_name in manual_entries[manuscript]:
+                manual = True
+                new_name = manual_entries[manuscript][original_name]
+                print('Renaming "{}" to "{}".'.format(original_name, new_name))
+                known_ids[manuscript][original_name] = get_tax_id(new_name)
             
-            if original_name not in known_ids:
-                known_ids[original_name] = get_tax_id(original_name)
+            if original_name not in known_ids[manuscript]:
+                known_ids[manuscript][original_name] = get_tax_id(original_name)
 
-            if known_ids[original_name] not in known_tax:
-                known_tax[known_ids[original_name]] = get_tax_data(known_ids[original_name])[0]
+            if known_ids[manuscript][original_name] not in known_tax[manuscript]:
+                known_tax[manuscript][known_ids[manuscript][original_name]] = get_tax_data(known_ids[manuscript][original_name])[0]
 
             # if there is an NCBI Scientific name
-            if 'ScientificName' in known_tax[known_ids[original_name]] and known_ids[original_name] != 'nan':
-                new_name = known_tax[known_ids[original_name]]['ScientificName'].replace(' ', '_')
-            else: 
-                new_name = 'na'
+            if not manual and 'ScientificName' in known_tax[manuscript][known_ids[manuscript][original_name]]:
+                new_name = known_tax[manuscript][known_ids[manuscript][original_name]]['ScientificName'].replace(' ', '_')
 
-            this_clade = get_clade(known_tax[known_ids[original_name]]['Lineage'])
+            this_clade = get_clade(known_tax[manuscript][known_ids[manuscript][original_name]]['Lineage'])
 
-            print(sep.join([ file_name, new_name, this_clade, known_ids[original_name],
-                                known_tax[known_ids[original_name]]['Lineage'],
+            print(sep.join([ file_name, new_name, this_clade, known_ids[manuscript][original_name],
+                                known_tax[manuscript][known_ids[manuscript][original_name]]['Lineage'],
                                 original_name]), file=table_out)
 
     table_out.close()
