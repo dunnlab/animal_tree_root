@@ -1,0 +1,38 @@
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Borowiec2015_Best108.fa -o Borowiec2015_Best108_permissive.txt -f 6 -p $SLURM_CPUS_ON_NODE --gapopen 6 --gapextend 2 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Borowiec2015_Total1080.fa -o Borowiec2015_Total1080_permissive.txt -f 6 -p $SLURM_CPUS_ON_NODE --gapopen 6 --gapextend 2 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Chang2015_Chang2015.fa -o Chang2015_Chang2015_permissive.txt -f 6 -p $SLURM_CPUS_ON_NODE --gapopen 6 --gapextend 2 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Dunn2008_Dunn2008.fa -o Dunn2008_Dunn2008_permissive.txt -f 6 -p $SLURM_CPUS_ON_NODE --gapopen 6 --gapextend 2 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Hejnol2009_Hejnol2009.fa -o Hejnol2009_Hejnol2009_permissive.txt -f 6 -p $SLURM_CPUS_ON_NODE --gapopen 6 --gapextend 2 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Moroz2014_ED3a.fa -o Moroz2014_ED3a_permissive.txt -f 6 -p $SLURM_CPUS_ON_NODE --gapopen 6 --gapextend 2 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Moroz2014_ED3d.fa -o Moroz2014_ED3d_permissive.txt -f 6 -p $SLURM_CPUS_ON_NODE --gapopen 6 --gapextend 2 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Nosenko2013_nonribosomal_9187_smatrix.fa -o Nosenko2013_nonribosomal_9187_smatrix_permissive.txt -f 6 -p $SLURM_CPUS_ON_NODE --gapopen 6 --gapextend 2 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Nosenko2013_ribosomal_11057_smatrix.fa -o Nosenko2013_ribosomal_11057_smatrix_permissive.txt -f 6 -p $SLURM_CPUS_ON_NODE --gapopen 6 --gapextend 2 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Nosenko2013_ribosomal_14615_smatrix.fa -o Nosenko2013_ribosomal_14615_smatrix_permissive.txt -f 6 -p $SLURM_CPUS_ON_NODE --gapopen 6 --gapextend 2 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Philippe2009_Philippe2009.fa -o Philippe2009_Philippe2009_permissive.txt -f 6 -p $SLURM_CPUS_ON_NODE --gapopen 6 --gapextend 2 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Ryan2013_est.opisthokonta.fa -o Ryan2013_est.opisthokonta_permissive.txt -f 6 -p $SLURM_CPUS_ON_NODE --gapopen 6 --gapextend 2 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Ryan2013_genome.opisthokonta.fa -o Ryan2013_genome.opisthokonta_permissive.txt -f 6 -p $SLURM_CPUS_ON_NODE --gapopen 6 --gapextend 2 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Simion2017_supermatrix_97sp_401632pos_1719genes.fa -o Simion2017_supermatrix_97sp_401632pos_1719genes_permissive.txt -f 6 -p $SLURM_CPUS_ON_NODE --gapopen 6 --gapextend 2 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Whelan2015_Dataset10_CertainPruned_LBAtaxa_LBAandHeteroGenesPruned.fa -o Whelan2015_Dataset10_CertainPruned_LBAtaxa_LBAandHeteroGenesPruned_permissive.txt -f 6 -p $SLURM_CPUS_ON_NODE --gapopen 6 --gapextend 2 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Whelan2015_Dataset1_FullData.fa -o Whelan2015_Dataset1_FullData_permissive.txt -f 6 -p $SLURM_CPUS_ON_NODE --gapopen 6 --gapextend 2 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Whelan2015_Datset20_Uncertain_LBAgenesHeteroRemoved_LBAtaxa.fa -o Whelan2015_Datset20_Uncertain_LBAgenesHeteroRemoved_LBAtaxa_permissive.txt -f 6 -p $SLURM_CPUS_ON_NODE --gapopen 6 --gapextend 2 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Whelan2017_Metazoa_Choano_RCFV_strict.fa -o Whelan2017_Metazoa_Choano_RCFV_strict_permissive.txt -f 6 -p $SLURM_CPUS_ON_NODE --gapopen 6 --gapextend 2 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Whelan2017_Metazoa_full.fa -o Whelan2017_Metazoa_full_permissive.txt -f 6 -p $SLURM_CPUS_ON_NODE --gapopen 6 --gapextend 2 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Borowiec2015_Best108.fa -o Borowiec2015_Best108_strict.txt -f 6 -p $SLURM_CPUS_ON_NODE 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Borowiec2015_Total1080.fa -o Borowiec2015_Total1080_strict.txt -f 6 -p $SLURM_CPUS_ON_NODE 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Chang2015_Chang2015.fa -o Chang2015_Chang2015_strict.txt -f 6 -p $SLURM_CPUS_ON_NODE 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Dunn2008_Dunn2008.fa -o Dunn2008_Dunn2008_strict.txt -f 6 -p $SLURM_CPUS_ON_NODE 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Hejnol2009_Hejnol2009.fa -o Hejnol2009_Hejnol2009_strict.txt -f 6 -p $SLURM_CPUS_ON_NODE 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Moroz2014_ED3a.fa -o Moroz2014_ED3a_strict.txt -f 6 -p $SLURM_CPUS_ON_NODE 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Moroz2014_ED3d.fa -o Moroz2014_ED3d_strict.txt -f 6 -p $SLURM_CPUS_ON_NODE 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Nosenko2013_nonribosomal_9187_smatrix.fa -o Nosenko2013_nonribosomal_9187_smatrix_strict.txt -f 6 -p $SLURM_CPUS_ON_NODE 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Nosenko2013_ribosomal_11057_smatrix.fa -o Nosenko2013_ribosomal_11057_smatrix_strict.txt -f 6 -p $SLURM_CPUS_ON_NODE 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Nosenko2013_ribosomal_14615_smatrix.fa -o Nosenko2013_ribosomal_14615_smatrix_strict.txt -f 6 -p $SLURM_CPUS_ON_NODE 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Philippe2009_Philippe2009.fa -o Philippe2009_Philippe2009_strict.txt -f 6 -p $SLURM_CPUS_ON_NODE 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Ryan2013_est.opisthokonta.fa -o Ryan2013_est.opisthokonta_strict.txt -f 6 -p $SLURM_CPUS_ON_NODE 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Ryan2013_genome.opisthokonta.fa -o Ryan2013_genome.opisthokonta_strict.txt -f 6 -p $SLURM_CPUS_ON_NODE 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Simion2017_supermatrix_97sp_401632pos_1719genes.fa -o Simion2017_supermatrix_97sp_401632pos_1719genes_strict.txt -f 6 -p $SLURM_CPUS_ON_NODE 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Whelan2015_Dataset10_CertainPruned_LBAtaxa_LBAandHeteroGenesPruned.fa -o Whelan2015_Dataset10_CertainPruned_LBAtaxa_LBAandHeteroGenesPruned_strict.txt -f 6 -p $SLURM_CPUS_ON_NODE 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Whelan2015_Dataset1_FullData.fa -o Whelan2015_Dataset1_FullData_strict.txt -f 6 -p $SLURM_CPUS_ON_NODE 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Whelan2015_Datset20_Uncertain_LBAgenesHeteroRemoved_LBAtaxa.fa -o Whelan2015_Datset20_Uncertain_LBAgenesHeteroRemoved_LBAtaxa_strict.txt -f 6 -p $SLURM_CPUS_ON_NODE 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Whelan2017_Metazoa_Choano_RCFV_strict.fa -o Whelan2017_Metazoa_Choano_RCFV_strict_strict.txt -f 6 -p $SLURM_CPUS_ON_NODE 
+module load DIAMOND; diamond blastp -d ../db/animal_root_diamond -q ../queries/Whelan2017_Metazoa_full.fa -o Whelan2017_Metazoa_full_strict.txt -f 6 -p $SLURM_CPUS_ON_NODE 
