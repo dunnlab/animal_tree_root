@@ -113,6 +113,10 @@ Based on the variation across analyses, we constructed new matrices with altered
 The current state of understanding
 ----------------------------------
 
+### Interpretting variation support
+
+External criteria, eg posterior predictive scores, model fit etc
+
 Next steps
 ----------
 

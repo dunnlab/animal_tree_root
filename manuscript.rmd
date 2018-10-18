@@ -20,6 +20,9 @@ knitr::opts_chunk$set(
 ```{r preliminaries}
 library( tidyverse )
 library( magrittr )
+library(viridis)
+
+source( "functions.R" )
 ```
 
 ```{r}
@@ -133,6 +136,24 @@ Sensitivity to ingroup sampling has received less attention than sensitivity to 
 
 ### Alignment composition
 
+
+```{r taxonomy}
+
+clades = c( "Fungi", "Ichthyosporea", "Filasterea", "Choanoflagellida", "Ctenophora", "Porifera", "Placozoa", "Bilateria", "Cnidaria" )
+
+clade_colors = viridis( length(clades) )
+names( clade_colors ) = clades
+
+
+taxa = 
+	read_tsv("taxonomy_info/taxon_table.tsv") %>% 
+	distinct( relabelled_name, clade_assignment, ncbi_tax_id ) %>%
+	dplyr::rename( taxon=relabelled_name, clade=clade_assignment )
+
+```
+
+
+
 XXX
 
 **Fig XXTaxon_composition.** Each of the primary matrices considered here, color coded by taxon sampling. Horizontal size is proportional to the number of genes (XXOr should it be sites?) sampled, vertical size to the number of taxa sampled.
@@ -183,6 +204,10 @@ Based on the variation across analyses, we constructed new matrices with altered
 
 
 ## The current state of understanding
+
+### Interpretting variation support
+
+External criteria, eg posterior predictive scores, model fit etc
 
 ## Next steps
 
