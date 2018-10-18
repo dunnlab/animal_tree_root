@@ -166,7 +166,8 @@ ggplot() +
 	scale_x_continuous(name="x") + 
 	scale_y_continuous(name="y") +
 	geom_rect(data=D, mapping=aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax, fill=clade )) + 
-	scale_fill_discrete(guide = guide_legend(reverse=TRUE))
+	scale_fill_manual(values = clade_colors, guide = guide_legend(reverse=TRUE))
+	#scale_fill_discrete(guide = guide_legend(reverse=TRUE))
 ```
 
 
