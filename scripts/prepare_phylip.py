@@ -57,6 +57,7 @@ def process_phylip(manuscript_name, names_map, in_filename, out_phylip_fn, out_p
     alignment = AlignIO.read(in_filename, 'phylip-relaxed')
     for taxon in alignment:
         if taxon.id in names_map[manuscript_name] and names_map[manuscript_name][taxon.id] != 'na':
+                # print(taxon.id, ": ", names_map[manuscript_name][taxon.id])
                 taxon.id = names_map[manuscript_name][taxon.id]
     AlignIO.write(alignment, out_phylip_fn, 'phylip-relaxed')
 

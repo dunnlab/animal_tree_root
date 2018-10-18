@@ -7,12 +7,13 @@ from collections import defaultdict
 from os.path import  abspath, basename, dirname, join, splitext
 from Bio import AlignIO
 from Bio import SeqIO
+from Bio import Alphabet
 
 def get_parts(part_file_name):
     parts = []
     partnames = defaultdict(lambda: 0)
     for line in open(part_file_name):
-        match = re.match(r"CHARSET\W+([\w\.\-]+)\W+=\W+(\d+)\W*-\W*(\d+)", line)
+        match = re.match(r"CHARSET\W+([\w\.\-]+)\W*=\W*(\d+)\W*-\W*(\d+)", line, re.IGNORECASE)
         if match is not None:
             part_name, part_start, part_end = match.groups()
             # number non-unique partition names
@@ -62,12 +63,17 @@ manuscript, dataset  = basename(prefix).split('_', 1)
 
 name2taxid = read_taxon_table(args.taxon_table)
 parts = get_parts(part_file_name)
+gapped_protein = Alphabet.Gapped(Alphabet.IUPAC.protein, '-')
 
 alignment = AlignIO.read(phylip_file_name, 'phylip-relaxed')
-fasta_out = open(join(out_dir, prefix)+'.fa',  'w')
+fasta_out = open(join(out_dir, '{}_{}.fa'.format(manuscript, dataset)),  'w')
 for part_name, start, stop in parts:
-    for taxon in alignment:
+    for i, taxon in enumerate(alignment):
         tmp_seq = taxon[start:stop]
-        tmp_seq.id = ':'.join([manuscript, dataset, taxon.id, name2taxid[taxon.id], part_name])
-        SeqIO.write(tmp_seq, fasta_out, 'fasta')
+        tmp_seq.seq.alphabet = gapped_protein
+        old_seq = tmp_seq.seq
+        tmp_seq.seq = tmp_seq.seq.ungap()
+        if len(tmp_seq) > 1:
+            tmp_seq.id = ':'.join([manuscript, dataset, taxon.id, name2taxid[taxon.id], part_name])
+            SeqIO.write(tmp_seq, fasta_out, 'fasta')
 fasta_out.close()
