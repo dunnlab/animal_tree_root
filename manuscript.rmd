@@ -166,8 +166,9 @@ ggplot() +
 	scale_x_continuous(name="x") + 
 	scale_y_continuous(name="y") +
 	geom_rect(data=D, mapping=aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax, fill=clade )) + 
-	scale_fill_manual(values = clade_colors, guide = guide_legend(reverse=TRUE))
-	#scale_fill_discrete(guide = guide_legend(reverse=TRUE))
+	# scale_fill_manual(guide = guide_legend(reverse=TRUE))
+	# scale_fill_manual(values = clade_colors, guide = guide_legend(reverse=TRUE))
+	scale_fill_discrete(guide = guide_legend(reverse=TRUE))
 ```
 
 
@@ -290,5 +291,74 @@ The authors argue that previous results supporting Ctenophora-sister "are artifa
 > Results of our analyses indicate that sponges are the sister group to the remaining Metazoa, and Placozoa are sister group to the Bilateria
 
 They also investigated saturation, and conclude that Dunn *et al.* [@Dunn:2008ky] is more saturated than Philippe *et al.* 2009 [Philippe:2009hh]. Note that the Pick *et al.* [@Pick:2010eb] dataset is not reanalyzed here because partition data are not available, and due to site filtering the partition file from Dunn *et al.* [@Dunn:2008ky] cannot be applied to this matrix.
+
+## Matrix mapping
+
+Taxa and partition correspondence across manuscripts was assessed by comparing all sequences for each taxon in each partition across all matrices with diamond blast. Based on inspection of sequence similarity, we excluded all comparisons with less than 99% identity and greater than 10^-25^ e-value.
+
+
+### Taxa
+
+The primary intent of comparing taxa across matrices was to validate our taxon name reconciliation across studies. 
+
+We first considered pairwise similarity between the same species from different matrices in different studies.
+
+```{r taxon_mapping_across_studies}
+
+Dtaxaxman = 
+	read_tsv("~/Dropbox/repo/animal_root/blast/graphs/cross_mscript_taxa.tsv") %>%
+	arrange( mscript1, dataset1, taxon1, mscript2, dataset2, taxon2 ) 
+
+Dtaxaxman_raw_count = nrow(Dtaxaxman)
+
+Dtaxaxman %<>%
+	distinct( mscript1, dataset1, taxon1, mscript2, dataset2, taxon2, .keep_all = TRUE )
+
+```
+
+`r Dtaxaxman_raw_count` raw pairwise comparisons passed the similarity thresholds under these sampling criteria. These included multiple hits for the same sequence pairs from different regions. When only a single hit is retained, there are `r nrow(Dtaxaxman)` retained sequence pairs.
+
+We next considered taxon mapping more generally.
+
+```{r taxon_mapping}
+
+Dtaxa = 
+	read_tsv("~/Dropbox/repo/animal_root/blast/graphs/taxon_graph.tsv") %>%
+	arrange( mscript1, dataset1, taxon1, mscript2, dataset2, taxon2 ) 
+
+# Set aside species correspondense to same species in same matrix in same matrix
+Dtaxa_self =
+	Dtaxa %>%
+		filter( mscript1 == mscript2 & dataset1==dataset2 & taxon1==taxon2  )
+
+# Remove species correspondense to same species in same matrix in same study
+Dtaxa %<>%
+	filter( !(mscript1 == mscript2 & dataset1==dataset2 & taxon1==taxon2) )
+
+n_not_self = nrow(Dtaxa)
+
+# Remove hits in same matrix in same study
+Dtaxa %<>%
+	filter( !(mscript1==mscript2 & dataset1==dataset2))
+
+# Remove hits same study, presume that taxon resolution is OK within study.
+Dtaxa %<>%
+	filter( !(mscript1==mscript2))
+
+
+ggplot(Dtaxa) + geom_density(aes(count)) + xlim(0,50)
+
+ggplot(Dtaxa_self) + geom_density(aes(count))
+
+# These are candidates for renaming
+Dtaxa %>% filter(taxon1!=taxon2) %>% arrange( desc(count))
+
+```
+
+
+
+
+### Partitions
+
 
 ## References

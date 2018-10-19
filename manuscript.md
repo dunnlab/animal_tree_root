@@ -74,84 +74,7 @@ Overview of published analyses
 
 ### Alignment composition
 
-    ##                             name            clade
-    ## 1                  Acanthoeca_sp Choanoflagellida
-    ## 2           Acropora_cervicornis         Cnidaria
-    ## 3             Exaiptasia_pallida         Cnidaria
-    ## 4         Amoebidium_parasiticum    Ichthyosporea
-    ## 5       Amphimedon_queenslandica         Porifera
-    ## 6          Aphrocallistes_vastus         Porifera
-    ## 7                 Aurelia_aurita         Cnidaria
-    ## 8               Beroe_abyssicola       Ctenophora
-    ## 9               Bolocera_tuediae         Cnidaria
-    ## 10          Botryllus_schlosseri        Bilateria
-    ## 11        Branchiostoma_floridae        Bilateria
-    ## 12     Buddenbrockia_plumatellae         Cnidaria
-    ## 13              Capitella_teleta        Bilateria
-    ## 14         Capsaspora_owczarzaki       Filasterea
-    ## 15             Chondrilla_nucula         Porifera
-    ## 16            Ciona_intestinalis        Bilateria
-    ## 17          Clytia_hemisphaerica         Cnidaria
-    ## 18         Corticium_candelabrum         Porifera
-    ## 19        Craspedacusta_sowerbii         Cnidaria
-    ## 20             Crassostrea_gigas        Bilateria
-    ## 21              Cyanea_capillata         Cnidaria
-    ## 22                 Daphnia_pulex        Bilateria
-    ## 23             Ectopleura_larynx         Cnidaria
-    ## 24          Edwardsiella_lineata         Cnidaria
-    ## 25              Enteromyxum_leei         Cnidaria
-    ## 26            Ephydatia_muelleri         Porifera
-    ## 27           Eunicella_cavolinii         Cnidaria
-    ## 28       Euplectella_aspergillum         Porifera
-    ## 29           Euplokamis_dunlapae       Ctenophora
-    ## 30            Gorgonia_ventalina         Cnidaria
-    ## 31            Helobdella_robusta        Bilateria
-    ## 32                  Homo_sapiens        Bilateria
-    ## 33            Hormathia_digitata         Cnidaria
-    ## 34                Hydra_vulgaris         Cnidaria
-    ## 35         Hydractinia_polyclina         Cnidaria
-    ## 36               Tritia_obsoleta        Bilateria
-    ## 37             Ixodes_scapularis        Bilateria
-    ## 38                  Kudoa_iwatai         Cnidaria
-    ## 39         Latimeria_menadoensis        Bilateria
-    ## 40          Leucetta_chagosensis         Porifera
-    ## 41            Ministeria_vibrans       Filasterea
-    ## 42             Mnemiopsis_leidyi       Ctenophora
-    ## 43          Monosiga_brevicollis Choanoflagellida
-    ## 44                Monosiga_ovata Choanoflagellida
-    ## 45           Orbicella_faveolata         Cnidaria
-    ## 46          Myxobolus_cerebralis         Cnidaria
-    ## 47                Nanomia_bijuga         Cnidaria
-    ## 48           Nasonia_vitripennis        Bilateria
-    ## 49        Nematostella_vectensis         Cnidaria
-    ## 50              Octopus_vulgaris        Bilateria
-    ## 51             Oscarella_carmela         Porifera
-    ## 52             Oscarella_carmela         Porifera
-    ## 53               Patiria_miniata        Bilateria
-    ## 54    Pediculus_humanus_corporis        Bilateria
-    ## 55            Petromyzon_marinus        Bilateria
-    ## 56           Petrosia_ficiformis         Porifera
-    ## 57          Pleurobrachia_pileus       Ctenophora
-    ## 58        Pocillopora_damicornis         Cnidaria
-    ## 59         Polypodium_hydriforme         Cnidaria
-    ## 60         Porites_australiensis         Cnidaria
-    ## 61      Saccoglossus_kowalevskii        Bilateria
-    ## 62                Salpingoeca_sp Choanoflagellida
-    ## 63      Sarcotragus_fasciculatus         Porifera
-    ## 64          Sphaeroforma_arctica    Ichthyosporea
-    ## 65          Sphaeromyxa_zaharoni         Cnidaria
-    ## 66      Stephanoeca_diplocostata Choanoflagellida
-    ## 67         Stomolophus_meleagris         Cnidaria
-    ## 68            Strigamia_maritima        Bilateria
-    ## 69 Strongylocentrotus_purpuratus        Bilateria
-    ## 70                Sycon_ciliatum         Porifera
-    ## 71                 Sycon_coactum         Porifera
-    ## 72 Tetracapsuloides_bryosalmonae         Cnidaria
-    ## 73         Thelohanellus_kitauei         Cnidaria
-    ## 74          Trichoplax_adhaerens         Placozoa
-    ## 75         Tripedalia_cystophora         Cnidaria
-    ## 76                Urticina_eques         Cnidaria
-    ## 77         Vallicula_multiformis       Ctenophora
+![](manuscript_files/figure-markdown_github/unnamed-chunk-2-1.png)
 
 XXX
 
@@ -254,6 +177,40 @@ The authors argue that previous results supporting Ctenophora-sister "are artifa
 > Results of our analyses indicate that sponges are the sister group to the remaining Metazoa, and Placozoa are sister group to the Bilateria
 
 They also investigated saturation, and conclude that Dunn *et al.* \[2\] is more saturated than Philippe *et al.* 2009 \[Philippe:2009hh\]. Note that the Pick *et al.* \[13\] dataset is not reanalyzed here because partition data are not available, and due to site filtering the partition file from Dunn *et al.* \[2\] cannot be applied to this matrix.
+
+Matrix mapping
+--------------
+
+Taxa and partition correspondence across manuscripts was assessed by comparing all sequences for each taxon in each partition across all matrices with diamond blast. Based on inspection of sequence similarity, we excluded all comparisons with less than 99% identity and greater than 10<sup>-25</sup> e-value.
+
+### Taxa
+
+The primary intent of comparing taxa across matrices was to validate our taxon name reconciliation across studies.
+
+We first considered pairwise similarity between the same species from different matrices in different studies.
+
+45052 raw pairwise comparisons passed the similarity thresholds under these sampling criteria. These included multiple hits for the same sequence pairs from different regions. When only a single hit is retained, there are 4646 retained sequence pairs.
+
+We next considered taxon mapping more generally.
+
+![](manuscript_files/figure-markdown_github/taxon_mapping-1.png)![](manuscript_files/figure-markdown_github/taxon_mapping-2.png)
+
+    ## # A tibble: 11,218 x 7
+    ##    mscript1   dataset1     taxon1     mscript2  dataset2    taxon2   count
+    ##    <chr>      <chr>        <chr>      <chr>     <chr>       <chr>    <int>
+    ##  1 Hejnol2009 Hejnol2009   Capitella… Borowiec… Total1080   Capitel…   127
+    ##  2 Borowiec2… Total1080    Capitella… Hejnol20… Hejnol2009  Capitel…   125
+    ##  3 Hejnol2009 Hejnol2009   Daphnia_p… Borowiec… Total1080   Daphnia…   112
+    ##  4 Borowiec2… Total1080    Daphnia_m… Hejnol20… Hejnol2009  Daphnia…   110
+    ##  5 Ryan2013   est.opistho… Capitella… Borowiec… Total1080   Capitel…    57
+    ##  6 Nosenko20… ribosomal_1… Hydra_mag… Chang2015 Chang2015   Hydra_v…    56
+    ##  7 Nosenko20… ribosomal_1… Capitella… Chang2015 Chang2015   Capitel…    55
+    ##  8 Borowiec2… Total1080    Capitella… Ryan2013  est.opisth… Capitel…    53
+    ##  9 Borowiec2… Total1080    Mnemiopsi… Ryan2013  est.opisth… Mnemiop…    53
+    ## 10 Chang2015  Chang2015    Capitella… Nosenko2… ribosomal_… Capitel…    53
+    ## # ... with 11,208 more rows
+
+### Partitions
 
 References
 ----------
