@@ -210,6 +210,21 @@ We next considered taxon mapping more generally.
     ## 10 Chang2015  Chang2015    Capitella… Nosenko2… ribosomal_… Capitel…    53
     ## # ... with 11,208 more rows
 
+    ## # A tibble: 4,646 x 7
+    ##    mscript1   dataset1 taxon1      mscript2  dataset2     taxon2     count
+    ##    <chr>      <chr>    <chr>       <chr>     <chr>        <chr>      <int>
+    ##  1 Borowiec2… Best108  Acropora_d… Moroz2014 ED3d         Acropora_…     1
+    ##  2 Borowiec2… Best108  Branchiost… Moroz2014 ED3d         Branchios…     1
+    ##  3 Borowiec2… Best108  Branchiost… Nosenko2… ribosomal_1… Branchios…     1
+    ##  4 Borowiec2… Best108  Drosophila… Moroz2014 ED3d         Drosophil…     1
+    ##  5 Borowiec2… Best108  Homo_sapie… Whelan20… Metazoa_Cho… Homo_sapi…     1
+    ##  6 Borowiec2… Best108  Ixodes_sca… Nosenko2… ribosomal_1… Ixodes_sc…     1
+    ##  7 Borowiec2… Best108  Ixodes_sca… Nosenko2… ribosomal_1… Ixodes_sc…     1
+    ##  8 Borowiec2… Best108  Ixodes_sca… Philippe… Philippe2009 Ixodes_sc…     1
+    ##  9 Borowiec2… Best108  Monosiga_b… Moroz2014 ED3d         Monosiga_…     1
+    ## 10 Borowiec2… Best108  Nematostel… Moroz2014 ED3d         Nematoste…     1
+    ## # ... with 4,636 more rows
+
 ### Partitions
 
 References

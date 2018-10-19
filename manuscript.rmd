@@ -350,8 +350,20 @@ ggplot(Dtaxa) + geom_density(aes(count)) + xlim(0,50)
 
 ggplot(Dtaxa_self) + geom_density(aes(count))
 
-# These are candidates for renaming
+# Top of this list are candidates for renaming because they are very similar but have different names
 Dtaxa %>% filter(taxon1!=taxon2) %>% arrange( desc(count))
+
+
+# Top of this list are candidates for renaming because they are very different but have same names
+
+Dtaxa %>% filter(taxon1==taxon2) %>% arrange( count )
+
+
+taxonomy_reference = read_tsv("taxonomy_info/taxon_table.tsv")
+
+
+
+
 
 ```
 
