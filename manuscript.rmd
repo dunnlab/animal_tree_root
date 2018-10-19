@@ -373,4 +373,98 @@ taxonomy_reference = read_tsv("taxonomy_info/taxon_table.tsv")
 ### Partitions
 
 
+```{r partition_mapping}
+
+Dpart = 
+	read_tsv("~/Dropbox/repo/animal_root/blast/graphs/partitions_graph.tsv") %>% 
+	mutate( node1 = paste(mscript1, dataset1, part1, sep = ':') ) %>% 
+	mutate( node2 = paste(mscript2, dataset2, part2, sep = ':') )
+
+Dpart_self = Dpart %>% 
+	filter( node1==node2 ) %>%
+	select( mscript1, dataset1, part1, node1, count )
+
+ggplot( Dpart_self ) + geom_density(aes(count))
+
+
+# Retain only nonself edges
+Dpart %<>% filter( node1!=node2 )
+
+
+# Network analysis
+# Builds on https://www.jessesadler.com/post/network-analysis-with-r/
+
+D_source = Dpart %>%
+  distinct(node1, .keep_all = TRUE ) %>%
+	select( node1, mscript1, dataset1, part1 ) %>%
+  dplyr::rename(label = node1, mscript = mscript1, dataset = dataset1, part = part1 )
+
+D_dest = Dpart %>%
+  distinct(node2, .keep_all = TRUE ) %>%
+	select( node2, mscript2, dataset2, part2 ) %>%
+  dplyr::rename(label = node2, mscript = mscript2, dataset = dataset2, part = part2 )
+
+nodes = 
+	bind_rows( D_source, D_dest ) %>% 
+	distinct( label, .keep_all = TRUE ) %>%
+	arrange( label ) %>% 
+	rowid_to_column("id")
+
+
+sources = Dpart %>%
+  distinct(node1) %>%
+  dplyr::rename(label = node1)
+
+destinations = Dpart %>%
+  distinct(node2) %>%
+  dplyr::rename(label = node2)
+
+nodes2 = 
+	full_join(sources, destinations, by = "label") %>% 
+	arrange( label ) %>% 
+	rowid_to_column("id")
+
+edges = Dpart %>% 
+	select( node1, node2, count ) %>%
+  left_join(nodes, by = c("node1" = "label")) %>% 
+  dplyr::rename(from = id) %>% 
+  left_join(nodes, by = c("node2" = "label")) %>% 
+  dplyr::rename(to = id) %>%
+	dplyr::rename(weight = count) %>%
+	select( from, to, weight )
+
+
+#library( network )
+
+#gene_network = network( edges, directed=FALSE, vertex.attr = nodes, matrix.type = "edgelist", ignore.eval = FALSE)
+#
+#gene_matrix = as.sociomatrix(gene_network)
+
+#library( MCL )
+
+#gene_clusters = mcl( x=gene_matrix, addLoops = TRUE )
+
+library(igraph)
+gene_igraph = graph_from_data_frame(d = edges, vertices = nodes, directed = FALSE)
+gene_clusters = clusters(gene_igraph, mode=c("weak", "strong"))
+
+nodes$cluster = gene_clusters$membership
+
+# Investigate commencted components of genes (ie partitions) that include multiple members fromt he same matrix
+D = nodes %>% group_by( mscript, dataset, cluster ) %>% summarise(n=n()) %>% arrange(desc(n))
+D %>% print(n=100)
+
+clusterstats = nodes %>% group_by( cluster ) %>% summarise(n=n()) %>% arrange(desc(n))
+clusterstats %>% print(n=100)
+
+```
+
+The count for a partition pair can be much arger than the number of genes in the matrix, which suggests that the count is the number of hsps rather than the number of sequences with hits.
+
+There are `r length(unique(nodes$dataset))` datasets. A gene that is perfectly sampled would form a cluster with this size. Very few clusters, though, are this size. This suggests that intersection of genes between matrices is low
+
+
+
+
+
 ## References

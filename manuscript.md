@@ -227,6 +227,223 @@ We next considered taxon mapping more generally.
 
 ### Partitions
 
+![](manuscript_files/figure-markdown_github/partition_mapping-1.png)
+
+    ## # A tibble: 2,628 x 4
+    ## # Groups:   mscript, dataset [19]
+    ##     mscript      dataset                              cluster     n
+    ##     <chr>        <chr>                                  <dbl> <int>
+    ##   1 Whelan2017   Metazoa_full                              54    13
+    ##   2 Philippe2009 Philippe2009                              37     7
+    ##   3 Nosenko2013  ribosomal_11057_smatrix                  202     6
+    ##   4 Nosenko2013  ribosomal_14615_smatrix                  202     6
+    ##   5 Philippe2009 Philippe2009                              51     6
+    ##   6 Whelan2017   Metazoa_full                               9     6
+    ##   7 Chang2015    Chang2015                                202     5
+    ##   8 Philippe2009 Philippe2009                              90     5
+    ##   9 Philippe2009 Philippe2009                             202     5
+    ##  10 Philippe2009 Philippe2009                             397     5
+    ##  11 Ryan2013     est.opisthokonta                          51     5
+    ##  12 Ryan2013     est.opisthokonta                          90     5
+    ##  13 Simion2017   supermatrix_97sp_401632pos_1719genes      37     5
+    ##  14 Simion2017   supermatrix_97sp_401632pos_1719genes      51     5
+    ##  15 Simion2017   supermatrix_97sp_401632pos_1719genes      90     5
+    ##  16 Chang2015    Chang2015                                431     4
+    ##  17 Dunn2008     Dunn2008                                  51     4
+    ##  18 Simion2017   supermatrix_97sp_401632pos_1719genes      54     4
+    ##  19 Whelan2017   Metazoa_full                              85     4
+    ##  20 Whelan2017   Metazoa_full                             202     4
+    ##  21 Whelan2017   Metazoa_full                             431     4
+    ##  22 Whelan2017   Metazoa_full                             654     4
+    ##  23 Borowiec2015 Best108                                   37     3
+    ##  24 Borowiec2015 Best108                                   51     3
+    ##  25 Borowiec2015 Total1080                                 15     3
+    ##  26 Borowiec2015 Total1080                                 37     3
+    ##  27 Borowiec2015 Total1080                                 51     3
+    ##  28 Dunn2008     Dunn2008                                 202     3
+    ##  29 Hejnol2009   Hejnol2009                                51     3
+    ##  30 Nosenko2013  ribosomal_11057_smatrix                   15     3
+    ##  31 Nosenko2013  ribosomal_14615_smatrix                   15     3
+    ##  32 Philippe2009 Philippe2009                              15     3
+    ##  33 Philippe2009 Philippe2009                             398     3
+    ##  34 Philippe2009 Philippe2009                             443     3
+    ##  35 Ryan2013     est.opisthokonta                         202     3
+    ##  36 Whelan2017   Metazoa_full                             159     3
+    ##  37 Whelan2017   Metazoa_full                             389     3
+    ##  38 Borowiec2015 Best108                                   96     2
+    ##  39 Borowiec2015 Total1080                                  9     2
+    ##  40 Borowiec2015 Total1080                                 90     2
+    ##  41 Borowiec2015 Total1080                                 96     2
+    ##  42 Borowiec2015 Total1080                                159     2
+    ##  43 Borowiec2015 Total1080                                202     2
+    ##  44 Chang2015    Chang2015                                 51     2
+    ##  45 Chang2015    Chang2015                                 68     2
+    ##  46 Chang2015    Chang2015                                 78     2
+    ##  47 Chang2015    Chang2015                                 90     2
+    ##  48 Chang2015    Chang2015                                394     2
+    ##  49 Chang2015    Chang2015                                397     2
+    ##  50 Chang2015    Chang2015                                398     2
+    ##  51 Chang2015    Chang2015                                408     2
+    ##  52 Chang2015    Chang2015                                411     2
+    ##  53 Chang2015    Chang2015                                413     2
+    ##  54 Chang2015    Chang2015                                426     2
+    ##  55 Chang2015    Chang2015                                430     2
+    ##  56 Chang2015    Chang2015                                443     2
+    ##  57 Chang2015    Chang2015                                465     2
+    ##  58 Dunn2008     Dunn2008                                  15     2
+    ##  59 Dunn2008     Dunn2008                                 413     2
+    ##  60 Hejnol2009   Hejnol2009                                 9     2
+    ##  61 Moroz2014    ED3a                                     202     2
+    ##  62 Moroz2014    ED3a                                     465     2
+    ##  63 Nosenko2013  ribosomal_11057_smatrix                   68     2
+    ##  64 Nosenko2013  ribosomal_11057_smatrix                  408     2
+    ##  65 Nosenko2013  ribosomal_11057_smatrix                  411     2
+    ##  66 Nosenko2013  ribosomal_11057_smatrix                  413     2
+    ##  67 Nosenko2013  ribosomal_11057_smatrix                  426     2
+    ##  68 Nosenko2013  ribosomal_11057_smatrix                  430     2
+    ##  69 Nosenko2013  ribosomal_11057_smatrix                  431     2
+    ##  70 Nosenko2013  ribosomal_14615_smatrix                   68     2
+    ##  71 Nosenko2013  ribosomal_14615_smatrix                   78     2
+    ##  72 Nosenko2013  ribosomal_14615_smatrix                  394     2
+    ##  73 Nosenko2013  ribosomal_14615_smatrix                  408     2
+    ##  74 Nosenko2013  ribosomal_14615_smatrix                  411     2
+    ##  75 Nosenko2013  ribosomal_14615_smatrix                  413     2
+    ##  76 Nosenko2013  ribosomal_14615_smatrix                  426     2
+    ##  77 Nosenko2013  ribosomal_14615_smatrix                  430     2
+    ##  78 Nosenko2013  ribosomal_14615_smatrix                  431     2
+    ##  79 Philippe2009 Philippe2009                              68     2
+    ##  80 Philippe2009 Philippe2009                             171     2
+    ##  81 Philippe2009 Philippe2009                             394     2
+    ##  82 Philippe2009 Philippe2009                             410     2
+    ##  83 Philippe2009 Philippe2009                             418     2
+    ##  84 Philippe2009 Philippe2009                             419     2
+    ##  85 Philippe2009 Philippe2009                             422     2
+    ##  86 Philippe2009 Philippe2009                             435     2
+    ##  87 Philippe2009 Philippe2009                             464     2
+    ##  88 Philippe2009 Philippe2009                             465     2
+    ##  89 Philippe2009 Philippe2009                             628     2
+    ##  90 Ryan2013     est.opisthokonta                           9     2
+    ##  91 Ryan2013     est.opisthokonta                          15     2
+    ##  92 Ryan2013     est.opisthokonta                          96     2
+    ##  93 Simion2017   supermatrix_97sp_401632pos_1719genes       9     2
+    ##  94 Simion2017   supermatrix_97sp_401632pos_1719genes     397     2
+    ##  95 Simion2017   supermatrix_97sp_401632pos_1719genes     411     2
+    ##  96 Simion2017   supermatrix_97sp_401632pos_1719genes     431     2
+    ##  97 Simion2017   supermatrix_97sp_401632pos_1719genes     654     2
+    ##  98 Whelan2015   Dataset1_FullData                        397     2
+    ##  99 Whelan2017   Metazoa_Choano_RCFV_strict               431     2
+    ## 100 Whelan2017   Metazoa_Choano_RCFV_strict               670     2
+    ## # ... with 2,528 more rows
+
+    ## # A tibble: 849 x 2
+    ##     cluster     n
+    ##       <dbl> <int>
+    ##   1     202    38
+    ##   2      51    32
+    ##   3      54    25
+    ##   4      90    23
+    ##   5       9    22
+    ##   6      37    22
+    ##   7     431    22
+    ##   8      15    20
+    ##   9     397    15
+    ##  10      68    14
+    ##  11      85    13
+    ##  12     159    13
+    ##  13      75    12
+    ##  14     426    12
+    ##  15      46    11
+    ##  16      78    11
+    ##  17     413    11
+    ##  18      36    10
+    ##  19      50    10
+    ##  20      67    10
+    ##  21     411    10
+    ##  22      71     9
+    ##  23      96     9
+    ##  24     360     9
+    ##  25     408     9
+    ##  26     223     8
+    ##  27     232     8
+    ##  28     394     8
+    ##  29     395     8
+    ##  30     415     8
+    ##  31     430     8
+    ##  32     462     8
+    ##  33     533     8
+    ##  34     654     8
+    ##  35      26     7
+    ##  36      33     7
+    ##  37     100     7
+    ##  38     117     7
+    ##  39     171     7
+    ##  40     383     7
+    ##  41     389     7
+    ##  42     393     7
+    ##  43     404     7
+    ##  44     422     7
+    ##  45     435     7
+    ##  46     465     7
+    ##  47     538     7
+    ##  48     579     7
+    ##  49       4     6
+    ##  50      29     6
+    ##  51      53     6
+    ##  52      55     6
+    ##  53      64     6
+    ##  54      91     6
+    ##  55     191     6
+    ##  56     233     6
+    ##  57     398     6
+    ##  58     403     6
+    ##  59     405     6
+    ##  60     409     6
+    ##  61     410     6
+    ##  62     414     6
+    ##  63     423     6
+    ##  64     424     6
+    ##  65     425     6
+    ##  66     436     6
+    ##  67     443     6
+    ##  68     487     6
+    ##  69     531     6
+    ##  70     551     6
+    ##  71     576     6
+    ##  72     597     6
+    ##  73     635     6
+    ##  74       6     5
+    ##  75      34     5
+    ##  76      59     5
+    ##  77      87     5
+    ##  78      94     5
+    ##  79     103     5
+    ##  80     136     5
+    ##  81     142     5
+    ##  82     144     5
+    ##  83     184     5
+    ##  84     186     5
+    ##  85     190     5
+    ##  86     197     5
+    ##  87     216     5
+    ##  88     234     5
+    ##  89     236     5
+    ##  90     247     5
+    ##  91     250     5
+    ##  92     270     5
+    ##  93     291     5
+    ##  94     388     5
+    ##  95     406     5
+    ##  96     412     5
+    ##  97     417     5
+    ##  98     418     5
+    ##  99     419     5
+    ## 100     427     5
+    ## # ... with 749 more rows
+
+The count for a partition pair can be much arger than the number of genes in the matrix, which suggests that the count is the number of hsps rather than the number of sequences with hits.
+
+There are 19 datasets. A gene that is perfectly sampled would form a cluster with this size. Very few clusters, though, are this size. This suggests that intersection of genes between matrices is low
+
 References
 ----------
 
