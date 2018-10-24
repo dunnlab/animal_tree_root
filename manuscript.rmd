@@ -166,8 +166,9 @@ ggplot() +
 	scale_x_continuous(name="x") + 
 	scale_y_continuous(name="y") +
 	geom_rect(data=D, mapping=aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax, fill=clade )) + 
-	scale_fill_manual(values = clade_colors, guide = guide_legend(reverse=TRUE))
-	#scale_fill_discrete(guide = guide_legend(reverse=TRUE))
+	# scale_fill_manual(guide = guide_legend(reverse=TRUE))
+	# scale_fill_manual(values = clade_colors, guide = guide_legend(reverse=TRUE))
+	scale_fill_discrete(guide = guide_legend(reverse=TRUE))
 ```
 
 
@@ -290,5 +291,180 @@ The authors argue that previous results supporting Ctenophora-sister "are artifa
 > Results of our analyses indicate that sponges are the sister group to the remaining Metazoa, and Placozoa are sister group to the Bilateria
 
 They also investigated saturation, and conclude that Dunn *et al.* [@Dunn:2008ky] is more saturated than Philippe *et al.* 2009 [Philippe:2009hh]. Note that the Pick *et al.* [@Pick:2010eb] dataset is not reanalyzed here because partition data are not available, and due to site filtering the partition file from Dunn *et al.* [@Dunn:2008ky] cannot be applied to this matrix.
+
+## Matrix mapping
+
+Taxa and partition correspondence across manuscripts was assessed by comparing all sequences for each taxon in each partition across all matrices with diamond blast. Based on inspection of sequence similarity, we excluded all comparisons with less than 99% identity and greater than 10^-25^ e-value.
+
+
+### Taxa
+
+The primary intent of comparing taxa across matrices was to validate our taxon name reconciliation across studies. 
+
+We first considered pairwise similarity between the same species from different matrices in different studies.
+
+```{r taxon_mapping_across_studies}
+
+Dtaxaxman = 
+	read_tsv("~/Dropbox/repo/animal_root/blast/graphs/cross_mscript_taxa.tsv") %>%
+	arrange( mscript1, dataset1, taxon1, mscript2, dataset2, taxon2 ) 
+
+Dtaxaxman_raw_count = nrow(Dtaxaxman)
+
+Dtaxaxman %<>%
+	distinct( mscript1, dataset1, taxon1, mscript2, dataset2, taxon2, .keep_all = TRUE )
+
+```
+
+`r Dtaxaxman_raw_count` raw pairwise comparisons passed the similarity thresholds under these sampling criteria. These included multiple hits for the same sequence pairs from different regions. When only a single hit is retained, there are `r nrow(Dtaxaxman)` retained sequence pairs.
+
+We next considered taxon mapping more generally.
+
+```{r taxon_mapping}
+
+Dtaxa = 
+	read_tsv("~/Dropbox/repo/animal_root/blast/graphs/taxon_graph.tsv") %>%
+	arrange( mscript1, dataset1, taxon1, mscript2, dataset2, taxon2 ) 
+
+# Set aside species correspondense to same species in same matrix in same matrix
+Dtaxa_self =
+	Dtaxa %>%
+		filter( mscript1 == mscript2 & dataset1==dataset2 & taxon1==taxon2  )
+
+# Remove species correspondense to same species in same matrix in same study
+Dtaxa %<>%
+	filter( !(mscript1 == mscript2 & dataset1==dataset2 & taxon1==taxon2) )
+
+n_not_self = nrow(Dtaxa)
+
+# Remove hits in same matrix in same study
+Dtaxa %<>%
+	filter( !(mscript1==mscript2 & dataset1==dataset2))
+
+# Remove hits same study, presume that taxon resolution is OK within study.
+Dtaxa %<>%
+	filter( !(mscript1==mscript2))
+
+
+ggplot(Dtaxa) + geom_density(aes(count)) + xlim(0,50)
+
+ggplot(Dtaxa_self) + geom_density(aes(count))
+
+# Top of this list are candidates for renaming because they are very similar but have different names
+Dtaxa %>% filter(taxon1!=taxon2) %>% arrange( desc(count))
+
+
+# Top of this list are candidates for renaming because they are very different but have same names
+
+Dtaxa %>% filter(taxon1==taxon2) %>% arrange( count )
+
+
+taxonomy_reference = read_tsv("taxonomy_info/taxon_table.tsv")
+
+
+
+
+
+```
+
+
+
+
+### Partitions
+
+
+```{r partition_mapping}
+
+Dpart = 
+	read_tsv("~/Dropbox/repo/animal_root/blast/graphs/partitions_graph.tsv") %>% 
+	mutate( node1 = paste(mscript1, dataset1, part1, sep = ':') ) %>% 
+	mutate( node2 = paste(mscript2, dataset2, part2, sep = ':') )
+
+Dpart_self = Dpart %>% 
+	filter( node1==node2 ) %>%
+	select( mscript1, dataset1, part1, node1, count )
+
+ggplot( Dpart_self ) + geom_density(aes(count))
+
+
+# Retain only nonself edges
+Dpart %<>% filter( node1!=node2 )
+
+
+# Network analysis
+# Builds on https://www.jessesadler.com/post/network-analysis-with-r/
+
+D_source = Dpart %>%
+  distinct(node1, .keep_all = TRUE ) %>%
+	select( node1, mscript1, dataset1, part1 ) %>%
+  dplyr::rename(label = node1, mscript = mscript1, dataset = dataset1, part = part1 )
+
+D_dest = Dpart %>%
+  distinct(node2, .keep_all = TRUE ) %>%
+	select( node2, mscript2, dataset2, part2 ) %>%
+  dplyr::rename(label = node2, mscript = mscript2, dataset = dataset2, part = part2 )
+
+nodes = 
+	bind_rows( D_source, D_dest ) %>% 
+	distinct( label, .keep_all = TRUE ) %>%
+	arrange( label ) %>% 
+	rowid_to_column("id")
+
+
+sources = Dpart %>%
+  distinct(node1) %>%
+  dplyr::rename(label = node1)
+
+destinations = Dpart %>%
+  distinct(node2) %>%
+  dplyr::rename(label = node2)
+
+nodes2 = 
+	full_join(sources, destinations, by = "label") %>% 
+	arrange( label ) %>% 
+	rowid_to_column("id")
+
+edges = Dpart %>% 
+	select( node1, node2, count ) %>%
+  left_join(nodes, by = c("node1" = "label")) %>% 
+  dplyr::rename(from = id) %>% 
+  left_join(nodes, by = c("node2" = "label")) %>% 
+  dplyr::rename(to = id) %>%
+	dplyr::rename(weight = count) %>%
+	select( from, to, weight )
+
+
+#library( network )
+
+#gene_network = network( edges, directed=FALSE, vertex.attr = nodes, matrix.type = "edgelist", ignore.eval = FALSE)
+#
+#gene_matrix = as.sociomatrix(gene_network)
+
+#library( MCL )
+
+#gene_clusters = mcl( x=gene_matrix, addLoops = TRUE )
+
+library(igraph)
+gene_igraph = graph_from_data_frame(d = edges, vertices = nodes, directed = FALSE)
+gene_clusters = clusters(gene_igraph, mode=c("weak", "strong"))
+
+nodes$cluster = gene_clusters$membership
+
+# Investigate commencted components of genes (ie partitions) that include multiple members fromt he same matrix
+D = nodes %>% group_by( mscript, dataset, cluster ) %>% summarise(n=n()) %>% arrange(desc(n))
+D %>% print(n=100)
+
+clusterstats = nodes %>% group_by( cluster ) %>% summarise(n=n()) %>% arrange(desc(n))
+clusterstats %>% print(n=100)
+
+```
+
+The count for a partition pair can be much arger than the number of genes in the matrix, which suggests that the count is the number of hsps rather than the number of sequences with hits.
+
+There are `r length(unique(nodes$dataset))` datasets. A gene that is perfectly sampled would form a cluster with this size. Very few clusters, though, are this size. This suggests that intersection of genes between matrices is low
+
+
+
+
 
 ## References

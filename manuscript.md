@@ -74,84 +74,7 @@ Overview of published analyses
 
 ### Alignment composition
 
-    ##                             name            clade
-    ## 1                  Acanthoeca_sp Choanoflagellida
-    ## 2           Acropora_cervicornis         Cnidaria
-    ## 3             Exaiptasia_pallida         Cnidaria
-    ## 4         Amoebidium_parasiticum    Ichthyosporea
-    ## 5       Amphimedon_queenslandica         Porifera
-    ## 6          Aphrocallistes_vastus         Porifera
-    ## 7                 Aurelia_aurita         Cnidaria
-    ## 8               Beroe_abyssicola       Ctenophora
-    ## 9               Bolocera_tuediae         Cnidaria
-    ## 10          Botryllus_schlosseri        Bilateria
-    ## 11        Branchiostoma_floridae        Bilateria
-    ## 12     Buddenbrockia_plumatellae         Cnidaria
-    ## 13              Capitella_teleta        Bilateria
-    ## 14         Capsaspora_owczarzaki       Filasterea
-    ## 15             Chondrilla_nucula         Porifera
-    ## 16            Ciona_intestinalis        Bilateria
-    ## 17          Clytia_hemisphaerica         Cnidaria
-    ## 18         Corticium_candelabrum         Porifera
-    ## 19        Craspedacusta_sowerbii         Cnidaria
-    ## 20             Crassostrea_gigas        Bilateria
-    ## 21              Cyanea_capillata         Cnidaria
-    ## 22                 Daphnia_pulex        Bilateria
-    ## 23             Ectopleura_larynx         Cnidaria
-    ## 24          Edwardsiella_lineata         Cnidaria
-    ## 25              Enteromyxum_leei         Cnidaria
-    ## 26            Ephydatia_muelleri         Porifera
-    ## 27           Eunicella_cavolinii         Cnidaria
-    ## 28       Euplectella_aspergillum         Porifera
-    ## 29           Euplokamis_dunlapae       Ctenophora
-    ## 30            Gorgonia_ventalina         Cnidaria
-    ## 31            Helobdella_robusta        Bilateria
-    ## 32                  Homo_sapiens        Bilateria
-    ## 33            Hormathia_digitata         Cnidaria
-    ## 34                Hydra_vulgaris         Cnidaria
-    ## 35         Hydractinia_polyclina         Cnidaria
-    ## 36               Tritia_obsoleta        Bilateria
-    ## 37             Ixodes_scapularis        Bilateria
-    ## 38                  Kudoa_iwatai         Cnidaria
-    ## 39         Latimeria_menadoensis        Bilateria
-    ## 40          Leucetta_chagosensis         Porifera
-    ## 41            Ministeria_vibrans       Filasterea
-    ## 42             Mnemiopsis_leidyi       Ctenophora
-    ## 43          Monosiga_brevicollis Choanoflagellida
-    ## 44                Monosiga_ovata Choanoflagellida
-    ## 45           Orbicella_faveolata         Cnidaria
-    ## 46          Myxobolus_cerebralis         Cnidaria
-    ## 47                Nanomia_bijuga         Cnidaria
-    ## 48           Nasonia_vitripennis        Bilateria
-    ## 49        Nematostella_vectensis         Cnidaria
-    ## 50              Octopus_vulgaris        Bilateria
-    ## 51             Oscarella_carmela         Porifera
-    ## 52             Oscarella_carmela         Porifera
-    ## 53               Patiria_miniata        Bilateria
-    ## 54    Pediculus_humanus_corporis        Bilateria
-    ## 55            Petromyzon_marinus        Bilateria
-    ## 56           Petrosia_ficiformis         Porifera
-    ## 57          Pleurobrachia_pileus       Ctenophora
-    ## 58        Pocillopora_damicornis         Cnidaria
-    ## 59         Polypodium_hydriforme         Cnidaria
-    ## 60         Porites_australiensis         Cnidaria
-    ## 61      Saccoglossus_kowalevskii        Bilateria
-    ## 62                Salpingoeca_sp Choanoflagellida
-    ## 63      Sarcotragus_fasciculatus         Porifera
-    ## 64          Sphaeroforma_arctica    Ichthyosporea
-    ## 65          Sphaeromyxa_zaharoni         Cnidaria
-    ## 66      Stephanoeca_diplocostata Choanoflagellida
-    ## 67         Stomolophus_meleagris         Cnidaria
-    ## 68            Strigamia_maritima        Bilateria
-    ## 69 Strongylocentrotus_purpuratus        Bilateria
-    ## 70                Sycon_ciliatum         Porifera
-    ## 71                 Sycon_coactum         Porifera
-    ## 72 Tetracapsuloides_bryosalmonae         Cnidaria
-    ## 73         Thelohanellus_kitauei         Cnidaria
-    ## 74          Trichoplax_adhaerens         Placozoa
-    ## 75         Tripedalia_cystophora         Cnidaria
-    ## 76                Urticina_eques         Cnidaria
-    ## 77         Vallicula_multiformis       Ctenophora
+![](manuscript_files/figure-markdown_github/unnamed-chunk-2-1.png)
 
 XXX
 
@@ -254,6 +177,272 @@ The authors argue that previous results supporting Ctenophora-sister "are artifa
 > Results of our analyses indicate that sponges are the sister group to the remaining Metazoa, and Placozoa are sister group to the Bilateria
 
 They also investigated saturation, and conclude that Dunn *et al.* \[2\] is more saturated than Philippe *et al.* 2009 \[Philippe:2009hh\]. Note that the Pick *et al.* \[13\] dataset is not reanalyzed here because partition data are not available, and due to site filtering the partition file from Dunn *et al.* \[2\] cannot be applied to this matrix.
+
+Matrix mapping
+--------------
+
+Taxa and partition correspondence across manuscripts was assessed by comparing all sequences for each taxon in each partition across all matrices with diamond blast. Based on inspection of sequence similarity, we excluded all comparisons with less than 99% identity and greater than 10<sup>-25</sup> e-value.
+
+### Taxa
+
+The primary intent of comparing taxa across matrices was to validate our taxon name reconciliation across studies.
+
+We first considered pairwise similarity between the same species from different matrices in different studies.
+
+45052 raw pairwise comparisons passed the similarity thresholds under these sampling criteria. These included multiple hits for the same sequence pairs from different regions. When only a single hit is retained, there are 4646 retained sequence pairs.
+
+We next considered taxon mapping more generally.
+
+![](manuscript_files/figure-markdown_github/taxon_mapping-1.png)![](manuscript_files/figure-markdown_github/taxon_mapping-2.png)
+
+    ## # A tibble: 11,218 x 7
+    ##    mscript1   dataset1     taxon1     mscript2  dataset2    taxon2   count
+    ##    <chr>      <chr>        <chr>      <chr>     <chr>       <chr>    <int>
+    ##  1 Hejnol2009 Hejnol2009   Capitella… Borowiec… Total1080   Capitel…   127
+    ##  2 Borowiec2… Total1080    Capitella… Hejnol20… Hejnol2009  Capitel…   125
+    ##  3 Hejnol2009 Hejnol2009   Daphnia_p… Borowiec… Total1080   Daphnia…   112
+    ##  4 Borowiec2… Total1080    Daphnia_m… Hejnol20… Hejnol2009  Daphnia…   110
+    ##  5 Ryan2013   est.opistho… Capitella… Borowiec… Total1080   Capitel…    57
+    ##  6 Nosenko20… ribosomal_1… Hydra_mag… Chang2015 Chang2015   Hydra_v…    56
+    ##  7 Nosenko20… ribosomal_1… Capitella… Chang2015 Chang2015   Capitel…    55
+    ##  8 Borowiec2… Total1080    Capitella… Ryan2013  est.opisth… Capitel…    53
+    ##  9 Borowiec2… Total1080    Mnemiopsi… Ryan2013  est.opisth… Mnemiop…    53
+    ## 10 Chang2015  Chang2015    Capitella… Nosenko2… ribosomal_… Capitel…    53
+    ## # ... with 11,208 more rows
+
+    ## # A tibble: 4,646 x 7
+    ##    mscript1   dataset1 taxon1      mscript2  dataset2     taxon2     count
+    ##    <chr>      <chr>    <chr>       <chr>     <chr>        <chr>      <int>
+    ##  1 Borowiec2… Best108  Acropora_d… Moroz2014 ED3d         Acropora_…     1
+    ##  2 Borowiec2… Best108  Branchiost… Moroz2014 ED3d         Branchios…     1
+    ##  3 Borowiec2… Best108  Branchiost… Nosenko2… ribosomal_1… Branchios…     1
+    ##  4 Borowiec2… Best108  Drosophila… Moroz2014 ED3d         Drosophil…     1
+    ##  5 Borowiec2… Best108  Homo_sapie… Whelan20… Metazoa_Cho… Homo_sapi…     1
+    ##  6 Borowiec2… Best108  Ixodes_sca… Nosenko2… ribosomal_1… Ixodes_sc…     1
+    ##  7 Borowiec2… Best108  Ixodes_sca… Nosenko2… ribosomal_1… Ixodes_sc…     1
+    ##  8 Borowiec2… Best108  Ixodes_sca… Philippe… Philippe2009 Ixodes_sc…     1
+    ##  9 Borowiec2… Best108  Monosiga_b… Moroz2014 ED3d         Monosiga_…     1
+    ## 10 Borowiec2… Best108  Nematostel… Moroz2014 ED3d         Nematoste…     1
+    ## # ... with 4,636 more rows
+
+### Partitions
+
+![](manuscript_files/figure-markdown_github/partition_mapping-1.png)
+
+    ## # A tibble: 2,628 x 4
+    ## # Groups:   mscript, dataset [19]
+    ##     mscript      dataset                              cluster     n
+    ##     <chr>        <chr>                                  <dbl> <int>
+    ##   1 Whelan2017   Metazoa_full                              54    13
+    ##   2 Philippe2009 Philippe2009                              37     7
+    ##   3 Nosenko2013  ribosomal_11057_smatrix                  202     6
+    ##   4 Nosenko2013  ribosomal_14615_smatrix                  202     6
+    ##   5 Philippe2009 Philippe2009                              51     6
+    ##   6 Whelan2017   Metazoa_full                               9     6
+    ##   7 Chang2015    Chang2015                                202     5
+    ##   8 Philippe2009 Philippe2009                              90     5
+    ##   9 Philippe2009 Philippe2009                             202     5
+    ##  10 Philippe2009 Philippe2009                             397     5
+    ##  11 Ryan2013     est.opisthokonta                          51     5
+    ##  12 Ryan2013     est.opisthokonta                          90     5
+    ##  13 Simion2017   supermatrix_97sp_401632pos_1719genes      37     5
+    ##  14 Simion2017   supermatrix_97sp_401632pos_1719genes      51     5
+    ##  15 Simion2017   supermatrix_97sp_401632pos_1719genes      90     5
+    ##  16 Chang2015    Chang2015                                431     4
+    ##  17 Dunn2008     Dunn2008                                  51     4
+    ##  18 Simion2017   supermatrix_97sp_401632pos_1719genes      54     4
+    ##  19 Whelan2017   Metazoa_full                              85     4
+    ##  20 Whelan2017   Metazoa_full                             202     4
+    ##  21 Whelan2017   Metazoa_full                             431     4
+    ##  22 Whelan2017   Metazoa_full                             654     4
+    ##  23 Borowiec2015 Best108                                   37     3
+    ##  24 Borowiec2015 Best108                                   51     3
+    ##  25 Borowiec2015 Total1080                                 15     3
+    ##  26 Borowiec2015 Total1080                                 37     3
+    ##  27 Borowiec2015 Total1080                                 51     3
+    ##  28 Dunn2008     Dunn2008                                 202     3
+    ##  29 Hejnol2009   Hejnol2009                                51     3
+    ##  30 Nosenko2013  ribosomal_11057_smatrix                   15     3
+    ##  31 Nosenko2013  ribosomal_14615_smatrix                   15     3
+    ##  32 Philippe2009 Philippe2009                              15     3
+    ##  33 Philippe2009 Philippe2009                             398     3
+    ##  34 Philippe2009 Philippe2009                             443     3
+    ##  35 Ryan2013     est.opisthokonta                         202     3
+    ##  36 Whelan2017   Metazoa_full                             159     3
+    ##  37 Whelan2017   Metazoa_full                             389     3
+    ##  38 Borowiec2015 Best108                                   96     2
+    ##  39 Borowiec2015 Total1080                                  9     2
+    ##  40 Borowiec2015 Total1080                                 90     2
+    ##  41 Borowiec2015 Total1080                                 96     2
+    ##  42 Borowiec2015 Total1080                                159     2
+    ##  43 Borowiec2015 Total1080                                202     2
+    ##  44 Chang2015    Chang2015                                 51     2
+    ##  45 Chang2015    Chang2015                                 68     2
+    ##  46 Chang2015    Chang2015                                 78     2
+    ##  47 Chang2015    Chang2015                                 90     2
+    ##  48 Chang2015    Chang2015                                394     2
+    ##  49 Chang2015    Chang2015                                397     2
+    ##  50 Chang2015    Chang2015                                398     2
+    ##  51 Chang2015    Chang2015                                408     2
+    ##  52 Chang2015    Chang2015                                411     2
+    ##  53 Chang2015    Chang2015                                413     2
+    ##  54 Chang2015    Chang2015                                426     2
+    ##  55 Chang2015    Chang2015                                430     2
+    ##  56 Chang2015    Chang2015                                443     2
+    ##  57 Chang2015    Chang2015                                465     2
+    ##  58 Dunn2008     Dunn2008                                  15     2
+    ##  59 Dunn2008     Dunn2008                                 413     2
+    ##  60 Hejnol2009   Hejnol2009                                 9     2
+    ##  61 Moroz2014    ED3a                                     202     2
+    ##  62 Moroz2014    ED3a                                     465     2
+    ##  63 Nosenko2013  ribosomal_11057_smatrix                   68     2
+    ##  64 Nosenko2013  ribosomal_11057_smatrix                  408     2
+    ##  65 Nosenko2013  ribosomal_11057_smatrix                  411     2
+    ##  66 Nosenko2013  ribosomal_11057_smatrix                  413     2
+    ##  67 Nosenko2013  ribosomal_11057_smatrix                  426     2
+    ##  68 Nosenko2013  ribosomal_11057_smatrix                  430     2
+    ##  69 Nosenko2013  ribosomal_11057_smatrix                  431     2
+    ##  70 Nosenko2013  ribosomal_14615_smatrix                   68     2
+    ##  71 Nosenko2013  ribosomal_14615_smatrix                   78     2
+    ##  72 Nosenko2013  ribosomal_14615_smatrix                  394     2
+    ##  73 Nosenko2013  ribosomal_14615_smatrix                  408     2
+    ##  74 Nosenko2013  ribosomal_14615_smatrix                  411     2
+    ##  75 Nosenko2013  ribosomal_14615_smatrix                  413     2
+    ##  76 Nosenko2013  ribosomal_14615_smatrix                  426     2
+    ##  77 Nosenko2013  ribosomal_14615_smatrix                  430     2
+    ##  78 Nosenko2013  ribosomal_14615_smatrix                  431     2
+    ##  79 Philippe2009 Philippe2009                              68     2
+    ##  80 Philippe2009 Philippe2009                             171     2
+    ##  81 Philippe2009 Philippe2009                             394     2
+    ##  82 Philippe2009 Philippe2009                             410     2
+    ##  83 Philippe2009 Philippe2009                             418     2
+    ##  84 Philippe2009 Philippe2009                             419     2
+    ##  85 Philippe2009 Philippe2009                             422     2
+    ##  86 Philippe2009 Philippe2009                             435     2
+    ##  87 Philippe2009 Philippe2009                             464     2
+    ##  88 Philippe2009 Philippe2009                             465     2
+    ##  89 Philippe2009 Philippe2009                             628     2
+    ##  90 Ryan2013     est.opisthokonta                           9     2
+    ##  91 Ryan2013     est.opisthokonta                          15     2
+    ##  92 Ryan2013     est.opisthokonta                          96     2
+    ##  93 Simion2017   supermatrix_97sp_401632pos_1719genes       9     2
+    ##  94 Simion2017   supermatrix_97sp_401632pos_1719genes     397     2
+    ##  95 Simion2017   supermatrix_97sp_401632pos_1719genes     411     2
+    ##  96 Simion2017   supermatrix_97sp_401632pos_1719genes     431     2
+    ##  97 Simion2017   supermatrix_97sp_401632pos_1719genes     654     2
+    ##  98 Whelan2015   Dataset1_FullData                        397     2
+    ##  99 Whelan2017   Metazoa_Choano_RCFV_strict               431     2
+    ## 100 Whelan2017   Metazoa_Choano_RCFV_strict               670     2
+    ## # ... with 2,528 more rows
+
+    ## # A tibble: 849 x 2
+    ##     cluster     n
+    ##       <dbl> <int>
+    ##   1     202    38
+    ##   2      51    32
+    ##   3      54    25
+    ##   4      90    23
+    ##   5       9    22
+    ##   6      37    22
+    ##   7     431    22
+    ##   8      15    20
+    ##   9     397    15
+    ##  10      68    14
+    ##  11      85    13
+    ##  12     159    13
+    ##  13      75    12
+    ##  14     426    12
+    ##  15      46    11
+    ##  16      78    11
+    ##  17     413    11
+    ##  18      36    10
+    ##  19      50    10
+    ##  20      67    10
+    ##  21     411    10
+    ##  22      71     9
+    ##  23      96     9
+    ##  24     360     9
+    ##  25     408     9
+    ##  26     223     8
+    ##  27     232     8
+    ##  28     394     8
+    ##  29     395     8
+    ##  30     415     8
+    ##  31     430     8
+    ##  32     462     8
+    ##  33     533     8
+    ##  34     654     8
+    ##  35      26     7
+    ##  36      33     7
+    ##  37     100     7
+    ##  38     117     7
+    ##  39     171     7
+    ##  40     383     7
+    ##  41     389     7
+    ##  42     393     7
+    ##  43     404     7
+    ##  44     422     7
+    ##  45     435     7
+    ##  46     465     7
+    ##  47     538     7
+    ##  48     579     7
+    ##  49       4     6
+    ##  50      29     6
+    ##  51      53     6
+    ##  52      55     6
+    ##  53      64     6
+    ##  54      91     6
+    ##  55     191     6
+    ##  56     233     6
+    ##  57     398     6
+    ##  58     403     6
+    ##  59     405     6
+    ##  60     409     6
+    ##  61     410     6
+    ##  62     414     6
+    ##  63     423     6
+    ##  64     424     6
+    ##  65     425     6
+    ##  66     436     6
+    ##  67     443     6
+    ##  68     487     6
+    ##  69     531     6
+    ##  70     551     6
+    ##  71     576     6
+    ##  72     597     6
+    ##  73     635     6
+    ##  74       6     5
+    ##  75      34     5
+    ##  76      59     5
+    ##  77      87     5
+    ##  78      94     5
+    ##  79     103     5
+    ##  80     136     5
+    ##  81     142     5
+    ##  82     144     5
+    ##  83     184     5
+    ##  84     186     5
+    ##  85     190     5
+    ##  86     197     5
+    ##  87     216     5
+    ##  88     234     5
+    ##  89     236     5
+    ##  90     247     5
+    ##  91     250     5
+    ##  92     270     5
+    ##  93     291     5
+    ##  94     388     5
+    ##  95     406     5
+    ##  96     412     5
+    ##  97     417     5
+    ##  98     418     5
+    ##  99     419     5
+    ## 100     427     5
+    ## # ... with 749 more rows
+
+The count for a partition pair can be much arger than the number of genes in the matrix, which suggests that the count is the number of hsps rather than the number of sequences with hits.
+
+There are 19 datasets. A gene that is perfectly sampled would form a cluster with this size. Very few clusters, though, are this size. This suggests that intersection of genes between matrices is low
 
 References
 ----------
