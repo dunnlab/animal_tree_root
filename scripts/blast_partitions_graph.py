@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from glob import glob
 import pandas as pd
 import networkx as nx
@@ -28,8 +29,8 @@ qseq.columns = qseq_colnames
 sseq.columns = sseq_colnames
 unique_best_evalue = pd.concat((qseq, sseq, unique_best_evalue), axis=1)
 
-# only retain inter-manuscript hits
-inter_mscript = unique_best_evalue[unique_best_evalue['mscript1'] != unique_best_evalue['mscript2']]
+# only retain hits from different matrices/datasets
+inter_mscript = unique_best_evalue[unique_best_evalue['dataset1'] != unique_best_evalue['dataset2']]
 # count unique mscript:dataset:partition <-> mscript:dataset:partition 
 groupby_columns = ['mscript1', 'dataset1', 'part1', 'mscript2', 'dataset2', 'part2']
 parts = inter_mscript.groupby(groupby_columns).size().reset_index(name='count')
