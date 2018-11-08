@@ -12,7 +12,7 @@ pident_cutoff = 95.0
 evalue_cutoff = 1e-25
 
 # read in blast results
-for i, infile in enumerate(sorted(glob('blast/results/*_permissive.txt'))):
+for i, infile in enumerate(sorted(glob('blast/diamond_results/*_permissive.txt'))):
     df_tmp = pd.read_csv(infile, sep='\t', names=colnames)
     df_tmp = df_tmp[(df_tmp['pident']>pident_cutoff) & (df_tmp['evalue']<evalue_cutoff)]
     if i ==0:
@@ -40,7 +40,7 @@ parts_graph = nx.Graph()
 parts_graph.add_edges_from([(tuple(x[:3]), tuple(x[3:6]), {'weight':int(x[6])}) for x in  parts.values])
 # divide graph into separate components, sorted by size
 components = nx.connected_components(parts_graph)
-out = open('blast/graphs/partition_clusters.tsv', 'w')
+out = open('blast/graphs/diamond_partition_clusters.tsv', 'w')
 print('\t'.join(['manuscript', 'dataset', 'partition_name','cluster_number']), file=out)
 for i, component in enumerate(sorted(components, key=len, reverse=True)):
     [print('\t'.join(x+(str(i),)), file=out) for x in component]
