@@ -1,0 +1,317 @@
+IQ-TREE multicore version 1.6.7 for Linux 64-bit built Aug 23 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    c27n08.farnam.hpc.yale.internal (AVX2, FMA3, 251 GB RAM)
+Command: iqtree -s Ryan2013_est.opisthokonta.phy -nt 20 -bb 1000 -m GTR20+F+G -pre Ryan2013-Opistho.GTR20
+Seed:    300957 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Oct 31 13:10:05 2018
+Kernel:  AVX+FMA - 20 threads (28 CPU cores detected)
+
+Reading alignment file Ryan2013_est.opisthokonta.phy ... Phylip format detected
+Alignment most likely contains protein sequences
+Alignment has 70 sequences with 88384 columns, 83152 distinct patterns
+59941 parsimony-informative, 14814 singleton sites, 13629 constant sites
+                                Gap/Ambiguity  Composition  p-value
+   1  Oscarella_carmela                85.53%    failed      0.03%
+   2  Patiria_pectinifera              66.93%    failed      0.02%
+   3  Strongylocentrotus_purpuratus    25.73%    passed     13.20%
+   4  Capitella_teleta                 13.97%    failed      0.06%
+   5  Branchiostoma_floridae           75.06%    failed      0.00%
+   6  Helobdella_robusta               11.90%    failed      0.00%
+   7  Lottia_gigantea                  12.00%    failed      0.00%
+   8  Saccoglossus_kowalevskii         20.12%    failed      0.02%
+   9  Drosophila_melanogaster           9.97%    failed      0.01%
+  10  Anoplodactylus_eroticus          85.99%    failed      0.00%
+  11  Daphnia_pulex                    12.84%    failed      0.10%
+  12  Petromyzon_marinus               53.47%    failed      0.00%
+  13  Ciona_intestinalis               18.96%    failed      0.00%
+  14  Acropora_palmata                 61.09%    failed      0.34%
+  15  Acropora_millepora               30.90%    failed      0.01%
+  16  Nematostella_vectensis           17.01%    failed      0.01%
+  17  Anemonia_viridis                 70.80%    failed      0.00%
+  18  Capsaspora_owczarzaki            14.75%    failed      0.00%
+  19  Saccharomyces_cerevisiae         27.45%    failed      0.00%
+  20  Cryptococcus_neoformans          16.17%    failed      0.00%
+  21  Monosiga_brevicollis             19.10%    failed      0.00%
+  22  Phycomyces_blakesleeanus         16.34%    failed      0.00%
+  23  Batrachochytrium_dendrobatidis   20.24%    failed      0.00%
+  24  Spizellomyces_punctatus          18.56%    failed      0.00%
+  25  Salpingoeca_rosetta              21.64%    failed      0.00%
+  26  Amphimedon_queenslandica         19.70%    failed      0.00%
+  27  Lubomirskia_baicalensis          90.64%    failed      0.00%
+  28  Mnemiopsis_leidyi                17.25%    failed      0.00%
+  29  Hydra_vulgaris                   23.09%    failed      0.00%
+  30  Trichoplax_adhaerens             14.80%    failed      0.00%
+  31  Cyanea_capillata                 91.88%    failed      0.00%
+  32  Crassostrea_virginica            75.27%    failed      0.00%
+  33  Schmidtea_mediterranea           48.54%    failed      0.00%
+  34  Cerebratulus_lacteus             88.58%    failed      0.00%
+  35  Ephydatia_muelleri               89.00%    failed      0.00%
+  36  Pleurobrachia_pileus             74.17%    failed      0.29%
+  37  Suberites_domuncula              86.52%    failed      0.00%
+  38  Hydractinia_echinata             87.20%    failed      0.03%
+  39  Clytia_hemisphaerica             51.77%    failed      0.00%
+  40  Metridium_senile                 73.78%    failed      0.03%
+  41  Porites_astreoides               89.12%    passed     23.30%
+  42  Orbicella_faveolata              65.39%    failed      0.01%
+  43  Halocynthia_roretzi              57.72%    failed      0.00%
+  44  Euprymna_scolopes                68.18%    failed      0.00%
+  45  Rhipicephalus_microplus          46.43%    failed      0.00%
+  46  Isodiametra_pulchra              88.17%    passed     18.78%
+  47  Symsagittifera_roscoffensis      83.35%    failed      0.13%
+  48  Monosiga_ovata                   58.38%    failed      0.00%
+  49  Oscarella_lobularis              93.95%    failed      0.04%
+  50  Gallus_gallus                    25.84%    failed      0.00%
+  51  Meara_stichopi                   92.16%    failed      0.00%
+  52  Terebratalia_transversa          82.97%    failed      0.00%
+  53  Euperipatoides_kanangrensis      88.86%    failed      0.00%
+  54  Xiphinema_index                  75.44%    failed      0.01%
+  55  Oopsacas_minuta                  92.50%    failed      0.00%
+  56  Convolutriloba_longifissura      91.85%    failed      0.00%
+  57  Mertensiid_sp                    92.42%    failed      0.00%
+  58  Paraplanocera_oligoglena         90.14%    failed      0.00%
+  59  Nemertoderma_westbladi           78.81%    failed      0.00%
+  60  Echinoderes_horni                88.15%    failed      0.00%
+  61  Ptychodera_flava                 89.24%    failed      0.00%
+  62  Sphaeroforma_arctica             81.10%    failed      0.00%
+  63  Rhizopus_orizae                  27.62%    failed      0.00%
+  64  Podocoryna_carnea                88.87%    failed      0.06%
+  65  Amoebidium_parasiticum           93.77%    failed      0.00%
+  66  Sycon_raphanus                   90.59%    failed      0.00%
+  67  Xenoturbella_bocki               87.63%    failed      0.00%
+  68  Carteriospongia_foliascens       94.13%    failed      0.96%
+  69  Exaiptasia_pallida               95.00%    failed      3.78%
+  70  Leucetta_chagosensis             95.85%    failed      0.00%
+WARNING: 44 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                            59.32%  67 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 11.180 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 300957)...
+WARNING: GTR20 model will estimate 189 substitution rates that might be overfitting!
+WARNING: Please only use GTR20 with very large data and always test for model fit!
+
+NOTE: 3915 MB RAM (3 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -3119073.020
+2. Current log-likelihood: -2998614.883
+3. Current log-likelihood: -2997828.161
+4. Current log-likelihood: -2997793.212
+5. Current log-likelihood: -2997788.150
+6. Current log-likelihood: -2997785.577
+7. Current log-likelihood: -2997783.466
+8. Current log-likelihood: -2997781.991
+9. Current log-likelihood: -2997781.404
+10. Current log-likelihood: -2997780.921
+11. Current log-likelihood: -2997780.209
+12. Current log-likelihood: -2997779.585
+13. Current log-likelihood: -2997779.219
+14. Current log-likelihood: -2997779.019
+15. Current log-likelihood: -2997778.403
+16. Current log-likelihood: -2997778.096
+17. Current log-likelihood: -2997777.725
+18. Current log-likelihood: -2997777.459
+19. Current log-likelihood: -2997777.147
+20. Current log-likelihood: -2997776.912
+21. Current log-likelihood: -2997776.646
+22. Current log-likelihood: -2997776.437
+23. Current log-likelihood: -2997776.204
+24. Current log-likelihood: -2997776.017
+25. Current log-likelihood: -2997775.812
+26. Current log-likelihood: -2997775.642
+27. Current log-likelihood: -2997775.457
+28. Current log-likelihood: -2997775.302
+29. Current log-likelihood: -2997775.128
+30. Current log-likelihood: -2997774.982
+31. Current log-likelihood: -2997774.828
+32. Current log-likelihood: -2997774.697
+33. Current log-likelihood: -2997774.553
+34. Current log-likelihood: -2997774.430
+35. Current log-likelihood: -2997774.299
+36. Current log-likelihood: -2997774.185
+37. Current log-likelihood: -2997774.064
+38. Current log-likelihood: -2997773.957
+39. Current log-likelihood: -2997773.844
+40. Current log-likelihood: -2997773.744
+41. Current log-likelihood: -2997773.638
+Optimal log-likelihood: -2997773.543
+Gamma shape alpha: 0.833
+Parameters optimization took 41 rounds (8148.593 sec)
+Computing ML distances based on estimated model parameters... 5.860 sec
+WARNING: Some pairwise ML distances are too long (saturated)
+Computing BIONJ tree...
+0.003 seconds
+Log-likelihood of BIONJ tree: -3001963.881
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 573.999 second
+Computing log-likelihood of 98 initial trees ... 182.208 seconds
+Current best score: -2997773.543
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -2997493.199
+Estimate model parameters (epsilon = 0.100)
+UPDATE BEST LOG-LIKELIHOOD: -2997461.454
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 6: -2997296.866
+Iteration 10 / LogL: -2997308.393 / Time: 2h:55m:8s
+Iteration 20 / LogL: -2997901.951 / Time: 2h:57m:50s
+Finish initializing candidate tree set (12)
+Current best tree score: -2997296.866 / CPU time: 2485.557
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -2997463.608 / Time: 3h:1m:3s (7h:54m:0s left)
+Iteration 40 / LogL: -2997311.453 / Time: 3h:4m:41s (5h:12m:13s left)
+Iteration 50 / LogL: -2997406.159 / Time: 3h:8m:19s (3h:35m:1s left)
+Log-likelihood cutoff on original alignment: -2997547.795
+Iteration 60 / LogL: -2997324.185 / Time: 3h:11m:37s (2h:29m:15s left)
+Iteration 70 / LogL: -2997463.305 / Time: 3h:15m:9s (1h:41m:43s left)
+Iteration 80 / LogL: -2997313.090 / Time: 3h:18m:24s (1h:5m:14s left)
+Estimate model parameters (epsilon = 0.100)
+UPDATE BEST LOG-LIKELIHOOD: -2997290.811
+Iteration 90 / LogL: -2997339.555 / Time: 3h:26m:19s (0h:37m:3s left)
+Iteration 100 / LogL: -2997541.067 / Time: 3h:29m:48s (0h:12m:42s left)
+Log-likelihood cutoff on original alignment: -2997488.641
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+TREE SEARCH COMPLETED AFTER 107 ITERATIONS / Time: 3h:32m:22s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -2997290.811
+2. Current log-likelihood: -2997290.747
+3. Current log-likelihood: -2997290.693
+4. Current log-likelihood: -2997290.620
+5. Current log-likelihood: -2997290.557
+6. Current log-likelihood: -2997290.505
+7. Current log-likelihood: -2997290.457
+8. Current log-likelihood: -2997290.396
+9. Current log-likelihood: -2997290.342
+10. Current log-likelihood: -2997290.293
+11. Current log-likelihood: -2997290.249
+12. Current log-likelihood: -2997290.195
+13. Current log-likelihood: -2997290.145
+14. Current log-likelihood: -2997290.100
+15. Current log-likelihood: -2997290.058
+16. Current log-likelihood: -2997290.009
+17. Current log-likelihood: -2997289.964
+18. Current log-likelihood: -2997289.921
+19. Current log-likelihood: -2997289.881
+20. Current log-likelihood: -2997289.837
+21. Current log-likelihood: -2997289.794
+22. Current log-likelihood: -2997289.754
+23. Current log-likelihood: -2997289.717
+24. Current log-likelihood: -2997289.673
+25. Current log-likelihood: -2997289.632
+26. Current log-likelihood: -2997289.594
+27. Current log-likelihood: -2997289.559
+28. Current log-likelihood: -2997289.518
+29. Current log-likelihood: -2997289.481
+30. Current log-likelihood: -2997289.445
+31. Current log-likelihood: -2997289.412
+32. Current log-likelihood: -2997289.374
+33. Current log-likelihood: -2997289.339
+34. Current log-likelihood: -2997289.305
+35. Current log-likelihood: -2997289.273
+36. Current log-likelihood: -2997289.238
+37. Current log-likelihood: -2997289.205
+38. Current log-likelihood: -2997289.174
+39. Current log-likelihood: -2997289.144
+40. Current log-likelihood: -2997289.111
+41. Current log-likelihood: -2997289.080
+42. Current log-likelihood: -2997289.050
+43. Current log-likelihood: -2997289.021
+44. Current log-likelihood: -2997288.990
+45. Current log-likelihood: -2997288.961
+46. Current log-likelihood: -2997288.933
+47. Current log-likelihood: -2997288.906
+48. Current log-likelihood: -2997288.877
+49. Current log-likelihood: -2997288.849
+50. Current log-likelihood: -2997288.822
+51. Current log-likelihood: -2997288.797
+52. Current log-likelihood: -2997288.769
+53. Current log-likelihood: -2997288.743
+54. Current log-likelihood: -2997288.718
+55. Current log-likelihood: -2997288.693
+56. Current log-likelihood: -2997288.668
+57. Current log-likelihood: -2997288.643
+58. Current log-likelihood: -2997288.619
+59. Current log-likelihood: -2997288.595
+60. Current log-likelihood: -2997288.571
+61. Current log-likelihood: -2997288.548
+62. Current log-likelihood: -2997288.525
+63. Current log-likelihood: -2997288.503
+64. Current log-likelihood: -2997288.480
+65. Current log-likelihood: -2997288.458
+66. Current log-likelihood: -2997288.436
+67. Current log-likelihood: -2997288.415
+68. Current log-likelihood: -2997288.393
+69. Current log-likelihood: -2997288.372
+70. Current log-likelihood: -2997288.351
+71. Current log-likelihood: -2997288.331
+72. Current log-likelihood: -2997288.310
+73. Current log-likelihood: -2997288.290
+74. Current log-likelihood: -2997288.270
+75. Current log-likelihood: -2997288.251
+76. Current log-likelihood: -2997288.232
+77. Current log-likelihood: -2997288.213
+78. Current log-likelihood: -2997288.194
+79. Current log-likelihood: -2997288.176
+80. Current log-likelihood: -2997288.157
+81. Current log-likelihood: -2997288.139
+82. Current log-likelihood: -2997288.121
+83. Current log-likelihood: -2997288.103
+84. Current log-likelihood: -2997288.086
+85. Current log-likelihood: -2997288.069
+86. Current log-likelihood: -2997288.051
+87. Current log-likelihood: -2997288.035
+88. Current log-likelihood: -2997288.018
+89. Current log-likelihood: -2997288.002
+90. Current log-likelihood: -2997287.985
+91. Current log-likelihood: -2997287.969
+92. Current log-likelihood: -2997287.953
+93. Current log-likelihood: -2997287.937
+94. Current log-likelihood: -2997287.922
+95. Current log-likelihood: -2997287.907
+96. Current log-likelihood: -2997287.891
+97. Current log-likelihood: -2997287.876
+98. Current log-likelihood: -2997287.861
+99. Current log-likelihood: -2997287.847
+Optimal log-likelihood: -2997287.847
+Gamma shape alpha: 0.831
+Parameters optimization took 99 rounds (6502.445 sec)
+BEST SCORE FOUND : -2997287.847
+Creating bootstrap support values...
+Split supports printed to NEXUS file Ryan2013-Opistho.GTR20.splits.nex
+Total tree length: 23.748
+
+Total number of iterations: 107
+CPU time used for tree search: 80325.338 sec (22h:18m:45s)
+Wall-clock time used for tree search: 4557.818 sec (1h:15m:57s)
+Total CPU time used: 371542.874 sec (103h:12m:22s)
+Total wall-clock time used: 19245.113 sec (5h:20m:45s)
+
+Computing bootstrap consensus tree...
+Reading input file Ryan2013-Opistho.GTR20.splits.nex...
+70 taxa and 173 splits.
+Consensus tree written to Ryan2013-Opistho.GTR20.contree
+Reading input trees file Ryan2013-Opistho.GTR20.contree
+Log-likelihood of consensus tree: -2997287.848
+
+Analysis results written to: 
+  IQ-TREE report:                Ryan2013-Opistho.GTR20.iqtree
+  Maximum-likelihood tree:       Ryan2013-Opistho.GTR20.treefile
+  Likelihood distances:          Ryan2013-Opistho.GTR20.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          Ryan2013-Opistho.GTR20.splits.nex
+  Consensus tree:                Ryan2013-Opistho.GTR20.contree
+  Screen log file:               Ryan2013-Opistho.GTR20.log
+
+Date and Time: Wed Oct 31 18:31:14 2018

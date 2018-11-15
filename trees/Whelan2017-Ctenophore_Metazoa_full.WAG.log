@@ -1,0 +1,183 @@
+IQ-TREE multicore version 1.6.7 for Linux 64-bit built Aug 23 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    c27n08.farnam.hpc.yale.internal (AVX2, FMA3, 251 GB RAM)
+Command: iqtree -s Whelan2017_Metazoa_full.phy -nt 20 -bb 1000 -m WAG+F+G -pre Whelan2017-Ctenophore_Metazoa_full.WAG
+Seed:    127947 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Nov  7 13:23:16 2018
+Kernel:  AVX+FMA - 20 threads (28 CPU cores detected)
+
+Reading alignment file Whelan2017_Metazoa_full.phy ... Phylip format detected
+Alignment most likely contains protein sequences
+Alignment has 80 sequences with 68062 columns, 66017 distinct patterns
+51252 parsimony-informative, 8710 singleton sites, 8100 constant sites
+                                     Gap/Ambiguity  Composition  p-value
+   1  Beroe_sp._Antarctica                  83.72%    failed      0.00%
+   2  Mertensiidae_sp_Washington_USA        75.64%    failed      0.97%
+   3  Ctenophora_sp_Florida_USA             87.42%    failed      0.03%
+   4  Sphaeroforma_arctica                  37.01%    failed      0.00%
+   5  Bolocera_tuediae                      78.00%    failed      0.02%
+   6  Vallicula                             64.57%    failed      2.04%
+   7  Drosophila_melanogaster                1.44%    failed      0.00%
+   8  Ocyropsis_sp_Florida_USA              79.76%    failed      0.00%
+   9  Rossella_fibulata                     25.22%    failed      0.00%
+  10  Amoebidium_parasiticum                 7.53%    failed      0.00%
+  11  Abylopsis_tetragona                   24.21%    failed      0.00%
+  12  Pleurobrachia_pileus                  53.87%    failed      0.00%
+  13  Ocyropsis_crystallina                 52.11%    failed      0.00%
+  14  Eunicella_verrucosa                   16.14%    failed      0.00%
+  15  Dryodora_glandiformis                 61.05%    failed      0.01%
+  16  Euplokamis_dunlapae                   73.09%    failed      0.00%
+  17  Daphnia_pulex                          5.27%    failed      1.40%
+  18  Eurhamphaea_vexilligera               75.03%    failed      0.03%
+  19  Exaiptasia_pallida                     8.79%    failed      0.00%
+  20  Homo_sapiens                           0.53%    failed      0.00%
+  21  Amphimedon_queenslandica              17.66%    failed      0.00%
+  22  Petrosia_ficiformis                   47.86%    failed      0.00%
+  23  Strongylocentrotus_purpatus           19.68%    failed      0.15%
+  24  Physalia_physalia                     37.62%    failed      0.00%
+  25  Hydra_vulgaris                        14.38%    failed      0.00%
+  26  Beroe_sp_Queensland_Australia         67.23%    failed      0.01%
+  27  Corticium_candelabrum                 59.33%    failed      0.02%
+  28  Beroe_forskalii                       68.71%    failed      0.00%
+  29  Nanomia_bijuga                        33.57%    failed      0.00%
+  30  Lobata_sp_Punta_Arenas_Argentina      80.44%    failed      0.00%
+  31  Acanthoeca                            14.90%    failed      0.00%
+  32  Sycon_ciliatum                         7.08%    failed      0.00%
+  33  Sympagella_nux                        14.49%    failed      0.00%
+  34  Spongilla_lacustris                   41.37%    failed      0.00%
+  35  Monosiga_ovata                        64.20%    failed      0.00%
+  36  Crella_elegans                        62.80%    failed      0.06%
+  37  Cydippida_sp_Maryland_USA             48.93%    failed      0.00%
+  38  Ocyropsis_sp_Bimini_Bahamas           67.06%    failed      0.02%
+  39  Ministeria_vibrans                    30.47%    failed      0.00%
+  40  Mnemiopsis_leidyi                     68.91%    failed      0.00%
+  41  Mycale_phylophylla                    28.31%    failed      0.00%
+  42  Hemithris_psittacea                   20.37%    failed      0.01%
+  43  Callianira_antarctica                 77.61%    failed      0.00%
+  44  Agalma_elegans                        24.92%    failed      0.00%
+  45  Cestum_veneris                        78.43%    failed      0.00%
+  46  Cydippida                             77.02%    failed      2.36%
+  47  Capitella_teleta                       4.86%    failed      0.17%
+  48  Salpingoeca_pyxidium                  67.79%    failed      0.00%
+  49  Salpingoeca_rosetta                   10.67%    failed      0.00%
+  50  Chondrilla_nucula                     52.08%    failed      0.00%
+  51  Trichoplax_adhaerens                   9.67%    failed      0.00%
+  52  Pleurobrachia_bachei                  71.27%    failed      0.00%
+  53  Monosiga_brevicolis                   15.70%    failed      0.00%
+  54  Lobatolampea_tetragona                87.41%    failed      0.00%
+  55  Beroe_abyssicola                      60.39%    failed      0.00%
+  56  Capsaspora_owczarzaki                  7.69%    failed      0.00%
+  57  Hydra_viridissima                     53.23%    failed      0.00%
+  58  Acropora_digitifera                   50.27%    failed      0.07%
+  59  Bolinopsis_infundibulum               86.83%    failed      0.41%
+  60  Cliona_varians                        33.05%    failed      0.82%
+  61  Kirkpatrickia_variolosa               25.58%    failed      0.28%
+  62  Latrunculia_apicalis                  19.70%    failed      0.00%
+  63  Hormiphora_palmata                    73.09%    passed     34.79%
+  64  Hyalonema_populiferum                 54.20%    failed      0.00%
+  65  Coeloplana_astericola                 65.97%    failed      0.00%
+  66  Periphyla_periphyla                   58.96%    failed      0.00%
+  67  Mertensiidae_sp._Antarctica           75.51%    failed      0.00%
+  68  Hormathia_digitata                    62.44%    failed      0.00%
+  69  Hydra_oligactis                       57.96%    failed      0.00%
+  70  Pseudospongosorites_suberitoides      72.35%    failed      0.00%
+  71  Sycon_coactum                         30.62%    failed      0.00%
+  72  Sarcotragus_fasciculatus              63.86%    failed      0.00%
+  73  Bolinopsis_ashleyi                    78.47%    failed      0.00%
+  74  Pleurobrachia_sp_South_Carolina_USA   77.18%    passed     24.03%
+  75  Aphrocallistes_vastus                  9.70%    failed      0.00%
+  76  Oscarella_carmela                      4.87%    failed      0.00%
+  77  Beroe_ovata                           82.02%    failed      0.09%
+  78  Craseo_lathetica                      39.26%    failed      0.00%
+  79  Nematostella_vectensis                10.74%    failed      0.79%
+  80  Hormiphora_californica                43.09%    failed      0.00%
+WARNING: 42 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                 46.25%  78 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 4.809 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 127947)...
+
+NOTE: 3516 MB RAM (3 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -3046760.303
+2. Current log-likelihood: -2966811.657
+3. Current log-likelihood: -2966513.538
+4. Current log-likelihood: -2966512.729
+Optimal log-likelihood: -2966512.702
+Gamma shape alpha: 0.795
+Parameters optimization took 4 rounds (14.047 sec)
+Computing ML distances based on estimated model parameters... 6.622 sec
+Computing BIONJ tree...
+0.004 seconds
+Log-likelihood of BIONJ tree: -2972234.147
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 478.511 second
+Computing log-likelihood of 98 initial trees ... 163.146 seconds
+Current best score: -2966031.779
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -2965700.475
+Iteration 10 / LogL: -2965708.127 / Time: 0h:13m:25s
+Iteration 20 / LogL: -2965965.235 / Time: 0h:16m:13s
+Finish initializing candidate tree set (6)
+Current best tree score: -2965700.475 / CPU time: 941.902
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -2965965.805 / Time: 0h:18m:59s (0h:46m:18s left)
+Iteration 40 / LogL: -2965725.424 / Time: 0h:21m:37s (0h:33m:41s left)
+Iteration 50 / LogL: -2965705.461 / Time: 0h:24m:15s (0h:25m:9s left)
+Log-likelihood cutoff on original alignment: -2965954.684
+Iteration 60 / LogL: -2965967.230 / Time: 0h:27m:7s (0h:18m:47s left)
+Iteration 70 / LogL: -2965707.994 / Time: 0h:29m:57s (0h:13m:25s left)
+Iteration 80 / LogL: -2965706.852 / Time: 0h:32m:29s (0h:8m:36s left)
+Iteration 90 / LogL: -2965722.841 / Time: 0h:35m:11s (0h:4m:20s left)
+Iteration 100 / LogL: -2965705.097 / Time: 0h:38m:3s (0h:0m:23s left)
+Log-likelihood cutoff on original alignment: -2965953.066
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:38m:35s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -2965700.475
+Optimal log-likelihood: -2965700.473
+Gamma shape alpha: 0.795
+Parameters optimization took 1 rounds (2.425 sec)
+BEST SCORE FOUND : -2965700.473
+Creating bootstrap support values...
+Split supports printed to NEXUS file Whelan2017-Ctenophore_Metazoa_full.WAG.splits.nex
+Total tree length: 19.328
+
+Total number of iterations: 102
+CPU time used for tree search: 36957.452 sec (10h:15m:57s)
+Wall-clock time used for tree search: 2283.749 sec (0h:38m:3s)
+Total CPU time used: 37520.797 sec (10h:25m:20s)
+Total wall-clock time used: 2317.914 sec (0h:38m:37s)
+
+Computing bootstrap consensus tree...
+Reading input file Whelan2017-Ctenophore_Metazoa_full.WAG.splits.nex...
+80 taxa and 176 splits.
+Consensus tree written to Whelan2017-Ctenophore_Metazoa_full.WAG.contree
+Reading input trees file Whelan2017-Ctenophore_Metazoa_full.WAG.contree
+Log-likelihood of consensus tree: -2965700.473
+
+Analysis results written to: 
+  IQ-TREE report:                Whelan2017-Ctenophore_Metazoa_full.WAG.iqtree
+  Maximum-likelihood tree:       Whelan2017-Ctenophore_Metazoa_full.WAG.treefile
+  Likelihood distances:          Whelan2017-Ctenophore_Metazoa_full.WAG.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          Whelan2017-Ctenophore_Metazoa_full.WAG.splits.nex
+  Consensus tree:                Whelan2017-Ctenophore_Metazoa_full.WAG.contree
+  Screen log file:               Whelan2017-Ctenophore_Metazoa_full.WAG.log
+
+Date and Time: Wed Nov  7 14:02:04 2018

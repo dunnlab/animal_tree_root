@@ -1,0 +1,184 @@
+IQ-TREE multicore version 1.6.7 for Linux 64-bit built Aug 23 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    c27n12.farnam.hpc.yale.internal (AVX2, FMA3, 251 GB RAM)
+Command: iqtree -s Whelan2015_Dataset1_FullData.phy -nt 20 -bb 1000 -m WAG+F+G -pre Whelan2015-D1.WAG
+Seed:    789063 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Nov  7 13:23:15 2018
+Kernel:  AVX+FMA - 20 threads (28 CPU cores detected)
+
+Reading alignment file Whelan2015_Dataset1_FullData.phy ... Phylip format detected
+Alignment most likely contains protein sequences
+WARNING: 2 sites contain only gaps or ambiguous characters.
+Alignment has 76 sequences with 81008 columns, 79734 distinct patterns
+65524 parsimony-informative, 9100 singleton sites, 6383 constant sites
+                                  Gap/Ambiguity  Composition  p-value
+   1  Aurelia_aurita                     72.01%    failed      0.00%
+   2  Lottia_gigantea                     8.47%    failed      0.00%
+   3  Acanthoeca_spectabilis             90.23%    failed      0.00%
+   4  Sphaeroforma_arctica               42.94%    failed      0.00%
+   5  Aspergillus_fumigatus              10.41%    failed      0.00%
+   6  Bolocera_tuediae                   85.07%    failed      0.01%
+   7  Drosophila_melanogaster             1.97%    failed      0.00%
+   8  Rossella_fibulata                  33.25%    failed      0.00%
+   9  Tubulanus_polymorphus              28.33%    failed      0.00%
+  10  Amoebidium_parasiticum              8.21%    failed      0.00%
+  11  Abylopsis_tetragona                31.45%    failed      0.00%
+  12  Eunicella_verrucosa                32.87%    failed      0.00%
+  13  Dryodora_glandiformis              51.82%    failed      0.00%
+  14  Euplokamis_dunlapae                66.89%    failed      0.00%
+  15  Lithobius_forficatus               30.79%    failed      0.59%
+  16  Daphnia_pulex                       9.05%    failed      0.00%
+  17  Pleurobrachia_pileus-A             36.50%    failed      0.00%
+  18  Neurospora_crassa                   8.04%    failed      0.00%
+  19  Exaiptasia_pallida                 51.38%    failed      0.00%
+  20  Mortierella_verticillata            4.99%    failed      0.00%
+  21  Homo_sapiens                        1.22%    failed      0.00%
+  22  Amphimedon_queenslandica           17.82%    failed      0.00%
+  23  Petrosia_ficiformis                52.68%    failed      0.00%
+  24  Strongylocentrotus_purpuratus      25.03%    failed      2.09%
+  25  Physalia_physalis                  46.65%    failed      0.00%
+  26  Hydra_vulgaris                     24.74%    failed      0.00%
+  27  Corticium_candelabrum              58.38%    failed      0.00%
+  28  Nanomia_bijuga                     48.94%    failed      0.00%
+  29  Sympagella_nux                     20.72%    failed      0.00%
+  30  Spongilla_lacustris                67.99%    failed      0.04%
+  31  Monosiga_ovata                     78.95%    failed      0.00%
+  32  Crella_elegans                     72.40%    failed      0.01%
+  33  Ministeria_vibrans                 48.41%    failed      0.00%
+  34  Mnemiopsis_leidyi                  54.13%    failed      0.00%
+  35  Petromyzon_marinus                 50.05%    failed      0.00%
+  36  Allomyces_macrogynus                8.75%    failed      0.00%
+  37  Hemithiris_psittacea               31.82%    failed      0.00%
+  38  Agalma_elegans                     30.61%    failed      0.00%
+  39  Tethya_wilhelma                    90.54%    failed      0.00%
+  40  Bolinopsis_infundibulum            72.27%    failed      0.00%
+  41  Ephydatia_muelleri                  9.85%    failed      0.00%
+  42  Capitella_teleta                    9.57%    failed      0.00%
+  43  Platygyra_carnosa                  44.78%    failed      0.00%
+  44  Salpingoeca_pyxidium               71.35%    failed      0.00%
+  45  Salpingoeca_rosetta                15.35%    failed      0.00%
+  46  Chondrilla_nucula                  56.41%    failed      0.00%
+  47  Trichoplax_adhaerens               15.26%    failed      0.00%
+  48  Pleurobrachia_bachei               57.31%    failed      0.00%
+  49  Monosiga_brevicollis               18.60%    failed      0.00%
+  50  Beroe_abyssicola                   38.10%    failed      0.00%
+  51  Hydra_viridissima                  63.51%    failed      0.00%
+  52  Acropora_digitifera                32.22%    failed      0.00%
+  53  Kirkpatrickia_variolosa            30.95%    failed      0.00%
+  54  Latrunculia_apicalis               23.56%    failed      0.00%
+  55  Hyalonema_populiferum              74.40%    failed      0.00%
+  56  Rhizopus_oryzae                    25.32%    failed      0.00%
+  57  Coeloplana_astericola              67.21%    failed      0.00%
+  58  Periphylla_periphylla              69.26%    failed      0.00%
+  59  Vallicula                          61.00%    failed      0.00%
+  60  Hormathia_digitata                 75.36%    failed      0.00%
+  61  Hydra_oligactis                    72.02%    failed      0.00%
+  62  Mertensiidae                       69.58%    failed      0.00%
+  63  Pseudospongosorites_suberitoides   82.63%    failed      0.00%
+  64  Sycon_ciliatum                      6.09%    failed      0.00%
+  65  Sycon_coactum                      33.27%    failed      0.00%
+  66  Sarcotragus_fasciculatus           77.29%    failed      0.00%
+  67  Saccharomyces_cerevisiae            5.95%    failed      0.00%
+  68  Spizellomyces_punctatus             9.77%    failed      0.00%
+  69  Capsaspora_owczarzaki               8.15%    failed      0.00%
+  70  Aphrocallistes_vastus              15.18%    failed      0.00%
+  71  Oscarella_carmela                  11.75%    failed      0.00%
+  72  Danio_rerio                         3.67%    failed      0.00%
+  73  Craseoa_lathetica                  46.37%    failed      0.00%
+  74  Nematostella_vectensis             18.73%    failed      0.22%
+  75  Saccoglossus_kowalevskii           75.91%    failed      0.00%
+  76  Priapulus_caudatus                 68.85%    failed      0.00%
+WARNING: 30 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                              40.41%  76 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 6.036 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 789063)...
+
+NOTE: 4050 MB RAM (3 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -4488027.823
+2. Current log-likelihood: -4366609.709
+3. Current log-likelihood: -4365584.120
+4. Current log-likelihood: -4365548.160
+5. Current log-likelihood: -4365546.922
+Optimal log-likelihood: -4365546.880
+Gamma shape alpha: 0.879
+Parameters optimization took 5 rounds (20.353 sec)
+Computing ML distances based on estimated model parameters... 8.471 sec
+Computing BIONJ tree...
+0.004 seconds
+Log-likelihood of BIONJ tree: -4367277.676
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 589.571 second
+Computing log-likelihood of 98 initial trees ... 192.003 seconds
+Current best score: -4365546.880
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -4364688.330
+Estimate model parameters (epsilon = 0.100)
+UPDATE BEST LOG-LIKELIHOOD: -4364600.337
+Iteration 10 / LogL: -4364859.474 / Time: 0h:17m:10s
+Iteration 20 / LogL: -4364617.099 / Time: 0h:20m:39s
+Finish initializing candidate tree set (9)
+Current best tree score: -4364600.337 / CPU time: 1197.588
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -4364780.917 / Time: 0h:24m:10s (0h:58m:56s left)
+Iteration 40 / LogL: -4364716.679 / Time: 0h:27m:36s (0h:43m:0s left)
+Iteration 50 / LogL: -4364603.433 / Time: 0h:31m:6s (0h:32m:16s left)
+Log-likelihood cutoff on original alignment: -4364870.835
+Iteration 60 / LogL: -4364856.705 / Time: 0h:34m:40s (0h:24m:1s left)
+Iteration 70 / LogL: -4364796.060 / Time: 0h:38m:21s (0h:17m:11s left)
+Iteration 80 / LogL: -4364662.864 / Time: 0h:41m:43s (0h:11m:3s left)
+Iteration 90 / LogL: -4364651.054 / Time: 0h:45m:4s (0h:5m:33s left)
+Iteration 100 / LogL: -4364688.807 / Time: 0h:48m:7s (0h:0m:29s left)
+Log-likelihood cutoff on original alignment: -4364796.060
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:48m:46s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -4364600.337
+2. Current log-likelihood: -4364600.314
+Optimal log-likelihood: -4364600.309
+Gamma shape alpha: 0.879
+Parameters optimization took 2 rounds (5.654 sec)
+BEST SCORE FOUND : -4364600.309
+Creating bootstrap support values...
+Split supports printed to NEXUS file Whelan2015-D1.WAG.splits.nex
+Total tree length: 25.625
+
+Total number of iterations: 102
+CPU time used for tree search: 46856.147 sec (13h:0m:56s)
+Wall-clock time used for tree search: 2883.761 sec (0h:48m:3s)
+Total CPU time used: 47672.974 sec (13h:14m:32s)
+Total wall-clock time used: 2931.988 sec (0h:48m:51s)
+
+Computing bootstrap consensus tree...
+Reading input file Whelan2015-D1.WAG.splits.nex...
+76 taxa and 167 splits.
+Consensus tree written to Whelan2015-D1.WAG.contree
+Reading input trees file Whelan2015-D1.WAG.contree
+Log-likelihood of consensus tree: -4364600.308
+
+Analysis results written to: 
+  IQ-TREE report:                Whelan2015-D1.WAG.iqtree
+  Maximum-likelihood tree:       Whelan2015-D1.WAG.treefile
+  Likelihood distances:          Whelan2015-D1.WAG.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          Whelan2015-D1.WAG.splits.nex
+  Consensus tree:                Whelan2015-D1.WAG.contree
+  Screen log file:               Whelan2015-D1.WAG.log
+
+Date and Time: Wed Nov  7 14:12:23 2018

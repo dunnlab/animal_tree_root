@@ -1,0 +1,141 @@
+IQ-TREE multicore version 1.6.7 for Linux 64-bit built Aug 23 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    c27n05.farnam.hpc.yale.internal (AVX2, FMA3, 251 GB RAM)
+Command: iqtree -s Borowiec2015_Best108.phy -nt 20 -bb 1000 -m WAG+F+G -pre Borowiec2015-Best108.WAG
+Seed:    950490 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Nov  7 13:35:18 2018
+Kernel:  AVX+FMA - 20 threads (28 CPU cores detected)
+
+Reading alignment file Borowiec2015_Best108.phy ... Phylip format detected
+Alignment most likely contains protein sequences
+Alignment has 36 sequences with 41808 columns, 39898 distinct patterns
+29144 parsimony-informative, 6799 singleton sites, 5864 constant sites
+                               Gap/Ambiguity  Composition  p-value
+   1  Okopleura_dioica                22.47%    failed      0.00%
+   2  Apis_mellifera                   4.24%    failed      0.00%
+   3  Monosiga_brevicollis            10.88%    failed      0.00%
+   4  Salpingoeca_rosetta             10.61%    failed      0.00%
+   5  Tribolium_castaneum              4.00%    failed      0.00%
+   6  Tetranychus_urticae             13.78%    failed      0.00%
+   7  Acropora_digitifera             44.02%    failed      0.64%
+   8  Hydra_magnipapillata            23.31%    failed      0.00%
+   9  Acyrthosiphon_pisum              3.35%    failed      0.00%
+  10  Danaus_plexippus                10.10%    failed      0.00%
+  11  Caenorhabditis_elegans          12.88%    failed      0.00%
+  12  Drosophila_melanogaster          3.20%    failed      0.09%
+  13  Nematostella_vectensis          10.29%    failed      4.31%
+  14  Amphimedon_queenslandica        16.37%    failed      0.00%
+  15  Mnemiopsis_leiydei_             12.07%    failed      0.01%
+  16  Ixodes_scapularis               18.25%    failed      0.00%
+  17  Trichoplax_adhaerens             6.10%    failed      0.00%
+  18  Xenopus_tropicalis               8.16%    failed      0.92%
+  19  Takifugu                         7.40%    failed      0.00%
+  20  Gasterosteus_aculeatus           5.51%    failed      0.00%
+  21  Homo_sapiens                    15.04%    failed      0.00%
+  22  Latimeria_chalumnae              6.59%    failed      0.23%
+  23  Gallus_gallus                   41.04%    failed      0.13%
+  24  Anolis_carolinensis             11.22%    failed      2.39%
+  25  Ciona_savignyi                  21.52%    failed      2.01%
+  26  Strigamia_maritima              14.03%    passed     12.58%
+  27  Daphnia_magna                    7.69%    passed     13.23%
+  28  Strongylocentrotus_purpuratus   19.09%    passed     36.19%
+  29  Capitella_telata                 6.77%    passed     23.63%
+  30  Saccoglossus_kowalevskii        10.90%    failed      4.42%
+  31  Lottia_gigantea                  6.58%    failed      0.00%
+  32  Branchiostoma_floridae           7.34%    failed      0.00%
+  33  Pinctada_fucata                 54.19%    failed      0.63%
+  34  Brugia_malayi                   15.82%    failed      0.00%
+  35  Rhodnius_prolixus               67.20%    failed      0.00%
+  36  Bombus_terrestris                7.75%    failed      0.00%
+WARNING: 2 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                           15.55%  32 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.869 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 950490)...
+
+NOTE: 1040 MB RAM (1 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -1460519.648
+2. Current log-likelihood: -1433662.119
+3. Current log-likelihood: -1433606.949
+4. Current log-likelihood: -1433606.769
+Optimal log-likelihood: -1433606.751
+Gamma shape alpha: 0.822
+Parameters optimization took 4 rounds (3.187 sec)
+Computing ML distances based on estimated model parameters... 0.891 sec
+Computing BIONJ tree...
+0.004 seconds
+Log-likelihood of BIONJ tree: -1433524.482
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 70.006 second
+Computing log-likelihood of 98 initial trees ... 35.521 seconds
+Current best score: -1432772.950
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -1432645.189
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 5: -1432561.064
+Iteration 10 / LogL: -1433229.142 / Time: 0h:2m:19s
+Iteration 20 / LogL: -1432888.076 / Time: 0h:2m:59s
+Finish initializing candidate tree set (11)
+Current best tree score: -1432561.064 / CPU time: 172.014
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -1432894.714 / Time: 0h:3m:33s (0h:9m:8s left)
+Iteration 40 / LogL: -1432564.021 / Time: 0h:4m:6s (0h:6m:49s left)
+Iteration 50 / LogL: -1432648.027 / Time: 0h:4m:40s (0h:5m:14s left)
+Log-likelihood cutoff on original alignment: -1432742.727
+Iteration 60 / LogL: -1432673.230 / Time: 0h:5m:17s (0h:4m:1s left)
+Iteration 70 / LogL: -1432652.948 / Time: 0h:5m:52s (0h:2m:58s left)
+Iteration 80 / LogL: -1432646.155 / Time: 0h:6m:26s (0h:2m:2s left)
+Iteration 90 / LogL: -1432563.718 / Time: 0h:7m:1s (0h:1m:10s left)
+Iteration 100 / LogL: -1432561.248 / Time: 0h:7m:33s (0h:0m:22s left)
+Log-likelihood cutoff on original alignment: -1432742.871
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+TREE SEARCH COMPLETED AFTER 106 ITERATIONS / Time: 0h:7m:52s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -1432561.064
+Optimal log-likelihood: -1432561.064
+Gamma shape alpha: 0.820
+Parameters optimization took 1 rounds (0.504 sec)
+BEST SCORE FOUND : -1432561.064
+Creating bootstrap support values...
+Split supports printed to NEXUS file Borowiec2015-Best108.WAG.splits.nex
+Total tree length: 11.572
+
+Total number of iterations: 106
+CPU time used for tree search: 7949.072 sec (2h:12m:29s)
+Wall-clock time used for tree search: 465.901 sec (0h:7m:45s)
+Total CPU time used: 8073.640 sec (2h:14m:33s)
+Total wall-clock time used: 473.496 sec (0h:7m:53s)
+
+Computing bootstrap consensus tree...
+Reading input file Borowiec2015-Best108.WAG.splits.nex...
+36 taxa and 86 splits.
+Consensus tree written to Borowiec2015-Best108.WAG.contree
+Reading input trees file Borowiec2015-Best108.WAG.contree
+Log-likelihood of consensus tree: -1432561.064
+
+Analysis results written to: 
+  IQ-TREE report:                Borowiec2015-Best108.WAG.iqtree
+  Maximum-likelihood tree:       Borowiec2015-Best108.WAG.treefile
+  Likelihood distances:          Borowiec2015-Best108.WAG.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          Borowiec2015-Best108.WAG.splits.nex
+  Consensus tree:                Borowiec2015-Best108.WAG.contree
+  Screen log file:               Borowiec2015-Best108.WAG.log
+
+Date and Time: Wed Nov  7 13:43:14 2018

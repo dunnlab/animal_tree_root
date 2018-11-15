@@ -1,0 +1,1191 @@
+IQ-TREE multicore version 1.6.7 for Linux 64-bit built Aug 23 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    c28n02.farnam.hpc.yale.internal (AVX2, FMA3, 251 GB RAM)
+Command: iqtree -s Ryan2013_est.opisthokonta.phy -nt 20 -bb 1000 -m Poisson+C60+F+G -pre Ryan2013-Opistho.poisson_C60
+Seed:    544272 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Tue Oct 30 21:37:21 2018
+Kernel:  AVX+FMA - 20 threads (28 CPU cores detected)
+
+Reading alignment file Ryan2013_est.opisthokonta.phy ... Phylip format detected
+Alignment most likely contains protein sequences
+Alignment has 70 sequences with 88384 columns, 83152 distinct patterns
+59941 parsimony-informative, 14814 singleton sites, 13629 constant sites
+                                Gap/Ambiguity  Composition  p-value
+   1  Oscarella_carmela                85.53%    failed      0.03%
+   2  Patiria_pectinifera              66.93%    failed      0.02%
+   3  Strongylocentrotus_purpuratus    25.73%    passed     13.20%
+   4  Capitella_teleta                 13.97%    failed      0.06%
+   5  Branchiostoma_floridae           75.06%    failed      0.00%
+   6  Helobdella_robusta               11.90%    failed      0.00%
+   7  Lottia_gigantea                  12.00%    failed      0.00%
+   8  Saccoglossus_kowalevskii         20.12%    failed      0.02%
+   9  Drosophila_melanogaster           9.97%    failed      0.01%
+  10  Anoplodactylus_eroticus          85.99%    failed      0.00%
+  11  Daphnia_pulex                    12.84%    failed      0.10%
+  12  Petromyzon_marinus               53.47%    failed      0.00%
+  13  Ciona_intestinalis               18.96%    failed      0.00%
+  14  Acropora_palmata                 61.09%    failed      0.34%
+  15  Acropora_millepora               30.90%    failed      0.01%
+  16  Nematostella_vectensis           17.01%    failed      0.01%
+  17  Anemonia_viridis                 70.80%    failed      0.00%
+  18  Capsaspora_owczarzaki            14.75%    failed      0.00%
+  19  Saccharomyces_cerevisiae         27.45%    failed      0.00%
+  20  Cryptococcus_neoformans          16.17%    failed      0.00%
+  21  Monosiga_brevicollis             19.10%    failed      0.00%
+  22  Phycomyces_blakesleeanus         16.34%    failed      0.00%
+  23  Batrachochytrium_dendrobatidis   20.24%    failed      0.00%
+  24  Spizellomyces_punctatus          18.56%    failed      0.00%
+  25  Salpingoeca_rosetta              21.64%    failed      0.00%
+  26  Amphimedon_queenslandica         19.70%    failed      0.00%
+  27  Lubomirskia_baicalensis          90.64%    failed      0.00%
+  28  Mnemiopsis_leidyi                17.25%    failed      0.00%
+  29  Hydra_vulgaris                   23.09%    failed      0.00%
+  30  Trichoplax_adhaerens             14.80%    failed      0.00%
+  31  Cyanea_capillata                 91.88%    failed      0.00%
+  32  Crassostrea_virginica            75.27%    failed      0.00%
+  33  Schmidtea_mediterranea           48.54%    failed      0.00%
+  34  Cerebratulus_lacteus             88.58%    failed      0.00%
+  35  Ephydatia_muelleri               89.00%    failed      0.00%
+  36  Pleurobrachia_pileus             74.17%    failed      0.29%
+  37  Suberites_domuncula              86.52%    failed      0.00%
+  38  Hydractinia_echinata             87.20%    failed      0.03%
+  39  Clytia_hemisphaerica             51.77%    failed      0.00%
+  40  Metridium_senile                 73.78%    failed      0.03%
+  41  Porites_astreoides               89.12%    passed     23.30%
+  42  Orbicella_faveolata              65.39%    failed      0.01%
+  43  Halocynthia_roretzi              57.72%    failed      0.00%
+  44  Euprymna_scolopes                68.18%    failed      0.00%
+  45  Rhipicephalus_microplus          46.43%    failed      0.00%
+  46  Isodiametra_pulchra              88.17%    passed     18.78%
+  47  Symsagittifera_roscoffensis      83.35%    failed      0.13%
+  48  Monosiga_ovata                   58.38%    failed      0.00%
+  49  Oscarella_lobularis              93.95%    failed      0.04%
+  50  Gallus_gallus                    25.84%    failed      0.00%
+  51  Meara_stichopi                   92.16%    failed      0.00%
+  52  Terebratalia_transversa          82.97%    failed      0.00%
+  53  Euperipatoides_kanangrensis      88.86%    failed      0.00%
+  54  Xiphinema_index                  75.44%    failed      0.01%
+  55  Oopsacas_minuta                  92.50%    failed      0.00%
+  56  Convolutriloba_longifissura      91.85%    failed      0.00%
+  57  Mertensiid_sp                    92.42%    failed      0.00%
+  58  Paraplanocera_oligoglena         90.14%    failed      0.00%
+  59  Nemertoderma_westbladi           78.81%    failed      0.00%
+  60  Echinoderes_horni                88.15%    failed      0.00%
+  61  Ptychodera_flava                 89.24%    failed      0.00%
+  62  Sphaeroforma_arctica             81.10%    failed      0.00%
+  63  Rhizopus_orizae                  27.62%    failed      0.00%
+  64  Podocoryna_carnea                88.87%    failed      0.06%
+  65  Amoebidium_parasiticum           93.77%    failed      0.00%
+  66  Sycon_raphanus                   90.59%    failed      0.00%
+  67  Xenoturbella_bocki               87.63%    failed      0.00%
+  68  Carteriospongia_foliascens       94.13%    failed      0.96%
+  69  Exaiptasia_pallida               95.00%    failed      3.78%
+  70  Leucetta_chagosensis             95.85%    failed      0.00%
+WARNING: 44 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                            59.32%  67 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 6.301 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 544272)...
+Model Poisson+C60+F+G is alias for Poisson+POISSON+G+FMIX{C60pi1:1:0.0169698865,C60pi2:1:0.0211683374,C60pi3:1:0.0276589079,C60pi4:1:0.0065675964,C60pi5:1:0.0141221416,C60pi6:1:0.0068774834,C60pi7:1:0.0146909701,C60pi8:1:0.0067225777,C60pi9:1:0.0018396660,C60pi10:1:0.0102547197,C60pi11:1:0.0230896163,C60pi12:1:0.0057941033,C60pi13:1:0.0125394534,C60pi14:1:0.0204526478,C60pi15:1:0.0070629602,C60pi16:1:0.0117982741,C60pi17:1:0.0068334668,C60pi18:1:0.0433775839,C60pi19:1:0.0318278731,C60pi20:1:0.0222546108,C60pi21:1:0.0102264969,C60pi22:1:0.0150545891,C60pi23:1:0.0134159878,C60pi24:1:0.0148552065,C60pi25:1:0.0239111516,C60pi26:1:0.0128776278,C60pi27:1:0.0222318842,C60pi28:1:0.0247444742,C60pi29:1:0.0214274810,C60pi30:1:0.0115001882,C60pi31:1:0.0076017389,C60pi32:1:0.0130258568,C60pi33:1:0.0093701965,C60pi34:1:0.0467194264,C60pi35:1:0.0441940314,C60pi36:1:0.0322263154,C60pi37:1:0.0402999891,C60pi38:1:0.0150234227,C60pi39:1:0.0104589903,C60pi40:1:0.0214742395,C60pi41:1:0.0154957836,C60pi42:1:0.0101789953,C60pi43:1:0.0227980379,C60pi44:1:0.0123204539,C60pi45:1:0.0066777583,C60pi46:1:0.0004150083,C60pi47:1:0.0344385130,C60pi48:1:0.0113663379,C60pi49:1:0.0127143049,C60pi50:1:0.0124323741,C60pi51:1:0.0262124415,C60pi52:1:0.0064994957,C60pi53:1:0.0103203293,C60pi54:1:0.0142463512,C60pi55:1:0.0215600067,C60pi56:1:0.0199150700,C60pi57:1:0.0038964200,C60pi58:1:0.0113448855,C60pi59:1:0.0128595846,C60pi60:1:0.0117656776}+F+G
+
+NOTE: 219790 MB RAM (214 GB) is required!
+WARNING: Memory required per CPU-core (10.732 GB) is higher than your computer RAM per CPU-core (8 GB), thus multiple runs may exceed RAM!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -3046556.136
+2. Current log-likelihood: -2957060.949
+3. Current log-likelihood: -2956409.059
+4. Current log-likelihood: -2956372.035
+5. Current log-likelihood: -2956367.359
+6. Current log-likelihood: -2956366.327
+7. Current log-likelihood: -2956365.845
+8. Current log-likelihood: -2956365.697
+9. Current log-likelihood: -2956365.573
+10. Current log-likelihood: -2956365.467
+Optimal log-likelihood: -2956365.327
+Mixture weights: 0.003 0.027 0.032 0.021 0.012 0.019 0.009 0.011 0.010 0.002 0.011 0.039 0.009 0.013 0.012 0.001 0.009 0.009 0.035 0.025 0.017 0.007 0.013 0.017 0.021 0.023 0.008 0.034 0.022 0.022 0.018 0.018 0.012 0.007 0.047 0.038 0.026 0.023 0.019 0.008 0.026 0.009 0.007 0.042 0.007 0.008 0.000 0.018 0.009 0.014 0.003 0.021 0.013 0.012 0.019 0.018 0.025 0.004 0.010 0.011 0.015
+Gamma shape alpha: 0.773
+Parameters optimization took 10 rounds (1969.029 sec)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+Computing ML distances based on estimated model parameters... 9.225 sec
+WARNING: Some pairwise ML distances are too long (saturated)
+Computing BIONJ tree...
+0.004 seconds
+Log-likelihood of BIONJ tree: -2958769.994
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 623.083 second
+Computing log-likelihood of 98 initial trees ... 13016.209 seconds
+Current best score: -2956365.327
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 1: -2956030.620
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 2: -2955996.580
+Iteration 10 / LogL: -2956024.501 / Time: 8h:51m:17s
+Iteration 20 / LogL: -2956053.930 / Time: 12h:41m:38s
+Finish initializing candidate tree set (12)
+Current best tree score: -2955996.580 / CPU time: 41735.098
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -2956008.095 / Time: 17h:40m:47s (43h:53m:25s left)
+Iteration 40 / LogL: -2956029.168 / Time: 22h:11m:29s (35h:16m:32s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 49: -2955981.423
+Iteration 50 / LogL: -2956065.548 / Time: 26h:56m:34s (54h:25m:55s left)
+Log-likelihood cutoff on original alignment: -2956094.598
+Iteration 60 / LogL: -2955995.613 / Time: 31h:9m:38s (47h:0m:9s left)
+Iteration 70 / LogL: -2956022.391 / Time: 35h:41m:48s (40h:52m:5s left)
+
+******************************************************
+CHECKPOINT: Resuming analysis from Ryan2013-Opistho.poisson_C60.ckp.gz
+
+IQ-TREE multicore version 1.6.7 for Linux 64-bit built Aug 23 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    c27n12.farnam.hpc.yale.internal (AVX2, FMA3, 251 GB RAM)
+Command: iqtree -s Ryan2013_est.opisthokonta.phy -nt 20 -bb 1000 -m Poisson+C60+F+G -pre Ryan2013-Opistho.poisson_C60
+Seed:    693889 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Nov  7 14:12:31 2018
+Kernel:  AVX+FMA - 20 threads (28 CPU cores detected)
+
+Reading alignment file Ryan2013_est.opisthokonta.phy ... Phylip format detected
+Alignment most likely contains protein sequences
+Alignment has 70 sequences with 88384 columns, 83152 distinct patterns
+59941 parsimony-informative, 14814 singleton sites, 13629 constant sites
+                                Gap/Ambiguity  Composition  p-value
+   1  Oscarella_carmela                85.53%    failed      0.03%
+   2  Patiria_pectinifera              66.93%    failed      0.02%
+   3  Strongylocentrotus_purpuratus    25.73%    passed     13.20%
+   4  Capitella_teleta                 13.97%    failed      0.06%
+   5  Branchiostoma_floridae           75.06%    failed      0.00%
+   6  Helobdella_robusta               11.90%    failed      0.00%
+   7  Lottia_gigantea                  12.00%    failed      0.00%
+   8  Saccoglossus_kowalevskii         20.12%    failed      0.02%
+   9  Drosophila_melanogaster           9.97%    failed      0.01%
+  10  Anoplodactylus_eroticus          85.99%    failed      0.00%
+  11  Daphnia_pulex                    12.84%    failed      0.10%
+  12  Petromyzon_marinus               53.47%    failed      0.00%
+  13  Ciona_intestinalis               18.96%    failed      0.00%
+  14  Acropora_palmata                 61.09%    failed      0.34%
+  15  Acropora_millepora               30.90%    failed      0.01%
+  16  Nematostella_vectensis           17.01%    failed      0.01%
+  17  Anemonia_viridis                 70.80%    failed      0.00%
+  18  Capsaspora_owczarzaki            14.75%    failed      0.00%
+  19  Saccharomyces_cerevisiae         27.45%    failed      0.00%
+  20  Cryptococcus_neoformans          16.17%    failed      0.00%
+  21  Monosiga_brevicollis             19.10%    failed      0.00%
+  22  Phycomyces_blakesleeanus         16.34%    failed      0.00%
+  23  Batrachochytrium_dendrobatidis   20.24%    failed      0.00%
+  24  Spizellomyces_punctatus          18.56%    failed      0.00%
+  25  Salpingoeca_rosetta              21.64%    failed      0.00%
+  26  Amphimedon_queenslandica         19.70%    failed      0.00%
+  27  Lubomirskia_baicalensis          90.64%    failed      0.00%
+  28  Mnemiopsis_leidyi                17.25%    failed      0.00%
+  29  Hydra_vulgaris                   23.09%    failed      0.00%
+  30  Trichoplax_adhaerens             14.80%    failed      0.00%
+  31  Cyanea_capillata                 91.88%    failed      0.00%
+  32  Crassostrea_virginica            75.27%    failed      0.00%
+  33  Schmidtea_mediterranea           48.54%    failed      0.00%
+  34  Cerebratulus_lacteus             88.58%    failed      0.00%
+  35  Ephydatia_muelleri               89.00%    failed      0.00%
+  36  Pleurobrachia_pileus             74.17%    failed      0.29%
+  37  Suberites_domuncula              86.52%    failed      0.00%
+  38  Hydractinia_echinata             87.20%    failed      0.03%
+  39  Clytia_hemisphaerica             51.77%    failed      0.00%
+  40  Metridium_senile                 73.78%    failed      0.03%
+  41  Porites_astreoides               89.12%    passed     23.30%
+  42  Orbicella_faveolata              65.39%    failed      0.01%
+  43  Halocynthia_roretzi              57.72%    failed      0.00%
+  44  Euprymna_scolopes                68.18%    failed      0.00%
+  45  Rhipicephalus_microplus          46.43%    failed      0.00%
+  46  Isodiametra_pulchra              88.17%    passed     18.78%
+  47  Symsagittifera_roscoffensis      83.35%    failed      0.13%
+  48  Monosiga_ovata                   58.38%    failed      0.00%
+  49  Oscarella_lobularis              93.95%    failed      0.04%
+  50  Gallus_gallus                    25.84%    failed      0.00%
+  51  Meara_stichopi                   92.16%    failed      0.00%
+  52  Terebratalia_transversa          82.97%    failed      0.00%
+  53  Euperipatoides_kanangrensis      88.86%    failed      0.00%
+  54  Xiphinema_index                  75.44%    failed      0.01%
+  55  Oopsacas_minuta                  92.50%    failed      0.00%
+  56  Convolutriloba_longifissura      91.85%    failed      0.00%
+  57  Mertensiid_sp                    92.42%    failed      0.00%
+  58  Paraplanocera_oligoglena         90.14%    failed      0.00%
+  59  Nemertoderma_westbladi           78.81%    failed      0.00%
+  60  Echinoderes_horni                88.15%    failed      0.00%
+  61  Ptychodera_flava                 89.24%    failed      0.00%
+  62  Sphaeroforma_arctica             81.10%    failed      0.00%
+  63  Rhizopus_orizae                  27.62%    failed      0.00%
+  64  Podocoryna_carnea                88.87%    failed      0.06%
+  65  Amoebidium_parasiticum           93.77%    failed      0.00%
+  66  Sycon_raphanus                   90.59%    failed      0.00%
+  67  Xenoturbella_bocki               87.63%    failed      0.00%
+  68  Carteriospongia_foliascens       94.13%    failed      0.96%
+  69  Exaiptasia_pallida               95.00%    failed      3.78%
+  70  Leucetta_chagosensis             95.85%    failed      0.00%
+WARNING: 44 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                            59.32%  67 sequences failed composition chi2 test (p-value<5%; df=19)
+
+CHECKPOINT: Initial tree restored
+Generating 1000 samples for ultrafast bootstrap (seed: 693889)...
+CHECKPOINT: 1000 UFBoot trees and 1 UFBootSplits restored
+Model Poisson+C60+F+G is alias for Poisson+POISSON+G+FMIX{C60pi1:1:0.0169698865,C60pi2:1:0.0211683374,C60pi3:1:0.0276589079,C60pi4:1:0.0065675964,C60pi5:1:0.0141221416,C60pi6:1:0.0068774834,C60pi7:1:0.0146909701,C60pi8:1:0.0067225777,C60pi9:1:0.0018396660,C60pi10:1:0.0102547197,C60pi11:1:0.0230896163,C60pi12:1:0.0057941033,C60pi13:1:0.0125394534,C60pi14:1:0.0204526478,C60pi15:1:0.0070629602,C60pi16:1:0.0117982741,C60pi17:1:0.0068334668,C60pi18:1:0.0433775839,C60pi19:1:0.0318278731,C60pi20:1:0.0222546108,C60pi21:1:0.0102264969,C60pi22:1:0.0150545891,C60pi23:1:0.0134159878,C60pi24:1:0.0148552065,C60pi25:1:0.0239111516,C60pi26:1:0.0128776278,C60pi27:1:0.0222318842,C60pi28:1:0.0247444742,C60pi29:1:0.0214274810,C60pi30:1:0.0115001882,C60pi31:1:0.0076017389,C60pi32:1:0.0130258568,C60pi33:1:0.0093701965,C60pi34:1:0.0467194264,C60pi35:1:0.0441940314,C60pi36:1:0.0322263154,C60pi37:1:0.0402999891,C60pi38:1:0.0150234227,C60pi39:1:0.0104589903,C60pi40:1:0.0214742395,C60pi41:1:0.0154957836,C60pi42:1:0.0101789953,C60pi43:1:0.0227980379,C60pi44:1:0.0123204539,C60pi45:1:0.0066777583,C60pi46:1:0.0004150083,C60pi47:1:0.0344385130,C60pi48:1:0.0113663379,C60pi49:1:0.0127143049,C60pi50:1:0.0124323741,C60pi51:1:0.0262124415,C60pi52:1:0.0064994957,C60pi53:1:0.0103203293,C60pi54:1:0.0142463512,C60pi55:1:0.0215600067,C60pi56:1:0.0199150700,C60pi57:1:0.0038964200,C60pi58:1:0.0113448855,C60pi59:1:0.0128595846,C60pi60:1:0.0117656776}+F+G
+
+NOTE: 219790 MB RAM (214 GB) is required!
+WARNING: Memory required per CPU-core (10.732 GB) is higher than your computer RAM per CPU-core (8 GB), thus multiple runs may exceed RAM!
+CHECKPOINT: Model parameters restored, LogL: -2955981.423
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+CHECKPOINT: Candidate tree set restored, best LogL: -2955981.423
+Finish initializing candidate tree set (20)
+Current best tree score: -2955981.423 / CPU time: 0.000
+Number of iterations: 75
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 80 / LogL: -2955992.793 / Time: 2h:6m:36s (1h:50m:34s left)
+Iteration 90 / LogL: -2955999.994 / Time: 6h:42m:50s (4h:27m:3s left)
+Iteration 100 / LogL: -2955994.576 / Time: 11h:25m:24s (5h:39m:14s left)
+Log-likelihood cutoff on original alignment: -2956066.782
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.988
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 110 / LogL: -2956039.045 / Time: 16h:2m:42s (13h:14m:54s left)
+Iteration 120 / LogL: -2955986.446 / Time: 20h:8m:5s (13h:32m:9s left)
+
+******************************************************
+CHECKPOINT: Resuming analysis from Ryan2013-Opistho.poisson_C60.ckp.gz
+
+IQ-TREE multicore version 1.6.7 for Linux 64-bit built Aug 23 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    c28n05.farnam.hpc.yale.internal (AVX2, FMA3, 251 GB RAM)
+Command: iqtree -s Ryan2013_est.opisthokonta.phy -nt 20 -bb 1000 -m Poisson+C60+F+G -pre Ryan2013-Opistho.poisson_C60
+Seed:    215189 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu Nov  8 11:49:49 2018
+Kernel:  AVX+FMA - 20 threads (28 CPU cores detected)
+
+Reading alignment file Ryan2013_est.opisthokonta.phy ... Phylip format detected
+Alignment most likely contains protein sequences
+Alignment has 70 sequences with 88384 columns, 83152 distinct patterns
+59941 parsimony-informative, 14814 singleton sites, 13629 constant sites
+                                Gap/Ambiguity  Composition  p-value
+   1  Oscarella_carmela                85.53%    failed      0.03%
+   2  Patiria_pectinifera              66.93%    failed      0.02%
+   3  Strongylocentrotus_purpuratus    25.73%    passed     13.20%
+   4  Capitella_teleta                 13.97%    failed      0.06%
+   5  Branchiostoma_floridae           75.06%    failed      0.00%
+   6  Helobdella_robusta               11.90%    failed      0.00%
+   7  Lottia_gigantea                  12.00%    failed      0.00%
+   8  Saccoglossus_kowalevskii         20.12%    failed      0.02%
+   9  Drosophila_melanogaster           9.97%    failed      0.01%
+  10  Anoplodactylus_eroticus          85.99%    failed      0.00%
+  11  Daphnia_pulex                    12.84%    failed      0.10%
+  12  Petromyzon_marinus               53.47%    failed      0.00%
+  13  Ciona_intestinalis               18.96%    failed      0.00%
+  14  Acropora_palmata                 61.09%    failed      0.34%
+  15  Acropora_millepora               30.90%    failed      0.01%
+  16  Nematostella_vectensis           17.01%    failed      0.01%
+  17  Anemonia_viridis                 70.80%    failed      0.00%
+  18  Capsaspora_owczarzaki            14.75%    failed      0.00%
+  19  Saccharomyces_cerevisiae         27.45%    failed      0.00%
+  20  Cryptococcus_neoformans          16.17%    failed      0.00%
+  21  Monosiga_brevicollis             19.10%    failed      0.00%
+  22  Phycomyces_blakesleeanus         16.34%    failed      0.00%
+  23  Batrachochytrium_dendrobatidis   20.24%    failed      0.00%
+  24  Spizellomyces_punctatus          18.56%    failed      0.00%
+  25  Salpingoeca_rosetta              21.64%    failed      0.00%
+  26  Amphimedon_queenslandica         19.70%    failed      0.00%
+  27  Lubomirskia_baicalensis          90.64%    failed      0.00%
+  28  Mnemiopsis_leidyi                17.25%    failed      0.00%
+  29  Hydra_vulgaris                   23.09%    failed      0.00%
+  30  Trichoplax_adhaerens             14.80%    failed      0.00%
+  31  Cyanea_capillata                 91.88%    failed      0.00%
+  32  Crassostrea_virginica            75.27%    failed      0.00%
+  33  Schmidtea_mediterranea           48.54%    failed      0.00%
+  34  Cerebratulus_lacteus             88.58%    failed      0.00%
+  35  Ephydatia_muelleri               89.00%    failed      0.00%
+  36  Pleurobrachia_pileus             74.17%    failed      0.29%
+  37  Suberites_domuncula              86.52%    failed      0.00%
+  38  Hydractinia_echinata             87.20%    failed      0.03%
+  39  Clytia_hemisphaerica             51.77%    failed      0.00%
+  40  Metridium_senile                 73.78%    failed      0.03%
+  41  Porites_astreoides               89.12%    passed     23.30%
+  42  Orbicella_faveolata              65.39%    failed      0.01%
+  43  Halocynthia_roretzi              57.72%    failed      0.00%
+  44  Euprymna_scolopes                68.18%    failed      0.00%
+  45  Rhipicephalus_microplus          46.43%    failed      0.00%
+  46  Isodiametra_pulchra              88.17%    passed     18.78%
+  47  Symsagittifera_roscoffensis      83.35%    failed      0.13%
+  48  Monosiga_ovata                   58.38%    failed      0.00%
+  49  Oscarella_lobularis              93.95%    failed      0.04%
+  50  Gallus_gallus                    25.84%    failed      0.00%
+  51  Meara_stichopi                   92.16%    failed      0.00%
+  52  Terebratalia_transversa          82.97%    failed      0.00%
+  53  Euperipatoides_kanangrensis      88.86%    failed      0.00%
+  54  Xiphinema_index                  75.44%    failed      0.01%
+  55  Oopsacas_minuta                  92.50%    failed      0.00%
+  56  Convolutriloba_longifissura      91.85%    failed      0.00%
+  57  Mertensiid_sp                    92.42%    failed      0.00%
+  58  Paraplanocera_oligoglena         90.14%    failed      0.00%
+  59  Nemertoderma_westbladi           78.81%    failed      0.00%
+  60  Echinoderes_horni                88.15%    failed      0.00%
+  61  Ptychodera_flava                 89.24%    failed      0.00%
+  62  Sphaeroforma_arctica             81.10%    failed      0.00%
+  63  Rhizopus_orizae                  27.62%    failed      0.00%
+  64  Podocoryna_carnea                88.87%    failed      0.06%
+  65  Amoebidium_parasiticum           93.77%    failed      0.00%
+  66  Sycon_raphanus                   90.59%    failed      0.00%
+  67  Xenoturbella_bocki               87.63%    failed      0.00%
+  68  Carteriospongia_foliascens       94.13%    failed      0.96%
+  69  Exaiptasia_pallida               95.00%    failed      3.78%
+  70  Leucetta_chagosensis             95.85%    failed      0.00%
+WARNING: 44 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                            59.32%  67 sequences failed composition chi2 test (p-value<5%; df=19)
+
+CHECKPOINT: Initial tree restored
+Generating 1000 samples for ultrafast bootstrap (seed: 215189)...
+CHECKPOINT: 1000 UFBoot trees and 2 UFBootSplits restored
+Model Poisson+C60+F+G is alias for Poisson+POISSON+G+FMIX{C60pi1:1:0.0169698865,C60pi2:1:0.0211683374,C60pi3:1:0.0276589079,C60pi4:1:0.0065675964,C60pi5:1:0.0141221416,C60pi6:1:0.0068774834,C60pi7:1:0.0146909701,C60pi8:1:0.0067225777,C60pi9:1:0.0018396660,C60pi10:1:0.0102547197,C60pi11:1:0.0230896163,C60pi12:1:0.0057941033,C60pi13:1:0.0125394534,C60pi14:1:0.0204526478,C60pi15:1:0.0070629602,C60pi16:1:0.0117982741,C60pi17:1:0.0068334668,C60pi18:1:0.0433775839,C60pi19:1:0.0318278731,C60pi20:1:0.0222546108,C60pi21:1:0.0102264969,C60pi22:1:0.0150545891,C60pi23:1:0.0134159878,C60pi24:1:0.0148552065,C60pi25:1:0.0239111516,C60pi26:1:0.0128776278,C60pi27:1:0.0222318842,C60pi28:1:0.0247444742,C60pi29:1:0.0214274810,C60pi30:1:0.0115001882,C60pi31:1:0.0076017389,C60pi32:1:0.0130258568,C60pi33:1:0.0093701965,C60pi34:1:0.0467194264,C60pi35:1:0.0441940314,C60pi36:1:0.0322263154,C60pi37:1:0.0402999891,C60pi38:1:0.0150234227,C60pi39:1:0.0104589903,C60pi40:1:0.0214742395,C60pi41:1:0.0154957836,C60pi42:1:0.0101789953,C60pi43:1:0.0227980379,C60pi44:1:0.0123204539,C60pi45:1:0.0066777583,C60pi46:1:0.0004150083,C60pi47:1:0.0344385130,C60pi48:1:0.0113663379,C60pi49:1:0.0127143049,C60pi50:1:0.0124323741,C60pi51:1:0.0262124415,C60pi52:1:0.0064994957,C60pi53:1:0.0103203293,C60pi54:1:0.0142463512,C60pi55:1:0.0215600067,C60pi56:1:0.0199150700,C60pi57:1:0.0038964200,C60pi58:1:0.0113448855,C60pi59:1:0.0128595846,C60pi60:1:0.0117656776}+F+G
+
+NOTE: 219790 MB RAM (214 GB) is required!
+WARNING: Memory required per CPU-core (10.732 GB) is higher than your computer RAM per CPU-core (8 GB), thus multiple runs may exceed RAM!
+CHECKPOINT: Model parameters restored, LogL: -2955981.423
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+CHECKPOINT: Candidate tree set restored, best LogL: -2955981.422
+Finish initializing candidate tree set (20)
+Current best tree score: -2955981.422 / CPU time: 0.000
+Number of iterations: 122
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+
+******************************************************
+CHECKPOINT: Resuming analysis from Ryan2013-Opistho.poisson_C60.ckp.gz
+
+IQ-TREE multicore version 1.6.7 for Linux 64-bit built Aug 23 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    c27n06.farnam.hpc.yale.internal (AVX2, FMA3, 251 GB RAM)
+Command: iqtree -s Ryan2013_est.opisthokonta.phy -nt 20 -bb 1000 -m Poisson+C60+F+G -pre Ryan2013-Opistho.poisson_C60
+Seed:    358441 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu Nov  8 13:36:42 2018
+Kernel:  AVX+FMA - 20 threads (28 CPU cores detected)
+
+Reading alignment file Ryan2013_est.opisthokonta.phy ... Phylip format detected
+Alignment most likely contains protein sequences
+Alignment has 70 sequences with 88384 columns, 83152 distinct patterns
+59941 parsimony-informative, 14814 singleton sites, 13629 constant sites
+                                Gap/Ambiguity  Composition  p-value
+   1  Oscarella_carmela                85.53%    failed      0.03%
+   2  Patiria_pectinifera              66.93%    failed      0.02%
+   3  Strongylocentrotus_purpuratus    25.73%    passed     13.20%
+   4  Capitella_teleta                 13.97%    failed      0.06%
+   5  Branchiostoma_floridae           75.06%    failed      0.00%
+   6  Helobdella_robusta               11.90%    failed      0.00%
+   7  Lottia_gigantea                  12.00%    failed      0.00%
+   8  Saccoglossus_kowalevskii         20.12%    failed      0.02%
+   9  Drosophila_melanogaster           9.97%    failed      0.01%
+  10  Anoplodactylus_eroticus          85.99%    failed      0.00%
+  11  Daphnia_pulex                    12.84%    failed      0.10%
+  12  Petromyzon_marinus               53.47%    failed      0.00%
+  13  Ciona_intestinalis               18.96%    failed      0.00%
+  14  Acropora_palmata                 61.09%    failed      0.34%
+  15  Acropora_millepora               30.90%    failed      0.01%
+  16  Nematostella_vectensis           17.01%    failed      0.01%
+  17  Anemonia_viridis                 70.80%    failed      0.00%
+  18  Capsaspora_owczarzaki            14.75%    failed      0.00%
+  19  Saccharomyces_cerevisiae         27.45%    failed      0.00%
+  20  Cryptococcus_neoformans          16.17%    failed      0.00%
+  21  Monosiga_brevicollis             19.10%    failed      0.00%
+  22  Phycomyces_blakesleeanus         16.34%    failed      0.00%
+  23  Batrachochytrium_dendrobatidis   20.24%    failed      0.00%
+  24  Spizellomyces_punctatus          18.56%    failed      0.00%
+  25  Salpingoeca_rosetta              21.64%    failed      0.00%
+  26  Amphimedon_queenslandica         19.70%    failed      0.00%
+  27  Lubomirskia_baicalensis          90.64%    failed      0.00%
+  28  Mnemiopsis_leidyi                17.25%    failed      0.00%
+  29  Hydra_vulgaris                   23.09%    failed      0.00%
+  30  Trichoplax_adhaerens             14.80%    failed      0.00%
+  31  Cyanea_capillata                 91.88%    failed      0.00%
+  32  Crassostrea_virginica            75.27%    failed      0.00%
+  33  Schmidtea_mediterranea           48.54%    failed      0.00%
+  34  Cerebratulus_lacteus             88.58%    failed      0.00%
+  35  Ephydatia_muelleri               89.00%    failed      0.00%
+  36  Pleurobrachia_pileus             74.17%    failed      0.29%
+  37  Suberites_domuncula              86.52%    failed      0.00%
+  38  Hydractinia_echinata             87.20%    failed      0.03%
+  39  Clytia_hemisphaerica             51.77%    failed      0.00%
+  40  Metridium_senile                 73.78%    failed      0.03%
+  41  Porites_astreoides               89.12%    passed     23.30%
+  42  Orbicella_faveolata              65.39%    failed      0.01%
+  43  Halocynthia_roretzi              57.72%    failed      0.00%
+  44  Euprymna_scolopes                68.18%    failed      0.00%
+  45  Rhipicephalus_microplus          46.43%    failed      0.00%
+  46  Isodiametra_pulchra              88.17%    passed     18.78%
+  47  Symsagittifera_roscoffensis      83.35%    failed      0.13%
+  48  Monosiga_ovata                   58.38%    failed      0.00%
+  49  Oscarella_lobularis              93.95%    failed      0.04%
+  50  Gallus_gallus                    25.84%    failed      0.00%
+  51  Meara_stichopi                   92.16%    failed      0.00%
+  52  Terebratalia_transversa          82.97%    failed      0.00%
+  53  Euperipatoides_kanangrensis      88.86%    failed      0.00%
+  54  Xiphinema_index                  75.44%    failed      0.01%
+  55  Oopsacas_minuta                  92.50%    failed      0.00%
+  56  Convolutriloba_longifissura      91.85%    failed      0.00%
+  57  Mertensiid_sp                    92.42%    failed      0.00%
+  58  Paraplanocera_oligoglena         90.14%    failed      0.00%
+  59  Nemertoderma_westbladi           78.81%    failed      0.00%
+  60  Echinoderes_horni                88.15%    failed      0.00%
+  61  Ptychodera_flava                 89.24%    failed      0.00%
+  62  Sphaeroforma_arctica             81.10%    failed      0.00%
+  63  Rhizopus_orizae                  27.62%    failed      0.00%
+  64  Podocoryna_carnea                88.87%    failed      0.06%
+  65  Amoebidium_parasiticum           93.77%    failed      0.00%
+  66  Sycon_raphanus                   90.59%    failed      0.00%
+  67  Xenoturbella_bocki               87.63%    failed      0.00%
+  68  Carteriospongia_foliascens       94.13%    failed      0.96%
+  69  Exaiptasia_pallida               95.00%    failed      3.78%
+  70  Leucetta_chagosensis             95.85%    failed      0.00%
+WARNING: 44 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                            59.32%  67 sequences failed composition chi2 test (p-value<5%; df=19)
+
+CHECKPOINT: Initial tree restored
+Generating 1000 samples for ultrafast bootstrap (seed: 358441)...
+CHECKPOINT: 1000 UFBoot trees and 2 UFBootSplits restored
+Model Poisson+C60+F+G is alias for Poisson+POISSON+G+FMIX{C60pi1:1:0.0169698865,C60pi2:1:0.0211683374,C60pi3:1:0.0276589079,C60pi4:1:0.0065675964,C60pi5:1:0.0141221416,C60pi6:1:0.0068774834,C60pi7:1:0.0146909701,C60pi8:1:0.0067225777,C60pi9:1:0.0018396660,C60pi10:1:0.0102547197,C60pi11:1:0.0230896163,C60pi12:1:0.0057941033,C60pi13:1:0.0125394534,C60pi14:1:0.0204526478,C60pi15:1:0.0070629602,C60pi16:1:0.0117982741,C60pi17:1:0.0068334668,C60pi18:1:0.0433775839,C60pi19:1:0.0318278731,C60pi20:1:0.0222546108,C60pi21:1:0.0102264969,C60pi22:1:0.0150545891,C60pi23:1:0.0134159878,C60pi24:1:0.0148552065,C60pi25:1:0.0239111516,C60pi26:1:0.0128776278,C60pi27:1:0.0222318842,C60pi28:1:0.0247444742,C60pi29:1:0.0214274810,C60pi30:1:0.0115001882,C60pi31:1:0.0076017389,C60pi32:1:0.0130258568,C60pi33:1:0.0093701965,C60pi34:1:0.0467194264,C60pi35:1:0.0441940314,C60pi36:1:0.0322263154,C60pi37:1:0.0402999891,C60pi38:1:0.0150234227,C60pi39:1:0.0104589903,C60pi40:1:0.0214742395,C60pi41:1:0.0154957836,C60pi42:1:0.0101789953,C60pi43:1:0.0227980379,C60pi44:1:0.0123204539,C60pi45:1:0.0066777583,C60pi46:1:0.0004150083,C60pi47:1:0.0344385130,C60pi48:1:0.0113663379,C60pi49:1:0.0127143049,C60pi50:1:0.0124323741,C60pi51:1:0.0262124415,C60pi52:1:0.0064994957,C60pi53:1:0.0103203293,C60pi54:1:0.0142463512,C60pi55:1:0.0215600067,C60pi56:1:0.0199150700,C60pi57:1:0.0038964200,C60pi58:1:0.0113448855,C60pi59:1:0.0128595846,C60pi60:1:0.0117656776}+F+G
+
+NOTE: 219790 MB RAM (214 GB) is required!
+WARNING: Memory required per CPU-core (10.732 GB) is higher than your computer RAM per CPU-core (8 GB), thus multiple runs may exceed RAM!
+CHECKPOINT: Model parameters restored, LogL: -2955981.423
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+CHECKPOINT: Candidate tree set restored, best LogL: -2955981.422
+Finish initializing candidate tree set (20)
+Current best tree score: -2955981.422 / CPU time: 0.000
+Number of iterations: 122
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+
+******************************************************
+CHECKPOINT: Resuming analysis from Ryan2013-Opistho.poisson_C60.ckp.gz
+
+IQ-TREE multicore version 1.6.7 for Linux 64-bit built Aug 23 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    c27n10.farnam.hpc.yale.internal (AVX2, FMA3, 251 GB RAM)
+Command: iqtree -s Ryan2013_est.opisthokonta.phy -nt 20 -bb 1000 -m Poisson+C60+F+G -pre Ryan2013-Opistho.poisson_C60
+Seed:    292265 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu Nov  8 21:27:12 2018
+Kernel:  AVX+FMA - 20 threads (28 CPU cores detected)
+
+Reading alignment file Ryan2013_est.opisthokonta.phy ... Phylip format detected
+Alignment most likely contains protein sequences
+Alignment has 70 sequences with 88384 columns, 83152 distinct patterns
+59941 parsimony-informative, 14814 singleton sites, 13629 constant sites
+                                Gap/Ambiguity  Composition  p-value
+   1  Oscarella_carmela                85.53%    failed      0.03%
+   2  Patiria_pectinifera              66.93%    failed      0.02%
+   3  Strongylocentrotus_purpuratus    25.73%    passed     13.20%
+   4  Capitella_teleta                 13.97%    failed      0.06%
+   5  Branchiostoma_floridae           75.06%    failed      0.00%
+   6  Helobdella_robusta               11.90%    failed      0.00%
+   7  Lottia_gigantea                  12.00%    failed      0.00%
+   8  Saccoglossus_kowalevskii         20.12%    failed      0.02%
+   9  Drosophila_melanogaster           9.97%    failed      0.01%
+  10  Anoplodactylus_eroticus          85.99%    failed      0.00%
+  11  Daphnia_pulex                    12.84%    failed      0.10%
+  12  Petromyzon_marinus               53.47%    failed      0.00%
+  13  Ciona_intestinalis               18.96%    failed      0.00%
+  14  Acropora_palmata                 61.09%    failed      0.34%
+  15  Acropora_millepora               30.90%    failed      0.01%
+  16  Nematostella_vectensis           17.01%    failed      0.01%
+  17  Anemonia_viridis                 70.80%    failed      0.00%
+  18  Capsaspora_owczarzaki            14.75%    failed      0.00%
+  19  Saccharomyces_cerevisiae         27.45%    failed      0.00%
+  20  Cryptococcus_neoformans          16.17%    failed      0.00%
+  21  Monosiga_brevicollis             19.10%    failed      0.00%
+  22  Phycomyces_blakesleeanus         16.34%    failed      0.00%
+  23  Batrachochytrium_dendrobatidis   20.24%    failed      0.00%
+  24  Spizellomyces_punctatus          18.56%    failed      0.00%
+  25  Salpingoeca_rosetta              21.64%    failed      0.00%
+  26  Amphimedon_queenslandica         19.70%    failed      0.00%
+  27  Lubomirskia_baicalensis          90.64%    failed      0.00%
+  28  Mnemiopsis_leidyi                17.25%    failed      0.00%
+  29  Hydra_vulgaris                   23.09%    failed      0.00%
+  30  Trichoplax_adhaerens             14.80%    failed      0.00%
+  31  Cyanea_capillata                 91.88%    failed      0.00%
+  32  Crassostrea_virginica            75.27%    failed      0.00%
+  33  Schmidtea_mediterranea           48.54%    failed      0.00%
+  34  Cerebratulus_lacteus             88.58%    failed      0.00%
+  35  Ephydatia_muelleri               89.00%    failed      0.00%
+  36  Pleurobrachia_pileus             74.17%    failed      0.29%
+  37  Suberites_domuncula              86.52%    failed      0.00%
+  38  Hydractinia_echinata             87.20%    failed      0.03%
+  39  Clytia_hemisphaerica             51.77%    failed      0.00%
+  40  Metridium_senile                 73.78%    failed      0.03%
+  41  Porites_astreoides               89.12%    passed     23.30%
+  42  Orbicella_faveolata              65.39%    failed      0.01%
+  43  Halocynthia_roretzi              57.72%    failed      0.00%
+  44  Euprymna_scolopes                68.18%    failed      0.00%
+  45  Rhipicephalus_microplus          46.43%    failed      0.00%
+  46  Isodiametra_pulchra              88.17%    passed     18.78%
+  47  Symsagittifera_roscoffensis      83.35%    failed      0.13%
+  48  Monosiga_ovata                   58.38%    failed      0.00%
+  49  Oscarella_lobularis              93.95%    failed      0.04%
+  50  Gallus_gallus                    25.84%    failed      0.00%
+  51  Meara_stichopi                   92.16%    failed      0.00%
+  52  Terebratalia_transversa          82.97%    failed      0.00%
+  53  Euperipatoides_kanangrensis      88.86%    failed      0.00%
+  54  Xiphinema_index                  75.44%    failed      0.01%
+  55  Oopsacas_minuta                  92.50%    failed      0.00%
+  56  Convolutriloba_longifissura      91.85%    failed      0.00%
+  57  Mertensiid_sp                    92.42%    failed      0.00%
+  58  Paraplanocera_oligoglena         90.14%    failed      0.00%
+  59  Nemertoderma_westbladi           78.81%    failed      0.00%
+  60  Echinoderes_horni                88.15%    failed      0.00%
+  61  Ptychodera_flava                 89.24%    failed      0.00%
+  62  Sphaeroforma_arctica             81.10%    failed      0.00%
+  63  Rhizopus_orizae                  27.62%    failed      0.00%
+  64  Podocoryna_carnea                88.87%    failed      0.06%
+  65  Amoebidium_parasiticum           93.77%    failed      0.00%
+  66  Sycon_raphanus                   90.59%    failed      0.00%
+  67  Xenoturbella_bocki               87.63%    failed      0.00%
+  68  Carteriospongia_foliascens       94.13%    failed      0.96%
+  69  Exaiptasia_pallida               95.00%    failed      3.78%
+  70  Leucetta_chagosensis             95.85%    failed      0.00%
+WARNING: 44 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                            59.32%  67 sequences failed composition chi2 test (p-value<5%; df=19)
+
+CHECKPOINT: Initial tree restored
+Generating 1000 samples for ultrafast bootstrap (seed: 292265)...
+CHECKPOINT: 1000 UFBoot trees and 2 UFBootSplits restored
+Model Poisson+C60+F+G is alias for Poisson+POISSON+G+FMIX{C60pi1:1:0.0169698865,C60pi2:1:0.0211683374,C60pi3:1:0.0276589079,C60pi4:1:0.0065675964,C60pi5:1:0.0141221416,C60pi6:1:0.0068774834,C60pi7:1:0.0146909701,C60pi8:1:0.0067225777,C60pi9:1:0.0018396660,C60pi10:1:0.0102547197,C60pi11:1:0.0230896163,C60pi12:1:0.0057941033,C60pi13:1:0.0125394534,C60pi14:1:0.0204526478,C60pi15:1:0.0070629602,C60pi16:1:0.0117982741,C60pi17:1:0.0068334668,C60pi18:1:0.0433775839,C60pi19:1:0.0318278731,C60pi20:1:0.0222546108,C60pi21:1:0.0102264969,C60pi22:1:0.0150545891,C60pi23:1:0.0134159878,C60pi24:1:0.0148552065,C60pi25:1:0.0239111516,C60pi26:1:0.0128776278,C60pi27:1:0.0222318842,C60pi28:1:0.0247444742,C60pi29:1:0.0214274810,C60pi30:1:0.0115001882,C60pi31:1:0.0076017389,C60pi32:1:0.0130258568,C60pi33:1:0.0093701965,C60pi34:1:0.0467194264,C60pi35:1:0.0441940314,C60pi36:1:0.0322263154,C60pi37:1:0.0402999891,C60pi38:1:0.0150234227,C60pi39:1:0.0104589903,C60pi40:1:0.0214742395,C60pi41:1:0.0154957836,C60pi42:1:0.0101789953,C60pi43:1:0.0227980379,C60pi44:1:0.0123204539,C60pi45:1:0.0066777583,C60pi46:1:0.0004150083,C60pi47:1:0.0344385130,C60pi48:1:0.0113663379,C60pi49:1:0.0127143049,C60pi50:1:0.0124323741,C60pi51:1:0.0262124415,C60pi52:1:0.0064994957,C60pi53:1:0.0103203293,C60pi54:1:0.0142463512,C60pi55:1:0.0215600067,C60pi56:1:0.0199150700,C60pi57:1:0.0038964200,C60pi58:1:0.0113448855,C60pi59:1:0.0128595846,C60pi60:1:0.0117656776}+F+G
+
+NOTE: 219790 MB RAM (214 GB) is required!
+WARNING: Memory required per CPU-core (10.732 GB) is higher than your computer RAM per CPU-core (8 GB), thus multiple runs may exceed RAM!
+CHECKPOINT: Model parameters restored, LogL: -2955981.423
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+CHECKPOINT: Candidate tree set restored, best LogL: -2955981.422
+Finish initializing candidate tree set (20)
+Current best tree score: -2955981.422 / CPU time: 0.000
+Number of iterations: 124
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 130 / LogL: -2955984.137 / Time: 2h:46m:24s (1h:30m:17s left)
+Iteration 140 / LogL: -2956065.485 / Time: 7h:13m:2s (3h:6m:55s left)
+Iteration 150 / LogL: -2956014.842 / Time: 11h:55m:25s (4h:0m:4s left)
+Log-likelihood cutoff on original alignment: -2956066.230
+Iteration 160 / LogL: -2956008.052 / Time: 16h:27m:48s (4h:8m:30s left)
+
+******************************************************
+CHECKPOINT: Resuming analysis from Ryan2013-Opistho.poisson_C60.ckp.gz
+
+IQ-TREE multicore version 1.6.7 for Linux 64-bit built Aug 23 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    c27n09.farnam.hpc.yale.internal (AVX2, FMA3, 251 GB RAM)
+Command: iqtree -s Ryan2013_est.opisthokonta.phy -nt 20 -bb 1000 -m Poisson+C60+F+G -pre Ryan2013-Opistho.poisson_C60
+Seed:    940369 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Nov  9 17:57:06 2018
+Kernel:  AVX+FMA - 20 threads (28 CPU cores detected)
+
+Reading alignment file Ryan2013_est.opisthokonta.phy ... Phylip format detected
+Alignment most likely contains protein sequences
+Alignment has 70 sequences with 88384 columns, 83152 distinct patterns
+59941 parsimony-informative, 14814 singleton sites, 13629 constant sites
+                                Gap/Ambiguity  Composition  p-value
+   1  Oscarella_carmela                85.53%    failed      0.03%
+   2  Patiria_pectinifera              66.93%    failed      0.02%
+   3  Strongylocentrotus_purpuratus    25.73%    passed     13.20%
+   4  Capitella_teleta                 13.97%    failed      0.06%
+   5  Branchiostoma_floridae           75.06%    failed      0.00%
+   6  Helobdella_robusta               11.90%    failed      0.00%
+   7  Lottia_gigantea                  12.00%    failed      0.00%
+   8  Saccoglossus_kowalevskii         20.12%    failed      0.02%
+   9  Drosophila_melanogaster           9.97%    failed      0.01%
+  10  Anoplodactylus_eroticus          85.99%    failed      0.00%
+  11  Daphnia_pulex                    12.84%    failed      0.10%
+  12  Petromyzon_marinus               53.47%    failed      0.00%
+  13  Ciona_intestinalis               18.96%    failed      0.00%
+  14  Acropora_palmata                 61.09%    failed      0.34%
+  15  Acropora_millepora               30.90%    failed      0.01%
+  16  Nematostella_vectensis           17.01%    failed      0.01%
+  17  Anemonia_viridis                 70.80%    failed      0.00%
+  18  Capsaspora_owczarzaki            14.75%    failed      0.00%
+  19  Saccharomyces_cerevisiae         27.45%    failed      0.00%
+  20  Cryptococcus_neoformans          16.17%    failed      0.00%
+  21  Monosiga_brevicollis             19.10%    failed      0.00%
+  22  Phycomyces_blakesleeanus         16.34%    failed      0.00%
+  23  Batrachochytrium_dendrobatidis   20.24%    failed      0.00%
+  24  Spizellomyces_punctatus          18.56%    failed      0.00%
+  25  Salpingoeca_rosetta              21.64%    failed      0.00%
+  26  Amphimedon_queenslandica         19.70%    failed      0.00%
+  27  Lubomirskia_baicalensis          90.64%    failed      0.00%
+  28  Mnemiopsis_leidyi                17.25%    failed      0.00%
+  29  Hydra_vulgaris                   23.09%    failed      0.00%
+  30  Trichoplax_adhaerens             14.80%    failed      0.00%
+  31  Cyanea_capillata                 91.88%    failed      0.00%
+  32  Crassostrea_virginica            75.27%    failed      0.00%
+  33  Schmidtea_mediterranea           48.54%    failed      0.00%
+  34  Cerebratulus_lacteus             88.58%    failed      0.00%
+  35  Ephydatia_muelleri               89.00%    failed      0.00%
+  36  Pleurobrachia_pileus             74.17%    failed      0.29%
+  37  Suberites_domuncula              86.52%    failed      0.00%
+  38  Hydractinia_echinata             87.20%    failed      0.03%
+  39  Clytia_hemisphaerica             51.77%    failed      0.00%
+  40  Metridium_senile                 73.78%    failed      0.03%
+  41  Porites_astreoides               89.12%    passed     23.30%
+  42  Orbicella_faveolata              65.39%    failed      0.01%
+  43  Halocynthia_roretzi              57.72%    failed      0.00%
+  44  Euprymna_scolopes                68.18%    failed      0.00%
+  45  Rhipicephalus_microplus          46.43%    failed      0.00%
+  46  Isodiametra_pulchra              88.17%    passed     18.78%
+  47  Symsagittifera_roscoffensis      83.35%    failed      0.13%
+  48  Monosiga_ovata                   58.38%    failed      0.00%
+  49  Oscarella_lobularis              93.95%    failed      0.04%
+  50  Gallus_gallus                    25.84%    failed      0.00%
+  51  Meara_stichopi                   92.16%    failed      0.00%
+  52  Terebratalia_transversa          82.97%    failed      0.00%
+  53  Euperipatoides_kanangrensis      88.86%    failed      0.00%
+  54  Xiphinema_index                  75.44%    failed      0.01%
+  55  Oopsacas_minuta                  92.50%    failed      0.00%
+  56  Convolutriloba_longifissura      91.85%    failed      0.00%
+  57  Mertensiid_sp                    92.42%    failed      0.00%
+  58  Paraplanocera_oligoglena         90.14%    failed      0.00%
+  59  Nemertoderma_westbladi           78.81%    failed      0.00%
+  60  Echinoderes_horni                88.15%    failed      0.00%
+  61  Ptychodera_flava                 89.24%    failed      0.00%
+  62  Sphaeroforma_arctica             81.10%    failed      0.00%
+  63  Rhizopus_orizae                  27.62%    failed      0.00%
+  64  Podocoryna_carnea                88.87%    failed      0.06%
+  65  Amoebidium_parasiticum           93.77%    failed      0.00%
+  66  Sycon_raphanus                   90.59%    failed      0.00%
+  67  Xenoturbella_bocki               87.63%    failed      0.00%
+  68  Carteriospongia_foliascens       94.13%    failed      0.96%
+  69  Exaiptasia_pallida               95.00%    failed      3.78%
+  70  Leucetta_chagosensis             95.85%    failed      0.00%
+WARNING: 44 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                            59.32%  67 sequences failed composition chi2 test (p-value<5%; df=19)
+
+CHECKPOINT: Initial tree restored
+Generating 1000 samples for ultrafast bootstrap (seed: 940369)...
+CHECKPOINT: 1000 UFBoot trees and 3 UFBootSplits restored
+Model Poisson+C60+F+G is alias for Poisson+POISSON+G+FMIX{C60pi1:1:0.0169698865,C60pi2:1:0.0211683374,C60pi3:1:0.0276589079,C60pi4:1:0.0065675964,C60pi5:1:0.0141221416,C60pi6:1:0.0068774834,C60pi7:1:0.0146909701,C60pi8:1:0.0067225777,C60pi9:1:0.0018396660,C60pi10:1:0.0102547197,C60pi11:1:0.0230896163,C60pi12:1:0.0057941033,C60pi13:1:0.0125394534,C60pi14:1:0.0204526478,C60pi15:1:0.0070629602,C60pi16:1:0.0117982741,C60pi17:1:0.0068334668,C60pi18:1:0.0433775839,C60pi19:1:0.0318278731,C60pi20:1:0.0222546108,C60pi21:1:0.0102264969,C60pi22:1:0.0150545891,C60pi23:1:0.0134159878,C60pi24:1:0.0148552065,C60pi25:1:0.0239111516,C60pi26:1:0.0128776278,C60pi27:1:0.0222318842,C60pi28:1:0.0247444742,C60pi29:1:0.0214274810,C60pi30:1:0.0115001882,C60pi31:1:0.0076017389,C60pi32:1:0.0130258568,C60pi33:1:0.0093701965,C60pi34:1:0.0467194264,C60pi35:1:0.0441940314,C60pi36:1:0.0322263154,C60pi37:1:0.0402999891,C60pi38:1:0.0150234227,C60pi39:1:0.0104589903,C60pi40:1:0.0214742395,C60pi41:1:0.0154957836,C60pi42:1:0.0101789953,C60pi43:1:0.0227980379,C60pi44:1:0.0123204539,C60pi45:1:0.0066777583,C60pi46:1:0.0004150083,C60pi47:1:0.0344385130,C60pi48:1:0.0113663379,C60pi49:1:0.0127143049,C60pi50:1:0.0124323741,C60pi51:1:0.0262124415,C60pi52:1:0.0064994957,C60pi53:1:0.0103203293,C60pi54:1:0.0142463512,C60pi55:1:0.0215600067,C60pi56:1:0.0199150700,C60pi57:1:0.0038964200,C60pi58:1:0.0113448855,C60pi59:1:0.0128595846,C60pi60:1:0.0117656776}+F+G
+
+NOTE: 219790 MB RAM (214 GB) is required!
+WARNING: Memory required per CPU-core (10.732 GB) is higher than your computer RAM per CPU-core (8 GB), thus multiple runs may exceed RAM!
+CHECKPOINT: Model parameters restored, LogL: -2955981.423
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+CHECKPOINT: Candidate tree set restored, best LogL: -2955981.422
+Finish initializing candidate tree set (20)
+Current best tree score: -2955981.422 / CPU time: 0.000
+Number of iterations: 169
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 170 / LogL: -2955996.526 / Time: 0h:32m:28s (0h:5m:45s left)
+
+******************************************************
+CHECKPOINT: Resuming analysis from Ryan2013-Opistho.poisson_C60.ckp.gz
+
+IQ-TREE multicore version 1.6.7 for Linux 64-bit built Aug 23 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    c27n09.farnam.hpc.yale.internal (AVX2, FMA3, 251 GB RAM)
+Command: iqtree -s Ryan2013_est.opisthokonta.phy -nt 20 -bb 1000 -m Poisson+C60+F+G -pre Ryan2013-Opistho.poisson_C60
+Seed:    56236 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Nov  9 18:45:03 2018
+Kernel:  AVX+FMA - 20 threads (28 CPU cores detected)
+
+Reading alignment file Ryan2013_est.opisthokonta.phy ... Phylip format detected
+Alignment most likely contains protein sequences
+Alignment has 70 sequences with 88384 columns, 83152 distinct patterns
+59941 parsimony-informative, 14814 singleton sites, 13629 constant sites
+                                Gap/Ambiguity  Composition  p-value
+   1  Oscarella_carmela                85.53%    failed      0.03%
+   2  Patiria_pectinifera              66.93%    failed      0.02%
+   3  Strongylocentrotus_purpuratus    25.73%    passed     13.20%
+   4  Capitella_teleta                 13.97%    failed      0.06%
+   5  Branchiostoma_floridae           75.06%    failed      0.00%
+   6  Helobdella_robusta               11.90%    failed      0.00%
+   7  Lottia_gigantea                  12.00%    failed      0.00%
+   8  Saccoglossus_kowalevskii         20.12%    failed      0.02%
+   9  Drosophila_melanogaster           9.97%    failed      0.01%
+  10  Anoplodactylus_eroticus          85.99%    failed      0.00%
+  11  Daphnia_pulex                    12.84%    failed      0.10%
+  12  Petromyzon_marinus               53.47%    failed      0.00%
+  13  Ciona_intestinalis               18.96%    failed      0.00%
+  14  Acropora_palmata                 61.09%    failed      0.34%
+  15  Acropora_millepora               30.90%    failed      0.01%
+  16  Nematostella_vectensis           17.01%    failed      0.01%
+  17  Anemonia_viridis                 70.80%    failed      0.00%
+  18  Capsaspora_owczarzaki            14.75%    failed      0.00%
+  19  Saccharomyces_cerevisiae         27.45%    failed      0.00%
+  20  Cryptococcus_neoformans          16.17%    failed      0.00%
+  21  Monosiga_brevicollis             19.10%    failed      0.00%
+  22  Phycomyces_blakesleeanus         16.34%    failed      0.00%
+  23  Batrachochytrium_dendrobatidis   20.24%    failed      0.00%
+  24  Spizellomyces_punctatus          18.56%    failed      0.00%
+  25  Salpingoeca_rosetta              21.64%    failed      0.00%
+  26  Amphimedon_queenslandica         19.70%    failed      0.00%
+  27  Lubomirskia_baicalensis          90.64%    failed      0.00%
+  28  Mnemiopsis_leidyi                17.25%    failed      0.00%
+  29  Hydra_vulgaris                   23.09%    failed      0.00%
+  30  Trichoplax_adhaerens             14.80%    failed      0.00%
+  31  Cyanea_capillata                 91.88%    failed      0.00%
+  32  Crassostrea_virginica            75.27%    failed      0.00%
+  33  Schmidtea_mediterranea           48.54%    failed      0.00%
+  34  Cerebratulus_lacteus             88.58%    failed      0.00%
+  35  Ephydatia_muelleri               89.00%    failed      0.00%
+  36  Pleurobrachia_pileus             74.17%    failed      0.29%
+  37  Suberites_domuncula              86.52%    failed      0.00%
+  38  Hydractinia_echinata             87.20%    failed      0.03%
+  39  Clytia_hemisphaerica             51.77%    failed      0.00%
+  40  Metridium_senile                 73.78%    failed      0.03%
+  41  Porites_astreoides               89.12%    passed     23.30%
+  42  Orbicella_faveolata              65.39%    failed      0.01%
+  43  Halocynthia_roretzi              57.72%    failed      0.00%
+  44  Euprymna_scolopes                68.18%    failed      0.00%
+  45  Rhipicephalus_microplus          46.43%    failed      0.00%
+  46  Isodiametra_pulchra              88.17%    passed     18.78%
+  47  Symsagittifera_roscoffensis      83.35%    failed      0.13%
+  48  Monosiga_ovata                   58.38%    failed      0.00%
+  49  Oscarella_lobularis              93.95%    failed      0.04%
+  50  Gallus_gallus                    25.84%    failed      0.00%
+  51  Meara_stichopi                   92.16%    failed      0.00%
+  52  Terebratalia_transversa          82.97%    failed      0.00%
+  53  Euperipatoides_kanangrensis      88.86%    failed      0.00%
+  54  Xiphinema_index                  75.44%    failed      0.01%
+  55  Oopsacas_minuta                  92.50%    failed      0.00%
+  56  Convolutriloba_longifissura      91.85%    failed      0.00%
+  57  Mertensiid_sp                    92.42%    failed      0.00%
+  58  Paraplanocera_oligoglena         90.14%    failed      0.00%
+  59  Nemertoderma_westbladi           78.81%    failed      0.00%
+  60  Echinoderes_horni                88.15%    failed      0.00%
+  61  Ptychodera_flava                 89.24%    failed      0.00%
+  62  Sphaeroforma_arctica             81.10%    failed      0.00%
+  63  Rhizopus_orizae                  27.62%    failed      0.00%
+  64  Podocoryna_carnea                88.87%    failed      0.06%
+  65  Amoebidium_parasiticum           93.77%    failed      0.00%
+  66  Sycon_raphanus                   90.59%    failed      0.00%
+  67  Xenoturbella_bocki               87.63%    failed      0.00%
+  68  Carteriospongia_foliascens       94.13%    failed      0.96%
+  69  Exaiptasia_pallida               95.00%    failed      3.78%
+  70  Leucetta_chagosensis             95.85%    failed      0.00%
+WARNING: 44 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                            59.32%  67 sequences failed composition chi2 test (p-value<5%; df=19)
+
+CHECKPOINT: Initial tree restored
+Generating 1000 samples for ultrafast bootstrap (seed: 56236)...
+CHECKPOINT: 1000 UFBoot trees and 3 UFBootSplits restored
+Model Poisson+C60+F+G is alias for Poisson+POISSON+G+FMIX{C60pi1:1:0.0169698865,C60pi2:1:0.0211683374,C60pi3:1:0.0276589079,C60pi4:1:0.0065675964,C60pi5:1:0.0141221416,C60pi6:1:0.0068774834,C60pi7:1:0.0146909701,C60pi8:1:0.0067225777,C60pi9:1:0.0018396660,C60pi10:1:0.0102547197,C60pi11:1:0.0230896163,C60pi12:1:0.0057941033,C60pi13:1:0.0125394534,C60pi14:1:0.0204526478,C60pi15:1:0.0070629602,C60pi16:1:0.0117982741,C60pi17:1:0.0068334668,C60pi18:1:0.0433775839,C60pi19:1:0.0318278731,C60pi20:1:0.0222546108,C60pi21:1:0.0102264969,C60pi22:1:0.0150545891,C60pi23:1:0.0134159878,C60pi24:1:0.0148552065,C60pi25:1:0.0239111516,C60pi26:1:0.0128776278,C60pi27:1:0.0222318842,C60pi28:1:0.0247444742,C60pi29:1:0.0214274810,C60pi30:1:0.0115001882,C60pi31:1:0.0076017389,C60pi32:1:0.0130258568,C60pi33:1:0.0093701965,C60pi34:1:0.0467194264,C60pi35:1:0.0441940314,C60pi36:1:0.0322263154,C60pi37:1:0.0402999891,C60pi38:1:0.0150234227,C60pi39:1:0.0104589903,C60pi40:1:0.0214742395,C60pi41:1:0.0154957836,C60pi42:1:0.0101789953,C60pi43:1:0.0227980379,C60pi44:1:0.0123204539,C60pi45:1:0.0066777583,C60pi46:1:0.0004150083,C60pi47:1:0.0344385130,C60pi48:1:0.0113663379,C60pi49:1:0.0127143049,C60pi50:1:0.0124323741,C60pi51:1:0.0262124415,C60pi52:1:0.0064994957,C60pi53:1:0.0103203293,C60pi54:1:0.0142463512,C60pi55:1:0.0215600067,C60pi56:1:0.0199150700,C60pi57:1:0.0038964200,C60pi58:1:0.0113448855,C60pi59:1:0.0128595846,C60pi60:1:0.0117656776}+F+G
+
+NOTE: 219790 MB RAM (214 GB) is required!
+WARNING: Memory required per CPU-core (10.732 GB) is higher than your computer RAM per CPU-core (8 GB), thus multiple runs may exceed RAM!
+
+******************************************************
+CHECKPOINT: Resuming analysis from Ryan2013-Opistho.poisson_C60.ckp.gz
+
+IQ-TREE multicore version 1.6.7 for Linux 64-bit built Aug 23 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    c28n06.farnam.hpc.yale.internal (AVX2, FMA3, 251 GB RAM)
+Command: iqtree -s Ryan2013_est.opisthokonta.phy -nt 20 -bb 1000 -m Poisson+C60+F+G -pre Ryan2013-Opistho.poisson_C60
+Seed:    735854 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Nov  9 19:23:41 2018
+Kernel:  AVX+FMA - 20 threads (28 CPU cores detected)
+
+Reading alignment file Ryan2013_est.opisthokonta.phy ... Phylip format detected
+Alignment most likely contains protein sequences
+Alignment has 70 sequences with 88384 columns, 83152 distinct patterns
+59941 parsimony-informative, 14814 singleton sites, 13629 constant sites
+                                Gap/Ambiguity  Composition  p-value
+   1  Oscarella_carmela                85.53%    failed      0.03%
+   2  Patiria_pectinifera              66.93%    failed      0.02%
+   3  Strongylocentrotus_purpuratus    25.73%    passed     13.20%
+   4  Capitella_teleta                 13.97%    failed      0.06%
+   5  Branchiostoma_floridae           75.06%    failed      0.00%
+   6  Helobdella_robusta               11.90%    failed      0.00%
+   7  Lottia_gigantea                  12.00%    failed      0.00%
+   8  Saccoglossus_kowalevskii         20.12%    failed      0.02%
+   9  Drosophila_melanogaster           9.97%    failed      0.01%
+  10  Anoplodactylus_eroticus          85.99%    failed      0.00%
+  11  Daphnia_pulex                    12.84%    failed      0.10%
+  12  Petromyzon_marinus               53.47%    failed      0.00%
+  13  Ciona_intestinalis               18.96%    failed      0.00%
+  14  Acropora_palmata                 61.09%    failed      0.34%
+  15  Acropora_millepora               30.90%    failed      0.01%
+  16  Nematostella_vectensis           17.01%    failed      0.01%
+  17  Anemonia_viridis                 70.80%    failed      0.00%
+  18  Capsaspora_owczarzaki            14.75%    failed      0.00%
+  19  Saccharomyces_cerevisiae         27.45%    failed      0.00%
+  20  Cryptococcus_neoformans          16.17%    failed      0.00%
+  21  Monosiga_brevicollis             19.10%    failed      0.00%
+  22  Phycomyces_blakesleeanus         16.34%    failed      0.00%
+  23  Batrachochytrium_dendrobatidis   20.24%    failed      0.00%
+  24  Spizellomyces_punctatus          18.56%    failed      0.00%
+  25  Salpingoeca_rosetta              21.64%    failed      0.00%
+  26  Amphimedon_queenslandica         19.70%    failed      0.00%
+  27  Lubomirskia_baicalensis          90.64%    failed      0.00%
+  28  Mnemiopsis_leidyi                17.25%    failed      0.00%
+  29  Hydra_vulgaris                   23.09%    failed      0.00%
+  30  Trichoplax_adhaerens             14.80%    failed      0.00%
+  31  Cyanea_capillata                 91.88%    failed      0.00%
+  32  Crassostrea_virginica            75.27%    failed      0.00%
+  33  Schmidtea_mediterranea           48.54%    failed      0.00%
+  34  Cerebratulus_lacteus             88.58%    failed      0.00%
+  35  Ephydatia_muelleri               89.00%    failed      0.00%
+  36  Pleurobrachia_pileus             74.17%    failed      0.29%
+  37  Suberites_domuncula              86.52%    failed      0.00%
+  38  Hydractinia_echinata             87.20%    failed      0.03%
+  39  Clytia_hemisphaerica             51.77%    failed      0.00%
+  40  Metridium_senile                 73.78%    failed      0.03%
+  41  Porites_astreoides               89.12%    passed     23.30%
+  42  Orbicella_faveolata              65.39%    failed      0.01%
+  43  Halocynthia_roretzi              57.72%    failed      0.00%
+  44  Euprymna_scolopes                68.18%    failed      0.00%
+  45  Rhipicephalus_microplus          46.43%    failed      0.00%
+  46  Isodiametra_pulchra              88.17%    passed     18.78%
+  47  Symsagittifera_roscoffensis      83.35%    failed      0.13%
+  48  Monosiga_ovata                   58.38%    failed      0.00%
+  49  Oscarella_lobularis              93.95%    failed      0.04%
+  50  Gallus_gallus                    25.84%    failed      0.00%
+  51  Meara_stichopi                   92.16%    failed      0.00%
+  52  Terebratalia_transversa          82.97%    failed      0.00%
+  53  Euperipatoides_kanangrensis      88.86%    failed      0.00%
+  54  Xiphinema_index                  75.44%    failed      0.01%
+  55  Oopsacas_minuta                  92.50%    failed      0.00%
+  56  Convolutriloba_longifissura      91.85%    failed      0.00%
+  57  Mertensiid_sp                    92.42%    failed      0.00%
+  58  Paraplanocera_oligoglena         90.14%    failed      0.00%
+  59  Nemertoderma_westbladi           78.81%    failed      0.00%
+  60  Echinoderes_horni                88.15%    failed      0.00%
+  61  Ptychodera_flava                 89.24%    failed      0.00%
+  62  Sphaeroforma_arctica             81.10%    failed      0.00%
+  63  Rhizopus_orizae                  27.62%    failed      0.00%
+  64  Podocoryna_carnea                88.87%    failed      0.06%
+  65  Amoebidium_parasiticum           93.77%    failed      0.00%
+  66  Sycon_raphanus                   90.59%    failed      0.00%
+  67  Xenoturbella_bocki               87.63%    failed      0.00%
+  68  Carteriospongia_foliascens       94.13%    failed      0.96%
+  69  Exaiptasia_pallida               95.00%    failed      3.78%
+  70  Leucetta_chagosensis             95.85%    failed      0.00%
+WARNING: 44 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                            59.32%  67 sequences failed composition chi2 test (p-value<5%; df=19)
+
+CHECKPOINT: Initial tree restored
+Generating 1000 samples for ultrafast bootstrap (seed: 735854)...
+CHECKPOINT: 1000 UFBoot trees and 3 UFBootSplits restored
+Model Poisson+C60+F+G is alias for Poisson+POISSON+G+FMIX{C60pi1:1:0.0169698865,C60pi2:1:0.0211683374,C60pi3:1:0.0276589079,C60pi4:1:0.0065675964,C60pi5:1:0.0141221416,C60pi6:1:0.0068774834,C60pi7:1:0.0146909701,C60pi8:1:0.0067225777,C60pi9:1:0.0018396660,C60pi10:1:0.0102547197,C60pi11:1:0.0230896163,C60pi12:1:0.0057941033,C60pi13:1:0.0125394534,C60pi14:1:0.0204526478,C60pi15:1:0.0070629602,C60pi16:1:0.0117982741,C60pi17:1:0.0068334668,C60pi18:1:0.0433775839,C60pi19:1:0.0318278731,C60pi20:1:0.0222546108,C60pi21:1:0.0102264969,C60pi22:1:0.0150545891,C60pi23:1:0.0134159878,C60pi24:1:0.0148552065,C60pi25:1:0.0239111516,C60pi26:1:0.0128776278,C60pi27:1:0.0222318842,C60pi28:1:0.0247444742,C60pi29:1:0.0214274810,C60pi30:1:0.0115001882,C60pi31:1:0.0076017389,C60pi32:1:0.0130258568,C60pi33:1:0.0093701965,C60pi34:1:0.0467194264,C60pi35:1:0.0441940314,C60pi36:1:0.0322263154,C60pi37:1:0.0402999891,C60pi38:1:0.0150234227,C60pi39:1:0.0104589903,C60pi40:1:0.0214742395,C60pi41:1:0.0154957836,C60pi42:1:0.0101789953,C60pi43:1:0.0227980379,C60pi44:1:0.0123204539,C60pi45:1:0.0066777583,C60pi46:1:0.0004150083,C60pi47:1:0.0344385130,C60pi48:1:0.0113663379,C60pi49:1:0.0127143049,C60pi50:1:0.0124323741,C60pi51:1:0.0262124415,C60pi52:1:0.0064994957,C60pi53:1:0.0103203293,C60pi54:1:0.0142463512,C60pi55:1:0.0215600067,C60pi56:1:0.0199150700,C60pi57:1:0.0038964200,C60pi58:1:0.0113448855,C60pi59:1:0.0128595846,C60pi60:1:0.0117656776}+F+G
+
+NOTE: 219790 MB RAM (214 GB) is required!
+WARNING: Memory required per CPU-core (10.732 GB) is higher than your computer RAM per CPU-core (8 GB), thus multiple runs may exceed RAM!
+CHECKPOINT: Model parameters restored, LogL: -2955981.423
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+CHECKPOINT: Candidate tree set restored, best LogL: -2955981.422
+Finish initializing candidate tree set (20)
+Current best tree score: -2955981.422 / CPU time: 0.000
+Number of iterations: 170
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+
+******************************************************
+CHECKPOINT: Resuming analysis from Ryan2013-Opistho.poisson_C60.ckp.gz
+
+IQ-TREE multicore version 1.6.7 for Linux 64-bit built Aug 23 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    c27n05.farnam.hpc.yale.internal (AVX2, FMA3, 251 GB RAM)
+Command: iqtree -s Ryan2013_est.opisthokonta.phy -nt 20 -bb 1000 -m Poisson+C60+F+G -pre Ryan2013-Opistho.poisson_C60
+Seed:    259469 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Nov  9 22:28:56 2018
+Kernel:  AVX+FMA - 20 threads (28 CPU cores detected)
+
+Reading alignment file Ryan2013_est.opisthokonta.phy ... Phylip format detected
+Alignment most likely contains protein sequences
+Alignment has 70 sequences with 88384 columns, 83152 distinct patterns
+59941 parsimony-informative, 14814 singleton sites, 13629 constant sites
+                                Gap/Ambiguity  Composition  p-value
+   1  Oscarella_carmela                85.53%    failed      0.03%
+   2  Patiria_pectinifera              66.93%    failed      0.02%
+   3  Strongylocentrotus_purpuratus    25.73%    passed     13.20%
+   4  Capitella_teleta                 13.97%    failed      0.06%
+   5  Branchiostoma_floridae           75.06%    failed      0.00%
+   6  Helobdella_robusta               11.90%    failed      0.00%
+   7  Lottia_gigantea                  12.00%    failed      0.00%
+   8  Saccoglossus_kowalevskii         20.12%    failed      0.02%
+   9  Drosophila_melanogaster           9.97%    failed      0.01%
+  10  Anoplodactylus_eroticus          85.99%    failed      0.00%
+  11  Daphnia_pulex                    12.84%    failed      0.10%
+  12  Petromyzon_marinus               53.47%    failed      0.00%
+  13  Ciona_intestinalis               18.96%    failed      0.00%
+  14  Acropora_palmata                 61.09%    failed      0.34%
+  15  Acropora_millepora               30.90%    failed      0.01%
+  16  Nematostella_vectensis           17.01%    failed      0.01%
+  17  Anemonia_viridis                 70.80%    failed      0.00%
+  18  Capsaspora_owczarzaki            14.75%    failed      0.00%
+  19  Saccharomyces_cerevisiae         27.45%    failed      0.00%
+  20  Cryptococcus_neoformans          16.17%    failed      0.00%
+  21  Monosiga_brevicollis             19.10%    failed      0.00%
+  22  Phycomyces_blakesleeanus         16.34%    failed      0.00%
+  23  Batrachochytrium_dendrobatidis   20.24%    failed      0.00%
+  24  Spizellomyces_punctatus          18.56%    failed      0.00%
+  25  Salpingoeca_rosetta              21.64%    failed      0.00%
+  26  Amphimedon_queenslandica         19.70%    failed      0.00%
+  27  Lubomirskia_baicalensis          90.64%    failed      0.00%
+  28  Mnemiopsis_leidyi                17.25%    failed      0.00%
+  29  Hydra_vulgaris                   23.09%    failed      0.00%
+  30  Trichoplax_adhaerens             14.80%    failed      0.00%
+  31  Cyanea_capillata                 91.88%    failed      0.00%
+  32  Crassostrea_virginica            75.27%    failed      0.00%
+  33  Schmidtea_mediterranea           48.54%    failed      0.00%
+  34  Cerebratulus_lacteus             88.58%    failed      0.00%
+  35  Ephydatia_muelleri               89.00%    failed      0.00%
+  36  Pleurobrachia_pileus             74.17%    failed      0.29%
+  37  Suberites_domuncula              86.52%    failed      0.00%
+  38  Hydractinia_echinata             87.20%    failed      0.03%
+  39  Clytia_hemisphaerica             51.77%    failed      0.00%
+  40  Metridium_senile                 73.78%    failed      0.03%
+  41  Porites_astreoides               89.12%    passed     23.30%
+  42  Orbicella_faveolata              65.39%    failed      0.01%
+  43  Halocynthia_roretzi              57.72%    failed      0.00%
+  44  Euprymna_scolopes                68.18%    failed      0.00%
+  45  Rhipicephalus_microplus          46.43%    failed      0.00%
+  46  Isodiametra_pulchra              88.17%    passed     18.78%
+  47  Symsagittifera_roscoffensis      83.35%    failed      0.13%
+  48  Monosiga_ovata                   58.38%    failed      0.00%
+  49  Oscarella_lobularis              93.95%    failed      0.04%
+  50  Gallus_gallus                    25.84%    failed      0.00%
+  51  Meara_stichopi                   92.16%    failed      0.00%
+  52  Terebratalia_transversa          82.97%    failed      0.00%
+  53  Euperipatoides_kanangrensis      88.86%    failed      0.00%
+  54  Xiphinema_index                  75.44%    failed      0.01%
+  55  Oopsacas_minuta                  92.50%    failed      0.00%
+  56  Convolutriloba_longifissura      91.85%    failed      0.00%
+  57  Mertensiid_sp                    92.42%    failed      0.00%
+  58  Paraplanocera_oligoglena         90.14%    failed      0.00%
+  59  Nemertoderma_westbladi           78.81%    failed      0.00%
+  60  Echinoderes_horni                88.15%    failed      0.00%
+  61  Ptychodera_flava                 89.24%    failed      0.00%
+  62  Sphaeroforma_arctica             81.10%    failed      0.00%
+  63  Rhizopus_orizae                  27.62%    failed      0.00%
+  64  Podocoryna_carnea                88.87%    failed      0.06%
+  65  Amoebidium_parasiticum           93.77%    failed      0.00%
+  66  Sycon_raphanus                   90.59%    failed      0.00%
+  67  Xenoturbella_bocki               87.63%    failed      0.00%
+  68  Carteriospongia_foliascens       94.13%    failed      0.96%
+  69  Exaiptasia_pallida               95.00%    failed      3.78%
+  70  Leucetta_chagosensis             95.85%    failed      0.00%
+WARNING: 44 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                            59.32%  67 sequences failed composition chi2 test (p-value<5%; df=19)
+
+CHECKPOINT: Initial tree restored
+Generating 1000 samples for ultrafast bootstrap (seed: 259469)...
+CHECKPOINT: 1000 UFBoot trees and 3 UFBootSplits restored
+Model Poisson+C60+F+G is alias for Poisson+POISSON+G+FMIX{C60pi1:1:0.0169698865,C60pi2:1:0.0211683374,C60pi3:1:0.0276589079,C60pi4:1:0.0065675964,C60pi5:1:0.0141221416,C60pi6:1:0.0068774834,C60pi7:1:0.0146909701,C60pi8:1:0.0067225777,C60pi9:1:0.0018396660,C60pi10:1:0.0102547197,C60pi11:1:0.0230896163,C60pi12:1:0.0057941033,C60pi13:1:0.0125394534,C60pi14:1:0.0204526478,C60pi15:1:0.0070629602,C60pi16:1:0.0117982741,C60pi17:1:0.0068334668,C60pi18:1:0.0433775839,C60pi19:1:0.0318278731,C60pi20:1:0.0222546108,C60pi21:1:0.0102264969,C60pi22:1:0.0150545891,C60pi23:1:0.0134159878,C60pi24:1:0.0148552065,C60pi25:1:0.0239111516,C60pi26:1:0.0128776278,C60pi27:1:0.0222318842,C60pi28:1:0.0247444742,C60pi29:1:0.0214274810,C60pi30:1:0.0115001882,C60pi31:1:0.0076017389,C60pi32:1:0.0130258568,C60pi33:1:0.0093701965,C60pi34:1:0.0467194264,C60pi35:1:0.0441940314,C60pi36:1:0.0322263154,C60pi37:1:0.0402999891,C60pi38:1:0.0150234227,C60pi39:1:0.0104589903,C60pi40:1:0.0214742395,C60pi41:1:0.0154957836,C60pi42:1:0.0101789953,C60pi43:1:0.0227980379,C60pi44:1:0.0123204539,C60pi45:1:0.0066777583,C60pi46:1:0.0004150083,C60pi47:1:0.0344385130,C60pi48:1:0.0113663379,C60pi49:1:0.0127143049,C60pi50:1:0.0124323741,C60pi51:1:0.0262124415,C60pi52:1:0.0064994957,C60pi53:1:0.0103203293,C60pi54:1:0.0142463512,C60pi55:1:0.0215600067,C60pi56:1:0.0199150700,C60pi57:1:0.0038964200,C60pi58:1:0.0113448855,C60pi59:1:0.0128595846,C60pi60:1:0.0117656776}+F+G
+
+NOTE: 219790 MB RAM (214 GB) is required!
+WARNING: Memory required per CPU-core (10.732 GB) is higher than your computer RAM per CPU-core (8 GB), thus multiple runs may exceed RAM!
+CHECKPOINT: Model parameters restored, LogL: -2955981.423
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+CHECKPOINT: Candidate tree set restored, best LogL: -2955981.422
+Finish initializing candidate tree set (20)
+Current best tree score: -2955981.422 / CPU time: 0.000
+Number of iterations: 170
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+
+******************************************************
+CHECKPOINT: Resuming analysis from Ryan2013-Opistho.poisson_C60.ckp.gz
+
+IQ-TREE multicore version 1.6.7 for Linux 64-bit built Aug 23 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    c27n08.farnam.hpc.yale.internal (AVX2, FMA3, 251 GB RAM)
+Command: iqtree -s Ryan2013_est.opisthokonta.phy -nt 20 -bb 1000 -m Poisson+C60+F+G -pre Ryan2013-Opistho.poisson_C60
+Seed:    942284 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Nov  9 22:38:45 2018
+Kernel:  AVX+FMA - 20 threads (28 CPU cores detected)
+
+Reading alignment file Ryan2013_est.opisthokonta.phy ... Phylip format detected
+Alignment most likely contains protein sequences
+Alignment has 70 sequences with 88384 columns, 83152 distinct patterns
+59941 parsimony-informative, 14814 singleton sites, 13629 constant sites
+                                Gap/Ambiguity  Composition  p-value
+   1  Oscarella_carmela                85.53%    failed      0.03%
+   2  Patiria_pectinifera              66.93%    failed      0.02%
+   3  Strongylocentrotus_purpuratus    25.73%    passed     13.20%
+   4  Capitella_teleta                 13.97%    failed      0.06%
+   5  Branchiostoma_floridae           75.06%    failed      0.00%
+   6  Helobdella_robusta               11.90%    failed      0.00%
+   7  Lottia_gigantea                  12.00%    failed      0.00%
+   8  Saccoglossus_kowalevskii         20.12%    failed      0.02%
+   9  Drosophila_melanogaster           9.97%    failed      0.01%
+  10  Anoplodactylus_eroticus          85.99%    failed      0.00%
+  11  Daphnia_pulex                    12.84%    failed      0.10%
+  12  Petromyzon_marinus               53.47%    failed      0.00%
+  13  Ciona_intestinalis               18.96%    failed      0.00%
+  14  Acropora_palmata                 61.09%    failed      0.34%
+  15  Acropora_millepora               30.90%    failed      0.01%
+  16  Nematostella_vectensis           17.01%    failed      0.01%
+  17  Anemonia_viridis                 70.80%    failed      0.00%
+  18  Capsaspora_owczarzaki            14.75%    failed      0.00%
+  19  Saccharomyces_cerevisiae         27.45%    failed      0.00%
+  20  Cryptococcus_neoformans          16.17%    failed      0.00%
+  21  Monosiga_brevicollis             19.10%    failed      0.00%
+  22  Phycomyces_blakesleeanus         16.34%    failed      0.00%
+  23  Batrachochytrium_dendrobatidis   20.24%    failed      0.00%
+  24  Spizellomyces_punctatus          18.56%    failed      0.00%
+  25  Salpingoeca_rosetta              21.64%    failed      0.00%
+  26  Amphimedon_queenslandica         19.70%    failed      0.00%
+  27  Lubomirskia_baicalensis          90.64%    failed      0.00%
+  28  Mnemiopsis_leidyi                17.25%    failed      0.00%
+  29  Hydra_vulgaris                   23.09%    failed      0.00%
+  30  Trichoplax_adhaerens             14.80%    failed      0.00%
+  31  Cyanea_capillata                 91.88%    failed      0.00%
+  32  Crassostrea_virginica            75.27%    failed      0.00%
+  33  Schmidtea_mediterranea           48.54%    failed      0.00%
+  34  Cerebratulus_lacteus             88.58%    failed      0.00%
+  35  Ephydatia_muelleri               89.00%    failed      0.00%
+  36  Pleurobrachia_pileus             74.17%    failed      0.29%
+  37  Suberites_domuncula              86.52%    failed      0.00%
+  38  Hydractinia_echinata             87.20%    failed      0.03%
+  39  Clytia_hemisphaerica             51.77%    failed      0.00%
+  40  Metridium_senile                 73.78%    failed      0.03%
+  41  Porites_astreoides               89.12%    passed     23.30%
+  42  Orbicella_faveolata              65.39%    failed      0.01%
+  43  Halocynthia_roretzi              57.72%    failed      0.00%
+  44  Euprymna_scolopes                68.18%    failed      0.00%
+  45  Rhipicephalus_microplus          46.43%    failed      0.00%
+  46  Isodiametra_pulchra              88.17%    passed     18.78%
+  47  Symsagittifera_roscoffensis      83.35%    failed      0.13%
+  48  Monosiga_ovata                   58.38%    failed      0.00%
+  49  Oscarella_lobularis              93.95%    failed      0.04%
+  50  Gallus_gallus                    25.84%    failed      0.00%
+  51  Meara_stichopi                   92.16%    failed      0.00%
+  52  Terebratalia_transversa          82.97%    failed      0.00%
+  53  Euperipatoides_kanangrensis      88.86%    failed      0.00%
+  54  Xiphinema_index                  75.44%    failed      0.01%
+  55  Oopsacas_minuta                  92.50%    failed      0.00%
+  56  Convolutriloba_longifissura      91.85%    failed      0.00%
+  57  Mertensiid_sp                    92.42%    failed      0.00%
+  58  Paraplanocera_oligoglena         90.14%    failed      0.00%
+  59  Nemertoderma_westbladi           78.81%    failed      0.00%
+  60  Echinoderes_horni                88.15%    failed      0.00%
+  61  Ptychodera_flava                 89.24%    failed      0.00%
+  62  Sphaeroforma_arctica             81.10%    failed      0.00%
+  63  Rhizopus_orizae                  27.62%    failed      0.00%
+  64  Podocoryna_carnea                88.87%    failed      0.06%
+  65  Amoebidium_parasiticum           93.77%    failed      0.00%
+  66  Sycon_raphanus                   90.59%    failed      0.00%
+  67  Xenoturbella_bocki               87.63%    failed      0.00%
+  68  Carteriospongia_foliascens       94.13%    failed      0.96%
+  69  Exaiptasia_pallida               95.00%    failed      3.78%
+  70  Leucetta_chagosensis             95.85%    failed      0.00%
+WARNING: 44 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                            59.32%  67 sequences failed composition chi2 test (p-value<5%; df=19)
+
+CHECKPOINT: Initial tree restored
+Generating 1000 samples for ultrafast bootstrap (seed: 942284)...
+CHECKPOINT: 1000 UFBoot trees and 3 UFBootSplits restored
+Model Poisson+C60+F+G is alias for Poisson+POISSON+G+FMIX{C60pi1:1:0.0169698865,C60pi2:1:0.0211683374,C60pi3:1:0.0276589079,C60pi4:1:0.0065675964,C60pi5:1:0.0141221416,C60pi6:1:0.0068774834,C60pi7:1:0.0146909701,C60pi8:1:0.0067225777,C60pi9:1:0.0018396660,C60pi10:1:0.0102547197,C60pi11:1:0.0230896163,C60pi12:1:0.0057941033,C60pi13:1:0.0125394534,C60pi14:1:0.0204526478,C60pi15:1:0.0070629602,C60pi16:1:0.0117982741,C60pi17:1:0.0068334668,C60pi18:1:0.0433775839,C60pi19:1:0.0318278731,C60pi20:1:0.0222546108,C60pi21:1:0.0102264969,C60pi22:1:0.0150545891,C60pi23:1:0.0134159878,C60pi24:1:0.0148552065,C60pi25:1:0.0239111516,C60pi26:1:0.0128776278,C60pi27:1:0.0222318842,C60pi28:1:0.0247444742,C60pi29:1:0.0214274810,C60pi30:1:0.0115001882,C60pi31:1:0.0076017389,C60pi32:1:0.0130258568,C60pi33:1:0.0093701965,C60pi34:1:0.0467194264,C60pi35:1:0.0441940314,C60pi36:1:0.0322263154,C60pi37:1:0.0402999891,C60pi38:1:0.0150234227,C60pi39:1:0.0104589903,C60pi40:1:0.0214742395,C60pi41:1:0.0154957836,C60pi42:1:0.0101789953,C60pi43:1:0.0227980379,C60pi44:1:0.0123204539,C60pi45:1:0.0066777583,C60pi46:1:0.0004150083,C60pi47:1:0.0344385130,C60pi48:1:0.0113663379,C60pi49:1:0.0127143049,C60pi50:1:0.0124323741,C60pi51:1:0.0262124415,C60pi52:1:0.0064994957,C60pi53:1:0.0103203293,C60pi54:1:0.0142463512,C60pi55:1:0.0215600067,C60pi56:1:0.0199150700,C60pi57:1:0.0038964200,C60pi58:1:0.0113448855,C60pi59:1:0.0128595846,C60pi60:1:0.0117656776}+F+G
+
+NOTE: 219790 MB RAM (214 GB) is required!
+WARNING: Memory required per CPU-core (10.732 GB) is higher than your computer RAM per CPU-core (8 GB), thus multiple runs may exceed RAM!
+CHECKPOINT: Model parameters restored, LogL: -2955981.423
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+CHECKPOINT: Candidate tree set restored, best LogL: -2955981.422
+Finish initializing candidate tree set (20)
+Current best tree score: -2955981.422 / CPU time: 0.000
+Number of iterations: 170
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 180 / LogL: -2956016.541 / Time: 6h:3m:23s (0h:40m:36s left)
+Iteration 190 / LogL: -2956016.425 / Time: 12h:22m:10s (0h:39m:16s left)
+Iteration 200 / LogL: -2955998.139 / Time: 18h:32m:49s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -2956066.230
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.998
+TREE SEARCH COMPLETED AFTER 200 ITERATIONS / Time: 18h:32m:50s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -2955981.423
+2. Current log-likelihood: -2955981.299
+3. Current log-likelihood: -2955981.180
+4. Current log-likelihood: -2955981.111
+5. Current log-likelihood: -2955981.073
+6. Current log-likelihood: -2955981.062
+Optimal log-likelihood: -2955981.048
+Mixture weights: 0.003 0.027 0.032 0.021 0.012 0.019 0.009 0.011 0.010 0.002 0.011 0.039 0.009 0.013 0.013 0.001 0.009 0.009 0.035 0.025 0.017 0.007 0.013 0.017 0.021 0.023 0.008 0.034 0.022 0.022 0.018 0.018 0.012 0.007 0.047 0.038 0.026 0.023 0.019 0.008 0.026 0.009 0.007 0.042 0.007 0.008 0.000 0.018 0.009 0.015 0.003 0.021 0.013 0.012 0.019 0.018 0.025 0.004 0.010 0.011 0.015
+Gamma shape alpha: 0.773
+Parameters optimization took 6 rounds (1204.210 sec)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BEST SCORE FOUND : -2955981.048
+Creating bootstrap support values...
+Split supports printed to NEXUS file Ryan2013-Opistho.poisson_C60.splits.nex
+Total tree length: 24.039
+
+Total number of iterations: 200
+CPU time used for tree search: 1328578.154 sec (369h:2m:58s)
+Wall-clock time used for tree search: 66755.686 sec (18h:32m:35s)
+Total CPU time used: 1352786.497 sec (375h:46m:26s)
+Total wall-clock time used: 67974.680 sec (18h:52m:54s)
+
+Computing bootstrap consensus tree...
+Reading input file Ryan2013-Opistho.poisson_C60.splits.nex...
+70 taxa and 180 splits.
+Consensus tree written to Ryan2013-Opistho.poisson_C60.contree
+Reading input trees file Ryan2013-Opistho.poisson_C60.contree
+Log-likelihood of consensus tree: -2955981.034
+
+Analysis results written to: 
+  IQ-TREE report:                Ryan2013-Opistho.poisson_C60.iqtree
+  Maximum-likelihood tree:       Ryan2013-Opistho.poisson_C60.treefile
+  Likelihood distances:          Ryan2013-Opistho.poisson_C60.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          Ryan2013-Opistho.poisson_C60.splits.nex
+  Consensus tree:                Ryan2013-Opistho.poisson_C60.contree
+  Screen log file:               Ryan2013-Opistho.poisson_C60.log
+
+Date and Time: Sat Nov 10 18:13:09 2018

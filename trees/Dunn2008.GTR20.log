@@ -1,0 +1,184 @@
+IQ-TREE multicore version 1.6.7 for Linux 64-bit built Aug 23 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    c27n04.farnam.hpc.yale.internal (AVX2, FMA3, 251 GB RAM)
+Command: iqtree -s Dunn2008_Dunn2008.phy -nt 20 -bb 1000 -m GTR20+F+G -pre Dunn2008.GTR20
+Seed:    811797 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Nov  7 13:23:15 2018
+Kernel:  AVX+FMA - 20 threads (28 CPU cores detected)
+
+Reading alignment file Dunn2008_Dunn2008.phy ... Phylip format detected
+Alignment most likely contains protein sequences
+WARNING: 85 sites contain only gaps or ambiguous characters.
+Alignment has 64 sequences with 21152 columns, 20177 distinct patterns
+13818 parsimony-informative, 3872 singleton sites, 3462 constant sites
+                               Gap/Ambiguity  Composition  p-value
+   1  Acanthoscurria_gomesiana        49.26%    passed     91.69%
+   2  Acropora_millepora              42.82%    passed     28.49%
+   3  Amoebidium_parasiticum          70.11%    failed      0.00%
+   4  Anoplodactylus_eroticus         50.76%    failed      0.00%
+   5  Aplysia_californica             89.94%    passed     27.94%
+   6  Argopecten_irradians            54.69%    passed     26.52%
+   7  Patiria_pectinifera             28.60%    failed      4.04%
+   8  Biomphalaria_glabrata           62.36%    passed     45.96%
+   9  Rhipicephalus_microplus         30.92%    failed      1.11%
+  10  Branchiostoma_floridae          40.82%    failed      0.12%
+  11  Capitella_teleta                28.24%    failed      0.06%
+  12  Capsaspora_owczarzaki           43.60%    failed      0.00%
+  13  Carcinoscorpius_rotundicauda    92.32%    passed      9.40%
+  14  Carcinus_maenas                 60.99%    failed      0.25%
+  15  Carinoma_mutabilis              62.84%    failed      0.00%
+  16  Cerebratulus_lacteus            54.33%    failed      3.89%
+  17  Chaetoderma_nitidulum           73.40%    failed      0.00%
+  18  Chaetopleura_apiculata          76.41%    failed      0.00%
+  19  Chaetopterus_variopedatus       54.83%    passed     56.02%
+  20  Ciona_intestinalis              22.25%    failed      0.16%
+  21  Crassostrea_virginica           51.18%    passed     24.72%
+  22  Cryptococcus_neoformans         26.64%    failed      0.00%
+  23  Cyanea_capillata                61.77%    failed      1.17%
+  24  Daphnia_magna                   53.02%    passed     24.58%
+  25  Drosophila_melanogaster         12.86%    passed      8.53%
+  26  Dugesia_japonica                67.89%    failed      0.05%
+  27  Echinococcus_granulosus         46.46%    failed      0.00%
+  28  Echinoderes_horni               57.54%    failed      0.44%
+  29  Euperipatoides_kanangrensis     57.01%    failed      0.05%
+  30  Euprymna_scolopes               48.38%    passed     23.70%
+  31  Penaeus_chinensis               59.95%    passed     21.94%
+  32  Gallus_gallus                   27.32%    failed      1.40%
+  33  Haementeria_depressa            79.16%    passed     10.65%
+  34  Homo_sapiens                    19.33%    failed      0.01%
+  35  Hydra_vulgaris                  42.29%    failed      0.00%
+  36  Hydractinia_echinata            58.79%    failed      1.73%
+  37  Hypsibius_dujardini             48.65%    failed      3.65%
+  38  Lumbricus_rubellus              39.87%    passed     74.53%
+  39  Macrostomum_lignano             66.29%    failed      0.00%
+  40  Mertensiid_sp                   64.17%    failed      0.00%
+  41  Mnemiopsis_leidyi               32.19%    failed      1.19%
+  42  Monosiga_ovata                  50.49%    failed      0.00%
+  43  Mytilus_galloprovincialis       65.43%    passed     15.19%
+  44  Nematostella_vectensis          19.81%    failed      0.21%
+  45  Oscarella_carmela               76.38%    failed      3.38%
+  46  Paraplanocera_oligoglena        49.87%    passed     39.37%
+  47  Phoronis_vancouverensis         85.39%    failed      0.01%
+  48  Platynereis_dumerilii           74.93%    passed     28.61%
+  49  Priapulus_caudatus              87.44%    failed      0.07%
+  50  Ptychodera_flava                48.14%    passed     27.48%
+  51  Richtersius_coronifer           60.07%    passed     17.01%
+  52  Saccharomyces_cerevisiae        34.82%    failed      0.00%
+  53  Saccoglossus_kowalevskii        67.50%    passed     12.65%
+  54  Schmidtea_mediterranea          18.23%    failed      0.00%
+  55  Scutigera_coleoptrata           63.55%    failed      0.01%
+  56  Sphaeroforma_arctica            47.91%    failed      0.00%
+  57  Spinochordodes_tellinii         88.34%    failed      0.00%
+  58  Strongylocentrotus_purpuratus   27.13%    failed      0.18%
+  59  Terebratalia_transversa         45.17%    passed     47.14%
+  60  Themiste_lageniformis           60.38%    passed     74.66%
+  61  Trichinella_spiralis            58.24%    failed      0.04%
+  62  Urechis_caupo                   53.80%    passed      8.24%
+  63  Xenoturbella_bocki              54.43%    passed     18.18%
+  64  Xiphinema_index                 51.29%    failed      3.65%
+WARNING: 38 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                           53.11%  40 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.838 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 811797)...
+WARNING: GTR20 model will estimate 189 substitution rates that might be overfitting!
+WARNING: Please only use GTR20 with very large data and always test for model fit!
+
+NOTE: 875 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -724610.743
+2. Current log-likelihood: -693352.465
+3. Current log-likelihood: -692942.614
+4. Current log-likelihood: -692916.691
+5. Current log-likelihood: -692907.086
+6. Current log-likelihood: -692906.213
+7. Current log-likelihood: -692906.076
+8. Current log-likelihood: -692905.934
+9. Current log-likelihood: -692905.828
+Optimal log-likelihood: -692905.769
+Gamma shape alpha: 0.742
+Parameters optimization took 9 rounds (721.666 sec)
+Computing ML distances based on estimated model parameters... 2.009 sec
+Computing BIONJ tree...
+0.003 seconds
+Log-likelihood of BIONJ tree: -693226.233
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 81.408 second
+Computing log-likelihood of 98 initial trees ... 30.101 seconds
+Current best score: -692905.769
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -692484.867
+Iteration 10 / LogL: -692488.565 / Time: 0h:15m:11s
+Iteration 20 / LogL: -692488.066 / Time: 0h:15m:38s
+Finish initializing candidate tree set (3)
+Current best tree score: -692484.867 / CPU time: 213.210
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -692486.736 / Time: 0h:16m:10s (0h:39m:32s left)
+Iteration 40 / LogL: -692486.484 / Time: 0h:16m:43s (0h:26m:7s left)
+Iteration 50 / LogL: -692487.129 / Time: 0h:17m:14s (0h:17m:55s left)
+Log-likelihood cutoff on original alignment: -692588.412
+Iteration 60 / LogL: -692510.230 / Time: 0h:17m:46s (0h:12m:20s left)
+Iteration 70 / LogL: -692488.101 / Time: 0h:18m:17s (0h:8m:12s left)
+Iteration 80 / LogL: -692493.323 / Time: 0h:18m:46s (0h:4m:59s left)
+Iteration 90 / LogL: -692488.630 / Time: 0h:19m:16s (0h:2m:22s left)
+Iteration 100 / LogL: -692487.307 / Time: 0h:19m:45s (0h:0m:11s left)
+Log-likelihood cutoff on original alignment: -692588.412
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.997
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:19m:52s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -692484.867
+2. Current log-likelihood: -692484.715
+3. Current log-likelihood: -692484.587
+4. Current log-likelihood: -692484.356
+5. Current log-likelihood: -692484.312
+6. Current log-likelihood: -692484.281
+7. Current log-likelihood: -692484.226
+8. Current log-likelihood: -692484.201
+9. Current log-likelihood: -692484.135
+10. Current log-likelihood: -692484.072
+Optimal log-likelihood: -692484.068
+Gamma shape alpha: 0.743
+Parameters optimization took 10 rounds (121.716 sec)
+BEST SCORE FOUND : -692484.068
+Creating bootstrap support values...
+Split supports printed to NEXUS file Dunn2008.GTR20.splits.nex
+Total tree length: 21.725
+
+Total number of iterations: 102
+CPU time used for tree search: 7773.817 sec (2h:9m:33s)
+Wall-clock time used for tree search: 468.029 sec (0h:7m:48s)
+Total CPU time used: 24594.333 sec (6h:49m:54s)
+Total wall-clock time used: 1314.821 sec (0h:21m:54s)
+
+Computing bootstrap consensus tree...
+Reading input file Dunn2008.GTR20.splits.nex...
+64 taxa and 210 splits.
+Consensus tree written to Dunn2008.GTR20.contree
+Reading input trees file Dunn2008.GTR20.contree
+Log-likelihood of consensus tree: -692484.069
+
+Analysis results written to: 
+  IQ-TREE report:                Dunn2008.GTR20.iqtree
+  Maximum-likelihood tree:       Dunn2008.GTR20.treefile
+  Likelihood distances:          Dunn2008.GTR20.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          Dunn2008.GTR20.splits.nex
+  Consensus tree:                Dunn2008.GTR20.contree
+  Screen log file:               Dunn2008.GTR20.log
+
+Date and Time: Wed Nov  7 13:45:13 2018
