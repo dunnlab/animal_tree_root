@@ -134,7 +134,7 @@ Sensitivity to ingroup sampling has received less attention than sensitivity to 
 
 ## Overview of published analyses
 
-### Alignment composition
+### Matrix taxon composition
 
 
 ```{r taxonomy}
@@ -156,8 +156,10 @@ taxa =
 
 ```{r}
 
-a_file = "~/Desktop/animal_root/blast/phylips/Chang2015_Chang2015.phy"
-p_file = "~/Desktop/animal_root/blast/phylips/Chang2015_Chang2015.nex"
+phylip_file_names = list.files(pattern = "blast/phylips/.+\\.phy$")
+
+a_file = "blast/phylips/Chang2015_Chang2015.phy"
+p_file = "blast/phylips/Chang2015_Chang2015.nex"
 msa = PartitionedMultipleAlignment( a_file, p_file, taxa )
 
 D=clade_rects(msa)
@@ -177,11 +179,100 @@ XXX
 
 **Fig XXTaxon_composition.** Each of the primary matrices considered here, color coded by taxon sampling. Horizontal size is proportional to the number of genes (XXOr should it be sites?) sampled, vertical size to the number of taxa sampled.
 
-XXX
+### Matrix gene composition
 
-**Fig XXTaxon_composition.** Each of the primary matrices considered here, color coded by the types of genes sampled (XX Ribosomal proteins, etc). Horizontal size is proportional to the number of genes sampled, vertical size to the number of taxa sampled.
+```{r gene_composition}
 
-### Alignment overlap
+partition_clusters = 
+	read_tsv( "blast/graphs/diamond_partition_clusters.tsv" ) %>% 
+	dplyr::rename( partition=partition_name ) %>%
+	dplyr::rename( matrix=dataset ) %>%
+	dplyr::rename( cluster_id=cluster_number )
+
+busco_results = 
+	read_tsv("blast/graphs/busco_metazoa_results.tsv") %>% 
+	filter( Status != "Missing" ) 
+
+sequences_all_txt = 
+	read_tsv("blast/all_parts_list.txt")
+
+names(sequences_all_txt) = c("full_name")
+sequences_all = str_split_fixed( sequences_all_txt$full_name, ":", 5 ) %>% 
+	as_tibble()
+names( sequences_all ) = c( "manuscript", "matrix", "species", "ncbi_taxon_id", "partition" )
+
+partitions_all = 
+	sequences_all %>% 
+	group_by( manuscript, matrix, partition ) %>% 
+	summarise( n_sequences =n() )
+
+
+# Multiple fields are in one colon delimited string. Need to parse them out.
+# Busco result example
+# "Moroz2014:ED3a:Capitella:51293:0241"  
+# manuscript:matrix:species:NCBI_taxon_id:partition
+
+Bs = 
+	str_split_fixed( busco_results$Sequence, ":", 5 ) %>% 
+	as_tibble()
+
+names( Bs ) = c( "manuscript", "matrix", "species", "ncbi_taxon_id", "partition" )
+
+Bs %<>% mutate( ncbi_taxon_id = as.integer(ncbi_taxon_id) )
+
+busco_results %<>% bind_cols( Bs )
+
+# Find overrepresented partitions, ie partitions with genes that hit more than one Busco
+busco_distinct =  busco_results %>% select( manuscript, matrix, partition, Description ) %>% distinct(  )
+busco_overrepresented = busco_distinct %>% group_by( manuscript, matrix, partition ) %>% summarise( n = n() ) %>% filter( n > 1 )
+busco_overrepresented
+busco_overrepresented_full = left_join( busco_overrepresented, busco_results )
+
+# Combine and summarize results
+partition_to_busco_map = 
+	busco_distinct %>% 
+	group_by( manuscript, matrix, partition ) %>% 
+	summarise( BUSCO=names(which(table(Description) == max(table(Description)))[1]) )
+
+partition_clusters %<>% left_join( partition_to_busco_map, by=c("manuscript", "matrix", "partition") )
+
+
+busco_summary = 
+	partition_to_busco_map %>% 
+	group_by( manuscript, matrix ) %>%
+	summarise( n_busco_partitions = n() )
+
+matrix_summary =
+	partitions_all %>%
+	group_by( manuscript, matrix ) %>%
+	summarise( n_partitions = n() ) %>%
+	left_join(
+		busco_summary,
+		by=c("manuscript", "matrix")
+	)
+
+ggplot( matrix_summary ) +
+	geom_point( aes(x=n_partitions, y=n_busco_partitions, col=manuscript) ) + geom_abline(slope=1,intercept=0) + coord_fixed()
+
+cluster_summary =
+	partition_clusters %>% 
+	group_by( cluster_id ) %>% 
+	summarise( 
+		n_partitions = n(), 
+		n_matrices= length(unique(matrix)),
+		n_with_busco = sum(! is.na(BUSCO)),
+		n_unique_busco = length(unique(na.omit(BUSCO)))
+	)
+
+
+```
+
+**Fig XXBUSCO_annotations.** The number of partitions with BUSCO annotations in each matrix, relative to the number of partitions.
+
+
+**Fig XXGene_composition.** Each of the primary matrices considered here, color coded by the types of genes sampled (XX Ribosomal proteins, etc). Horizontal size is proportional to the number of genes sampled, vertical size to the number of taxa sampled.
+
+### Matrix overlap
 
 XXX
 
@@ -360,10 +451,6 @@ Dtaxa %>% filter(taxon1==taxon2) %>% arrange( count )
 
 
 taxonomy_reference = read_tsv("taxonomy_info/taxon_table.tsv")
-
-
-
-
 
 ```
 

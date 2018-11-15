@@ -13,8 +13,9 @@ setClass(
 	Class = "PartitionedMultipleAlignment",
 	representation = representation(
 		partitions = "data.frame",
-		taxon_map = "vector",
-		partition_map = "vector"
+		manuscript_name = "character",
+		matrix_name = "character",
+		taxon_map = "vector"
 	),
 	contains = "MultipleAlignment"
 )
@@ -23,15 +24,16 @@ setClass(
 #'
 #' @param alignment_file Path to the gene alignment
 #' @param partition_file Path to the partition file in nexus format
-#' @param taxon_map A dataframe where the first column corresponds to sequence names in the alignment and the second column to clade names for the sequences
-#' @param partition_map A dataframe where the first column corresponds to partition names and the second column to names for groups of partitions
+#' @param taxon_map_global A dataframe where the first column corresponds to sequence names in the alignment and the second column to clade names for the sequences
+#' @param partition_map_global A dataframe with columns manuscript, matrix, partition, global_partition_id that maps the locally defined partition to a global partition
 #' @return A PartitionedMultipleAlignment object
 #' @export
-PartitionedMultipleAlignment = function( alignment_file, partition_file=NULL, taxon_map=NULL, partition_map=NULL, alignment_format="phylip" ) {
+PartitionedMultipleAlignment = function( alignment_file, partition_file=NULL, taxon_map_global=NULL, partition_map_global=NULL, manuscript_name=NULL, matrix_name=NULL, alignment_format="phylip" ) {
 	object = readAAMultipleAlignment( filepath = alignment_file, format=alignment_format )
 	class(object) = "PartitionedMultipleAlignment"
 	
-	
+	object@manuscript_name = manuscript_name
+	object@matrix_name = matrix_name
 		
 	conn = file( partition_file, open="r")
 	lines = readLines( conn )
@@ -54,11 +56,20 @@ PartitionedMultipleAlignment = function( alignment_file, partition_file=NULL, ta
 		) %>%
 		bind_rows()
 	
+	if( ! is.null(partition_map_global) ){
+		partition_map_global %<>%
+			filter( manuscript == manuscript_name ) %>%
+			filter( matrix == matrix_name )
+		
+		
+			
+	}
+	
 	object@partitions = partitions
 	
-	if( ! is.null(taxon_map) ){
+	if( ! is.null(taxon_map_global) ){
 		sequence_name = rownames( object )
-		object@taxon_map = taxon_map[ match( sequence_name, taxon_map[[1]] ), 2 ][[1]]
+		object@taxon_map = taxon_map_global[ match( sequence_name, taxon_map_global[[1]] ), 2 ][[1]]
 	}
 	
 	object
