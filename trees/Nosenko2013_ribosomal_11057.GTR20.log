@@ -1,0 +1,185 @@
+IQ-TREE multicore version 1.6.7 for Linux 64-bit built Aug 23 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    c26n01.farnam.hpc.yale.internal (AVX2, FMA3, 251 GB RAM)
+Command: iqtree -s Nosenko2013_ribosomal_11057_smatrix.phy -nt 20 -bb 1000 -m GTR20+F+G -pre Nosenko2013_ribosomal_11057.GTR20
+Seed:    130717 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Nov  7 13:23:14 2018
+Kernel:  AVX+FMA - 20 threads (28 CPU cores detected)
+
+Reading alignment file Nosenko2013_ribosomal_11057_smatrix.phy ... Phylip format detected
+Alignment most likely contains protein sequences
+WARNING: 2 sites contain only gaps or ambiguous characters.
+Alignment has 50 sequences with 11057 columns, 9701 distinct patterns
+6292 parsimony-informative, 1397 singleton sites, 3368 constant sites
+                            Gap/Ambiguity  Composition  p-value
+   1  Amphimedon_queenslandica      0.45%    passed     97.33%
+   2  Astrosclera_willeyana        66.24%    passed     62.77%
+   3  Asbestopluma_sp               8.64%    passed     99.33%
+   4  Carteriospongia_foliascens   49.62%    passed     56.49%
+   5  Ephydatia_muelleri           15.98%    passed     20.10%
+   6  Lubomirskia_baicalensis      21.76%    passed     91.67%
+   7  Pachydictyum_globosum        44.00%    passed     44.33%
+   8  Suberites_domuncula           2.17%    passed     99.98%
+   9  Tethya_wilhelma               5.89%    passed     78.07%
+  10  Crateromorpha_meyeri         76.11%    passed     14.98%
+  11  Heterochone_calyx            82.27%    passed     44.79%
+  12  Oopsacas_minuta              84.26%    failed      0.04%
+  13  Oscarella_sp                 38.99%    passed     24.26%
+  14  Leucetta_chagosensis          7.81%    passed     24.70%
+  15  Sycon_ciliatum               13.29%    passed     16.22%
+  16  Sycon_raphanus                3.86%    passed     37.84%
+  17  Clytia_hemisphaerica         39.03%    passed     40.31%
+  18  Hydra_magnipapillata          0.51%    passed     54.02%
+  19  Hydra_vulgaris               10.08%    passed     81.49%
+  20  Hydractinia_echinata          8.09%    passed     99.35%
+  21  Podocoryne_carnea             6.12%    passed     99.61%
+  22  Acropora_hyacinthus          15.94%    passed     73.06%
+  23  Acropora_millepora            4.07%    passed     95.69%
+  24  Acropora_palmate             79.90%    failed      0.62%
+  25  Metridium_senile              5.10%    passed     75.52%
+  26  Nematostella_vectensis        0.02%    passed     98.53%
+  27  Porites                      11.11%    passed     65.58%
+  28  Pleurobrachia_pileus         17.06%    passed     13.51%
+  29  Beroe_sp                      8.20%    passed     88.83%
+  30  Mnemiopsis_leidyi             3.69%    passed     82.18%
+  31  Mertensiid_sp                 6.76%    passed     84.87%
+  32  Branchiostoma_floridae        0.02%    passed     97.94%
+  33  Capitella_sp                  4.18%    passed     97.42%
+  34  Ciona_intestinalis            4.41%    passed     83.83%
+  35  Danio_rerio                   1.49%    passed     99.99%
+  36  Molgula_tectiformis           2.89%    passed     69.30%
+  37  Petromyzon_marinus            4.99%    passed     90.77%
+  38  Saccoglossus_kowalevskii      0.08%    passed     98.74%
+  39  Aplysia_californica           1.60%    passed     99.96%
+  40  Crassostrea_gigas             1.94%    passed     84.23%
+  41  Daphnia_pulex                 0.26%    passed     87.27%
+  42  Helobdella_robusta            4.96%    passed     87.65%
+  43  Ixodes_scapularis             0.42%    passed     39.62%
+  44  Nasonia_vitripennis           0.76%    passed     95.96%
+  45  Tubifex_tubifex               5.97%    passed     92.58%
+  46  Trichoplax_H4                14.29%    passed     56.73%
+  47  Trichoplax_adhaerens          0.44%    passed     73.75%
+  48  Monosiga_ovata                2.35%    failed      0.00%
+  49  Monosiga_brevicollis          7.30%    failed      2.11%
+  50  Proterospongia_sp.           32.41%    failed      0.48%
+WARNING: 5 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                        16.56%  5 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.230 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 130717)...
+WARNING: GTR20 model will estimate 189 substitution rates that might be overfitting!
+WARNING: Please only use GTR20 with very large data and always test for model fit!
+
+NOTE: 337 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -296386.268
+2. Current log-likelihood: -290143.780
+3. Current log-likelihood: -288687.503
+4. Current log-likelihood: -288572.254
+5. Current log-likelihood: -288462.143
+6. Current log-likelihood: -288411.753
+7. Current log-likelihood: -288399.334
+8. Current log-likelihood: -288397.349
+9. Current log-likelihood: -288396.971
+10. Current log-likelihood: -288396.698
+Optimal log-likelihood: -288396.679
+Gamma shape alpha: 0.542
+Parameters optimization took 10 rounds (324.320 sec)
+Computing ML distances based on estimated model parameters... 0.884 sec
+WARNING: Some pairwise ML distances are too long (saturated)
+Computing BIONJ tree...
+0.003 seconds
+Log-likelihood of BIONJ tree: -288609.292
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 18.167 second
+Computing log-likelihood of 98 initial trees ... 11.142 seconds
+Current best score: -288324.939
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -288284.984
+Iteration 10 / LogL: -288297.009 / Time: 0h:6m:43s
+Iteration 20 / LogL: -288304.821 / Time: 0h:6m:52s
+Finish initializing candidate tree set (6)
+Current best tree score: -288284.984 / CPU time: 86.737
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -288305.997 / Time: 0h:7m:2s (0h:17m:14s left)
+Iteration 40 / LogL: -288297.448 / Time: 0h:7m:13s (0h:11m:16s left)
+Iteration 50 / LogL: -288317.762 / Time: 0h:7m:24s (0h:7m:42s left)
+Log-likelihood cutoff on original alignment: -288397.571
+Iteration 60 / LogL: -288285.267 / Time: 0h:7m:34s (0h:5m:15s left)
+Iteration 70 / LogL: -288302.989 / Time: 0h:7m:45s (0h:3m:29s left)
+Iteration 80 / LogL: -288305.357 / Time: 0h:7m:56s (0h:2m:6s left)
+Iteration 90 / LogL: -288296.318 / Time: 0h:8m:7s (0h:1m:0s left)
+Iteration 100 / LogL: -288285.171 / Time: 0h:8m:17s (0h:0m:5s left)
+Log-likelihood cutoff on original alignment: -288397.571
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.998
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:8m:20s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -288284.984
+2. Current log-likelihood: -288284.886
+3. Current log-likelihood: -288284.820
+4. Current log-likelihood: -288284.784
+5. Current log-likelihood: -288284.733
+6. Current log-likelihood: -288284.707
+7. Current log-likelihood: -288284.552
+8. Current log-likelihood: -288284.462
+9. Current log-likelihood: -288284.398
+10. Current log-likelihood: -288284.375
+11. Current log-likelihood: -288284.323
+12. Current log-likelihood: -288284.270
+13. Current log-likelihood: -288284.193
+14. Current log-likelihood: -288284.181
+15. Current log-likelihood: -288284.166
+16. Current log-likelihood: -288284.134
+17. Current log-likelihood: -288284.093
+18. Current log-likelihood: -288283.995
+19. Current log-likelihood: -288283.896
+20. Current log-likelihood: -288283.554
+21. Current log-likelihood: -288283.527
+22. Current log-likelihood: -288283.492
+23. Current log-likelihood: -288283.400
+Optimal log-likelihood: -288283.395
+Gamma shape alpha: 0.543
+Parameters optimization took 23 rounds (218.230 sec)
+BEST SCORE FOUND : -288283.395
+Creating bootstrap support values...
+Split supports printed to NEXUS file Nosenko2013_ribosomal_11057.GTR20.splits.nex
+Total tree length: 8.096
+
+Total number of iterations: 102
+CPU time used for tree search: 3133.770 sec (0h:52m:13s)
+Wall-clock time used for tree search: 174.775 sec (0h:2m:54s)
+Total CPU time used: 13953.552 sec (3h:52m:33s)
+Total wall-clock time used: 718.443 sec (0h:11m:58s)
+
+Computing bootstrap consensus tree...
+Reading input file Nosenko2013_ribosomal_11057.GTR20.splits.nex...
+50 taxa and 158 splits.
+Consensus tree written to Nosenko2013_ribosomal_11057.GTR20.contree
+Reading input trees file Nosenko2013_ribosomal_11057.GTR20.contree
+Log-likelihood of consensus tree: -288283.395
+
+Analysis results written to: 
+  IQ-TREE report:                Nosenko2013_ribosomal_11057.GTR20.iqtree
+  Maximum-likelihood tree:       Nosenko2013_ribosomal_11057.GTR20.treefile
+  Likelihood distances:          Nosenko2013_ribosomal_11057.GTR20.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          Nosenko2013_ribosomal_11057.GTR20.splits.nex
+  Consensus tree:                Nosenko2013_ribosomal_11057.GTR20.contree
+  Screen log file:               Nosenko2013_ribosomal_11057.GTR20.log
+
+Date and Time: Wed Nov  7 13:35:13 2018

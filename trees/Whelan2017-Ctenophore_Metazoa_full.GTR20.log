@@ -1,0 +1,264 @@
+IQ-TREE multicore version 1.6.7 for Linux 64-bit built Aug 23 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    c28n08.farnam.hpc.yale.internal (AVX2, FMA3, 251 GB RAM)
+Command: iqtree -s Whelan2017_Metazoa_full.phy -nt 20 -bb 1000 -m GTR20+F+G -pre Whelan2017-Ctenophore_Metazoa_full.GTR20
+Seed:    197474 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Oct 31 08:05:39 2018
+Kernel:  AVX+FMA - 20 threads (28 CPU cores detected)
+
+Reading alignment file Whelan2017_Metazoa_full.phy ... Phylip format detected
+Alignment most likely contains protein sequences
+Alignment has 80 sequences with 68062 columns, 66017 distinct patterns
+51252 parsimony-informative, 8710 singleton sites, 8100 constant sites
+                                     Gap/Ambiguity  Composition  p-value
+   1  Beroe_sp._Antarctica                  83.72%    failed      0.00%
+   2  Mertensiidae_sp_Washington_USA        75.64%    failed      0.97%
+   3  Ctenophora_sp_Florida_USA             87.42%    failed      0.03%
+   4  Sphaeroforma_arctica                  37.01%    failed      0.00%
+   5  Bolocera_tuediae                      78.00%    failed      0.02%
+   6  Vallicula                             64.57%    failed      2.04%
+   7  Drosophila_melanogaster                1.44%    failed      0.00%
+   8  Ocyropsis_sp_Florida_USA              79.76%    failed      0.00%
+   9  Rossella_fibulata                     25.22%    failed      0.00%
+  10  Amoebidium_parasiticum                 7.53%    failed      0.00%
+  11  Abylopsis_tetragona                   24.21%    failed      0.00%
+  12  Pleurobrachia_pileus                  53.87%    failed      0.00%
+  13  Ocyropsis_crystallina                 52.11%    failed      0.00%
+  14  Eunicella_verrucosa                   16.14%    failed      0.00%
+  15  Dryodora_glandiformis                 61.05%    failed      0.01%
+  16  Euplokamis_dunlapae                   73.09%    failed      0.00%
+  17  Daphnia_pulex                          5.27%    failed      1.40%
+  18  Eurhamphaea_vexilligera               75.03%    failed      0.03%
+  19  Exaiptasia_pallida                     8.79%    failed      0.00%
+  20  Homo_sapiens                           0.53%    failed      0.00%
+  21  Amphimedon_queenslandica              17.66%    failed      0.00%
+  22  Petrosia_ficiformis                   47.86%    failed      0.00%
+  23  Strongylocentrotus_purpatus           19.68%    failed      0.15%
+  24  Physalia_physalia                     37.62%    failed      0.00%
+  25  Hydra_vulgaris                        14.38%    failed      0.00%
+  26  Beroe_sp_Queensland_Australia         67.23%    failed      0.01%
+  27  Corticium_candelabrum                 59.33%    failed      0.02%
+  28  Beroe_forskalii                       68.71%    failed      0.00%
+  29  Nanomia_bijuga                        33.57%    failed      0.00%
+  30  Lobata_sp_Punta_Arenas_Argentina      80.44%    failed      0.00%
+  31  Acanthoeca                            14.90%    failed      0.00%
+  32  Sycon_ciliatum                         7.08%    failed      0.00%
+  33  Sympagella_nux                        14.49%    failed      0.00%
+  34  Spongilla_lacustris                   41.37%    failed      0.00%
+  35  Monosiga_ovata                        64.20%    failed      0.00%
+  36  Crella_elegans                        62.80%    failed      0.06%
+  37  Cydippida_sp_Maryland_USA             48.93%    failed      0.00%
+  38  Ocyropsis_sp_Bimini_Bahamas           67.06%    failed      0.02%
+  39  Ministeria_vibrans                    30.47%    failed      0.00%
+  40  Mnemiopsis_leidyi                     68.91%    failed      0.00%
+  41  Mycale_phylophylla                    28.31%    failed      0.00%
+  42  Hemithris_psittacea                   20.37%    failed      0.01%
+  43  Callianira_antarctica                 77.61%    failed      0.00%
+  44  Agalma_elegans                        24.92%    failed      0.00%
+  45  Cestum_veneris                        78.43%    failed      0.00%
+  46  Cydippida                             77.02%    failed      2.36%
+  47  Capitella_teleta                       4.86%    failed      0.17%
+  48  Salpingoeca_pyxidium                  67.79%    failed      0.00%
+  49  Salpingoeca_rosetta                   10.67%    failed      0.00%
+  50  Chondrilla_nucula                     52.08%    failed      0.00%
+  51  Trichoplax_adhaerens                   9.67%    failed      0.00%
+  52  Pleurobrachia_bachei                  71.27%    failed      0.00%
+  53  Monosiga_brevicolis                   15.70%    failed      0.00%
+  54  Lobatolampea_tetragona                87.41%    failed      0.00%
+  55  Beroe_abyssicola                      60.39%    failed      0.00%
+  56  Capsaspora_owczarzaki                  7.69%    failed      0.00%
+  57  Hydra_viridissima                     53.23%    failed      0.00%
+  58  Acropora_digitifera                   50.27%    failed      0.07%
+  59  Bolinopsis_infundibulum               86.83%    failed      0.41%
+  60  Cliona_varians                        33.05%    failed      0.82%
+  61  Kirkpatrickia_variolosa               25.58%    failed      0.28%
+  62  Latrunculia_apicalis                  19.70%    failed      0.00%
+  63  Hormiphora_palmata                    73.09%    passed     34.79%
+  64  Hyalonema_populiferum                 54.20%    failed      0.00%
+  65  Coeloplana_astericola                 65.97%    failed      0.00%
+  66  Periphyla_periphyla                   58.96%    failed      0.00%
+  67  Mertensiidae_sp._Antarctica           75.51%    failed      0.00%
+  68  Hormathia_digitata                    62.44%    failed      0.00%
+  69  Hydra_oligactis                       57.96%    failed      0.00%
+  70  Pseudospongosorites_suberitoides      72.35%    failed      0.00%
+  71  Sycon_coactum                         30.62%    failed      0.00%
+  72  Sarcotragus_fasciculatus              63.86%    failed      0.00%
+  73  Bolinopsis_ashleyi                    78.47%    failed      0.00%
+  74  Pleurobrachia_sp_South_Carolina_USA   77.18%    passed     24.03%
+  75  Aphrocallistes_vastus                  9.70%    failed      0.00%
+  76  Oscarella_carmela                      4.87%    failed      0.00%
+  77  Beroe_ovata                           82.02%    failed      0.09%
+  78  Craseo_lathetica                      39.26%    failed      0.00%
+  79  Nematostella_vectensis                10.74%    failed      0.79%
+  80  Hormiphora_californica                43.09%    failed      0.00%
+WARNING: 42 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                 46.25%  78 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 4.627 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 197474)...
+WARNING: GTR20 model will estimate 189 substitution rates that might be overfitting!
+WARNING: Please only use GTR20 with very large data and always test for model fit!
+
+NOTE: 3516 MB RAM (3 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -3028743.767
+2. Current log-likelihood: -2942715.537
+3. Current log-likelihood: -2942146.288
+4. Current log-likelihood: -2942101.346
+5. Current log-likelihood: -2942097.690
+6. Current log-likelihood: -2942097.126
+7. Current log-likelihood: -2942096.084
+8. Current log-likelihood: -2942095.824
+9. Current log-likelihood: -2942095.662
+10. Current log-likelihood: -2942095.533
+11. Current log-likelihood: -2942095.402
+12. Current log-likelihood: -2942095.281
+13. Current log-likelihood: -2942094.830
+14. Current log-likelihood: -2942094.486
+15. Current log-likelihood: -2942094.364
+Optimal log-likelihood: -2942094.290
+Gamma shape alpha: 0.720
+Parameters optimization took 15 rounds (6117.112 sec)
+Computing ML distances based on estimated model parameters... 6.260 sec
+Computing BIONJ tree...
+0.005 seconds
+Log-likelihood of BIONJ tree: -2947970.134
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 487.452 second
+Computing log-likelihood of 98 initial trees ... 158.035 seconds
+Current best score: -2941750.234
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -2941266.641
+Iteration 10 / LogL: -2941267.495 / Time: 2h:1m:1s
+Iteration 20 / LogL: -2941273.183 / Time: 2h:3m:50s
+Finish initializing candidate tree set (9)
+Current best tree score: -2941266.641 / CPU time: 1296.829
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -2941324.831 / Time: 2h:6m:39s (5h:9m:55s left)
+Iteration 40 / LogL: -2941504.316 / Time: 2h:9m:11s (3h:21m:56s left)
+Iteration 50 / LogL: -2941524.577 / Time: 2h:11m:47s (2h:17m:5s left)
+Log-likelihood cutoff on original alignment: -2941509.898
+Iteration 60 / LogL: -2941281.020 / Time: 2h:14m:18s (1h:33m:16s left)
+Iteration 70 / LogL: -2941751.756 / Time: 2h:16m:52s (1h:1m:27s left)
+Iteration 80 / LogL: -2941496.950 / Time: 2h:19m:22s (0h:37m:1s left)
+Iteration 90 / LogL: -2941286.959 / Time: 2h:21m:48s (0h:17m:30s left)
+Iteration 100 / LogL: -2941268.606 / Time: 2h:24m:27s (0h:1m:27s left)
+Log-likelihood cutoff on original alignment: -2941509.898
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 2h:25m:1s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -2941266.641
+2. Current log-likelihood: -2941266.566
+3. Current log-likelihood: -2941266.497
+4. Current log-likelihood: -2941266.324
+5. Current log-likelihood: -2941266.132
+6. Current log-likelihood: -2941266.085
+7. Current log-likelihood: -2941265.902
+8. Current log-likelihood: -2941265.857
+9. Current log-likelihood: -2941265.814
+10. Current log-likelihood: -2941265.771
+11. Current log-likelihood: -2941265.729
+12. Current log-likelihood: -2941265.686
+13. Current log-likelihood: -2941265.638
+14. Current log-likelihood: -2941265.590
+15. Current log-likelihood: -2941265.490
+16. Current log-likelihood: -2941265.369
+17. Current log-likelihood: -2941264.274
+18. Current log-likelihood: -2941263.444
+19. Current log-likelihood: -2941263.194
+20. Current log-likelihood: -2941263.098
+21. Current log-likelihood: -2941263.014
+22. Current log-likelihood: -2941262.933
+23. Current log-likelihood: -2941262.841
+24. Current log-likelihood: -2941262.754
+25. Current log-likelihood: -2941262.444
+26. Current log-likelihood: -2941262.310
+27. Current log-likelihood: -2941262.127
+28. Current log-likelihood: -2941262.085
+29. Current log-likelihood: -2941262.046
+30. Current log-likelihood: -2941262.008
+31. Current log-likelihood: -2941261.970
+32. Current log-likelihood: -2941261.934
+33. Current log-likelihood: -2941261.893
+34. Current log-likelihood: -2941261.854
+35. Current log-likelihood: -2941261.784
+36. Current log-likelihood: -2941261.707
+37. Current log-likelihood: -2941261.664
+38. Current log-likelihood: -2941261.581
+39. Current log-likelihood: -2941261.554
+40. Current log-likelihood: -2941261.528
+41. Current log-likelihood: -2941261.504
+42. Current log-likelihood: -2941261.481
+43. Current log-likelihood: -2941261.460
+44. Current log-likelihood: -2941261.439
+45. Current log-likelihood: -2941261.419
+46. Current log-likelihood: -2941261.399
+47. Current log-likelihood: -2941261.381
+48. Current log-likelihood: -2941261.363
+49. Current log-likelihood: -2941261.346
+50. Current log-likelihood: -2941261.329
+51. Current log-likelihood: -2941261.313
+52. Current log-likelihood: -2941261.297
+53. Current log-likelihood: -2941261.282
+54. Current log-likelihood: -2941261.267
+55. Current log-likelihood: -2941261.252
+56. Current log-likelihood: -2941261.238
+57. Current log-likelihood: -2941261.225
+58. Current log-likelihood: -2941261.211
+59. Current log-likelihood: -2941261.198
+60. Current log-likelihood: -2941261.186
+61. Current log-likelihood: -2941261.173
+62. Current log-likelihood: -2941261.161
+63. Current log-likelihood: -2941261.150
+64. Current log-likelihood: -2941261.138
+65. Current log-likelihood: -2941261.127
+66. Current log-likelihood: -2941261.116
+67. Current log-likelihood: -2941261.106
+68. Current log-likelihood: -2941261.095
+69. Current log-likelihood: -2941261.085
+Optimal log-likelihood: -2941261.075
+Gamma shape alpha: 0.719
+Parameters optimization took 69 rounds (3632.898 sec)
+BEST SCORE FOUND : -2941261.075
+Creating bootstrap support values...
+Split supports printed to NEXUS file Whelan2017-Ctenophore_Metazoa_full.GTR20.splits.nex
+Total tree length: 23.010
+
+Total number of iterations: 102
+CPU time used for tree search: 42420.782 sec (11h:47m:0s)
+Wall-clock time used for tree search: 2567.477 sec (0h:42m:47s)
+Total CPU time used: 237023.762 sec (65h:50m:23s)
+Total wall-clock time used: 12334.732 sec (3h:25m:34s)
+
+Computing bootstrap consensus tree...
+Reading input file Whelan2017-Ctenophore_Metazoa_full.GTR20.splits.nex...
+80 taxa and 175 splits.
+Consensus tree written to Whelan2017-Ctenophore_Metazoa_full.GTR20.contree
+Reading input trees file Whelan2017-Ctenophore_Metazoa_full.GTR20.contree
+Log-likelihood of consensus tree: -2941261.075
+
+Analysis results written to: 
+  IQ-TREE report:                Whelan2017-Ctenophore_Metazoa_full.GTR20.iqtree
+  Maximum-likelihood tree:       Whelan2017-Ctenophore_Metazoa_full.GTR20.treefile
+  Likelihood distances:          Whelan2017-Ctenophore_Metazoa_full.GTR20.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          Whelan2017-Ctenophore_Metazoa_full.GTR20.splits.nex
+  Consensus tree:                Whelan2017-Ctenophore_Metazoa_full.GTR20.contree
+  Screen log file:               Whelan2017-Ctenophore_Metazoa_full.GTR20.log
+
+Date and Time: Wed Oct 31 11:31:25 2018

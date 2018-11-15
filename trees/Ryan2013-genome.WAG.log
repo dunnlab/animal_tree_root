@@ -1,0 +1,123 @@
+IQ-TREE multicore version 1.6.7 for Linux 64-bit built Aug 23 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    c28n02.farnam.hpc.yale.internal (AVX2, FMA3, 251 GB RAM)
+Command: iqtree -s Ryan2013_genome.opisthokonta.phy -nt 20 -bb 1000 -m WAG+F+G -pre Ryan2013-genome.WAG
+Seed:    980779 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Nov  7 13:23:15 2018
+Kernel:  AVX+FMA - 20 threads (28 CPU cores detected)
+
+Reading alignment file Ryan2013_genome.opisthokonta.phy ... Phylip format detected
+Alignment most likely contains protein sequences
+Alignment has 19 sequences with 104840 columns, 89623 distinct patterns
+65629 parsimony-informative, 20225 singleton sites, 18986 constant sites
+                               Gap/Ambiguity  Composition  p-value
+   1  Homo_sapiens                    12.76%    failed      0.00%
+   2  Branchiostoma_floridae          68.00%    failed      0.00%
+   3  Strongylocentrotus_purpuratus   33.14%    failed      0.00%
+   4  Drosophila_melanogaster          6.68%    failed      0.00%
+   5  Caenorhabditis_elegans           7.79%    failed      0.00%
+   6  Pristionchus_pacificus          32.52%    failed      0.00%
+   7  Lottia_gigantea                 11.03%    failed      0.00%
+   8  Capitella_teleta                11.94%    failed      0.00%
+   9  Helobdella_robusta              11.89%    failed      0.00%
+  10  Nematostella_vectensis          11.98%    failed      0.00%
+  11  Trichoplax_adhaerens             8.52%    failed      0.00%
+  12  Amphimedon_queenslandica        17.83%    failed      0.00%
+  13  Monosiga_brevicollis             8.88%    failed      0.00%
+  14  Capsaspora_owczarzaki           12.66%    failed      0.00%
+  15  Mnemiopsis_leidyi               21.37%    failed      0.00%
+  16  Sphaeroforma_arctica            39.35%    failed      0.00%
+  17  Saccharomyces_cerevisiae        29.91%    failed      0.00%
+  18  Spizellomyces_punctatus         12.16%    failed      0.00%
+  19  Salpingoeca_rosetta             15.09%    failed      0.00%
+WARNING: 1 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                           19.66%  19 sequences failed composition chi2 test (p-value<5%; df=19)
+NOTE: minimal branch length is reduced to 0.000000953834 for long alignment
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.951 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 980779)...
+
+NOTE: 1394 MB RAM (1 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -2426040.470
+2. Current log-likelihood: -2381807.133
+3. Current log-likelihood: -2381750.370
+4. Current log-likelihood: -2381750.168
+Optimal log-likelihood: -2381750.158
+Gamma shape alpha: 0.952
+Parameters optimization took 4 rounds (3.714 sec)
+Computing ML distances based on estimated model parameters... 0.439 sec
+Computing BIONJ tree...
+0.001 seconds
+Log-likelihood of BIONJ tree: -2383512.562
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 73.096 second
+Computing log-likelihood of 98 initial trees ... 47.852 seconds
+Current best score: -2381750.158
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -2381643.216
+Iteration 10 / LogL: -2381742.498 / Time: 0h:2m:44s
+Iteration 20 / LogL: -2381645.978 / Time: 0h:3m:25s
+Finish initializing candidate tree set (5)
+Current best tree score: -2381643.216 / CPU time: 197.151
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -2382491.354 / Time: 0h:4m:5s (0h:9m:58s left)
+Iteration 40 / LogL: -2382040.046 / Time: 0h:4m:48s (0h:7m:30s left)
+Iteration 50 / LogL: -2381742.691 / Time: 0h:5m:30s (0h:5m:43s left)
+Log-likelihood cutoff on original alignment: -2381793.425
+Iteration 60 / LogL: -2381644.313 / Time: 0h:6m:9s (0h:4m:16s left)
+Iteration 70 / LogL: -2382620.410 / Time: 0h:6m:51s (0h:3m:4s left)
+Iteration 80 / LogL: -2382487.070 / Time: 0h:7m:31s (0h:1m:59s left)
+Iteration 90 / LogL: -2382486.712 / Time: 0h:8m:16s (0h:1m:1s left)
+Iteration 100 / LogL: -2382607.701 / Time: 0h:8m:56s (0h:0m:5s left)
+Log-likelihood cutoff on original alignment: -2381793.425
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:9m:6s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -2381643.216
+Optimal log-likelihood: -2381643.216
+Gamma shape alpha: 0.952
+Parameters optimization took 1 rounds (0.676 sec)
+BEST SCORE FOUND : -2381643.216
+Creating bootstrap support values...
+Split supports printed to NEXUS file Ryan2013-genome.WAG.splits.nex
+Total tree length: 8.450
+
+Total number of iterations: 102
+CPU time used for tree search: 9612.148 sec (2h:40m:12s)
+Wall-clock time used for tree search: 537.437 sec (0h:8m:57s)
+Total CPU time used: 9749.792 sec (2h:42m:29s)
+Total wall-clock time used: 546.742 sec (0h:9m:6s)
+
+Computing bootstrap consensus tree...
+Reading input file Ryan2013-genome.WAG.splits.nex...
+19 taxa and 41 splits.
+Consensus tree written to Ryan2013-genome.WAG.contree
+Reading input trees file Ryan2013-genome.WAG.contree
+Log-likelihood of consensus tree: -2381645.614
+
+Analysis results written to: 
+  IQ-TREE report:                Ryan2013-genome.WAG.iqtree
+  Maximum-likelihood tree:       Ryan2013-genome.WAG.treefile
+  Likelihood distances:          Ryan2013-genome.WAG.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          Ryan2013-genome.WAG.splits.nex
+  Consensus tree:                Ryan2013-genome.WAG.contree
+  Screen log file:               Ryan2013-genome.WAG.log
+
+Date and Time: Wed Nov  7 13:32:25 2018
