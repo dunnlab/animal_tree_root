@@ -44,7 +44,8 @@ taxonomy_reference = read_tsv("../reconciliation/taxonomy_info/taxon_table.tsv")
 partition_map_global = 
 	read_tsv("../reconciliation/blast/graphs/diamond_partition_clusters.tsv") %>%
 	dplyr::rename(partition=partition_name) %>%
-	dplyr::rename(matrix=dataset)
+	dplyr::rename(matrix=dataset) %>% 
+	dplyr::rename(gene=cluster_number)
 
 bootstrap_threshold = 90
 posterior_prob_threshold = 95
@@ -163,13 +164,50 @@ taxa =
 
 ```{r}
 
-phylip_file_names = list.files(pattern = "blast/phylips/.+\\.phy$")
+matrix_path = "../data_processed/matrices/"
+phylip_file_names = list.files(path = matrix_path, pattern = ".+\\.phy$")
+
+msas = lapply(
+	phylip_file_names,
+	function( phylip_file ){
+		print(phylip_file)
+		partition_file = sub( "phy$", "nex", phylip_file )
+		
+		phylip_path = paste(c(matrix_path, phylip_file), collapse="")
+		partition_path = paste(c(matrix_path, partition_file), collapse="")
+		
+		base_name = sub( "\\.phy$", "", phylip_file )
+		elements = strsplit(base_name, "_") %>% unlist()
+		manuscript_name = elements[1]
+		matrix_name = paste(elements[2:length(elements)], collapse="_")
+		
+		msa = 
+			PartitionedMultipleAlignment( 
+				phylip_path, 
+				partition_path, 
+				taxa, 
+				partition_map_global=partition_map_global, 
+				manuscript_name=manuscript_name, 
+				matrix_name=matrix_name
+			)
+		
+		return( msa )
+	}
+)
 
 a_file = "../data_processed/matrices/Chang2015_Chang2015.phy"
 p_file = "../data_processed/matrices/Chang2015_Chang2015.nex"
-msa = PartitionedMultipleAlignment( a_file, p_file, taxa, partition_map_global=partition_map_global, manuscript_name="Chang2015", matrix_name="Chang2015")
+msa = 
+	PartitionedMultipleAlignment( 
+		a_file, 
+		p_file, 
+		taxa, 
+		partition_map_global=partition_map_global, 
+		manuscript_name="Chang2015", 
+		matrix_name="Chang2015"
+	)
 
-D=clade_rects(msa)
+D=clade_rects(msas[[1]])
 
 ggplot() + 
 	scale_x_continuous(name="x") + 
