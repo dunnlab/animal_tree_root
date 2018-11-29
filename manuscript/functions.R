@@ -28,7 +28,7 @@ setClass(
 #' @param partition_map_global A dataframe with columns manuscript, matrix, partition, global_partition_id that maps the locally defined partition to a global partition
 #' @return A PartitionedMultipleAlignment object
 #' @export
-PartitionedMultipleAlignment = function( alignment_file, partition_file=NULL, taxon_map_global=NULL, partition_map_global=NULL, manuscript_name=NULL, matrix_name=NULL, alignment_format="phylip" ) {
+PartitionedMultipleAlignment = function( alignment_file, partition_file=NULL, taxon_map_global=NULL, partition_map_global=NULL, manuscript_name="", matrix_name="", alignment_format="phylip" ) {
 	object = readAAMultipleAlignment( filepath = alignment_file, format=alignment_format )
 	class(object) = "PartitionedMultipleAlignment"
 	
@@ -61,8 +61,11 @@ PartitionedMultipleAlignment = function( alignment_file, partition_file=NULL, ta
 			filter( manuscript == manuscript_name ) %>%
 			filter( matrix == matrix_name )
 		
+		partitions %<>% 
+			left_join( partition_map_global ) %>%
+			select( -manuscript ) %>% 
+			select( -matrix )
 		
-			
 	}
 	
 	object@partitions = partitions

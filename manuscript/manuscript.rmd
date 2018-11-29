@@ -33,11 +33,19 @@ cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2",
 result_colors = c( cbPalette[2], cbPalette[4], cbPalette[1] )
 names( result_colors ) = c( "Ctenophora-sister", "Porifera-sister", "Unresolved" )
 
-papers = read_tsv( "tables/papers.tsv" )
-datasets = read_tsv( "tables/datasets.tsv" )
+papers = read_tsv( "../data_processed/tables/previously_published_manuscripts.tsv" )
+datasets = read_tsv( "../data_processed/tables/previously_published_datasets.tsv" )
 analyses = 
-	read_tsv( "tables/analyses.tsv", col_types = 'iccccccccccclnnnncc' ) %>%
-	mutate( taxon_sampling = factor( taxon_sampling, levels= c( 'Choanimalia', 'Holozoa', 'Opisthokonta' ) ) )
+	read_tsv( "../data_processed/tables/previously_published_analyses.tsv", col_types = 'iccccccccccclnnnncc' ) %>%
+	mutate( clade = factor( clade, levels= c( 'Choanimalia', 'Holozoa', 'Opisthokonta' ) ) )
+
+taxonomy_reference = read_tsv("../reconciliation/taxonomy_info/taxon_table.tsv")
+
+partition_map_global = 
+	read_tsv("../reconciliation/blast/graphs/diamond_partition_clusters.tsv") %>%
+	dplyr::rename(partition=partition_name) %>%
+	dplyr::rename(matrix=dataset) %>% 
+	dplyr::rename(gene=cluster_number)
 
 bootstrap_threshold = 90
 posterior_prob_threshold = 95
@@ -146,7 +154,7 @@ names( clade_colors ) = clades
 
 
 taxa = 
-	read_tsv("taxonomy_info/taxon_table.tsv") %>% 
+	taxonomy_reference %>% 
 	distinct( relabelled_name, clade_assignment, ncbi_tax_id ) %>%
 	dplyr::rename( taxon=relabelled_name, clade=clade_assignment ) %>%
 	mutate( clade = factor( clade, levels=clades )  )
@@ -156,13 +164,50 @@ taxa =
 
 ```{r}
 
-phylip_file_names = list.files(pattern = "blast/phylips/.+\\.phy$")
+matrix_path = "../data_processed/matrices/"
+phylip_file_names = list.files(path = matrix_path, pattern = ".+\\.phy$")
 
-a_file = "blast/phylips/Chang2015_Chang2015.phy"
-p_file = "blast/phylips/Chang2015_Chang2015.nex"
-msa = PartitionedMultipleAlignment( a_file, p_file, taxa )
+msas = lapply(
+	phylip_file_names,
+	function( phylip_file ){
+		print(phylip_file)
+		partition_file = sub( "phy$", "nex", phylip_file )
+		
+		phylip_path = paste(c(matrix_path, phylip_file), collapse="")
+		partition_path = paste(c(matrix_path, partition_file), collapse="")
+		
+		base_name = sub( "\\.phy$", "", phylip_file )
+		elements = strsplit(base_name, "_") %>% unlist()
+		manuscript_name = elements[1]
+		matrix_name = paste(elements[2:length(elements)], collapse="_")
+		
+		msa = 
+			PartitionedMultipleAlignment( 
+				phylip_path, 
+				partition_path, 
+				taxa, 
+				partition_map_global=partition_map_global, 
+				manuscript_name=manuscript_name, 
+				matrix_name=matrix_name
+			)
+		
+		return( msa )
+	}
+)
 
-D=clade_rects(msa)
+a_file = "../data_processed/matrices/Chang2015_Chang2015.phy"
+p_file = "../data_processed/matrices/Chang2015_Chang2015.nex"
+msa = 
+	PartitionedMultipleAlignment( 
+		a_file, 
+		p_file, 
+		taxa, 
+		partition_map_global=partition_map_global, 
+		manuscript_name="Chang2015", 
+		matrix_name="Chang2015"
+	)
+
+D=clade_rects(msas[[1]])
 
 ggplot() + 
 	scale_x_continuous(name="x") + 
@@ -184,17 +229,17 @@ XXX
 ```{r gene_composition}
 
 partition_clusters = 
-	read_tsv( "blast/graphs/diamond_partition_clusters.tsv" ) %>% 
+	read_tsv( "../reconciliation/blast/graphs/diamond_partition_clusters.tsv" ) %>% 
 	dplyr::rename( partition=partition_name ) %>%
 	dplyr::rename( matrix=dataset ) %>%
 	dplyr::rename( cluster_id=cluster_number )
 
 busco_results = 
-	read_tsv("blast/graphs/busco_metazoa_results.tsv") %>% 
+	read_tsv("../reconciliation/blast/graphs/busco_metazoa_results.tsv") %>% 
 	filter( Status != "Missing" ) 
 
 sequences_all_txt = 
-	read_tsv("blast/all_parts_list.txt")
+	read_tsv("../reconciliation/blast/all_parts_list.txt")
 
 names(sequences_all_txt) = c("full_name")
 sequences_all = str_split_fixed( sequences_all_txt$full_name, ":", 5 ) %>% 
@@ -284,7 +329,7 @@ XXX
 ```{r support}
 
 analyses %>% 
-	ggplot( aes(x=model_summary, y=taxon_sampling, col=result) ) +
+	ggplot( aes(x=model_summary, y=clade, col=result) ) +
 		geom_jitter( width = 0.20, height = 0.20, alpha=0.7, size=2 ) +
 		scale_colour_manual(values = result_colors) +
 		theme_classic()
@@ -397,7 +442,7 @@ We first considered pairwise similarity between the same species from different 
 ```{r taxon_mapping_across_studies}
 
 Dtaxaxman = 
-	read_tsv("~/Dropbox/repo/animal_root/blast/graphs/cross_mscript_taxa.tsv") %>%
+	read_tsv("../reconciliation/blast/graphs/cross_mscript_taxa.tsv") %>%
 	arrange( mscript1, dataset1, taxon1, mscript2, dataset2, taxon2 ) 
 
 Dtaxaxman_raw_count = nrow(Dtaxaxman)
@@ -414,7 +459,7 @@ We next considered taxon mapping more generally.
 ```{r taxon_mapping}
 
 Dtaxa = 
-	read_tsv("~/Dropbox/repo/animal_root/blast/graphs/taxon_graph.tsv") %>%
+	read_tsv("../blast/graphs/taxon_graph.tsv") %>%
 	arrange( mscript1, dataset1, taxon1, mscript2, dataset2, taxon2 ) 
 
 # Set aside species correspondense to same species in same matrix in same matrix
@@ -450,7 +495,7 @@ Dtaxa %>% filter(taxon1!=taxon2) %>% arrange( desc(count))
 Dtaxa %>% filter(taxon1==taxon2) %>% arrange( count )
 
 
-taxonomy_reference = read_tsv("taxonomy_info/taxon_table.tsv")
+
 
 ```
 
