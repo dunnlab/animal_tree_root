@@ -27,6 +27,27 @@ source( "functions.R" )
 
 ```{r}
 
+focal_matrices = 
+	read.table(text = 
+		"manuscript matrix
+		 Borowiec2015	Total1080
+		 Chang2015 Chang2015
+     Dunn2008  Dunn2008
+		 Hejnol2009 Hejnol2009
+		 Moroz2014 ED3a
+		 Nosenko2013 nonribosomal_9187_smatrix
+		 Nosenko2013 ribosomal_11057_smatrix
+		 Philippe2009	Philippe2009
+		Ryan2013	est.opisthokonta
+		Ryan2013  genome.opisthokonta
+	Simion2017	supermatrix_97sp_401632pos_1719genes
+Whelan2015	Metazoa_Choano_RCFV_strict
+		 
+		 ", 
+ 		header = TRUE, 
+    stringsAsFactors = FALSE)
+
+
 # A colorblind friendly palette from http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/#a-colorblind-friendly-palette:
 cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
 
@@ -44,7 +65,7 @@ taxonomy_reference = read_tsv("../reconciliation/taxonomy_info/taxon_table.tsv")
 partition_map_global = 
 	read_tsv("../reconciliation/blast/graphs/diamond_partition_clusters.tsv") %>%
 	dplyr::rename(partition=partition_name) %>%
-	dplyr::rename(matrix=dataset) %>% 
+	#dplyr::rename(matrix=dataset) %>% 
 	dplyr::rename(gene=cluster_number)
 
 bootstrap_threshold = 90
@@ -167,7 +188,7 @@ taxa =
 matrix_path = "../data_processed/matrices/"
 phylip_file_names = list.files(path = matrix_path, pattern = ".+\\.phy$")
 
-msas = lapply(
+sequence_matrices = lapply(
 	phylip_file_names,
 	function( phylip_file ){
 		print(phylip_file)
@@ -181,7 +202,7 @@ msas = lapply(
 		manuscript_name = elements[1]
 		matrix_name = paste(elements[2:length(elements)], collapse="_")
 		
-		msa = 
+		sequence_matrix = 
 			PartitionedMultipleAlignment( 
 				phylip_path, 
 				partition_path, 
@@ -191,23 +212,11 @@ msas = lapply(
 				matrix_name=matrix_name
 			)
 		
-		return( msa )
+		return( sequence_matrix )
 	}
 )
 
-a_file = "../data_processed/matrices/Chang2015_Chang2015.phy"
-p_file = "../data_processed/matrices/Chang2015_Chang2015.nex"
-msa = 
-	PartitionedMultipleAlignment( 
-		a_file, 
-		p_file, 
-		taxa, 
-		partition_map_global=partition_map_global, 
-		manuscript_name="Chang2015", 
-		matrix_name="Chang2015"
-	)
-
-D=clade_rects(msas[[1]])
+D=clade_rects(sequence_matrices[[1]])
 
 ggplot() + 
 	scale_x_continuous(name="x") + 
@@ -228,11 +237,6 @@ XXX
 
 ```{r gene_composition}
 
-partition_clusters = 
-	read_tsv( "../reconciliation/blast/graphs/diamond_partition_clusters.tsv" ) %>% 
-	dplyr::rename( partition=partition_name ) %>%
-	dplyr::rename( matrix=dataset ) %>%
-	dplyr::rename( cluster_id=cluster_number )
 
 busco_results = 
 	read_tsv("../reconciliation/blast/graphs/busco_metazoa_results.tsv") %>% 
@@ -279,7 +283,7 @@ partition_to_busco_map =
 	group_by( manuscript, matrix, partition ) %>% 
 	summarise( BUSCO=names(which(table(Description) == max(table(Description)))[1]) )
 
-partition_clusters %<>% left_join( partition_to_busco_map, by=c("manuscript", "matrix", "partition") )
+partition_map_global %<>% left_join( partition_to_busco_map, by=c("manuscript", "matrix", "partition") )
 
 
 busco_summary = 
@@ -300,8 +304,8 @@ ggplot( matrix_summary ) +
 	geom_point( aes(x=n_partitions, y=n_busco_partitions, col=manuscript) ) + geom_abline(slope=1,intercept=0) + coord_fixed()
 
 cluster_summary =
-	partition_clusters %>% 
-	group_by( cluster_id ) %>% 
+	partition_map_global %>% 
+	group_by( gene ) %>% 
 	summarise( 
 		n_partitions = n(), 
 		n_matrices= length(unique(matrix)),
@@ -319,7 +323,23 @@ cluster_summary =
 
 ### Matrix overlap
 
-XXX
+```{r}
+
+
+
+matrix_overlap = 
+	lapply(sequence_matrices, function(x) lapply(sequence_matrices, function(y) matrix_overlap(x,y))) %>% 
+	unlist(recursive=FALSE) %>% 
+	bind_rows()
+
+# Remove reciprocal comparisons and comparisons to self
+n = nrow(matrix_overlap)
+mask = lower.tri(matrix(1:n^2, n, n))
+dim(mask) = NULL
+matrix_overlap = matrix_overlap[mask,]
+
+```
+
 
 **Fig XXAlignment overlap.** Pairwise overlap between each of the primary matrices considered here. Horizontal size is proportional to the number of genes sampled, vertical size to the number of taxa sampled. The horizontal intersection shows the proportions of shared genes, the vertical intersection shows the proportions of shared taxa.
 
@@ -508,7 +528,7 @@ Dtaxa %>% filter(taxon1==taxon2) %>% arrange( count )
 ```{r partition_mapping}
 
 Dpart = 
-	read_tsv("~/Dropbox/repo/animal_root/blast/graphs/partitions_graph.tsv") %>% 
+	read_tsv("../reconciliation/blast/graphs/partitions_graph.tsv") %>% 
 	mutate( node1 = paste(mscript1, dataset1, part1, sep = ':') ) %>% 
 	mutate( node2 = paste(mscript2, dataset2, part2, sep = ':') )
 

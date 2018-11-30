@@ -134,5 +134,24 @@ stat_clades = function(mapping = NULL, data = NULL, geom = "rect",
 
 
 
+matrix_overlap = function( msa1, msa2 ){
+	
+	n_gene_overlap = sum( na.omit(msa1@partitions$gene) %in% na.omit(msa2@partitions$gene) )
 
+	n_species_overlap = sum( rownames(msa1) %in% rownames(msa2) )
+	
+	tibble(
+		manuscript_name_1 = msa1@manuscript_name,
+		matrix_name_1 = msa1@matrix_name,
+		n_species_1 = nrow( msa1 ),
+		n_partitions_1 = nrow( msa1@partitions ),
+		manuscript_name_2 = msa2@manuscript_name,
+		matrix_name_2 = msa2@matrix_name,
+		n_species_2 = nrow( msa2 ),
+		n_partitions_2 = nrow( msa2@partitions ),
+		n_species_overlap = n_species_overlap,
+		n_gene_overlap = n_gene_overlap
+		
+	)
+}
 
