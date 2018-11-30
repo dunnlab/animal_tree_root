@@ -106,6 +106,11 @@ clade_rects = function( data ){
 	D$xmax = rep( n_genes, length(clades) )
 	D$ymin = c(0, clade_cumsums[1:length(clade_cumsums)-1])
 	D$ymax = clade_cumsums
+	D$manuscript = data@manuscript_name
+	D$matrix = data@matrix_name
+	D$manuscript_matrix = paste(D$manuscript, D$matrix, sep="_")
+	
+	D %<>% mutate( manuscript_matrix = as.factor(manuscript_matrix) )
 	
 	D
 }
@@ -134,7 +139,7 @@ stat_clades = function(mapping = NULL, data = NULL, geom = "rect",
 
 
 
-matrix_overlap = function( msa1, msa2 ){
+compute_matrix_overlap = function( msa1, msa2 ){
 	
 	n_gene_overlap = sum( na.omit(msa1@partitions$gene) %in% na.omit(msa2@partitions$gene) )
 

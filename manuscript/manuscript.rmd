@@ -216,15 +216,25 @@ sequence_matrices = lapply(
 	}
 )
 
-D=clade_rects(sequence_matrices[[1]])
 
-ggplot() + 
+
+taxon_rectangles = lapply(
+	sequence_matrices,
+	function ( sequence_matrix ){
+		clade_rects(sequence_matrix)
+	}
+) %>%
+	bind_rows()
+
+ggplot(data=taxon_rectangles) + 
 	scale_x_continuous(name="x") + 
 	scale_y_continuous(name="y") +
-	geom_rect(data=D, mapping=aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax, fill=clade )) + 
+	geom_rect( mapping=aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax, fill=clade )) + 
 	# scale_fill_manual(guide = guide_legend(reverse=TRUE))
 	# scale_fill_manual(values = clade_colors, guide = guide_legend(reverse=TRUE))
-	scale_fill_discrete(guide = guide_legend(reverse=TRUE))
+	scale_fill_discrete(guide = guide_legend(reverse=TRUE)) +
+	facet_wrap( ~ manuscript_matrix )
+
 ```
 
 
@@ -328,7 +338,7 @@ cluster_summary =
 
 
 matrix_overlap = 
-	lapply(sequence_matrices, function(x) lapply(sequence_matrices, function(y) matrix_overlap(x,y))) %>% 
+	lapply(sequence_matrices, function(x) lapply(sequence_matrices, function(y) compute_matrix_overlap(x,y))) %>% 
 	unlist(recursive=FALSE) %>% 
 	bind_rows()
 
