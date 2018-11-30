@@ -348,6 +348,18 @@ mask = lower.tri(matrix(1:n^2, n, n))
 dim(mask) = NULL
 matrix_overlap = matrix_overlap[mask,]
 
+
+matrix_overlap_rectangles = 
+	lapply(sequence_matrices, function(x) lapply(sequence_matrices, function(y) overlap_rects(x,y))) %>% 
+	unlist(recursive=FALSE) %>% 
+	bind_rows()
+
+ggplot(data=matrix_overlap_rectangles) + 
+	scale_x_continuous(name="x") + 
+	scale_y_continuous(name="y") +
+	geom_rect( mapping=aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax, fill=MSA ), alpha=0.5) + 
+	facet_grid( matrix_1 ~ matrix_2 )
+
 ```
 
 

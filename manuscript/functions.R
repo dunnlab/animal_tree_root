@@ -160,3 +160,25 @@ compute_matrix_overlap = function( msa1, msa2 ){
 	)
 }
 
+overlap_rects = function( msa1, msa2 ){
+	overlap = compute_matrix_overlap( msa1, msa2 )
+	
+	# Create a dataframe where each row is one of the matrices in the pairwise comparison and 
+	# the columns describe how to draw the rectangle for matrix
+	
+	# First row is msa1 rectangle, second row is msa2 rectangle
+	D = data.frame( MSA=c("Matrix_1", "Matrix_2") )
+	
+	D$xmin = c( 0, overlap$n_partitions_1 - overlap$n_gene_overlap )
+	D$xmax = c( overlap$n_partitions_1, overlap$n_partitions_1 + overlap$n_partitions_2 - overlap$n_gene_overlap )
+	D$ymin = c(0, overlap$n_species_1 - overlap$n_species_overlap )
+	D$ymax = c( overlap$n_species_1, overlap$n_species_1 + overlap$n_species_2 - overlap$n_species_overlap )
+	D$manuscript_1 = msa1@manuscript_name
+	D$manuscript_2 = msa2@manuscript_name
+	D$matrix_1 = paste(msa1@manuscript_name, msa1@matrix_name, sep="_")
+	D$matrix_2 = paste(msa2@manuscript_name, msa2@matrix_name, sep="_")
+	
+	D
+	
+	
+}
