@@ -65,8 +65,8 @@ taxonomy_reference = read_tsv("../reconciliation/taxonomy_info/taxon_table.tsv")
 partition_map_global = 
 	read_tsv("../reconciliation/blast/graphs/diamond_partition_clusters.tsv") %>%
 	dplyr::rename(partition=partition_name) %>%
-	#dplyr::rename(matrix=dataset) %>% 
-	dplyr::rename(gene=cluster_number)
+	dplyr::rename(gene=cluster_number) %>%
+	mutate( gene = as.character(gene) )
 
 bootstrap_threshold = 90
 posterior_prob_threshold = 95

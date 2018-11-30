@@ -66,6 +66,11 @@ PartitionedMultipleAlignment = function( alignment_file, partition_file=NULL, ta
 			select( -manuscript ) %>% 
 			select( -matrix )
 		
+		# Add names to the partitions that are not assigned to genes. Take these from the original 
+		# partition names, but prepend matrix name to be sure they are unique across matrices
+		
+		partitions$gene[ is.na(partitions$gene) ] = paste( matrix_name, partitions$partition[ is.na(partitions$gene) ], collapse = '_' )
+		
 	}
 	
 	object@partitions = partitions
