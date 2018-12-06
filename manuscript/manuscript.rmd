@@ -21,6 +21,7 @@ knitr::opts_chunk$set(
 library( tidyverse )
 library( magrittr )
 library(viridis)
+library(ape)
 
 source( "functions.R" )
 ```
@@ -55,7 +56,7 @@ result_colors = c( cbPalette[2], cbPalette[4], cbPalette[1] )
 names( result_colors ) = c( "Ctenophora-sister", "Porifera-sister", "Unresolved" )
 
 papers = read_tsv( "../data_processed/tables/previously_published_manuscripts.tsv" )
-datasets = read_tsv( "../data_processed/tables/previously_published_datasets.tsv" )
+datasets = read_tsv( "../data_processed/tables/previously_published_matrices.tsv" )
 analyses = 
 	read_tsv( "../data_processed/tables/previously_published_analyses.tsv", col_types = 'iccccccccccclnnnncc' ) %>%
 	mutate( clade = factor( clade, levels= c( 'Choanimalia', 'Holozoa', 'Opisthokonta' ) ) )
@@ -384,6 +385,108 @@ A total of `r nrow(analyses)` analyses were transcribed from the literature.
 
 
 ## New analyses of published matrices
+
+
+```{r}
+
+trees_path = "../trees_new/"
+tree_file_names = list.files(path = trees_path, pattern = ".+\\.contree$")
+
+trees = lapply(
+	tree_file_names,
+	function( tree_file ){
+		print(tree_file)
+		log_file = sub( "contree$", "log", tree_file )
+		
+		tree_file_path = paste(c(trees_path, tree_file), collapse="")
+		log_file_path = paste(c(trees_path, log_file), collapse="")
+		
+		base_name = sub( "\\.contree$", "", tree_file )
+		elements = strsplit(base_name, "\\.") %>% unlist()
+		matrix_name = elements[1]
+		model_name = elements[2]
+		
+		tree = read.tree( file = tree_file_path )
+		
+		# Get the clades of the tips
+		clades = 
+			taxonomy_reference$clade_assignment[ 
+				match( tree$tip.label, taxonomy_reference$relabelled_name ) 
+				]
+		
+		# Get the outgroup sampling
+		
+		outgroup = NA
+		
+		sampling = "Metazoa"
+		if( "Choanoflagellida" %in% clades ){
+			sampling = "Choanimalia"
+			outgroup = which( clades == "Choanoflagellida" )
+		}
+		
+		if( ("Ichthyosporea" %in% clades) | ("Filasterea" %in% clades) ){
+			sampling = "Holozoa"
+			outgroup = c( which( clades == "Ichthyosporea" ),  which( clades == "Filasterea" ))
+		}
+
+		if( "Fungi" %in% clades ){
+			sampling = "Opisthokonta"
+			outgroup = which( clades == "Fungi" )
+		}
+		
+		# Reroot the tree
+		# Use a single taxon from the outgroup since the outgroup is not guaranteed to be monophyletic
+		tree = root( tree, outgroup[1] )
+
+		# Get the clades of the tips again, since tip order has changed
+		clades = 
+			taxonomy_reference$clade_assignment[ 
+				match( tree$tip.label, taxonomy_reference$relabelled_name ) 
+				]
+		
+		
+		# Stuff a few other things into the tree object
+		tree$matrix = matrix_name
+		tree$model = model_name
+		tree$modelfinder = FALSE
+		tree$clades = clades
+		tree$sampling = sampling
+		
+		# parse model
+		log_lines = read_lines( log_file_path )
+		
+		best_line = log_lines[ grepl("Best-fit model:", log_lines) ]
+		
+		if( length(best_line) > 1 ){
+			warning("More than one best model found")
+		}
+		
+		if( length(best_line) > 0 ){
+			tree$modelfinder = TRUE
+			elements = strsplit( best_line[1], " " ) %>% unlist()
+			tree$model = elements[3]
+		}
+		
+		return( tree )
+	}
+)
+
+tree_summary = lapply(
+	trees,
+	function( tree ){
+		data.frame(
+			matrix = tree$matrix,
+			model = tree$model,
+			modelfinder = tree$modelfinder,
+			sampling = tree$sampling,
+			stringsAsFactors = FALSE
+		)
+	}
+) %>% bind_rows()
+
+```
+
+
 
 One of the challenges of interpreting support for the placement of the animal root across studies is that different programs, software versions, and settings have been used across studies, and phylogenetic analysis decisions have been approached in very different ways. Here we reanalyze the primary matrices from each study under consistent conditions with iqtree. We selected this tool because it has greater model flexibility than other tools and is very fast.
 
