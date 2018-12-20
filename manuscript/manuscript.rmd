@@ -390,18 +390,25 @@ A total of `r nrow(analyses)` analyses were transcribed from the literature.
 ```{r}
 
 trees_path = "../trees_new/"
-tree_file_names = list.files(path = trees_path, pattern = ".+\\.contree$")
+contree_extension = "treefile"
+tree_file_names = list.files(path = trees_path, pattern = str_c( "\\.", contree_extension, "$" ))
+
 
 trees = lapply(
 	tree_file_names,
 	function( tree_file ){
 		print(tree_file)
-		log_file = sub( "contree$", "log", tree_file )
+		log_file = sub( str_c( contree_extension, "$" ), "log", tree_file )
 		
 		tree_file_path = paste(c(trees_path, tree_file), collapse="")
 		log_file_path = paste(c(trees_path, log_file), collapse="")
 		
-		base_name = sub( "\\.contree$", "", tree_file )
+		if(!file.exists(log_file_path)){
+			warning( str_c( "Missong log file: ", log_file_path ) )
+			return( NA )
+		}
+		
+		base_name = sub( str_c( "\\.", contree_extension, "$" ), "", tree_file )
 		elements = strsplit(base_name, "\\.") %>% unlist()
 		matrix_name = elements[1]
 		model_name = elements[2]
