@@ -58,12 +58,10 @@ PartitionedMultipleAlignment = function( alignment_file, partition_file=NULL, ta
 	
 	if( ! is.null(partition_map_global) ){
 		partition_map_global %<>%
-			filter( manuscript == manuscript_name ) %>%
 			filter( matrix == matrix_name )
 		
 		partitions %<>% 
 			left_join( partition_map_global ) %>%
-			select( -manuscript ) %>% 
 			select( -matrix )
 		
 		# Add names to the partitions that are not assigned to genes. Take these from the original 

@@ -201,7 +201,7 @@ sequence_matrices = lapply(
 		base_name = sub( "\\.phy$", "", phylip_file )
 		elements = strsplit(base_name, "_") %>% unlist()
 		manuscript_name = elements[1]
-		matrix_name = paste(elements[2:length(elements)], collapse="_")
+		matrix_name = base_name
 		
 		sequence_matrix = 
 			PartitionedMultipleAlignment( 
@@ -257,13 +257,13 @@ sequences_all_txt =
 	read_tsv("../reconciliation/blast/all_parts_list.txt")
 
 names(sequences_all_txt) = c("full_name")
-sequences_all = str_split_fixed( sequences_all_txt$full_name, ":", 5 ) %>% 
+sequences_all = str_split_fixed( sequences_all_txt$full_name, ":", 4 ) %>% 
 	as_tibble()
-names( sequences_all ) = c( "manuscript", "matrix", "species", "ncbi_taxon_id", "partition" )
+names( sequences_all ) = c( "matrix", "species", "ncbi_taxon_id", "partition" )
 
 partitions_all = 
 	sequences_all %>% 
-	group_by( manuscript, matrix, partition ) %>% 
+	group_by( matrix, partition ) %>% 
 	summarise( n_sequences =n() )
 
 
@@ -273,43 +273,45 @@ partitions_all =
 # manuscript:matrix:species:NCBI_taxon_id:partition
 
 Bs = 
-	str_split_fixed( busco_results$Sequence, ":", 5 ) %>% 
+	str_split_fixed( busco_results$Sequence, ":", 4 ) %>% 
 	as_tibble()
 
-names( Bs ) = c( "manuscript", "matrix", "species", "ncbi_taxon_id", "partition" )
+names( Bs ) = c( "matrix", "species", "ncbi_taxon_id", "partition" )
 
 Bs %<>% mutate( ncbi_taxon_id = as.integer(ncbi_taxon_id) )
 
 busco_results %<>% bind_cols( Bs )
 
 # Find overrepresented partitions, ie partitions with genes that hit more than one Busco
-busco_distinct =  busco_results %>% select( manuscript, matrix, partition, Description ) %>% distinct(  )
-busco_overrepresented = busco_distinct %>% group_by( manuscript, matrix, partition ) %>% summarise( n = n() ) %>% filter( n > 1 )
+busco_distinct =  busco_results %>% select( matrix, partition, Description ) %>% distinct(  )
+busco_overrepresented = busco_distinct %>% group_by( matrix, partition ) %>% summarise( n = n() ) %>% filter( n > 1 )
 busco_overrepresented
 busco_overrepresented_full = left_join( busco_overrepresented, busco_results )
 
 # Combine and summarize results
 partition_to_busco_map = 
 	busco_distinct %>% 
-	group_by( manuscript, matrix, partition ) %>% 
+	group_by( matrix, partition ) %>% 
 	summarise( BUSCO=names(which(table(Description) == max(table(Description)))[1]) )
 
-partition_map_global %<>% left_join( partition_to_busco_map, by=c("manuscript", "matrix", "partition") )
+partition_map_global %<>% left_join( partition_to_busco_map, by=c("matrix", "partition") )
 
 
 busco_summary = 
 	partition_to_busco_map %>% 
-	group_by( manuscript, matrix ) %>%
+	group_by( matrix ) %>%
 	summarise( n_busco_partitions = n() )
 
 matrix_summary =
 	partitions_all %>%
-	group_by( manuscript, matrix ) %>%
+	group_by( matrix ) %>%
 	summarise( n_partitions = n() ) %>%
 	left_join(
 		busco_summary,
-		by=c("manuscript", "matrix")
+		by=c("matrix")
 	)
+
+matrix_summary$manuscript = str_split( matrix_summary$matrix, "_", simplify=TRUE )[,1]
 
 ggplot( matrix_summary ) +
 	geom_point( aes(x=n_partitions, y=n_busco_partitions, col=manuscript) ) + geom_abline(slope=1,intercept=0) + coord_fixed()
