@@ -22,6 +22,7 @@ library( tidyverse )
 library( magrittr )
 library(viridis)
 library(ape)
+library(igraph)
 
 source( "functions.R" )
 ```
@@ -593,7 +594,7 @@ The primary intent of comparing taxa across matrices was to validate our taxon n
 
 We first considered pairwise similarity between the same species from different matrices in different studies.
 
-```{r taxon_mapping_across_studies}
+```{r taxon_mapping_across_studies, eval=FALSE}
 
 Dtaxaxman = 
 	read_tsv("../reconciliation/blast/graphs/cross_mscript_taxa.tsv") %>%
@@ -610,7 +611,7 @@ Dtaxaxman %<>%
 
 We next considered taxon mapping more generally.
 
-```{r taxon_mapping}
+```{r taxon_mapping, eval=FALSE}
 
 Dtaxa = 
 	read_tsv("../blast/graphs/taxon_graph.tsv") %>%
@@ -663,14 +664,14 @@ Dtaxa %>% filter(taxon1==taxon2) %>% arrange( count )
 
 Dpart = 
 	read_tsv("../reconciliation/blast/graphs/partitions_graph.tsv") %>% 
-	mutate( node1 = paste(mscript1, dataset1, part1, sep = ':') ) %>% 
-	mutate( node2 = paste(mscript2, dataset2, part2, sep = ':') )
+	mutate( node1 = paste(matrix1, part1, sep = ':') ) %>% 
+	mutate( node2 = paste(matrix2, part2, sep = ':') )
 
-Dpart_self = Dpart %>% 
-	filter( node1==node2 ) %>%
-	select( mscript1, dataset1, part1, node1, count )
-
-ggplot( Dpart_self ) + geom_density(aes(count))
+# Hits to self not included anymore, so skip this bit
+# Dpart_self = Dpart %>% 
+#	 filter( node1==node2 ) %>%
+#	 select( matrix1, part1, node1, count )
+# ggplot( Dpart_self ) + geom_density(aes(count))
 
 
 # Retain only nonself edges
@@ -682,13 +683,13 @@ Dpart %<>% filter( node1!=node2 )
 
 D_source = Dpart %>%
   distinct(node1, .keep_all = TRUE ) %>%
-	select( node1, mscript1, dataset1, part1 ) %>%
-  dplyr::rename(label = node1, mscript = mscript1, dataset = dataset1, part = part1 )
+	select( node1, matrix1, part1 ) %>%
+  dplyr::rename(label = node1, matrix = matrix1, part = part1 )
 
 D_dest = Dpart %>%
   distinct(node2, .keep_all = TRUE ) %>%
-	select( node2, mscript2, dataset2, part2 ) %>%
-  dplyr::rename(label = node2, mscript = mscript2, dataset = dataset2, part = part2 )
+	select( node2, matrix2, part2 ) %>%
+  dplyr::rename(label = node2, matrix = matrix2, part = part2 )
 
 nodes = 
 	bind_rows( D_source, D_dest ) %>% 
@@ -720,24 +721,13 @@ edges = Dpart %>%
 	select( from, to, weight )
 
 
-#library( network )
-
-#gene_network = network( edges, directed=FALSE, vertex.attr = nodes, matrix.type = "edgelist", ignore.eval = FALSE)
-#
-#gene_matrix = as.sociomatrix(gene_network)
-
-#library( MCL )
-
-#gene_clusters = mcl( x=gene_matrix, addLoops = TRUE )
-
-library(igraph)
 gene_igraph = graph_from_data_frame(d = edges, vertices = nodes, directed = FALSE)
 gene_clusters = clusters(gene_igraph, mode=c("weak", "strong"))
 
 nodes$cluster = gene_clusters$membership
 
 # Investigate commencted components of genes (ie partitions) that include multiple members fromt he same matrix
-D = nodes %>% group_by( mscript, dataset, cluster ) %>% summarise(n=n()) %>% arrange(desc(n))
+D = nodes %>% group_by( matrix, cluster ) %>% summarise(n=n()) %>% arrange(desc(n))
 D %>% print(n=100)
 
 clusterstats = nodes %>% group_by( cluster ) %>% summarise(n=n()) %>% arrange(desc(n))
