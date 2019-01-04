@@ -247,7 +247,7 @@ XXX
 
 ### Support for Porifera-sister and Ctenophora-sister
 
-![](manuscript_files/figure-gfm/support-1.png)<!-- -->
+![](manuscript_files/figure-gfm/support_published_analyses-1.png)<!-- -->
 
 
 
@@ -258,7 +258,7 @@ A total of 139 analyses were transcribed from the literature.
 ## New analyses of published matrices
 
 
-
+![](manuscript_files/figure-gfm/support_new_analyses-1.png)<!-- -->
 
 
 
@@ -275,6 +275,9 @@ Site heterogeneity in equilibrium frequency has been a major concern in tests of
 ## New analyses of new matrices
 
 Based on the variation across analyses, we constructed new matrices with altered taxon and gene sampling to test specific hypotheses about differences in support.
+
+
+
 
 
 ## The current state of understanding

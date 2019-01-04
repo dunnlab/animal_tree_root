@@ -195,28 +195,32 @@ ggplot(data=matrix_overlap_rectangles) +
 
 ### Support for Porifera-sister and Ctenophora-sister
 
-```{r support}
+```{r support_published_analyses}
 
-analyses %>% 
+analyses_published %>% 
 	ggplot( aes(x=model_summary, y=clade, col=result) ) +
 		geom_jitter( width = 0.20, height = 0.20, alpha=0.7, size=2 ) +
 		scale_colour_manual(values = result_colors) +
 		theme_classic()
+
 ```
 
 
 
-A total of `r nrow(analyses)` analyses were transcribed from the literature.
+A total of `r nrow(analyses_published)` analyses were transcribed from the literature.
 
 
 
 ## New analyses of published matrices
 
 
-```{r}
+```{r support_new_analyses}
 
-
-
+analyses_new %>% 
+	ggplot( aes(x=model_summary, y=clade, col=result, shape=modelfinder) ) +
+		geom_jitter( width = 0.20, height = 0.20, alpha=0.7, size=2 ) +
+		scale_colour_manual(values = result_colors) +
+		theme_classic()
 ```
 
 
@@ -234,6 +238,9 @@ Site heterogeneity in equilibrium frequency has been a major concern in tests of
 ## New analyses of new matrices
 
 Based on the variation across analyses, we constructed new matrices with altered taxon and gene sampling to test specific hypotheses about differences in support.
+
+
+
 
 
 ## The current state of understanding

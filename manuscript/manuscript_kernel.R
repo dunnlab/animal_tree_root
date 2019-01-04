@@ -58,7 +58,7 @@ posterior_prob_threshold = 95
 
 papers = read_tsv( "../data_processed/tables/previously_published_manuscripts.tsv" )
 datasets = read_tsv( "../data_processed/tables/previously_published_matrices.tsv" )
-analyses = 
+analyses_published = 
 	read_tsv( "../data_processed/tables/previously_published_analyses.tsv", col_types = 'iccccccccccclnnnncc' ) %>%
 	mutate( clade = factor( clade, levels= c( 'Choanimalia', 'Holozoa', 'Opisthokonta' ) ) )
 
@@ -70,18 +70,18 @@ partition_map_global =
 	dplyr::rename(gene=cluster_number) %>%
 	mutate( gene = as.character(gene) )
 
-analyses$result = "Unresolved"
-analyses$result[ ( analyses$inference == "Bayesian" ) & (analyses$support_porifera_sister >= posterior_prob_threshold) ] = "Porifera-sister"
-analyses$result[ ( analyses$inference == "Bayesian" ) & (analyses$support_ctenophora_sister >= posterior_prob_threshold) ] = "Ctenophora-sister"
-analyses$result[ ( analyses$inference == "ML" ) &       (analyses$support_porifera_sister >= bootstrap_threshold) ] = "Porifera-sister"
-analyses$result[ ( analyses$inference == "ML" ) &       (analyses$support_ctenophora_sister >= bootstrap_threshold) ] = "Ctenophora-sister"
-analyses$result = factor( analyses$result )
+analyses_published$result = "Unresolved"
+analyses_published$result[ ( analyses_published$inference == "Bayesian" ) & (analyses_published$support_porifera_sister >= posterior_prob_threshold) ] = "Porifera-sister"
+analyses_published$result[ ( analyses_published$inference == "Bayesian" ) & (analyses_published$support_ctenophora_sister >= posterior_prob_threshold) ] = "Ctenophora-sister"
+analyses_published$result[ ( analyses_published$inference == "ML" ) &       (analyses_published$support_porifera_sister >= bootstrap_threshold) ] = "Porifera-sister"
+analyses_published$result[ ( analyses_published$inference == "ML" ) &       (analyses_published$support_ctenophora_sister >= bootstrap_threshold) ] = "Ctenophora-sister"
+analyses_published$result = factor( analyses_published$result )
 
-analyses$model_summary = analyses$model_rate_matrix
-long_summary = paste(analyses$model_rate_matrix, analyses$model_equilibrium, sep="+")
-analyses$model_summary[ ! is.na(analyses$model_equilibrium) ] = long_summary[ ! is.na(analyses$model_equilibrium) ]
-analyses$model_summary[ grepl("WAG", analyses$model_summary) ] = "WAG" # Simplify WAG
-analyses$model_summary = factor( analyses$model_summary, levels=c("GTR+CAT", "F81+CAT", "LG", "WAG") )
+analyses_published$model_summary = analyses_published$model_rate_matrix
+long_summary = paste(analyses_published$model_rate_matrix, analyses_published$model_equilibrium, sep="+")
+analyses_published$model_summary[ ! is.na(analyses_published$model_equilibrium) ] = long_summary[ ! is.na(analyses_published$model_equilibrium) ]
+analyses_published$model_summary[ grepl("WAG", analyses_published$model_summary) ] = "WAG" # Simplify WAG
+analyses_published$model_summary = factor( analyses_published$model_summary, levels=c("GTR+CAT", "F81+CAT", "LG", "WAG") )
 
 
 # Matrix taxon composition
@@ -368,20 +368,35 @@ parse_tree = 	function( tree_file ){
 trees = foreach( tree_file=tree_file_names) %dopar%
 	parse_tree( tree_file )
 
-tree_summary = lapply(
+analyses_new = lapply(
 	trees,
 	function( tree ){
 		data.frame(
 			matrix = tree$matrix,
 			model = tree$model,
 			modelfinder = tree$modelfinder,
-			sampling = tree$sampling,
+			clade = tree$sampling,
+			support_ctenophora_sister = tree$ctenophora_sister * 100,
+			support_porifera_sister = tree$porifera_sister * 100,
 			stringsAsFactors = FALSE
 		)
 	}
 ) %>% 
 bind_rows()
 
+analyses_new$inference = rep( "ML", nrow( analyses_new ) )
+
+# Summarize result
+analyses_new$result = "Unresolved"
+analyses_new$result[ ( analyses_new$inference == "Bayesian" ) & (analyses_new$support_porifera_sister >= posterior_prob_threshold) ] = "Porifera-sister"
+analyses_new$result[ ( analyses_new$inference == "Bayesian" ) & (analyses_new$support_ctenophora_sister >= posterior_prob_threshold) ] = "Ctenophora-sister"
+analyses_new$result[ ( analyses_new$inference == "ML" ) &       (analyses_new$support_porifera_sister >= bootstrap_threshold) ] = "Porifera-sister"
+analyses_new$result[ ( analyses_new$inference == "ML" ) &       (analyses_new$support_ctenophora_sister >= bootstrap_threshold) ] = "Ctenophora-sister"
+analyses_new$result = factor( analyses_new$result )
+
+# Parse model components
+analyses_new$model_summary = analyses_new$model
+analyses_new$model_summary = factor( analyses_new$model_summary, levels=c("WAG+C60+F+G", "LG+C60+F+G", "poisson_C60", "GTR20", "WAG", "LG") )
 
 # Partition comparison across matrices
 
