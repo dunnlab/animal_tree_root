@@ -222,6 +222,7 @@ matrix_overlap = matrix_overlap[mask,]
 # New analyses of published matrices
 
 trees_path = "../trees_new/"
+constraint_tree_path = "../trees_new/constraint_trees/"
 contree_extension = "treefile"
 tree_file_names = list.files(path = trees_path, pattern = str_c( "\\.", contree_extension, "$" ))
 
@@ -314,6 +315,21 @@ parse_tree = 	function( tree_file ){
 	
 	# Get the set of taxa in the group Porifera+Placozoa+Bilateria+Cnidaria, the clade that exists under Ctenophora-sister
 	PoPlBiCn = tree$tip.label[ clades %in% c("Porifera", "Placozoa", "Bilateria", "Cnidaria") ]
+	
+	# Write constraint trees for hypothesis testing
+	CtPlBiCn_not = tree$tip.label[ ! tree$tip.label %in% CtPlBiCn ]
+	porifera_sister_constraint_tree = generate_constaint_tree( CtPlBiCn, CtPlBiCn_not )
+	write.tree( 
+		porifera_sister_constraint_tree, 
+		file = paste( constraint_tree_path, base_name, ".porifera_sister_constraint.tree", sep="") 
+	)
+
+	PoPlBiCn_not = tree$tip.label[ ! tree$tip.label %in% PoPlBiCn ]
+	ctenophora_sister_constraint_tree = generate_constaint_tree( PoPlBiCn, PoPlBiCn_not )
+	write.tree( 
+		ctenophora_sister_constraint_tree, 
+		file = paste( constraint_tree_path, base_name, ".ctenophora_sister_constraint.tree", sep="") 
+	)	
 	
 	# Read the bootstrap trees
 	bootstrap_trees = read.tree(file = bootstrap_file_path)
