@@ -1,5 +1,36 @@
 FROM rocker/tidyverse:3.5.1
 
+
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+  libfftw3-dev \
+  libtiff5-dev \
+  libglu1-mesa-dev \
+  lmodern \
+  procps \
+  texlive-latex-extra \
+  texlive-fonts-recommended \
+  vim
+
+
+RUN install2.r --error \
+    --deps TRUE \
+    -r 'http://cran.rstudio.com' \
+    -r 'http://www.bioconductor.org/packages/release/bioc' \
+    ggtree \
+    treeio \
+    ape \
+    doParallel \
+    ggrepel \
+    igraph \
+    viridis \
+  && Rscript -e "library(devtools); devtools::install_github('caseywdunn/hutan')"
+
+
+
+
+# Install dependencies for python etc
+
 # can override these at build time
 # e.g. docker build --build-arg arg_iqtreeversion=1.6.8
 

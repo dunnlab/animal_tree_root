@@ -12,7 +12,12 @@ In this directory, build the container image with:
 docker build -t animal_root .
 ```
 
-### Running
+
+### Running analyses
+
+The model for executing the manuscript follows that at
+https://github.com/caseywdunn/comparative_expression_2017/tree/master/docker .
+
 
 To run an RStudio session:
 
