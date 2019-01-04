@@ -14,7 +14,6 @@ time_start = Sys.time()
 
 library( tidyverse )
 library( magrittr )
-library( viridis )
 library( ape )
 library( igraph )
 library( hutan )

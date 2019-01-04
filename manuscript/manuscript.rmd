@@ -29,6 +29,7 @@ knitr::opts_chunk$set(
 ```{r preliminaries}
 library( tidyverse )
 library( magrittr )
+library( viridis )
 
 source( "functions.R" )
 
@@ -121,7 +122,7 @@ Sensitivity to ingroup sampling has received less attention than sensitivity to 
 ### Matrix taxon composition
 
 
-```{ r taxon_rectangles }
+```{r taxon_rectangles }
 
 
 
