@@ -23,8 +23,19 @@ library( magrittr )
 library(viridis)
 library(ape)
 library(igraph)
+library(hutan)
+library(doParallel)
 
 source( "functions.R" )
+
+# Set system computational parameters
+cores = detectCores() - 1
+if ( cores < 1 ) {
+	cores = 1
+}
+
+# Register parallel workers for %dopar%
+registerDoParallel( cores )
 ```
 
 ```{r}
@@ -190,9 +201,7 @@ taxa =
 matrix_path = "../data_processed/matrices/"
 phylip_file_names = list.files(path = matrix_path, pattern = ".+\\.phy$")
 
-sequence_matrices = lapply(
-	phylip_file_names,
-	function( phylip_file ){
+parse_phylip =	function( phylip_file ){
 		print(phylip_file)
 		partition_file = sub( "phy$", "nex", phylip_file )
 		
@@ -216,9 +225,9 @@ sequence_matrices = lapply(
 		
 		return( sequence_matrix )
 	}
-)
 
-
+sequence_matrices = foreach( phylip_file=phylip_file_names) %dopar%
+	parse_phylip( phylip_file )
 
 taxon_rectangles = lapply(
 	sequence_matrices,
@@ -396,21 +405,30 @@ trees_path = "../trees_new/"
 contree_extension = "treefile"
 tree_file_names = list.files(path = trees_path, pattern = str_c( "\\.", contree_extension, "$" ))
 
+# Temp fix re issue #8
+tree_file_names = tree_file_names[ ! grepl("Philippe2009", tree_file_names) ]
 
-trees = lapply(
-	tree_file_names,
-	function( tree_file ){
+tree_file_names = tree_file_names[ ! grepl("Nosenko2013", tree_file_names) ]
+
+parse_tree = 	function( tree_file ){
 		print(tree_file)
 		log_file = sub( str_c( contree_extension, "$" ), "log", tree_file )
+		bootstrap_file = sub( str_c( contree_extension, "$" ), "ufboot", tree_file )
 		
 		tree_file_path = paste(c(trees_path, tree_file), collapse="")
 		log_file_path = paste(c(trees_path, log_file), collapse="")
 		
 		if(!file.exists(log_file_path)){
-			warning( str_c( "Missong log file: ", log_file_path ) )
+			warning( str_c( "Missing log file: ", log_file_path ) )
 			return( NA )
 		}
 		
+		bootstrap_file_path = paste(c(trees_path, bootstrap_file), collapse="")
+		if(!file.exists(bootstrap_file_path)){
+			warning( str_c( "Missing bootstrap file: ", bootstrap_file_path ) )
+			return( NA )
+		}
+				
 		base_name = sub( str_c( "\\.", contree_extension, "$" ), "", tree_file )
 		elements = strsplit(base_name, "\\.") %>% unlist()
 		matrix_name = elements[1]
@@ -444,6 +462,10 @@ trees = lapply(
 			outgroup = which( clades == "Fungi" )
 		}
 		
+		if( is.na(outgroup) ){
+			stop( "There are no outgroups in the tree, can't test rooting topology" )
+		}
+		
 		# Reroot the tree
 		# Use a single taxon from the outgroup since the outgroup is not guaranteed to be monophyletic
 		tree = root( tree, outgroup[1] )
@@ -454,6 +476,45 @@ trees = lapply(
 				match( tree$tip.label, taxonomy_reference$relabelled_name ) 
 				]
 		
+		if( sum(is.na(clades)) > 0 ){
+			missing_clades = tree$tip.label[ is.na(clades) ]
+			stop( paste( c( "Some tips have missing clade names:", missing_clades ), collapse=" " ))
+		}
+		
+		if( sum(clades == "Ctenophora") < 1 ){
+			stop( "There are no ctenophores in the tree, can't test rooting topology" )
+		} 
+
+		if( sum(clades == "Porifera") < 1 ){
+			stop( "There are no sponges in the tree, can't test rooting topology" )
+		} 
+		
+		# Get the set of taxa in the group Ctenophora+Placozoa+Bilateria+Cnidaria, the clade that exists under Proifera-sister
+		CtPlBiCn = tree$tip.label[ clades %in% c("Ctenophora", "Placozoa", "Bilateria", "Cnidaria") ]
+
+		# Get the set of taxa in the group Porifera+Placozoa+Bilateria+Cnidaria, the clade that exists under Ctenophora-sister
+		PoPlBiCn = tree$tip.label[ clades %in% c("Porifera", "Placozoa", "Bilateria", "Cnidaria") ]
+		
+		# Read the bootstrap trees
+		bootstrap_trees = read.tree(file = bootstrap_file_path)
+		
+		Ctenophora_sister = lapply(
+			bootstrap_trees,
+			function( phy ){
+				is_monophyletic( phy, PoPlBiCn )
+			}
+		) %>% 
+		unlist() %>%
+		mean()
+
+		Porifera_sister = lapply(
+			bootstrap_trees,
+			function( phy ){
+				is_monophyletic( phy, CtPlBiCn )
+			}
+		) %>% 
+		unlist() %>%
+		mean()				
 		
 		# Stuff a few other things into the tree object
 		tree$matrix = matrix_name
@@ -461,6 +522,8 @@ trees = lapply(
 		tree$modelfinder = FALSE
 		tree$clades = clades
 		tree$sampling = sampling
+		tree$ctenophora_sister = Ctenophora_sister
+		tree$porifera_sister = Porifera_sister
 		
 		# parse model
 		log_lines = read_lines( log_file_path )
@@ -479,7 +542,10 @@ trees = lapply(
 		
 		return( tree )
 	}
-)
+
+
+trees = foreach( tree_file=tree_file_names) %dopar%
+	parse_tree( tree_file )
 
 tree_summary = lapply(
 	trees,
