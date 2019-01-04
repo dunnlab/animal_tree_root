@@ -37,6 +37,7 @@ PartitionedMultipleAlignment = function( alignment_file, partition_file=NULL, ta
 		
 	conn = file( partition_file, open="r")
 	lines = readLines( conn )
+	lines = str_replace( lines, "charset", "CHARSET" )
 	lines = lines[ grepl("CHARSET", lines) ]
 	close( conn )
 	
