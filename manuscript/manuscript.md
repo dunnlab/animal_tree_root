@@ -604,7 +604,7 @@ The count for a partition pair can be much arger than the number of
 genes in the matrix, which suggests that the count is the number of hsps
 rather than the number of sequences with hits.
 
-There are 0 datasets. A gene that is perfectly sampled would form a
+There are 17 matrices. A gene that is perfectly sampled would form a
 cluster with this size. Very few clusters, though, are this size. This
 suggests that intersection of genes between matrices is low
 
