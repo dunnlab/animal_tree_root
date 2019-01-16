@@ -374,6 +374,14 @@ partition data are not available, and due to site filtering the
 partition file from Dunn *et al.* \[2\] cannot be applied to this
 matrix.
 
+## Model matrix comparison
+
+WAG and LG are both fixed exchange matrices. Their differences are
+largely limitted to a few amino acid
+changes.
+
+![](manuscript_files/figure-gfm/wagvlg-1.png)<!-- -->![](manuscript_files/figure-gfm/wagvlg-2.png)<!-- -->![](manuscript_files/figure-gfm/wagvlg-3.png)<!-- -->![](manuscript_files/figure-gfm/wagvlg-4.png)<!-- -->
+
 ## Matrix mapping
 
 Taxa and partition correspondence across manuscripts was assessed by
