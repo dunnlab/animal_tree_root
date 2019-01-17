@@ -58,7 +58,7 @@ posterior_prob_threshold = 95
 papers = read_tsv( "../data_processed/tables/previously_published_manuscripts.tsv" )
 datasets = read_tsv( "../data_processed/tables/previously_published_matrices.tsv" )
 analyses_published = 
-	read_tsv( "../data_processed/tables/previously_published_analyses.tsv", col_types = 'iccccccccccclnnnncc' ) %>%
+	read_tsv( "../data_processed/tables/previously_published_analyses.tsv", col_types = 'iccccccccccclnnnnccc' ) %>%
 	mutate( clade = factor( clade, levels= c( 'Choanimalia', 'Holozoa', 'Opisthokonta' ) ) )
 
 taxonomy_reference = read_tsv("../reconciliation/taxonomy_info/taxon_table.tsv")
