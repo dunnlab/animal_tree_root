@@ -238,7 +238,22 @@ model flexibility than other tools and is very fast.
 
 We first tested a variety of models for each matrix, and inferred
 support under the selected model. We then analyzed every matrix under a
-panel of standard models, including XXX.
+panel of standard models, including
+XXX.
+
+| matrix                | clade        | result            | model\_summary |
+| :-------------------- | :----------- | :---------------- | :------------- |
+| Borowiec2015\_Best108 | Choanimalia  | Ctenophora-sister | WAG+C60+F+G    |
+| Dunn2008              | Opisthokonta | Ctenophora-sister | WAG+C60+F+G    |
+| Moroz2014\_3d         | Choanimalia  | Unresolved        | WAG+C60+F+G    |
+| Ryan2013\_est         | Opisthokonta | Ctenophora-sister | WAG+C60+F+G    |
+| Whelan2015\_D1        | Opisthokonta | Ctenophora-sister | LG+C60+F+G     |
+| Whelan2015\_D10       | Opisthokonta | Ctenophora-sister | WAG+C60+F+G    |
+| Whelan2015\_D20       | Opisthokonta | Ctenophora-sister | WAG+C60+F+G    |
+| Whelan2017\_full      | Holozoa      | Ctenophora-sister | LG+C60+F+G     |
+| Whelan2017\_strict    | Choanimalia  | Ctenophora-sister | LG+C60+F+G     |
+
+Table XXModelfinder. The models selected by modelfinder for each matrix.
 
 ### Comparison of iqtree and phylobayes results
 
@@ -377,10 +392,9 @@ matrix.
 ## Model matrix comparison
 
 WAG and LG are both fixed exchange matrices. Their differences are
-largely limitted to a few amino acid
-changes.
+largely limitted to a few amino acid changes.
 
-![](manuscript_files/figure-gfm/wagvlg-1.png)<!-- -->![](manuscript_files/figure-gfm/wagvlg-2.png)<!-- -->![](manuscript_files/figure-gfm/wagvlg-3.png)<!-- -->![](manuscript_files/figure-gfm/wagvlg-4.png)<!-- -->
+![](manuscript_files/figure-gfm/wagvlg-1.png)<!-- -->
 
 ## Matrix mapping
 
