@@ -275,8 +275,17 @@ All files associated with this analysis are available at https://github.com/case
 
 ### Data wrangling
 
+We retreived matrices from each publication (Table XX), storing the raw data in this manuscript's version control repository. We manually edited some minor formatting to make the batch processing of the matrices *en masse*, e.g. standardizing the formatting of charset blocks. All changes made are tracked with git.
+
 ### Matrix comparison and annotation
 
+#### Taxon name reconciliation
+
+We programatically queried the NCBI Taxonomy database to standardize names of samples in each matrix. We also use a table where manual entries were needed (Supp Table XX, reconciliation/taxonomy_info/manual_taxonomy_map.tsv), e.g. authors of original matrix indicate species name in original manuscript. For a table summarizing all samples and their new or lengthened names, see Table XX(reconciliation/taxonomy_info/taxon_table.tsv).
+
+#### All by all sequence comparison
+
+We used DIAMOND [@Buchfink:2014] to compare each sequence to all others using default `diamond blastp` parameters. We constructed a network with Python and NetworkX [@Hagberg:2008] v2.2 from these results (filters: pident > 95.0, eValue < 1e-25, no self->self) where each node is a sequence and each edge is a result. We extracted each component of connected nodes such that that that every component has no edges to any other nodes.
 
 
 ### Phylogenetic analyses
@@ -284,6 +293,8 @@ All files associated with this analysis are available at https://github.com/case
 
 
 ## Ackowledgements
+
+We thank the Yale Center for Research Computing for use of the research computing infrastructure, specificaly the Farnam cluser.
 
 
 
