@@ -22,7 +22,7 @@ https://github.com/caseywdunn/comparative_expression_2017/tree/master/docker .
 To run an RStudio session:
 
 ```
-docker run -e PASSWORD=secret123 -v /path/to/animal_root:/animal_root --rm -p 8787:8787 animal_root
+docker run --rm  -dPv -e PASSWORD=secret123 -e USERID=$UID -v /home/$USER:/home/$USER -p 8787:8787 animal_root
 ```
 
 Then go to http://localhost:8787/ in your browser. Log in with user/password rstudio/secret123 (Password can be anything except "rstudio").
@@ -30,5 +30,5 @@ Then go to http://localhost:8787/ in your browser. Log in with user/password rst
 To run an interactive shell:
 
 ```
-docker run -it --rm -v /path/to/animal_root:/animal_root animal_root bash
+docker run --rm -it -e USERID=$UID -v /path/to/animal_root:/animal_root animal_root bash
 ```
