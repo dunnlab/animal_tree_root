@@ -290,11 +290,39 @@ All files associated with this analysis are available at
 
 ### Data wrangling
 
+We retreived matrices from each publication (Table XX), storing the raw
+data in this manuscript’s version control repository. We manually edited
+some minor formatting to make the batch processing of the matrices *en
+masse*, e.g. standardizing the formatting of charset blocks. All changes
+made are tracked with git.
+
 ### Matrix comparison and annotation
+
+#### Taxon name reconciliation
+
+We programatically queried the NCBI Taxonomy database to standardize
+names of samples in each matrix. We also use a table where manual
+entries were needed (Supp Table XX,
+reconciliation/taxonomy\_info/manual\_taxonomy\_map.tsv), e.g. authors
+of original matrix indicate species name in original manuscript. For a
+table summarizing all samples and their new or lengthened names, see
+Table XX(reconciliation/taxonomy\_info/taxon\_table.tsv).
+
+#### All by all sequence comparison
+
+We used DIAMOND \[7\] to compare each sequence to all others using
+default `diamond blastp` parameters. We constructed a network with
+Python and NetworkX \[8\] v2.2 from these results (filters: pident \>
+95.0, eValue \< 1e-25, no self-\>self) where each node is a sequence and
+each edge is a result. We extracted each component of connected nodes
+such that that that every component has no edges to any other nodes.
 
 ### Phylogenetic analyses
 
 ## Ackowledgements
+
+We thank the Yale Center for Research Computing for use of the research
+computing infrastructure, specificaly the Farnam cluser.
 
 ## Author contributions
 
@@ -314,7 +342,7 @@ other animals.
 The data matrix was constructed using a semi-automated approach. Genes
 were translated into proteins, promiscuous domains were masked, all gene
 sequences from all species were compared to each other with blastp,
-genes were clustered based on this similarity with TribeMCL \[7\], and
+genes were clustered based on this similarity with TribeMCL \[9\], and
 these clusters were filtered to remove those with poor taxon sampling
 and high rates of lineage-specific duplications. Gene trees were then
 constructed, and in clades of sequences all from the same species all
@@ -324,14 +352,14 @@ taxon were then manually inspected. If strongly supported deep nodes
 indicative of paralogy were found, the entire gene was discarded. If the
 duplications for a a small number of taxa were unresolved, all genes
 from those taxa were excluded. Genes were then realigned and sites were
-filtered with Gblocks \[8\], resulting in a 77 taxon matrix. Some taxa
+filtered with Gblocks \[10\], resulting in a 77 taxon matrix. Some taxa
 in this matrix were quite unstable, which obscured other
 strongly-supported relationships. Unstable taxa were identified with
-leaf stability indices \[9\], as implemented in phyutility \[10\], and
+leaf stability indices \[11\], as implemented in phyutility \[12\], and
 removed from the matrix. This resulted in the 64-taxon matrix that is
 the focus of most of their analyses. Phylogenetic analyses were
 conducted under the F81+CAT model in phylobayes \[6\], and under the WAG
-model in MrBayes \[11\] and RAxML \[12\].
+model in MrBayes \[13\] and RAxML \[14\].
 
 Regarding the recovery of Ctenophora-sister, the authors concluded:
 
@@ -354,7 +382,7 @@ Philippe *et al.* 2009 \[Philippe:2009hh\]…
 
 ### Pick *et al.* 2010
 
-Pick *et al.* \[13\] sought to test whether Ctenophora-sister was an
+Pick *et al.* \[15\] sought to test whether Ctenophora-sister was an
 artefact of insufficient taxon sampling. They added new and additional
 published sequence data to the 64-taxon matrix of Dunn *et al.* \[2\].
 The new taxa included 12 sponges, 1 ctenophore, 5 cnidarians, and
@@ -384,7 +412,7 @@ Porifera-sister are not strong, they conclude:
 
 They also investigated saturation, and conclude that Dunn *et al.* \[2\]
 is more saturated than Philippe *et al.* 2009 \[Philippe:2009hh\]. Note
-that the Pick *et al.* \[13\] dataset is not reanalyzed here because
+that the Pick *et al.* \[15\] dataset is not reanalyzed here because
 partition data are not available, and due to site filtering the
 partition file from Dunn *et al.* \[2\] cannot be applied to this
 matrix.
@@ -690,9 +718,27 @@ doi:[10.1093/molbev/msh112](https://doi.org/10.1093/molbev/msh112)
 
 </div>
 
+<div id="ref-Buchfink:2014">
+
+7\. Buchfink B, Xie C, Huson DH. Fast and sensitive protein alignment
+using diamond. Nature Methods. Nature Publishing Group, a division of
+Macmillan Publishers Limited. All Rights Reserved. SN -; 2014;12: 59 EP.
+Available: <https://doi.org/10.1038/nmeth.3176>
+
+</div>
+
+<div id="ref-Hagberg:2008">
+
+8\. Hagberg AA, Schult DA, Swart PJ. Exploring network structure,
+dynamics, and function using networkx. In: Varoquaux G, Vaught T,
+Millman J, editors. Proceedings of the 7th python in science conference.
+Pasadena, CA USA; 2008. pp. 11–15. 
+
+</div>
+
 <div id="ref-Enright:2002uq">
 
-7\. Enright A, Van Dongen S, Ouzounis C. An efficient algorithm for
+9\. Enright A, Van Dongen S, Ouzounis C. An efficient algorithm for
 large-scale detection of protein families. Nucleic Acids Research.
 Oxford University Press; 2002;30: 1575–1584.
 doi:[10.1093/nar/30.7.1575](https://doi.org/10.1093/nar/30.7.1575)
@@ -701,16 +747,16 @@ doi:[10.1093/nar/30.7.1575](https://doi.org/10.1093/nar/30.7.1575)
 
 <div id="ref-Castresana:2000vy">
 
-8\. Castresana J. Selection of conserved blocks from multiple alignments
-for their use in phylogenetic analysis. Molecular Biology and Evolution.
-2000;17: 540–552. Available:
+10\. Castresana J. Selection of conserved blocks from multiple
+alignments for their use in phylogenetic analysis. Molecular Biology and
+Evolution. 2000;17: 540–552. Available:
 <http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&dopt=Citation&list_uids=10742046 >
 
 </div>
 
 <div id="ref-Thorley:1999kg">
 
-9\. Thorley J, Wilkinson M. Testing the phylogenetic stability of early
+11\. Thorley J, Wilkinson M. Testing the phylogenetic stability of early
 tetrapods. Journal of Theoretical Biology. 1999;200: 343–344.
 doi:[10.1006/jtbi.1999.0999](https://doi.org/10.1006/jtbi.1999.0999)
 
@@ -718,7 +764,7 @@ doi:[10.1006/jtbi.1999.0999](https://doi.org/10.1006/jtbi.1999.0999)
 
 <div id="ref-Smith:2008gb">
 
-10\. Smith SA, Dunn CW. Phyutility: a phyloinformatics tool for trees,
+12\. Smith SA, Dunn CW. Phyutility: a phyloinformatics tool for trees,
 alignments and molecular data. Bioinformatics. Oxford University Press;
 2008;24: 715–716.
 doi:[10.1093/bioinformatics/btm619](https://doi.org/10.1093/bioinformatics/btm619)
@@ -727,7 +773,7 @@ doi:[10.1093/bioinformatics/btm619](https://doi.org/10.1093/bioinformatics/btm61
 
 <div id="ref-Ronquist:2003hx">
 
-11\. Ronquist F, Huelsenbeck JP. MrBayes 3: Bayesian phylogenetic
+13\. Ronquist F, Huelsenbeck JP. MrBayes 3: Bayesian phylogenetic
 inference under mixed models. Bioinformatics. 2003;19: 1572–1574.
 doi:[10.1093/bioinformatics/btg180](https://doi.org/10.1093/bioinformatics/btg180)
 
@@ -735,7 +781,7 @@ doi:[10.1093/bioinformatics/btg180](https://doi.org/10.1093/bioinformatics/btg18
 
 <div id="ref-Stamatakis:2006wc">
 
-12\. Stamatakis A. RAxML-VI-HPC: maximum likelihood-based phylogenetic
+14\. Stamatakis A. RAxML-VI-HPC: maximum likelihood-based phylogenetic
 analyses with thousands of taxa and mixed models. Bioinformatics.
 2006;22: 2688–2690.
 doi:[10.1093/bioinformatics/btl446](https://doi.org/10.1093/bioinformatics/btl446)
@@ -744,7 +790,7 @@ doi:[10.1093/bioinformatics/btl446](https://doi.org/10.1093/bioinformatics/btl44
 
 <div id="ref-Pick:2010eb">
 
-13\. Pick KS, Philippe H, Schreiber F, Erpenbeck D, Jackson DJ, Wrede P,
+15\. Pick KS, Philippe H, Schreiber F, Erpenbeck D, Jackson DJ, Wrede P,
 et al. Improved phylogenomic taxon sampling noticeably affects
 nonbilaterian relationships. Molecular Biology and Evolution. 2010;27:
 1983–1987.
