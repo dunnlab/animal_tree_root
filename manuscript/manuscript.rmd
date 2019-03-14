@@ -285,10 +285,13 @@ We retreived matrices from each publication (Table XX), storing the raw data in 
 
 We programatically queried the NCBI Taxonomy database to standardize names of samples in each matrix. We also use a table where manual entries were needed (Supp Table XX, reconciliation/taxonomy_info/manual_taxonomy_map.tsv), e.g. authors of original matrix indicate species name in original manuscript. For a table summarizing all samples and their new or lengthened names, see Table XX(reconciliation/taxonomy_info/taxon_table.tsv).
 
-#### All by all sequence comparison
+#### Sequence Comparisons
 
-We used DIAMOND [@Buchfink:2014] to compare each sequence to all others using default `diamond blastp` parameters. We constructed a network with Python and NetworkX [@Hagberg:2008] v2.2 from these results (filters: pident > 95.0, eValue < 1e-25, no self->self) where each node is a sequence and each edge is a result. We extracted each component of connected nodes such that that that every component has no edges to any other nodes.
+We used DIAMOND [@Buchfink:2014] to compare each sequence to all others using default diamond blastp parameters. We further filtered DIAMOND results such that we retained hits for 90% of partitions (pident > 78.0, eValue < 1e-15, no self->self). We ran BUSCO witrh default parameters for all sequences against the provided metazoa gene set. We also ran a BLAST+ blastp search against the SwissProt [cite] database, filtering hit such that we retain at least one hit for ~97% of partitions (pident > 50.0, eValue < 1e-15).
 
+#### Partition Network
+
+We constructed a network with Python and NetworkX [@Hagberg:2008] v2.2 where each node is a partition and each edge represents a DIAMOND sequence to sequence match. We extracted each component of connected nodes where every component has no edges to any other nodes. We decorated every node with the most numerous SwissProt BLAST+ result and BUSCO results to see which components contain which classes and families of genes.
 
 ### Phylogenetic analyses
 
