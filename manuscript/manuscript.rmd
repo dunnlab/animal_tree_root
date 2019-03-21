@@ -291,7 +291,7 @@ We used DIAMOND [@Buchfink:2014] to compare each sequence to all others using de
 
 #### Partition Network
 
-We constructed a network with Python and NetworkX [@Hagberg:2008] v2.2 where each node is a partition and each edge represents a DIAMOND sequence to sequence match. We extracted each component of connected nodes where every component has no edges to any other nodes. We decorated every node with the most numerous SwissProt BLAST+ result and BUSCO results to see which components contain which classes and families of genes.
+We constructed a network with Python and NetworkX [@Hagberg:2008] v2.2 where each node is a partition and each edge represents a DIAMOND sequence to sequence match. We extracted each component of connected nodes where every component has no edges to any other nodes. We further split these components if the the most connected node (i.e. most edges) had two times more the standard deviation from the mean number of edges in the component it is a member of and if removing that node splits the component into two or more components. We then decorated every node with the most often found SwissProt BLAST+ result and BUSCO results to see which components contain which classes and families of genes.
 
 ### Phylogenetic analyses
 
