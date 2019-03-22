@@ -33,22 +33,22 @@ registerDoParallel( cores )
 # Set up constants
 focal_matrices = 
 	read.table(text = 
-		"manuscript matrix
-		Borowiec2015	Total1080
-		Chang2015 Chang2015
-		Dunn2008  Dunn2008
-		Hejnol2009 Hejnol2009
-		Moroz2014 ED3a
-		Nosenko2013 nonribosomal_9187_smatrix
-		Nosenko2013 ribosomal_11057_smatrix
-		Philippe2009	Philippe2009
-		Ryan2013	est.opisthokonta
-		Ryan2013  genome.opisthokonta
-		Simion2017	supermatrix_97sp_401632pos_1719genes
-		Whelan2015	Metazoa_Choano_RCFV_strict
-		", 
-		header = TRUE, 
-		stringsAsFactors = FALSE)
+						 	"manuscript matrix
+						 Borowiec2015	Total1080
+						 Chang2015 Chang2015
+						 Dunn2008  Dunn2008
+						 Hejnol2009 Hejnol2009
+						 Moroz2014 ED3a
+						 Nosenko2013 nonribosomal_9187_smatrix
+						 Nosenko2013 ribosomal_11057_smatrix
+						 Philippe2009	Philippe2009
+						 Ryan2013	est.opisthokonta
+						 Ryan2013  genome.opisthokonta
+						 Simion2017	supermatrix_97sp_401632pos_1719genes
+						 Whelan2015	Metazoa_Choano_RCFV_strict
+						 ", 
+						 header = TRUE, 
+						 stringsAsFactors = FALSE)
 
 bootstrap_threshold = 90
 posterior_prob_threshold = 95
@@ -221,30 +221,32 @@ matrix_overlap = matrix_overlap[mask,]
 
 # New analyses of published matrices
 
-trees_path = "../trees_new/"
+trees_path_iqtree = "../trees_new/iqtree/"
 constraint_tree_path = "../trees_new/constraint_trees/"
 contree_extension = "treefile"
-tree_file_names = list.files(path = trees_path, pattern = str_c( "\\.", contree_extension, "$" ))
+file_names_iqtree = list.files(path = trees_path_iqtree, pattern = str_c( "\\.", contree_extension, "$" ))
+
+trees_path_phylobayes = "trees_new/phylobayes/"
 
 # Temp fix re issue #8
-tree_file_names = tree_file_names[ ! grepl("Philippe2009", tree_file_names) ]
+file_names_iqtree = file_names_iqtree[ ! grepl("Philippe2009", file_names_iqtree) ]
 
-tree_file_names = tree_file_names[ ! grepl("Nosenko2013", tree_file_names) ]
+file_names_iqtree = file_names_iqtree[ ! grepl("Nosenko2013", file_names_iqtree) ]
 
-parse_tree = 	function( tree_file ){
+parse_iqtree = 	function( tree_file ){
 	print(tree_file)
 	log_file = sub( str_c( contree_extension, "$" ), "log", tree_file )
 	bootstrap_file = sub( str_c( contree_extension, "$" ), "ufboot", tree_file )
 	
-	tree_file_path = paste(c(trees_path, tree_file), collapse="")
-	log_file_path = paste(c(trees_path, log_file), collapse="")
+	tree_file_path = paste(c(trees_path_iqtree, tree_file), collapse="")
+	log_file_path = paste(c(trees_path_iqtree, log_file), collapse="")
 	
 	if(!file.exists(log_file_path)){
 		warning( str_c( "Missing log file: ", log_file_path ) )
 		return( NA )
 	}
 	
-	bootstrap_file_path = paste(c(trees_path, bootstrap_file), collapse="")
+	bootstrap_file_path = paste(c(trees_path_iqtree, bootstrap_file), collapse="")
 	if(!file.exists(bootstrap_file_path)){
 		warning( str_c( "Missing bootstrap file: ", bootstrap_file_path ) )
 		return( NA )
@@ -323,7 +325,7 @@ parse_tree = 	function( tree_file ){
 		porifera_sister_constraint_tree, 
 		file = paste( constraint_tree_path, base_name, ".porifera_sister_constraint.tree", sep="") 
 	)
-
+	
 	PoPlBiCn_not = tree$tip.label[ ! tree$tip.label %in% PoPlBiCn ]
 	ctenophora_sister_constraint_tree = generate_constaint_tree( PoPlBiCn, PoPlBiCn_not )
 	write.tree( 
@@ -380,8 +382,11 @@ parse_tree = 	function( tree_file ){
 }
 
 
-trees = foreach( tree_file=tree_file_names) %dopar%
-	parse_tree( tree_file )
+trees = foreach( tree_file = file_names_iqtree ) %dopar%
+	parse_iqtree( tree_file )
+
+parse_pbtree = 	function( tree_file ){
+}
 
 analyses_new = lapply(
 	trees,
@@ -397,7 +402,7 @@ analyses_new = lapply(
 		)
 	}
 ) %>% 
-bind_rows()
+	bind_rows()
 
 analyses_new$inference = rep( "ML", nrow( analyses_new ) )
 
