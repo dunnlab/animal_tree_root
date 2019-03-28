@@ -287,11 +287,15 @@ We programatically queried the NCBI Taxonomy database to standardize names of sa
 
 #### Sequence Comparisons
 
-We used DIAMOND [@Buchfink:2014] to compare each sequence to all others using default diamond blastp parameters. We further filtered DIAMOND results such that we retained hits for 90% of partitions (pident > 78.0, eValue < 1e-15, no self->self). We ran BUSCO witrh default parameters for all sequences against the provided metazoa gene set. We also ran a BLAST+ blastp search against the SwissProt [cite] database, filtering hit such that we retain at least one hit for ~97% of partitions (pident > 50.0, eValue < 1e-15).
+Using the partition files for each matrix, we isolated each sequence for each taxon from each partition. Because many of the matrices had been processed by the original authors to remove columns that are poorly sampled or highly variable, these matrix-derived sequences can have deletions relative to the actual gene sequences.
+
+We used DIAMOND [@Buchfink:2014] to compare each sequence to all others using default diamond blastp parameters. We further filtered DIAMOND results such that we retained hits for 90% of partitions (pident > 78.0, eValue < 1e-15, no self->self). We ran BUSCO witrh default parameters for all sequences against the provided metazoa gene set. We also ran a BLAST+ blastp search against the SwissProt [cite] database, filtering hits such that we retain at least one hit for ~97% of partitions (pident > 50.0, eValue < 1e-15).
 
 #### Partition Network
 
-We constructed a network with Python and NetworkX [@Hagberg:2008] v2.2 where each node is a partition and each edge represents a DIAMOND sequence to sequence match. We extracted each component of connected nodes where every component has no edges to any other nodes. We further split these components if the the most connected node (i.e. most edges) had two times more the standard deviation from the mean number of edges in the component it is a member of and if removing that node splits the component into two or more components. We then decorated every node with the most often found SwissProt BLAST+ result and BUSCO results to see which components contain which classes and families of genes.
+We next used the sequence similarity comparisons derived above to compare partitions. 
+
+We constructed a network with Python and NetworkX [@Hagberg:2008] v2.2 where each node is a partition and each edge represents a DIAMOND sequence-to-sequence match between sequences in the partitions. We extracted each connected component from this network. We further split these components if the the most connected node (i.e. most edges) had two times more the standard deviation from the mean number of edges in the component it is a member of and if removing that node splits the component into two or more components. We then decorated every node in the partition network with the most often found SwissProt BLAST+ result and BUSCO results to see which components contain which classes and families of genes.
 
 ### Phylogenetic analyses
 
