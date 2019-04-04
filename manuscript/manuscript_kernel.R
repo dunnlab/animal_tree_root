@@ -429,49 +429,42 @@ analyses_new$model_summary = factor( analyses_new$model_summary, levels=c("WAG+C
 
 # Partition comparison across matrices
 
+n_total_partitions =
+	partitions_all %>% 
+	group_by(matrix) %>%
+	summarize("n_total_partitions"=n_distinct(partition)) 
+n_compandBUSCO = 
+	partition_map_global %>%
+		group_by(matrix) %>%
+		summarize(
+			"n_components"=n_distinct(gene),
+			"n_distinct_BUSCO"=n_distinct(BUSCO_ID)
+		)
+n_components_with_BUSCO =
+	partition_map_global %>%
+		filter(BUSCO_ID != "") %>%
+		group_by(matrix,gene) %>%
+		summarize(n()) %>%
+		group_by(matrix) %>%
+		tally(name="n_components_with_BUSCO")
+n_ribo = 
+	partition_map_global %>% 
+		group_by(matrix,gene) %>% 
+		tally(ribo_found) %>% 
+		group_by(matrix) %>% 
+		count(name="n_ribo")
 discarded_parts = 
 	read_tsv("../reconciliation/blast/graphs/discarded_nodes.tsv") %>%
 	group_by(matrix) %>%
 	summarize("n_partitions_discarded"=n_distinct(partition_name))
 
-partition_network_summary =
-	partitions_all %>% 
-	group_by(matrix) %>%
-	summarize(
-		"n_total_partitions"=n_distinct(partition),
-	) %>%
-	left_join(
-		left_join(
-			partition_map_global %>%
-				group_by(matrix) %>%
-				summarize(
-					"n_components"=n_distinct(gene),
-					"n_distinct_BUSCO"=n_distinct(BUSCO_ID),
-				),
-			partition_map_global %>% 
-				group_by(matrix,gene) %>% 
-				tally(ribo_found) %>% 
-				group_by(matrix) %>% 
-				count(name="n_ribo"),
-			by=c("matrix")
-		),
-		by=c("matrix")
-	)
 partition_network_summary = 
-	left_join(partition_network_summary, 
-						discarded_parts, 
-						by=c("matrix")) %>% 
+	n_total_partitions%>%
+	left_join(n_compandBUSCO,          by="matrix") %>%
+	left_join(n_components_with_BUSCO, by="matrix") %>%
+	left_join(n_ribo,                  by="matrix") %>%
+	left_join(discarded_parts,         by="matrix") %>% 
 	mutate(n_partitions_discarded = replace_na(n_partitions_discarded, 0))
-	partition_network_summary = 
-	left_join(partition_network_summary,
-						partition_map_global %>%
-							filter(BUSCO_ID != "") %>%
-							group_by(matrix,gene) %>%
-							summarize(n()) %>%
-							group_by(matrix) %>%
-							tally(name="n_components_with_busco"),
-						by=c("matrix")
-						)
 
 ## Record information about the session
 session_info_kernel = sessionInfo()
