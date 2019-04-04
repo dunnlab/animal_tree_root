@@ -19,6 +19,8 @@ library( igraph )
 library( hutan )
 library( doParallel )
 
+# setwd("/animal_root/manuscript")
+
 source( "functions.R" )
 
 # Set system computational parameters
@@ -63,10 +65,13 @@ analyses_published =
 
 taxonomy_reference = read_tsv("../reconciliation/taxonomy_info/taxon_table.tsv")
 
+# raw columns:
+# component_number, matrix, partition_name, edges, nodes_in_component, component_density, BUSCO_ID, BUSCO_description, 
+# SwissProt_accession, SwissProt_description, GO_annotations, ribo_found
 partition_map_global = 
-	read_tsv("../reconciliation/blast/graphs/diamond_partition_clusters.tsv") %>%
+	read_tsv("../reconciliation/blast/graphs/partition_components_split_annotated.tsv") %>%
 	dplyr::rename(partition=partition_name) %>%
-	dplyr::rename(gene=cluster_number) %>%
+	dplyr::rename(gene=component_number) %>%
 	mutate( gene = as.character(gene) )
 
 analyses_published$result = "Unresolved"
@@ -424,70 +429,39 @@ analyses_new$model_summary = factor( analyses_new$model_summary, levels=c("WAG+C
 
 # Partition comparison across matrices
 
-Dpart = 
-	read_tsv("../reconciliation/blast/graphs/partitions_graph.tsv") %>% 
-	mutate( node1 = paste(matrix1, part1, sep = ':') ) %>% 
-	mutate( node2 = paste(matrix2, part2, sep = ':') )
+discarded_parts = 
+	read_tsv("../reconciliation/blast/graphs/discarded_nodes.tsv") %>%
+	group_by(matrix) %>%
+	summarize("n_partitions_discarded"=n_distinct(partition_name))
 
-# Hits to self not included anymore, so skip this bit
-# Dpart_self = Dpart %>% 
-#	 filter( node1==node2 ) %>%
-#	 select( matrix1, part1, node1, count )
-# ggplot( Dpart_self ) + geom_density(aes(count))
-
-
-# Retain only nonself edges
-Dpart %<>% filter( node1!=node2 )
-
-
-# Network analysis
-# Builds on https://www.jessesadler.com/post/network-analysis-with-r/
-
-D_source = Dpart %>%
-	distinct(node1, .keep_all = TRUE ) %>%
-	select( node1, matrix1, part1 ) %>%
-	dplyr::rename(label = node1, matrix = matrix1, part = part1 )
-
-D_dest = Dpart %>%
-	distinct(node2, .keep_all = TRUE ) %>%
-	select( node2, matrix2, part2 ) %>%
-	dplyr::rename(label = node2, matrix = matrix2, part = part2 )
-
-nodes = 
-	bind_rows( D_source, D_dest ) %>% 
-	distinct( label, .keep_all = TRUE ) %>%
-	arrange( label ) %>% 
-	rowid_to_column("id")
-
-
-sources = Dpart %>%
-	distinct(node1) %>%
-	dplyr::rename(label = node1)
-
-destinations = Dpart %>%
-	distinct(node2) %>%
-	dplyr::rename(label = node2)
-
-nodes2 = 
-	full_join(sources, destinations, by = "label") %>% 
-	arrange( label ) %>% 
-	rowid_to_column("id")
-
-edges = Dpart %>% 
-	select( node1, node2, count ) %>%
-	left_join(nodes, by = c("node1" = "label")) %>% 
-	dplyr::rename(from = id) %>% 
-	left_join(nodes, by = c("node2" = "label")) %>% 
-	dplyr::rename(to = id) %>%
-	dplyr::rename(weight = count) %>%
-	select( from, to, weight )
-
-
-gene_igraph = graph_from_data_frame(d = edges, vertices = nodes, directed = FALSE)
-gene_clusters = clusters(gene_igraph, mode=c("weak", "strong"))
-
-nodes$cluster = gene_clusters$membership
-
+partition_network_summary =
+	partitions_all %>% 
+	group_by(matrix) %>%
+	summarize(
+		"n_total_partitions"=n_distinct(partition),
+	) %>%
+	left_join(
+		left_join(
+			partition_map_global %>%
+				group_by(matrix) %>%
+				summarize(
+					"n_components"=n_distinct(gene),
+					"n_distinct_BUSCO"=n_distinct(BUSCO_ID),
+				),
+			partition_map_global %>% 
+				group_by(matrix,gene) %>% 
+				tally(ribo_found) %>% 
+				group_by(matrix) %>% 
+				count(name="n_ribo"),
+			by=c("matrix")
+		),
+		by=c("matrix")
+	)
+partition_network_summary = 
+	left_join(partition_network_summary, 
+						discarded_parts, 
+						by=c("matrix")) %>% 
+	mutate(n_partitions_discarded = replace_na(n_partitions_discarded, 0))
 
 
 ## Record information about the session
