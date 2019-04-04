@@ -462,7 +462,16 @@ partition_network_summary =
 						discarded_parts, 
 						by=c("matrix")) %>% 
 	mutate(n_partitions_discarded = replace_na(n_partitions_discarded, 0))
-
+	partition_network_summary = 
+	left_join(partition_network_summary,
+						partition_map_global %>%
+							filter(BUSCO_ID != "") %>%
+							group_by(matrix,gene) %>%
+							summarize(n()) %>%
+							group_by(matrix) %>%
+							tally(name="n_components_with_busco"),
+						by=c("matrix")
+						)
 
 ## Record information about the session
 session_info_kernel = sessionInfo()
