@@ -233,7 +233,7 @@ file_names_iqtree = file_names_iqtree[ ! grepl("Philippe2009", file_names_iqtree
 
 file_names_iqtree = file_names_iqtree[ ! grepl("Nosenko2013", file_names_iqtree) ]
 
-parse_iqtree = 	function( tree_file ){
+parse_tree_iqtree = 	function( tree_file ){
 	print(tree_file)
 	log_file = sub( str_c( contree_extension, "$" ), "log", tree_file )
 	bootstrap_file = sub( str_c( contree_extension, "$" ), "ufboot", tree_file )
@@ -381,12 +381,16 @@ parse_iqtree = 	function( tree_file ){
 	return( tree )
 }
 
+parse_tree_pb = function( tree_file ){
+}
+
+
+
 
 trees = foreach( tree_file = file_names_iqtree ) %dopar%
-	parse_iqtree( tree_file )
+	parse_tree_iqtree( tree_file )
 
-parse_pbtree = 	function( tree_file ){
-}
+
 
 analyses_new = lapply(
 	trees,
