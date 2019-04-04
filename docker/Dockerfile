@@ -1,10 +1,10 @@
-FROM rocker/geospatial:3.5.1
+FROM rocker/geospatial:3.5.3
 
 # can override these at build time
 # e.g. docker build --build-arg arg_iqtreeversion=1.6.8
 
 ARG arg_iqtreeversion=1.6.7
-ARG arg_minicondaversion=4.5.11
+ARG arg_minicondaversion=4.5.12
 ARG arg_gitlfsversion=2.6.0
 ARG arg_hutan_ref=b5bebb4
 ARG arg_bioc_version=3.8
