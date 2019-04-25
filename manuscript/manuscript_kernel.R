@@ -14,9 +14,7 @@ time_start = Sys.time()
 
 library( tidyverse )
 library( magrittr )
-library( ape )
 library( igraph )
-library( hutan )
 library( doParallel )
 
 # setwd("/animal_root/manuscript")
@@ -99,16 +97,12 @@ taxa =
 	mutate( clade = factor( clade, levels=clades )  )
 
 matrix_path = "../data_processed/matrices/"
-phylip_file_names = list.files(path = matrix_path, pattern = ".+\\.phy$")
+phylip_file_names = list.files(path = matrix_path, pattern = ".+\\.phy$", full.names=TRUE)
 
-parse_phylip =	function( phylip_file ){
-	print(phylip_file)
-	partition_file = sub( "phy$", "nex", phylip_file )
+parse_phylip =	function( phylip_path ){
 	
-	phylip_path = paste(c(matrix_path, phylip_file), collapse="")
-	partition_path = paste(c(matrix_path, partition_file), collapse="")
-	
-	base_name = sub( "\\.phy$", "", phylip_file )
+	partition_path = sub( "phy$", "nex", phylip_path )
+	base_name = sub( "\\.phy$", "", basename( phylip_path ) )
 	elements = strsplit(base_name, "_") %>% unlist()
 	manuscript_name = elements[1]
 	matrix_name = base_name
@@ -257,176 +251,21 @@ matrix_overlap = matrix_overlap[mask,]
 
 # New analyses of published matrices
 
-trees_path_iqtree = "../trees_new/iqtree/"
-constraint_tree_path = "../trees_new/constraint_trees/"
-contree_extension = "treefile"
-file_names_iqtree = list.files(path = trees_path_iqtree, pattern = str_c( "\\.", contree_extension, "$" ))
+trees_path_iqtree = "../trees_new/iqtree"
+iqtree_ext = "\\.treefile$"
+file_names_iqtree = list.files( path = trees_path_iqtree, pattern = iqtree_ext, full.names = TRUE )
 
-trees_path_phylobayes = "trees_new/phylobayes/"
+trees_path_pb = "../trees_new/phylobayes"
+pb_tree_ext = "\\.con\\.tre$"
+file_names_pb = list.files( path = trees_path_pb, pattern = pb_tree_ext, full.names = TRUE )
 
 # Temp fix re issue #8
 file_names_iqtree = file_names_iqtree[ ! grepl("Philippe2009", file_names_iqtree) ]
-
 file_names_iqtree = file_names_iqtree[ ! grepl("Nosenko2013", file_names_iqtree) ]
-
-parse_tree_iqtree = 	function( tree_file ){
-	print(tree_file)
-	log_file = sub( str_c( contree_extension, "$" ), "log", tree_file )
-	bootstrap_file = sub( str_c( contree_extension, "$" ), "ufboot", tree_file )
-	
-	tree_file_path = paste(c(trees_path_iqtree, tree_file), collapse="")
-	log_file_path = paste(c(trees_path_iqtree, log_file), collapse="")
-	
-	if(!file.exists(log_file_path)){
-		warning( str_c( "Missing log file: ", log_file_path ) )
-		return( NA )
-	}
-	
-	bootstrap_file_path = paste(c(trees_path_iqtree, bootstrap_file), collapse="")
-	if(!file.exists(bootstrap_file_path)){
-		warning( str_c( "Missing bootstrap file: ", bootstrap_file_path ) )
-		return( NA )
-	}
-	
-	base_name = sub( str_c( "\\.", contree_extension, "$" ), "", tree_file )
-	elements = strsplit(base_name, "\\.") %>% unlist()
-	matrix_name = elements[1]
-	model_name = elements[2]
-	
-	tree = read.tree( file = tree_file_path )
-	
-	# Get the clades of the tips
-	clades = 
-		taxonomy_reference$clade_assignment[ 
-			match( tree$tip.label, taxonomy_reference$relabelled_name ) 
-			]
-	
-	# Get the outgroup sampling
-	
-	outgroup = NA
-	
-	sampling = "Metazoa"
-	if( "Choanoflagellida" %in% clades ){
-		sampling = "Choanimalia"
-		outgroup = which( clades == "Choanoflagellida" )
-	}
-	
-	if( ("Ichthyosporea" %in% clades) | ("Filasterea" %in% clades) ){
-		sampling = "Holozoa"
-		outgroup = c( which( clades == "Ichthyosporea" ),  which( clades == "Filasterea" ))
-	}
-	
-	if( "Fungi" %in% clades ){
-		sampling = "Opisthokonta"
-		outgroup = which( clades == "Fungi" )
-	}
-	
-	if( is.na(outgroup) ){
-		stop( "There are no outgroups in the tree, can't test rooting topology" )
-	}
-	
-	# Reroot the tree
-	# Use a single taxon from the outgroup since the outgroup is not guaranteed to be monophyletic
-	tree = root( tree, outgroup[1] )
-	
-	# Get the clades of the tips again, since tip order has changed
-	clades = 
-		taxonomy_reference$clade_assignment[ 
-			match( tree$tip.label, taxonomy_reference$relabelled_name ) 
-			]
-	
-	if( sum(is.na(clades)) > 0 ){
-		missing_clades = tree$tip.label[ is.na(clades) ]
-		stop( paste( c( "Some tips have missing clade names:", missing_clades ), collapse=" " ))
-	}
-	
-	if( sum(clades == "Ctenophora") < 1 ){
-		stop( "There are no ctenophores in the tree, can't test rooting topology" )
-	} 
-	
-	if( sum(clades == "Porifera") < 1 ){
-		stop( "There are no sponges in the tree, can't test rooting topology" )
-	} 
-	
-	# Get the set of taxa in the group Ctenophora+Placozoa+Bilateria+Cnidaria, the clade that exists under Proifera-sister
-	CtPlBiCn = tree$tip.label[ clades %in% c("Ctenophora", "Placozoa", "Bilateria", "Cnidaria") ]
-	
-	# Get the set of taxa in the group Porifera+Placozoa+Bilateria+Cnidaria, the clade that exists under Ctenophora-sister
-	PoPlBiCn = tree$tip.label[ clades %in% c("Porifera", "Placozoa", "Bilateria", "Cnidaria") ]
-	
-	# Write constraint trees for hypothesis testing
-	CtPlBiCn_not = tree$tip.label[ ! tree$tip.label %in% CtPlBiCn ]
-	porifera_sister_constraint_tree = generate_constaint_tree( CtPlBiCn, CtPlBiCn_not )
-	write.tree( 
-		porifera_sister_constraint_tree, 
-		file = paste( constraint_tree_path, base_name, ".porifera_sister_constraint.tree", sep="") 
-	)
-	
-	PoPlBiCn_not = tree$tip.label[ ! tree$tip.label %in% PoPlBiCn ]
-	ctenophora_sister_constraint_tree = generate_constaint_tree( PoPlBiCn, PoPlBiCn_not )
-	write.tree( 
-		ctenophora_sister_constraint_tree, 
-		file = paste( constraint_tree_path, base_name, ".ctenophora_sister_constraint.tree", sep="") 
-	)	
-	
-	# Read the bootstrap trees
-	bootstrap_trees = read.tree(file = bootstrap_file_path)
-	
-	Ctenophora_sister = lapply(
-		bootstrap_trees,
-		function( phy ){
-			is_monophyletic( phy, PoPlBiCn )
-		}
-	) %>% 
-		unlist() %>%
-		mean()
-	
-	Porifera_sister = lapply(
-		bootstrap_trees,
-		function( phy ){
-			is_monophyletic( phy, CtPlBiCn )
-		}
-	) %>% 
-		unlist() %>%
-		mean()				
-	
-	# Stuff a few other things into the tree object
-	tree$matrix = matrix_name
-	tree$model = model_name
-	tree$modelfinder = FALSE
-	tree$clades = clades
-	tree$sampling = sampling
-	tree$ctenophora_sister = Ctenophora_sister
-	tree$porifera_sister = Porifera_sister
-	
-	# parse model
-	log_lines = read_lines( log_file_path )
-	
-	best_line = log_lines[ grepl("Best-fit model:", log_lines) ]
-	
-	if( length(best_line) > 1 ){
-		warning("More than one best model found")
-	}
-	
-	if( length(best_line) > 0 ){
-		tree$modelfinder = TRUE
-		elements = strsplit( best_line[1], " " ) %>% unlist()
-		tree$model = elements[3]
-	}
-	
-	return( tree )
-}
-
-parse_tree_pb = function( tree_file ){
-}
-
-
 
 
 trees = foreach( tree_file = file_names_iqtree ) %dopar%
-	parse_tree_iqtree( tree_file )
-
-
+	parse_tree_iqtree( tree_file, taxonomy_reference )
 
 analyses_new = lapply(
 	trees,

@@ -1,5 +1,7 @@
-library(Biostrings)
-library(tidyverse)
+library( Biostrings )
+library( ape )
+library( hutan )
+library( tidyverse )
 
 
 #######################################
@@ -81,7 +83,6 @@ PartitionedMultipleAlignment = function( alignment_file, partition_file=NULL, ta
 	
 	object
 }
-
 
 #####################################################
 ## GGPlot extension of multiple sequence alignments
@@ -185,4 +186,187 @@ overlap_rects = function( msa1, msa2 ){
 	D
 	
 	
+}
+
+#####################################################
+## Tree Parsing
+#' Parse iqtree or pb trees and return an overloaded ape::phylo with additional items:
+#'  (additional named items NA if not otherwise defined)
+#' 	
+#' matrix: matrix name
+#' model: model name
+#' modelfinder: TRUE if best model found
+#' clades: clades of the tips of the tree
+#' sampling = list of outgroups sampled
+#' ctenophora_sister: support for ctenophora as sister
+#' porifera_sister: support for porifera as sister
+#' bpdiff: bpcomp's maxdiff
+#'
+#' @param tree_file a string with path to a tree file
+#' @param taxonomy_reference data.frame or tibble generated from taxon_table.tsv
+#' @return ape::phylo with additional items
+#' @export
+
+parse_tree = 	function( tree_file,  taxonomy_reference ){
+	
+	tree = read.tree( file = tree_file )
+
+	# Get the clades of the tips
+	clades = 
+		taxonomy_reference$clade_assignment[ 
+			match( tree$tip.label, taxonomy_reference$relabelled_name ) 
+			]
+	
+	# Get the outgroup sampling
+	outgroup = NA
+	
+	sampling = "Metazoa"
+	if( "Choanoflagellida" %in% clades ){
+		sampling = "Choanimalia"
+		outgroup = which( clades == "Choanoflagellida" )
+	}
+	
+	if( ("Ichthyosporea" %in% clades) | ("Filasterea" %in% clades) ){
+		sampling = "Holozoa"
+		outgroup = c( which( clades == "Ichthyosporea" ),  which( clades == "Filasterea" ))
+	}
+	
+	if( "Fungi" %in% clades ){
+		sampling = "Opisthokonta"
+		outgroup = which( clades == "Fungi" )
+	}
+	
+	if( any( is.na( outgroup ) ) ){
+		stop( "There are no outgroups in the tree, can't test rooting topology" )
+	}
+	
+	# Reroot the tree
+	# Use a single taxon from the outgroup since the outgroup is not guaranteed to be monophyletic
+	tree = root( tree, outgroup[1] )
+
+	# Get the clades of the tips again, since tip order has changed
+	clades = 
+		taxonomy_reference$clade_assignment[ 
+			match( tree$tip.label, taxonomy_reference$relabelled_name ) 
+			]
+		
+	# initialize additional named items
+	tree$matrix = NA
+	tree$model = NA
+	tree$modelfinder = NA
+	tree$clades = clades
+	tree$sampling = sampling
+	tree$ctenophora_sister = NA
+	tree$porifera_sister = NA
+	tree$bpdiff = NA
+	
+	if( any( is.na( clades ) ) ){
+		missing_clades = tree$tip.label[ is.na( clades ) ]
+		stop( str_c( c( "Some tips have missing clade names:", missing_clades ), collapse=" " ) )
+	}
+	
+	if( ! any( clades == "Ctenophora" ) ){
+		stop( "There are no ctenophores in the tree, can't test rooting topology" )
+	} 
+	
+	if( ! any( clades == "Porifera" ) ){
+		stop( "There are no sponges in the tree, can't test rooting topology" )
+	} 
+	
+	return( tree )
+}
+
+parse_tree_pb = function( tree_file, taxonomy_reference ){
+	tree_file_path = normalizePath( tree_file )
+	print( tree_file_path )
+	tree_suffix = ".con.tre"
+	bpdiff_file_path = sub( "\\.con\\.tre$", ".bpdiff", tree_file_path )
+	
+	if(!file.exists(bpdiff_file_path)){
+		warning( str_c( "Missing bpdiff file: ", bpdiff_file_path ) )
+		return( NA )
+	}
+	
+	mdiff_line = strsplit( 
+		grep( "^maxdiff", readLines( bpdiff_file_path ), value = TRUE), 
+		":") %>% unlist()
+	mdiff = as.numeric(mdiff_line[2])
+	
+	tree = parse_tree( tree_file_path, taxonomy_reference )
+	tree$bpdiff = mdiff
+	
+	return(tree)
+}
+
+parse_tree_iqtree = function( tree_file, taxonomy_reference ){
+	tree_file_path = normalizePath( tree_file )
+	print( tree_file_path )
+	tree_wd = dirname( tree_file_path )
+	filename_parts = strsplit( basename( tree_file ), "\\." ) %>% unlist()
+	matrix_name = filename_parts[1]
+	model_name = filename_parts[2]
+	log_file_path = file.path( tree_wd, str_c( matrix_name, model_name, "log", sep = "." ) )
+	bootstrap_file_path = file.path( tree_wd, str_c( matrix_name, model_name, "ufboot", sep = "." ) )
+	
+	if(!file.exists(log_file_path)){
+		warning( str_c( "Missing log file: ", log_file_path ) )
+		return( NA )
+	}
+	
+	if(!file.exists(bootstrap_file_path)){
+		warning( str_c( "Missing bootstrap file: ", bootstrap_file_path ) )
+		return( NA )
+	}
+	
+	tree = parse_tree( tree_file_path, taxonomy_reference )
+	
+	# Get the set of taxa in the group Ctenophora+Placozoa+Bilateria+Cnidaria, the clade that exists under Proifera-sister
+	CtPlBiCn = tree$tip.label[ tree$clades %in% c("Ctenophora", "Placozoa", "Bilateria", "Cnidaria") ]
+	
+	# Get the set of taxa in the group Porifera+Placozoa+Bilateria+Cnidaria, the clade that exists under Ctenophora-sister
+	PoPlBiCn = tree$tip.label[ tree$clades %in% c("Porifera", "Placozoa", "Bilateria", "Cnidaria") ]
+	
+	# Read the bootstrap trees
+	bootstrap_trees = read.tree(file = bootstrap_file_path)
+	
+	Ctenophora_sister = lapply(
+		bootstrap_trees,
+		function( phy ){
+			is_monophyletic( phy, PoPlBiCn )
+		}
+	) %>% 
+		unlist() %>%
+		mean()
+	
+	Porifera_sister = lapply(
+		bootstrap_trees,
+		function( phy ){
+			is_monophyletic( phy, CtPlBiCn )
+		}
+	) %>% 
+		unlist() %>%
+		mean()				
+	
+	# Stuff a few other things into the tree object
+	tree$matrix = matrix_name
+	tree$model = model_name
+	tree$modelfinder = FALSE
+	tree$ctenophora_sister = Ctenophora_sister
+	tree$porifera_sister = Porifera_sister
+	
+	# parse model
+	log_lines = read_lines( log_file_path )
+	
+	best_line = log_lines[ grepl("Best-fit model:", log_lines) ]
+	
+	if( length(best_line) > 1 ){
+		warning("More than one best model found")
+	}
+	
+	if( length(best_line) > 0 ){
+		tree$modelfinder = TRUE
+		elements = strsplit( best_line[1], " " ) %>% unlist()
+		tree$model = elements[3]
+	}
+	return(tree)
 }
