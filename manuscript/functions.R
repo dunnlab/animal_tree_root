@@ -1,4 +1,5 @@
 library( Biostrings )
+library( "R.utils")
 library( ape )
 library( hutan )
 library( tidyverse )
@@ -201,6 +202,8 @@ overlap_rects = function( msa1, msa2 ){
 #' ctenophora_sister: support for ctenophora as sister
 #' porifera_sister: support for porifera as sister
 #' bpdiff: bpcomp's maxdiff
+#' CtPlBiCn: set of taxa in the group Ctenophora+Placozoa+Bilateria+Cnidaria, the clade that exists under Proifera-sister
+#' PoPlBiCn: set of taxa in the group Porifera+Placozoa+Bilateria+Cnidaria, the clade that exists under Ctenophora-sister
 #'
 #' @param tree_file a string with path to a tree file
 #' @param taxonomy_reference data.frame or tibble generated from taxon_table.tsv
@@ -273,14 +276,31 @@ parse_tree = 	function( tree_file,  taxonomy_reference ){
 		stop( "There are no sponges in the tree, can't test rooting topology" )
 	} 
 	
+	# Get the set of taxa in the group Ctenophora+Placozoa+Bilateria+Cnidaria, the clade that exists under Proifera-sister
+	tree$CtPlBiCn = tree$tip.label[ tree$clades %in% c("Ctenophora", "Placozoa", "Bilateria", "Cnidaria") ]
+	
+	# Get the set of taxa in the group Porifera+Placozoa+Bilateria+Cnidaria, the clade that exists under Ctenophora-sister
+	tree$PoPlBiCn = tree$tip.label[ tree$clades %in% c("Porifera", "Placozoa", "Bilateria", "Cnidaria") ]
+	
 	return( tree )
 }
 
+read_pb_treelist = function( trees_file, burnin, subsample_every ){
+	tree_strings = read_lines( trees_file, skip = burnin)
+	tree_strings = tree_strings[c(TRUE, rep(FALSE,subsample_every-1))]
+	return(tree_strings)
+}
+
 parse_tree_pb = function( tree_file, taxonomy_reference ){
+	# set up filenames
 	tree_file_path = normalizePath( tree_file )
 	print( tree_file_path )
-	tree_suffix = ".con.tre"
-	bpdiff_file_path = sub( "\\.con\\.tre$", ".bpdiff", tree_file_path )
+	tree_ext = "\\.con\\.tre$"
+	bpdiff_file_path = sub( tree_ext, ".bpdiff", tree_file_path )
+	pb_treelist = sprintf(
+		sub( str_c("bpcomp",tree_ext), "Chain%d.treelist", tree_file_path ),
+		1:2
+	)
 	
 	if(!file.exists(bpdiff_file_path)){
 		warning( str_c( "Missing bpdiff file: ", bpdiff_file_path ) )
@@ -294,6 +314,33 @@ parse_tree_pb = function( tree_file, taxonomy_reference ){
 	
 	tree = parse_tree( tree_file_path, taxonomy_reference )
 	tree$bpdiff = mdiff
+	
+	# 
+	burnins = round( as.vector(sapply( pb_treelist, countLines ) * 0.2 ))
+	keep_every = 100
+	treelist_text = c( unlist( mapply( read_pb_treelist, pb_treelist, burnins, keep_every ) ) )
+	sample_trees = read.tree( text = treelist_text )
+	
+	Ctenophora_sister = lapply(
+		sample_trees,
+		function( phy ){
+			is_monophyletic( phy, tree$PoPlBiCn )
+		}
+	) %>% 
+		unlist() %>%
+		mean()
+	
+	Porifera_sister = lapply(
+		sample_trees,
+		function( phy ){
+			is_monophyletic( phy, tree$CtPlBiCn )
+		}
+	) %>% 
+		unlist() %>%
+		mean()
+	
+	tree$ctenophora_sister = Ctenophora_sister
+	tree$porifera_sister = Porifera_sister
 	
 	return(tree)
 }
@@ -320,19 +367,13 @@ parse_tree_iqtree = function( tree_file, taxonomy_reference ){
 	
 	tree = parse_tree( tree_file_path, taxonomy_reference )
 	
-	# Get the set of taxa in the group Ctenophora+Placozoa+Bilateria+Cnidaria, the clade that exists under Proifera-sister
-	CtPlBiCn = tree$tip.label[ tree$clades %in% c("Ctenophora", "Placozoa", "Bilateria", "Cnidaria") ]
-	
-	# Get the set of taxa in the group Porifera+Placozoa+Bilateria+Cnidaria, the clade that exists under Ctenophora-sister
-	PoPlBiCn = tree$tip.label[ tree$clades %in% c("Porifera", "Placozoa", "Bilateria", "Cnidaria") ]
-	
 	# Read the bootstrap trees
 	bootstrap_trees = read.tree(file = bootstrap_file_path)
 	
 	Ctenophora_sister = lapply(
 		bootstrap_trees,
 		function( phy ){
-			is_monophyletic( phy, PoPlBiCn )
+			is_monophyletic( phy, tree$PoPlBiCn )
 		}
 	) %>% 
 		unlist() %>%
@@ -341,7 +382,7 @@ parse_tree_iqtree = function( tree_file, taxonomy_reference ){
 	Porifera_sister = lapply(
 		bootstrap_trees,
 		function( phy ){
-			is_monophyletic( phy, CtPlBiCn )
+			is_monophyletic( phy, tree$CtPlBiCn )
 		}
 	) %>% 
 		unlist() %>%
