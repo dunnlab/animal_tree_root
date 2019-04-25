@@ -134,6 +134,37 @@ parse_phylip =	function( phylip_file ){
 sequence_matrices = foreach( phylip_file=phylip_file_names) %dopar%
 	parse_phylip( phylip_file )
 
+# Make contraint trees for each matrix
+constraint_tree_path = "../trees_new/constraint_trees/"
+
+generate_constraint_trees = function(seq_matrix){
+	
+	clades = unique(seq_matrix@taxon_map)
+	
+	# Get the set of taxa in the group Ctenophora+Placozoa+Bilateria+Cnidaria, the clade that exists under Proifera-sister
+	CtPlBiCn = rownames(seq_matrix)[ seq_matrix@taxon_map %in% c("Ctenophora", "Placozoa", "Bilateria", "Cnidaria") ]
+	
+	# Get the set of taxa in the group Porifera+Placozoa+Bilateria+Cnidaria, the clade that exists under Ctenophora-sister
+	PoPlBiCn = rownames(seq_matrix)[ seq_matrix@taxon_map %in% c("Porifera", "Placozoa", "Bilateria", "Cnidaria") ]
+	
+	# Write constraint trees for hypothesis testing
+	CtPlBiCn_not = rownames(seq_matrix)[ ! rownames(seq_matrix) %in% CtPlBiCn ]
+	porifera_sister_constraint_tree = generate_constaint_tree( CtPlBiCn, CtPlBiCn_not )
+	write.tree( 
+		porifera_sister_constraint_tree, 
+		file = paste( constraint_tree_path, seq_matrix@matrix_name, ".porifera_sister_constraint.tree", sep="") 
+	)
+	
+	PoPlBiCn_not = rownames(seq_matrix)[ ! rownames(seq_matrix) %in% PoPlBiCn ]
+	ctenophora_sister_constraint_tree = generate_constaint_tree( PoPlBiCn, PoPlBiCn_not )
+	write.tree( 
+		ctenophora_sister_constraint_tree, 
+		file = paste( constraint_tree_path, seq_matrix@matrix_name, ".ctenophora_sister_constraint.tree", sep="") 
+	)	
+}
+
+lapply(sequence_matrices, generate_constraint_trees)
+
 # Matrix gene composition
 
 busco_results = 
