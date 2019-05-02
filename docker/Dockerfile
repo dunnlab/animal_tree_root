@@ -46,13 +46,18 @@ RUN conda env create -f ${condaprefix}/conda_animal_root.yml
 RUN install2.r --error \
     --deps TRUE \
     -r 'http://cran.rstudio.com' \
-    BiocManager \
     ape \
+    BiocManager \
     doParallel \
     igraph \
     R.utils \
     viridis
-    
+
+# need to get older version of quadprog
+# Error: package ‘quadprog’ is not available (for R version 3.5.3)
+RUN wget -O /tmp/quadprog_1.5-5.tar.gz \
+         https://cran.r-project.org/src/contrib/Archive/quadprog/quadprog_1.5-5.tar.gz && \
+    R CMD INSTALL /tmp/quadprog_1.5-5.tar.gz
 
 RUN Rscript -e "library(BiocManager); BiocManager::install('Biostrings', version = $bioc_version); \
                                       BiocManager::install('ggtree', version = $bioc_version); \
