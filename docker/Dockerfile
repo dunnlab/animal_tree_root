@@ -50,7 +50,9 @@ RUN install2.r --error \
     ape \
     doParallel \
     igraph \
+    R.utils \
     viridis
+    
 
 RUN Rscript -e "library(BiocManager); BiocManager::install('Biostrings', version = $bioc_version); \
                                       BiocManager::install('ggtree', version = $bioc_version); \
