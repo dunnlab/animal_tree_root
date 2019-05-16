@@ -322,7 +322,7 @@ n_ribo =
 		group_by(matrix,gene) %>% 
 		tally(ribo_found) %>% 
 		group_by(matrix) %>% 
-		count(name="n_ribo")
+		tally()
 discarded_parts = 
 	read_tsv("../reconciliation/blast/graphs/discarded_nodes.tsv") %>%
 	group_by(matrix) %>%
