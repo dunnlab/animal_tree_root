@@ -289,13 +289,14 @@ We programatically queried the NCBI Taxonomy database to standardize names of sa
 
 Using the partition files for each matrix, we isolated each sequence for each taxon from each partition. Because many of the matrices had been processed by the original authors to remove columns that are poorly sampled or highly variable, these matrix-derived sequences can have deletions relative to the actual gene sequences.
 
-We used DIAMOND [@Buchfink:2014] to compare each sequence to all others using default diamond blastp parameters. We further filtered DIAMOND results such that we retained hits for 90% of partitions (pident > 78.0, eValue < 1e-15, no self->self). We ran BUSCO witrh default parameters for all sequences against the provided metazoa gene set. We also ran a BLAST+ blastp search against the SwissProt [cite] database, filtering hits such that we retain at least one hit for ~97% of partitions (pident > 50.0, eValue < 1e-15).
+We used DIAMOND [@Buchfink:2014] to compare each sequence to all others using default diamond blastp parameters. We further filtered DIAMOND results such that we retained hits for 90% of partitions (pident > 78.0, eValue < 1e-15, no self->self). We ran BUSCO with default parameters for all sequences against the provided metazoa gene set. We also ran a BLAST+ blastp search against the SwissProt [cite] database, filtering such that we retain at least one hit for ~97% of partitions (pident > 50.0, eValue < 1e-15).
 
 #### Partition Network
 
-We next used the sequence similarity comparisons derived above to compare partitions. 
+We used the sequence similarity comparisons described above to compare partitions. 
 
-We constructed a network with Python and NetworkX [@Hagberg:2008] v2.2 where each node is a partition and each edge represents a DIAMOND sequence-to-sequence match between sequences in the partitions. We extracted each connected component from this network. We further split these components if the the most connected node (i.e. most edges) had two times more the standard deviation from the mean number of edges in the component it is a member of and if removing that node splits the component into two or more components. We then decorated every node in the partition network with the most often found SwissProt BLAST+ result and BUSCO results to see which components contain which classes and families of genes.
+We constructed a network with Python and NetworkX [@Hagberg:2008] v2.2 where each node is a partition and each edge represents a DIAMOND sequence-to-sequence match between sequences in the partitions. We extracted each connected component from this network. We further split these components if the the most connected node (i.e. most edges) had two times more the standard deviation from the mean number of edges in the component it is a member of and if removing that node splits the component into two or more components. We then decorated every node in the partition network with the most often found SwissProt BLAST+ result and BUSCO results to see which components contain which classes and families of genes. See Table XX [partition_network_summary table] for a summary tally of each part of the comparison.
+
 
 ### Phylogenetic analyses
 
@@ -458,17 +459,18 @@ We first considered pairwise similarity between the same species from different 
 ```{r partition_mapping}
 
 # Investigate connected components of genes (ie partitions) that include multiple members fromt he same matrix
-clusterstats_within_manuscripts = nodes %>% group_by( matrix, cluster ) %>% summarise(n=n()) %>% arrange(desc(n))
-clusterstats = nodes %>% group_by( cluster ) %>% summarise(n=n()) %>% arrange(desc(n))
+clusterstats_within_manuscripts = partition_map_global %>% group_by( matrix, component_number ) %>% summarise(n=n()) %>% arrange(desc(n))
+clusterstats = partition_map_global %>% group_by( component_number ) %>% summarise(n=n()) %>% arrange(desc(n))
 
 clusterstats_within_manuscripts %>% print(n=100)
 clusterstats %>% print(n=100)
+partition_network_summary %>% print()
 
 ```
 
 The count for a partition pair can be much arger than the number of genes in the matrix, which suggests that the count is the number of hsps rather than the number of sequences with hits.
 
-There are `r length(unique(nodes$matrix))` matrices. A gene that is perfectly sampled would form a cluster with this size. Very few clusters, though, are this size. This suggests that intersection of genes between matrices is low
+There are `r length(unique(partition_network_summary$matrix))` matrices. A gene that is perfectly sampled would form a cluster with this size. Very few clusters, though, are this size. This suggests that intersection of genes between matrices is low
 
 
 

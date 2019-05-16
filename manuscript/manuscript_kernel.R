@@ -69,8 +69,7 @@ taxonomy_reference = read_tsv("../reconciliation/taxonomy_info/taxon_table.tsv")
 partition_map_global = 
 	read_tsv("../reconciliation/blast/graphs/partition_components_split_annotated.tsv") %>%
 	dplyr::rename(partition=partition_name) %>%
-	dplyr::rename(gene=component_number) %>%
-	mutate( gene = as.character(gene) )
+	mutate( component_number = as.character(component_number) )
 
 analyses_published$result = "Unresolved"
 analyses_published$result[ ( analyses_published$inference == "Bayesian" ) & (analyses_published$support_porifera_sister >= posterior_prob_threshold) ] = "Porifera-sister"
@@ -227,7 +226,7 @@ matrix_summary$manuscript = str_split( matrix_summary$matrix, "_", simplify=TRUE
 
 cluster_summary =
 	partition_map_global %>% 
-	group_by( gene ) %>% 
+	group_by( component_number ) %>% 
 	summarise( 
 		n_partitions = n(), 
 		n_matrices= length(unique(matrix)),
@@ -307,19 +306,19 @@ n_compandBUSCO =
 	partition_map_global %>%
 		group_by(matrix) %>%
 		summarize(
-			"n_components"=n_distinct(gene),
+			"n_components"=n_distinct(component_number),
 			"n_distinct_BUSCO"=n_distinct(BUSCO_ID)
 		)
 n_components_with_BUSCO =
 	partition_map_global %>%
 		filter(BUSCO_ID != "") %>%
-		group_by(matrix,gene) %>%
+		group_by( matrix, component_number ) %>%
 		summarize(n()) %>%
 		group_by(matrix) %>%
 		tally(name="n_components_with_BUSCO")
 n_ribo = 
 	partition_map_global %>% 
-		group_by(matrix,gene) %>% 
+		group_by( matrix, component_number ) %>% 
 		tally(ribo_found) %>% 
 		group_by(matrix) %>% 
 		tally()

@@ -15,34 +15,35 @@ University
 
 ## Introduction
 
-In the past decade there has been considerable debate about the position
-of the root of the animal phylogeny, with Ctenophora-sister and
+Over the past decade there has been considerable debate about the
+position of the root of the animal phylogeny, with Ctenophora-sister and
 Porifera-sister (Fig XXOverview) emerging as the two primary hypotheses.
 Historically, there was little debate about the root of the animal tree
 of life and Porifera-sister was widely accepted though rarely tested. In
 contrast to the lack of debate about the position of Porifera, there has
 long been uncertainty about the relationship of Ctenophora to other
-animals \[1\]. The first phylogenomic study to include ctenophores \[2\]
-suggested a new hypothesis, now referred to as Ctenophora-sister, that
-ctenophores are our most distant animal relative. Since then many more
-studies have been published, some supporting Ctenophora-sister, some
-Porifera-sister, and some neither. As it has become clear that this is a
-very difficult phylogenetic challenge, and the problem has become better
-characterized, it has become an interesting test-case to phylogenetic
-biologists beyond those concerned with this particular biological
-problem. Work has been hindered, though, because it has been difficult
-to directly compare results across studies and synthesize findings to
-understand the broader patterns of support. Here we synthesize data and
-results from all previous phylogenomic analyses that tested
-Ctenophora-sister and Porifera-sister, and reanalyze these data using
-standardized methods, and perform new analyses to characterize
-differences between studies. We hope that this provides an integrative
-overview of the challenge and provides direction for future studies. We
-also hope that the work we have done here, including consolidating all
-the datasets in one place with consistent formats and species names,
-will enhance the technical value of this interesting question to
-methods-focused investigators that look to develop methods to address
-difficult phylogenetic problems.
+animals \[1\].
+
+The first phylogenomic study to include ctenophores \[2\] suggested a
+new hypothesis, now referred to as Ctenophora-sister, that ctenophores
+are our most distant animal relative. Since then many more studies have
+been published, some supporting Ctenophora-sister, some Porifera-sister,
+and some neither. As it has become clear that this is a very difficult
+phylogenetic challenge, and the problem has become better characterized,
+it has become an interesting test-case to phylogenetic biologists beyond
+those concerned with this particular biological problem. Work has been
+hindered, though, because it has been difficult to directly compare
+results across studies and synthesize findings to understand the broader
+patterns of support. Here we synthesize data and results from all
+previous phylogenomic analyses that tested Ctenophora-sister and
+Porifera-sister, and reanalyze these data using standardized methods,
+and perform new analyses to characterize differences between studies. We
+hope that this provides an integrative overview of the challenge and
+provides direction for future studies. We also hope that the work we
+have done here, including consolidating all the datasets in one place
+with consistent formats and species names, will enhance the technical
+value of this interesting question to methods-focused investigators that
+look to develop methods to address difficult phylogenetic problems.
 
 ![](figures/Figure_overview.png) **Fig XXOverview.** (A) The
 Ctenophora-sister hypothesis posits that there is a clade (designated by
@@ -308,14 +309,40 @@ of original matrix indicate species name in original manuscript. For a
 table summarizing all samples and their new or lengthened names, see
 Table XX(reconciliation/taxonomy\_info/taxon\_table.tsv).
 
-#### All by all sequence comparison
+#### Sequence Comparisons
+
+Using the partition files for each matrix, we isolated each sequence for
+each taxon from each partition. Because many of the matrices had been
+processed by the original authors to remove columns that are poorly
+sampled or highly variable, these matrix-derived sequences can have
+deletions relative to the actual gene sequences.
 
 We used DIAMOND \[7\] to compare each sequence to all others using
-default `diamond blastp` parameters. We constructed a network with
-Python and NetworkX \[8\] v2.2 from these results (filters: pident \>
-95.0, eValue \< 1e-25, no self-\>self) where each node is a sequence and
-each edge is a result. We extracted each component of connected nodes
-such that that that every component has no edges to any other nodes.
+default diamond blastp parameters. We further filtered DIAMOND results
+such that we retained hits for 90% of partitions (pident \> 78.0, eValue
+\< 1e-15, no self-\>self). We ran BUSCO with default parameters for all
+sequences against the provided metazoa gene set. We also ran a BLAST+
+blastp search against the SwissProt \[cite\] database, filtering such
+that we retain at least one hit for ~97% of partitions (pident \> 50.0,
+eValue \< 1e-15).
+
+#### Partition Network
+
+We used the sequence similarity comparisons described above to compare
+partitions.
+
+We constructed a network with Python and NetworkX \[8\] v2.2 where each
+node is a partition and each edge represents a DIAMOND
+sequence-to-sequence match between sequences in the partitions. We
+extracted each connected component from this network. We further split
+these components if the the most connected node (i.e. most edges) had
+two times more the standard deviation from the mean number of edges in
+the component it is a member of and if removing that node splits the
+component into two or more components. We then decorated every node in
+the partition network with the most often found SwissProt BLAST+ result
+and BUSCO results to see which components contain which classes and
+families of genes. See Table XX \[partition\_network\_summary table\]
+for a summary tally of each part of the comparison.
 
 ### Phylogenetic analyses
 
@@ -442,216 +469,238 @@ different matrices in different studies.
 
 ### Partition comparison across matrices
 
-    ## # A tibble: 2,372 x 3
+    ## # A tibble: 3,639 x 3
     ## # Groups:   matrix [17]
-    ##     matrix                 cluster     n
-    ##     <chr>                    <dbl> <int>
-    ##   1 Whelan2017_full             54    13
-    ##   2 Philippe2009                37     7
-    ##   3 Nosenko2013_ribo_11057     193     6
-    ##   4 Nosenko2013_ribo_14615     193     6
-    ##   5 Philippe2009                51     6
-    ##   6 Whelan2017_full              9     6
-    ##   7 Chang2015                  193     5
-    ##   8 Philippe2009                90     5
-    ##   9 Philippe2009               193     5
-    ##  10 Philippe2009               375     5
-    ##  11 Ryan2013_est                51     5
-    ##  12 Ryan2013_est                90     5
-    ##  13 Simion2017                  37     5
-    ##  14 Simion2017                  51     5
-    ##  15 Simion2017                  90     5
-    ##  16 Chang2015                  408     4
-    ##  17 Dunn2008                    51     4
-    ##  18 Simion2017                  54     4
-    ##  19 Whelan2017_full             85     4
-    ##  20 Whelan2017_full            193     4
-    ##  21 Whelan2017_full            408     4
-    ##  22 Whelan2017_full            593     4
-    ##  23 Borowiec2015_Best108        37     3
-    ##  24 Borowiec2015_Best108        51     3
-    ##  25 Borowiec2015_Total1080      15     3
-    ##  26 Borowiec2015_Total1080      37     3
-    ##  27 Borowiec2015_Total1080      51     3
-    ##  28 Dunn2008                   193     3
-    ##  29 Hejnol2009                  51     3
-    ##  30 Nosenko2013_ribo_11057      15     3
-    ##  31 Nosenko2013_ribo_14615      15     3
-    ##  32 Philippe2009                15     3
-    ##  33 Philippe2009               376     3
-    ##  34 Philippe2009               420     3
-    ##  35 Ryan2013_est               193     3
-    ##  36 Whelan2017_full            154     3
-    ##  37 Whelan2017_full            367     3
-    ##  38 Borowiec2015_Best108        96     2
-    ##  39 Borowiec2015_Total1080       9     2
-    ##  40 Borowiec2015_Total1080      90     2
-    ##  41 Borowiec2015_Total1080      96     2
-    ##  42 Borowiec2015_Total1080     154     2
-    ##  43 Borowiec2015_Total1080     193     2
-    ##  44 Chang2015                   51     2
-    ##  45 Chang2015                   68     2
-    ##  46 Chang2015                   78     2
-    ##  47 Chang2015                   90     2
-    ##  48 Chang2015                  372     2
-    ##  49 Chang2015                  375     2
-    ##  50 Chang2015                  376     2
-    ##  51 Chang2015                  386     2
-    ##  52 Chang2015                  389     2
-    ##  53 Chang2015                  391     2
-    ##  54 Chang2015                  403     2
-    ##  55 Chang2015                  407     2
-    ##  56 Chang2015                  420     2
-    ##  57 Chang2015                  442     2
-    ##  58 Dunn2008                    15     2
-    ##  59 Dunn2008                   391     2
-    ##  60 Hejnol2009                   9     2
-    ##  61 Nosenko2013_ribo_11057      68     2
-    ##  62 Nosenko2013_ribo_11057     386     2
-    ##  63 Nosenko2013_ribo_11057     389     2
-    ##  64 Nosenko2013_ribo_11057     391     2
-    ##  65 Nosenko2013_ribo_11057     403     2
-    ##  66 Nosenko2013_ribo_11057     407     2
-    ##  67 Nosenko2013_ribo_11057     408     2
-    ##  68 Nosenko2013_ribo_14615      68     2
-    ##  69 Nosenko2013_ribo_14615      78     2
-    ##  70 Nosenko2013_ribo_14615     372     2
-    ##  71 Nosenko2013_ribo_14615     386     2
-    ##  72 Nosenko2013_ribo_14615     389     2
-    ##  73 Nosenko2013_ribo_14615     391     2
-    ##  74 Nosenko2013_ribo_14615     403     2
-    ##  75 Nosenko2013_ribo_14615     407     2
-    ##  76 Nosenko2013_ribo_14615     408     2
-    ##  77 Philippe2009                68     2
-    ##  78 Philippe2009               165     2
-    ##  79 Philippe2009               372     2
-    ##  80 Philippe2009               388     2
-    ##  81 Philippe2009               396     2
-    ##  82 Philippe2009               397     2
-    ##  83 Philippe2009               399     2
-    ##  84 Philippe2009               412     2
-    ##  85 Philippe2009               441     2
-    ##  86 Philippe2009               442     2
-    ##  87 Philippe2009               569     2
-    ##  88 Ryan2013_est                 9     2
-    ##  89 Ryan2013_est                15     2
-    ##  90 Ryan2013_est                96     2
-    ##  91 Simion2017                   9     2
-    ##  92 Simion2017                 375     2
-    ##  93 Simion2017                 389     2
-    ##  94 Simion2017                 408     2
-    ##  95 Simion2017                 593     2
-    ##  96 Whelan2015_D1              375     2
-    ##  97 Whelan2017_full             71     2
-    ##  98 Whelan2017_full             90     2
-    ##  99 Whelan2017_full            592     2
-    ## 100 Whelan2017_full            777     2
-    ## # ... with 2,272 more rows
+    ##     matrix                 component_number     n
+    ##     <chr>                  <chr>            <int>
+    ##   1 Philippe2009           21                  14
+    ##   2 Philippe2009           2                    9
+    ##   3 Simion2017             21                   9
+    ##   4 Chang2015              21                   7
+    ##   5 Philippe2009           4                    7
+    ##   6 Philippe2009           1                    6
+    ##   7 Simion2017             2                    6
+    ##   8 Whelan2017_full        21                   6
+    ##   9 Chang2015              2                    5
+    ##  10 Dunn2008               2                    5
+    ##  11 Ryan2013_est           2                    5
+    ##  12 Ryan2013_est           21                   5
+    ##  13 Simion2017             11                   5
+    ##  14 Simion2017             4                    5
+    ##  15 Borowiec2015_Best108   48                   4
+    ##  16 Borowiec2015_Total1080 11                   4
+    ##  17 Borowiec2015_Total1080 2                    4
+    ##  18 Borowiec2015_Total1080 48                   4
+    ##  19 Borowiec2015_Total1080 94                   4
+    ##  20 Chang2015              30                   4
+    ##  21 Nosenko2013_ribo_11057 30                   4
+    ##  22 Nosenko2013_ribo_14615 30                   4
+    ##  23 Philippe2009           12                   4
+    ##  24 Borowiec2015_Best108   2                    3
+    ##  25 Borowiec2015_Best108   4                    3
+    ##  26 Borowiec2015_Total1080 21                   3
+    ##  27 Borowiec2015_Total1080 4                    3
+    ##  28 Borowiec2015_Total1080 47                   3
+    ##  29 Chang2015              0                    3
+    ##  30 Chang2015              12                   3
+    ##  31 Chang2015              49                   3
+    ##  32 Dunn2008               0                    3
+    ##  33 Hejnol2009             2                    3
+    ##  34 Nosenko2013_ribo_11057 0                    3
+    ##  35 Nosenko2013_ribo_11057 2                    3
+    ##  36 Nosenko2013_ribo_11057 47                   3
+    ##  37 Nosenko2013_ribo_11057 49                   3
+    ##  38 Nosenko2013_ribo_14615 0                    3
+    ##  39 Nosenko2013_ribo_14615 2                    3
+    ##  40 Nosenko2013_ribo_14615 47                   3
+    ##  41 Nosenko2013_ribo_14615 49                   3
+    ##  42 Philippe2009           11                   3
+    ##  43 Philippe2009           136                  3
+    ##  44 Philippe2009           137                  3
+    ##  45 Philippe2009           176                  3
+    ##  46 Philippe2009           30                   3
+    ##  47 Philippe2009           47                   3
+    ##  48 Philippe2009           73                   3
+    ##  49 Philippe2009           76                   3
+    ##  50 Simion2017             30                   3
+    ##  51 Simion2017             94                   3
+    ##  52 Simion2017             96                   3
+    ##  53 Whelan2015_D1          21                   3
+    ##  54 Whelan2017_full        11                   3
+    ##  55 Whelan2017_full        83                   3
+    ##  56 Borowiec2015_Best108   11                   2
+    ##  57 Borowiec2015_Best108   21                   2
+    ##  58 Borowiec2015_Best108   30                   2
+    ##  59 Borowiec2015_Total1080 0                    2
+    ##  60 Borowiec2015_Total1080 153                  2
+    ##  61 Borowiec2015_Total1080 275                  2
+    ##  62 Borowiec2015_Total1080 30                   2
+    ##  63 Borowiec2015_Total1080 74                   2
+    ##  64 Borowiec2015_Total1080 91                   2
+    ##  65 Chang2015              1                    2
+    ##  66 Chang2015              101                  2
+    ##  67 Chang2015              11                   2
+    ##  68 Chang2015              176                  2
+    ##  69 Chang2015              177                  2
+    ##  70 Chang2015              23                   2
+    ##  71 Chang2015              3                    2
+    ##  72 Chang2015              38                   2
+    ##  73 Chang2015              53                   2
+    ##  74 Chang2015              70                   2
+    ##  75 Chang2015              73                   2
+    ##  76 Chang2015              75                   2
+    ##  77 Chang2015              76                   2
+    ##  78 Chang2015              88                   2
+    ##  79 Chang2015              89                   2
+    ##  80 Chang2015              91                   2
+    ##  81 Dunn2008               23                   2
+    ##  82 Dunn2008               3                    2
+    ##  83 Dunn2008               30                   2
+    ##  84 Dunn2008               47                   2
+    ##  85 Dunn2008               49                   2
+    ##  86 Dunn2008               53                   2
+    ##  87 Dunn2008               70                   2
+    ##  88 Hejnol2009             11                   2
+    ##  89 Hejnol2009             12                   2
+    ##  90 Hejnol2009             153                  2
+    ##  91 Nosenko2013_ribo_11057 11                   2
+    ##  92 Nosenko2013_ribo_11057 23                   2
+    ##  93 Nosenko2013_ribo_11057 3                    2
+    ##  94 Nosenko2013_ribo_11057 38                   2
+    ##  95 Nosenko2013_ribo_11057 53                   2
+    ##  96 Nosenko2013_ribo_11057 70                   2
+    ##  97 Nosenko2013_ribo_11057 73                   2
+    ##  98 Nosenko2013_ribo_11057 75                   2
+    ##  99 Nosenko2013_ribo_11057 76                   2
+    ## 100 Nosenko2013_ribo_11057 88                   2
+    ## # … with 3,539 more rows
 
-    ## # A tibble: 789 x 2
-    ##     cluster     n
-    ##       <dbl> <int>
-    ##   1     193    36
-    ##   2      51    31
-    ##   3      54    22
-    ##   4      90    22
-    ##   5     408    22
-    ##   6       9    20
-    ##   7      15    20
-    ##   8      37    20
-    ##   9      68    14
-    ##  10     375    14
-    ##  11      85    13
-    ##  12     154    13
-    ##  13      75    11
-    ##  14      78    11
-    ##  15     391    11
-    ##  16     403    11
-    ##  17      50    10
-    ##  18     389    10
-    ##  19      46     9
-    ##  20      67     9
-    ##  21     338     9
-    ##  22     386     9
-    ##  23      36     8
-    ##  24      71     8
-    ##  25     219     8
-    ##  26     372     8
-    ##  27     373     8
-    ##  28     393     8
-    ##  29     407     8
-    ##  30     439     8
-    ##  31     507     8
-    ##  32     593     8
-    ##  33      26     7
-    ##  34      96     7
-    ##  35     117     7
-    ##  36     165     7
-    ##  37     367     7
-    ##  38     371     7
-    ##  39     382     7
-    ##  40     412     7
-    ##  41     511     7
-    ##  42       4     6
-    ##  43      29     6
-    ##  44      33     6
-    ##  45      53     6
-    ##  46      55     6
-    ##  47     100     6
-    ##  48     184     6
-    ##  49     361     6
-    ##  50     376     6
-    ##  51     381     6
-    ##  52     383     6
-    ##  53     387     6
-    ##  54     388     6
-    ##  55     392     6
-    ##  56     399     6
-    ##  57     401     6
-    ##  58     402     6
-    ##  59     420     6
-    ##  60     462     6
-    ##  61     505     6
-    ##  62     542     6
-    ##  63     576     6
-    ##  64      34     5
-    ##  65      59     5
-    ##  66      64     5
-    ##  67      91     5
-    ##  68     103     5
-    ##  69     177     5
-    ##  70     183     5
-    ##  71     189     5
-    ##  72     206     5
-    ##  73     221     5
-    ##  74     233     5
-    ##  75     236     5
-    ##  76     274     5
-    ##  77     384     5
-    ##  78     390     5
-    ##  79     395     5
-    ##  80     396     5
-    ##  81     397     5
-    ##  82     400     5
-    ##  83     404     5
-    ##  84     405     5
-    ##  85     406     5
-    ##  86     415     5
-    ##  87     421     5
-    ##  88     429     5
-    ##  89     438     5
-    ##  90     442     5
-    ##  91     485     5
-    ##  92     489     5
-    ##  93     523     5
-    ##  94     537     5
-    ##  95     561     5
-    ##  96     563     5
-    ##  97     592     5
-    ##  98       5     4
-    ##  99       6     4
-    ## 100      11     4
-    ## # ... with 689 more rows
+    ## # A tibble: 1,150 x 2
+    ##     component_number     n
+    ##     <chr>            <int>
+    ##   1 21                  55
+    ##   2 2                   47
+    ##   3 11                  29
+    ##   4 30                  26
+    ##   5 4                   21
+    ##   6 0                   20
+    ##   7 47                  20
+    ##   8 48                  18
+    ##   9 49                  17
+    ##  10 12                  15
+    ##  11 3                   14
+    ##  12 53                  14
+    ##  13 1                   12
+    ##  14 38                  12
+    ##  15 70                  12
+    ##  16 23                  11
+    ##  17 71                  11
+    ##  18 33                  10
+    ##  19 72                  10
+    ##  20 73                  10
+    ##  21 74                  10
+    ##  22 75                  10
+    ##  23 76                  10
+    ##  24 80                   9
+    ##  25 81                   9
+    ##  26 82                   9
+    ##  27 83                   9
+    ##  28 84                   9
+    ##  29 85                   9
+    ##  30 88                   9
+    ##  31 89                   9
+    ##  32 90                   9
+    ##  33 100                  8
+    ##  34 101                  8
+    ##  35 102                  8
+    ##  36 103                  8
+    ##  37 106                  8
+    ##  38 107                  8
+    ##  39 108                  8
+    ##  40 42                   8
+    ##  41 9                    8
+    ##  42 91                   8
+    ##  43 92                   8
+    ##  44 93                   8
+    ##  45 94                   8
+    ##  46 95                   8
+    ##  47 96                   8
+    ##  48 97                   8
+    ##  49 98                   8
+    ##  50 99                   8
+    ##  51 111                  7
+    ##  52 112                  7
+    ##  53 113                  7
+    ##  54 114                  7
+    ##  55 115                  7
+    ##  56 121                  7
+    ##  57 122                  7
+    ##  58 123                  7
+    ##  59 124                  7
+    ##  60 125                  7
+    ##  61 126                  7
+    ##  62 127                  7
+    ##  63 128                  7
+    ##  64 129                  7
+    ##  65 130                  7
+    ##  66 131                  7
+    ##  67 132                  7
+    ##  68 133                  7
+    ##  69 134                  7
+    ##  70 135                  7
+    ##  71 136                  7
+    ##  72 137                  7
+    ##  73 138                  7
+    ##  74 139                  7
+    ##  75 140                  7
+    ##  76 141                  7
+    ##  77 142                  7
+    ##  78 143                  7
+    ##  79 144                  7
+    ##  80 145                  7
+    ##  81 60                   7
+    ##  82 68                   7
+    ##  83 146                  6
+    ##  84 147                  6
+    ##  85 148                  6
+    ##  86 149                  6
+    ##  87 150                  6
+    ##  88 151                  6
+    ##  89 152                  6
+    ##  90 153                  6
+    ##  91 154                  6
+    ##  92 155                  6
+    ##  93 156                  6
+    ##  94 157                  6
+    ##  95 158                  6
+    ##  96 159                  6
+    ##  97 160                  6
+    ##  98 161                  6
+    ##  99 162                  6
+    ## 100 163                  6
+    ## # … with 1,050 more rows
+
+    ## # A tibble: 17 x 7
+    ##    matrix n_total_partiti… n_components n_distinct_BUSCO n_components_wi…
+    ##    <chr>             <int>        <int>            <int>            <int>
+    ##  1 Borow…              108           98               50               48
+    ##  2 Borow…             1080          651              340              334
+    ##  3 Chang…              170          128               63               55
+    ##  4 Dunn2…              150          123               56               52
+    ##  5 Hejno…             1487          637              245              244
+    ##  6 Moroz…              114           74               10                9
+    ##  7 Nosen…               35           17                4                3
+    ##  8 Nosen…               78           55               25               19
+    ##  9 Nosen…               87           63               32               25
+    ## 10 Phili…              129           63               21               19
+    ## 11 Ryan2…              406          330              115              111
+    ## 12 Simio…             1719          714              137              133
+    ## 13 Whela…              251          177               30               29
+    ## 14 Whela…              210          158               29               28
+    ## 15 Whela…              178          136               28               27
+    ## 16 Whela…              212          174               53               52
+    ## 17 Whela…               59           41               15               13
+    ## # … with 2 more variables: n <int>, n_partitions_discarded <dbl>
 
 The count for a partition pair can be much arger than the number of
 genes in the matrix, which suggests that the count is the number of hsps
