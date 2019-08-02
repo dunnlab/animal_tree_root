@@ -95,7 +95,7 @@ taxa =
 	dplyr::rename( taxon=relabelled_name, clade=clade_assignment ) %>%
 	mutate( clade = factor( clade, levels=clades )  )
 
-matrix_path = "../data_processed/matrices/"
+matrix_path = "../data_processed/matrices"
 phylip_file_names = list.files(path = matrix_path, pattern = ".+\\.phy$", full.names=TRUE)
 
 parse_phylip =	function( phylip_path ){

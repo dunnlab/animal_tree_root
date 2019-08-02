@@ -48,7 +48,7 @@ PartitionedMultipleAlignment = function( alignment_file, partition_file=NULL, ta
 		lapply( 
 			lines, 
 			function( line ){
-				fields = str_match(line, "CHARSET (\\w+)\\s*=\\s*(\\d+)\\s*-\\s*(\\d+)")
+				fields = str_match(line, "CHARSET (.+?)\\s*=\\s*(\\d+)\\s*-\\s*(\\d+)")
 				D = data.frame( 
 					partition=fields[2], 
 					start=as.integer(fields[3]), 
