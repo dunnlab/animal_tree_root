@@ -257,7 +257,7 @@ matrix_overlap =
 
 # Remove reciprocal comparisons and comparisons to self
 n = nrow(matrix_overlap)
-mask = lower.tri(matrix(1:n^2, n, n))
+mask = lower.tri(matrix(nrow=sqrt(n), ncol=sqrt(n)))
 dim(mask) = NULL
 matrix_overlap = matrix_overlap[mask,]
 
