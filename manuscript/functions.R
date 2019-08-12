@@ -475,3 +475,30 @@ generate_constraint_trees = function(seq_matrix){
 	
 }
 
+#' Get the occupancy of a matrix by species and martition
+#'
+#' @param seq_matrix A PartitionedMultipleAlignment object
+#' @return A numeric matrix with rows species, columns partitions, and value the number of sampled amino acids
+#' @export
+get_matrix_occupancy = function( seq_matrix ){
+	n_species = nrow( seq_matrix )
+	n_partitions = nrow( seq_matrix@partitions )
+	
+	seq_matrix_raw = as.matrix(seq_matrix)
+	
+	occupancy_aa = matrix( NA, nrow=n_species, ncol=n_partitions )
+	for( i in 1:n_partitions){
+		start = seq_matrix@partitions$start[i]
+		stop  = seq_matrix@partitions$stop[i]
+		sub_seq_matrix = seq_matrix_raw[1:n_species, start:stop]
+		not_gap_matrix = sub_seq_matrix != "-"
+		occupied = rowSums( not_gap_matrix )
+		occupancy_aa[,i] = occupied
+	}
+
+	colnames( occupancy_aa ) = seq_matrix@partitions$partition
+	
+	rownames( occupancy_aa ) = rownames(seq_matrix)
+	
+	return( occupancy_aa )
+}
