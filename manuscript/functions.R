@@ -411,3 +411,67 @@ parse_tree_iqtree = function( tree_file, taxonomy_reference ){
 	}
 	return(tree)
 }
+
+
+parse_phylip =	function( phylip_path ){
+	
+	partition_path = sub( "phy$", "nex", phylip_path )
+	base_name = sub( "\\.phy$", "", basename( phylip_path ) )
+	elements = strsplit(base_name, "_") %>% unlist()
+	manuscript_name = elements[1]
+	matrix_name = base_name
+	
+	# Do some cludgey renaming to make it easy to step into function below for debugging
+	alignment_path = phylip_path
+	partition_file = partition_path
+	taxon_map_global = taxa
+	
+	sequence_matrix = 
+		PartitionedMultipleAlignment( 
+			alignment_path, 
+			partition_file, 
+			taxon_map_global, 
+			partition_map_global=partition_map_global, 
+			manuscript_name=manuscript_name, 
+			matrix_name=matrix_name
+		)
+	
+	return( sequence_matrix )
+}
+
+generate_constraint_trees = function(seq_matrix){
+	
+	clades = unique(seq_matrix@taxon_map)
+	
+	# Write constraint trees for hypothesis testing
+	
+	# Ctenophora+Placozoa+Bilateria+Cnidaria, the clade that exists under Proifera-sister
+	CtPlBiCn = rownames(seq_matrix)[ seq_matrix@taxon_map %in% c("Ctenophora", "Placozoa", "Bilateria", "Cnidaria") ]
+	CtPlBiCn_not = rownames(seq_matrix)[ ! rownames(seq_matrix) %in% CtPlBiCn ]
+	porifera_sister_constraint_tree = generate_constaint_tree( CtPlBiCn, CtPlBiCn_not )
+	write.tree( 
+		porifera_sister_constraint_tree, 
+		file = paste( constraint_tree_path, seq_matrix@matrix_name, ".porifera_sister_constraint.tree", sep="") 
+	)
+	
+	# Porifera+Placozoa+Bilateria+Cnidaria, the clade that exists under Ctenophora-sister
+	PoPlBiCn = rownames(seq_matrix)[ seq_matrix@taxon_map %in% c("Porifera", "Placozoa", "Bilateria", "Cnidaria") ]
+	PoPlBiCn_not = rownames(seq_matrix)[ ! rownames(seq_matrix) %in% PoPlBiCn ]
+	ctenophora_sister_constraint_tree = generate_constaint_tree( PoPlBiCn, PoPlBiCn_not )
+	write.tree( 
+		ctenophora_sister_constraint_tree, 
+		file = paste( constraint_tree_path, seq_matrix@matrix_name, ".ctenophora_sister_constraint.tree", sep="") 
+	)	
+	
+	# Ctenophora+Cnidaria, the clade that exists under Coelenterata
+	CtCn = rownames(seq_matrix)[ seq_matrix@taxon_map %in% c("Ctenophora", "Cnidaria") ]
+	CtCn_not = rownames(seq_matrix)[ ! rownames(seq_matrix) %in% CtCn ]
+	coelenterata_constraint_tree = generate_constaint_tree( CtCn, CtCn_not )
+	write.tree( 
+		coelenterata_constraint_tree, 
+		file = paste( constraint_tree_path, seq_matrix@matrix_name, ".coelenterata_constraint.tree", sep="") 
+	)		
+	
+	
+}
+
