@@ -297,8 +297,11 @@ parse_tree_pb = function( tree_file, taxonomy_reference ){
 	print( tree_file_path )
 	tree_ext = "\\.con\\.tre$"
 	bpdiff_file_path = sub( tree_ext, ".bpdiff", tree_file_path )
+	filename_parts = strsplit( basename( tree_file ), "\\." ) %>% unlist()
+	matrix_name = filename_parts[1]
+	model_name = "CAT+F81"
 	pb_treelist = sprintf(
-		sub( str_c("bpcomp",tree_ext), "Chain%d.treelist", tree_file_path ),
+		sub( str_c("bpcomp",tree_ext), "phy_Chain%d.treelist", tree_file_path ),
 		1:2
 	)
 	
@@ -315,9 +318,12 @@ parse_tree_pb = function( tree_file, taxonomy_reference ){
 	tree = parse_tree( tree_file_path, taxonomy_reference )
 	tree$bpdiff = mdiff
 	
-	# 
-	burnins = round( as.vector(sapply( pb_treelist, countLines ) * 0.2 ))
-	keep_every = 100
+	burnin_line = strsplit( 
+	  grep( "^Burnin", readLines( bpdiff_file_path ), value = TRUE), 
+	  ":") %>% unlist()
+	burnins = as.numeric(burnin_line[2])
+	
+	keep_every = 10
 	treelist_text = c( unlist( mapply( read_pb_treelist, pb_treelist, burnins, keep_every ) ) )
 	sample_trees = read.tree( text = treelist_text )
 	
@@ -339,6 +345,10 @@ parse_tree_pb = function( tree_file, taxonomy_reference ){
 		unlist() %>%
 		mean()
 	
+	# Stuff a few other things into the tree object
+	tree$matrix = matrix_name
+	tree$model = model_name
+	tree$modelfinder = FALSE
 	tree$ctenophora_sister = Ctenophora_sister
 	tree$porifera_sister = Porifera_sister
 	
