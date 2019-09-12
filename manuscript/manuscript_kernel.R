@@ -213,17 +213,15 @@ file_names_iqtree = file_names_iqtree[ ! grepl("Philippe2009", file_names_iqtree
 file_names_iqtree = file_names_iqtree[ ! grepl("Nosenko2013", file_names_iqtree) ]
 
 # read iqtrees
-trees = foreach( tree_file = file_names_iqtree ) %dopar%
+trees_iq = foreach( tree_file = file_names_iqtree ) %dopar%
 	parse_tree_iqtree( tree_file, taxonomy_reference )
 
 # read pb trees
-append( trees, 
-        foreach( tree_file = file_names_pb ) %dopar%
+trees_pb = foreach( tree_file = file_names_pb ) %dopar%
            parse_tree_pb( tree_file, taxonomy_reference )
-)
 
 analyses_new = lapply(
-	trees,
+	c( trees_iq, trees_pb ),
 	function( tree ){
 		data.frame(
 			matrix = tree$matrix,
@@ -238,7 +236,7 @@ analyses_new = lapply(
 ) %>% 
 	bind_rows()
 
-analyses_new$inference = rep( "ML", nrow( analyses_new ) )
+analyses_new$inference = c( rep( "ML", length( trees_iq ) ), rep( "MCMC", length( trees_pb ) ))
 
 # Summarize result
 analyses_new$result = "Unresolved"
@@ -285,7 +283,7 @@ discarded_parts =
 
 partition_network_summary = 
 	n_total_partitions%>%
-	left_join(n_compandBUSCO,          by="matrix") %>%
+	# left_join(n_compandBUSCO,          by="matrix") %>%
 	left_join(n_components_with_BUSCO, by="matrix") %>%
 	left_join(n_ribo,                  by="matrix") %>%
 	left_join(discarded_parts,         by="matrix") %>% 
