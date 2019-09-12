@@ -236,7 +236,7 @@ analyses_new = lapply(
 ) %>% 
 	bind_rows()
 
-analyses_new$inference = c( rep( "ML", length( trees_iq ) ), rep( "MCMC", length( trees_pb ) ))
+analyses_new$inference = c( rep( "ML", length( trees_iq ) ), rep( "Bayesian", length( trees_pb ) ))
 
 # Summarize result
 analyses_new$result = "Unresolved"
@@ -248,7 +248,7 @@ analyses_new$result = factor( analyses_new$result )
 
 # Parse model components
 analyses_new$model_summary = analyses_new$model
-analyses_new$model_summary = factor( analyses_new$model_summary, levels=c("WAG+C60+F+G", "LG+C60+F+G", "poisson_C60", "GTR20", "WAG", "LG") )
+analyses_new$model_summary = factor( analyses_new$model_summary, levels=c("WAG", "GTR20", "poisson_C60", "WAG+C60+F+G", "LG+C60+F+G", "CAT+F81")) #possibly combine WAG+C60+F+G and LG+C60+F+G
 
 # Partition comparison across matrices
 

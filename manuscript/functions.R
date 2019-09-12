@@ -323,7 +323,7 @@ parse_tree_pb = function( tree_file, taxonomy_reference ){
 	  ":") %>% unlist()
 	burnins = as.numeric(burnin_line[2])
 	
-	keep_every = 10
+	keep_every = 100
 	treelist_text = c( unlist( mapply( read_pb_treelist, pb_treelist, burnins, keep_every ) ) )
 	sample_trees = read.tree( text = treelist_text )
 	
