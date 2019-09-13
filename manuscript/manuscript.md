@@ -245,6 +245,7 @@ XXX.
 | matrix                | clade        | result            | model\_summary |
 | :-------------------- | :----------- | :---------------- | :------------- |
 | Borowiec2015\_Best108 | Choanimalia  | Ctenophora-sister | WAG+C60+F+G    |
+| Chang2015             | Holozoa      | Ctenophora-sister | LG+C60+F+G     |
 | Dunn2008              | Opisthokonta | Ctenophora-sister | WAG+C60+F+G    |
 | Moroz2014\_3d         | Choanimalia  | Unresolved        | WAG+C60+F+G    |
 | Ryan2013\_est         | Opisthokonta | Ctenophora-sister | WAG+C60+F+G    |
@@ -680,27 +681,26 @@ different matrices in different studies.
     ## 100 163                  6
     ## # … with 1,050 more rows
 
-    ## # A tibble: 17 x 7
-    ##    matrix n_total_partiti… n_components n_distinct_BUSCO n_components_wi…
-    ##    <chr>             <int>        <int>            <int>            <int>
-    ##  1 Borow…              108           98               50               48
-    ##  2 Borow…             1080          651              340              334
-    ##  3 Chang…              170          128               63               55
-    ##  4 Dunn2…              150          123               56               52
-    ##  5 Hejno…             1487          637              245              244
-    ##  6 Moroz…              114           74               10                9
-    ##  7 Nosen…               35           17                4                3
-    ##  8 Nosen…               78           55               25               19
-    ##  9 Nosen…               87           63               32               25
-    ## 10 Phili…              129           63               21               19
-    ## 11 Ryan2…              406          330              115              111
-    ## 12 Simio…             1719          714              137              133
-    ## 13 Whela…              251          177               30               29
-    ## 14 Whela…              210          158               29               28
-    ## 15 Whela…              178          136               28               27
-    ## 16 Whela…              212          174               53               52
-    ## 17 Whela…               59           41               15               13
-    ## # … with 2 more variables: n <int>, n_partitions_discarded <dbl>
+    ## # A tibble: 17 x 5
+    ##    matrix      n_total_partitio… n_components_with…     n n_partitions_dis…
+    ##    <chr>                   <int>              <int> <int>             <dbl>
+    ##  1 Borowiec20…               108                 48     6                 0
+    ##  2 Borowiec20…              1080                334    39                 0
+    ##  3 Chang2015                 170                 55    68                 0
+    ##  4 Dunn2008                  150                 52    37                 0
+    ##  5 Hejnol2009               1487                244    27                 0
+    ##  6 Moroz2014_…               114                  9     1                 0
+    ##  7 Nosenko201…                35                  3     0                 0
+    ##  8 Nosenko201…                78                 19    69                 0
+    ##  9 Nosenko201…                87                 25    71                 0
+    ## 10 Philippe20…               129                 19    65                 2
+    ## 11 Ryan2013_e…               406                111    26                 0
+    ## 12 Simion2017               1719                133    24                 0
+    ## 13 Whelan2015…               251                 29     5                 0
+    ## 14 Whelan2015…               210                 28     5                 0
+    ## 15 Whelan2015…               178                 27     5                 0
+    ## 16 Whelan2017…               212                 52     9                 3
+    ## 17 Whelan2017…                59                 13     4                12
 
 The count for a partition pair can be much arger than the number of
 genes in the matrix, which suggests that the count is the number of hsps

@@ -245,8 +245,8 @@ parse_tree = 	function( tree_file,  taxonomy_reference ){
 	
 	# Reroot the tree
 	# Use a single taxon from the outgroup since the outgroup is not guaranteed to be monophyletic
-	tree = root( tree, outgroup[1] )
-
+	tree = root( tree, outgroup[1], resolve.root=TRUE )
+	tree$outgroup = outgroup[1]
 	# Get the clades of the tips again, since tip order has changed
 	clades = 
 		taxonomy_reference$clade_assignment[ 
