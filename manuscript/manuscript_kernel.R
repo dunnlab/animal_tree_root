@@ -204,10 +204,6 @@ trees_path_iqtree = "../trees_new/iqtree"
 iqtree_ext = "\\.treefile$"
 file_names_iqtree = list.files( path = trees_path_iqtree, pattern = iqtree_ext, full.names = TRUE )
 
-trees_path_pb = "../trees_new/choanozoa_phylobayes"
-pb_tree_ext = "\\.con\\.tre$"
-file_names_pb = list.files( path = trees_path_pb, pattern = pb_tree_ext, full.names = TRUE )
-
 # Temp fix re issue #8
 file_names_iqtree = file_names_iqtree[ ! grepl("Philippe2009", file_names_iqtree) ]
 file_names_iqtree = file_names_iqtree[ ! grepl("Nosenko2013", file_names_iqtree) ]
@@ -215,6 +211,11 @@ file_names_iqtree = file_names_iqtree[ ! grepl("Nosenko2013", file_names_iqtree)
 # read iqtrees
 trees_iq = foreach( tree_file = file_names_iqtree ) %dopar%
 	parse_tree_iqtree( tree_file, taxonomy_reference )
+
+trees_paths_pb = list.dirs("../trees_new/")
+trees_paths_pb <- trees_paths_pb[ grepl("_phylobayes", trees_paths_pb) ]
+pb_tree_ext = "\\.con\\.tre$"
+file_names_pb = list.files( path = trees_paths_pb, pattern = pb_tree_ext, full.names = TRUE )
 
 # read pb trees
 trees_pb = foreach( tree_file = file_names_pb ) %dopar%

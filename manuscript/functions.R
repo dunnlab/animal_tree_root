@@ -319,7 +319,7 @@ parse_tree_pb = function( tree_file, taxonomy_reference ){
 	tree$bpdiff = mdiff
 	
 	burnin_line = strsplit( 
-	  grep( "^Burnin", readLines( bpdiff_file_path ), value = TRUE), 
+	  grep( "^[bB]urnin", readLines( bpdiff_file_path ), value = TRUE), 
 	  ":") %>% unlist()
 	burnins = as.numeric(burnin_line[2])
 	
@@ -357,7 +357,6 @@ parse_tree_pb = function( tree_file, taxonomy_reference ){
 
 parse_tree_iqtree = function( tree_file, taxonomy_reference ){
 	tree_file_path = normalizePath( tree_file )
-	print( tree_file_path )
 	tree_wd = dirname( tree_file_path )
 	filename_parts = strsplit( basename( tree_file ), "\\." ) %>% unlist()
 	matrix_name = filename_parts[1]
