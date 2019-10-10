@@ -225,7 +225,7 @@ analyses_new %>%
 	ggplot( aes(x=model_summary, y=clade, col=result, shape=inference) ) +
 		geom_jitter( width = 0.20, height = 0.20, alpha=0.7, size=2 ) +
 		scale_colour_manual(values = result_colors) +
-		theme_classic()
+		theme_classic() + theme(axis.text.x = element_text(angle=45, hjust=1))
 ```
 
 
