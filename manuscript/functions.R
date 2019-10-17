@@ -147,7 +147,7 @@ stat_clades = function(mapping = NULL, data = NULL, geom = "rect",
 
 compute_matrix_overlap = function( msa1, msa2 ){
 	
-	n_gene_overlap = sum( na.omit(msa1@partitions$gene) %in% na.omit(msa2@partitions$gene) )
+	n_gene_overlap = sum( na.omit(msa1@partitions$component_number) %in% na.omit(msa2@partitions$component_number) )
 
 	n_species_overlap = sum( rownames(msa1) %in% rownames(msa2) )
 	
