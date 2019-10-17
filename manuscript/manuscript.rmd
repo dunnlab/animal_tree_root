@@ -134,22 +134,28 @@ taxon_rectangles = lapply(
 	sequence_matrices,
 	function ( sequence_matrix ){
 		clade_rects(sequence_matrix)
-	}
-) %>%
-bind_rows()
-
-
-clade_colors = viridis( length(clades) )
-names( clade_colors ) = clades
+	  }
+  ) %>%
+  bind_rows() %>%
+  filter(!grepl('only', matrix)) %>%
+  mutate(matrix = str_replace_all(matrix, "_", " "))  %>%
+  arrange(year, matrix)
 
 ggplot(data=taxon_rectangles) + 
-	scale_x_continuous(name="x") + 
-	scale_y_continuous(name="y") +
+	scale_x_continuous(name="Genes Sampled") + 
+	scale_y_continuous(name="Taxa Sampled") +
 	geom_rect( mapping=aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax, fill=clade )) + 
-	# scale_fill_manual(guide = guide_legend(reverse=TRUE))
-	# scale_fill_manual(values = clade_colors, guide = guide_legend(reverse=TRUE))
-	scale_fill_discrete(guide = guide_legend(reverse=TRUE)) +
-	facet_wrap( ~ manuscript_matrix )
+	scale_fill_brewer(type="qual", direction=-1, palette="Set3", guide = guide_legend(reverse=TRUE)) +
+	facet_wrap( ~ matrix, labeller = label_wrap_gen(width = 18, multi_line = TRUE)) + 
+  theme_void() +
+  theme(
+    strip.background = element_rect(fill = "lightgrey"),
+    strip.text.x = element_text(size = 8),
+    panel.background = element_rect(fill ="#f9f9f9"),
+    # panel.grid.major = element_blank(),
+    # panel.grid.minor = element_blank()
+  )
+
 
 ```
 
