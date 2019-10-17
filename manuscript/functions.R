@@ -113,6 +113,7 @@ clade_rects = function( data ){
 	D$ymin = c(0, clade_cumsums[1:length(clade_cumsums)-1])
 	D$ymax = clade_cumsums
 	D$manuscript = data@manuscript_name
+	D$year = as.numeric(str_extract(data@manuscript_name, '\\d\\d\\d\\d'))
 	D$matrix = data@matrix_name
 	D$manuscript_matrix = paste(D$manuscript, D$matrix, sep="_")
 	
