@@ -13,7 +13,8 @@ knitr::opts_chunk$set(
 	warning = FALSE,
 	echo=FALSE,
 	dpi=300,
-	cache=FALSE
+	cache=FALSE,
+	fig.width=8
 	)
 ```
 
@@ -36,7 +37,7 @@ library( gridExtra )
 source( "functions.R" )
 
 # A colorblind friendly palette from http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/#a-colorblind-friendly-palette:
-cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7", "#000000")
 
 result_colors = c( cbPalette[2], cbPalette[4], cbPalette[1] )
 names( result_colors ) = c( "Ctenophora-sister", "Porifera-sister", "Unresolved" )
@@ -128,8 +129,6 @@ Sensitivity to ingroup sampling has received less attention than sensitivity to 
 
 ```{r taxon_rectangles }
 
-
-
 taxon_rectangles = lapply(
 	sequence_matrices,
 	function ( sequence_matrix ){
@@ -186,9 +185,9 @@ ggplot( matrix_summary ) +
 ### Matrix overlap
 
 ```{r matrix_overlap}
-
+sequence_matrices_nosub = sequence_matrices[sapply(sequence_matrices, function(x) !grepl('only|subsam', x@matrix_name))]
 matrix_overlap_rectangles = 
-	lapply(sequence_matrices, function(x) lapply(sequence_matrices, function(y) overlap_rects(x,y))) %>% 
+	lapply(sequence_matrices_nosub, function(x) lapply(sequence_matrices_nosub, function(y) overlap_rects(x,y))) %>% 
 	unlist(recursive=FALSE) %>% 
 	bind_rows()
 
@@ -196,7 +195,13 @@ ggplot(data=matrix_overlap_rectangles) +
 	scale_x_continuous(name="x") + 
 	scale_y_continuous(name="y") +
 	geom_rect( mapping=aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax, fill=MSA ), alpha=0.5) + 
-	facet_grid( matrix_1 ~ matrix_2 )
+	facet_grid( matrix_1 ~ matrix_2 ) +
+  theme_void() +
+  theme(
+    strip.background = element_rect(fill = "lightgrey"),
+    strip.text.x = element_text(size = 8),
+    panel.background = element_rect(fill ="#f9f9f9"),
+  )
 
 ```
 
