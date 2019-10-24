@@ -58,7 +58,7 @@ posterior_prob_threshold = 95
 papers = read_tsv( "../data_processed/tables/previously_published_manuscripts.tsv" )
 datasets = read_tsv( "../data_processed/tables/previously_published_matrices.tsv" )
 analyses_published = 
-	read_tsv( "../data_processed/tables/previously_published_analyses.tsv", col_types = 'iccccccccccclnnnnccc' ) %>%
+	read.delim( "../data_processed/tables/previously_published_analyses.tsv", col_types = 'iccccccccccclnnnnccc' ) %>%
 	mutate( clade = factor( clade, levels= c( 'Choanimalia', 'Holozoa', 'Opisthokonta' ) ) )
 
 taxonomy_reference = read_tsv("../reconciliation/taxonomy_info/taxon_table.tsv")
@@ -78,11 +78,7 @@ analyses_published$result[ ( analyses_published$inference == "ML" ) &       (ana
 analyses_published$result[ ( analyses_published$inference == "ML" ) &       (analyses_published$support_ctenophora_sister >= bootstrap_threshold) ] = "Ctenophora-sister"
 analyses_published$result = factor( analyses_published$result )
 
-analyses_published$model_summary = analyses_published$model_rate_matrix
-long_summary = paste(analyses_published$model_rate_matrix, analyses_published$model_equilibrium, sep="+")
-analyses_published$model_summary[ ! is.na(analyses_published$model_equilibrium) ] = long_summary[ ! is.na(analyses_published$model_equilibrium) ]
-analyses_published$model_summary[ grepl("WAG", analyses_published$model_summary) ] = "WAG" # Simplify WAG
-analyses_published$model_summary = factor( analyses_published$model_summary, levels=c("GTR+CAT", "F81+CAT", "LG", "WAG") )
+analyses_published$model_combined = factor( analyses_published$model_combined, levels=c("GTR + CAT", "F81 + CAT", "Recoding + GTR + CAT", "Recoding + GTR", "Partitionfinder", "GTR", "LG", "WAG" ) )
 
 
 # Matrix taxon composition
