@@ -1,8 +1,8 @@
 ---
 csl: plos.csl
 output:
-  pdf_document: default
   github_document: default
+  pdf_document: default
   html_document: default
 bibliography: manuscript.bib
 ---
@@ -209,7 +209,7 @@ analyses_published %>%
 	ggplot( aes(x=model_combined, y=clade, col=result, shape=inference) ) +
 		geom_jitter( width = 0.20, height = 0.20, alpha=0.7, size=2 ) +
 		scale_colour_manual(values = result_colors) +
-		theme_classic()
+		theme_classic() + theme(axis.text.x = element_text(angle=45, hjust=1))
 
 ```
 

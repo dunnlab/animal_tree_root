@@ -1,8 +1,8 @@
 
 # Rooting the animal tree of life
 
-Casey W. Dunn<sup>1</sup>\*, Benjamin Evans<sup>2</sup>, and Yuanning
-Li<sup>1</sup>
+Yuanning Li<sup>1</sup>, Xingxing Shen, Benjamin Evans<sup>2</sup>,
+Antonis Rokas, and Casey W. Dunn<sup>1</sup>\*
 
 <sup>1</sup>Department of Ecology and Evolutionary Biology, Yale
 University
@@ -128,6 +128,17 @@ across the studies considered here:
     of sites to classes, and equilibrium frequencies within the data are
     all estimated in a Bayesian framework.
 
+  - C10 to C60
+    \[<span class="citeproc-not-found" data-reference-id="si2008empirical">**???**</span>\].
+    10 to 60-profile mixture models as variants of the CAT model under
+    the maximum-likelihood framework.
+
+  - Six-state amino acid recoding. Amino acids are recoded into six
+    groups based on function to account for both compositional
+    heterogeneity and substitution saturation. Several recoding
+    strategies have been proposed, including Dayhoff 6-state recoding,
+    S\&R 6-state recoding, KGB 6-state recoding.
+
 Models can be assembled by selecting different options for all these
 different components. The models that are applied in practice area
 heavily influenced by engineering and computational costs, as well as
@@ -223,7 +234,7 @@ taxa.
 
 ![](manuscript_files/figure-gfm/support_published_analyses-1.png)<!-- -->
 
-A total of 139 analyses were transcribed from the literature.
+A total of 131 analyses were transcribed from the literature.
 
 ## New analyses of published matrices
 
@@ -290,7 +301,7 @@ External criteria, eg posterior predictive scores, model fit etc
 All files associated with this analysis are available at
 <https://github.com/caseywdunn/animal_root>
 
-### Data wrangling
+### Data selection and wrangling
 
 We retreived matrices from each publication (Table XX), storing the raw
 data in this manuscript’s version control repository. We manually edited
@@ -347,10 +358,78 @@ for a summary tally of each part of the comparison.
 
 ### Phylogenetic analyses
 
+#### Full data matrices
+
+To investigate the phylogenetic hypotheses and distribution of
+phylogenetic signal in studies aiming to elucidate the root of animal
+position, we considered 16 data matrices from recent studies that were
+constructed from transcriptomic or genomic data (Table). Because
+different choices of substitution models could largely influence
+phylogenetic inference of the placement of the root of animal (e.g. site
+heterogeneous CAT model and site homogeneous model), we first
+investigated four different sets of substitution models in IQtree \[9\],
+including C10 to C60 profile mixture models as variants of the CAT model
+in ML framework. Phylogenomic analyses of all the datasets were first
+conducted under WAG+G, GTR+G, associated best-fit substitution model
+(C10-C60 model were included for model comparison via -madd option) with
+ModelFinder \[10\] and Poisson + C60 models using IQtree v \[9\]. Nodal
+support was assessed with 1000 ultrafast bootstrap replicates for each
+analysis.
+
+#### Outgroup taxa sampling with C10-C60 and CAT models
+
+Because different choices of outgroups could also affect phylogenetic
+inference as suggested in previous analyses, we parsed the full data
+matrices into three different types of outgroups: Choanimalia , Holozoa
+and Opisthokonta. These datasets include the same set of genes but
+differ in the composition of outgroup species. Choanozoa only includes
+choanofagellates as outgroup; Holozoa also includes more distantly
+related holozoans; Opistokonta also includes Fungi. For each Choanozoa
+data matrice, both C10-C60 models in ML and CAT models in PhyloBayes
+were conducted. The maximum likelihood analysis was performed using the
+best-fit substitution model identified as above and nodal support was
+assessed with 1000 ultrafast bootstrap replicates using IQtree.
+Moreover, bayesian inference with the site-heterogeneous CAT-Poisson
+substitution model was done with PhyloBayes MPI. To minimize
+computational burden, CAT-GTR models were not in this study.
+
+For results of choanozoa matrices indicated a strong support that
+sponges are the sister group to the remaining Metazoa using CAT model,
+bayesian inference with CAT-Poisson model was also conducted to Holozoa
+and Opisthokonta data matrices with the same settings as above. For
+CAT-poisson analyses on all the data matrices, two independent chains
+were sampled every generation. Tracer plots of MCMC runs were visually
+inspected in Tracer v1.6 to assess stationarity and appropriate burn-in.
+Chains were considered to have reached convergence when the maxdiff
+statistic among chains was below 0.3 (as measured by bpcomp) and
+effective sample size \> 50 for each parameter (as measured by
+tracecomp). A 50% majority‐rule consensus tree was computed with bpcomp,
+and nodal support was estimated by posterior probability. All analyses
+in PhyloBayes were run for at least one month computational time.
+
+#### phylogenetic signal in conflicted dataset
+
+To investigate the distribution of phylogenetic signal in data matrices,
+we considered four data matrices from four studies that had different
+topology between ML and BI using CAT model in our reanalysis, including
+Philippe2008, Ryan2013, and Whelan\_2017 data matrices.We examined two
+hypotheses: Ctenophora-sister and Porifera-sister to rest of metazoans,
+under both ML and BI frameworks with different outgroup schemes
+(Choanozoa and Opisthokonta). For ML analysis in each dataset, site-wise
+likelihood scores ere inferred for both hypotheses using IQtree (option
+-g) with the same best-fit model identified above. The two different
+phylogenetic hypotheses passed to IQtree (via -z) were the corresponding
+tree that the ctenophore as the sister lineage tree and the
+corresponding tree that was modified to have sponges as the sister to
+all other metazoans. The constraint trees were conducted by R package.
+The numbers of genes and sites supporting each hypothesis were
+calculated with RAxML output and Perl scripts from Shen et al. For BI
+analysis, we only considered the Whelan\_2017 dataset.
+
 ## Ackowledgements
 
 We thank the Yale Center for Research Computing for use of the research
-computing infrastructure, specificaly the Farnam cluser.
+computing infrastructure, specificaly the Farnam cluster.
 
 ## Author contributions
 
@@ -363,14 +442,14 @@ computing infrastructure, specificaly the Farnam cluser.
 Dunn *et al.* \[2\] added Expressed Sequence Tag (EST) data for 29
 animals. It was the first phylogenomic analysis that included
 ctenophores, and therefore that could test the relationships of both
-Ctenophora and Porifera to the rest of animals. It was the first
+Ctenophora and Porifera to the rest of animals. It was also the first
 phylogenetic analysis to recover Ctenophora as the sister group to all
 other animals.
 
 The data matrix was constructed using a semi-automated approach. Genes
 were translated into proteins, promiscuous domains were masked, all gene
 sequences from all species were compared to each other with blastp,
-genes were clustered based on this similarity with TribeMCL \[9\], and
+genes were clustered based on this similarity with TribeMCL \[11\], and
 these clusters were filtered to remove those with poor taxon sampling
 and high rates of lineage-specific duplications. Gene trees were then
 constructed, and in clades of sequences all from the same species all
@@ -380,14 +459,14 @@ taxon were then manually inspected. If strongly supported deep nodes
 indicative of paralogy were found, the entire gene was discarded. If the
 duplications for a a small number of taxa were unresolved, all genes
 from those taxa were excluded. Genes were then realigned and sites were
-filtered with Gblocks \[10\], resulting in a 77 taxon matrix. Some taxa
+filtered with Gblocks \[12\], resulting in a 77 taxon matrix. Some taxa
 in this matrix were quite unstable, which obscured other
 strongly-supported relationships. Unstable taxa were identified with
-leaf stability indices \[11\], as implemented in phyutility \[12\], and
+leaf stability indices \[13\], as implemented in phyutility \[14\], and
 removed from the matrix. This resulted in the 64-taxon matrix that is
 the focus of most of their analyses. Phylogenetic analyses were
 conducted under the F81+CAT model in phylobayes \[6\], and under the WAG
-model in MrBayes \[13\] and RAxML \[14\].
+model in MrBayes \[15\] and RAxML \[16\].
 
 Regarding the recovery of Ctenophora-sister, the authors concluded:
 
@@ -404,13 +483,15 @@ Ctenophora-sister with only 69% support. This study did not include
 
 ### Philippe *et al.* 2009
 
-Philippe *et al.* 2009 \[Philippe:2009hh\]…
+Philippe *et al.* 2009 \[Philippe:2009hh\] assembled a 128 EST dataset
+for 55 species to explore phylogenetic relationship of early diverging
+animals.
 
 ### Hejnol et al. 2009
 
 ### Pick *et al.* 2010
 
-Pick *et al.* \[15\] sought to test whether Ctenophora-sister was an
+Pick *et al.* \[17\] sought to test whether Ctenophora-sister was an
 artefact of insufficient taxon sampling. They added new and additional
 published sequence data to the 64-taxon matrix of Dunn *et al.* \[2\].
 The new taxa included 12 sponges, 1 ctenophore, 5 cnidarians, and
@@ -440,7 +521,7 @@ Porifera-sister are not strong, they conclude:
 
 They also investigated saturation, and conclude that Dunn *et al.* \[2\]
 is more saturated than Philippe *et al.* 2009 \[Philippe:2009hh\]. Note
-that the Pick *et al.* \[15\] dataset is not reanalyzed here because
+that the Pick *et al.* \[17\] dataset is not reanalyzed here because
 partition data are not available, and due to site filtering the
 partition file from Dunn *et al.* \[2\] cannot be applied to this
 matrix.
@@ -785,9 +866,26 @@ Pasadena, CA USA; 2008. pp. 11–15.
 
 </div>
 
+<div id="ref-nguyen2014iq">
+
+9\. Nguyen L-T, Schmidt HA, Haeseler A von, Minh BQ. IQ-tree: A fast and
+effective stochastic algorithm for estimating maximum-likelihood
+phylogenies. Molecular biology and evolution. Oxford University Press;
+2014;32: 268–274. 
+
+</div>
+
+<div id="ref-kalyaanamoorthy2017modelfinder">
+
+10\. Kalyaanamoorthy S, Minh BQ, Wong TK, Haeseler A von, Jermiin LS.
+ModelFinder: Fast model selection for accurate phylogenetic estimates.
+Nature methods. Nature Publishing Group; 2017;14: 587. 
+
+</div>
+
 <div id="ref-Enright:2002uq">
 
-9\. Enright A, Van Dongen S, Ouzounis C. An efficient algorithm for
+11\. Enright A, Van Dongen S, Ouzounis C. An efficient algorithm for
 large-scale detection of protein families. Nucleic Acids Research.
 Oxford University Press; 2002;30: 1575–1584.
 doi:[10.1093/nar/30.7.1575](https://doi.org/10.1093/nar/30.7.1575)
@@ -796,7 +894,7 @@ doi:[10.1093/nar/30.7.1575](https://doi.org/10.1093/nar/30.7.1575)
 
 <div id="ref-Castresana:2000vy">
 
-10\. Castresana J. Selection of conserved blocks from multiple
+12\. Castresana J. Selection of conserved blocks from multiple
 alignments for their use in phylogenetic analysis. Molecular Biology and
 Evolution. 2000;17: 540–552. Available:
 <http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&dopt=Citation&list_uids=10742046 >
@@ -805,7 +903,7 @@ Evolution. 2000;17: 540–552. Available:
 
 <div id="ref-Thorley:1999kg">
 
-11\. Thorley J, Wilkinson M. Testing the phylogenetic stability of early
+13\. Thorley J, Wilkinson M. Testing the phylogenetic stability of early
 tetrapods. Journal of Theoretical Biology. 1999;200: 343–344.
 doi:[10.1006/jtbi.1999.0999](https://doi.org/10.1006/jtbi.1999.0999)
 
@@ -813,7 +911,7 @@ doi:[10.1006/jtbi.1999.0999](https://doi.org/10.1006/jtbi.1999.0999)
 
 <div id="ref-Smith:2008gb">
 
-12\. Smith SA, Dunn CW. Phyutility: a phyloinformatics tool for trees,
+14\. Smith SA, Dunn CW. Phyutility: a phyloinformatics tool for trees,
 alignments and molecular data. Bioinformatics. Oxford University Press;
 2008;24: 715–716.
 doi:[10.1093/bioinformatics/btm619](https://doi.org/10.1093/bioinformatics/btm619)
@@ -822,7 +920,7 @@ doi:[10.1093/bioinformatics/btm619](https://doi.org/10.1093/bioinformatics/btm61
 
 <div id="ref-Ronquist:2003hx">
 
-13\. Ronquist F, Huelsenbeck JP. MrBayes 3: Bayesian phylogenetic
+15\. Ronquist F, Huelsenbeck JP. MrBayes 3: Bayesian phylogenetic
 inference under mixed models. Bioinformatics. 2003;19: 1572–1574.
 doi:[10.1093/bioinformatics/btg180](https://doi.org/10.1093/bioinformatics/btg180)
 
@@ -830,7 +928,7 @@ doi:[10.1093/bioinformatics/btg180](https://doi.org/10.1093/bioinformatics/btg18
 
 <div id="ref-Stamatakis:2006wc">
 
-14\. Stamatakis A. RAxML-VI-HPC: maximum likelihood-based phylogenetic
+16\. Stamatakis A. RAxML-VI-HPC: maximum likelihood-based phylogenetic
 analyses with thousands of taxa and mixed models. Bioinformatics.
 2006;22: 2688–2690.
 doi:[10.1093/bioinformatics/btl446](https://doi.org/10.1093/bioinformatics/btl446)
@@ -839,7 +937,7 @@ doi:[10.1093/bioinformatics/btl446](https://doi.org/10.1093/bioinformatics/btl44
 
 <div id="ref-Pick:2010eb">
 
-15\. Pick KS, Philippe H, Schreiber F, Erpenbeck D, Jackson DJ, Wrede P,
+17\. Pick KS, Philippe H, Schreiber F, Erpenbeck D, Jackson DJ, Wrede P,
 et al. Improved phylogenomic taxon sampling noticeably affects
 nonbilaterian relationships. Molecular Biology and Evolution. 2010;27:
 1983–1987.
