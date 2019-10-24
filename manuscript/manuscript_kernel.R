@@ -17,7 +17,7 @@ library( magrittr )
 library( igraph )
 library( doParallel )
 
-# setwd("/animal_root/manuscript")
+setwd("/animal_root/manuscript")
 
 source( "functions.R" )
 
@@ -58,7 +58,7 @@ posterior_prob_threshold = 95
 papers = read_tsv( "../data_processed/tables/previously_published_manuscripts.tsv" )
 datasets = read_tsv( "../data_processed/tables/previously_published_matrices.tsv" )
 analyses_published = 
-	read.delim( "../data_processed/tables/previously_published_analyses.tsv", col_types = 'iccccccccccclnnnnccc' ) %>%
+	read_tsv( "../data_processed/tables/previously_published_analyses.tsv", col_types = 'icccccccccccclccccccc' ) %>%
 	mutate( clade = factor( clade, levels= c( 'Choanimalia', 'Holozoa', 'Opisthokonta' ) ) )
 
 taxonomy_reference = read_tsv("../reconciliation/taxonomy_info/taxon_table.tsv")
