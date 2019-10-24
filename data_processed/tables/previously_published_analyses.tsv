@@ -5,7 +5,7 @@ year	manuscript	paper_source	matrix	clade	model_equilibrium	model_rate_matrix	mo
 2008	Dunn2008	Figure 2	Dunn2008	Opisthokonta	CAT	F81	NA	F81 + CAT	aa	PhyloBayes	2.3	Bayesian	TRUE	100	0	NA	0	64 taxa matrix		Cn + Po sister
 2009	Philippe2009	Figure S1	Philippe2009	Opisthokonta	CAT	F81	NA	F81 + CAT	aa	PhyloBayes	2.3	Bayesian	TRUE	NA	92	90	NA			
 2009	Philippe2009	Figure S2	Philippe2009	Choanimalia	CAT	F81	NA	F81 + CAT	aa	PhyloBayes	2.3	Bayesian	TRUE	NA	96	100	NA			
-2009	Hejnol2009	Figure 	Hejnol2009	Opisthokonta	NA	GENEPARTITION	GAMMA	Partitionfinder	aa	RAxML	7.0.4	ML	NA	96	NA	NA	NA			Model selection was done by RAxML perl script so no data is available
+2009	Hejnol2009	Figure	Hejnol2009	Opisthokonta	NA	GENEPARTITION	GAMMA	Partitionfinder	aa	RAxML	7.0.4	ML	NA	96	NA	NA	NA			Model selection was done by RAxML perl script so no data is available
 2010	Pick2010	Figure 1	Pick2010	Choanimalia	CAT	F81	GAMMA	F81 + CAT	aa	PhyloBayes	3.1d	Bayesian	NA	NA	72	91	NA			
 2010	Pick2010	Figure 1	Pick2010	Choanimalia	CAT	F81	GAMMA	F81 + CAT	aa	PhyloBayes	3.1d	Bayesian	NA	NA	91	NA	NA			
 2010	Pick2010	Figure S1	Pick2010	Opisthokonta	CAT	F81	GAMMA	F81 + CAT	aa	PhyloBayes	3.1d	Bayesian	NA	NA	84	72	NA			
@@ -73,9 +73,9 @@ year	manuscript	paper_source	matrix	clade	model_equilibrium	model_rate_matrix	mo
 2017	Simion2017		Simion2017	Holozoa	Empritical	LG	GAMMA	LG	aa	RAxML		ML	NA	100	100	0				
 2017	Simion2017		Simion2017	Holozoa	Empritical	LG	GAMMA	LG	aa	RAxML		ML	NA	0	0	0	100	No Demospongiae		
 2017	Simion2017		Simion2017	Holozoa	Empritical	LG	GAMMA	LG	aa	RAxML		ML	NA	0	0	0	100	Hexactinellida only		
-2017	Simion2017		Simion2017	Holozoa	CAT	F81	GAMMA	F81 + CAT	aa	PhyloBayes MPI	1.6j	Bayesian	FLASE	NA	95	100	NA			
-2017	Simion2017		Simion2017	Holozoa	CAT	F81	GAMMA	F81 + CAT	aa	PhyloBayes MPI	1.6j	Bayesian	FLASE	0	100	0	NA	No Demospongiae		
-2017	Simion2017		Simion2017	Holozoa	CAT	F81	GAMMA	F81 + CAT	aa	PhyloBayes MPI	1.6j	Bayesian	FLASE	0	0	100	100	Hexactinellida only		
+2017	Simion2017		Simion2017	Holozoa	CAT	F81	GAMMA	F81 + CAT	aa	PhyloBayes MPI	1.6j	Bayesian	FALSE	NA	95	100	NA			
+2017	Simion2017		Simion2017	Holozoa	CAT	F81	GAMMA	F81 + CAT	aa	PhyloBayes MPI	1.6j	Bayesian	FALSE	0	100	0	NA	No Demospongiae		
+2017	Simion2017		Simion2017	Holozoa	CAT	F81	GAMMA	F81 + CAT	aa	PhyloBayes MPI	1.6j	Bayesian	FALSE	0	0	100	100	Hexactinellida only		
 2017	Simion2017		Simion2017	Holozoa	CAT	F81	GAMMA	F81 + CAT	aa	PhyloBayes MPI	1.6j	Bayesian	TRUE	0	100	0	0		Removal of 60% of te heteropecilleous sites	PL sister to Ct + Bl + Cn
 2017	Simion2017		Simion2017	Holozoa	CAT	F81	GAMMA	F81 + CAT	aa	PhyloBayes MPI	1.6j	Bayesian	TRUE	0	100	99	0		Removal of 70% of te heteropecilleous sites	Ct siter to Cn
 2017	Whelan2017b		Whelan2017b_full	Holozoa	NA	PARTITIONFINDER	NA	Partitionfinder	aa	RAxML	8.2.4	ML	NA	100	0	76	0			
@@ -91,16 +91,16 @@ year	manuscript	paper_source	matrix	clade	model_equilibrium	model_rate_matrix	mo
 2017	Whelan2017b		Whelan2017_Ctenophore_Metazoa_LB_strict	Choanimalia	NA	PARTITIONFINDER	NA	Partitionfinder	aa	RAxML	8.2.4	ML	NA	100	0		0			
 2017	Whelan2017b		Whelan2017_Ctenophore_Metazoa_RCFV_LB_relaxed	Choanimalia	NA	PARTITIONFINDER	NA	Partitionfinder	aa	RAxML	8.2.4	ML	NA	100	0		0			
 2017	Whelan2017b		Whelan2017_Ctenophore_Metazoa_RCFV_LB_strict	Choanimalia	NA	PARTITIONFINDER	NA	Partitionfinder	aa	RAxML	8.2.4	ML	NA	100	0		0			
-2017	Whelan2017b		Whelan2017b_strict	Choanimalia	Estimated	GTR	NA	GTR + CAT	aa	PhyloBayes MPI		Bayesian	Yes	100	0	100	0			
+2017	Whelan2017b		Whelan2017b_strict	Choanimalia	Estimated	GTR	NA	GTR + CAT	aa	PhyloBayes MPI		Bayesian	TRUE	100	0	100	0			
 2017	Whelan2017b		Whelan2017b_strict	Choanimalia	NA	PARTITIONFINDER	NA	Partitionfinder	aa	RAxML	8.2.4	ML	NA	100	0	95	0			
 2017	Feuda2017	Figure S1	Whelan2015_D20	Choanimalia	Estimated	GTR	GAMMA	GTR	aa	PhyloBayes MPI		Bayesian	TRUE	100	0	100	0			
 2017	Feuda2017	Figure S1	Whelan2015_D20	Choanimalia	CAT	GTR	GAMMA	GTR + CAT	aa	PhyloBayes MPI		Bayesian	TRUE	20	77	100	NA			
 2017	Feuda2017	Figure S1	Whelan2015_D20	Choanimalia	Estimated	GTR	GAMMA	Recoding + GTR	Dayhoff-6	PhyloBayes MPI		Bayesian	TRUE	100	0	99	0			
 2017	Feuda2017	Figure S1	Whelan2015_D20	Choanimalia	CAT	GTR	GAMMA	Recoding + GTR + CAT	Dayhoff-6	PhyloBayes MPI		Bayesian	TRUE	1	95	99	NA			
-2017	Feuda2017	Figure S1	Whelan2015_D20 	Choanimalia	Estimated	GTR	GAMMA	Recoding + GTR	S&R-6	PhyloBayes MPI		Bayesian	TRUE	100	0	NA	NA			
-2017	Feuda2017	Figure S1	Whelan2015_D20 	Choanimalia	CAT	GTR	GAMMA	Recoding + GTR + CAT	S&R-6	PhyloBayes MPI		Bayesian	TRUE	2	94	NA	NA			
-2017	Feuda2017	Figure S1	Whelan2015_D20 	Choanimalia	Estimated	GTR	GAMMA	Recoding + GTR	KGB-6	PhyloBayes MPI		Bayesian	TRUE	100	0	NA	NA			
-2017	Feuda2017	Figure S1	Whelan2015_D20 	Choanimalia	CAT	GTR	GAMMA	Recoding + GTR + CAT	KGB-6	PhyloBayes MPI		Bayesian	TRUE	29	37	NA	NA			
+2017	Feuda2017	Figure S1	Whelan2015_D20	Choanimalia	Estimated	GTR	GAMMA	Recoding + GTR	S&R-6	PhyloBayes MPI		Bayesian	TRUE	100	0	NA	NA			
+2017	Feuda2017	Figure S1	Whelan2015_D20	Choanimalia	CAT	GTR	GAMMA	Recoding + GTR + CAT	S&R-6	PhyloBayes MPI		Bayesian	TRUE	2	94	NA	NA			
+2017	Feuda2017	Figure S1	Whelan2015_D20	Choanimalia	Estimated	GTR	GAMMA	Recoding + GTR	KGB-6	PhyloBayes MPI		Bayesian	TRUE	100	0	NA	NA			
+2017	Feuda2017	Figure S1	Whelan2015_D20	Choanimalia	CAT	GTR	GAMMA	Recoding + GTR + CAT	KGB-6	PhyloBayes MPI		Bayesian	TRUE	29	37	NA	NA			
 2017	Feuda2017	Figure S2	Whelan2015_D20	Holozoa	Estimated	GTR	GAMMA	Recoding + GTR	aa	PhyloBayes MPI		Bayesian	TRUE	100	0	100	0			
 2017	Feuda2017	Figure S2	Whelan2015_D20	Holozoa	CAT	GTR	GAMMA	GTR + CAT	aa	PhyloBayes MPI		Bayesian	TRUE	31	68	100	0			
 2017	Feuda2017	Figure S2	Whelan2015_D20	Holozoa	Estimated	GTR	GAMMA	Recoding + GTR	Dayhoff-6	PhyloBayes MPI		Bayesian	TRUE	100	0	100	0			
