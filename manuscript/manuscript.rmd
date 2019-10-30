@@ -59,7 +59,7 @@ Yuanning Li^1^, Xingxing Shen, Benjamin Evans^2^, Antonis Rokas, and Casey W. Du
 
 ## Introduction
 
-Over the past decade there has been considerable debate about the position of the root of the animal phylogeny, with Ctenophora-sister and Porifera-sister (Fig XXOverview) emerging as the two primary hypotheses. Historically, there was little debate about the root of the animal tree of life and Porifera-sister was widely accepted though rarely tested. In contrast to the lack of debate about the position of Porifera, there has long been uncertainty about the relationship of Ctenophora to other animals [@Wallberg:2004ws].
+Over the past decade there has been considerable debate about the position of the root of the animal phylogeny, with Ctenophora-sister (comb jelly) and Porifera-sister (sponges) (Fig XXOverview) emerging as the two primary hypotheses. Historically, there was little debate about the root of the animal tree of life and Porifera-sister was widely accepted though rarely tested. In contrast to the lack of debate about the position of Porifera, there has long been uncertainty about the relationship of Ctenophora to other animals [@Wallberg:2004ws]. An understanding of the first diverging animal lineage is critical for scientists to reconstruct events that occured early in animal evolution, espeically for complex structures such as cell types, nervous systems, and developmental patterns. However, a consensus has not been reached despite multiple efforts.
 
 The first phylogenomic study to include ctenophores [@Dunn:2008ky] suggested a new hypothesis, now referred to as Ctenophora-sister, that ctenophores are our most distant animal relative. Since then many more studies have been published, some supporting Ctenophora-sister, some Porifera-sister, and some neither. As it has become clear that this is a very difficult phylogenetic challenge, and the problem has become better characterized, it has become an interesting test-case to phylogenetic biologists beyond those concerned with this particular biological problem. Work has been hindered, though, because it has been difficult to directly compare results across studies and synthesize findings to understand the broader patterns of support. Here we synthesize data and results from all previous phylogenomic analyses that tested Ctenophora-sister and Porifera-sister, and reanalyze these data using standardized methods, and perform new analyses to characterize differences between studies. We hope that this provides an integrative overview of the challenge and provides direction for future studies. We also hope that the work we have done here, including consolidating all the datasets in one place with consistent formats and species names, will enhance the technical value of this interesting question to methods-focused investigators that look to develop methods to address difficult phylogenetic problems.
 
@@ -313,7 +313,7 @@ For results of choanozoa matrices indicated a strong support that sponges are th
 #### phylogenetic signal in conflicted dataset
 To investigate the distribution of phylogenetic signal in data matrices, we considered four data matrices from four studies that had different topology between ML and BI using CAT model in our reanalysis, including Philippe2008, Ryan2013, and Whelan_2017 data matrices.We examined two hypotheses: Ctenophora-sister and Porifera-sister to rest of metazoans, under both ML and BI frameworks with different outgroup schemes (Choanozoa and Opisthokonta). For ML analysis in each dataset, site-wise likelihood scores ere inferred for both hypotheses using IQtree (option -g) with the same best-fit model identified above. The two different
 phylogenetic hypotheses passed to IQtree (via -z) were the corresponding tree that the ctenophore as the sister lineage tree and the corresponding
-tree that was modified to have sponges as the sister to all other metazoans. The constraint trees were conducted by R package.  The numbers of genes and sites supporting each hypothesis were calculated with RAxML output and Perl scripts from Shen et al. For BI analysis, we only considered the Whelan_2017 dataset. 
+tree that was modified to have sponges as the sister to all other metazoans. The constraint trees were conducted by R package.  The numbers of genes and sites supporting each hypothesis were calculated with RAxML output and Perl scripts from Shen et al. For BI analysis, we only considered the Whelan_2017 dataset.
 
 
 
@@ -349,11 +349,53 @@ Note that there was, in fact, an exception to strong support. An analysis of the
 
 ### Philippe *et al.* 2009
 
-Philippe *et al.* 2009 [Philippe:2009hh] assembled a 128 EST dataset for 55 species to explore phylogenetic relationship of early diverging animals.
+Philippe *et al.* 2009 [Philippe:2009hh] assembled an EST dataset for 55 species with 128 genes to explore phylogenetic relationship of early diverging animals.
 
 ### Hejnol et al. 2009
 
+Hejnol *et al.* 2009 added 
 
+### Ryan *et al.* 2013
+Ryan *et al.* 2013 sequenced the first ctenophore genome of *Mnemiopsis leidyi*. With the genome resources of *M. leidyi*, the authors constructed two phylogenomic datasets: a "Genome set" based on 13 animal genomes and a "EST Set" that also included 59 animals. They analyzed both matrices by site-homogeneous GTR+Gamma model and Poisson-CAT model with three sets of outgroup sampling to evaluate the effect of outgoup selection to the ingroup topology.
+The results strongly supported Ctenophora-sister in all datasets they analysed using site-homogeneous model. The Poisson + CAT model of the genome dataset strongly supported of a clade of Ctenophora and Porifera as the sister group to all other Metazoa and Bayesian analysis on the EST dataset did not converge after 205 days.  
+
+### Whelan et al. 2015
+Wehlan *et al.* 2015 constructed a new phylogenomic dataset by eight new transcripomic data and investigated a range of possible sources of systematic error under multiple analyses (e.g. long-branch attraction, compositional bias, fast evolving genes, etc.). Putative orthologs were determined of each species using HaMStR using the model organism core ortholog set (~ 1000 orthologs) and subsequetly removal of genes with too much missing data and potential paralogs.  The authors further filtered the full dataset to 24 sub-datasets by filtering genes with high long-branch scores; genes with high RSFV values; genes that are potential paralogs; fast evolving genes and progressively removal of outgroups. All the maximum likelihood analyses with site-homogeneous model and PartitionFinder strongly suggested Ctenophora-sister. CAT-GTR models only used in least saturated dataset 6 and 16 also strongly supported Ctenophora. Regarding the recovery of Ctenophora-sister, the authors concluded:
+> Importantly, biases resulting from elevated compositional heterogeneity or elevated substitution rates are ruled out. Placement of ctenophores as
+sister to all other animals, and sponge monophyly, are strongly supported under multiple analyses, herein.
+
+### Pisani *et al.* 2015
+
+Pisani *et al.* 2015 reanalyzed representative datasets that supported Ctenophora-sister, including Ryan2013, Moroz2014 and Whelan2015 datasets. It was the first study showing that progressively removal of more distantly related outgroups could largely affect phylogenomic inference of animal-root position. The authors suggested that the inclusion of outgroups very distant from the ingroup can cause systematic errors due to long-branch attraction. They found strong support of porifera-sister when only include Choanozoa as outgroup in these datasets using site-heterogeous CAT model. Regarding the recovery of Porifera-sister, the authors concluded:
+>Our results reinforce a traditional scenario for the evolution of complexity in animals, and indicate that inferences about the evolution of Metazoa
+based on the Ctenophora-sister hypothesis are not supported by the currently available data.
+
+### Feuda *et al.* 2017
+
+Feuda *et al.* didn't generate any new data, instead they used the data-recoding methods to reanalyze two key datasets that support Ctenophora-sister (Whelan2015_D20, Chang2015 datasets). It was the first study phylogenomic analysis using recoding strategy to explore animal-root position. The authors compared model adequacy using posterior predictive analyses from a set of site-homogeneous (WAG, LG, GTR, PartitionFinder)and site-heterogeneous (CAT-GTR) models with non-recoding and recoding datasets. The results showed that data-recoding can significant reduce compositional heterogeneity in both datasets with CAT-GTR models and strongly supported Porifera-sister hypothesis. Regarding the recovery of Porifera-sister, the authors concluded:
+
+> Because adequate modeling of the evolutionary process that generated the data is fundamental to recovering an accurate phylogeny, our results strongly support sponges as the sister group of all other animals and provide further evidence that Ctenophora-sister represents a tree reconstruction artifact.
+
+### Whelan and Halalnych 2017a
+
+Whelan *et al.* is the only study to evaluate performance of site-heterogeneous models and site-homogeneous model with data partitioning under the simulation framework. The simulation results suggested that Poisson+CAT model consistently performed worse than other models in simulation datasets. More importantly, the authors also showed that both Poisson + CAT and GTR +  CAT models could overestimated substitutional heterogeneity in many cases. They also reanalyzed datasets from Philippe 2009 and Nosenko 2013 using both CAT models and data partitioning with site-homogeneious model. The results indicated that Poisson + CAT model tends to recover less accurate trees and both GTR + CAT and data partitioning strongly supported Ctenophora-sister in reanalyses. The authors also concluded:
+
+> Practices such as removing constant sites and parsimony uninformative characters, or using CAT-F81 when CAT-GTR is deemed too computationally expensive,
+cannot be logically justified. Given clear problems with CAT-F81, phylogenies previously inferred with this model should be reassessed.
+
+
+### Whelan *et al.* 2017b
+
+Whelan *et al.* added 27 new ctenophore transcriptomic data to explore animal-root position as well as relationships within Ctenophores. It significantly increased ctenophore taxon sampling than other studies. Putative orthologs were determined largely similar to Whelan2015, with the difference of a core Ctenophora core datasets were constructed here with more than 2000 genes. The subsequent filtering strategy was also similar to the previous study. All analyses using site-homogeneous and site-heterogeneous models strongly supported Ctenophora-sister hypothesis, even with CAT-GTR model in Choanoazoa dataset. Regarding the recovery of Ctenophora-sister, the authors concluded:
+>Using datasets with reasonably high ctenophore and other non-bilaterian taxon sampling, our results strongly reject the hypothesis that sponges are the sister lineage to all other extant metazoans.
+
+### Simion *et al.* 2017
+
+Simion *et al.* [@Dunn:2008ky] added transcriptomic data for 21 new animals. The data matrix was constructed using a semi-automated approach to comprehensively detect and eliminate potential systematic errors. The resulting dataset comprises 1,719 genes and 97 species, including 61 non-bilaterian metazoan species. It was by far the largest phylogenomic dataset in terms of taxon and gene sampling related to animal-root question.
+
+The supermatrix was first analyzed using the F81-CAT model. Different that other phylobayes analyses, Simion *et al.* used a gene jackknife strategy based on 100 analyses to overcome the computational limitation because of the large data size. Each jackknife is baed on a random selection of ~ 25% of the genes. The Phylobayes with site-heterogeneous model strongly supported the Porifera-sister, whereas site-homogeneous strongly supported Ctenophora-sister in the supermatrix dataset. Importantly, the authors compared the behavior of long-branch effect between site-heterogenious and site-homogeneous models by progressively removal taxa and concluded higher sensitivity of site-homogeneous models to LBA than CAT models. Regarding the recovery of Ctenophora-sister, the authors concluded:
+
+> Our dataset outperforms previous metazoan gene superalignments in terms of data quality and quantity. Analyses with a best-fitting site-heterogeneous evolutionary model provide strong statistical support for placing sponges as the sister-group to all other metazoans, with ctenophores emerging as the second-earliest branching animal lineage.
 
 ### Pick *et al.* 2010
 
