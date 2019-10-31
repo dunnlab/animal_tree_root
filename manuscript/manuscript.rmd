@@ -100,13 +100,14 @@ The vector of equilibrium frequencies $\Pi$ describes the stationary frequency o
 
 - C10 to C60 [@si2008empirical]. 10 to 60-profile mixture models as variants of the CAT model under the maximum-likelihood framework.
 
-- Six-state amino acid recoding. Amino acids are recoded into six groups based on function to account for both compositional heterogeneity and substitution saturation. Several recoding strategies have been proposed, including Dayhoff 6-state recoding, S&R 6-state recoding, KGB 6-state recoding.
+- Six-state amino acid recoding. Amino acids are recoded into six groups based on function to account for both compositional heterogeneity and substitution saturation. Several recoding strategies have been proposed, including Dayhoff 6-state recoding, S&R 6-state recoding, KGB 6-state recoding based on exchangeability matrix of models.
 
 Models can be assembled by selecting different options for all these different components. The models that are applied in practice area heavily influenced by engineering and computational costs, as well as convention. For example, on the questions considered here F81 and GTR exchangeability matrices have only been used in combination with CAT site heterogeneous models of equilibrium frequency. LG and WAG exchangeability matrices have only been used with site homogeneous estimates of equilibrium frequency. This is further confused by the abbreviations that are used for models. Papers often discuss CAT and WAG models as if they are exclusive, but these particular terms apply to non-exclusive model components-- CAT refers to variation across sites and WAG a particular exchangeability matrix. CAT is generally shorthand for F81+CAT and WAG is shorthand for WAG+homogeneous equilibrium frequency estimation. One could, though, run a WAG+CAT model.
 
 To avoid confusion on this point, we always specify the exchangeability matrix first, followed by modifiers that describe accommodation of heterogeneity in equilibrium frequencies (*e.g.*, CAT) or rate (*e.g.*, Gamma). If there are no modifiers, then it is implied that site homogeneous models are used.
 
 ### Gene sampling
+Gene sampling has no doubt
 
 ### Outgroup taxon sampling
 
@@ -209,8 +210,8 @@ analyses_published %>%
 	ggplot( aes(x=model_combined, y=clade, col=result, shape=inference) ) +
 		geom_jitter( width = 0.20, height = 0.20, alpha=0.7, size=2 ) +
 		scale_colour_manual(values = result_colors) +
-		theme_classic() + theme(axis.text.x = element_text(angle=45, hjust=1))
-
+		theme_classic() + theme(axis.text.x = element_text(angle=45, hjust=1))+
+   xlab("model complexity")
 ```
 
 
@@ -349,20 +350,41 @@ Note that there was, in fact, an exception to strong support. An analysis of the
 
 ### Philippe *et al.* 2009
 
-Philippe *et al.* 2009 [Philippe:2009hh] assembled an EST dataset for 55 species with 128 genes to explore phylogenetic relationship of early diverging animals.
+Philippe *et al.* 2009 [Philippe:2009hh] assembled an EST dataset for 55 species with 128 genes to explore phylogenetic relationship of early diverging animals. The phylogenetic analysis using Poisson-CAT model strongly supported Porifera-sister, and ctenophores was sister to cnidarians to form the "coelenterate" clade. The authors concluded:
+> The resulting phylogeny yields two significant conclusions reviving old views that have been challenged in the molecular era: (1) that the sponges (Porifera) are monophyletic and not paraphyletic as repeatedly proposed, thus undermining the idea that ancestral metazoans had a sponge-like body plan; (2) that the most likely position for the ctenophores is together with the cnidarians in a ‘‘coelenterate’’ clade.
 
 ### Hejnol et al. 2009
 
-Hejnol *et al.* 2009 added 
+Hejnol *et al.* 2009 added EST sequences from seven taxa, and a total of 94 taxa were included in the final data matrix. The orthology inference was largely simialr to Dunn et al. 2008. Two datsets were constructed, one with 844 genes and the other with 330 genes. Maximum likelihood analyses from both datasets strongly supported Ctenophora-sister.
+
+### Pick *et al.* 2010
+
+Pick *et al.* [@Pick:2010eb] sought to test whether Ctenophora-sister was an artefact of insufficient taxon sampling. They added new and additional published sequence data to the 64-taxon matrix of Dunn *et al.* [@Dunn:2008ky]. The new taxa included 12 sponges, 1 ctenophore, 5 cnidarians, and *Trichoplax*. They further modified the matrix by removing 2,150 sites that were poorly sampled or aligned. They considered two different sets of outgroups: Choanoflagellata (resulting in Choanimalia) and the same sampling as Dunn *et al.* (resulting in Opisthokonta).
+
+All their analyses were conducted under the F81+CAT+Gamma model in phylobayes [@Lartillot:2004dq], in both a Bayesian framework and with bootstrapping. All analyses have the same ingroup sampling and site removal so it isn't possible to independently assess the impact of these factors. Analyses with Choanimalia sampling recovered Porifera-sister with 72% posterior probability (PP) and 91% bootstrap support (BS). With broader Opisthokonta sampling, support for Porifera-sister is 84% PP. This is an interesting case where increased outgroup sampling leads to increased support for Porifera-sister.
+
+The authors argue that previous results supporting Ctenophora-sister "are artifacts stemming from insufficient taxon sampling and long-branch attraction (LBA)" and that "this hypothesis should be rejected". Although the posterior probabilities supporting Porifera-sister are not strong, they conclude:
+
+> Results of our analyses indicate that sponges are the sister group to the remaining Metazoa, and Placozoa are sister group to the Bilateria
+
+They also investigated saturation, and conclude that Dunn *et al.* [@Dunn:2008ky] is more saturated than Philippe *et al.* 2009 [Philippe:2009hh]. Note that the Pick *et al.* [@Pick:2010eb] dataset is not reanalyzed here because partition data are not available, and due to site filtering the partition file from Dunn *et al.* [@Dunn:2008ky] cannot be applied to this matrix.
+
 
 ### Ryan *et al.* 2013
-Ryan *et al.* 2013 sequenced the first ctenophore genome of *Mnemiopsis leidyi*. With the genome resources of *M. leidyi*, the authors constructed two phylogenomic datasets: a "Genome set" based on 13 animal genomes and a "EST Set" that also included 59 animals. They analyzed both matrices by site-homogeneous GTR+Gamma model and Poisson-CAT model with three sets of outgroup sampling to evaluate the effect of outgoup selection to the ingroup topology.
-The results strongly supported Ctenophora-sister in all datasets they analysed using site-homogeneous model. The Poisson + CAT model of the genome dataset strongly supported of a clade of Ctenophora and Porifera as the sister group to all other Metazoa and Bayesian analysis on the EST dataset did not converge after 205 days.  
+Ryan *et al.* 2013 sequenced the first ctenophore genome of *Mnemiopsis leidyi*. With the genome resources of *M. leidyi*, the authors constructed two phylogenomic datasets: a "Genome set" based on 13 animal genomes and a "EST Set" that also included 59 animals. They analyzed both matrices by site-homogeneous GTR+Gamma model and Poisson-CAT model with three sets of outgroup sampling to evaluate the effect of outgroup selection to the ingroup topology. The results strongly supported Ctenophora-sister in all datasets they analysed using site-homogeneous model. The Poisson + CAT model of the genome dataset strongly supported of a clade of Ctenophora and Porifera as the sister group to all other Metazoa and Bayesian analysis on the EST dataset did not converge after 205 days.  
+
+### Moroz *et al.* 2014
+
+Moroz *et al.* 2014 sequenced the second ctenophore genome *Pleurobrachia bachei* to explore the phylogenetic relationship of Metazoa. All phylogenetic analyses strongly supported Ctenophora-sister with different taxon and gene sampling using WAG site-homogeneous model.
 
 ### Whelan et al. 2015
 Wehlan *et al.* 2015 constructed a new phylogenomic dataset by eight new transcripomic data and investigated a range of possible sources of systematic error under multiple analyses (e.g. long-branch attraction, compositional bias, fast evolving genes, etc.). Putative orthologs were determined of each species using HaMStR using the model organism core ortholog set (~ 1000 orthologs) and subsequetly removal of genes with too much missing data and potential paralogs.  The authors further filtered the full dataset to 24 sub-datasets by filtering genes with high long-branch scores; genes with high RSFV values; genes that are potential paralogs; fast evolving genes and progressively removal of outgroups. All the maximum likelihood analyses with site-homogeneous model and PartitionFinder strongly suggested Ctenophora-sister. CAT-GTR models only used in least saturated dataset 6 and 16 also strongly supported Ctenophora. Regarding the recovery of Ctenophora-sister, the authors concluded:
 > Importantly, biases resulting from elevated compositional heterogeneity or elevated substitution rates are ruled out. Placement of ctenophores as
 sister to all other animals, and sponge monophyly, are strongly supported under multiple analyses, herein.
+
+### Chang et al. 2015
+
+Chang *et al.* 2015 was originally used to explore phylogenetic position of Myxozoa in Cnidaria but also sampled broadly across the breadth of animal diversity. The authors constructed a dataset with 200 protein markers based on Philippe et al. 2011 with 51,940 amino acids and 77 taxa. Both site-heterogeneous Poisson-CAT and site-homogeneous GTR models strongly supported Ctenophora-sister.
 
 ### Pisani *et al.* 2015
 
@@ -393,21 +415,11 @@ Whelan *et al.* added 27 new ctenophore transcriptomic data to explore animal-ro
 
 Simion *et al.* [@Dunn:2008ky] added transcriptomic data for 21 new animals. The data matrix was constructed using a semi-automated approach to comprehensively detect and eliminate potential systematic errors. The resulting dataset comprises 1,719 genes and 97 species, including 61 non-bilaterian metazoan species. It was by far the largest phylogenomic dataset in terms of taxon and gene sampling related to animal-root question.
 
-The supermatrix was first analyzed using the F81-CAT model. Different that other phylobayes analyses, Simion *et al.* used a gene jackknife strategy based on 100 analyses to overcome the computational limitation because of the large data size. Each jackknife is baed on a random selection of ~ 25% of the genes. The Phylobayes with site-heterogeneous model strongly supported the Porifera-sister, whereas site-homogeneous strongly supported Ctenophora-sister in the supermatrix dataset. Importantly, the authors compared the behavior of long-branch effect between site-heterogenious and site-homogeneous models by progressively removal taxa and concluded higher sensitivity of site-homogeneous models to LBA than CAT models. Regarding the recovery of Ctenophora-sister, the authors concluded:
+The supermatrix was first analyzed using the Poisson-CAT model. Different that other phylobayes analyses, Simion *et al.* used a gene jackknife strategy based on 100 analyses to overcome the computational limitation because of the large data size. Each jackknife is baed on a random selection of ~ 25% of the genes. The Phylobayes with site-heterogeneous model strongly supported the Porifera-sister, whereas site-homogeneous strongly supported Ctenophora-sister in the supermatrix dataset. Importantly, the authors compared the behavior of long-branch effect between site-heterogenious and site-homogeneous models by progressively removal taxa and concluded higher sensitivity of site-homogeneous models to LBA than CAT models. Regarding the recovery of Ctenophora-sister, the authors concluded:
 
 > Our dataset outperforms previous metazoan gene superalignments in terms of data quality and quantity. Analyses with a best-fitting site-heterogeneous evolutionary model provide strong statistical support for placing sponges as the sister-group to all other metazoans, with ctenophores emerging as the second-earliest branching animal lineage.
 
-### Pick *et al.* 2010
 
-Pick *et al.* [@Pick:2010eb] sought to test whether Ctenophora-sister was an artefact of insufficient taxon sampling. They added new and additional published sequence data to the 64-taxon matrix of Dunn *et al.* [@Dunn:2008ky]. The new taxa included 12 sponges, 1 ctenophore, 5 cnidarians, and *Trichoplax*. They further modified the matrix by removing 2,150 sites that were poorly sampled or aligned. They considered two different sets of outgroups: Choanoflagellata (resulting in Choanimalia) and the same sampling as Dunn *et al.* (resulting in Opisthokonta).
-
-All their analyses were conducted under the F81+CAT+Gamma model in phylobayes [@Lartillot:2004dq], in both a Bayesian framework and with bootstrapping. All analyses have the same ingroup sampling and site removal so it isn't possible to independently assess the impact of these factors. Analyses with Choanimalia sampling recovered Porifera-sister with 72% posterior probability (PP) and 91% bootstrap support (BS). With broader Opisthokonta sampling, support for Porifera-sister is 84% PP. This is an interesting case where increased outgroup sampling leads to increased support for Porifera-sister.
-
-The authors argue that previous results supporting Ctenophora-sister "are artifacts stemming from insufficient taxon sampling and long-branch attraction (LBA)" and that "this hypothesis should be rejected". Although the posterior probabilities supporting Porifera-sister are not strong, they conclude:
-
-> Results of our analyses indicate that sponges are the sister group to the remaining Metazoa, and Placozoa are sister group to the Bilateria
-
-They also investigated saturation, and conclude that Dunn *et al.* [@Dunn:2008ky] is more saturated than Philippe *et al.* 2009 [Philippe:2009hh]. Note that the Pick *et al.* [@Pick:2010eb] dataset is not reanalyzed here because partition data are not available, and due to site filtering the partition file from Dunn *et al.* [@Dunn:2008ky] cannot be applied to this matrix.
 
 
 ## Model matrix comparison

@@ -1,11 +1,11 @@
-# The computationally intensive analyses for the manuscript 
+# The computationally intensive analyses for the manuscript
 # presented at https://github.com/caseywdunn/animal_root/tree/master/manuscript .
 #
-# Executing this code generates manuscript.RData, which contains analysis 
-# results. That file is then read by manuscript.rmd for rendering and 
+# Executing this code generates manuscript.RData, which contains analysis
+# results. That file is then read by manuscript.rmd for rendering and
 # presentation of the results.
-# 
-# The code presented here is roughly in the order of the analyses presented 
+#
+# The code presented here is roughly in the order of the analyses presented
 # in the manuscript, though there are exceptions
 
 ## Preliminaries
@@ -31,8 +31,8 @@ if ( cores < 1 ) {
 registerDoParallel( cores )
 
 # Set up constants
-focal_matrices = 
-	read.table(text = 
+focal_matrices =
+	read.table(text =
 						 	"manuscript matrix
 						 Borowiec2015	Total1080
 						 Chang2015 Chang2015
@@ -46,8 +46,8 @@ focal_matrices =
 						 Ryan2013  genome.opisthokonta
 						 Simion2017	supermatrix_97sp_401632pos_1719genes
 						 Whelan2015	Metazoa_Choano_RCFV_strict
-						 ", 
-						 header = TRUE, 
+						 ",
+						 header = TRUE,
 						 stringsAsFactors = FALSE)
 
 bootstrap_threshold = 90
@@ -57,16 +57,16 @@ posterior_prob_threshold = 95
 
 papers = read_tsv( "../data_processed/tables/previously_published_manuscripts.tsv" )
 datasets = read_tsv( "../data_processed/tables/previously_published_matrices.tsv" )
-analyses_published = 
+analyses_published =
 	read_tsv( "../data_processed/tables/previously_published_analyses.tsv", col_types = 'icccccccccccclccccccc' ) %>%
 	mutate( clade = factor( clade, levels= c( 'Choanimalia', 'Holozoa', 'Opisthokonta' ) ) )
 
 taxonomy_reference = read_tsv("../reconciliation/taxonomy_info/taxon_table.tsv")
 
 # raw columns:
-# component_number, matrix, partition_name, edges, nodes_in_component, component_density, BUSCO_ID, BUSCO_description, 
+# component_number, matrix, partition_name, edges, nodes_in_component, component_density, BUSCO_ID, BUSCO_description,
 # SwissProt_accession, SwissProt_description, GO_annotations, ribo_found
-partition_map_global = 
+partition_map_global =
 	read_tsv("../reconciliation/blast/graphs/partition_components_split_annotated.tsv") %>%
 	dplyr::rename(partition=partition_name) %>%
 	mutate( component_number = as.character(component_number) )
@@ -78,15 +78,14 @@ analyses_published$result[ ( analyses_published$inference == "ML" ) &       (ana
 analyses_published$result[ ( analyses_published$inference == "ML" ) &       (analyses_published$support_ctenophora_sister >= bootstrap_threshold) ] = "Ctenophora-sister"
 analyses_published$result = factor( analyses_published$result )
 
-analyses_published$model_combined = factor( analyses_published$model_combined, levels=c("GTR + CAT", "F81 + CAT", "Recoding + GTR + CAT", "Recoding + GTR", "Partitionfinder", "GTR", "LG", "WAG" ) )
-
+analyses_published$model_combined = factor( analyses_published$model_combined, levels=c("WAG", "LG", "GTR", "data partitioning", "Recoding + GTR", "Recoding + GTR + CAT", "Poisson + CAT", "GTR + CAT" ) )
 
 # Matrix taxon composition
 
 clades = c( "Fungi", "Ichthyosporea", "Filasterea", "Choanoflagellida", "Ctenophora", "Porifera", "Placozoa", "Bilateria", "Cnidaria" )
 
-taxa = 
-	taxonomy_reference %>% 
+taxa =
+	taxonomy_reference %>%
 	distinct( relabelled_name, clade_assignment, ncbi_tax_id ) %>%
 	dplyr::rename( taxon=relabelled_name, clade=clade_assignment ) %>%
 	mutate( clade = factor( clade, levels=clades )  )
@@ -106,31 +105,31 @@ lapply(sequence_matrices, generate_constraint_trees)
 
 # Matrix gene composition
 
-busco_results = 
-	read_tsv("../reconciliation/blast/graphs/busco_metazoa_results.tsv") %>% 
-	filter( Status != "Missing" ) 
+busco_results =
+	read_tsv("../reconciliation/blast/graphs/busco_metazoa_results.tsv") %>%
+	filter( Status != "Missing" )
 
-sequences_all_txt = 
+sequences_all_txt =
 	read_tsv("../reconciliation/blast/all_parts_list.txt")
 
 names(sequences_all_txt) = c("full_name")
-sequences_all = str_split_fixed( sequences_all_txt$full_name, ":", 4 ) %>% 
+sequences_all = str_split_fixed( sequences_all_txt$full_name, ":", 4 ) %>%
 	as_tibble()
 names( sequences_all ) = c( "matrix", "species", "ncbi_taxon_id", "partition" )
 
-partitions_all = 
-	sequences_all %>% 
-	group_by( matrix, partition ) %>% 
+partitions_all =
+	sequences_all %>%
+	group_by( matrix, partition ) %>%
 	summarise( n_sequences =n() )
 
 
 # Multiple fields are in one colon delimited string. Need to parse them out.
 # Busco result example
-# "Moroz2014:ED3a:Capitella:51293:0241"  
+# "Moroz2014:ED3a:Capitella:51293:0241"
 # manuscript:matrix:species:NCBI_taxon_id:partition
 
-Bs = 
-	str_split_fixed( busco_results$Sequence, ":", 4 ) %>% 
+Bs =
+	str_split_fixed( busco_results$Sequence, ":", 4 ) %>%
 	as_tibble()
 
 names( Bs ) = c( "matrix", "species", "ncbi_taxon_id", "partition" )
@@ -146,16 +145,16 @@ busco_overrepresented = busco_distinct %>% group_by( matrix, partition ) %>% sum
 busco_overrepresented_full = left_join( busco_overrepresented, busco_results )
 
 # Combine and summarize results
-partition_to_busco_map = 
-	busco_distinct %>% 
-	group_by( matrix, partition ) %>% 
+partition_to_busco_map =
+	busco_distinct %>%
+	group_by( matrix, partition ) %>%
 	summarise( BUSCO=names(which(table(Description) == max(table(Description)))[1]) )
 
 partition_map_global %<>% left_join( partition_to_busco_map, by=c("matrix", "partition") )
 
 
-busco_summary = 
-	partition_to_busco_map %>% 
+busco_summary =
+	partition_to_busco_map %>%
 	group_by( matrix ) %>%
 	summarise( n_busco_partitions = n() )
 
@@ -171,10 +170,10 @@ matrix_summary =
 matrix_summary$manuscript = str_split( matrix_summary$matrix, "_", simplify=TRUE )[,1]
 
 cluster_summary =
-	partition_map_global %>% 
-	group_by( component_number ) %>% 
-	summarise( 
-		n_partitions = n(), 
+	partition_map_global %>%
+	group_by( component_number ) %>%
+	summarise(
+		n_partitions = n(),
 		n_matrices= length(unique(matrix)),
 		n_with_busco = sum(! is.na(BUSCO)),
 		n_unique_busco = length(unique(na.omit(BUSCO)))
@@ -182,9 +181,9 @@ cluster_summary =
 
 
 # Matrix overlap
-matrix_overlap = 
-	lapply(sequence_matrices, function(x) lapply(sequence_matrices, function(y) compute_matrix_overlap(x,y))) %>% 
-	unlist(recursive=FALSE) %>% 
+matrix_overlap =
+	lapply(sequence_matrices, function(x) lapply(sequence_matrices, function(y) compute_matrix_overlap(x,y))) %>%
+	unlist(recursive=FALSE) %>%
 	bind_rows()
 
 # Remove reciprocal comparisons and comparisons to self
@@ -230,7 +229,7 @@ analyses_new = lapply(
 			stringsAsFactors = FALSE
 		)
 	}
-) %>% 
+) %>%
 	bind_rows()
 
 analyses_new$inference = c( rep( "ML", length( trees_iq ) ), rep( "Bayesian", length( trees_pb ) ))
@@ -250,10 +249,10 @@ analyses_new$model_summary = factor( analyses_new$model_summary, levels=c("WAG",
 # Partition comparison across matrices
 
 n_total_partitions =
-	partitions_all %>% 
+	partitions_all %>%
 	group_by(matrix) %>%
-	summarize("n_total_partitions"=n_distinct(partition)) 
-n_compandBUSCO = 
+	summarize("n_total_partitions"=n_distinct(partition))
+n_compandBUSCO =
 	partition_map_global %>%
 		group_by(matrix) %>%
 		summarize(
@@ -267,31 +266,31 @@ n_components_with_BUSCO =
 		summarize(n()) %>%
 		group_by(matrix) %>%
 		tally(name="n_components_with_BUSCO")
-n_ribo = 
-	partition_map_global %>% 
-		group_by( matrix, component_number ) %>% 
-		tally(ribo_found) %>% 
-		group_by(matrix) %>% 
+n_ribo =
+	partition_map_global %>%
+		group_by( matrix, component_number ) %>%
+		tally(ribo_found) %>%
+		group_by(matrix) %>%
 		tally()
-discarded_parts = 
+discarded_parts =
 	read_tsv("../reconciliation/blast/graphs/discarded_nodes.tsv") %>%
 	group_by(matrix) %>%
 	summarize("n_partitions_discarded"=n_distinct(partition_name))
 
-partition_network_summary = 
+partition_network_summary =
 	n_total_partitions%>%
 	# left_join(n_compandBUSCO,          by="matrix") %>%
 	left_join(n_components_with_BUSCO, by="matrix") %>%
 	left_join(n_ribo,                  by="matrix") %>%
-	left_join(discarded_parts,         by="matrix") %>% 
+	left_join(discarded_parts,         by="matrix") %>%
 	mutate(n_partitions_discarded = replace_na(n_partitions_discarded, 0))
 
 ## Record information about the session
 session_info_kernel = sessionInfo()
 system_time_kernel = Sys.time()
 
-commit_kernel = 
-	system("git log | head -n 1", intern=TRUE) %>% 
+commit_kernel =
+	system("git log | head -n 1", intern=TRUE) %>%
 	str_replace("commit ", "")
 
 time_stop = Sys.time()
