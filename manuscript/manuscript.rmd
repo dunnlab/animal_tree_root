@@ -108,7 +108,7 @@ To avoid confusion on this point, we always specify the exchangeability matrix f
 
 ### Gene sampling
 
-Whole-genome and transcriptomic sequencing is leading to exciting new data matrices for phylogenomic analyses, potentially including hundreds or thousands of genes. Although the number of sampled genes might be different across studies, it is reasonable to expect that the sampled genes should be ultraconserved across animal genomes and most data matrices should share a core set of orthologs. Surprisingly, gene correspondance across different data matrices has been rarely assessed since most studies relied on their own bioinformatic pipeline for orthology determination.  
+Whole-genome and transcriptomic sequencing is leading to exciting new data matrices for phylogenomic analyses, potentially including hundreds or thousands of genes. Although the number of sampled genes might be different across studies, it is reasonable to expect that the sampled genes should be ultraconserved across animal genomes and most data matrices should share a core set of orthologs. Surprisingly, gene correspondance across different data matrices has been rarely assessed since most studies relied on their own bioinformatic pipeline for orthology determination.  It should be noted that some earlier studies including
 
 
 ### Outgroup and ingroup taxon sampling
@@ -119,12 +119,13 @@ Outgroup selection (the taxa used to root the ingroup animals) can potentially a
 
 ### Data-recoding
 
-Compositional heterogeneity (lineage-specific differences in amino acid frequencies) was long thought has a major effect in resolving the animal tree of life, especially for the position of animal root. Feuda et al. 2017 has proposed to recode the full set of twenty amino acids into six groups of amino aicds that have more frequent evolutionary changes within groups than between groups based on different substitution models. By discarding information on which specific amino acid is found at each site in each species and instead focusing on which groups those amino acids belong to, they sought to reduce the impact of differences between species in which particular amino acids within those groups are most frequent. By reanalyzing Chang et al. 2015 and Whelan et al. 2015, they found that Porifera sister was favored under all recoding strategies using GTR-CAT models. However, the performance of the recoding methods has never been tested empirically against non-recoding method in the root of the animal phylogeny, and a recent simulation study has suggested that non-recoding approaches significantly outperformed 6-state recoding strategies.
+Compositional heterogeneity (lineage-specific differences in amino acid frequencies) was long thought has a major effect in resolving the animal tree of life, especially for the position of animal root. Feuda et al. 2017 has proposed to recode the full set of twenty amino acids into six groups of amino aicds that have more frequent evolutionary changes within groups than between groups based on different exchangeability matrices. By discarding information on which specific amino acid is found at each site in each species and instead focusing on which groups those amino acids belong to, they sought to reduce the impact of differences between species in which particular amino acids within those groups are most frequent. By reanalyzing Chang et al. 2015 and Whelan et al. 2015, they found that Porifera sister was favored under all recoding strategies using GTR-CAT models. However, the performance of the recoding methods has never been tested empirically against non-recoding method in the root of the animal phylogeny, and a recent simulation study has suggested that non-recoding approaches significantly outperformed 6-state recoding strategies. Thus, it is important to evaluate the performance of data recoding method verses non-recoding approaches in empritical animal-root data matrices.
 
 ## Overview of published analyses
 
 ### Matrix taxon composition
 
+we synthesize data and results from all previous phylogenomic analyses that tested Ctenophora-sister and Porifera-sister, including 17 data matrices from 12 studies. For taxon composition, several data matrices have relatively skewed taxon sampling, with more than 50% taxa sampled in bilaterians compared to other major animal lineages. These skewed data matrices includes two studies constructed from EST dataset, such as Dunn2008 (), Hejnol2009.
 
 ```{r taxon_rectangles }
 
