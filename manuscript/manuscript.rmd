@@ -59,7 +59,7 @@ Yuanning Li^1^, Xingxing Shen, Benjamin Evans^2^, Antonis Rokas, and Casey W. Du
 
 ## Introduction
 
-Phylogenomic analyses with genome-scale data have the potential to revolutionize our understanding of the tree of life. However, over the past decade there has been considerable debate about the position of the root of the animal phylogeny, with Ctenophora-sister (comb jelly) and Porifera-sister (sponges) (Fig XXOverview) emerging as the two primary hypotheses. Historically, there was little debate about the root of the animal tree of life and Porifera-sister was widely accepted though rarely tested since . In contrast to the lack of debate about the position of Porifera, there has long been uncertainty about the relationship of Ctenophora to other animals [@Wallberg:2004ws]. An understanding of the first diverging animal lineage is critical for scientists to reconstruct events that occurred  early in animal evolution, especially for complex structures such as cell types, nervous systems, and developmental patterns. However, a consensus has not been reached despite multiple efforts.
+Phylogenomic analyses with genome-scale data have the potential to revolutionize our understanding of the tree of life. However, over the past decade there has been considerable debate about the position of the root of the animal phylogeny, with Ctenophora-sister (comb jelly) and Porifera-sister (sponges) (Fig XXOverview) emerging as the two primary hypotheses. Historically, there was little debate about the root of the animal tree of life and Porifera-sister was widely accepted though rarely tested since . In contrast to the lack of debate about the position of Porifera, there has long been uncertainty about the relationship of Ctenophora to other animals [@Wallberg:2004ws]. An understanding of the first diverging animal lineage is critical for scientists to reconstruct events that occurred  early in animal evolution, especially for complex structures such as cell types, nervous systems, and developmental patterns. However, a wide consensus of animal root position has not been reached despite multiple efforts.
 
 The first phylogenomic study to include ctenophores [@Dunn:2008ky] suggested a new hypothesis, now referred to as Ctenophora-sister, that ctenophores are our most distant animal relative. Since then many more studies have been published, some supporting Ctenophora-sister, some Porifera-sister, and some neither. As it has become clear that this is a very difficult phylogenetic challenge, and the problem has become better characterized, it has become an interesting test-case to phylogenetic biologists beyond those concerned with this particular biological problem. Work has been hindered, though, because it has been difficult to directly compare results across studies and synthesize findings to understand the broader patterns of support. Here we synthesize data and results from all previous phylogenomic analyses that tested Ctenophora-sister and Porifera-sister, and reanalyze these data using standardized methods, and perform new analyses to characterize differences between studies. We hope that this effort provides an integrative overview of the challenge and provides direction for future studies. We also hope that the work we have conducted here, including consolidating all the datasets in one place with consistent formats and species names, will enhance the technical value of this interesting question to methods-focused investigators that look to develop methods to address difficult phylogenetic problems.
 
@@ -108,12 +108,11 @@ To avoid confusion on this point, we always specify the exchangeability matrix f
 
 ### Gene sampling
 
-Whole-genome and transcriptomic sequencing is leading to exciting new data matrices for phylogenomic analyses, potentially including hundreds or thousands of genes. Although the number of sampled genes might be different across studies, it is reasonable to expect that the sampled genes should be ultraconserved across animal genomes and most data matrices should share a core set of orthologs. Surprisingly, gene correspondance across different data matrices has been rarely assessed since most studies relied on their own bioinformatic pipeline for orthology determination.  It should be noted that some earlier studies including
-
+Whole-genome and transcriptomic sequencing is leading to exciting new data matrices for phylogenomic analyses, potentially including hundreds or thousands of genes. Although the number of sampled genes might be different across studies, it is reasonable to expect that the sampled genes should be conserved across animal genomes and most data matrices should share a core set of orthologs. Surprisingly, gene correspondance across different data matrices has been rarely assessed since most studies relied on their own bioinformatic pipeline for determination of orthology genes (OGs).  
 
 ### Outgroup and ingroup taxon sampling
 
-Outgroup selection (the taxa used to root the ingroup animals) can potentially affect phylogenetic inference of the root position of animal phylogeny. Several studies have progressively removed more distantly related outgroup taxa to test the effect of outgroup selection to ingroup topology. Three progressively more inclusive clades have often been investigated, including Choanomalia (Metazoa plus most closely related Choanoflagellata), Holoza (Choanimalia plus more distantly related holozoans) and Opisthokonta (Holozoa + Fungi). It has been suggested the inclusion of more distant related (e.g. Opisthokonta) outgroup taxa tend to recover Ctenophora-sister using both site-homogeneous and site-heterogeneous models, whereas high support of Porifera-sister often recovered when site-heterogeneous models were used. In contrast of outgroup selection, sensitivity to ingroup sampling has received less attention than sensitivity to outgroup sampling. This may be because results have tended to be more sensitive to outgroup sampling.
+Outgroup selection (the taxa used to root the ingroup taxa) can potentially affect phylogenetic inference of the root position of animal phylogeny. Several studies have progressively removed more distantly related outgroup taxa to test the effect of outgroup selection to ingroup topology . Three progressively more inclusive clades have often been investigated, including Choanomalia (Metazoa plus most closely related Choanoflagellata), Holoza (Choanimalia plus more distantly related holozoans) and Opisthokonta (Holozoa + Fungi). It has been suggested the inclusion of more distant related (e.g. Opisthokonta) outgroup taxa tend to recover Ctenophora-sister using both site-homogeneous and site-heterogeneous models, whereas high support of Porifera-sister often recovered when site-heterogeneous models were used. In contrast of outgroup selection, sensitivity to ingroup sampling has received less attention than sensitivity to outgroup sampling. This may be because results have tended to be more sensitive to outgroup sampling.
 
 **Fig XXOutgroup.** The animals and their outgroups, showing the three progressively more inclusive clades Choanimalia, Holozoa, and Opisthokonta.
 
@@ -125,7 +124,8 @@ Compositional heterogeneity (lineage-specific differences in amino acid frequenc
 
 ### Matrix taxon composition
 
-we synthesize data and results from all previous phylogenomic analyses that tested Ctenophora-sister and Porifera-sister, including 17 data matrices from 12 studies. For taxon composition, several data matrices have relatively skewed taxon sampling, with more than 50% taxa sampled in bilaterians compared to other major animal lineages. These skewed data matrices includes two studies constructed from EST dataset, such as Dunn2008 (), Hejnol2009.
+We synthesize data and results from all previous phylogenomic analyses that tested Ctenophora-sister and Porifera-sister, including 17 data matrices from 12 studies. For taxon composition, several data matrices have relatively skewed taxon sampling, with more than 50% taxa sampled in bilaterians compared to other major animal lineages. These skewed data matrices includes two studies constructed from EST dataset and one study from the sequenced whole animal genome. The rest data matrices have relative balanced taxon composition, although the the number of sampled taxon varies a lot. Since increase taxon sampling is broadly accepted to improve phylogenetic inference an aid in the placement of animal root position, it should be noted that Whelan2017 and Simion2017 have much broader taxon sampling than other data matrices, with Simion2017 has the most taxon sampling and Whelan2017 contains greater ctenophore taxon sampling.
+
 
 ```{r taxon_rectangles }
 
@@ -163,6 +163,14 @@ ggplot(data=filtered_taxon_rectangles) +
 
 ### Matrix gene composition
 
+Gene sampling plays an essential role in phylogenomic analyses, and most often rely on the concatenation of sampled genes to tackle the incongruence of the topology among individual gene trees. The basic idea is that the concatenation assumes that phylogenetic signal from genes that do not share the species phylogeny will be overwhelmed by the signal from the majority of genes whose genealogy mirrors that of the species evolutionary history [@lanier2012recombination]. However, large phylogenomic data matrices potentially contain genes with conflicting or weak phylogenetic signal that can lead to incongruence phylogenomic results, especially when analyzing deeper node represents ancient divergence in the tree [@salichos2013inferring]. Thus, it is important to evaluate the gene composition and matrix overlap across difference data matrices to explore.
+
+We first used the Metazoa BUSCO dataset to evaluate gene composition from all data matrices and the result is unexpected. The animal BUSCO dataset contains 978 single-copy OGs (identified from 64 animal taxa) that are most likely present in the common ancestor of animal genome, and are commonly used to assess the completeness of animal genome or transcriptomic assembly and frequently used as phylogenetic markers. Thus, it is reasonable to expect that these conserved genes should present at a higher percentage than non-BUSCO genes in most data matrices given their nature of conserveness and high-expression in transcriptomes. However, to our surprise, we found that OGs used in all data matrices comprised less than 50%, even with several data matrices contain less than 20 percent of BUSCO genes.
+
+We furthur
+
+
+
 ```{r gene_composition}
 
 busco_overrepresented
@@ -176,7 +184,16 @@ p1 = ggplot( matrix_summary ) +
 matrix_summary$matrix = factor( matrix_summary$matrix, levels=c("Dunn2008", "Philippe2009", "Hejnol2009", "Nosenko2013_nonribo_9187","Nosenko2013_ribo_11057","Nosenko2013_ribo_14615","Ryan2013_est", "Moroz2014_3d", "Chang2015", "Borowiec2015_Best108" , "Borowiec2015_Total1080", "Whelan2015_D1", "Whelan2015_D10", "Whelan2015_D20", "NA", "Whelan2017_full", "Whelan2017_strict") )
 
 p2 = ggplot( matrix_summary ) + geom_point( aes(x=matrix, y=n_busco_partitions/n_partitions*100, col=manuscript) ) + 	theme_classic() + theme(axis.text.x = element_text(angle=45, hjust=1))
+count =  busco_results %>% select( matrix,  Busco_Id ) %>% distinct(  )
+reference_busco=read_tsv("/animal_root/manuscript/busco.tsv")
+
+Simion2017_busco <- count[grep("Simion2017", count$matrix), ] %>% select(Busco_Id)
+names(Simion2017_busco)[1]<-"Simion2017"
+
+
 ```
+
+
 
 **Fig XXBUSCO_annotations.** The number of partitions with BUSCO annotations in each matrix, relative to the number of partitions.
 
@@ -184,6 +201,10 @@ p2 = ggplot( matrix_summary ) + geom_point( aes(x=matrix, y=n_busco_partitions/n
 **Fig XXGene_composition.** Each of the primary matrices considered here, color coded by the types of genes sampled (XX Ribosomal proteins, etc). Horizontal size is proportional to the number of genes sampled, vertical size to the number of taxa sampled.
 
 ### Matrix overlap
+
+Previous reanalyses have mainly focused on ourgroup selection and/or model fits in different data matrices, and the matrix overlap across different studies has never been investigated. Our initial intent of comparing matrix overlap across matrices was to constructed new matrices with shared taxon and gene sampling to test specific hypotheses about differences in support. The hypothesis is that although the bioinformatics pipeline used for OG determination is differt, most larger data matrices should share a core set of OGs. However, our results show that surprisingly little overlap were identified across all the data matrices from different studies (Fig XXAlignment overlap).
+
+
 
 ```{r matrix_overlap}
 
@@ -206,6 +227,8 @@ ggplot(data=matrix_overlap_rectangles) +
 
 ### Support for Porifera-sister and Ctenophora-sister
 
+Here we summarized all the previous phylogenetic analyses from all studies and the results are shown in Fig. support_published_analyses and Table perviouly_published_analyses.tsv. We found that all phylogenomic analyses strongly support of Ctenophora-sister once site-homogeneous model were used, no matter what outgroup choice, phylogenetic inference, recoding method, data partitioning are used. We found that support for Porifera-sister increases with the exclusion of more distantly related outgroups and the use of site-heterogeneious CAT models, although many of analyses are not converged or posterior probability is relatively low using PhyloBayes. It should be noted that most support of Porifera-sister are from analyses using Poisson + CAT and recoding methods with GTR + CAT models.
+
 ```{r support_published_analyses}
 
 analyses_published %>%
@@ -217,8 +240,7 @@ analyses_published %>%
 ```
 
 
-
-A total of `r nrow(analyses_published)` analyses were transcribed from the literature.
+**Fig support_published_analyses.**  A total of `r nrow(analyses_published)` analyses were transcribed from the literature (Table perviouly_published_analyses.tsv).
 
 
 
@@ -528,12 +550,12 @@ We first considered pairwise similarity between the same species from different 
 ```{r partition_mapping}
 
 # Investigate connected components of genes (ie partitions) that include multiple members fromt he same matrix
-clusterstats_within_manuscripts = partition_map_global %>% group_by( matrix, component_number ) %>% summarise(n=n()) %>% arrange(desc(n))
-clusterstats = partition_map_global %>% group_by( component_number ) %>% summarise(n=n()) %>% arrange(desc(n))
+#clusterstats_within_manuscripts = partition_map_global %>% group_by( matrix, component_number ) %>% summarise(n=n()) %>% arrange(desc(n))
+#clusterstats = partition_map_global %>% group_by( component_number ) %>% summarise(n=n()) %>% arrange(desc(n))
 
-clusterstats_within_manuscripts %>% print(n=100)
-clusterstats %>% print(n=100)
-partition_network_summary %>% print()
+#clusterstats_within_manuscripts %>% print(n=100)
+#clusterstats %>% print(n=100)
+#partition_network_summary %>% print()
 
 ```
 
