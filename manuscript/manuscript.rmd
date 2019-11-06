@@ -108,7 +108,7 @@ To avoid confusion on this point, we always specify the exchangeability matrix f
 
 ### Gene sampling
 
-Whole-genome and transcriptomic sequencing is leading to exciting new data matrices for phylogenomic analyses, potentially including hundreds or thousands of genes. Although the number of sampled genes might be different across studies, it is reasonable to expect that the sampled genes should be conserved across animal genomes and most data matrices should share a core set of orthologs. Surprisingly, gene correspondance across different data matrices has been rarely assessed since most studies relied on their own bioinformatic pipeline for determination of orthology genes (OGs).  
+Whole-genome and transcriptomic sequencing is leading to exciting new data matrices for phylogenomic analyses, potentially including hundreds or thousands of genes. Although the number of sampled genes might be different across studies, it is reasonable to expect that the sampled genes should be conserved across animal genomes and most data matrices should share a core set of orthology genes (OGs). Surprisingly, gene composition and matrice overlap across different data matrices has been rarely assessed since most studies relied on their own bioinformatic pipeline for determination of OGs.  
 
 ### Outgroup and ingroup taxon sampling
 
@@ -227,7 +227,10 @@ ggplot(data=matrix_overlap_rectangles) +
 
 ### Support for Porifera-sister and Ctenophora-sister
 
-Here we summarized all the previous phylogenetic analyses from all studies and the results are shown in Fig. support_published_analyses and Table perviouly_published_analyses.tsv. We found that all phylogenomic analyses strongly support of Ctenophora-sister once site-homogeneous model were used, no matter what outgroup choice, phylogenetic inference, recoding method, data partitioning are used. We found that support for Porifera-sister increases with the exclusion of more distantly related outgroups and the use of site-heterogeneious CAT models, although many of analyses are not converged or posterior probability is relatively low using PhyloBayes. It should be noted that most support of Porifera-sister are from analyses using Poisson + CAT and recoding methods with GTR + CAT models.
+Here we summarized all the previous phylogenetic analyses from all studies and the results are shown in Fig. support_published_analyses and Table perviouly_published_analyses.tsv. We found that all phylogenomic analyses strongly support of Ctenophora-sister once site-homogeneous model were used, no matter what outgroup choice, phylogenetic inference, recoding method, data partitioning are used. We found that support for Porifera-sister increases with the exclusion of more distantly related outgroups and the use of site-heterogeneious CAT models, although many of analyses are not converged or posterior probability is relatively low using PhyloBayes. It should be noted that most support of Porifera-sister are from analyses using Poisson + CAT and recoding methods with site-heterogeneous models. Moreover, only a few analyses utilizing the most complex GTR + CAT model are converged and have mixed support for Porifera-sister or Ctenophora-sister. The main reason the GTR + CAT model has only been employed in a few analyses is because it is computational untractable and can only be used in smaller or reduced data matrices. Interestingly, a CAT-like, site-heterogeneous C10 - C60 (C) models implemented in the maximum likelihood (ML) framework has never been tested and compared to other models.
+
+The use of site-heterogeneous CAT is an infinte mixture model has long been suggested as the best approach to account for systematic errors, particular for long-branch attraction and saturation. The CAT model often received the best-model fit from cross validation or posterior predictive analyses compared to site-homogeneous models with or without data partitioning. In contrast, a recent study has suggested that Poisson + CAT model did not outperform site-homogeneous with data partitioning or GTR + CAT models and in  cases can infer incorrect topology based on the simulation analyses. The author also raised the issue of the potential overparameterization in CAT model in some cases. Nevertheless，the debate over the site-heterogeneous vs. site-homogeneous models and/or inclusion or exclusion more distantly related outgroups, constitutes the probably one of the most controversial node in the animal tree of life.
+
 
 ```{r support_published_analyses}
 
@@ -260,8 +263,9 @@ analyses_new %>%
 
 One of the challenges of interpreting support for the placement of the animal root across studies is that different programs, software versions, and settings have been used across studies, and phylogenetic analysis decisions have been approached in very different ways. Here we reanalyze the primary matrices from each study under consistent conditions with IQtree under a panel of evolutionary models. We selected this tool because it has greater model flexibility, computational time and accuracy than other tools in maximum likelihood framework.
 
-We first tested a variety of models for each matrix, and inferred support under the best-fit model from IQtree. We then analyzed every matrix under a panel of standard models, including WAG+G, GTR+G, Poisson+G.
+We first tested a variety of models for each matrix and compared the relative fit of site-homogeneous and site-heterogeneous C models using ModelFinder in IQtree. We found in all cases, C60 + WAG/LG +F +G models fit these matrices bettern than the site-homogeneous models in under BIC criteria and inferred support under the best-fit model from IQtree.  We then analyzed every matrix under a panel of standard site-heterogeneous and site-homogeneous models, including WAG+G, GTR+G and Poisson+C60+F+G. Moreover, we also used the the best-fit model identified above with the removal of all distantly related outgroups and only include Choanozoa as outgroup. With the exception of Moroz2014 matrix (), every analysis conducted herein with different models or outgroup choice strongly supported the ctenophore-sister hypothesis.
 
+It
 
 ```{r modelfinder}
 
@@ -277,7 +281,11 @@ Table XXModelfinder. The models selected by modelfinder for each matrix.
 
 ### Comparison of iqtree and phylobayes results
 
-Site heterogeneity in equilibrium frequency has been a major concern in tests of Ctenophora-sister and Porifera-sister. This has been addressed with CAT models. iqtree provides a new family of C models that also address site heterogeneity. Given the extensive computational cost and concerns about overparameterization of CAT models, we compared iqtree C results to CAT results for a subset of matrices to see if they give consistent results. This would be of technical interest because it would reduce the cost of accommodating compositional heterogeneity in future analyses.
+Site heterogeneity in equilibrium frequency has been a major concern in tests of Ctenophora-sister and Porifera-sister. This has been addressed with CAT models. iqtree provides a new family of C models that also address site heterogeneity. Given the extensive computational cost and concerns about overparameterization of CAT models, we compared iqtree C results to CAT results for a subset of matrices to see if they give consistent results. This would be of technical interest because it would reduce the cost of accommodating compositional heterogeneity in future analyses. For computational efficiency, we first only applied Poisson+CAT models in every matrice with only Choanoflagellata as outgroup. It should be noted that although most Phylobayes runs were converged, the convergence of several large matrices have not been reached after at least a month's running time.
+
+Three matrices with inclusion of Choanoflagellata as outgroup
+
+
 
 
 
