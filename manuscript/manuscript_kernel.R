@@ -284,6 +284,156 @@ partition_network_summary =
 	left_join(n_ribo,                  by="matrix") %>%
 	left_join(discarded_parts,         by="matrix") %>%
 	mutate(n_partitions_discarded = replace_na(n_partitions_discarded, 0))
+### Summarize phylogenetic signal by genes
+Philippe2009  <- read_tsv("../trees_new/AU_test/Philippe2009_C60_genewise_lnL.txt")
+Philippe2009$ABS <- abs(Philippe2009$`tr1_log-likelihood` - Philippe2009$`tr2_log-likelihood`)
+Philippe2009$result[ (Philippe2009$tree_supported == "tr1" ) & (Philippe2009$ABS >= 1) ] = "Ctenophore-sister-strong-signal"
+Philippe2009$result[ (Philippe2009$tree_supported == "tr1" ) & (Philippe2009$ABS < 1) ] = "Ctenophore-sister-weak-signal"
+Philippe2009$result[ (Philippe2009$tree_supported == "tr2" ) & (Philippe2009$ABS >= 1) ] = "Porifera-sister-strong-signal"
+Philippe2009$result[ (Philippe2009$tree_supported == "tr2" ) & (Philippe2009$ABS <1) ] = "Porifera-sister-weak-signal"
+
+Philippe2009 %>%
+	count(result) %>%
+	mutate(perc = n/ nrow(Philippe2009)) -> Philippe2009_count
+Philippe2009_count$study <- 'Philippe2009_Opisthokonta_C60'
+
+
+Philippe2009_only_choanozoa  <- read_tsv("../trees_new/AU_test/Philippe2009_only_choanozoa_C60_genewise_lnL.txt")
+Philippe2009_only_choanozoa$ABS <- abs(Philippe2009_only_choanozoa$`tr1_log-likelihood` - Philippe2009_only_choanozoa$`tr2_log-likelihood`)
+Philippe2009_only_choanozoa$result[ (Philippe2009_only_choanozoa$tree_supported == "tr1" ) & (Philippe2009_only_choanozoa$ABS >= 1) ] = "Ctenophore-sister-strong-signal"
+Philippe2009_only_choanozoa$result[ (Philippe2009_only_choanozoa$tree_supported == "tr1" ) & (Philippe2009_only_choanozoa$ABS < 1) ] = "Ctenophore-sister-weak-signal"
+Philippe2009_only_choanozoa$result[ (Philippe2009_only_choanozoa$tree_supported == "tr2" ) & (Philippe2009_only_choanozoa$ABS >= 1) ] = "Porifera-sister-strong-signal"
+Philippe2009_only_choanozoa$result[ (Philippe2009_only_choanozoa$tree_supported == "tr2" ) & (Philippe2009_only_choanozoa$ABS <1) ] = "Porifera-sister-weak-signal"
+
+Philippe2009_only_choanozoa %>%
+	count(result) %>%
+	mutate(perc = n/ nrow(Philippe2009_only_choanozoa)) -> Philippe2009_only_choanozoa_count
+Philippe2009_only_choanozoa_count$study <- 'Philippe2009_choanozoa_C60'
+
+
+Ryan2013  <- read_tsv("../trees_new/AU_test/Ryan2013_est_C60_genewise_lnL.txt")
+Ryan2013$ABS <- abs(Ryan2013$`tr1_log-likelihood` - Ryan2013$`tr2_log-likelihood`)
+Ryan2013$result[ (Ryan2013$tree_supported == "tr1" ) & (Ryan2013$ABS >= 1) ] = "Ctenophore-sister-strong-signal"
+Ryan2013$result[ (Ryan2013$tree_supported == "tr1" ) & (Ryan2013$ABS < 1) ] = "Ctenophore-sister-weak-signal"
+Ryan2013$result[ (Ryan2013$tree_supported == "tr2" ) & (Ryan2013$ABS >= 1) ] = "Porifera-sister-strong-signal"
+Ryan2013$result[ (Ryan2013$tree_supported == "tr2" ) & (Ryan2013$ABS <1) ] = "Porifera-sister-weak-signal"
+
+Ryan2013 %>%
+	count(result) %>%
+	mutate(perc = n/ nrow(Ryan2013)) -> Ryan2013_count
+Ryan2013_count$study <- 'Ryan2013_Opisthokonta_C60'
+
+Ryan2013_only_choanozoa  <- read_tsv("../trees_new/AU_test/Ryan2013_est_only_choanozoa_C60_genewise_lnL.txt")
+Ryan2013_only_choanozoa$ABS <- abs(Ryan2013_only_choanozoa$`tr1_log-likelihood` - Ryan2013_only_choanozoa$`tr2_log-likelihood`)
+Ryan2013_only_choanozoa$result[ (Ryan2013_only_choanozoa$tree_supported == "tr1" ) & (Ryan2013_only_choanozoa$ABS >= 1) ] = "Ctenophore-sister-strong-signal"
+Ryan2013_only_choanozoa$result[ (Ryan2013_only_choanozoa$tree_supported == "tr1" ) & (Ryan2013_only_choanozoa$ABS < 1) ] = "Ctenophore-sister-weak-signal"
+Ryan2013_only_choanozoa$result[ (Ryan2013_only_choanozoa$tree_supported == "tr2" ) & (Ryan2013_only_choanozoa$ABS >= 1) ] = "Porifera-sister-strong-signal"
+Ryan2013_only_choanozoa$result[ (Ryan2013_only_choanozoa$tree_supported == "tr2" ) & (Ryan2013_only_choanozoa$ABS <1) ] = "Porifera-sister-weak-signal"
+
+Ryan2013_only_choanozoa %>%
+	count(result) %>%
+	mutate(perc = n/ nrow(Ryan2013_only_choanozoa)) -> Ryan2013_only_choanozoa_count
+Ryan2013_only_choanozoa_count$study <- 'Ryan2013_choanozoa_C60'
+
+Whelan2017_full  <- read_tsv("../trees_new/AU_test/Whelan2017_full_C60_genewise_lnL.txt")
+Whelan2017_full$ABS <- abs(Whelan2017_full$`tr1_log-likelihood` - Whelan2017_full$`tr2_log-likelihood`)
+Whelan2017_full$result[ (Whelan2017_full$tree_supported == "tr1" ) & (Whelan2017_full$ABS >= 1) ] = "Ctenophore-sister-strong-signal"
+Whelan2017_full$result[ (Whelan2017_full$tree_supported == "tr1" ) & (Whelan2017_full$ABS < 1) ] = "Ctenophore-sister-weak-signal"
+Whelan2017_full$result[ (Whelan2017_full$tree_supported == "tr2" ) & (Whelan2017_full$ABS >= 1) ] = "Porifera-sister-strong-signal"
+Whelan2017_full$result[ (Whelan2017_full$tree_supported == "tr2" ) & (Whelan2017_full$ABS <1) ] = "Porifera-sister-weak-signal"
+
+Whelan2017_full %>%
+	count(result) %>%
+	mutate(perc = n/ nrow(Whelan2017_full)) -> Whelan2017_full_count
+Whelan2017_full_count$study <- 'Whelan2017_holozoa_C60'
+
+Whelan2017_full_only_choanozoa  <- read_tsv("../trees_new/AU_test/Whelan2017_full_only_choanozoa_C60_genewise_lnL.txt")
+Whelan2017_full_only_choanozoa$ABS <- abs(Whelan2017_full_only_choanozoa$`tr1_log-likelihood` - Whelan2017_full_only_choanozoa$`tr2_log-likelihood`)
+Whelan2017_full_only_choanozoa$result[ (Whelan2017_full_only_choanozoa$tree_supported == "tr1" ) & (Whelan2017_full_only_choanozoa$ABS >= 1) ] = "Ctenophore-sister-strong-signal"
+Whelan2017_full_only_choanozoa$result[ (Whelan2017_full_only_choanozoa$tree_supported == "tr1" ) & (Whelan2017_full_only_choanozoa$ABS < 1) ] = "Ctenophore-sister-weak-signal"
+Whelan2017_full_only_choanozoa$result[ (Whelan2017_full_only_choanozoa$tree_supported == "tr2" ) & (Whelan2017_full_only_choanozoa$ABS >= 1) ] = "Porifera-sister-strong-signal"
+Whelan2017_full_only_choanozoa$result[ (Whelan2017_full_only_choanozoa$tree_supported == "tr2" ) & (Whelan2017_full_only_choanozoa$ABS <1) ] = "Porifera-sister-weak-signal"
+
+Whelan2017_full_only_choanozoa %>%
+	count(result) %>%
+	mutate(perc = n/ nrow(Whelan2017_full_only_choanozoa)) -> Whelan2017_full_only_choanozoa_count
+Whelan2017_full_only_choanozoa_count$study <- 'Whelan2017_choanozoa_C60'
+
+
+
+Philippe2009_WAG  <- read_tsv("../trees_new/AU_test/Philippe2009_WAG_genewise_lnL.txt")
+Philippe2009_WAG$ABS <- abs(Philippe2009_WAG$`tr1_log-likelihood` - Philippe2009_WAG$`tr2_log-likelihood`)
+Philippe2009_WAG$result[ (Philippe2009_WAG$tree_supported == "tr1" ) & (Philippe2009_WAG$ABS >= 1) ] = "Ctenophore-sister-strong-signal"
+Philippe2009_WAG$result[ (Philippe2009_WAG$tree_supported == "tr1" ) & (Philippe2009_WAG$ABS < 1) ] = "Ctenophore-sister-weak-signal"
+Philippe2009_WAG$result[ (Philippe2009_WAG$tree_supported == "tr2" ) & (Philippe2009_WAG$ABS >= 1) ] = "Porifera-sister-strong-signal"
+Philippe2009_WAG$result[ (Philippe2009_WAG$tree_supported == "tr2" ) & (Philippe2009_WAG$ABS <1) ] = "Porifera-sister-weak-signal"
+
+Philippe2009_WAG %>%
+	count(result) %>%
+	mutate(perc = n/ nrow(Philippe2009_WAG)) -> Philippe2009_WAG_count
+Philippe2009_WAG_count$study <- 'Philippe2009_Opisthokonta_WAG'
+
+
+Philippe2009_WAG_only_choanozoa  <- read_tsv("../trees_new/AU_test/Philippe2009_only_choanozoa_WAG_genewise_lnL.txt")
+Philippe2009_WAG_only_choanozoa$ABS <- abs(Philippe2009_WAG_only_choanozoa$`tr1_log-likelihood` - Philippe2009_WAG_only_choanozoa$`tr2_log-likelihood`)
+Philippe2009_WAG_only_choanozoa$result[ (Philippe2009_WAG_only_choanozoa$tree_supported == "tr1" ) & (Philippe2009_WAG_only_choanozoa$ABS >= 1) ] = "Ctenophore-sister-strong-signal"
+Philippe2009_WAG_only_choanozoa$result[ (Philippe2009_WAG_only_choanozoa$tree_supported == "tr1" ) & (Philippe2009_WAG_only_choanozoa$ABS < 1) ] = "Ctenophore-sister-weak-signal"
+Philippe2009_WAG_only_choanozoa$result[ (Philippe2009_WAG_only_choanozoa$tree_supported == "tr2" ) & (Philippe2009_WAG_only_choanozoa$ABS >= 1) ] = "Porifera-sister-strong-signal"
+Philippe2009_WAG_only_choanozoa$result[ (Philippe2009_WAG_only_choanozoa$tree_supported == "tr2" ) & (Philippe2009_WAG_only_choanozoa$ABS <1) ] = "Porifera-sister-weak-signal"
+
+Philippe2009_WAG_only_choanozoa %>%
+	count(result) %>%
+	mutate(perc = n/ nrow(Philippe2009_WAG_only_choanozoa)) -> Philippe2009_WAG_only_choanozoa_count
+Philippe2009_WAG_only_choanozoa_count$study <- 'Philippe2009_choanozoa_WAG'
+
+
+Ryan2013_WAG  <- read_tsv("../trees_new/AU_test/Ryan2013_est_WAG_genewise_lnL.txt")
+Ryan2013_WAG$ABS <- abs(Ryan2013_WAG$`tr1_log-likelihood` - Ryan2013_WAG$`tr2_log-likelihood`)
+Ryan2013_WAG$result[ (Ryan2013_WAG$tree_supported == "tr1" ) & (Ryan2013_WAG$ABS >= 1) ] = "Ctenophore-sister-strong-signal"
+Ryan2013_WAG$result[ (Ryan2013_WAG$tree_supported == "tr1" ) & (Ryan2013_WAG$ABS < 1) ] = "Ctenophore-sister-weak-signal"
+Ryan2013_WAG$result[ (Ryan2013_WAG$tree_supported == "tr2" ) & (Ryan2013_WAG$ABS >= 1) ] = "Porifera-sister-strong-signal"
+Ryan2013_WAG$result[ (Ryan2013_WAG$tree_supported == "tr2" ) & (Ryan2013_WAG$ABS <1) ] = "Porifera-sister-weak-signal"
+
+Ryan2013_WAG %>%
+	count(result) %>%
+	mutate(perc = n/ nrow(Ryan2013_WAG)) -> Ryan2013_WAG_count
+Ryan2013_WAG_count$study <- 'Ryan2013_Opisthokonta_WAG'
+
+Ryan2013_WAG_only_choanozoa  <- read_tsv("../trees_new/AU_test/Ryan2013_est_only_choanozoa_WAG_genewise_lnL.txt")
+Ryan2013_WAG_only_choanozoa$ABS <- abs(Ryan2013_WAG_only_choanozoa$`tr1_log-likelihood` - Ryan2013_WAG_only_choanozoa$`tr2_log-likelihood`)
+Ryan2013_WAG_only_choanozoa$result[ (Ryan2013_WAG_only_choanozoa$tree_supported == "tr1" ) & (Ryan2013_WAG_only_choanozoa$ABS >= 1) ] = "Ctenophore-sister-strong-signal"
+Ryan2013_WAG_only_choanozoa$result[ (Ryan2013_WAG_only_choanozoa$tree_supported == "tr1" ) & (Ryan2013_WAG_only_choanozoa$ABS < 1) ] = "Ctenophore-sister-weak-signal"
+Ryan2013_WAG_only_choanozoa$result[ (Ryan2013_WAG_only_choanozoa$tree_supported == "tr2" ) & (Ryan2013_WAG_only_choanozoa$ABS >= 1) ] = "Porifera-sister-strong-signal"
+Ryan2013_WAG_only_choanozoa$result[ (Ryan2013_WAG_only_choanozoa$tree_supported == "tr2" ) & (Ryan2013_WAG_only_choanozoa$ABS <1) ] = "Porifera-sister-weak-signal"
+
+Ryan2013_WAG_only_choanozoa %>%
+	count(result) %>%
+	mutate(perc = n/ nrow(Ryan2013_WAG_only_choanozoa)) -> Ryan2013_WAG_only_choanozoa_count
+Ryan2013_WAG_only_choanozoa_count$study <- 'Ryan2013_choanozoa_WAG'
+
+Whelan2017_full_WAG  <- read_tsv("../trees_new/AU_test/Whelan2017_full_WAG_genewise_lnL.txt")
+Whelan2017_full_WAG$ABS <- abs(Whelan2017_full_WAG$`tr1_log-likelihood` - Whelan2017_full_WAG$`tr2_log-likelihood`)
+Whelan2017_full_WAG$result[ (Whelan2017_full_WAG$tree_supported == "tr1" ) & (Whelan2017_full_WAG$ABS >= 1) ] = "Ctenophore-sister-strong-signal"
+Whelan2017_full_WAG$result[ (Whelan2017_full_WAG$tree_supported == "tr1" ) & (Whelan2017_full_WAG$ABS < 1) ] = "Ctenophore-sister-weak-signal"
+Whelan2017_full_WAG$result[ (Whelan2017_full_WAG$tree_supported == "tr2" ) & (Whelan2017_full_WAG$ABS >= 1) ] = "Porifera-sister-strong-signal"
+Whelan2017_full_WAG$result[ (Whelan2017_full_WAG$tree_supported == "tr2" ) & (Whelan2017_full_WAG$ABS <1) ] = "Porifera-sister-weak-signal"
+
+Whelan2017_full_WAG %>%
+	count(result) %>%
+	mutate(perc = n/ nrow(Whelan2017_full_WAG)) -> Whelan2017_full_WAG_count
+Whelan2017_full_WAG_count$study <- 'Whelan2017_holozoa_WAG'
+
+Whelan2017_full_WAG_only_choanozoa  <- read_tsv("../trees_new/AU_test/Whelan2017_full_only_choanozoa_WAG_genewise_lnL.txt")
+Whelan2017_full_WAG_only_choanozoa$ABS <- abs(Whelan2017_full_WAG_only_choanozoa$`tr1_log-likelihood` - Whelan2017_full_WAG_only_choanozoa$`tr2_log-likelihood`)
+Whelan2017_full_WAG_only_choanozoa$result[ (Whelan2017_full_WAG_only_choanozoa$tree_supported == "tr1" ) & (Whelan2017_full_WAG_only_choanozoa$ABS >= 1) ] = "Ctenophore-sister-strong-signal"
+Whelan2017_full_WAG_only_choanozoa$result[ (Whelan2017_full_WAG_only_choanozoa$tree_supported == "tr1" ) & (Whelan2017_full_WAG_only_choanozoa$ABS < 1) ] = "Ctenophore-sister-weak-signal"
+Whelan2017_full_WAG_only_choanozoa$result[ (Whelan2017_full_WAG_only_choanozoa$tree_supported == "tr2" ) & (Whelan2017_full_WAG_only_choanozoa$ABS >= 1) ] = "Porifera-sister-strong-signal"
+Whelan2017_full_WAG_only_choanozoa$result[ (Whelan2017_full_WAG_only_choanozoa$tree_supported == "tr2" ) & (Whelan2017_full_WAG_only_choanozoa$ABS <1) ] = "Porifera-sister-weak-signal"
+
+Whelan2017_full_WAG_only_choanozoa %>%
+	count(result) %>%
+	mutate(perc = n/ nrow(Whelan2017_full_WAG_only_choanozoa)) -> Whelan2017_full_WAG_only_choanozoa_count
+Whelan2017_full_WAG_only_choanozoa_count$study <- 'Whelan2017_choanozoa_WAG'
 
 ## Record information about the session
 session_info_kernel = sessionInfo()
