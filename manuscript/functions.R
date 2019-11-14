@@ -519,15 +519,21 @@ get_matrix_occupancy = function( seq_matrix ){
 #' @return A tibble with columns: gene_id tree_supported tr1_log.likelihood tr2_log.likelihood tr3_log.likelihood manuscript matrix. tr1 = ctenophora sister tr2 = porifera sister tr3 = cnidaria/ctenophora sister
 #' @export
 parse_au_gene_tests = function(path="../trees_new/AU_test"){
-  # tr1 = ctenophora sister tr2 = porifera sister tr3 = nideria/ctenophora sister
-  files_list = list.files(path, pattern = "genewise", full.names = TRUE, recursive = TRUE) 
-  filename_parts_list = strsplit( basename( files_list ), "_" )
-  
-  au_tibble = 
-    files_list %>%
-    map(read.delim) %>%
-    imap(~ transform(.x, manuscript = filename_parts_list[[.y]][[1]])) %>%
-    imap(~ transform(.x, matrix = filename_parts_list[[.y]][[2]])) %>%
-    bind_rows()
-  return(au_tibble)
+	files_list = list.files(path, pattern = "genewise", full.names = TRUE, recursive = TRUE) 
+	filename_parts_list = str_split(gsub('_genewise_lnL.txt', '', basename( files_list )), '_', n=2)
+
+	au_tibble = 
+		files_list %>%
+		map(read.delim) %>%
+		imap(~ transform(.x, manuscript = filename_parts_list[[.y]][[1]])) %>%
+		imap(~ transform(.x, matrix = filename_parts_list[[.y]][[2]])) %>%
+		bind_rows()
+
+	au_tibble$ABS <- abs(au_tibble$tr1_log.likelihood - au_tibble$tr2_log.likelihood)
+	au_tibble$result[ (au_tibble$tree_supported == "tr1" ) & (au_tibble$ABS >= 1) ] = "Ctenophore-sister-strong-signal"
+	au_tibble$result[ (au_tibble$tree_supported == "tr1" ) & (au_tibble$ABS < 1) ] = "Ctenophore-sister-weak-signal"
+	au_tibble$result[ (au_tibble$tree_supported == "tr2" ) & (au_tibble$ABS >= 1) ] = "Porifera-sister-strong-signal"
+	au_tibble$result[ (au_tibble$tree_supported == "tr2" ) & (au_tibble$ABS <1) ] = "Porifera-sister-weak-signal"
+	
+	return(au_tibble)
 }
