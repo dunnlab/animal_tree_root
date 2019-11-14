@@ -50,7 +50,7 @@ focal_matrices =
 						 header = TRUE,
 						 stringsAsFactors = FALSE)
 
-bootstrap_threshold = 90
+bootstrap_threshold = 95
 posterior_prob_threshold = 95
 
 # Load data
