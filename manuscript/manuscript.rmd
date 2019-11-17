@@ -58,6 +58,7 @@ Yuanning Li^1,3^, Xingxing Shen^3^, Benjamin Evans^2^, Antonis Rokas^3^, and Cas
 
 
 ## Abstract
+Phylogenomic studies based on hundreds to thousand of genes have greatly improved our understanding of evolutionary relationship among major animal lineages. However, a considerable debate still remains regarding the first diverging animal lineage, with Ctenophora-sister and Porifera-sister emerging as the two primary hypotheses, comprising one of the most difficult node to resolve in animal tree of life. Here, we systematically explore the mechanisms that potentially cause the incongruent results from different studies by synthesizing data and results from all previous phylogenomic analyses, and perform new analyses in these data in a consistent manner to characterize the differences between studies. We find the gene sampling varies across studies, indicating that different regions of the genomes are sampled with little overlap among data matrices. Moreover, We find  Porifera-sister can only be recovered in several data matrices using site-heterogeneous CAT model with inclusive of more closely related outgroups, whereas Ctenophora-sister is recovered in other cases even with site-heterogeneous C60 models. We next quantify the support of phylogenetic signal over the two hypotheses and characterize substantial differences of phylogenetic distribution between site-homogenious and site-heterogeneous models. Rather than embracing one hypothesis over another, we hope our efforts provides an integrative overview of the challenge and provides direction for future studies to address difficult phylogenetic problems.
 
 ## Introduction
 
@@ -293,7 +294,23 @@ Site heterogeneity in equilibrium frequency has been a major concern in tests of
 Interestingly, we found strong supports for both hypotheses when using Poisson-CAT model in Choanimalia matrices. Consistent with previous study, we recovered the strong support of Porifera-sister in matrices of Philippe2008, Ryan2013, and Whelan2015. Moreover, we also found a strong support of Porifera-sister in two Whelan2017 matrices and a weaker support of subsampled matrix of Simion2017. Similar to ML analyses, we found no strong support for either hypothesis in Moroz2013_3d matrix. For the matrices have conflicted results between Poisson-CAT and C models, we further ran Poisson+CAT models with inclusion of more distantly related outgroups to evaluate how outgroup choice will affect phylogenetic inference under CAT model. Consistently with past study, we found strong support of Ctenophora-sister in all anaylzed Opisthokonta matrices, indicating that Ctenophora-sister is also favored in all matrices with more distantly related taxa are used as outgroups.
 
 ### Phylogenetic signal
-To further explore the effect of site-homogeneous or site-heterogeneous models and outgroup choices in on the animal-root position,  we next quantify the support of phylogenetic signal over two alternative hypotheses ()
+
+To further explore the effect of site-homogeneous or site-heterogeneous models and outgroup choices in on the animal-root position, we next quantify the support of phylogenetic signal over two alternative hypotheses (T1: Ctenophora-sister (Fig. 1A); T2: Porifera-sister (Fig. 1B)) to three key data matrices with two outgroup choice (Choanimalia and Opisthokonta), including Philippe2009, Ryan2013_est and Whelan2017_full (Fig XXPhylogenetic signal). By calculating gene-wise log-likelihood scores between T1 and T2 for every gene (\Delta$GLS) or site (\Delta$SLS)in each matrix, we found that Ctenophora-sister had the higher proportions of supporting genes or sites in every analysis. These results are consistent with best-likelihood tree always favors Ctenophora-sister over Porifera-sister in all IQtree analysis.
+
+Surprisingly, we found significant differences of phylogenetic distribution between site-homogenious and site-heterogeneous models. We found that Ctenophora-sister had the higher proportions of supporting genes when site-homogeneous models were used (52.34% to 66.51%), and the outgroup choice has little impact on the distribution of the support phylogenetic signal. This finding is consistent with the past study that majority of phylogenetic signal is strongly favored in Ctenophora-sister hypothesis with site-homogeneous models [@shen2017contentious].  
+
+In contrast to site-homogenious models, the distribution of phylogenetic signal over the animal-root position has never been quantified with site-heterogeneous models. Surprisingly, except for Whelan2017_Holozoa matrix, we found that the phylogenetic signal decreases in many genes using C models compared to WAG models, especially in two matrices from Ryan_2013 that over 30% of genes changed from strong to week signal (\Delta$lnL<2). It is not clear the reason why the phylogenetic signal decreases in many genes with a better fitting model as suggested by model testing (control test will be conducted here, by changing monophyletic of bilaterian vs. non-monophyletic of bilaterians...).
+
+
+
+```{r matrix_overlap}
+
+phylogenetic_signal_by_genes <- rbind(Philippe2009_count, Philippe2009_WAG_count, Philippe2009_only_choanozoa_count, Philippe2009_WAG_only_choanozoa_count,  Ryan2013_count, Ryan2013_WAG_count, Ryan2013_only_choanozoa_count, Ryan2013_WAG_only_choanozoa_count, Whelan2017_full_count, Whelan2017_full_WAG_count,  Whelan2017_full_only_choanozoa_count, Whelan2017_full_WAG_only_choanozoa_count)
+ggplot(phylogenetic_signal_by_genes, aes(x = study, y = perc, fill=result)) + geom_bar(stat = "identity") + theme(axis.text.x = element_text(angle=45)) +  scale_fill_manual(values=c("#E69F00", "#999999","#009E73", "#999999" ))
+
+```
+**Fig XXPhylogenetic signal.** The distribution of phylogenetic signal for two alternative topological hypotheses on the earliest-branching animal lineage. Proportion of genes supporting each of two alternative hypotheses for each of
+
 ## The current state of understanding
 
 ### Interpretting variation support
