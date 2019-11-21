@@ -417,7 +417,7 @@ parse_tree_iqtree = function( tree_file, taxonomy_reference ){
 	if( length(best_line) > 0 ){
 		tree$modelfinder = TRUE
 		elements = strsplit( best_line[1], " " ) %>% unlist()
-		tree$model = elements[3]
+		tree$model = str_remove(elements[3], '\\+F\\+G')
 	}
 	return(tree)
 }
