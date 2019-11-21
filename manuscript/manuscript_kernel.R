@@ -201,7 +201,7 @@ file_names_iqtree = list.files( path = trees_path_iqtree, pattern = iqtree_ext, 
 
 # Temp fix re issue #8
 file_names_iqtree = file_names_iqtree[ ! grepl("Philippe2009", file_names_iqtree) ]
-file_names_iqtree = file_names_iqtree[ ! grepl("Nosenko2013", file_names_iqtree) ]
+#file_names_iqtree = file_names_iqtree[ ! grepl("Nosenko2013", file_names_iqtree) ]
 
 # read iqtrees
 trees_iq = foreach( tree_file = file_names_iqtree ) %dopar%
