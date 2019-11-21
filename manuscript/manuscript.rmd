@@ -303,10 +303,19 @@ In contrast to site-homogenious models, the distribution of phylogenetic signal 
 
 
 
-```{r matrix_overlap}
+```{r phylogenetic_signal}
+au_tests %>%
+  unite(Matrix, c(manuscript, matrix)) %>%
+  group_by(Matrix, result) %>%
+  count() %>%
+  group_by(Matrix) %>%
+  mutate(percent = prop.table(n)) %>%
 
-phylogenetic_signal_by_genes <- rbind(Philippe2009_count, Philippe2009_WAG_count, Philippe2009_only_choanozoa_count, Philippe2009_WAG_only_choanozoa_count,  Ryan2013_count, Ryan2013_WAG_count, Ryan2013_only_choanozoa_count, Ryan2013_WAG_only_choanozoa_count, Whelan2017_full_count, Whelan2017_full_WAG_count,  Whelan2017_full_only_choanozoa_count, Whelan2017_full_WAG_only_choanozoa_count)
-ggplot(phylogenetic_signal_by_genes, aes(x = study, y = perc, fill=result)) + geom_bar(stat = "identity") + theme(axis.text.x = element_text(angle=45)) +  scale_fill_manual(values=c("#E69F00", "#999999","#009E73", "#999999" ))
+ggplot(aes(x = Matrix, y = percent, fill=result)) + 
+  geom_bar(stat = "identity") +
+  #scale_y_continuous(limits = c(0,1), expand = c(0, 0))+
+  theme(axis.text.x = element_text(angle=45, hjust=1)) +
+  scale_fill_manual(values=c("#E69F00", "#ebd196","#a2e8d5","#009E73"))
 
 ```
 **Fig XXPhylogenetic signal.** The distribution of phylogenetic signal for two alternative topological hypotheses on the earliest-branching animal lineage. Proportion of genes supporting each of two alternative hypotheses for each of
