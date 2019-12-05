@@ -61,11 +61,9 @@ PartitionedMultipleAlignment = function( alignment_file, partition_file=NULL, ta
 		bind_rows()
 	
 	if( ! is.null(partition_map_global) ){
-		partition_map_global %<>%
-			filter( grepl(matrix, matrix_name) )
-		
+
 		partitions %<>% 
-			left_join( partition_map_global ) %>%
+			left_join( partition_map_global[startsWith(matrix_name, partition_map_global$matrix),] ) %>%
 			select( -matrix )
 		
 		# Add names to the partitions that are not assigned to components. Take these from the original 
