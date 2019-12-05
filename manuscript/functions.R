@@ -62,7 +62,7 @@ PartitionedMultipleAlignment = function( alignment_file, partition_file=NULL, ta
 	
 	if( ! is.null(partition_map_global) ){
 		partition_map_global %<>%
-			filter( matrix == matrix_name )
+			filter( grepl(matrix, matrix_name) )
 		
 		partitions %<>% 
 			left_join( partition_map_global ) %>%
