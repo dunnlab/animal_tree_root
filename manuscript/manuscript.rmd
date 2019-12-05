@@ -139,10 +139,10 @@ Taxa sampling plays a critical role in phylogenetic inference, especially for th
 
 ```{r taxon_rectangles }
 
-
+no_subsets = unlist(lapply(sequence_matrices, function(x) !grepl("only|_D", x@matrix_name)))
 
 taxon_rectangles = lapply(
-	sequence_matrices,
+	sequence_matrices[no_subsets],
 	function ( sequence_matrix ){
 		clade_rects(sequence_matrix)
 	}
@@ -153,10 +153,7 @@ bind_rows()
 clade_colors = viridis( length(clades) )
 names( clade_colors ) = clades
 
-
-filtered_taxon_rectangles <- taxon_rectangles[!grepl("only", taxon_rectangles$matrix),]
-
-ggplot(data=filtered_taxon_rectangles) +
+ggplot(data=taxon_rectangles) +
 	scale_x_continuous(name="x") +
 	scale_y_continuous(name="y") +
 	geom_rect( mapping=aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax, fill=clade )) +
@@ -209,18 +206,19 @@ p2 = ggplot( matrix_summary ) + geom_point( aes(x=matrix, y=n_busco_partitions/n
 **Fig XXGene_composition.** Each of the primary matrices considered here, color coded by the types of genes sampled (XX Ribosomal proteins, etc). Horizontal size is proportional to the number of genes sampled, vertical size to the number of taxa sampled.
 
 
-```{r matrix_overlap}
+```{r matrix_overlap, fig.height = 12, fig.width = 20}
 
 matrix_overlap_rectangles =
-	lapply(sequence_matrices, function(x) lapply(sequence_matrices, function(y) overlap_rects(x,y))) %>%
+	lapply(sequence_matrices[no_subsets], function(x) lapply(sequence_matrices[no_subsets], function(y) overlap_rects(x,y))) %>%
 	unlist(recursive=FALSE) %>%
 	bind_rows()
 
 ggplot(data=matrix_overlap_rectangles) +
-	scale_x_continuous(name="x") +
-	scale_y_continuous(name="y") +
+	scale_x_continuous(name="Genes") +
+	scale_y_continuous(name="Species") +
 	geom_rect( mapping=aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax, fill=MSA ), alpha=0.5) +
-	facet_grid( matrix_1 ~ matrix_2 )
+	facet_grid( matrix_1 ~ matrix_2, scales="free" ) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), strip.text.y = element_text(angle = 0), strip.text.x = element_text(angle = 60))
 
 ```
 

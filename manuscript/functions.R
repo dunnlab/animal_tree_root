@@ -182,8 +182,8 @@ overlap_rects = function( msa1, msa2 ){
 	D$ymax = c( overlap$n_species_1, overlap$n_species_1 + overlap$n_species_2 - overlap$n_species_overlap )
 	D$manuscript_1 = msa1@manuscript_name
 	D$manuscript_2 = msa2@manuscript_name
-	D$matrix_1 = paste(msa1@manuscript_name, msa1@matrix_name, sep="_")
-	D$matrix_2 = paste(msa2@manuscript_name, msa2@matrix_name, sep="_")
+	D$matrix_1 = msa1@matrix_name
+	D$matrix_2 = msa2@matrix_name
 	
 	D
 	
