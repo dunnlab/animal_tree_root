@@ -252,13 +252,6 @@ n_total_partitions =
 	partitions_all %>%
 	group_by(matrix) %>%
 	summarize("n_total_partitions"=n_distinct(partition))
-n_compandBUSCO =
-	partition_map_global %>%
-		group_by(matrix) %>%
-		summarize(
-			"n_components"=n_distinct(component_number),
-			"n_distinct_BUSCO"=n_distinct(BUSCO_ID)
-		)
 n_components_with_BUSCO =
 	partition_map_global %>%
 		filter(BUSCO_ID != "") %>%
@@ -279,7 +272,6 @@ discarded_parts =
 
 partition_network_summary =
 	n_total_partitions%>%
-	# left_join(n_compandBUSCO,          by="matrix") %>%
 	left_join(n_components_with_BUSCO, by="matrix") %>%
 	left_join(n_ribo,                  by="matrix") %>%
 	left_join(discarded_parts,         by="matrix") %>%
