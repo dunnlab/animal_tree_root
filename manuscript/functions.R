@@ -518,13 +518,16 @@ get_matrix_occupancy = function( seq_matrix ){
 #' @export
 parse_au_gene_tests = function(path="../trees_new/AU_test"){
 	files_list = list.files(path, pattern = "genewise", full.names = TRUE, recursive = TRUE) 
-	filename_parts_list = str_split(gsub('_genewise_lnL.txt', '', basename( files_list )), '_', n=2)
+	filename_parts_list = str_split(gsub('_genewise_lnL.txt', '', basename( files_list )), '_')
 	likelihood_cutoff = 2
 	au_tibble = 
 		files_list %>%
 		map(read.delim) %>%
 		imap(~ transform(.x, manuscript = filename_parts_list[[.y]][[1]])) %>%
-		imap(~ transform(.x, matrix = filename_parts_list[[.y]][[2]])) %>%
+	  imap(~ transform(.x, matrix = ifelse( length(filename_parts_list[[.y]])>2,
+	                                        filename_parts_list[[.y]][2:(length(filename_parts_list[[.y]])-1)],
+	                                        filename_parts_list[[.y]][1]))) %>%
+		imap(~ transform(.x, model = filename_parts_list[[.y]][[length(filename_parts_list[[.y]])]])) %>%
 		bind_rows()
 
 	au_tibble$ABS <- abs(au_tibble$tr1_log.likelihood - au_tibble$tr2_log.likelihood)
