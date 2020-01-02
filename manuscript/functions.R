@@ -516,7 +516,7 @@ get_matrix_occupancy = function( seq_matrix ){
 #' @param path A string that specifies the path to root of gene-level AU test files of form manuscript_matrix_genewise_lnL.txt
 #' @return A tibble with columns: gene_id tree_supported tr1_log.likelihood tr2_log.likelihood tr3_log.likelihood manuscript matrix. tr1 = ctenophora sister tr2 = porifera sister tr3 = cnidaria/ctenophora sister
 #' @export
-parse_au_gene_tests = function(path="../trees_new/AU_test"){
+parse_au_gene_tests = function(path="../trees_new/AU_test/genewise"){
 	files_list = list.files(path, pattern = "genewise", full.names = TRUE, recursive = TRUE) 
 	filename_parts_list = str_split(gsub('_genewise_lnL.txt', '', basename( files_list )), '_')
 	likelihood_cutoff = 2
