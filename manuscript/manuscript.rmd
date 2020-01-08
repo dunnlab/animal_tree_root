@@ -269,7 +269,7 @@ In contrast, the distribution of phylogenetic signal has never been quantified i
 We also examined the level of congruence of genes that are supported in each hypothesis across different analyses in Whelan2017 matrices. Consistent with the summary of \Delta$GLS analysis, We found gene population that supports in either hypothesis are largely congruent between site-homogenous and C models, whereas little overlap was observed in Poisson-CAT models (especially with different outgroup choice). In other words. our results strongly indicated that the distribution of phylogenetic signal of the root of animal phylogeny is largely sensitive to model selection (site-homogeneous vs. site-heterogeneous models). More importantly, the site-heterogeneous CAT model is also more sensitive to the outgroup choice than site-homogeneous and C models in these key data matrices. Thus, it is clear that recovering Porifera-sister requires more constrains, including more stringent model selection, outgroup choice, and even with gene sampling.
 
 
-```{r phylogenetic_signal, fig.width=8, fig.height=15}
+```{r phylogenetic_signal, fig.width=8, fig.height=12}
 #au_tests %>%
 #  unite(Matrix, c(manuscript, matrix, model)) %>%
 #  group_by(Matrix, result) %>%
@@ -332,6 +332,10 @@ figure <- ggarrange(p1, p2, p3,
 figure
 ```
 **Fig XXPhylogenetic signal.** The distribution of phylogenetic signal for two alternative topological hypotheses on the earliest-branching animal lineage. Proportion of genes supporting each of two alternative hypotheses for each of
+
+
+![](figures/Figure_Pairwise_heatmap_animal_root.png)
+**Fig XXPairwise_heatmap_animal_root.**
 
 ### Bias of data-recoding
 There is growing interest in data-recoding and previous study [@feuda2017improved] hoped that data-recoding would reduce potential artifacts due to differences across species in amino acid frequencies. They report that posterior predictive (PP) analyses [@Bollback:2002to] indicate 6-state recoded analyses have better model adequacy than 20-state amino acid analyses, and "Porifera-sister was favored under all recoding strategies" in Whelan2015_D20 and Chang2015 data matrices. Here we focus on two aspects of Feuda *et al.* First, we found that many of their recoded analyses are actually unresolved (*i.e.*, without strong support for either Porifera-sister or Ctenophora-sister), and that the analyses with the best posterior predictive scores do not provide strong support for Porifera-sister (Fig XXRecoidng_summary). Second, we created four new random recoding schemes by shuffling the amino acids in the SR-6 scheme (see methods). When we applied each of these randomized codes to the Whelan matrix and analyzed them under the CAT-GTR+G model with phylobayes-mpi, we observed similar results as for the empirical SR-6 recoding. Like SR-6 recoding, random recoding increases support for Porifera-sister and improves the apparent adequacy of models to explain heterogeneity of states across taxa (PP taxon hetero mean and max, Figure XXRandom_recodingB). Thus, our analyses show the impact of recoding is largely due to discarding information, not accommodating variation in amino acid composition. These findings indicate that it is premature to accept Porifera-sister and reject Ctenophora-sister using data-recoding methods and recoding can be a problematic method for addressing compositional variation (see more detailed discussion in supplementary text).  
