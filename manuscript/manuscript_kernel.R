@@ -243,7 +243,7 @@ analyses_new$result = factor( analyses_new$result )
 
 # Parse model components
 analyses_new$model_summary = analyses_new$model
-analyses_new$model_summary = factor( analyses_new$model_summary, levels=c("WAG", "GTR20", "Poisson_C60", "WAG+C60", "LG+C60", "LG+C60", "CAT+F81"))
+analyses_new$model_summary = factor( analyses_new$model_summary, levels=c("WAG", "GTR20", "Poisson+C60", "WAG+C60", "LG+C60", "CAT+F81"))
 
 # Partition comparison across matrices
 
