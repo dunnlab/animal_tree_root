@@ -45,10 +45,10 @@ RUN conda env create -f ${condaprefix}/conda_animal_root.yml
 
 RUN install2.r --error \
     --deps TRUE \
-    -r 'http://cran.rstudio.com' \
     ape \
     BiocManager \
     doParallel \
+    ggpubr \
     igraph \
     R.utils \
     viridis
