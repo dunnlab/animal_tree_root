@@ -33,7 +33,9 @@ library( magrittr )
 library( viridis )
 library( knitr )
 library( gridExtra )
-library(ggpubr)
+library( ggpubr )
+library( grid )
+library( gtable )
 theme_set(theme_pubr())
 source( "functions.R" )
 
@@ -282,65 +284,41 @@ We also examined the level of congruence of gene partitions that are supported i
 
 
 ```{r phylogenetic_signal, fig.width=6, fig.height=12}
-#au_tests %>%
-#  unite(Matrix, c(manuscript, matrix, model)) %>%
-#  group_by(Matrix, result) %>%
-#  count() %>%
-#  group_by(Matrix) %>%
-#  mutate(percent = prop.table(n)) %>%
+fig5_bars <- au_tests %>%
+  unite(Matrix, c(manuscript, matrix, model)) %>%
+  group_by(Matrix, result) %>%
+  count() %>%
+  group_by(Matrix) %>%
+  mutate(percent = prop.table(n)) %>%
 
-#ggplot(aes(x = Matrix, y = percent, fill=result)) +
-#  geom_bar(stat = "identity") +
-#  #scale_y_continuous(limits = c(0,1), expand = c(0, 0))+
-#  theme(axis.text.x = element_text(angle=45, hjust=1)) +
-#  scale_fill_manual(values=c("#E69F00", "#ebd196","#a2e8d5","#009E73"))
-
-
-au_tests = read_tsv("../trees_new/AU_test/summary.tsv")
-
- Philippe2009 = filter(au_tests,
-                   grepl('Philippe', Matrix))
-
-x1  = factor(Philippe2009$Matrix, levels=c("Philippe2009_WAG", "Philippe2009_Choanimalia_WAG", "Philippe2009_LG", "Philippe2009_Choanimalia_LG", "Philippe2009_LG (PhyloBayes)", "Philippe2009_Choanimalia_LG (PhyloBayes)", "Philippe2009_WAG+C60", "Philippe2009_Choanimalia_WAG+C60", "Philippe2009_Poisson+CAT (PhyloBayes)", "Philippe2009_Choanimalia_Poisson+CAT (PhyloBayes)"))
-y1=factor(Philippe2009$Catogary, levels=c("Ctenophore-sister-strong-signal", "Ctenophore-sister-weak-signal", "Porifera-sister-weak-signal", "Porifera-sister-strong-signal"))
-
- Ryan2013_est = filter(au_tests,
-                   grepl('Ryan', Matrix))
-
-y2=factor(Ryan2013_est$Catogary, levels=c("Ctenophore-sister-strong-signal", "Ctenophore-sister-weak-signal", "Porifera-sister-weak-signal", "Porifera-sister-strong-signal"))
-
-x2  = factor(Ryan2013_est$Matrix, levels=c("Ryan2013_est_WAG", "Ryan2013_Choanimalia_WAG", "Ryan2013_est_LG", "Ryan2013_Choanimalia_LG",  "Ryan2013_est_WAG+C60", "Ryan2013_Choanimalia_WAG+C60"))
-
-
-Whelan2017 = filter(au_tests,
-                   grepl('Whelan', Matrix))
-y3=factor(Whelan2017$Catogary, levels=c("Ctenophore-sister-strong-signal", "Ctenophore-sister-weak-signal", "Porifera-sister-weak-signal", "Porifera-sister-strong-signal"))
-
-
-x3  = factor(Whelan2017$Matrix, levels=c("Whelan2017_full_WAG", "Whelan2017_Choanimalia_WAG", "Whelan2017_full_LG", "Whelan2017_Choanimalia_LG", "Whelan2017_full_LG (PhyloBayes)", "Whelan2017_Choanimalia_LG (PhyloBayes)", "Whelan2017_full_LG+C60", "Whelan2017_Choanimalia_LG+C60", "Whelan2017_full_Poisson+CAT (PhyloBayes)", "Whelan2017_Choanimalia_Poisson+CAT (PhyloBayes)"))
-
-p1 <- ggplot(Philippe2009, aes(x = x1, y = Percentage, fill=y1)) +
+ggplot(aes(x = Matrix, y = percent, fill=result)) +
   geom_bar(stat = "identity") +
-  scale_y_continuous(limits = c(0,1), expand = c(0, 0))+
-  theme(text = element_text(size=8),axis.text.x = element_text(angle=30, hjust=1)) +
-  scale_fill_manual(values=c("#E69F00", "#ebd196","#a2e8d5","#009E73"))+ labs(x ="Philippe2009", y = "Catogary of phylgoenetic signal")
+  scale_fill_manual(values=c("#E69F00", "#ebd196","#a2e8d5","#009E73")) +
+  coord_flip() +
+  theme(axis.text.y=element_blank(), axis.title.y=element_blank())
 
-p2 <- ggplot(Ryan2013_est, aes(x = x2, y = Percentage, fill=y2)) +
-  geom_bar(stat = "identity") +
-  scale_y_continuous(limits = c(0,1), expand = c(0, 0))+
-  theme(text = element_text(size=8),axis.text.x = element_text(angle=30, hjust=1)) +
-  scale_fill_manual(values=c("#E69F00", "#ebd196","#a2e8d5","#009E73"))+ labs(x ="Ryan2013_est", y = "Catogary of phylgoenetic signal")
+fig5_tbl <- au_tests %>%
+select(c(manuscript, matrix, model)) %>%
+distinct()
 
-p3 <- ggplot(Whelan2017, aes(x = x3, y = Percentage, fill=y3)) +
-  geom_bar(stat = "identity") +
-  #scale_y_continuous(limits = c(0,1), expand = c(0, 0))+
-  theme(text = element_text(size=8),axis.text.x = element_text(angle=30, hjust=1)) +
-  scale_fill_manual(values=c("#E69F00", "#ebd196","#a2e8d5","#009E73"))+ labs(x ="Ryan2013_est", y = "Catogary of phylgoenetic signal")
+fig_5_ylabs_grob <- tableGrob(fig5_tbl)
+fig_5_ylabs$heights = unit(rep(1/nrow(fig_5_ylabs), nrow(fig_5_ylabs)), "npc")
+fig_5_ylabs$widths = unit.pmax(fig_5_ylabs$widths, unit(2, "lines"))
 
-ggarrange(p1, p2, p3,
-                    labels = c("A", "B", "C"), widths=c(10,6,10),
-                    ncol = 1, nrow = 3,  common.legend = TRUE, legend = "right", align="hv")
+fig5_bars_grob <- ggplotGrob(fig5_bars)
+#fig5 <- gtable_add_cols(fig5, sum(fig_5_ylabs$widths), pos=0)
+#fig5 <- gtable_add_grob(fig5, grobs = fig_5_ylabs, t=6, l=ncol(fig5), b=6, r=ncol(fig5))
+#fig5 <- gtable_add_grob(fig5, grobs = fig_5_ylabs, t=6, l=1, b=6, r=ncol(fig5))
 
+grob_grid <- matrix(list(fig_5_ylabs_grob, fig5_bars_grob), nrow = 1)
+# https://cran.r-project.org/web/packages/gridExtra/vignettes/gtable.html
+
+# fig5 <- gtable_matrix(name = "demo", grobs = grob_grid, 
+#                    widths = unit(c(4, 4), "cm"), 
+#                    heights = unit(c(2, 5), c("in", "lines")))
+# 
+# grid.newpage()
+# grid.draw(fig5)
 ```
 
 
