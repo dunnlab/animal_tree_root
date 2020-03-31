@@ -284,7 +284,8 @@ We also examined the level of congruence of gene partitions that are supported i
 
 
 ```{r phylogenetic_signal, fig.width=6, fig.height=12}
-fig5_bars <- au_tests %>%
+# fig5_bars <- au_tests %>%
+au_tests %>%
   unite(Matrix, c(manuscript, matrix, model)) %>%
   group_by(Matrix, result) %>%
   count() %>%
@@ -297,20 +298,20 @@ ggplot(aes(x = Matrix, y = percent, fill=result)) +
   coord_flip() +
   theme(axis.text.y=element_blank(), axis.title.y=element_blank())
 
-fig5_tbl <- au_tests %>%
-select(c(manuscript, matrix, model)) %>%
-distinct()
+#fig5_tbl <- au_tests %>%
+#select(c(manuscript, matrix, model)) %>%
+#distinct()
 
-fig_5_ylabs_grob <- tableGrob(fig5_tbl)
-fig_5_ylabs$heights = unit(rep(1/nrow(fig_5_ylabs), nrow(fig_5_ylabs)), "npc")
-fig_5_ylabs$widths = unit.pmax(fig_5_ylabs$widths, unit(2, "lines"))
+#fig_5_ylabs_grob <- tableGrob(fig5_tbl)
+#fig_5_ylabs$heights = unit(rep(1/nrow(fig_5_ylabs), nrow(fig_5_ylabs)), "npc")
+#fig_5_ylabs$widths = unit.pmax(fig_5_ylabs$widths, unit(2, "lines"))
 
-fig5_bars_grob <- ggplotGrob(fig5_bars)
+#fig5_bars_grob <- ggplotGrob(fig5_bars)
 #fig5 <- gtable_add_cols(fig5, sum(fig_5_ylabs$widths), pos=0)
 #fig5 <- gtable_add_grob(fig5, grobs = fig_5_ylabs, t=6, l=ncol(fig5), b=6, r=ncol(fig5))
 #fig5 <- gtable_add_grob(fig5, grobs = fig_5_ylabs, t=6, l=1, b=6, r=ncol(fig5))
 
-grob_grid <- matrix(list(fig_5_ylabs_grob, fig5_bars_grob), nrow = 1)
+#grob_grid <- matrix(list(fig_5_ylabs_grob, fig5_bars_grob), nrow = 1)
 # https://cran.r-project.org/web/packages/gridExtra/vignettes/gtable.html
 
 # fig5 <- gtable_matrix(name = "demo", grobs = grob_grid, 
