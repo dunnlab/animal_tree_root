@@ -28,27 +28,26 @@ knitr::opts_chunk$set(
 
 
 ```{r preliminaries}
-library( tidyverse )
-library( magrittr )
-library( viridis )
-library( knitr )
-library( gridExtra )
-library( ggpubr )
-library( grid )
-library( gtable )
-theme_set(theme_pubr())
-source( "functions.R" )
-
-# A colorblind friendly palette from http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/#a-colorblind-friendly-palette:
-cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
-
-result_colors = c( cbPalette[2], cbPalette[4], cbPalette[1] )
-names( result_colors ) = c( "Ctenophora-sister", "Porifera-sister", "Unresolved" )
-
+	library( tidyverse )
+	library( magrittr )
+	library( viridis )
+	library( knitr )
+	library( gridExtra )
+	library( ggpubr )
+	library( grid )
+	library( gtable )
+	theme_set(theme_pubr())
+	source( "functions.R" )
+	
+	# A colorblind friendly palette from http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/#a-colorblind-friendly-palette:
+	cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+	
+	result_colors = c( cbPalette[2], cbPalette[4], cbPalette[1] )
+	names( result_colors ) = c( "Ctenophora-sister", "Porifera-sister", "Unresolved" )
 
 ```
 
-# Rooting the animal tree of life - more is less for Ctenophora-sister?
+# Rooting the animal tree of life
 
 Yuanning Li^1,3^, Xingxing Shen^3^, Benjamin Evans^2^, Antonis Rokas^3^, and Casey W. Dunn^1^*
 
@@ -61,15 +60,11 @@ Yuanning Li^1,3^, Xingxing Shen^3^, Benjamin Evans^2^, Antonis Rokas^3^, and Cas
 \* Corresponding author, casey.dunn@yale.edu
 
 
-## Abstract (ideally less than 200 words)
-(Current version)
-Phylogenomic studies based on hundreds to thousands of genes have greatly improved our understanding of evolutionary relationships in the animal tree of life. However, considerable debate still remains regarding the deepest split in the animal tree of life, with Ctenophora-sister and Porifera-sister emerging as the two primary alternative hypotheses. This has been one of the most difficult to resolve nodes in animal tree of life, and has major implications for our understanding of the earliest events in animal evolution. Here we systematically explore this question by synthesizing data and results from all previous phylogenomic analyses and perform new analyses with these data to characterize the differences between matrices under consistent conditions. Our reanalyses are generally consistent with previous results. We next quantify the support of phylogenetic signal and conduct sensitive analyses in several representative data matrices. We found that the Porifera-sister can only be recovered with several combined factors, including inclusive of a more simplistic evolutionary model, an unrealistic large number of substitution categories, more closely related outgroups and certain gene samplings, whereas Ctenophora-sister is supported in most other conditions. We also show that recoding amino acid data into reduced state space, another approach that has been suggested to address variation in amino acid frequencies, is problematic. Thus, our results provide a comprehensive overview of the current understanding of the first diverging animal branch and why different studies yield different answers. This synthesis provides an integrative overview of the challenge and provides direction for future studies to address difficult phylogenetic problems.
+## Abstract
 
-(Casey's edit)
-Phylogenomic studies based on hundreds to thousands of protein coding genes have greatly improved our understanding of evolutionary relationships among major animal lineages. However, considerable debate still remains regarding the deepest split in the animal tree of life, with Ctenophora-sister and Porifera-sister emerging as the two primary alternative hypotheses. This has been one of the most difficult to resolve nodes in animal tree of life, and has major implciations for our understanding of the earliest events in animal evolution. Here we systematically explore this question by synthesizing data and results from a large number of previous phylogenomic analyses of protein coding genes. These published analyses varied in many regards, including the genes sampled, the outgroup taxa included, the ingroup taxa included, the models of molecular evolution applied to the data, and the phylogenetic methods and software used. As author authors have noted, these studies tend to support Porifera-sister when the outgroups are reduced to only only Choanoflagellata (the closest outgroup to animals), and site heterogeneous CAT models are used in the software tool PhyloBayes. Most other conditions supported Ctenophora-sister. It has been argued that the results using site heterogeneous models with reduced outgroup sampling (which favor Porifera-Sister) should be favored because they best address different frequencies of amino acids found across sites and in more distantly related outgroups. We perform new analyses with these data to characterize the differences between matrices under consistent conditions. Our reanalyses are generally consistent with previous results. We performed additional analyses using new site heterogeneous models in iqtree, and find that, unlike the phylobayes analyes, these support Ctenophora-sister rather than Porifera-sister. This suggests that some of the variation seen previous studies was due to different phylogenetic analysis software, rather than the different models that were used.
-We next quantify the support of phylogenetic signal over the two hypotheses and find substantial differences in the distribution of phylogenetic signal between models and outgroup choice (especially CAT models). We also show that recoding amino acid data into reduced state space, another approach that has been suggested to address vaariation in amaino acid frequencies, is problematic. Our results provide a comprehensive overview of the current understanding of the first diverging animal branch and why different studies yield different answers. This synthesis provides an integrative overview of the challenge and provides direction for future studies to address difficult phylogenetic problems.
+Phylogenomic studies based on hundreds to thousands of protein coding genes have greatly improved our understanding of evolutionary relationships among major animal lineages. However, considerable debate still remains regarding the deepest split in the animal tree of life, with Ctenophora-sister and Porifera-sister emerging as the two primary alternative hypotheses. This has been one of the most difficult to resolve nodes in animal tree of life, and has major implciations for our understanding of the earliest events in animal evolution. Here we systematically explore this question by synthesizing data and results from a large number of previous phylogenomic analyses of protein coding genes. These published analyses varied in many regards, including the genes sampled, the outgroup taxa included, the ingroup taxa included, the models of molecular evolution applied to the data, and the phylogenetic methods and software used. As other authors have noted, these studies tend to support Porifera-sister when the outgroups are reduced to only only Choanoflagellata (the closest outgroup to animals), and site heterogeneous CAT models are used in the software tool PhyloBayes. Most other conditions supported Ctenophora-sister. It has been argued that the results using site heterogeneous models with reduced outgroup sampling (which favor Porifera-Sister) should be favored because they best address different frequencies of amino acids found across sites and in more distantly related outgroups. We perform new analyses with these data to characterize the differences between matrices under consistent conditions. Our reanalyses are generally consistent with previous results. We performed additional analyses using new site heterogeneous models in iqtree, and find that, unlike the phylobayes analyes, these support Ctenophora-sister rather than Porifera-sister. This suggests that some of the variation seen previous studies was due to different phylogenetic analysis software, rather than the different models that were used. We also quantify the support of phylogenetic signal over the two hypotheses and find substantial differences in the distribution of phylogenetic signal between models and outgroup choice (especially CAT models). We also show that recoding amino acid data into reduced state space, another approach that has been suggested to address vaariation in amaino acid frequencies, is problematic. Our results provide a comprehensive overview of the current understanding of the first diverging animal branch and why different studies yield different answers. This synthesis provides an integrative overview of the challenge and provides direction for future studies to address difficult phylogenetic problems.
 
-## Main
+## Introduction
 
 Phylogenomic analyses with genome-scale data have the potential to revolutionize our understanding of the tree of life. However, over the past decade, there has been considerable debate about the position of the root of the animal phylogeny, with Ctenophora-sister (comb jelly) and Porifera-sister (sponges) (Fig. 1) emerging as the two primary hypotheses. Historically, there was little debate about the root of the animal tree of life and Porifera-sister was widely accepted though rarely tested. By contrast, there has long been uncertainty about the relationship of Ctenophora to other animals [@Wallberg:2004ws]. An understanding of the placement of these lineages is critical for scientists to reconstruct events that occurred  early in animal evolution, especially for the evolution of complex structures such as cell types, nervous systems, and developmental patterns. However, a wide consensus of animal origin has not been reached despite multiple efforts.
 
@@ -103,13 +98,6 @@ Compositional heterogeneity (clade-specific and site-specific differences in ami
 ## Overview of published analyses
 Here, we synthesize data and results from previous phylogenomic analyses that tested Ctenophora-sister and Porifera-sister from 14 studies (Table 1). These matrices include all relevant studies published before 2020 for which we could obtain data matrices with gene partitions that described boundaries between genes.
 
-
-```{r overview data matrices}
-tableXXdistribution = read_tsv("../data_processed/tables/study_summary.tsv")
-	kable(tableXXdistribution, caption= "Table 1. Overview of data matrices used in this study")
-
-```
-
 ## Results and Discussion
 
 ### Matrix taxon composition
@@ -117,7 +105,7 @@ tableXXdistribution = read_tsv("../data_processed/tables/study_summary.tsv")
 Taxa sampling plays a critical role in phylogenetic inference, especially for the taxa whose phylogenetic position is poorly understood. However, several data matrices have relatively skewed taxon sampling, with more than 50% taxa sampled in Bilateria compared to other major animal lineages (Extended Data Fig. 1). These skewed data matrices include two studies constructed from ESTs (Dunn2008 [@Dunn:2008ky] and Hejnol2009 [@hejnol2009assessing]) and one study from whole-genome data (Borrowiec2015 [@borowiec2015extracting]). Importantly, several earlier studies before 2015 only include less than five ctenophore species (Extended Data Fig. 1). The rest data matrices have relatively balanced taxon composition, although the total number of sampled taxon varies. In general, increasing taxon sampling is broadly accepted to improve phylogenetic inference and aid in the placement of the earliest diverging animal lineage. Thus, it should be noted that Whelan2017 [@whelan2017ctenophore] (has the most Ctenophore taxa) and Simion2017 [@simion2017large] (contains the most taxon sampling) have much broader taxon sampling than other matrices.
 
 
-```{r taxon_rectangles, fig.height = 18, fig.width = 20 }
+```{r figure_taxon_rectangles, fig.height = 18, fig.width = 20 }
 
 no_subsets = unlist(lapply(sequence_matrices, function(x) !grepl("only|_D", x@matrix_name)))
 
@@ -156,67 +144,11 @@ We first used the Metazoa BUSCO genes [@waterhouse2017busco] to evaluate gene co
 Previous analyses have mainly focused on outgroup selection and/or model fits in different data matrices, and the matrix overlap across different studies has been rarely investigated since all these studies rely on their own method for orthology inference. Our initial intent of comparing matrix overlap across matrices was to construct a new matrix with shared taxon and gene sampling to test specific hypotheses about differences in support. However, our results show that surprisingly little overlap of gene samplings across all the data matrices from different studies (Fig. 2). Thus, these results strongly suggested that gene sampling largely varies across studies, indicating that different regions of the genomes are sampled with little overlap among different data matrices. Moreover, the little overlap among studies may potentially lead to incongruent phylogenetic results and difficult to directly compare results across studies.
 
 
-```{r gene_composition,, fig.height = 6, fig.width = 10}
-matrix_summary = merge(matrix_summary,n_ribo,by="matrix")
-
-p1 = ggplot( matrix_summary ) +
-	geom_point( aes(x=n_partitions, y=n_busco_partitions, col=manuscript) ) +
-	geom_abline(slope=1,intercept=0) +  	theme_classic() + theme(axis.text.x = element_text(angle=45, hjust=1)) + labs(x ="Number of gene partitions", y = "Number of BUSCO genes")
-
-
-matrix_summary=matrix_summary %>%
-  mutate(matrix=recode(matrix,`NA`="Simion2017"))
-
-
-
-matrix_summary$matrix = factor( matrix_summary$matrix, levels=c("Dunn2008", "Philippe2009", "Hejnol2009", "Nosenko2013_nonribo_9187","Nosenko2013_ribo_11057","Nosenko2013_ribo_14615","Ryan2013_est", "Moroz2014_3d", "Chang2015", "Borowiec2015_Best108" , "Borowiec2015_Total1080", "Whelan2015_D1", "Whelan2015_D10", "Whelan2015_D20", "Simion2017", "Whelan2017_full", "Whelan2017_strict") )
-
-p2 = ggplot( matrix_summary, aes(x=matrix, y=n_busco_partitions/n_partitions*100, fill=manuscript) ) +geom_bar(stat = "identity")  + 	theme_classic() + theme(axis.text.x = element_text(angle=45, hjust=1)) + labs(x ="Matrix", y = "Percentage of Busco genes") + ylim(0, 100)
-
-p3 = ggplot( matrix_summary ) +
-	geom_point( aes(x=n_partitions, y=n, col=manuscript) ) +
-	geom_abline(slope=1,intercept=0) + 	theme_classic() + theme(axis.text.x = element_text(angle=45, hjust=1)) + labs(x ="Number of gene partitions", y = "Number of Ribosomal genes")
-	coord_fixed()
-
-p4 = ggplot( matrix_summary, aes(x=matrix, y=n/n_partitions*100, fill=manuscript) ) +geom_bar(stat = "identity")  + 	theme_classic() + theme(axis.text.x = element_text(angle=45, hjust=1)) + labs(x ="Matrix", y = "Percentage of Ribosomal genes")+ ylim(0, 100)
-
- ggarrange(p1, p2,p3, p4,
-                    labels = c("A", "B", "C", "D"),
-                    ncol = 2, nrow = 2,common.legend = TRUE, legend = "right", align = "hv")
-
-
-```
-
-**Extended Data Fig. 2.** Annotation and representation of BUSCO and ribosomal genes in each data matrix. (A). The number of partitions with BUSCO annotations in each matrix, relative to the number of partitions. (B). The percentage BUSCO annotations in each matrix. (C). The number of partitions with annotations of ribosomal genes in each matrix, relative to the number of partitions. (D). The percentage  ribosomal genes in each matrix.
-
-
-
-
-```{r matrix_overlap, fig.height = 12, fig.width = 20}
-
-matrix_overlap_rectangles =
-	lapply(sequence_matrices[no_subsets], function(x) lapply(sequence_matrices[no_subsets], function(y) overlap_rects(x,y))) %>%
-	unlist(recursive=FALSE) %>%
-	bind_rows()
-
-ggplot(data=matrix_overlap_rectangles) +
-	scale_x_continuous(name="Genes") +
-	scale_y_continuous(name="Species") +
-	geom_rect( mapping=aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax, fill=MSA ), alpha=0.5) +
-	facet_grid( matrix_1 ~ matrix_2, scales="free" ) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1), strip.text.y = element_text(angle = 0), strip.text.x = element_text(angle = 60))
-
-```
-
-**Fig. 2.** Pairwise overlap between each of the primary matrices considered here. Horizontal size is proportional to the number of genes sampled, vertical size to the number of taxa sampled. The horizontal intersection shows the proportions of shared genes, the vertical intersection shows the proportions of shared taxa.
-
-
-
 
 
 ### Support for Porifera-sister and Ctenophora-sister
 
-```{r support_published_analyses}
+```{r figure_support_analyses_published}
 analyses_published=read_tsv("../data_processed/tables/previously_published_analyses.tsv")
 x1 = factor(analyses_published$model_combined, levels=c("WAG", "LG", "GTR", "data partitioning", "Recoding + GTR", "Recoding + GTR + CAT", "Poisson + CAT", "GTR + CAT"))
 analyses_published %>%
@@ -226,18 +158,15 @@ analyses_published %>%
 		theme_classic() + theme(axis.text.x = element_text(angle=45, hjust=1))+
    xlab("Model complexity") + ylab("Clade")
 ```
-**Fig. 3.**  A total of `r nrow(analyses_published)` analyses were transcribed from the literature (Supplementary Table 2).
+**Fig. 3.**  A total of `r nrow(analyses_published)` analyses were transcribed from the literature (Table XX).
 
 Here we summarized all the `r nrow(analyses_published)` previous phylogenetic analyses from `r length(unique(analyses_published$manuscript))` studies (Fig. 3 and Supplementary Table 2). Among these studies, the main conclusions of five studies strongly in favor of Porifera-sister and 10 in support of Ctenophora-sister (Table 1). Moreover, three studies are secondary studies without any new data matrices. Interestingly, we found that all analyses strongly support of Ctenophora-sister once site-homogeneous models were used, no matter what outgroup choice, phylogenetic inference and whether data-recoding are used. The support for Porifera-sister increases with the exclusion of more distantly related outgroups and with the use of site-heterogeneious CAT (Poisson+CAT or GTR+CAT) models in several matrices, including Philippe2009, Ryan2013_est and Whelan2015. It should be noted that many BI analyses with CAT model are not well resolved (either not reach convergence or do not provide significant support for the key node of animal evolution) mainly due to computational limits of CAT models employed in PhyloBayes. The strong support of Porifera-sister can only be recovered from analyses using Poisson+CAT and recoding methods with GTR+CAT models in several matrices. Although GTR+CAT model generally has better model adequacy than Poisson+CAT or site-homogeneous models from previous studies[@pisani2015genomic; @feuda2017improved], Porifera-sister is not always supported since several analyses strongly in favor Ctenophora-sister even with only choanofalgellates are used as outgroups (Fig. 3). Thus, our summary of previous phylogenetic analyses strongly indicated that the trend of the support of Porifera-sister is generally increasing with the use of more complex CAT models and more closely related outgroups in several representative matrices, whereas Ctenophora-sister is supported in most other conditions.
-
-
-
 
 
 ## New analyses of published matrices
 
 
-```{r support_new_analyses}
+```{r figure_support_analyses_new}
 analyses_new=analyses_new %>%
 mutate(model=recode(model,
                     `GTR20`="GTR",
@@ -251,21 +180,13 @@ analyses_new %>%
 		theme_classic() + theme(axis.text.x = element_text(angle=45, hjust=1))+
        xlab("Model complexity") + ylab("Clade")
 ```
-**Fig. 4.**  A total of `r nrow(analyses_new)` new phylgoenomic analyses were conducted in this study (Supplementary Table 3).
-
+**Fig. 4.**  A total of `r nrow(analyses_new)` new phylgoenomic analyses were conducted in this study (Supplementary Table XX).
 
 One of the challenges of interpreting support for the placement of the animal root is that different programs, software versions, and settings have been used across studies, and phylogenetic analysis decisions have been approached in very different ways. Thus, it easily causes confusions with the increase number of studies.  Here we first reanalyze the primary matrices from each study under consistent conditions with IQtree [@nguyen2014iq] under a panel of evolutionary models. We selected this tool because it has greater model flexibility, computational time and accuracy than other tools in maximum likelihood (ML) framework [@zhou2017evaluating] (Fig. 4; Supplementary Table 3). Importantly, we also include a CAT-like, site-heterogeneous C10 -C60 (C60) models [@si2008empirical] that are implemented in both ML framework in our analyses and it is interesting to compare results between C60 model to CAT models since it has never been used in any matrices analyzed here.
 
 Here we reanalyzed 17 matrices from 12 studies that are used as main conclusions from their original paper (Table 1). We also progressively trimmed each data matrix with three level of outgroup choice if applicable (Fig 1C). We first tested a variety of models for each matrix and compared the relative fit of site-homogeneous and site-heterogeneous C60 models using ModelFinder [@kalyaanamoorthy2017modelfinder] in IQtree (except only LG+C60 models are used in 3 large matrices). We found in all cases, WAG/LG+C60 models fit these matrices better than the site-homogeneous models under BIC criteria and we then inferred support under the best-fit model from IQtree (Extended Data Table 1). It should be noted that we didn't include GTR+C60 models in model testing since it is computational too expensive with large number of parameters that need to be estimated.  We then analyzed every matrix under a panel of standard site-heterogeneous and site-homogeneous models, including WAG, GTR and Poisson+C60. Moreover, we also used the best-fit model identified above with the removal of all distantly related outgroups and only include Choanoflagellata as outgroups. Interestingly, with the exception of Moroz2014_3d and all Nosenko2013 matrices that supports neither Porifera-sister or Ctenophora-sister, all analysis conducted herein in IQtree strongly supported the ctenophore-sister hypothesis, even with CAT-like, site-heterogeneous C60 models (Poisson+C60 and WAG/LG+C60) with the most closely related outgroups (Fig. 4; Supplementary Table 3).
 
-**Extended Data Table 1.** The models selected by ModelFinder for each matrix.
-```{r modelfinder}
-analyses_new %>%
-	filter(modelfinder==TRUE) %>%
-	select( matrix, clade, result, model_summary ) %>%
-	kable()
 
-```
 
 ### Comparison of IQtree and PhyloBayes results
 
@@ -282,7 +203,7 @@ In contrast, the phylogenetic signal of site-heterogenous models changed dramati
 We also examined the level of congruence of gene partitions that are supported in each hypothesis across different analyses in Whelan2017_full matrices (Fig. Extended Data Fig. 3). Consistent with the summary of \Delta$GLS\ analysis, We found gene population that supports in either hypothesis are largely congruent between site-homogenous and C models, whereas little overlap was observed in Poisson-CAT models (especially with different outgroup choice). In other words. our results strongly indicated that the distribution of phylogenetic signal of animal origin is largely sensitive to model selection (site-homogeneous vs. site-heterogeneous models). More importantly, the site-heterogeneous CAT model is also more sensitive to the outgroup choice than site-homogeneous and C60 models in Phillippe2009 and Whelan2017_full matrices.
 
 
-```{r phylogenetic_signal, fig.width=6, fig.height=12}
+```{r figure_phylogenetic_signal, fig.width=6, fig.height=12}
 # fig5_bars <- au_tests %>%
 au_tests %>%
   unite(Matrix, c(manuscript, matrix, model)) %>%
@@ -325,8 +246,7 @@ ggplot(aes(x = Matrix, y = percent, fill=result)) +
 **Fig.5** The distribution of phylogenetic signal for two alternative topological hypotheses on the earliest-branching animal lineage with different models and outgroup choice. (A). Proportion of genes supporting each of two alternative hypotheses for each of two alternative hypotheses for Philippe2009 matrix. (B). Proportion of genes supporting each of two alternative hypotheses for each of two alternative hypotheses for Ryan2013_est matrix. (C) Proportion of genes supporting each of two alternative hypotheses for each of two alternative hypotheses for Whelan2017_full matrix. The (\Delta$GLS\) values for the genes across each data matrix are provided in Supplementary Table 4.
 
 
-![](figures/Figure_Pairwise_heatmap_animal_root.png)
-**Extended Data Fig. 3.** Pairwise intersections of the level of congruence of gene partitions that are supported in each hypothesis across different analyses in Whelan2017_full matrices calculated by Euclidean distance. (A) Pairwise comparisons across genes that supported Ctenophora-sister in different analyses. (B) Pairwise comparisons across genes that supported Porifera-sister in different analyses. The color scale indicates the Pearson correlation, where 1 is positive linear correlation, 0 is no linear correlation, and −1 is negative linear correlation. The pairwise intersection heatmap is generated by Intervene [@khan2017intervene].
+
 
 
 ### Sensitive test of CAT categories {place holder for sensitive results}
@@ -355,7 +275,6 @@ There is growing interest in data-recoding and previous study [@feuda2017improve
 ## The current state of understanding and future direction
 Resolving the root position of animal phylogeny that diverged ~ 650 million years ago has proven particularly difficult, even with large genome-scale phylogenomic data matrices. By synthesizing all past phylogenomic studies and perform new analyses to characterize difference between studies, we found the support of Porifera-sister can only be recovered by site-heterogeneous CAT models with the most closely related outgroups, and Ctenophora-sister in all other cases. Four factors contribute significantly to the previous incongruent results based on our analyses. First, the overlap of gene sampling and matrix is extremely low across different studies, leading to the difficult of directly compare the results across different studies. Second, the distribution of phylogenetic signal are largely varied between site-homogeneous and site-heterogeneous models. More importantly, site-heterogeneous models are also more sensitive to outgroup choice than site-homogeneous models, leading to different results even with the same data matrix with different outgroup choice. Third, we found that increase of number of substitutional categories coupled with a more simplistic model can change the root position of animal phylogeny. Last, we demonstrated that the support of Porifera-sister by data-recoding methods is potentially resulted by data reduction, not accommodation of compositional heterogeneity across species. Thus, the recovery of Porifera-sister needs more constraints than Ctenophora-sister. Rather than embracing one hypothesis over another, our results provide an integrative overview of the challenge and uncertainty related to the origin of animals.
 
-## Future direction
 Many key positions of animal phylogeny can be reconstructed by increasing genome-scale data within a phylogenomic framework, although new challenges have also arised. Overcoming the challenges to inferring the earliest diverging animal lineage is particular difficult and here we discuss the several aspects that will help to improve our understanding of animal evolution. First, a broader sampling of high-quality sponge and ctenophore genomes are needed to shorten the long branch since they are among the longest branches in the animal phylogeny (currently only 2 ctenophore and 3 sponge genomes are available). Second, accurate reconstruction of orthologs and a consensus analytical strategy should be formalized with investigators to improve communications and reproducibility of phylogenetic workflow [@guang2016integrated]. Last, we also hope that the work we have conducted here, including consolidating all the datasets in one place with consistent formats and species names, will enhance the technical value of this interesting question to methods-focused investigators that look to develop and evaluate methods or evolutionary models to address this difficult phylogenetic problem. More importantly, we also hope all investigators critically evaluate the competing hypotheses without bias instead of showing preferences to one hypothesis over as a priori due to historical reasons or previous work. Finally, other sources of evidence may also provide important insight to animal origin, including morphological characters [@mah2014choanoflagellate; @nielsen2019early] and fossil records [@zhao2019cambrian]. We hope the future breakthroughs that will allow us to move the field forward and a consensus viewpoint of early animal evolution will be reached in the coming years.
 
 ## Methods
@@ -425,6 +344,19 @@ Each new matrix was analyzed with PhyloBayes-mpi. Analyses were run for 1000 gen
 
 The statistics presented in  Extended Data Figs. 4 and 5 were parsed from the Feuda *et al.* manuscript into the file `tidy_table_3.tsv` and rendered for display with the code in `manuscript.rmd`.
 
+## Supplementary Methods
+
+### Matrix mapping
+
+Taxa and partition correspondence across manuscripts was assessed by comparing all sequences for each taxon in each partition across all matrices with diamond blast. Based on inspection of sequence similarity, we excluded all comparisons with less than 99% identity and greater than 10^-25^ e-value.
+
+
+### Taxa comparison across matrices
+
+The primary intent of comparing taxa across matrices was to validate our taxon name reconciliation across studies.
+
+We first considered pairwise similarity between the same species from different matrices in different studies.
+
 
 
 ## Ackowledgements
@@ -440,7 +372,7 @@ We thank the Yale Center for Research Computing for use of the research computin
 
 \pagebreak
 
-# Supplemental Information
+# Supplementary Information
 
 ## Supplementary Results
 
@@ -627,18 +559,7 @@ Though their study does not provide strong support for Porifera-sister, the sens
 
 These analyses suggest that the major impact of recoding on phylogenetic analyses is data reduction, not accommodation of compositional heterogeneity across species. This indicates that recoding may not be an effective tool for accommodating among-species differences in amino acid frequencies. Compositional heterogeneity would be better addressed with models of molecular evolution that explicitly describe such differences [@Blanquart:2008gl, @Foster:2004tw], if progress can be made on the considerable computational challenges of such complex models.
 
-## Supplementary Methods
 
-### Matrix mapping
-
-Taxa and partition correspondence across manuscripts was assessed by comparing all sequences for each taxon in each partition across all matrices with diamond blast. Based on inspection of sequence similarity, we excluded all comparisons with less than 99% identity and greater than 10^-25^ e-value.
-
-
-### Taxa comparison across matrices
-
-The primary intent of comparing taxa across matrices was to validate our taxon name reconciliation across studies.
-
-We first considered pairwise similarity between the same species from different matrices in different studies.
 
 
 ### Partition comparison across matrices
@@ -660,11 +581,84 @@ The count for a partition pair can be much larger than the number of genes in th
 
 There are `r length(unique(partition_network_summary$matrix))` matrices. A gene that is perfectly sampled would form a cluster with this size. To our surprise, very few clusters, though, are this size. This suggests that intersection of genes between matrices is extreme low. This finding suggested genes used for exploring the position of the root of the animal phylogeny
 
-## Supplementary Tables
-```{r phylogenetic signal distribution}
+
+## Extended Tables
+
+```{r table_study_summary}
+tableXXdistribution = read_tsv("../data_processed/tables/study_summary.tsv")
+	kable(tableXXdistribution, caption= "Table 1. Overview of data matrices used in this study")
+
+```
+
+```{r table_phylogenetic_signal}
 tableXXdistribution = read_tsv("../trees_new/AU_test/summary.tsv")
 	kable(tableXXdistribution, caption= "Supplementary Table 4. Distribution of phylogenetic signal for different models and outgroup choice")
 
 ```
+
+**Extended Data Table 1.** The models selected by ModelFinder for each matrix.
+```{r table_modelfinder}
+analyses_new %>%
+	filter(modelfinder==TRUE) %>%
+	select( matrix, clade, result, model_summary ) %>%
+	kable()
+
+```
+
+## Extended Figures
+
+```{r figure_gene_composition,, fig.height = 6, fig.width = 10}
+matrix_summary = merge(matrix_summary,n_ribo,by="matrix")
+
+p1 = ggplot( matrix_summary ) +
+	geom_point( aes(x=n_partitions, y=n_busco_partitions, col=manuscript) ) +
+	geom_abline(slope=1,intercept=0) +  	theme_classic() + theme(axis.text.x = element_text(angle=45, hjust=1)) + labs(x ="Number of gene partitions", y = "Number of BUSCO genes")
+
+
+matrix_summary=matrix_summary %>%
+  mutate(matrix=recode(matrix,`NA`="Simion2017"))
+
+matrix_summary$matrix = factor( matrix_summary$matrix, levels=c("Dunn2008", "Philippe2009", "Hejnol2009", "Nosenko2013_nonribo_9187","Nosenko2013_ribo_11057","Nosenko2013_ribo_14615","Ryan2013_est", "Moroz2014_3d", "Chang2015", "Borowiec2015_Best108" , "Borowiec2015_Total1080", "Whelan2015_D1", "Whelan2015_D10", "Whelan2015_D20", "Simion2017", "Whelan2017_full", "Whelan2017_strict") )
+
+p2 = ggplot( matrix_summary, aes(x=matrix, y=n_busco_partitions/n_partitions*100, fill=manuscript) ) +geom_bar(stat = "identity")  + 	theme_classic() + theme(axis.text.x = element_text(angle=45, hjust=1)) + labs(x ="Matrix", y = "Percentage of Busco genes") + ylim(0, 100)
+
+p3 = ggplot( matrix_summary ) +
+	geom_point( aes(x=n_partitions, y=n, col=manuscript) ) +
+	geom_abline(slope=1,intercept=0) + 	theme_classic() + theme(axis.text.x = element_text(angle=45, hjust=1)) + labs(x ="Number of gene partitions", y = "Number of Ribosomal genes")
+	coord_fixed()
+
+p4 = ggplot( matrix_summary, aes(x=matrix, y=n/n_partitions*100, fill=manuscript) ) +geom_bar(stat = "identity")  + 	theme_classic() + theme(axis.text.x = element_text(angle=45, hjust=1)) + labs(x ="Matrix", y = "Percentage of Ribosomal genes")+ ylim(0, 100)
+
+ ggarrange(p1, p2,p3, p4,
+                    labels = c("A", "B", "C", "D"),
+                    ncol = 2, nrow = 2,common.legend = TRUE, legend = "right", align = "hv")
+
+
+```
+
+**Extended Data Fig. 2.** Annotation and representation of BUSCO and ribosomal genes in each data matrix. (A). The number of partitions with BUSCO annotations in each matrix, relative to the number of partitions. (B). The percentage BUSCO annotations in each matrix. (C). The number of partitions with annotations of ribosomal genes in each matrix, relative to the number of partitions. (D). The percentage  ribosomal genes in each matrix.
+
+```{r figure_matrix_overlap, fig.height = 12, fig.width = 20}
+
+matrix_overlap_rectangles =
+	lapply(sequence_matrices[no_subsets], function(x) lapply(sequence_matrices[no_subsets], function(y) overlap_rects(x,y))) %>%
+	unlist(recursive=FALSE) %>%
+	bind_rows()
+
+ggplot(data=matrix_overlap_rectangles) +
+	scale_x_continuous(name="Genes") +
+	scale_y_continuous(name="Species") +
+	geom_rect( mapping=aes(xmin=xmin, xmax=xmax, ymin=ymin, ymax=ymax, fill=MSA ), alpha=0.5) +
+	facet_grid( matrix_1 ~ matrix_2, scales="free" ) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), strip.text.y = element_text(angle = 0), strip.text.x = element_text(angle = 60))
+
+```
+
+**Fig. 2.** Pairwise overlap between each of the primary matrices considered here. Horizontal size is proportional to the number of genes sampled, vertical size to the number of taxa sampled. The horizontal intersection shows the proportions of shared genes, the vertical intersection shows the proportions of shared taxa.
+
+![](figures/Figure_Pairwise_heatmap_animal_root.png)
+**Extended Data Fig. 3.** Pairwise intersections of the level of congruence of gene partitions that are supported in each hypothesis across different analyses in Whelan2017_full matrices calculated by Euclidean distance. (A) Pairwise comparisons across genes that supported Ctenophora-sister in different analyses. (B) Pairwise comparisons across genes that supported Porifera-sister in different analyses. The color scale indicates the Pearson correlation, where 1 is positive linear correlation, 0 is no linear correlation, and −1 is negative linear correlation. The pairwise intersection heatmap is generated by Intervene [@khan2017intervene].
+
+## Supplementary Information
 
 ## References
