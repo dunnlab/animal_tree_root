@@ -298,11 +298,26 @@ parse_tree_pb = function( tree_file, taxonomy_reference ){
 	bpdiff_file_path = sub( tree_ext, ".bpdiff", tree_file_path )
 	filename_parts = strsplit( basename( tree_file ), "\\." ) %>% unlist()
 	matrix_name = filename_parts[1]
-	model_name = "CAT+F81"
-	pb_treelist = sprintf(
-		sub( str_c("bpcomp",tree_ext), "phy_Chain%d.treelist", tree_file_path ),
-		1:2
-	)
+	if (filename_parts[2] == 'bpcomp' || filename_parts[2] == 'phy') {
+	  model_name = "CAT+F81"
+	  pb_treelist = sprintf(
+	    sub( str_c("bpcomp",tree_ext), "phy_Chain%d.treelist", tree_file_path ),
+	    1:2
+	  )
+	} else if (filename_parts[2] == 'phy') {
+	  model_name = "CAT+F81"
+	  pb_treelist = sprintf(
+	    sub( str_c("phy",tree_ext), "phy_Chain%d.treelist", tree_file_path ),
+	    1:2
+	  )
+	} else {
+	  model_name = sub('phy_', '', filename_parts[2])
+	  pb_treelist = sprintf(
+	    sub( tree_ext, "_Chain_%d.treelist", tree_file_path ),
+	    1:2
+	  )
+	}
+
 	
 	if(!file.exists(bpdiff_file_path)){
 		warning( str_c( "Missing bpdiff file: ", bpdiff_file_path ) )
@@ -323,7 +338,7 @@ parse_tree_pb = function( tree_file, taxonomy_reference ){
 	burnins = as.numeric(burnin_line[2])
 	
 	keep_every = 100
-	treelist_text = c( unlist( mapply( read_pb_treelist, pb_treelist, burnins, keep_every ) ) )
+	treelist_text = c( unlist( mapply( read_pb_treelist, pb_treelist, burnin=burnins, subsample_every=keep_every ) ) )
 	sample_trees = read.tree( text = treelist_text )
 	
 	Ctenophora_sister = lapply(
@@ -525,8 +540,8 @@ parse_au_gene_tests = function(path="../trees_new/AU_test/genewise"){
 		map(read.delim) %>%
 		imap(~ transform(.x, manuscript = filename_parts_list[[.y]][[1]])) %>%
 	  imap(~ transform(.x, matrix = ifelse( length(filename_parts_list[[.y]])>2,
-	                                        filename_parts_list[[.y]][2:(length(filename_parts_list[[.y]])-1)],
-	                                        filename_parts_list[[.y]][1]))) %>%
+	                                        str_c(filename_parts_list[[.y]][2:(length(filename_parts_list[[.y]])-1)], collapse="_"),
+	                                        ""))) %>%
 		imap(~ transform(.x, model = filename_parts_list[[.y]][[length(filename_parts_list[[.y]])]])) %>%
 		bind_rows()
 

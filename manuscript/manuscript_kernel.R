@@ -195,23 +195,30 @@ matrix_overlap = matrix_overlap[mask,]
 
 # New analyses of published matrices
 
+# read iqtrees
 trees_path_iqtree = "../trees_new/iqtree"
 iqtree_ext = "\\.treefile$"
 file_names_iqtree = list.files( path = trees_path_iqtree, pattern = iqtree_ext, full.names = TRUE )
 
 # Temp fix re issue #8
-file_names_iqtree = file_names_iqtree[ ! grepl("Philippe2009", file_names_iqtree) ]
+#file_names_iqtree = file_names_iqtree[ ! grepl("Philippe2009", file_names_iqtree) ]
 #file_names_iqtree = file_names_iqtree[ ! grepl("Nosenko2013", file_names_iqtree) ]
 
-# read iqtrees
 trees_iq = foreach( tree_file = file_names_iqtree ) %dopar%
 	parse_tree_iqtree( tree_file, taxonomy_reference )
 
-trees_path_pb = "../trees_new/phylobayes"
+# read phylobayes sensitivity analyses
+trees_path_sensitive = "../trees_new/sensitive"
 pb_tree_ext = "\\.con\\.tre$"
-file_names_pb = list.files( path = trees_path_pb, pattern = pb_tree_ext, full.names = TRUE )
+
+file_names_sensitive = list.files( path = trees_path_sensitive, pattern = pb_tree_ext, full.names = TRUE )
+trees_sensitive = foreach( tree_file = file_names_sensitive ) %dopar%
+  parse_tree_pb( tree_file, taxonomy_reference )
 
 # read pb trees
+trees_path_pb = "../trees_new/phylobayes"
+file_names_pb = list.files( path = trees_path_pb, pattern = pb_tree_ext, full.names = TRUE )
+
 trees_pb = foreach( tree_file = file_names_pb ) %dopar%
            parse_tree_pb( tree_file, taxonomy_reference )
 
