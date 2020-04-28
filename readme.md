@@ -54,4 +54,24 @@ All the files in this repo that match the patterns defined in [`.gitattributes`]
 
 Git LFS keeps the history of the repo cleaner and more performant, while maintaining the data files in the same repo.
 
+Getting a fresh copy of the full repo would look something like this:
+
+``` bash
+git clone git@github.com:dunnlab/animal_root.git
+cd animal_root
+git lfs install
+git submodule update --init --recursive
+git lfs clone
+```
+
+If you would like to clone just like the files for interacting with the `manuscript.rmd`, you can run the following:
+
+``` bash
+git lfs uninstall
+git clone git@github.com:dunnlab/animal_root.git
+cd animal_root
+git lfs install
+git lfs pull --include=manuscript
+```
+
 
