@@ -2,8 +2,8 @@
 bibliography: manuscript.bib
 csl: nature.csl
 output:
-  word_document: default
   pdf_document: default
+  word_document: default
   html_document: default
   github_document: default
 ---
@@ -198,7 +198,7 @@ We next explore how the increase of number of categories may affect the phylogen
 The GTR-CAT model often has a better model-fitting than Poisson-CAT model in previous analyses, and it is also suggested a better performance than Poisson-CAT model. Due to computational efficiency, we only ran GTR-CAT and GTR-nCAT60 models in the representative data matrices with the most closely related choanofalgellates as outgroups. Interestingly, we found both Whelan2017 and Philippe matrices shifted from Porifera-sister with Poisson-CAT model to Ctenophora-sister using GTR-CAT model. Moreover, we also found all results strongly supported the Ctenophora-sister with GTR-nCAT60 models. Thus, these results suggested that the Porifera-sister can only be recovered with several combined factors, including inclusive of a more simplistic evolutionary model, an unrealistic large number of substitution categories, more closely related outgroups and certain gene samplings, whereas Ctenophora-sister is supported in most other conditions.
 
 ``` {r sensitive, fig.width=8, fig.height=8}
-sensitive = read_tsv("/animal_root/data_processed/tables/sensitive.tsv")
+sensitive = read_tsv("../data_processed/tables/sensitive.tsv")
 Philippe2009 = sensitive %>% filter(Matrix == "Philippe2009_only_choanozoa" )
 Philippe2009$Model = factor(Philippe2009$Model, levels=c("Poisson_CAT60" , "Poisson_CAT90","Poisson_CAT120","Poisson_CAT150","Poisson_CAT180"))
 p1<-ggplot(Philippe2009, aes(Model))+
