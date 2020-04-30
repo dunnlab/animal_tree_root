@@ -68,14 +68,14 @@ Considerable debate remains regarding the deepest split in the animal tree of li
 
 ## Main
 
-Historically, there was little debate about the root of the animal tree of life and Porifera-sister (Fig. 1) was widely accepted though rarely tested. By contrast, there has long been uncertainty about the relationship of Ctenophora to other animals [@Wallberg:2004ws]. The first phylogenomic study to include ctenophores [@Dunn:2008ky] suggested a new hypothesis, now referred to as Ctenophora-sister, that ctenophores are our most distant animal relative. Since then many more studies have been published, some supporting Ctenophora-sister, some Porifera-sister, and some neither (Table 1). As the problem has become better characterized, it has become an interesting test-case to phylogenetic biologists beyond those concerned with this particular biological problem. Work has been hindered, though, because it has been difficult to directly compare results across studies and synthesize findings to understand the broader patterns of support. 
+Historically, there was little debate about the root of the animal tree of life and Porifera-sister (Fig. 1) was widely accepted though rarely tested. By contrast, there has long been uncertainty about the relationship of Ctenophora to other animals [@Wallberg:2004ws]. The first phylogenomic study to include ctenophores [@Dunn:2008ky] suggested a new hypothesis, now referred to as Ctenophora-sister, that ctenophores are our most distant animal relative. Since then many more studies have been published, some supporting Ctenophora-sister, some Porifera-sister, and some neither (Table 1). As the problem has become better characterized, it has become an interesting test-case to phylogenetic biologists beyond those concerned with this particular biological problem. Work has been hindered, though, because it has been difficult to directly compare results across studies and synthesize findings to understand the broader patterns of support.
 
 ![](figures/Figure_overview.png)
 **Fig. XXFigure_overview.** (A) The Ctenophora-sister hypothesis posits that there is a clade (designated by the orange node) that includes all animals except Ctenophora, and that Ctenophora is sister to this clade. (B) The Porifera-sister hypothesis posits that there is a clade (designated by the green node) that includes all animals except Porifera, and that Porifera is sister to this clade. Testing these hypotheses requires evaluating the support for each of these alternative nodes. (C) The animals and their outgroup choice, showing the three progressively more inclusive clades Choanimalia, Holozoa, and Opisthokonta (designated by the blue node). (D) A ctenophore. (E) A sponge.
 
 ## Variation across published studies
 
-The published analyses considere here differ in a variety of ways, including the model of molecular evolution, gene selection, ingroup species selection, and outgroup species selection. 
+The published analyses considere here differ in a variety of ways, including the model of molecular evolution, gene selection, ingroup species selection, and outgroup species selection.
 
 
 Models of molecular evolution describe how probable different evolutionary changes are, and can have a major impact on the topology of inferred phylogenies. Models have several components that each consider different aspects of the evolutionary process. The models used in the studies considered here differ according to three primary components: the exchangeability matrix $E$ , rates of evolution, and amino acid equilibrium frequencies $\Pi$. The exchangeability matrix $E$ describes the rate at which one amino acid changes to another (*e.g.* Poisson/F81, WAG or LG, and GTR). The rate of exchange can be further scaled, for example with a Gamma parameter that accommodates rate variation across sites. Heterogeneous equilibrium approaches include CAT [@Lartillot:2004dq], which is implemented in the software PhyloBayes and has been widely applied to questions of deep animal phylogeny. Models of molecular evolution are assembled by selecting different options for all these different components. The models that are applied in practice are heavily influenced by computational costs, as well as convention. For example, on the questions considered here, CAT site-heterogeneous models of equilibrium frequency have only been used in combination with Poisson and GTR exchangeability matrices. LG and WAG exchangeability matrices have only been used with site homogeneous estimates of equilibrium frequency. This is further confused by the abbreviations that are used for models. Papers often discuss CAT and WAG models as if they are exclusive, but these particular terms apply to non-exclusive model components-- CAT refers to equilibrium frequency variation across sites and WAG a particular exchangeability matrix. In this literature, CAT is generally shorthand for Poisson+CAT and WAG is shorthand for WAG+homogeneous equilibrium frequency estimation. To avoid confusion on this point, we always specify the exchangeability matrix first, followed by modifiers that describe the accommodation of heterogeneity in equilibrium frequencies (e.g., CAT). Moreover, the Gamma-rate heterogeneity is used in almost every analysis conducted here. If there are no modifiers, then it is implied that site homogeneous models are used. A detailed description of each component is provided in Supplementary Results.
@@ -326,19 +326,15 @@ We thank the Yale Center for Research Computing for use of the research computin
 
 ## Extended Tables
 
+**Extended Data Table 1.** TTable 1. Overview of data matrices used in this study.
 ```{r table_study_summary}
 tableXXdistribution = read_tsv("../data_processed/tables/study_summary.tsv")
-	kable(tableXXdistribution, caption= "Table 1. Overview of data matrices used in this study")
+	kable(tableXXdistribution)
 
 ```
 
-```{r table_phylogenetic_signal}
-tableXXdistribution = read_tsv("../trees_new/AU_test/summary.tsv")
-	kable(tableXXdistribution, caption= "Supplementary Table 4. Distribution of phylogenetic signal for different models and outgroup choice")
 
-```
-
-**Extended Data Table 1.** The models selected by ModelFinder for each matrix.
+**Extended Data Table 2.** The models selected by ModelFinder for each matrix.
 ```{r table_modelfinder}
 analyses_new %>%
 	filter(modelfinder==TRUE) %>%
@@ -458,9 +454,7 @@ ggplot(aes(x = Matrix, y = percent, fill=result)) +
 
 # Supplementary Information
 
-## Supplementary Results
-
-### Models of molecular evolution
+### S.1 Models of molecular evolution
 Models of molecular evolution are assembled by selecting different options for all these different components. The models that are applied in practice are heavily influenced by computational costs, as well as convention. For example, on the questions considered here, CAT site-heterogeneous models of equilibrium frequency have only been used in combination with Poisson and GTR exchangeability matrices. LG and WAG exchangeability matrices have only been used with site homogeneous estimates of equilibrium frequency. This is further confused by the abbreviations that are used for models. Papers often discuss CAT and WAG models as if they are exclusive, but these particular terms apply to non-exclusive model components-- CAT refers to equilibrium frequency variation across sites and WAG a particular exchangeability matrix. In this literature, CAT is generally shorthand for Poisson+CAT and WAG is shorthand for WAG+homogeneous equilibrium frequency estimation. One could, though, run a WAG+CAT model, although the computation time is much longer than Poisson+CAT model. To avoid confusion on this point, we always specify the exchangeability matrix first, followed by modifiers that describe the accommodation of heterogeneity in equilibrium frequencies (*e.g.*, CAT).  Moreover, the Gamma-rate heterogeinity (G4) is used in almost every analysis conducted here. If there are no modifiers, then it is implied that site homogeneous models are used.
 
 The exchangeability matrix $E$ describes the rate at which one amino acid changes to another. Exchangeability matrices have been used in the studies under consideration here include: Poisson (or F81), WAG, LG, GTR. While the exchangeability matrix describes the relative rate of different changes between amino acids, the actual rate can be further scaled. There are a couple approaches that have been used in the studies considered here:
@@ -492,7 +486,7 @@ The vector of equilibrium frequencies $\Pi$ describes the stationary frequency o
 
 - Recoding method:  Amino acids are recoded into six groups based on function to account for both compositional heterogeneity and substitution saturation. Several recoding strategies have been proposed, including Dayhoff 6-state recoding, S&R 6-state recoding, KGB 6-state recoding based on exchangeability matrix of models.
 
-### Details of published analyses
+### S.2 Details of published analyses
 
 #### Dunn *et al.* 2008
 
@@ -632,7 +626,7 @@ Regarding the recovery of Ctenophora-sister, the authors concluded:
 
 It should be noted that all the PhyloBayes runs have not reached convergence due to the computational cost in these large matrices.
 
-### Data-recoding methods
+### S.3 Data-recoding methods
 
 Feuda *et al.* [@Feuda:2017ew] tackled a difficult phylogenetic problem -- placing the root of the animal phylogeny [@King:2017ie]. In the past decade, some analyses have placed Ctenophora (comb jellies) and others Porifera (sponges) as the sister group to all other animals (Fig. Extended Data Fig. 3B). Feuda *et al.* [@Feuda:2017ew] present new phylogenetic analyses that they claim provide strong support for Porifera-sister. Their analyses consider datasets from studies by Chang *et al.* [@Chang:2015hl] and Whelan *et al.* [@Whelan:2015jj], both of which found support for Ctenophora-sister. Feuda *et al.* were concerned that these Ctenophora-sister results were artefacts of lineage-specific differences in amino acid frequencies. In an attempt to reduce these differences, they recoded the full set of twenty amino acids into six groups of amino acids. These groups have more frequent evolutionary changes within them than between them, based on empirical observations in large protein datasets [@Susko:2007ds]. The intent is to discard many lineage-specific changes, which are expected to fall within these groups. Rather than model compositional heterogeneity, as their title suggests, this approach discards heterogeneous information so that much simpler models with fewer states can be applied. They report that posterior predictive (PP) analyses [@Bollback:2002to] indicate 6-state recoded analyses have better model adequacy than 20-state amino acid analyses, and "Porifera-sister was favored under all recoding strategies". Here we focus on two aspects of Feuda *et al.* First, we point out that many of their recoded analyses are actually unresolved (*i.e.*, without strong support for either Porifera-sister or Ctenophora-sister), and that the analyses with the best posterior predictive scores do not provide strong support for Porifera-sister. Second, we present new analyses that show the impact of recoding is largely due to discarding information, not accommodating variation in amino acid composition. These findings indicate that it is premature to accept Porifera-sister and reject Ctenophora-sister. They also show that recoding can be a problematic method for addressing compositional variation.
 
