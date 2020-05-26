@@ -293,12 +293,11 @@ read_pb_treelist = function( trees_file, burnin, subsample_every ){
 parse_tree_pb = function( tree_file, taxonomy_reference ){
   # set up filenames
   tree_file_path = normalizePath( tree_file )
-  print( tree_file_path )
   tree_ext = "\\.con\\.tre$"
   bpdiff_file_path = sub( tree_ext, ".bpdiff", tree_file_path )
   filename_parts = strsplit( basename( tree_file ), "\\." ) %>% unlist()
   matrix_name = filename_parts[1]
-  if (filename_parts[2] == 'bpcomp' || filename_parts[2] == 'phy') {
+  if (filename_parts[2] == 'bpcomp') {
     model_name = "CAT+F81"
     pb_treelist = sprintf(
       sub( str_c("bpcomp",tree_ext), "phy_Chain%d.treelist", tree_file_path ),
