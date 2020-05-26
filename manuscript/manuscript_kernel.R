@@ -207,13 +207,9 @@ file_names_iqtree = list.files( path = trees_path_iqtree, pattern = iqtree_ext, 
 trees_iq = foreach( tree_file = file_names_iqtree ) %dopar%
 	parse_tree_iqtree( tree_file, taxonomy_reference )
 
-# read phylobayes sensitivity analyses
+# read phylobayes 
 trees_path_sensitive = "../trees_new/sensitive"
 pb_tree_ext = "\\.con\\.tre$"
-
-file_names_sensitive = list.files( path = trees_path_sensitive, pattern = pb_tree_ext, full.names = TRUE )
-trees_sensitive = foreach( tree_file = file_names_sensitive ) %dopar%
-  parse_tree_pb( tree_file, taxonomy_reference )
 
 # read pb trees
 trees_path_pb = "../trees_new/phylobayes"
@@ -222,6 +218,38 @@ file_names_pb = list.files( path = trees_path_pb, pattern = pb_tree_ext, full.na
 trees_pb = foreach( tree_file = file_names_pb ) %dopar%
            parse_tree_pb( tree_file, taxonomy_reference )
 
+# sensitivity analyses
+file_names_sensitive = list.files( path = trees_path_sensitive, pattern = pb_tree_ext, full.names = TRUE )
+trees_sensitive = foreach( tree_file = file_names_sensitive ) %dopar%
+  parse_tree_pb( tree_file, taxonomy_reference )
+
+# sensitivity tibble
+analyses_sensitive = lapply(
+  trees_sensitive,
+  function( tree ){
+    data.frame(
+      matrix = tree$matrix,
+      model = tree$model,
+      clade = tree$sampling,
+      support_ctenophora_sister = tree$ctenophora_sister * 100,
+      support_porifera_sister = tree$porifera_sister * 100,
+      stringsAsFactors = FALSE
+    )
+  }
+) %>%
+  bind_rows()
+
+analyses_sensitive$inference = rep( "Bayesian", length( trees_sensitive ) )
+analyses_sensitive$result = "Unresolved"
+analyses_sensitive$result[ (analyses_sensitive$support_porifera_sister >= posterior_prob_threshold) ] = "Porifera-sister"
+analyses_sensitive$result[ (analyses_sensitive$support_ctenophora_sister >= posterior_prob_threshold) ] = "Ctenophora-sister"
+analyses_sensitive$result = factor( analyses_sensitive$result )
+analyses_sensitive$model_summary = factor( 
+  analyses_sensitive$model,
+  levels = c("Poisson+CAT60", "Poisson+CAT70", "Poisson+CAT80", "Poisson+CAT90", "Poisson+CAT100", "Poisson+CAT110", "Poisson+CAT120", "Poisson+CAT150", "Poisson+CAT180", "Poisson+CAT270", "Poisson+CAT340", "Poisson+CAT360", "Poisson+CAT380", "Poisson+CAT400", "Poisson+CAT420", "Poisson+CAT440", "Poisson+CAT460", "Poisson+CAT480")
+)
+
+# new trees tibble
 analyses_new = lapply(
 	c( trees_iq, trees_pb ),
 	function( tree ){
