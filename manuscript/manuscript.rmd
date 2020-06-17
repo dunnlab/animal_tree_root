@@ -101,10 +101,14 @@ bind_rows()
 
 taxon_rectangles$matrix[taxon_rectangles$matrix == "Simion2017_subsampled"] <- "Simion2017"
 taxon_rectangles$matrix[taxon_rectangles$matrix == "Hejnol2009_subsampled"] <- "Hejnol2009"
-clade_colors = c("#e31a1c","#fb9a99","#fb9a99","#1e90ff","#E69F00","#009E73","#1f78b4","#cab2d6","#c71585")
-names( clade_colors ) = clades
+#clade_colors = c("#e31a1c","#fb9a99","#fb9a99","#1e90ff","#E69F00","#009E73","#1f78b4","#cab2d6","#c71585")
+
+clade_colors = c('#e6194b', '#f032e6', '#ffe119', '#4363d8', "#E69F00","#009E73","#82d1f4", '#e6beff', '#911eb4')
+
 
 taxon_rectangles= taxon_rectangles %>% filter(matrix!="Nosenko2013_nonribo_9187") %>% filter(matrix!="Whelan2017_strict") %>% filter(matrix!="Whelan2015_D1") %>% filter(matrix!="Whelan2015_D10") %>% filter(matrix!="Nosenko2013_ribo_11057")%>% filter(matrix!="Borowiec2015_Best108")
+
+x1= factor(taxon_rectangles$matrix, levels=c("Dunn2008", "Hejnol2009", "Philippe2009", "Nosenko2013_ribo_14615", "Ryan2013_est", "Moroz2014_3d", "Whelan2015_D20", "Borowiec2015_Total1080" , "Chang2015", "Whelan2017_full", "Simion2017"))
 
 ggplot(data=taxon_rectangles) +
 	scale_x_continuous(name="Gene sampling") +
@@ -115,7 +119,6 @@ ggplot(data=taxon_rectangles) +
 	#scale_fill_discrete(guide = guide_legend(reverse=TRUE, legend = "bottom right")) +
 	facet_wrap( ~ matrix )
 
-	#matrix = factor(taxon_rectangles$matrix, levels=c("Dunn2008", "Hejnol2009", "Philippe2009", "Nosenko2013_ribo_14615", "Ryan2013_est", "Moroz2014_3d", "Whelan2015_D20", "Borowiec2015_Total1080" , "Chang2015", "Whelan2017_full", "Simion2017"))
 
 ```
 
@@ -133,6 +136,7 @@ Sampling of outgroup taxa (non-animals, in this case) is critical to phylogeneti
 ```{r figure_support_analyses_published}
 analyses_published=read_tsv("../data_processed/tables/previously_published_analyses.tsv")
 analyses_published_filter = dplyr::filter(analyses_published, !grepl('Recoding', model_combined))
+
 x1 = factor(analyses_published_filter$model_combined, levels=c("WAG", "LG", "GTR", "data partitioning", "Recoding + GTR", "Recoding + GTR + CAT", "Poisson + CAT", "GTR + CAT"))
 p1 = analyses_published_filter %>%
 	ggplot( aes(x=x1, y=clade, col=final, shape=inference) ) +
@@ -187,42 +191,42 @@ We next explore how the increase of number of categories may affect the phylogen
 The GTR-CAT model often has a better model-fitting than Poisson-CAT model in previous analyses, and it is also suggested a better performance than Poisson-CAT model. Due to computational efficiency, we only ran GTR-CAT and GTR-nCAT60 models in the representative data matrices with the most closely related choanofalgellates as outgroups. Interestingly, we found both Whelan2017 and Philippe matrices shifted from Porifera-sister with Poisson-CAT model to Ctenophora-sister using GTR-CAT model. Moreover, we also found all results strongly supported the Ctenophora-sister with GTR-nCAT60 models. Thus, these results suggested that the Porifera-sister can only be recovered with several combined factors, including inclusive of a more simplistic evolutionary model, an unrealistic large number of substitution categories, more closely related outgroups and certain gene samplings, whereas Ctenophora-sister is supported in most other conditions.
 
 ``` {r sensitive, fig.width=8, fig.height=8}
-sensitive = read_tsv("../data_processed/tables/sensitive.tsv")
-Philippe2009 = sensitive %>% filter(Matrix == "Philippe2009_only_choanozoa" )
-Philippe2009$Model = factor(Philippe2009$Model, levels=c("Poisson_CAT60" , "Poisson_CAT90","Poisson_CAT120","Poisson_CAT150","Poisson_CAT180"))
-p1<-ggplot(Philippe2009, aes(Model))+
-  geom_line(aes(y = `Ctenophora-sister`, colour = "Ctenophora-sister", group=1), color=("#E69F00")) + geom_point(aes(y = `Ctenophora-sister` ), color=("#E69F00"))+
-  geom_line(aes(y = `Porifera-sister`, colour = "Porifera-sister",group=2), color=("#009E73")) + geom_point(aes(y = `Porifera-sister` ), color=("#009E73"))+
+
+Philippe2009=analyses_sensitive %>% filter(matrix == "Philippe2009_only_choanozoa" )
+Philippe2009$model = factor(Philippe2009$model, levels=c("Poisson+CAT60" , "Poisson+CAT90","Poisson+CAT120","Poisson+CAT150","Poisson+CAT180"))
+p1<-ggplot(Philippe2009, aes(model))+
+  geom_line(aes(y = `support_ctenophora_sister`, colour = "Ctenophora-sister", group=1), color=("#E69F00")) + geom_point(aes(y = `support_ctenophora_sister` ), color=("#E69F00"))+
+  geom_line(aes(y = `support_porifera_sister`, colour = "Porifera-sister",group=2), color=("#009E73")) + geom_point(aes(y = `support_porifera_sister` ), color=("#009E73"))+
   scale_fill_manual(values=c("#E69F00", "#ebd196")) +
   theme_classic() +
   theme(axis.text.x = element_text(angle=45, hjust=1)) +
-  labs(x ="Number of CAT substitutional categories", y = "Support") + ggtitle("Philippe2009_Choanozoa")
+  labs(x ="Number of CAT substitutional categories", y = "Support") + ggtitle("Philippe2009_Choanimalia")
 
-Philippe2009 = sensitive %>% filter(Matrix == "Philippe2009_only_Holozoa")
-Philippe2009$Model = factor(Philippe2009$Model, levels=c("Poisson_CAT360", "Poisson_CAT400","Poisson_CAT440","Poisson_CAT480"))
-p2<-ggplot(Philippe2009, aes(Model))+
-  geom_line(aes(y = `Ctenophora-sister`, colour = "Ctenophora-sister", group=1), color=("#E69F00")) + geom_point(aes(y = `Ctenophora-sister` ), color=("#E69F00"))+
-  geom_line(aes(y = `Porifera-sister`, colour = "Porifera-sister",group=2), color=("#009E73")) + geom_point(aes(y = `Porifera-sister` ), color=("#009E73"))+
+Philippe2009=analyses_sensitive %>% filter(matrix == "Philippe2009_only_Holozoa")
+Philippe2009$model = factor(Philippe2009$model, levels=c("Poisson+CAT270", "Poisson+CAT360", "Poisson+CAT400","Poisson+CAT440","Poisson+CAT480"))
+p2<-ggplot(Philippe2009, aes(model))+
+  geom_line(aes(y = `support_ctenophora_sister`, colour = "Ctenophora-sister", group=1), color=("#E69F00")) + geom_point(aes(y = `support_ctenophora_sister` ), color=("#E69F00"))+
+  geom_line(aes(y = `support_porifera_sister`, colour = "Porifera-sister",group=2), color=("#009E73")) + geom_point(aes(y = `support_porifera_sister` ), color=("#009E73"))+
   scale_fill_manual(values=c("#E69F00", "#ebd196")) +
   theme_classic() +
   theme(axis.text.x = element_text(angle=45, hjust=1)) +
   labs(x ="Number of CAT substitutional categories", y = "Support") + ggtitle("Philippe2009_Holozoa")
 
-Whelan2017_full_only_choanozoa = sensitive %>% filter(Matrix == "Whelan2017_full_only_choanozoa")
-Whelan2017_full_only_choanozoa$Model = factor(Whelan2017_full_only_choanozoa$Model, levels=c("Poisson_CAT60" , "Poisson_CAT340","Poisson_CAT380","Poisson_CAT420","Poisson_CAT460"))
-p3<-ggplot(Whelan2017_full_only_choanozoa, aes(Model))+
-  geom_line(aes(y = `Ctenophora-sister`, colour = "Ctenophora-sister", group=1), color=("#E69F00")) + geom_point(aes(y = `Ctenophora-sister` ), color=("#E69F00"))+
-  geom_line(aes(y = `Porifera-sister`, colour = "Porifera-sister",group=1), color=("#009E73")) + geom_point(aes(y = `Porifera-sister` ), color=("#009E73"))+
+Whelan2017_full_only_choanozoa = analyses_sensitive %>% filter(matrix == "Whelan2017_full_only_choanozoa")
+Whelan2017_full_only_choanozoa$model = factor(Whelan2017_full_only_choanozoa$model, levels=c("Poisson+CAT60" ,"Poisson+CAT340","Poisson+CAT380","Poisson+CAT420","Poisson+CAT460"))
+p3<-ggplot(Whelan2017_full_only_choanozoa, aes(model))+
+  geom_line(aes(y = `support_ctenophora_sister`, colour = "Ctenophora-sister", group=1), color=("#E69F00")) + geom_point(aes(y = `support_ctenophora_sister` ), color=("#E69F00"))+
+  geom_line(aes(y = `support_porifera_sister`, colour = "Porifera-sister",group=1), color=("#009E73")) + geom_point(aes(y = `support_porifera_sister` ), color=("#009E73"))+
   scale_fill_manual(values=c("#E69F00", "#ebd196")) +
   theme_classic() +
   theme(axis.text.x = element_text(angle=45, hjust=1)) +
   labs(x ="Number of CAT substitutional categories", y = "Support") + ggtitle("Whelan2017_full_Choanozoa")
 
-Whelan2017_strict = sensitive %>% filter(Matrix == "Whelan2017_strict" )
-Whelan2017_strict$Model = factor(Whelan2017_strict$Model, levels=c("Poisson_CAT60" , "Poisson_CAT70","Poisson_CAT80","Poisson_CAT90","Poisson_CAT100","Poisson_CAT110", "Poisson_CAT120","Poisson_CAT150","Poisson_CAT180", "Poisson_CAT360"))
-p4<-ggplot(Whelan2017_strict, aes(Model))+
-  geom_line(aes(y = `Ctenophora-sister`, colour = "Ctenophora-sister", group=1), color=("#E69F00")) + geom_point(aes(y = `Ctenophora-sister` ), color=("#E69F00"))+
-  geom_line(aes(y = `Porifera-sister`, colour = "Porifera-sister",group=1), color=("#009E73")) + geom_point(aes(y = `Porifera-sister` ), color=("#009E73"))+
+Whelan2017_strict = analyses_sensitive %>% filter(matrix == "Whelan2017_strict" )
+Whelan2017_strict$model = factor(Whelan2017_strict$model, levels=c("Poisson+CAT60" , "Poisson+CAT70","Poisson+CAT80","Poisson+CAT90","Poisson+CAT100","Poisson+CAT110", "Poisson+CAT120","Poisson+CAT150","Poisson+CAT180", "Poisson+CAT360"))
+p4<-ggplot(Whelan2017_strict, aes(model))+
+  geom_line(aes(y = `support_ctenophora_sister`, colour = "Ctenophora-sister", group=1), color=("#E69F00")) + geom_point(aes(y = `support_ctenophora_sister` ), color=("#E69F00"))+
+  geom_line(aes(y = `support_porifera_sister`, colour = "Porifera-sister",group=1), color=("#009E73")) + geom_point(aes(y = `support_porifera_sister` ), color=("#009E73"))+
   scale_fill_manual(values=c("#E69F00", "#ebd196")) +
   theme_classic() +
   theme(axis.text.x = element_text(angle=45, hjust=1)) +
@@ -337,35 +341,27 @@ analyses_new %>%
 ```
 
 ## Extended Figures
-
 ```{r figure_gene_composition,, fig.height = 6, fig.width = 10}
-matrix_summary = merge(matrix_summary,n_ribo,by="matrix")
 
-p1 = ggplot( matrix_summary ) +
-	geom_point( aes(x=n_partitions, y=n_busco_partitions, col=manuscript) ) +
-	geom_abline(slope=1,intercept=0) +  	theme_classic() + theme(axis.text.x = element_text(angle=45, hjust=1)) + labs(x ="Number of gene partitions", y = "Number of BUSCO genes")
+ribo = read_tsv("../data_processed/tables/ribosomal_gene.tsv")
+busco = read_tsv("../data_processed/tables/busco_gene.tsv")
+
+ribo$matrix = factor( ribo$matrix, levels=c("Dunn2008", "Philippe2009", "Hejnol2009", "Nosenko2013_nonribo_9187","Nosenko2013_ribo_11057","Nosenko2013_ribo_14615","Ryan2013_est", "Moroz2014_3d", "Chang2015", "Borowiec2015_Best108" , "Borowiec2015_Total1080", "Whelan2015_D1", "Whelan2015_D10", "Whelan2015_D20", "Simion2017", "Whelan2017_full", "Whelan2017_strict") )
+
+p1 = ggplot(ribo, aes(x=matrix, y=number_of_genes, fill=gene_category) ) +geom_bar(stat = "identity")  + 	theme_classic() + theme(axis.text.x = element_text(angle=45, hjust=1)) + labs(x ="Matrix", y = "Number of genes")  + scale_fill_manual(values=c("grey", "black"), labels=c("Non-ribosomal genes", "Ribosomal genes"))
 
 
-matrix_summary=matrix_summary %>%
-  mutate(matrix=recode(matrix,`NA`="Simion2017"))
+busco$matrix = factor( busco $matrix, levels=c("Dunn2008", "Philippe2009", "Hejnol2009", "Nosenko2013_nonribo_9187","Nosenko2013_ribo_11057","Nosenko2013_ribo_14615","Ryan2013_est", "Moroz2014_3d", "Chang2015", "Borowiec2015_Best108" , "Borowiec2015_Total1080", "Whelan2015_D1", "Whelan2015_D10", "Whelan2015_D20", "Simion2017", "Whelan2017_full", "Whelan2017_strict") )
+busco$gene_category = factor(busco$gene_category, levels=c("non_busco", "busco"))
+p2 = ggplot(busco, aes(x=matrix, y=number_of_genes, fill=gene_category) ) +geom_bar(stat = "identity")  + 	theme_classic() + theme(axis.text.x = element_text(angle=45, hjust=1)) + labs(x ="Matrix", y = "Number of genes")  + scale_fill_manual(values=c("grey", "black"), labels=c("Non-BUSCO genes", "BUSCO genes"))
 
-matrix_summary$matrix = factor( matrix_summary$matrix, levels=c("Dunn2008", "Philippe2009", "Hejnol2009", "Nosenko2013_nonribo_9187","Nosenko2013_ribo_11057","Nosenko2013_ribo_14615","Ryan2013_est", "Moroz2014_3d", "Chang2015", "Borowiec2015_Best108" , "Borowiec2015_Total1080", "Whelan2015_D1", "Whelan2015_D10", "Whelan2015_D20", "Simion2017", "Whelan2017_full", "Whelan2017_strict") )
 
-p2 = ggplot( matrix_summary, aes(x=matrix, y=n_busco_partitions/n_partitions*100, fill=manuscript) ) +geom_bar(stat = "identity")  + 	theme_classic() + theme(axis.text.x = element_text(angle=45, hjust=1)) + labs(x ="Matrix", y = "Percentage of Busco genes") + ylim(0, 100)
 
-p3 = ggplot( matrix_summary ) +
-	geom_point( aes(x=n_partitions, y=n, col=manuscript) ) +
-	geom_abline(slope=1,intercept=0) + 	theme_classic() + theme(axis.text.x = element_text(angle=45, hjust=1)) + labs(x ="Number of gene partitions", y = "Number of Ribosomal genes")
-	coord_fixed()
-
-p4 = ggplot( matrix_summary, aes(x=matrix, y=n/n_partitions*100, fill=manuscript) ) +geom_bar(stat = "identity")  + 	theme_classic() + theme(axis.text.x = element_text(angle=45, hjust=1)) + labs(x ="Matrix", y = "Percentage of Ribosomal genes")+ ylim(0, 100)
-
- ggarrange(p1, p2,p3, p4,
-                    labels = c("A", "B", "C", "D"),
-                    ncol = 2, nrow = 2,common.legend = TRUE, legend = "right", align = "hv")
+ ggarrange(p1, p2, labels = c("A", "B"))
 
 
 ```
+
 
 **Extended Data Fig. XXfigure_gene_composition.** Annotation and representation of BUSCO and ribosomal genes in each data matrix. (A). The number of partitions with BUSCO annotations in each matrix, relative to the number of partitions. (B). The percentage BUSCO annotations in each matrix. (C). The number of partitions with annotations of ribosomal genes in each matrix, relative to the number of partitions. (D). The percentage ribosomal genes in each matrix.
 
