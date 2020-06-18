@@ -108,7 +108,7 @@ clade_colors = c('#e6194b', '#f032e6', '#ffe119', '#4363d8', "#E69F00","#009E73"
 
 taxon_rectangles= taxon_rectangles %>% filter(matrix!="Nosenko2013_nonribo_9187") %>% filter(matrix!="Whelan2017_strict") %>% filter(matrix!="Whelan2015_D1") %>% filter(matrix!="Whelan2015_D10") %>% filter(matrix!="Nosenko2013_ribo_11057")%>% filter(matrix!="Borowiec2015_Best108")
 
-x1= factor(taxon_rectangles$matrix, levels=c("Dunn2008", "Hejnol2009", "Philippe2009", "Nosenko2013_ribo_14615", "Ryan2013_est", "Moroz2014_3d", "Whelan2015_D20", "Borowiec2015_Total1080" , "Chang2015", "Whelan2017_full", "Simion2017"))
+taxon_rectangles$matrix= factor(taxon_rectangles$matrix, levels=c("Dunn2008", "Hejnol2009", "Philippe2009", "Nosenko2013_ribo_14615", "Ryan2013_est", "Moroz2014_3d", "Whelan2015_D20", "Borowiec2015_Total1080" , "Chang2015", "Whelan2017_full", "Simion2017"))
 
 ggplot(data=taxon_rectangles) +
 	scale_x_continuous(name="Gene sampling") +
@@ -117,7 +117,7 @@ ggplot(data=taxon_rectangles) +
 	#scale_fill_manual(guide = guide_legend(reverse=TRUE))+
  scale_fill_manual(values = clade_colors, guide = guide_legend(reverse=TRUE))+
 	#scale_fill_discrete(guide = guide_legend(reverse=TRUE, legend = "bottom right")) +
-	facet_wrap( ~ matrix )
+	facet_wrap( ~ matrix ) + theme_classic()
 
 
 ```
