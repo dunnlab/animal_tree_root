@@ -75,17 +75,17 @@ To advance this problem it is therefore critical to synthesize published studies
 ![](figures/Figure_overview.png)
 **Fig. 1.** (A) The Ctenophora-sister hypothesis posits that there is a clade (designated by the orange node) that includes all animals except Ctenophora, and that Ctenophora is sister to this clade. (B) The Porifera-sister hypothesis posits that there is a clade (designated by the green node) that includes all animals except Porifera, and that Porifera is sister to this clade. Testing these hypotheses requires evaluating the support for each of these alternative nodes. (C) The animals and their outgroup choice, showing the three progressively more inclusive clades Choanimalia, Holozoa, and Opisthokonta (designated by the blue node). (D) A ctenophore. (E) A sponge.
 
-## Variation in models and sampling across published studies
+## Variation in models and sampling across published analyses
 
 The published analyses considered here differ in a variety of ways, including the model of molecular evolution, gene selection, and ingroup and outgroup species selection.
 
 The models used in the studies considered here differ according to two primary components: the exchangeability matrix $E$ and amino acid equilibrium frequencies $\Pi$. The exchangeability matrix $E$ describes the relative rates at which one amino acid changes to another. The studies considered here use exchangabilities that are the same between all amino acids (Poisson, also referred to as F81), fixed according to standard empically estimated rates (WAG or LG), or all independently estimated from the data (GTR). The analyses considered here have site homogenous exchangeability models, with the same matrix used for all sites in all genes. The equilibrium frequencies describe the expected frequency of each amino acid, which captures the fact that some amino acids are much more common than others. The analyses differ in whether they take a homongenous approach and jointly estimate the same frequency across all sites, or add parameters that allow heterogeneous equilibrium frequencies across sites. Heterogeneous approaches include CAT [@Lartillot:2004dq], which is implemented in the software PhyloBayes and has been widely applied to questions of deep animal phylogeny. The models that are applied in practice are heavily influenced by computational costs, model availability in software, and convention. For example, on the questions considered here, CAT site-heterogeneous models of equilibrium frequency have only been used in combination with Poisson and GTR exchangeability matrices, but not LG and WAG exchangeability matrices. Model effect is further confused by the abbreviations that are used for models. Papers often discuss CAT and WAG models as if they are exclusive, but these particular terms apply to non-exclusive model components-- CAT refers to heterogeneous equilibrium frequencies across sites and WAG to a particular exchangeability matrix. In this literature, CAT is generally shorthand for Poisson+CAT and WAG is shorthand for WAG+homogeneous equilibrium frequency estimation. To avoid confusion on this point, here we always specify the exchangeability matrix first (e.g., GTR), followed by modifiers that describe the accommodation of heterogeneity in equilibrium frequencies (e.g., CAT). If site homogeneous equilibrium frequencies are used, we refer to the exchangeability matrix alone. Gamma-rate heterogeneity, a scalar that acccomodates total rate of change across sites, is used in almost every analysis conducted here and we generally omit its designation.
 
-High-throughput sequencing allows investigators to readilly assemble matrices with hundreds or thousands of protein-coding genes (Extended Data Table 1). Studies of animal phylogeny have used a wide variety of different approaches to identifying and selecting genes for their matrices. These take different approaches to sequence comparison, filtering, and orthology assessment. As a result, the genes selected for analysis varies widely between studies (Fig. 2, Extended Data Fig. 1). To explore this variation in gene sampling, we annotated each gene with against SwissProt [@boeckmann:2003swiss] and Gene Ontology databases (Supplementary Table XX). These annotations show XXX. We identified the number of ribosomal protein genes in each data matrix (Extended Data Fig. 2A). We also identified BUSCO genes [@waterhouse2017busco] in each matrix (Extended Data Fig. 2B). The animal BUSCO dataset contains 978 genes that tend to occur as a single copy used to assess the completeness of genome assemblies [@waterhouse2017busco]. All matrices have than 50% of the BUSCO genes, and several less than 20%. The fact that so many BUSCO genes are not in these matrices reflects that the gene selection criteria include many additional factors, such as high expression (since so many phylogenetomic data are based on transcriptome data) and features of molecular evolution.
+High-throughput sequencing allows investigators to readilly assemble matrices with hundreds or thousands of protein-coding genes (Extended Data Table 1). Studies of animal phylogeny have used a wide variety of different approaches to identifying and selecting genes for their matrices. As a result, the genes selected for analysis vary widely (Fig. 2, Extended Data Fig. 1). To explore this variation in gene sampling, we annotated each gene with against SwissProt [@boeckmann:2003swiss] and Gene Ontology databases (Supplementary Table XX). These annotations show XXX. We identified the ribosomal protein and BUSCO genes [@waterhouse2017busco] in each data matrix (Extended Data Fig. 2). The animal BUSCO dataset contains 978 genes that tend to occur as a single copy used to assess the completeness of genome assemblies [@waterhouse2017busco]. All matrices have than 50% of the BUSCO genes, and several less than 20%. The fact that so many BUSCO genes are not in these matrices reflects that the gene selection criteria include many additional factors, such as high expression (since so many phylogenetomic data are based on transcriptome data) and features of molecular evolution.
 
 
 
-```{r figure_taxon_rectangles, fig.height = 18, fig.width = 20 }
+```{r figure_taxon_rectangles, fig.height = 7.2, fig.width = 7.2 }
 
 no_subsets = unlist(lapply(sequence_matrices, function(x) !grepl("only", x@matrix_name)))
 
@@ -127,39 +127,59 @@ Ingroup taxon sampling across clades varies widely between studies (Fig. 2, Exte
 Sampling of outgroup taxa (non-animals, in this case) is critical to phylogenetic rooting questions, since the node where the outgroup attaches to the ingroup tree is the root of the ingroup. There has therefore been extensive focus on improving outgroup sampling when testing phylogenetic hypotheses about rooting [XX Citation needes]. To explore the issue in the context of rooting animals, several studies have progressively removed more distantly related outgroup taxa to test the effect of outgroup selection to ingroup topology [ @ryan2013genome; @pisani2015genomic]. Three progressively more inclusive clades have often been investigated: Choanomalia (animals plus most closely related Choanoflagellata), Holoza (Choanimalia plus more distantly related holozoans) and Opisthokonta (Holozoa + Fungi). 
 
 
-## Variation in published results
+## Variation in results across published analyses
 
-```{r figure_support_analyses_published}
-analyses_published=read_tsv("../data_processed/tables/previously_published_analyses.tsv")
-analyses_published_filter = dplyr::filter(analyses_published, !grepl('Recoding', model_combined))
+```{r figure_support_analyses, fig.width=7.2, fig.height=3.6}
 
-x1 = factor(analyses_published_filter$model_combined, levels=c("WAG", "LG", "GTR", "data partitioning", "Recoding + GTR", "Recoding + GTR + CAT", "Poisson + CAT", "GTR + CAT"))
-p1 = analyses_published_filter %>%
-	ggplot( aes(x=x1, y=clade, col=final, shape=inference) ) +
-		geom_jitter( width = 0.20, height = 0.20, alpha=0.7, size=2 ) +
-		scale_colour_manual(values = result_colors) +
-		theme_classic() + theme(axis.text.x = element_text(angle=45, hjust=1))+
-   xlab("Model complexity") + ylab("Clade")
+analyses_published_processed = 
+  analyses_published %>%
+  dplyr::filter( !grepl( 'Recoding', model_combined ) ) %>%
+  dplyr::rename( model = model_combined ) %>%
+  select( model, clade, final, inference ) %>%
+  dplyr::rename( result = final ) %>%
+  mutate( status = "published" )
 
-analyses_new=analyses_new %>%
-mutate(model=recode(model,
+analyses_new_processed = 
+  analyses_new %>%
+  mutate(model = factor(model)) %>%
+  select( model, clade, result, inference ) %>%
+  mutate( status = "new" )
+
+analyses_processed = 
+  rbind( analyses_published_processed, analyses_new_processed ) %>%
+  # mutate(software=recode( software, `PhyloBayes MPI`="PhyloBayes") ) %>%
+  mutate(model=recode(model,
                     `GTR20`="GTR",
-                    `CAT+F81`="Poisson+CAT"))
+                    `CAT+F81`="Poisson+CAT",
+                    `Poisson + CAT`="Poisson+CAT",
+                    `GTR + CAT`="GTR+CAT")) %>%
+  mutate( 
+    model = factor( model, 
+      levels=c("WAG", "LG", "GTR", "data partitioning", "Poisson+C60", "WAG+C60", "LG+C60", "Poisson+CAT", "GTR+CAT") )) %>%
+  mutate( status = factor(status, levels = c("published", "new")))
 
-x2 = factor(analyses_new$model, levels=c("WAG", "GTR", "Poisson+C60", "WAG+C60", "LG+C60", "Poisson+CAT", "GTR+CAT"))
-p2 = analyses_new %>%
-	ggplot( aes(x=x2, y=clade, col=result, shape=inference) ) +
+
+p = analyses_processed %>%
+	ggplot( aes(x=model, y=clade, col=result, shape=inference) ) +
+    facet_wrap( ~ status ) +
 		geom_jitter( width = 0.20, height = 0.20, alpha=0.7, size=2 ) +
 		scale_colour_manual(values = result_colors) +
-		theme_classic() + theme(axis.text.x = element_text(angle=45, hjust=1))+
-       xlab("Model complexity") + ylab("Clade")
+		theme_classic() + 
+    theme(axis.text.x = element_text(angle=45, hjust=1))+
+    xlab("Model") + 
+    ylab("Clade")
 
-ggarrange(p1, p2, ncol = 2, labels = c("A", "B"), common.legend = TRUE, legend = "right")
+p
+
 
 ```
-**Fig. 3.**  A summary of phylogenomic results from the previous studies and reanalysis conducted in this study. Each shape represents an phylogenetic analysis that has been analyzed by ML (designated by the circle) or BI inference (designated by the triangle). Analyses with a support of bootstrap values less than 90% or a posterior probability less than 0.95 are considered as unresolved. (A) A total of `r nrow(analyses_published_filter)` analyses were transcribed from the literature (related to Supplementary Table XX). (B) A total of `r nrow(analyses_new)` new phylogenomic analyses were conducted in this study (related to Supplementary Table XX).
 
-Here we summarized all the `r nrow(analyses_published)` previous phylogenetic analyses from `r length(unique(analyses_published$manuscript))` studies (Fig. 3A and Supplementary Table 2). Among these studies, the main conclusions of five studies strongly in favor of Porifera-sister and 10 in support of Ctenophora-sister (Extended Data Table 1). Moreover, three studies are secondary studies without any new data matrices. Interestingly, we found that all analyses strongly support of Ctenophora-sister once site-homogeneous models were used, no matter what outgroup choice, phylogenetic inference and whether data-recoding are used. The support for Porifera-sister increases with the exclusion of more distantly related outgroups and with the use of site-heterogeneious CAT (Poisson+CAT or GTR+CAT) models in several matrices, including Philippe2009, Ryan2013_est and Whelan2015. It should be noted that many BI analyses with CAT model are not well resolved (either not reach convergence or do not provide significant support for the key node of animal evolution) mainly due to computational limits of CAT models employed in PhyloBayes. The strong support of Porifera-sister can only be recovered from analyses using Poisson+CAT and recoding methods with GTR+CAT models in several matrices. Although GTR+CAT model generally has better model adequacy than Poisson+CAT or site-homogeneous models from previous studies[@pisani2015genomic; @feuda2017improved], Porifera-sister is not always supported since several analyses strongly in favor Ctenophora-sister even with only choanofalgellates are used as outgroups (Fig. 3A). Thus, our summary of previous phylogenetic analyses strongly indicated that the trend of the support of Porifera-sister is generally increasing with the use of more complex CAT models and more closely related outgroups in several representative matrices, whereas Ctenophora-sister is supported in most other conditions.
+
+**Fig. 3.**  A summary of phylogenomic results from the previous studies and reanalysis conducted in this study. Each shape represents an phylogenetic analysis that has been analyzed by ML (designated by the circle) or BI inference (designated by the triangle). Analyses with a support of bootstrap values less than 90% or a posterior probability less than 0.95 are considered as unresolved. (A) Analyses transcribed from the literature (related to Supplementary Table XX). (B) New phylogenomic analyses were conducted in this study (related to Supplementary Table XX).
+
+We parsed the `r nrow(analyses_published)` previous phylogenetic analyses from `r length(unique(analyses_published$manuscript))` studies (Fig. 3A and Supplementary Table 2). Among these studies, the main conclusions of five studies strongly favor of Porifera-sister and 10 favor Ctenophora-sister (Extended Data Table 1). Three studies are based entirely on previously published data, and the remainder add data for one or more species. 
+
+All published analyses that use models with site-homogeneous equilibrium frequencies (*i.e.*, models that do not include CAT) strongly support Ctenophora-sister, regardless of other factors such as outgroup choice (Fig. 3A). Some analyses that exclude more distant outgroups and use models with site-heterogeneious CAT equilibrium frequencies support Porifera-sister. Because CAT is so parameter rich, many analyses that use a CAT model do not converge, and some of the unconvered analyses have an unresolved animal root. The strong support of Porifera-sister can only be recovered from analyses analyses of protein sequences using Poisson+CAT. Although GTR+CAT model generally has better model adequacy than Poisson+CAT or site-homogeneous models from previous studies[@pisani2015genomic; @feuda2017improved], Porifera-sister is not always supported since several analyses strongly in favor Ctenophora-sister even with only choanofalgellates are used as outgroups (Fig. 3A). Thus, our summary of previous phylogenetic analyses strongly indicated that the trend of the support of Porifera-sister is generally increasing with the use of more complex CAT models and more closely related outgroups in several representative matrices, whereas Ctenophora-sister is supported in most other conditions.
 
 Inclusion of more distant related (e.g. Fungi) outgroup taxa tend to recover Ctenophora-sister, whereas increasing support of Porifera-sister often recovered when more closely related outgroup taxa were used with site-heterogeneous Poisson-CAT models [@pisani2015genomic].
 
@@ -188,7 +208,7 @@ We next explore how the increase of number of categories may affect the phylogen
 
 The GTR-CAT model often has a better model-fitting than Poisson-CAT model in previous analyses, and it is also suggested a better performance than Poisson-CAT model. Due to computational efficiency, we only ran GTR-CAT and GTR-nCAT60 models in the representative data matrices with the most closely related choanofalgellates as outgroups. Interestingly, we found both Whelan2017 and Philippe matrices shifted from Porifera-sister with Poisson-CAT model to Ctenophora-sister using GTR-CAT model. Moreover, we also found all results strongly supported the Ctenophora-sister with GTR-nCAT60 models. Thus, these results suggested that the Porifera-sister can only be recovered with several combined factors, including inclusive of a more simplistic evolutionary model, an unrealistic large number of substitution categories, more closely related outgroups and certain gene samplings, whereas Ctenophora-sister is supported in most other conditions.
 
-``` {r sensitive, fig.width=8, fig.height=8}
+``` {r sensitive, fig.width=7.2, fig.height=7.2}
 
 Philippe2009=analyses_sensitive %>% filter(matrix == "Philippe2009_only_choanozoa" )
 Philippe2009$model = factor(Philippe2009$model, levels=c("Poisson+CAT60" , "Poisson+CAT90","Poisson+CAT120","Poisson+CAT150","Poisson+CAT180"))
