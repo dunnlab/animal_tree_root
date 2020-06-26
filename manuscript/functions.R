@@ -31,14 +31,24 @@ setClass(
 #' @param partition_map_global A dataframe with columns manuscript, matrix, partition, global_partition_id that maps the locally defined partition to a global partition
 #' @return A PartitionedMultipleAlignment object
 #' @export
-PartitionedMultipleAlignment = function( alignment_file, partition_file=NULL, taxon_map_global=NULL, partition_map_global=NULL, manuscript_name="", matrix_name="", alignment_format="phylip" ) {
-  object = readAAMultipleAlignment( filepath = alignment_file, format=alignment_format )
+PartitionedMultipleAlignment = function( 
+  alignment_file, 
+  partition_file=NULL, 
+  taxon_map_global=NULL, 
+  partition_map_global=NULL, 
+  manuscript_name="", 
+  matrix_name="", 
+  alignment_format="phylip" ) {
+  
+  object = readAAMultipleAlignment( 
+    filepath = alignment_file, 
+    format = alignment_format )
   class(object) = "PartitionedMultipleAlignment"
   
   object@manuscript_name = manuscript_name
   object@matrix_name = matrix_name
   
-  conn = file( partition_file, open="r")
+  conn = file( partition_file, open = "r")
   lines = readLines( conn )
   lines = str_replace( lines, "charset", "CHARSET" )
   lines = lines[ grepl("CHARSET", lines) ]
@@ -50,9 +60,9 @@ PartitionedMultipleAlignment = function( alignment_file, partition_file=NULL, ta
       function( line ){
         fields = str_match(line, "CHARSET (.+?)\\s*=\\s*(\\d+)\\s*-\\s*(\\d+)")
         D = data.frame( 
-          partition=fields[2], 
-          start=as.integer(fields[3]), 
-          stop=as.integer(fields[4]),
+          partition = fields[2], 
+          start = as.integer(fields[3]), 
+          stop = as.integer(fields[4]),
           stringsAsFactors = FALSE
         )
         return( D )
@@ -60,24 +70,34 @@ PartitionedMultipleAlignment = function( alignment_file, partition_file=NULL, ta
     ) %>%
     bind_rows()
   
-  if( ! is.null(partition_map_global) ){
+  if ( ! is.null(partition_map_global) ){
     
     partitions %<>% 
-      left_join( partition_map_global[startsWith(matrix_name, partition_map_global$matrix),] ) %>%
+      left_join( 
+        partition_map_global[ 
+          startsWith(matrix_name, partition_map_global$matrix), ] 
+        ) %>%
       select( -matrix )
     
-    # Add names to the partitions that are not assigned to components. Take these from the original 
-    # partition names, but prepend matrix name to be sure they are unique across matrices
+    # Add names to the partitions that are not assigned to components. Take these 
+    # from the original partition names, but prepend matrix name to be sure they 
+    # are unique across matrices
     
-    partitions$component_number[ is.na(partitions$component_number) ] = paste( matrix_name, partitions$partition[ is.na(partitions$component_number) ], "NA", sep="_")
+    partitions$component_number[ is.na(partitions$component_number) ] = 
+      paste( 
+        matrix_name, 
+        partitions$partition[ is.na(partitions$component_number) ], 
+        "NA", 
+        sep = "_")
     
   }
   
   object@partitions = partitions
   
-  if( ! is.null(taxon_map_global) ){
+  if ( ! is.null(taxon_map_global) ){
     sequence_name = rownames( object )
-    object@taxon_map = taxon_map_global[ match( sequence_name, taxon_map_global[[1]] ), 2 ][[1]]
+    object@taxon_map = 
+      taxon_map_global[ match( sequence_name, taxon_map_global[[1]] ), 2 ][[1]]
   }
   
   object
@@ -104,18 +124,18 @@ clade_rects = function( data ){
   
   
   # Create a dataframe where each row is a clade and the columns describe how to draw the rectangle for the clade
-  D = data.frame( clade=clades )
+  D = data.frame( clade = clades )
   
   D$xmin = rep( 0, length(clades) )
   D$xmax = rep( n_genes, length(clades) )
-  D$ymin = c(0, clade_cumsums[1:length(clade_cumsums)-1])
+  D$ymin = c(0, clade_cumsums[1:length(clade_cumsums) - 1])
   D$ymax = clade_cumsums
   D$manuscript = data@manuscript_name
-  D$year = as.numeric(str_extract(data@manuscript_name, '\\d\\d\\d\\d'))
+  D$year = as.numeric( str_extract(data@manuscript_name, "\\d\\d\\d\\d") )
   D$matrix = data@matrix_name
-  D$manuscript_matrix = paste(D$manuscript, D$matrix, sep="_")
+  D$manuscript_matrix = paste( D$manuscript, D$matrix, sep = "_" )
   
-  D %<>% mutate( manuscript_matrix = as.factor(manuscript_matrix) )
+  D %<>% mutate( manuscript_matrix = as.factor(manuscript_matrix) ) # nolint
   
   D
 }
@@ -172,7 +192,7 @@ overlap_rects = function( msa1, msa2 ){
   # the columns describe how to draw the rectangle for matrix
   
   # First row is msa1 rectangle, second row is msa2 rectangle
-  D = data.frame( MSA=c("Matrix_1", "Matrix_2") )
+  D = data.frame( MSA = c("Matrix_1", "Matrix_2") )
   
   D$xmin = c( 0, overlap$n_partitions_1 - overlap$n_gene_overlap )
   D$xmax = c( overlap$n_partitions_1, overlap$n_partitions_1 + overlap$n_partitions_2 - overlap$n_gene_overlap )
@@ -192,7 +212,7 @@ overlap_rects = function( msa1, msa2 ){
 ## Tree Parsing
 #' Parse iqtree or pb trees and return an overloaded ape::phylo with additional items:
 #'  (additional named items NA if not otherwise defined)
-#' 	
+#' 
 #' matrix: matrix name
 #' model: model name
 #' modelfinder: TRUE if best model found
@@ -209,7 +229,7 @@ overlap_rects = function( msa1, msa2 ){
 #' @return ape::phylo with additional items
 #' @export
 
-parse_tree = 	function( tree_file,  taxonomy_reference ){
+parse_tree = function( tree_file,  taxonomy_reference ){
   
   tree = read.tree( file = tree_file )
   
@@ -223,28 +243,28 @@ parse_tree = 	function( tree_file,  taxonomy_reference ){
   outgroup = NA
   
   sampling = "Metazoa"
-  if( "Choanoflagellida" %in% clades ){
+  if ( "Choanoflagellida" %in% clades ){
     sampling = "Choanimalia"
     outgroup = which( clades == "Choanoflagellida" )
   }
   
-  if( ("Ichthyosporea" %in% clades) | ("Filasterea" %in% clades) ){
+  if ( ("Ichthyosporea" %in% clades) | ("Filasterea" %in% clades) ){
     sampling = "Holozoa"
     outgroup = c( which( clades == "Ichthyosporea" ),  which( clades == "Filasterea" ))
   }
   
-  if( "Fungi" %in% clades ){
+  if ( "Fungi" %in% clades ){
     sampling = "Opisthokonta"
     outgroup = which( clades == "Fungi" )
   }
   
-  if( any( is.na( outgroup ) ) ){
+  if ( any( is.na( outgroup ) ) ){
     stop( "There are no outgroups in the tree, can't test rooting topology" )
   }
   
   # Reroot the tree
   # Use a single taxon from the outgroup since the outgroup is not guaranteed to be monophyletic
-  tree = root( tree, outgroup[1], resolve.root=TRUE )
+  tree = root( tree, outgroup[1], resolve.root = TRUE )
   tree$outgroup = outgroup[1]
   # Get the clades of the tips again, since tip order has changed
   clades = 
@@ -262,16 +282,16 @@ parse_tree = 	function( tree_file,  taxonomy_reference ){
   tree$porifera_sister = NA
   tree$bpdiff = NA
   
-  if( any( is.na( clades ) ) ){
+  if ( any( is.na( clades ) ) ){
     missing_clades = tree$tip.label[ is.na( clades ) ]
-    stop( str_c( c( "Some tips have missing clade names:", missing_clades ), collapse=" " ) )
+    stop( str_c( c( "Some tips have missing clade names:", missing_clades ), collapse = " " ) )
   }
   
-  if( ! any( clades == "Ctenophora" ) ){
+  if ( ! any ( clades == "Ctenophora" ) ){
     stop( "There are no ctenophores in the tree, can't test rooting topology" )
   } 
   
-  if( ! any( clades == "Porifera" ) ){
+  if ( ! any ( clades == "Porifera" ) ){
     stop( "There are no sponges in the tree, can't test rooting topology" )
   } 
   
@@ -286,7 +306,7 @@ parse_tree = 	function( tree_file,  taxonomy_reference ){
 
 read_pb_treelist = function( trees_file, burnin, subsample_every ){
   tree_strings = read_lines( trees_file, skip = burnin)
-  tree_strings = tree_strings[c(TRUE, rep(FALSE,subsample_every-1))]
+  tree_strings = tree_strings[c(TRUE, rep(FALSE, subsample_every - 1))]
   return(tree_strings)
 }
 
@@ -297,20 +317,20 @@ parse_tree_pb = function( tree_file, taxonomy_reference ){
   bpdiff_file_path = sub( tree_ext, ".bpdiff", tree_file_path )
   filename_parts = strsplit( basename( tree_file ), "\\." ) %>% unlist()
   matrix_name = filename_parts[1]
-  if (filename_parts[2] == 'bpcomp') {
+  if (filename_parts[2] == "bpcomp") {
     model_name = "CAT+F81"
     pb_treelist = sprintf(
-      sub( str_c("bpcomp",tree_ext), "phy_Chain%d.treelist", tree_file_path ),
+      sub( str_c("bpcomp", tree_ext), "phy_Chain%d.treelist", tree_file_path ),
       1:2
     )
-  } else if (filename_parts[2] == 'phy') {
+  } else if (filename_parts[2] == "phy") {
     model_name = "CAT+F81"
     pb_treelist = sprintf(
-      sub( str_c("phy",tree_ext), "phy_Chain%d.treelist", tree_file_path ),
+      sub( str_c("phy", tree_ext), "phy_Chain%d.treelist", tree_file_path ),
       1:2
     )
   } else {
-    model_name = sub('_', '+', sub('phy_', '', filename_parts[2]))
+    model_name = sub( "_", "+", sub("phy_", "", filename_parts[2]))
     pb_treelist = sprintf(
       sub( tree_ext, "_Chain%d.treelist", tree_file_path ),
       1:2
@@ -318,7 +338,7 @@ parse_tree_pb = function( tree_file, taxonomy_reference ){
   }
   
   
-  if(!file.exists(bpdiff_file_path)){
+  if (!file.exists(bpdiff_file_path)){
     warning( str_c( "Missing bpdiff file: ", bpdiff_file_path ) )
     return( NA )
   }
@@ -337,7 +357,7 @@ parse_tree_pb = function( tree_file, taxonomy_reference ){
   burnins = as.numeric(burnin_line[2])
   
   keep_every = 100
-  treelist_text = c( unlist( mapply( read_pb_treelist, pb_treelist, burnin=burnins, subsample_every=keep_every ) ) )
+  treelist_text = c( unlist( mapply( read_pb_treelist, pb_treelist, burnin = burnins, subsample_every = keep_every ) ) )
   sample_trees = read.tree( text = treelist_text )
   
   Ctenophora_sister = lapply(
@@ -377,12 +397,12 @@ parse_tree_iqtree = function( tree_file, taxonomy_reference ){
   log_file_path = file.path( tree_wd, str_c( matrix_name, model_name, "log", sep = "." ) )
   bootstrap_file_path = file.path( tree_wd, str_c( matrix_name, model_name, "ufboot", sep = "." ) )
   
-  if(!file.exists(log_file_path)){
+  if (!file.exists(log_file_path)){
     warning( str_c( "Missing log file: ", log_file_path ) )
     return( NA )
   }
   
-  if(!file.exists(bootstrap_file_path)){
+  if (!file.exists(bootstrap_file_path)){
     warning( str_c( "Missing bootstrap file: ", bootstrap_file_path ) )
     return( NA )
   }
@@ -408,7 +428,7 @@ parse_tree_iqtree = function( tree_file, taxonomy_reference ){
     }
   ) %>% 
     unlist() %>%
-    mean()				
+    mean()
   
   # Stuff a few other things into the tree object
   tree$matrix = matrix_name
@@ -422,20 +442,20 @@ parse_tree_iqtree = function( tree_file, taxonomy_reference ){
   
   best_line = log_lines[ grepl("Best-fit model:", log_lines) ]
   
-  if( length(best_line) > 1 ){
+  if ( length(best_line) > 1 ){
     warning("More than one best model found")
   }
   
-  if( length(best_line) > 0 ){
+  if ( length(best_line) > 0 ){
     tree$modelfinder = TRUE
     elements = strsplit( best_line[1], " " ) %>% unlist()
-    tree$model = str_remove(elements[3], '\\+F\\+G')
+    tree$model = str_remove(elements[3], "\\+F\\+G")
   }
   return(tree)
 }
 
 
-parse_phylip =	function( phylip_path ){
+parse_phylip = function( phylip_path ){
   
   partition_path = sub( "phy$", "nex", phylip_path )
   base_name = sub( "\\.phy$", "", basename( phylip_path ) )
@@ -453,17 +473,15 @@ parse_phylip =	function( phylip_path ){
       alignment_path, 
       partition_file, 
       taxon_map_global, 
-      partition_map_global=partition_map_global, 
-      manuscript_name=manuscript_name, 
-      matrix_name=matrix_name
+      partition_map_global = partition_map_global, 
+      manuscript_name = manuscript_name, 
+      matrix_name = matrix_name
     )
   
   return( sequence_matrix )
 }
 
 generate_constraint_trees = function(seq_matrix){
-  
-  clades = unique(seq_matrix@taxon_map)
   
   # Write constraint trees for hypothesis testing
   
@@ -473,7 +491,7 @@ generate_constraint_trees = function(seq_matrix){
   porifera_sister_constraint_tree = generate_constaint_tree( CtPlBiCn, CtPlBiCn_not )
   write.tree( 
     porifera_sister_constraint_tree, 
-    file = paste( constraint_tree_path, seq_matrix@matrix_name, ".porifera_sister_constraint.tree", sep="") 
+    file = paste( constraint_tree_path, seq_matrix@matrix_name, ".porifera_sister_constraint.tree", sep = "") 
   )
   
   # Porifera+Placozoa+Bilateria+Cnidaria, the clade that exists under Ctenophora-sister
@@ -482,8 +500,8 @@ generate_constraint_trees = function(seq_matrix){
   ctenophora_sister_constraint_tree = generate_constaint_tree( PoPlBiCn, PoPlBiCn_not )
   write.tree( 
     ctenophora_sister_constraint_tree, 
-    file = paste( constraint_tree_path, seq_matrix@matrix_name, ".ctenophora_sister_constraint.tree", sep="") 
-  )	
+    file = paste( constraint_tree_path, seq_matrix@matrix_name, ".ctenophora_sister_constraint.tree", sep = "") 
+  )
   
   # Ctenophora+Cnidaria, the clade that exists under Coelenterata
   CtCn = rownames(seq_matrix)[ seq_matrix@taxon_map %in% c("Ctenophora", "Cnidaria") ]
@@ -491,8 +509,8 @@ generate_constraint_trees = function(seq_matrix){
   coelenterata_constraint_tree = generate_constaint_tree( CtCn, CtCn_not )
   write.tree( 
     coelenterata_constraint_tree, 
-    file = paste( constraint_tree_path, seq_matrix@matrix_name, ".coelenterata_constraint.tree", sep="") 
-  )		
+    file = paste( constraint_tree_path, seq_matrix@matrix_name, ".coelenterata_constraint.tree", sep = "") 
+  )
   
   
 }
@@ -508,14 +526,14 @@ get_matrix_occupancy = function( seq_matrix ){
   
   seq_matrix_raw = as.matrix(seq_matrix)
   
-  occupancy_aa = matrix( NA, nrow=n_species, ncol=n_partitions )
-  for( i in 1:n_partitions){
+  occupancy_aa = matrix( NA, nrow = n_species, ncol = n_partitions )
+  for ( i in 1:n_partitions){
     start = seq_matrix@partitions$start[i]
     stop  = seq_matrix@partitions$stop[i]
     sub_seq_matrix = seq_matrix_raw[1:n_species, start:stop]
     not_gap_matrix = sub_seq_matrix != "-"
     occupied = rowSums( not_gap_matrix )
-    occupancy_aa[,i] = occupied
+    occupancy_aa[, i] = occupied
   }
   
   colnames( occupancy_aa ) = seq_matrix@partitions$partition
@@ -532,23 +550,33 @@ get_matrix_occupancy = function( seq_matrix ){
 #' @export
 parse_au_gene_tests = function(path="../trees_new/AU_test/genewise"){
   files_list = list.files(path, pattern = "genewise", full.names = TRUE) 
-  filename_parts_list = str_split(gsub('_genewise_lnL.txt', '', basename( files_list )), '_')
+  filename_parts_list = str_split(gsub("_genewise_lnL.txt", "", basename( files_list )), "_") # nolint
   likelihood_cutoff = 2
   au_tibble = 
     files_list %>%
     map(read.delim) %>%
     imap(~ transform(.x, manuscript = filename_parts_list[[.y]][[1]])) %>%
-    imap(~ transform(.x, matrix = ifelse( length(filename_parts_list[[.y]])>2,
-                                          str_c(filename_parts_list[[.y]][2:(length(filename_parts_list[[.y]])-1)], collapse="_"),
-                                          ""))) %>%
+    imap(~ transform(.x, matrix = ifelse( length(filename_parts_list[[.y]]) > 2,
+      str_c(filename_parts_list[[.y]][2:(length(filename_parts_list[[.y]]) - 1)], collapse = "_"),
+      ""))) %>%
     imap(~ transform(.x, model = filename_parts_list[[.y]][[length(filename_parts_list[[.y]])]])) %>%
     bind_rows()
   
   au_tibble$ABS <- abs(au_tibble$tr1_log.likelihood - au_tibble$tr2_log.likelihood)
-  au_tibble$result[ (au_tibble$tree_supported == "tr1" ) & (au_tibble$ABS >= likelihood_cutoff) ] = "Ctenophore-sister-strong-signal"
-  au_tibble$result[ (au_tibble$tree_supported == "tr1" ) & (au_tibble$ABS < likelihood_cutoff) ] = "Ctenophore-sister-weak-signal"
-  au_tibble$result[ (au_tibble$tree_supported == "tr2" ) & (au_tibble$ABS >= likelihood_cutoff) ] = "Porifera-sister-strong-signal"
-  au_tibble$result[ (au_tibble$tree_supported == "tr2" ) & (au_tibble$ABS < likelihood_cutoff) ] = "Porifera-sister-weak-signal"
-  au_tibble$result <- factor(au_tibble$result, levels = c("Ctenophore-sister-strong-signal", "Ctenophore-sister-weak-signal", "Porifera-sister-weak-signal", "Porifera-sister-strong-signal"))
+  au_tibble$result[ (au_tibble$tree_supported == "tr1" ) & (au_tibble$ABS >= likelihood_cutoff) ] = 
+    "Ctenophore-sister-strong-signal"
+  au_tibble$result[ (au_tibble$tree_supported == "tr1" ) & (au_tibble$ABS < likelihood_cutoff) ] = 
+    "Ctenophore-sister-weak-signal"
+  au_tibble$result[ (au_tibble$tree_supported == "tr2" ) & (au_tibble$ABS >= likelihood_cutoff) ] = 
+    "Porifera-sister-strong-signal"
+  au_tibble$result[ (au_tibble$tree_supported == "tr2" ) & (au_tibble$ABS < likelihood_cutoff) ] = 
+    "Porifera-sister-weak-signal"
+  au_tibble$result <- factor( 
+    au_tibble$result, 
+    levels = c( 
+      "Ctenophore-sister-strong-signal", 
+      "Ctenophore-sister-weak-signal", 
+      "Porifera-sister-weak-signal", 
+      "Porifera-sister-strong-signal"))
   return(au_tibble)
 }
