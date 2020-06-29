@@ -247,7 +247,7 @@ Interestingly, we found strong supports for both hypotheses when using Poisson-C
 
 The distribution of phylogenetic signal has never been quantified in site-heterogeneous models and compared with site-homogeneous models. To further explore the effect of model selection and outgroup choices in animal origin, we next quantify the support of phylogenetic signal over two alternative hypotheses (T1: Ctenophora-sister (Fig. 1A); T2: Porifera-sister (Fig. 1B)) to three representative data matrices with different outgroup choice and models in both ML and BI framework (Extended Data Fig. 3). By calculating gene-wise log-likelihood scores between T1 and T2 for every gene ($\Delta$GLS) in each matrix, we found that Ctenophora-sister had the higher proportions of supporting genes in every analysis when using site-homogeneous models (LG or WAG in both IQ-TREE or PhyloBayes). Moreover, the outgroup choice has little impact on the distribution of the support of phylogenetic signal in sifte-homogeneous models. This finding is largely consistent with the results from past study that majority of phylogenetic signal is strongly favored in Ctenophora-sister hypothesis with site-homogeneous models in other data matrices [@shen2017contentious].  
 
-In contrast, the phylogenetic signal of site-heterogenous models changed dramatically compared to the site-homogenous models. Although Ctenophora-sister also had the higher proportions of supporting genes with C60 models, we found that the phylogenetic signal decreases in many genes using C60 models compared to site-homogeneous models, especially in matrices from Ryan2013_est that nearly 30% of genes changed from strong to week signal ($\Delta$lnL<2) (Extended Data Fig. 3; Supplementary Table 4). In contrast to the C60 models, the phylogenetic signal largely increased in Poisson-CAT models and more importantly, the outgroup choice has a major effect of the distribution of phylogenetic signal (Extended Data Fig. 3). We found that support for Ctenophora-sister largely decreases and Porifera-sister increases (~ 20% of sampled gene partitions) when exclusive of more distantly related outgroups with the Poisson-CAT models (Supplementary Table 4). The results here are further corroborated by our phylogenomic analyses in BI, which the support of Porifera-sister generally increases in Holozoa and Choanimalia matrices.
+In contrast, the phylogenetic signal of site-heterogenous models changed dramatically compared to the site-homogenous models. Although Ctenophora-sister also had the higher proportions of supporting genes with C60 models, we found that the phylogenetic signal decreases in many genes using C60 models compared to site-homogeneous models, especially in matrices from Ryan2013_est that nearly 30% of genes changed from strong to week signal ($\Delta$|lnL|<2) (Extended Data Fig. 3; Supplementary Table 4). In contrast to the C60 models, the phylogenetic signal largely increased in Poisson-CAT models and more importantly, the outgroup choice has a major effect of the distribution of phylogenetic signal (Extended Data Fig. 3). We found that support for Ctenophora-sister largely decreases and Porifera-sister increases (~ 20% of sampled gene partitions) when exclusive of more distantly related outgroups with the Poisson-CAT models (Supplementary Table 4). These results here are further corroborated by our phylogenomic analyses in BI, which the support of Porifera-sister generally increases in Holozoa and Choanimalia matrices.
 
 
 ### Increase CAT categories lead to different topologies
@@ -479,7 +479,7 @@ matrix_overlap_rectangles %>%
 
 **Extended Data Fig. 1.** Pairwise overlap between each of the primary matrices considered here. Horizontal size is proportional to the number of genes sampled, vertical size to the number of taxa sampled. The horizontal intersection shows the proportions of shared genes, the vertical intersection shows the proportions of shared taxa.
 
-```{r figure_gene_composition,, fig.height = 6, fig.width = 10}
+```{r figure_gene_composition,, fig.height = 4, fig.width = 10}
 
 ribo = read_tsv("../data_processed/tables/ribosomal_gene.tsv")
 busco = read_tsv("../data_processed/tables/busco_gene.tsv")
@@ -528,21 +528,24 @@ p2 = busco %>%
 
 
 
-```{r figure_phylogenetic_signal, fig.width=6, fig.height=12}
+###```{r figure_phylogenetic_signal, fig.width=6, fig.height=12}
 
-au_tests %>%
-  unite(Matrix, c(manuscript, matrix, model)) %>%
-  group_by(Matrix, result) %>%
-  count() %>%
-  group_by(Matrix) %>%
-  mutate(percent = prop.table(n)) %>%
-  ggplot(aes(x = Matrix, y = percent, fill = result)) +
-    geom_bar(stat = "identity") +
-    scale_fill_manual(values = c("#E69F00", "#ebd196", "#a2e8d5", "#009E73")) +
-    coord_flip() +
-    theme(axis.text.y = element_blank(), axis.title.y = element_blank())
+#au_tests %>%
+#  unite(Matrix, c(manuscript, matrix, model)) %>%
+#  group_by(Matrix, result) %>%
+#  count() %>%
+#  group_by(Matrix) %>%
+#  mutate(percent = prop.table(n)) %>%
+#  ggplot(aes(x = Matrix, y = percent, fill = result)) +
+#    geom_bar(stat = "identity") +
+#    scale_fill_manual(values = c("#E69F00", "#ebd196", "#a2e8d5", "#009E73")) +
+#    coord_flip() +
+#    theme(axis.text.y = element_blank(), axis.title.y = element_blank())
 
-```
+#```
+
+![](figures/Figure_phylogenetic_signal.png)
+
 **Extended Data Fig. 3** The distribution of phylogenetic signal for two alternative topological hypotheses on the earliest-branching animal lineage with different models and outgroup choice in Philippe2009, Ryan2013 and Whelan2017_full matrices (with two outgroup sampling: Choanimalia and full matrices). The two alternative topological hypotheses are: Ctenophora-sister; T1 (Orange);Porifera-sister T2 (Green). Proportions of genes supporting each of two alternative hypotheses in the Philippe2009, Ryan2013_est and Whelan2017_full data matrices with differnet outgroups sampling and substitutional models. The GLS values for each gene in each data matrix are provided in Table S5. We considered a gene with an absolute value of log-likelihood difference of two as a gene with strong (|ΔlnL| > 2) or weak (|ΔlnL| < 2) phylogenetic signal.
 
 ![](figures/Figure_random_rocoding.png)
