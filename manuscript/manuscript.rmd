@@ -69,7 +69,7 @@ There has been considerable recent debate about the placement of the root in the
 
 ## Main
 
-Historically, there was little debate about the root of the animal tree of life. Porifera-sister (Fig. 1) was widely accepted though rarely tested. By contrast, there has long been uncertainty about the relationship of Ctenophora to other animals [@Wallberg:2004ws]. The first phylogenomic study to include ctenophores [@Dunn:2008ky] suggested a new hypothesis, now referred to as Ctenophora-sister, that ctenophores rather than sponges are our most distant living animal relative. Since then many more relevant phylogenomic studies have been published, with some analyses that find support for Ctenophora-sister, some for Porifera-sister, and some neither (Extended Data Table 1). These studies have taken a wide variety of approaches and results have varied across these different analyses. The extensive technical variation across these studies has been important to advancing the understanding of the sensitivity of these analyses, revealing for example that outgroup and model selection can have a large impact on result. But the larger technical variation has also made it difficult to synthesize these results to understand the details of this sensitivity because so many factors, such as which software tools are used, vary so widely across analyses. This mthodological variance is often confounded, for example when a particular model is only available in one software package.  
+Historically, there was little debate about the root of the animal tree of life. Porifera-sister (Fig. 1) was widely accepted though rarely tested. By contrast, there has long been uncertainty about the relationship of Ctenophora to other animals [@Wallberg:2004ws]. The first phylogenomic study to include ctenophores [@Dunn:2008ky] suggested a new hypothesis, now referred to as Ctenophora-sister, that ctenophores rather than sponges are our most distant living animal relative. Since then many more relevant phylogenomic studies have been published, with some analyses that find support for Ctenophora-sister, some for Porifera-sister, and some neither (Extended Data Table 1). These studies have taken a wide variety of approaches and results have varied across these different analyses. The extensive technical variation across these studies has been important to advancing the understanding of the sensitivity of these analyses, revealing for example that outgroup and model selection can have a large impact on result. But the larger technical variation has also made it difficult to synthesize these results to understand the details of this sensitivity because so many factors, such as which software tools are used, vary so widely across analyses. This methodological variance is often confounded, for example when a particular model is only available in one software package.  
 
 To advance this problem it is therefore critical to synthesize published studies and explore variation in methods and results in a standardized and systematic framework. Here, we synthesize data and results from previous phylogenomic analyses that tested Ctenophora-sister and Porifera-sister from 13 studies (Extended Data Table 1). These matrices include all relevant studies published before 2020 for which we could obtain data matrices with gene partition annotations.
 
@@ -104,20 +104,20 @@ taxon_rectangles$matrix[taxon_rectangles$matrix == "Hejnol2009_subsampled"] = "H
 clade_colors = c("#e6194b", "#f032e6", "#ffe119", "#4363d8", "#E69F00", "#009E73", "#82d1f4", "#e6beff", "#911eb4")
 
 
-taxon_rectangles = 
-  taxon_rectangles %>% 
-  filter(matrix != "Nosenko2013_nonribo_9187") %>% 
-  filter(matrix != "Whelan2017_strict") %>% 
-  filter(matrix != "Whelan2015_D1") %>% 
-  filter(matrix != "Whelan2015_D10") %>% 
-  filter(matrix != "Nosenko2013_ribo_11057") %>% 
+taxon_rectangles =
+  taxon_rectangles %>%
+  filter(matrix != "Nosenko2013_nonribo_9187") %>%
+  filter(matrix != "Whelan2017_strict") %>%
+  filter(matrix != "Whelan2015_D1") %>%
+  filter(matrix != "Whelan2015_D10") %>%
+  filter(matrix != "Nosenko2013_ribo_11057") %>%
   filter(matrix != "Borowiec2015_Best108")
 
-taxon_rectangles$matrix = 
-  factor( 
-    taxon_rectangles$matrix, 
-    levels = c("Dunn2008", "Hejnol2009", "Philippe2009", "Nosenko2013_ribo_14615", "Ryan2013_est", 
-             "Moroz2014_3d", "Whelan2015_D20", "Borowiec2015_Total1080", "Chang2015", 
+taxon_rectangles$matrix =
+  factor(
+    taxon_rectangles$matrix,
+    levels = c("Dunn2008", "Hejnol2009", "Philippe2009", "Nosenko2013_ribo_14615", "Ryan2013_est",
+             "Moroz2014_3d", "Whelan2015_D20", "Borowiec2015_Total1080", "Chang2015",
              "Whelan2017_full", "Simion2017"))
 
 taxon_rectangles %>%
@@ -135,14 +135,14 @@ taxon_rectangles %>%
 
 Ingroup taxon sampling across clades varies widely between studies (Fig. 2, Extended Data Fig. 1). Sampling of ingroup taxa (animals) was initially biased toward Bilateria. Sampling of non-bilaterian animals, including sponges and ctenophores, has improved over time as studies add additional taxa from these poorly studied groups. Importantly, several earlier studies before 2015 only include less than five ctenophore species (Extended Data Fig. 1). Within each clade, there is often considerable variation in taxon sampling and therefore little species overlap across studies (Extended Data Fig. 1).
 
-Sampling of outgroup taxa (non-animals, in this case) is critical to phylogenetic rooting questions, since the node where the outgroup attaches to the ingroup tree is the root of the ingroup. There has therefore been extensive focus on improving outgroup sampling when testing phylogenetic hypotheses about rooting [XX Citation needes]. To explore the issue in the context of rooting animals, several studies have progressively removed more distantly related outgroup taxa to test the effect of outgroup selection to ingroup topology [ @ryan2013genome; @pisani2015genomic]. Three progressively more inclusive clades have often been investigated: Choanomalia (animals plus most closely related Choanoflagellata), Holoza (Choanimalia plus more distantly related holozoans) and Opisthokonta (Holozoa + Fungi). 
+Sampling of outgroup taxa (non-animals, in this case) is critical to phylogenetic rooting questions, since the node where the outgroup attaches to the ingroup tree is the root of the ingroup. There has therefore been extensive focus on improving outgroup sampling when testing phylogenetic hypotheses about rooting [XX Citation needes]. To explore the issue in the context of rooting animals, several studies have progressively removed more distantly related outgroup taxa to test the effect of outgroup selection to ingroup topology [ @ryan2013genome; @pisani2015genomic]. Three progressively more inclusive clades have often been investigated: Choanomalia (animals plus most closely related Choanoflagellata), Holoza (Choanimalia plus more distantly related holozoans) and Opisthokonta (Holozoa + Fungi).
 
 
 ## Variation in results across published analyses
 
 ```{r figure_support_analyses, fig.width=7.2, fig.height=3.6}
 
-analyses_published_processed = 
+analyses_published_processed =
   analyses_published %>%
   dplyr::filter( !grepl( "Recoding", model_combined ) ) %>%
   dplyr::rename( model = model_combined ) %>%
@@ -150,14 +150,14 @@ analyses_published_processed =
   dplyr::rename( result = final ) %>%
   mutate( status = "published" )
 
-analyses_new_processed = 
+analyses_new_processed =
   analyses_new %>%
   mutate(model = factor(model)) %>%
   select( model, clade, result, inference, matrix ) %>%
   mutate( manuscript = NA ) %>%
   mutate( status = "new" )
 
-analyses_processed = 
+analyses_processed =
   rbind( analyses_published_processed, analyses_new_processed ) %>%
   # mutate(software=recode( software, `PhyloBayes MPI`="PhyloBayes") ) %>%
   mutate(model = recode(model,
@@ -165,9 +165,9 @@ analyses_processed =
                     `CAT+F81` = "Poisson+CAT",
                     `Poisson + CAT` = "Poisson+CAT",
                     `GTR + CAT` = "GTR+CAT")) %>%
-  mutate( 
-    model = factor( model, 
-      levels = c("WAG", "LG", "GTR", "data partitioning", 
+  mutate(
+    model = factor( model,
+      levels = c("WAG", "LG", "GTR", "data partitioning",
                  "Poisson+C60", "WAG+C60", "LG+C60", "Poisson+CAT", "GTR+CAT") )) %>%
   mutate( status = factor(status, levels = c("published", "new")))
 
@@ -177,9 +177,9 @@ p = analyses_processed %>%
     facet_wrap( ~ status ) +
     geom_jitter( width = 0.20, height = 0.20, alpha = 0.7, size = 2 ) +
     scale_colour_manual(values = result_colors) +
-    theme_classic() + 
+    theme_classic() +
     theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-    xlab("Model") + 
+    xlab("Model") +
     ylab("Clade")
 
 p
@@ -189,28 +189,28 @@ p
 
 **Fig. 3.**  A summary of phylogenomic results from the previous studies and reanalysis conducted in this study. Each point represents a phylogenetic Analyses with a support of bootstrap values less than `r bootstrap_threshold`% or a posterior probability less than `r posterior_prob_threshold`% are considered as unresolved. The clades are orgainized with increased outgroup sampling higher on the vertical axis, and the models are organized in general by increasing complexity to the right on the horizontal axis. (A) Analyses transcribed from the literature (related to Supplementary Table XX). (B) New phylogenomic analyses conducted in this study (related to Supplementary Table XX).
 
-We parsed `r analyses_processed %>% filter(status=="published") %>% nrow()` previous phylogenetic analyses from `r analyses_processed %>% filter(status=="published") %>% pull (manuscript) %>% unique() %>% length()` studies (Fig. 3A and Supplementary Table 2). The conclusions of five studies strongly favor of Porifera-sister and 10 favor Ctenophora-sister (Extended Data Table 1). Three studies are based entirely on previously published data, and the remainder add data for one or more species. 
+We parsed `r analyses_processed %>% filter(status=="published") %>% nrow()` previous phylogenetic analyses from `r analyses_processed %>% filter(status=="published") %>% pull (manuscript) %>% unique() %>% length()` studies (Fig. 3A and Supplementary Table 2). The conclusions of five studies strongly favor of Porifera-sister and 10 favor Ctenophora-sister (Extended Data Table 1). Three studies are based entirely on previously published data, and the remainder add data for one or more species.
 
 ```{r eval=FALSE}
 
 # Code to double check and explore some of the assertions in the text
 
 # Simion2017 is the only Holozoa analysis to support Porifera-sister
-analyses_processed %>% 
-  filter(status == "published") %>% 
-  filter(clade == "Holozoa") %>% 
+analyses_processed %>%
+  filter(status == "published") %>%
+  filter(clade == "Holozoa") %>%
   filter(result == "Porifera-sister")
 
 # Check out the CAT analyses that supported Ctenophora sister
-analyses_processed %>% 
-  filter(status == "published") %>% 
-  filter(result == "Ctenophora-sister") %>% 
+analyses_processed %>%
+  filter(status == "published") %>%
+  filter(result == "Ctenophora-sister") %>%
   filter( grepl("CAT", model))
 
-analyses_processed %>% 
-  filter(status == "published") %>% 
-  filter(result == "Ctenophora-sister") %>% 
-  filter( grepl("CAT", model)) %>% 
+analyses_processed %>%
+  filter(status == "published") %>%
+  filter(result == "Ctenophora-sister") %>%
+  filter( grepl("CAT", model)) %>%
   filter( clade != "Opisthokonta")
 
 ```
@@ -226,14 +226,14 @@ One of the challenges of interpreting support for the placement of the animal ro
 # Code to double check some of the assertions in the text
 
 # See results (and other fields) for new Cxx analyses, all are Ctenophora-sister with exception of Moroz2014_3d and Nosenko matrices
-analyses_processed %>% 
-  filter(status == "new") %>% 
-  filter( grepl("C\\d\\d", model) ) %>% 
+analyses_processed %>%
+  filter(status == "new") %>%
+  filter( grepl("C\\d\\d", model) ) %>%
   print(n = 40)
 
 ```
 
-For each of the published studies, we selected the matrix that was the primary focus of the manuscript for further analysis. For each of these matrices, we progressively trimmed taxon sampling of to create Opisthokonta, Holozoa, and Choanimalia versions, where permitted by original outgroup sampling. This produced `r analyses_processed %>% filter(status=="new") %>% nrow()` matrices. Each of these was then analyzed using several models. We used modelfinder to identify the 
+For each of the published studies, we selected the matrix that was the primary focus of the manuscript for further analysis. For each of these matrices, we progressively trimmed taxon sampling of to create Opisthokonta, Holozoa, and Choanimalia versions, where permitted by original outgroup sampling. This produced `r analyses_processed %>% filter(status=="new") %>% nrow()` matrices. Each of these was then analyzed using several models. We used modelfinder to identify the
 
 
 We tested a variety of models for each matrix and compared the relative fit of site-homogeneous and site-heterogeneous C60 models using ModelFinder [@kalyaanamoorthy2017modelfinder] in IQ-TREE (except only LG+C60 models are used in 3 large matrices). We found in all cases, WAG/LG+C60 models fit these matrices better than the site-homogeneous models under BIC criteria and we then inferred support under the best-fit model from IQ-TREE (Extended Data Table 1). We then analyzed every matrix under a panel of standard site-heterogeneous and site-homogeneous models, including WAG, GTR and Poisson+C60. Moreover, we also used the best-fit model identified for Choanoflagellata taxon sampling. Interestingly, with the exception of Moroz2014_3d and all Nosenko2013 matrices that supports neither Porifera-sister or Ctenophora-sister, all analysis conducted herein in IQ-TREE strongly supported the ctenophore-sister hypothesis, even with CAT-like, site-heterogeneous C60 models (Poisson+C60 and WAG/LG+C60) with the most closely related outgroups (Fig. 3B; Supplementary Table 3).
@@ -259,89 +259,89 @@ The GTR-CAT model often has a better model-fitting than Poisson-CAT model in pre
 
 ``` {r sensitive, fig.width=7.2, fig.height=7.2}
 
-Philippe2009 = 
-  analyses_sensitive %>% 
+Philippe2009 =
+  analyses_sensitive %>%
   filter(matrix == "Philippe2009_only_choanozoa" )
 
-Philippe2009$model = 
+Philippe2009$model =
   factor(
-    Philippe2009$model, 
+    Philippe2009$model,
     levels = c("Poisson+CAT60", "Poisson+CAT90", "Poisson+CAT120", "Poisson+CAT150", "Poisson+CAT180"))
 
-p1 = Philippe2009 %>% 
+p1 = Philippe2009 %>%
   ggplot( aes(model) ) +
-  geom_line( aes(y = `support_ctenophora_sister`, colour = "Ctenophora-sister", group = 1 ), color = ("#E69F00")) + 
-  geom_point( aes(y = `support_ctenophora_sister` ), color = ("#E69F00")) + 
-  geom_line( aes(y = `support_porifera_sister`, colour = "Porifera-sister", group = 2), color = ("#009E73")) + 
+  geom_line( aes(y = `support_ctenophora_sister`, colour = "Ctenophora-sister", group = 1 ), color = ("#E69F00")) +
+  geom_point( aes(y = `support_ctenophora_sister` ), color = ("#E69F00")) +
+  geom_line( aes(y = `support_porifera_sister`, colour = "Porifera-sister", group = 2), color = ("#009E73")) +
   geom_point( aes(y = `support_porifera_sister` ), color = ("#009E73")) +
-  scale_fill_manual(values = c("#E69F00", "#ebd196")) + 
-  theme_classic() + 
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
-  labs(x = "Number of CAT substitutional categories", y = "Support") + 
+  scale_fill_manual(values = c("#E69F00", "#ebd196")) +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  labs(x = "Number of CAT substitutional categories", y = "Support") +
   ggtitle("Philippe2009_Choanimalia")
 
-Philippe2009 = 
-  analyses_sensitive %>% 
+Philippe2009 =
+  analyses_sensitive %>%
   filter(matrix == "Philippe2009_only_Holozoa")
 
-Philippe2009$model = 
+Philippe2009$model =
   factor(
-    Philippe2009$model, 
+    Philippe2009$model,
     levels = c("Poisson+CAT270", "Poisson+CAT360", "Poisson+CAT400", "Poisson+CAT440", "Poisson+CAT480"))
 
-p2 = Philippe2009 %>% 
+p2 = Philippe2009 %>%
   ggplot( aes(model)) +
-  geom_line(aes(y = `support_ctenophora_sister`, colour = "Ctenophora-sister", group = 1), color = ("#E69F00")) + 
+  geom_line(aes(y = `support_ctenophora_sister`, colour = "Ctenophora-sister", group = 1), color = ("#E69F00")) +
   geom_point(aes(y = `support_ctenophora_sister` ), color = ("#E69F00")) +
-  geom_line(aes(y = `support_porifera_sister`, colour = "Porifera-sister", group = 2), color = ("#009E73")) + 
+  geom_line(aes(y = `support_porifera_sister`, colour = "Porifera-sister", group = 2), color = ("#009E73")) +
   geom_point(aes(y = `support_porifera_sister` ), color = ("#009E73")) +
   scale_fill_manual(values = c("#E69F00", "#ebd196")) +
   theme_classic() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-  labs(x = "Number of CAT substitutional categories", y = "Support") + 
+  labs(x = "Number of CAT substitutional categories", y = "Support") +
   ggtitle("Philippe2009_Holozoa")
 
-Whelan2017_full_only_choanozoa = 
-  analyses_sensitive %>% 
+Whelan2017_full_only_choanozoa =
+  analyses_sensitive %>%
   filter(matrix == "Whelan2017_full_only_choanozoa")
 
-Whelan2017_full_only_choanozoa$model = 
-  factor( 
-    Whelan2017_full_only_choanozoa$model, 
+Whelan2017_full_only_choanozoa$model =
+  factor(
+    Whelan2017_full_only_choanozoa$model,
     levels = c("Poisson+CAT60", "Poisson+CAT340", "Poisson+CAT380", "Poisson+CAT420", "Poisson+CAT460"))
 
-p3 = Whelan2017_full_only_choanozoa %>% 
+p3 = Whelan2017_full_only_choanozoa %>%
   ggplot( aes(model)) +
-  geom_line(aes(y = `support_ctenophora_sister`, colour = "Ctenophora-sister", group = 1), color = ("#E69F00")) + 
+  geom_line(aes(y = `support_ctenophora_sister`, colour = "Ctenophora-sister", group = 1), color = ("#E69F00")) +
   geom_point(aes(y = `support_ctenophora_sister` ), color = ("#E69F00")) +
-  geom_line(aes(y = `support_porifera_sister`, colour = "Porifera-sister", group = 1), color = ("#009E73")) + 
+  geom_line(aes(y = `support_porifera_sister`, colour = "Porifera-sister", group = 1), color = ("#009E73")) +
   geom_point(aes(y = `support_porifera_sister` ), color = ("#009E73")) +
   scale_fill_manual(values = c("#E69F00", "#ebd196")) +
   theme_classic() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-  labs(x = "Number of CAT substitutional categories", y = "Support") + 
+  labs(x = "Number of CAT substitutional categories", y = "Support") +
   ggtitle("Whelan2017_full_Choanozoa")
 
-Whelan2017_strict = 
-  analyses_sensitive %>% 
+Whelan2017_strict =
+  analyses_sensitive %>%
   filter(matrix == "Whelan2017_strict" )
 
-Whelan2017_strict$model = 
-  factor( 
-    Whelan2017_strict$model, 
+Whelan2017_strict$model =
+  factor(
+    Whelan2017_strict$model,
     levels = c("Poisson+CAT60", "Poisson+CAT70", "Poisson+CAT80", "Poisson+CAT90", "Poisson+CAT100",
              "Poisson+CAT110", "Poisson+CAT120", "Poisson+CAT150", "Poisson+CAT180", "Poisson+CAT360"))
 
-p4 = Whelan2017_strict %>% 
+p4 = Whelan2017_strict %>%
   ggplot( aes(model)) +
-  geom_line(aes(y = `support_ctenophora_sister`, colour = "Ctenophora-sister", group = 1), color = ("#E69F00")) + 
+  geom_line(aes(y = `support_ctenophora_sister`, colour = "Ctenophora-sister", group = 1), color = ("#E69F00")) +
   geom_point(aes(y = `support_ctenophora_sister` ), color = ("#E69F00")) +
-  geom_line(aes(y = `support_porifera_sister`, colour = "Porifera-sister", group = 1), color = ("#009E73")) + 
+  geom_line(aes(y = `support_porifera_sister`, colour = "Porifera-sister", group = 1), color = ("#009E73")) +
   geom_point(aes(y = `support_porifera_sister` ), color = ("#009E73")) +
   scale_fill_manual(values = c("#E69F00", "#ebd196")) +
   theme_classic() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-  labs(x = "Number of CAT substitutional categories", y = "Support") + 
+  labs(x = "Number of CAT substitutional categories", y = "Support") +
   ggtitle("Whelan2017_strict")
 
 ggarrange(ggarrange(p1, p2, ncol = 2, labels = c("A", "B")), nrow = 3,
@@ -437,8 +437,9 @@ We thank the Yale Center for Research Computing for use of the research computin
 
 **Extended Data Table 1.** Table 1. Overview of data matrices used in this study.
 ```{r table_study_summary}
-tableXXdistribution = read_tsv("../data_processed/tables/study_summary.tsv")
-  kable(tableXXdistribution)
+table_study_summary = read_tsv("../data_processed/tables/study_summary.tsv")
+opts <- options(knitr.kable.NA = "")
+knitr::kable(table_study_summary)
 
 ```
 
@@ -458,20 +459,20 @@ analyses_new %>%
 ```{r figure_matrix_overlap, fig.height = 12, fig.width = 20}
 
 matrix_overlap_rectangles =
-  lapply( 
-    sequence_matrices[no_subsets], 
+  lapply(
+    sequence_matrices[no_subsets],
     function(x) lapply(sequence_matrices[no_subsets], function(y) overlap_rects(x, y))) %>%
   unlist(recursive = FALSE) %>%
   bind_rows()
 
-matrix_overlap_rectangles %>% 
+matrix_overlap_rectangles %>%
   ggplot( ) +
     scale_x_continuous(name = "Genes") +
     scale_y_continuous(name = "Species") +
     geom_rect( mapping = aes(xmin = xmin, xmax = xmax, ymin = ymin, ymax = ymax, fill = MSA ), alpha = 0.5) +
     facet_grid( matrix_1 ~ matrix_2, scales = "free" ) +
-    theme( axis.text.x = element_text(angle = 45, hjust = 1), 
-           strip.text.y = element_text(angle = 0), 
+    theme( axis.text.x = element_text(angle = 45, hjust = 1),
+           strip.text.y = element_text(angle = 0),
            strip.text.x = element_text(angle = 60))
 
 ```
@@ -483,39 +484,39 @@ matrix_overlap_rectangles %>%
 ribo = read_tsv("../data_processed/tables/ribosomal_gene.tsv")
 busco = read_tsv("../data_processed/tables/busco_gene.tsv")
 
-ribo$matrix = 
-  factor( 
-    ribo$matrix, 
-    levels = c("Dunn2008", "Philippe2009", "Hejnol2009", "Nosenko2013_nonribo_9187", "Nosenko2013_ribo_11057", 
-             "Nosenko2013_ribo_14615", "Ryan2013_est", "Moroz2014_3d", "Chang2015", "Borowiec2015_Best108", 
-             "Borowiec2015_Total1080", "Whelan2015_D1", "Whelan2015_D10", "Whelan2015_D20", "Simion2017", 
+ribo$matrix =
+  factor(
+    ribo$matrix,
+    levels = c("Dunn2008", "Philippe2009", "Hejnol2009", "Nosenko2013_nonribo_9187", "Nosenko2013_ribo_11057",
+             "Nosenko2013_ribo_14615", "Ryan2013_est", "Moroz2014_3d", "Chang2015", "Borowiec2015_Best108",
+             "Borowiec2015_Total1080", "Whelan2015_D1", "Whelan2015_D10", "Whelan2015_D20", "Simion2017",
              "Whelan2017_full", "Whelan2017_strict") )
 
-p1 = ribo %>% 
-  ggplot( aes(x = matrix, y = number_of_genes, fill = gene_category) ) + 
-  geom_bar(stat = "identity") + 
-  theme_classic() + 
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
-  labs(x = "Matrix", y = "Number of genes") + 
+p1 = ribo %>%
+  ggplot( aes(x = matrix, y = number_of_genes, fill = gene_category) ) +
+  geom_bar(stat = "identity") +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  labs(x = "Matrix", y = "Number of genes") +
   scale_fill_manual(values = c("grey", "black"), labels = c("Non-ribosomal genes", "Ribosomal genes"))
 
 
-busco$matrix = 
-  factor( 
-    busco$matrix, 
-    levels = c("Dunn2008", "Philippe2009", "Hejnol2009", "Nosenko2013_nonribo_9187", "Nosenko2013_ribo_11057", 
-               "Nosenko2013_ribo_14615", "Ryan2013_est", "Moroz2014_3d", "Chang2015", "Borowiec2015_Best108", 
-               "Borowiec2015_Total1080", "Whelan2015_D1", "Whelan2015_D10", "Whelan2015_D20", "Simion2017", 
+busco$matrix =
+  factor(
+    busco$matrix,
+    levels = c("Dunn2008", "Philippe2009", "Hejnol2009", "Nosenko2013_nonribo_9187", "Nosenko2013_ribo_11057",
+               "Nosenko2013_ribo_14615", "Ryan2013_est", "Moroz2014_3d", "Chang2015", "Borowiec2015_Best108",
+               "Borowiec2015_Total1080", "Whelan2015_D1", "Whelan2015_D10", "Whelan2015_D20", "Simion2017",
                "Whelan2017_full", "Whelan2017_strict") )
 
 busco$gene_category = factor(busco$gene_category, levels = c("non_busco", "busco"))
 
-p2 = busco %>% 
-  ggplot( aes(x = matrix, y = number_of_genes, fill = gene_category) ) + 
-  geom_bar(stat = "identity") + 
-  theme_classic() + 
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
-  labs(x = "Matrix", y = "Number of genes") + 
+p2 = busco %>%
+  ggplot( aes(x = matrix, y = number_of_genes, fill = gene_category) ) +
+  geom_bar(stat = "identity") +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  labs(x = "Matrix", y = "Number of genes") +
   scale_fill_manual( values = c("grey", "black"), labels = c("Non-BUSCO genes", "BUSCO genes") )
 
  ggarrange(p1, p2, labels = c("A", "B"))
@@ -538,7 +539,7 @@ au_tests %>%
   mutate(percent = prop.table(n)) %>%
   ggplot(aes(x = Matrix, y = percent, fill = result)) +
     geom_bar(stat = "identity") +
-    scale_fill_manual(values = c("#E69F00", "#ebd196", "#a2e8d5", "#009E73")) + 
+    scale_fill_manual(values = c("#E69F00", "#ebd196", "#a2e8d5", "#009E73")) +
     coord_flip() +
     theme(axis.text.y = element_blank(), axis.title.y = element_blank())
 
