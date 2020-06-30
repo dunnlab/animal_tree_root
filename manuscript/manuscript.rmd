@@ -146,7 +146,7 @@ analyses_published_processed =
   analyses_published %>%
   dplyr::filter( !grepl( "Recoding", model_combined ) ) %>%
   dplyr::rename( model = model_combined ) %>%
-  select( model, clade, final, inference, manuscript, matrix ) %>%
+  select( model, clade, final, inference, manuscript, matrix, software ) %>%
   dplyr::rename( result = final ) %>%
   mutate( status = "published" )
 
@@ -155,11 +155,17 @@ analyses_new_processed =
   mutate(model = factor(model)) %>%
   select( model, clade, result, inference, matrix ) %>%
   mutate( manuscript = NA ) %>%
-  mutate( status = "new" )
+  mutate( status = "new" ) %>%
+  mutate( software = NA )
+  
+analyses_new_processed$software[ analyses_new_processed$inference == "ML" ] = "IQTREE"
+
+analyses_new_processed$software[ analyses_new_processed$inference == "Bayesian" ] = "PhyloBayes"
+
 
 analyses_processed =
   rbind( analyses_published_processed, analyses_new_processed ) %>%
-  # mutate(software=recode( software, `PhyloBayes MPI`="PhyloBayes") ) %>%
+  mutate(software=recode( software, `PhyloBayes MPI`="PhyloBayes") ) %>%
   mutate(model = recode(model,
                     `GTR20` = "GTR",
                     `CAT+F81` = "Poisson+CAT",
@@ -173,7 +179,7 @@ analyses_processed =
 
 
 p = analyses_processed %>%
-  ggplot( aes(x = model, y = clade, col = result, shape = inference) ) +
+  ggplot( aes(x = model, y = clade, col = result, shape = software) ) +
     facet_wrap( ~ status ) +
     geom_jitter( width = 0.20, height = 0.20, alpha = 0.7, size = 2 ) +
     scale_colour_manual(values = result_colors) +
