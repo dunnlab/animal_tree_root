@@ -347,3 +347,12 @@ time_run = time_stop - time_start
 ## Write the results to prepare them for manuscript.rmd
 
 save.image("manuscript.RData")
+
+## Write the results from RData to prepare them for supplementary tables
+write_csv(partition_map_global, "./Supplementary_tables/Supplementary_Table_1.csv", na = "NA", quote_escape = "double")
+write_csv(analyses_published, "./Supplementary_tables/Supplementary_Table_2.csv", na = "NA", quote_escape = "double")
+write_csv(analyses_new, "./Supplementary_tables/Supplementary_Table_3.csv", na = "NA", quote_escape = "double")
+write_csv(analyses_sensitive, "./Supplementary_tables/Supplementary_Table_6.csv", na = "NA", quote_escape = "double")
+write_csv(au_tests, "./Supplementary_tables/Supplementary_Table_7.csv", na = "NA", quote_escape = "double")
+
+
