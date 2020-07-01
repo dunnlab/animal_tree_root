@@ -120,7 +120,7 @@ taxon_rectangles$matrix =
              "Moroz2014_3d", "Whelan2015_D20", "Borowiec2015_Total1080", "Chang2015",
              "Whelan2017_full", "Simion2017"))
 
-taxon_rectangles %>%
+p =taxon_rectangles %>%
   ggplot() +
     scale_x_continuous(name = "Gene sampling") +
     scale_y_continuous(name = "Taxa sampling") +
@@ -128,8 +128,10 @@ taxon_rectangles %>%
     scale_fill_manual(values = clade_colors, guide = guide_legend(reverse = TRUE)) +
     facet_wrap( ~ matrix ) + theme_classic()
 
+ggsave("figures/Figure2_raw.pdf", width=7.2, height=7.2)
 
 ```
+![](figures/Figure_2_manuscript.png)
 
 **Fig. 2.** An overview of previous studies. (A) A time-series plot to show the main conclusions of previous 13 phylogenomic studies that tested Ctenophora-sister (designated by the orange node) and Porifera-sister (designated by the green node). (B) Matrix taxa and gene sampling for each study. Each of the primary matrices considered here, color coded by taxon sampling. Horizontal size is proportional to the number of genes sampled, vertical size to the number of taxa sampled.
 
@@ -190,6 +192,7 @@ p = analyses_processed %>%
 
 p
 
+ggsave("figures/Figure3_raw.pdf", width=7.2, height=3.6)
 ```
 
 
@@ -360,6 +363,9 @@ p4 = Whelan2017_strict %>%
 
 ggarrange(ggarrange(p1, p2, ncol = 2, labels = c("A", "B")), nrow = 3,
           p3, p4, labels = c("C", "D"))
+
+ggsave("figures/Figure4_raw.pdf", width=7.2, height=7.2)
+
 ```
 **Fig. 4.**  Sensitive analyses with representative data matrices analyzed by different number of substitutionary categories (nCAT) in PhyloBayes. Statistical support values (posterior probabilities) were obtained from three data matrcies using the site-heterogeneous Poisson-CAT model with different categories” (A) Phlippe2009_Choanozoa; (B) Philippe2009_Holozoa; (C) Whelan2017_full_Choanozoa; (D) Whelan2017_strict. Statistical support for Ctenophora-sister and Porifera-sister is indicated in orange and green, respectively. Support values are from the sensitive analyses are shown in Supplementary Table 6.
 
@@ -496,6 +502,8 @@ matrix_overlap_rectangles %>%
            strip.text.y = element_text(angle = 0),
            strip.text.x = element_text(angle = 60))
 
+ggsave("figures/Extended_Data_Fig1_raw.pdf", width=20, height=12)
+
 ```
 
 **Extended Data Fig. 1.** Pairwise overlap between each of the primary matrices considered here. Horizontal size is proportional to the number of genes sampled, vertical size to the number of taxa sampled. The horizontal intersection shows the proportions of shared genes, the vertical intersection shows the proportions of shared taxa.
@@ -542,6 +550,8 @@ p2 = busco %>%
 
  ggarrange(p1, p2, labels = c("A", "B"))
 
+ggsave("figures/Extended_Data_Fig2_raw.pdf", width=10, height=4)
+
 ```
 
 
@@ -549,23 +559,25 @@ p2 = busco %>%
 
 
 
-###```{r figure_phylogenetic_signal, fig.width=6, fig.height=12}
+```{r figure_phylogenetic_signal, fig.width=6, fig.height=12}
 
-#au_tests %>%
-#  unite(Matrix, c(manuscript, matrix, model)) %>%
-#  group_by(Matrix, result) %>%
-#  count() %>%
-#  group_by(Matrix) %>%
-#  mutate(percent = prop.table(n)) %>%
-#  ggplot(aes(x = Matrix, y = percent, fill = result)) +
-#    geom_bar(stat = "identity") +
-#    scale_fill_manual(values = c("#E69F00", "#ebd196", "#a2e8d5", "#009E73")) +
-#    coord_flip() +
-#    theme(axis.text.y = element_blank(), axis.title.y = element_blank())
+p=au_tests %>%
+  unite(Matrix, c(manuscript, matrix, model)) %>%
+  group_by(Matrix, result) %>%
+  count() %>%
+  group_by(Matrix) %>%
+  mutate(percent = prop.table(n)) %>%
+  ggplot(aes(x = Matrix, y = percent, fill = result)) +
+    geom_bar(stat = "identity") +
+    scale_fill_manual(values = c("#E69F00", "#ebd196", "#a2e8d5", "#009E73")) +
+    coord_flip() +
+    theme(axis.text.y = element_blank(), axis.title.y = element_blank())
 
-#```
+ggsave("figures/Extended_Data_Fig3_raw.pdf", width=6, height=12)
 
-![](figures/Figure_phylogenetic_signal.png)
+```
+
+![](figures/Extended_Data_Fig3_manuscript.png)
 
 **Extended Data Fig. 3** The distribution of phylogenetic signal for two alternative topological hypotheses on the earliest-branching animal lineage with different models and outgroup choice in Philippe2009, Ryan2013 and Whelan2017_full matrices (with two outgroup sampling: Choanimalia and full matrices). The two alternative topological hypotheses are: Ctenophora-sister; T1 (Orange);Porifera-sister T2 (Green). Proportions of genes supporting each of two alternative hypotheses in the Philippe2009, Ryan2013_est and Whelan2017_full data matrices with differnet outgroups sampling and substitutional models. The GLS values for each gene in each data matrix are provided in Table S5. We considered a gene with an absolute value of log-likelihood difference of two as a gene with strong (|ΔlnL| > 2) or weak (|ΔlnL| < 2) phylogenetic signal.
 
