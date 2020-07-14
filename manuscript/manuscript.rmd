@@ -367,8 +367,7 @@ p4 = Whelan2017_strict %>%
   labs(x = "Number of CAT substitutional categories", y = "Support") +
   ggtitle("Whelan2017_strict")
 
-ggarrange(ggarrange(p1, p2, ncol = 2, labels = c("A", "B")), nrow = 3,
-          p3, p4, labels = c("C", "D"))
+ggarrange(p1, p2, p3, p4,  ncol  = 2, nrow = 2, labels = c("A", "B", "C", "D"))
 
 ggsave("figures/Figure4_raw.pdf", width=7.2, height=7.2)
 
