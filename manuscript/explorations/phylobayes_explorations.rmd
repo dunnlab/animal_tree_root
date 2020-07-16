@@ -1,0 +1,63 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+  github_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  message = FALSE,
+  warning = FALSE,
+  echo = FALSE,
+  dpi = 300,
+  cache = FALSE
+  )
+```
+
+```{r preliminaries}
+  library( tidyverse )
+  library( magrittr )
+
+  source( "../phylobayes.R" )
+
+  # A colorblind friendly palette from http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/#a-colorblind-friendly-palette:
+  cbPalette = c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
+  result_colors = c( cbPalette[2], cbPalette[4], cbPalette[1] )
+  names( result_colors ) = c( "Ctenophora-sister", "Porifera-sister", "Unresolved" )
+
+```
+
+
+An exploration of phylobayes chain samples.
+
+```{r}
+
+chain = parse_phylobayes_chain("../tests/testthat/example.chain")
+
+# Take just the last sample for now
+pb = chain[[length(chain)]]
+
+allocation_counts = table(pb@allocation)
+
+# Building on https://www.statmethods.net/advstats/mds.html
+d = dist( pb@frequencies )
+fit = cmdscale(d,eig=TRUE, k=2)
+
+categories = tibble(
+  index = allocation_counts %>% names() %>% as.numeric(),
+  count = c(allocation_counts),
+  x = fit$points[,1],
+  y = fit$points[,2]
+)
+
+categories %>% 
+  ggplot() +
+  geom_point(aes(x=x, y=y, size=count) ) +
+  ggtitle("MDS plot of rate categories") +
+  theme_classic()
+
+```
+

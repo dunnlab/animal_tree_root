@@ -63,7 +63,7 @@ PhylobayesSample = function(
     stop("File format invalid, expected blank line")
   }
   
-  if( x5 != nrow(frequencies) ){
+  if( object@x5 != nrow(object@frequencies) ){
     stop("Unexpected number of category frequency profiles")
   }
   

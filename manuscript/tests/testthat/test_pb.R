@@ -19,6 +19,7 @@ test_that("Testing works", {
 })
 
 
+
 context("single phylobayes chain record")
 
 lines = read_lines( "example_single.chain" )
@@ -33,6 +34,8 @@ test_that("Tree has the correct number of tips", {
 test_that("Tree has the correct number of internal nodes", {
   expect_equal( pb@tree$Nnode, 74 )
 })
+
+
 
 context("phylobayes chain files")
 
