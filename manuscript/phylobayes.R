@@ -27,7 +27,7 @@ setClass(
     x5 = "numeric", # ncat?
     x6 = "numeric", # 20 numbers, possibly some starting values for each amino acid (last tab is blank)
     # Blank line
-    frequencies = "numeric", # number of columns is number of states (eg 20 for amino acids), number of rows is the number of categories (one line per category in the file)
+    frequencies = "matrix", # number of columns is number of states (eg 20 for amino acids), number of rows is the number of categories (one line per category in the file)
     allocation = "numeric" # integer that indicates the category of each site
   )
 )
@@ -50,8 +50,22 @@ PhylobayesSample = function(
     path = path, 
     generation = generation,
     tree = ape::read.tree( text=text[1] ),
-    x2 = as.numeric(text[2])
+    x2 = as.numeric(text[2]),
+    x3 = as.numeric(text[3]),
+    x4 = as.numeric(text[4]),
+    x5 = as.numeric(text[5]),
+    x6 = text[6] %>% str_split("\t") %>% unlist() %>% as.numeric(),
+    frequencies = text[8:(length(text)-1)] %>% str_split("\t") %>% lapply( as.numeric ) %>% do.call( rbind, . ), 
+    allocation = text[length(text)] %>% str_split("\t") %>% unlist() %>% as.numeric()
   )
+  
+  if( text[7] != "" ){
+    stop("File format invalid, expected blank line")
+  }
+  
+  if( x5 != nrow(frequencies) ){
+    stop("Unexpected number of category frequency profiles")
+  }
   
   object
 }
