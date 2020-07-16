@@ -74,4 +74,12 @@ git lfs install
 git lfs pull --include=manuscript
 ```
 
+## Development
 
+### Running tests
+
+To run tests of the code, launch an R console from the `manuscript/` directory of this
+repository and run:
+
+    library( testthat )
+    test_dir( "tests/testthat/" )
