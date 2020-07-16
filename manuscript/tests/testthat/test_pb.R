@@ -25,7 +25,12 @@ lines = read_lines( "example_single.chain" )
 
 pb = PhylobayesSample( lines, "example_single.chain", 1 )
 
+
 test_that("Tree has the correct number of tips", {
+  expect_equal( length(pb@tree$tip.label), 76 )
+})
+
+test_that("Tree has the correct number of internal nodes", {
   expect_equal( pb@tree$Nnode, 74 )
 })
 
@@ -33,7 +38,17 @@ context("phylobayes chain files")
 
 chain = parse_phylobayes_chain("example.chain")
 
-test_that("Tree has the correct number of tips", {
+test_that("Chain has correct number of samples", {
   expect_equal( length(chain), 7 )
+})
+
+test_that("Allocation vector lengths are correct", {
+  x = lapply(chain, function(x){length(x@allocation)}) %>% unlist()
+  expect_true( all(x == 49388) )
+})
+
+test_that("Number of tips in trees are correct", {
+  x = lapply(chain, function(x){length( x@tree$tip.label )}) %>% unlist()
+  expect_true( all(x == 76) )
 })
 
