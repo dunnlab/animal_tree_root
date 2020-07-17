@@ -18,8 +18,6 @@ test_that("Testing works", {
   expect_equal( 1, 1 )
 })
 
-
-
 context("single phylobayes chain record")
 
 lines = read_lines( "example_single.chain" )
@@ -34,6 +32,20 @@ test_that("Tree has the correct number of tips", {
 test_that("Tree has the correct number of internal nodes", {
   expect_equal( pb@tree$Nnode, 74 )
 })
+
+
+test_that("Missing tree returns NULL", {
+  expect_null( PhylobayesSample( lines[-1], "example_single.chain", 1 )  )
+})
+
+test_that("Missing blank line returns NULL", {
+  expect_null( PhylobayesSample( lines[-7], "example_single.chain", 1 )  )
+})
+
+test_that("Missing last line returns NULL", {
+  expect_null( PhylobayesSample( lines[-length(lines)], "example_single.chain", 1 )  )
+})
+
 
 
 

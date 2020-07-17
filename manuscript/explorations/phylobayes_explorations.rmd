@@ -59,5 +59,15 @@ categories %>%
   ggtitle("MDS plot of rate categories") +
   theme_classic()
 
+
+categories %>%
+  arrange(desc(count)) %>%
+  mutate(rank = 1:nrow(categories)) %>%
+  ggplot() +
+    geom_point(aes(x=rank, y=count) ) +
+    ggtitle("Ordered count") +
+    theme_classic()
+
+
 ```
 

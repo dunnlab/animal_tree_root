@@ -37,13 +37,25 @@ setClass(
 #' @param sample_text text for a single sample from a phylobayes chain file
 #' @param path path to the original file
 #' @param generation the generation of the sample in the original file
-#' @return A PhylobayesSample object
+#' @return A PhylobayesSample object, or NULL if the record is incomplete
 #' @export
 PhylobayesSample = function( 
   text, 
   path = NA,
   generation = NA
   ) {
+  
+  
+  if( text[7] != "" ){
+    # The seventh line should be blank
+    return( NULL )
+  }
+  
+  if ( ! grepl( "\\(", text[1] ) ) {
+    # Record does not start with a tree
+    return( NULL )
+  }
+  
   
   object = new( 
     "PhylobayesSample",
@@ -59,12 +71,9 @@ PhylobayesSample = function(
     allocation = text[length(text)] %>% str_split("\t") %>% unlist() %>% as.numeric()
   )
   
-  if( text[7] != "" ){
-    stop("File format invalid, expected blank line")
-  }
-  
   if( object@x5 != nrow(object@frequencies) ){
-    stop("Unexpected number of category frequency profiles")
+     # Unexpected number of category frequency profiles
+    return( NULL )
   }
   
   object
@@ -88,6 +97,12 @@ parse_phylobayes_chain = function( file_name ){
   lines = read_lines( file_name )
   n = 0
   sample_text = character()
+  
+  # Each record starts with a tree line, which starts with a (
+  # Since many files are quite large, it may be apprpriate to tail them,
+  # in which case the first record may be incomplete. Set a flag to note when the
+  # first complete record has started, and don't parse before then.
+  start = FALSE
   
   for (line in lines) {
     n = n+1
