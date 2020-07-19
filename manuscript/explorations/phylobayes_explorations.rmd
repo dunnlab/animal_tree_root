@@ -19,6 +19,7 @@ knitr::opts_chunk$set(
 ```{r preliminaries}
   library( tidyverse )
   library( magrittr )
+  library( gridExtra )
 
   source( "../phylobayes.R" )
 
@@ -35,39 +36,91 @@ An exploration of phylobayes chain samples.
 
 ```{r}
 
-chain = parse_phylobayes_chain("../tests/testthat/example.chain")
+plot_chain = function( pb ){
 
-# Take just the last sample for now
-pb = chain[[length(chain)]]
-
-allocation_counts = table(pb@allocation)
-
-# Building on https://www.statmethods.net/advstats/mds.html
-d = dist( pb@frequencies )
-fit = cmdscale(d,eig=TRUE, k=2)
-
-categories = tibble(
-  index = allocation_counts %>% names() %>% as.numeric(),
-  count = c(allocation_counts),
-  x = fit$points[,1],
-  y = fit$points[,2]
-)
-
-categories %>% 
-  ggplot() +
-  geom_point(aes(x=x, y=y, size=count) ) +
-  ggtitle("MDS plot of rate categories") +
-  theme_classic()
-
-
-categories %>%
-  arrange(desc(count)) %>%
-  mutate(rank = 1:nrow(categories)) %>%
-  ggplot() +
-    geom_point(aes(x=rank, y=count) ) +
-    ggtitle("Ordered count") +
+  
+  allocation_counts = table(pb@allocation)
+  
+  # Building on https://www.statmethods.net/advstats/mds.html
+  d = dist( pb@frequencies )
+  fit = cmdscale(d,eig=TRUE, k=2)
+  
+  categories = tibble(
+    index = allocation_counts %>% names() %>% as.numeric(),
+    count = c(allocation_counts),
+    x = fit$points[,1],
+    y = fit$points[,2]
+  )
+  
+  gg_mds = 
+  categories %>% 
+    ggplot() +
+    geom_point(aes(x=x, y=y, size=count) ) +
+    ggtitle("MDS plot of rate categories") +
     theme_classic()
+  
+  
+  gg_rank = 
+    categories %>%
+    arrange(desc(count)) %>%
+    mutate(rank = 1:nrow(categories)) %>%
+    ggplot() +
+      geom_point(aes(x=rank, y=count) ) +
+      ggtitle("Ordered count") +
+      theme_classic()
+  
+  p = grid.arrange(
+  	gg_rank,
+  	gg_mds,
+  	ncol = 2
+  )
+  
+  return(p)
+}
 
 
 ```
+
+
+
+
+```{r}
+
+chain = parse_phylobayes_chain( "../tests/testthat/example.chain" )
+  
+# Take just the last sample for now
+pb = chain[[length(chain)]]
+
+plot_chain( pb )
+
+```
+
+**Figure n60.** Plots for nCAT=60.
+
+
+```{r}
+
+chain = parse_phylobayes_chain( "Whelan2017_strict.phy_Poisson_CAT100_Chain_1_last500.chain" )
+  
+# Take just the last sample for now
+pb = chain[[length(chain)]]
+
+plot_chain( pb )
+
+```
+
+**Figure n100.** Plots for nCAT=100.
+
+```{r}
+
+chain = parse_phylobayes_chain( "Whelan2017_strict.phy_Chain1_last50000.chain" )
+  
+# Take just the last sample for now
+pb = chain[[length(chain)]]
+
+plot_chain( pb )
+
+```
+
+**Figure CAT.** Plots for CAT.
 

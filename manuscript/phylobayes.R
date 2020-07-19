@@ -25,7 +25,8 @@ setClass(
     x3 = "numeric", # could be NSPR kappa or kmax, not in any other file
     x4 = "numeric", # appears to be alpha parameter, found in trace file
     x5 = "numeric", # ncat?
-    x6 = "numeric", # 20 numbers, possibly some starting values for each amino acid (last tab is blank)
+    x6 = "numeric", # present in CAT runs, but not NCAT
+    x7 = "numeric", # 20 numbers, possibly some starting values for each amino acid (last tab is blank)
     # Blank line
     frequencies = "matrix", # number of columns is number of states (eg 20 for amino acids), number of rows is the number of categories (one line per category in the file)
     allocation = "numeric" # integer that indicates the category of each site
@@ -45,9 +46,22 @@ PhylobayesSample = function(
   generation = NA
   ) {
   
+  # Chain files from nCAT and CAT runs have slightly different formats. Specifically, 
+  # nCAT files have a tree line, then 4 lines with one scalar each, then a line with a vector.
+  # CAT files are the same, but have 5 lines with one scalar each
+  text_6 = NA
+  text_7 = NA
+  freq_start = NA
   
-  if( text[7] != "" ){
-    # The seventh line should be blank
+  if( text[7] == "" ){
+    text_7 =text[6]
+    freq_start = 8
+  } else if ( text[8] == ""  ) {
+    text_6 = text[6]
+    text_7 = text[7]
+    freq_start = 9
+  } else {
+    # The seventh or eight line should be blank
     return( NULL )
   }
   
@@ -55,7 +69,6 @@ PhylobayesSample = function(
     # Record does not start with a tree
     return( NULL )
   }
-  
   
   object = new( 
     "PhylobayesSample",
@@ -66,8 +79,9 @@ PhylobayesSample = function(
     x3 = as.numeric(text[3]),
     x4 = as.numeric(text[4]),
     x5 = as.numeric(text[5]),
-    x6 = text[6] %>% str_split("\t") %>% unlist() %>% as.numeric(),
-    frequencies = text[8:(length(text)-1)] %>% str_split("\t") %>% lapply( as.numeric ) %>% do.call( rbind, . ), 
+    x6 = as.numeric(text_6),
+    x7 = text_7 %>% str_split("\t") %>% unlist() %>% as.numeric(),
+    frequencies = text[freq_start:(length(text)-1)] %>% str_split("\t") %>% lapply( as.numeric ) %>% do.call( rbind, . ), 
     allocation = text[length(text)] %>% str_split("\t") %>% unlist() %>% as.numeric()
   )
   
@@ -82,13 +96,19 @@ PhylobayesSample = function(
 #######################################
 ## Functions
 
-#' Parse a phylobayes mpi chain file
+#' Parse a phylobayes mpi chain file. Incomplete records at the start or end of the file 
+#' are ignored
 #'
 #' @param fine_name name of file to parse
 #' @return A PhylobayesSample object
 #' @export
 
 parse_phylobayes_chain = function( file_name ){
+  
+  # Since many files are quite large, it may be apprpriate to tail or head them,
+  # in which case the first or last record may be incomplete. Those will be NULL records,
+  # which append does not add to a list
+  
   
   generation = 0
   samples = list()
@@ -99,34 +119,23 @@ parse_phylobayes_chain = function( file_name ){
   sample_text = character()
   
   # Each record starts with a tree line, which starts with a (
-  # Since many files are quite large, it may be apprpriate to tail them,
-  # in which case the first record may be incomplete. Set a flag to note when the
-  # first complete record has started, and don't parse before then.
-  start = FALSE
+
   
   for (line in lines) {
     n = n+1
-    if( n == 1 ) {
-      if ( grepl( "\\(", line ) ) {
-        generation = generation + 1
-        sample_text = append( sample_text, line )
-      } else {
-        stop( "Chain file does not start with a tree" )
-      }
-    } else {
-      if ( grepl( "\\(", line ) ){
-        
-        samples = append( 
-          samples,
-          PhylobayesSample( sample_text, file_name, generation )
-          )
-        
-        # Get ready to parse new record, starting with this line
-        generation = generation + 1
-        sample_text = character()
-      }
-      sample_text = append( sample_text, line )
+    if ( grepl( "\\(", line ) && n != 1 ){
+      
+      samples = append( 
+        samples,
+        PhylobayesSample( sample_text, file_name, generation )
+      )
+      
+      # Get ready to parse new record, starting with this line
+      generation = generation + 1
+      sample_text = character()
     }
+    sample_text = append( sample_text, line )
+
   }
   
   # Add the final record
