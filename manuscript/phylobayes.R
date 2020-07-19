@@ -8,6 +8,9 @@ setOldClass("phylo")
 
 
 #' An S4 class to store a single sample from a phylobayes chain file
+#' In an unconstrained CAT run, the number of distinct categories, and 
+#' therefore rows in the frequencies matrix, is 5000, but only a subset 
+#' of them are allocated in the allocation vector
 #' 
 #' @slot allocation  The allocation vector
 setClass(
@@ -84,6 +87,8 @@ PhylobayesSample = function(
     frequencies = text[freq_start:(length(text)-1)] %>% str_split("\t") %>% lapply( as.numeric ) %>% do.call( rbind, . ), 
     allocation = text[length(text)] %>% str_split("\t") %>% unlist() %>% as.numeric()
   )
+  
+  rownames( object@frequencies ) = 0:( nrow( object@frequencies ) - 1 )
   
   if( object@x5 != nrow(object@frequencies) ){
      # Unexpected number of category frequency profiles

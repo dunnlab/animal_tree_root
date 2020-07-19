@@ -38,15 +38,22 @@ An exploration of phylobayes chain samples.
 
 plot_chain = function( pb ){
 
-  
   allocation_counts = table(pb@allocation)
+  index = allocation_counts %>% names() %>% as.numeric()
+  
+  if( ! all( index %in% rownames(pb@frequencies) ) ){
+    stop("Allocations are outside available category range")
+  }
+  
+  # Consider only the subset of frequencies that are allocated
+  frequencies = pb@frequencies[ match(index , rownames(pb@frequencies) ), ]
   
   # Building on https://www.statmethods.net/advstats/mds.html
-  d = dist( pb@frequencies )
+  d = dist( frequencies )
   fit = cmdscale(d,eig=TRUE, k=2)
   
   categories = tibble(
-    index = allocation_counts %>% names() %>% as.numeric(),
+    index = index,
     count = c(allocation_counts),
     x = fit$points[,1],
     y = fit$points[,2]
@@ -55,7 +62,7 @@ plot_chain = function( pb ){
   gg_mds = 
   categories %>% 
     ggplot() +
-    geom_point(aes(x=x, y=y, size=count) ) +
+    geom_point(aes(x=x, y=y, size=count), alpha=0.4 ) +
     ggtitle("MDS plot of rate categories") +
     theme_classic()
   
