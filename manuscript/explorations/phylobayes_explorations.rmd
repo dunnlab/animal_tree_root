@@ -22,12 +22,18 @@ knitr::opts_chunk$set(
   library( gridExtra )
 
   source( "../phylobayes.R" )
+  source( "../functions.R" )
 
   # A colorblind friendly palette from http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/#a-colorblind-friendly-palette:
   cbPalette = c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
 
   result_colors = c( cbPalette[2], cbPalette[4], cbPalette[1] )
   names( result_colors ) = c( "Ctenophora-sister", "Porifera-sister", "Unresolved" )
+  
+  aa = PartitionedMultipleAlignment ("../../data_processed/matrices/Whelan2017_strict.phy", "../../data_processed/matrices/Whelan2017_strict.nex")
+  
+  m = as.matrix(aa)
+  site_occupancy = colSums(m != "-" ) / nrow(m)
 
 ```
 
@@ -36,7 +42,7 @@ An exploration of phylobayes chain samples.
 
 ```{r}
 
-plot_chain = function( pb ){
+plot_chain = function( pb, site_occupancy ){
 
   allocation_counts = table(pb@allocation)
   index = allocation_counts %>% names() %>% as.numeric()
@@ -52,28 +58,38 @@ plot_chain = function( pb ){
   d = dist( frequencies )
   fit = cmdscale(d,eig=TRUE, k=2)
   
-  categories = tibble(
-    index = index,
-    count = c(allocation_counts),
-    x = fit$points[,1],
-    y = fit$points[,2]
-  )
+  # Calculate the mean occupancy for each site in the original matrix
+  occupancy = sapply( index, function(i){
+    sites = which( pb@allocation == i  )
+    mean( site_occupancy[ sites ] )
+  })
+  
+  
+  categories = 
+    tibble(
+      index = index,
+      count = c(allocation_counts),
+      occupancy = occupancy,
+      x = fit$points[,1],
+      y = fit$points[,2]
+    ) %>%
+    arrange(desc(count))
+  
+  categories %<>% mutate(rank = 1:nrow(categories))
   
   gg_mds = 
   categories %>% 
     ggplot() +
     geom_point(aes(x=x, y=y, size=count), alpha=0.4 ) +
-    ggtitle("MDS plot of rate categories") +
+    ggtitle("MDS plot of frequency categories") +
     theme_classic()
   
   
   gg_rank = 
     categories %>%
-    arrange(desc(count)) %>%
-    mutate(rank = 1:nrow(categories)) %>%
     ggplot() +
-      geom_point(aes(x=rank, y=count) ) +
-      ggtitle("Ordered count") +
+      geom_point(aes(x=rank, y=cumsum(count)) ) +
+      ggtitle("Cumulative sum of sites") +
       theme_classic()
   
   p = grid.arrange(
@@ -98,7 +114,7 @@ chain = parse_phylobayes_chain( "../tests/testthat/example.chain" )
 # Take just the last sample for now
 pb = chain[[length(chain)]]
 
-plot_chain( pb )
+plot_chain( pb, site_occupancy )
 
 ```
 
@@ -112,7 +128,7 @@ chain = parse_phylobayes_chain( "Whelan2017_strict.phy_Poisson_CAT100_Chain_1_la
 # Take just the last sample for now
 pb = chain[[length(chain)]]
 
-plot_chain( pb )
+plot_chain( pb, site_occupancy )
 
 ```
 
@@ -125,7 +141,7 @@ chain = parse_phylobayes_chain( "Whelan2017_strict.phy_Chain1_last50000.chain" )
 # Take just the last sample for now
 pb = chain[[length(chain)]]
 
-plot_chain( pb )
+plot_chain( pb, site_occupancy )
 
 ```
 

@@ -95,6 +95,15 @@ PhylobayesSample = function(
     return( NULL )
   }
   
+  # The order of the amino acid vector in PhyloBayes is specified here:
+  # https://github.com/bayesiancook/pbmpi/blob/ba03ab5146140c9beab673735e826a10ac0ea6ab/sources/BiologicalSequences.h#L41
+  # The trailing gap character is then removed here:
+  # https://github.com/bayesiancook/pbmpi/blob/ba03ab5146140c9beab673735e826a10ac0ea6ab/sources/StateSpace.cpp#L131
+  
+  colnames( object@frequencies ) = 
+    c( "A","C","D","E","F","G","H","I","K","L","M","N","P","Q","R","S","T","V","W","Y" )
+
+  
   object
 }
 
