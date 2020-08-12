@@ -317,7 +317,7 @@ Philippe2009 =
 Philippe2009$model =
   factor(
     Philippe2009$model,
-    levels = c("Poisson+CAT270", "Poisson+CAT360", "Poisson+CAT400", "Poisson+CAT440", "Poisson+CAT480"))
+    levels = c("Poisson+CAT60", "Poisson+CAT270", "Poisson+CAT360", "Poisson+CAT400", "Poisson+CAT440", "Poisson+CAT480"))
 
 p2 = Philippe2009 %>%
   ggplot( aes(model)) +
@@ -350,7 +350,7 @@ p3 = Whelan2017_full_only_choanozoa %>%
   theme_classic() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   labs(x = "Number of CAT substitutional categories", y = "Support") +
-  ggtitle("Whelan2017_full_Choanozoa")
+  ggtitle("Whelan2017_full_Choanimalia")
 
 Whelan2017_strict =
   analyses_sensitive %>%
@@ -374,7 +374,7 @@ p4 = Whelan2017_strict %>%
   labs(x = "Number of CAT substitutional categories", y = "Support") +
   ggtitle("Whelan2017_strict")
 
-ggarrange(p1, p2, p3, p4,  ncol  = 2, nrow = 2, labels = c("A", "B", "C", "D"))
+ggarrange(p1, p2, p3, p4,  ncol  = 2, nrow = 2, labels = c("A", "B", "C", "D"), common.legend = TRUE)
 
 ggsave("figures/Figure4_raw.pdf", width=7.2, height=7.2)
 

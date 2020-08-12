@@ -1,4 +1,5 @@
 library(ape)
+library(tidyverse)
 
 
 setOldClass("phylo")
@@ -81,10 +82,10 @@ PhylobayesSample = function(
     branchalpha = as.numeric(text[2]),
     branchbeta = as.numeric(text[3]),
     alpha = as.numeric(text[4]),
-    alpha = as.numeric(text[5]),
-    ncat = as.numeric(text_6),
+    ncat = as.numeric(text[5]),
+    rr = as.numeric(text_6),
     dirweight = text_7 %>% str_split("\t") %>% unlist() %>% as.numeric(),
-    frequencies = text[freq_start:(length(text)-1)] %>% str_split("\t") %>% lapply( as.numeric ) %>% do.call( rbind, . ), 
+    frequencies = text[freq_start:(length(text)-1)] %>% str_split("\t", 20) %>% lapply( as.numeric ) %>% do.call( rbind, . ), 
     allocation = text[length(text)] %>% str_split("\t") %>% unlist() %>% as.numeric()
   )
   
