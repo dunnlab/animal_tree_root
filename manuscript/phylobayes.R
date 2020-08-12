@@ -162,3 +162,9 @@ parse_phylobayes_chain = function( file_name ){
   samples
 }
 
+
+parse_phylobayes_last_sample = function( file_name ){
+  chain = parse_phylobayes_chain( file_name )
+  chain[[length(chain)]]
+}
+
