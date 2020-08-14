@@ -91,11 +91,6 @@ PhylobayesSample = function(
   
   rownames( object@frequencies ) = 0:( nrow( object@frequencies ) - 1 )
   
-  if( object@ncat != nrow(object@frequencies) ){
-     # Unexpected number of category frequency profiles
-    return( NULL )
-  }
-  
   # The order of the amino acid vector in PhyloBayes is specified here:
   # https://github.com/bayesiancook/pbmpi/blob/ba03ab5146140c9beab673735e826a10ac0ea6ab/sources/BiologicalSequences.h#L41
   # The trailing gap character is then removed here:
@@ -103,7 +98,11 @@ PhylobayesSample = function(
   
   colnames( object@frequencies ) = 
     c( "A","C","D","E","F","G","H","I","K","L","M","N","P","Q","R","S","T","V","W","Y" )
-
+  
+  if( object@ncat != nrow(object@frequencies) ){
+     # Unexpected number of category frequency profiles
+    return( NULL )
+  }
   
   object
 }
