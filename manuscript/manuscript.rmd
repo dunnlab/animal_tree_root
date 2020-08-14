@@ -286,7 +286,7 @@ Published studies have found that the GTR+CAT model often has a better fit than 
 These results further clarify when analyses support Porifera-sister (*e.g.* Philippe2009, Whelan2017). Outgroup sampling must be restricted (Choanimalia), a Poisson rather than GTR exchange matrix must be used, and a very large number of site categories must be used (unconstrained CAT, giving hundreds of equilibrium frequency categories). Analyses under other conditions either support Ctenophora-sister or are unresolved. This is very consistent across published analyses and our new panels of analyses. The question, then, isn't why similar analyses give different results, but how we should interpret variation in results when we run analyses that differ in these respects. If we fix the first two features to conditions that are necessary for Porifera-sister support (Choanimalia taxon sampling and a Poisson exchange matrix), there are several things we can learn from examining how the number of equilibrium frequency categories impacts results that sheds light on interpretation of those results.
 
 
-```{r n_cat, fig.width=6, fig.height=12}
+```{r n_cat }
 
 # Return the allocation midpoint, ie the percent of sites that are allocated to the 
 # 50% of the least frequent categories
@@ -375,6 +375,8 @@ gg_rank_phil =
   filter( matrix=="Philippe2009" ) %>%
   ggplot() +
   geom_line(aes(x=rank, y=count, col=model)) + 
+  xlab( "category rank" ) +
+  ylab( "site count" ) +
   theme(legend.position="right")
 
 gg_rank_whel = 
@@ -382,6 +384,8 @@ gg_rank_whel =
   filter( matrix=="Whelan2017_strict" ) %>%
   ggplot() +
   geom_line(aes(x=rank, y=count, col=model)) + 
+  xlab( "category rank" ) +
+  ylab( "site count" ) +
   theme(legend.position="right")
 
 gg_mds_phil = 
@@ -389,6 +393,10 @@ gg_mds_phil =
   filter( matrix=="Philippe2009" ) %>% 
   ggplot() +
   geom_point(aes(x=x_global, y=y_global, size=count, col=model), alpha=0.4 ) + 
+  xlim( -0.5, 0.5) +
+  ylim( -0.6, 0.6) +
+  xlab( "MDS1" ) +
+  ylab( "MDS2" ) +
   theme(legend.position="right")
 
 gg_mds_whel = 
@@ -396,6 +404,10 @@ gg_mds_whel =
   filter( matrix=="Whelan2017_strict" ) %>% 
   ggplot() +
   geom_point(aes(x=x_global, y=y_global, size=count, col=model), alpha=0.4 ) +  
+  xlim( -0.5, 0.5) +
+  ylim( -0.6, 0.6) +
+  xlab( "MDS1" ) +
+  ylab( "MDS2" ) +
   theme(legend.position="right")
 
 gg_chain = 
@@ -730,13 +742,13 @@ ggsave("figures/Extended_Data_Fig3_raw.pdf", width=6, height=12)
 **Extended Data Fig. 3** The distribution of phylogenetic signal for two alternative topological hypotheses on the earliest-branching animal lineage with different models and outgroup choice in Philippe2009, Ryan2013 and Whelan2017_full matrices (with two outgroup sampling: Choanimalia and full matrices). The two alternative topological hypotheses are: Ctenophora-sister; T1 (Orange);Porifera-sister T2 (Green). Proportions of genes supporting each of two alternative hypotheses in the Philippe2009, Ryan2013_est and Whelan2017_full data matrices with differnet outgroups sampling and substitutional models. The GLS values for each gene in each data matrix are provided in Table S5. We considered a gene with an absolute value of log-likelihood difference of two as a gene with strong (|ΔlnL| $\geq$ 2) or weak ( 0 < |ΔlnL| < 2) phylogenetic signal.
 
 
-```{r n_cat_render, fig.width=6, fig.height=12}
+```{r n_cat_render, fig.width=6, fig.height=7}
 
 gg_chain
 
 ```
 
-**Extended Data Fig. 3.5** The impact of adding a large number of categories. 
+**Extended Data Fig. 3.5** The allocation of frequency categories across sites in the Philippe2009 matrix (left column) and Whelan2017_strict matrix (right column) for the constrained Posson+nCAT60 model and unconstrained Posson+CAT models (differentiated with color). These plots are for singe sampled isolated from the end of PhyloBayes chain files. (A,B) The count of sites allocated to each equilibrium frequency category, with the categories ranked from the most abundand to least abundant along the x axis. The unconstrained CAT analyses have a long tale categories that are allocated to very few sites, which adds a considerable number of parameters that pertain to only a small fraction of the data. The nCAT60 analyses, which are constrained to 60 sites, have no such long tail and the rarest categories are allocated to a far greater number of sites than any of the sites in the long tail of the CAT analyses. (C,D) MDS plots for the amino acid frequencies. Each point is for a single category, the area of the point is proportional to the number of sites allocated to that category, and categories with closer points have more similar amino acid frequencies. A single MDS analysis was done for all analyses, so that the projections are the same in each plot. For both matrices, the much larger number of categories in the unconstrained CAT analyses laregely subdivide the amino acid frequency space already covered in the constrained nCAT60 analyses, and just subdivide that space into a far greater number of rare categories. This adds a considerable number of parameters for describing a similar overall space.
 
 
 ![](figures/Figure_random_rocoding.png)
