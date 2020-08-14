@@ -283,7 +283,7 @@ Once we established this large difference in category number, we sought to test 
 
 Published studies have found that the GTR+CAT model often has a better fit than Poisson+CAT, and investigators have suggested that it is more appropriate than the Poisson+CAT model for this question [@simion2017large]. Due to computational limitations of GTR models, we only ran GTR+CAT and GTR+nCAT60 models on representative matrices with Choanimalia sampling. We found that for both Whelan2017 and Philippe matrices shifted from Porifera-sister with Poisson+CAT model to Ctenophora-sister using GTR+CAT model. Moreover, we also found all results strongly supported Ctenophora-sister with GTR+nCAT60 models.
 
-```{r n_cat, fig.width=6, fig.height=12}
+```{r n_cat}
 # Return the allocation midpoint, ie the percent of sites that are allocated to the
 # 50% of the least frequent categories
 allocation_midpoint = function ( pb_summary ) {
@@ -292,15 +292,20 @@ allocation_midpoint = function ( pb_summary ) {
   y = cumsum( x )
   return ( round( median( y ) *100, 2 ) )
 }
+
 # Parse the last sample from chain 1 of each analysis
 phil_cat_c1 =
   parse_phylobayes_last_sample("../trees_new/frequency/subsampled_Philippe2009_only_choanozoa.phy_Poisson_CAT_Chain_1.chain")
+
 phil_cat60_c1 =
   parse_phylobayes_last_sample("../trees_new/frequency/subsampled_Philippe2009_only_choanozoa.phy_Poisson_nCAT60_Chain_1.chain")
+
 whel_cat_c1 =
   parse_phylobayes_last_sample("../trees_new/frequency/subsampled_Whelan2017_strict.phy_Poisson_CAT_Chain1.chain")
+
 whel_cat60_c1 =
   parse_phylobayes_last_sample("../trees_new/frequency/subsampled_Whelan2017_strict.phy_Poisson_CAT60_Chain_1.chain")
+
 # Create a single tibble with summaries of all analyses
 pb_summaries = list(
   summarise_sample( phil_cat_c1 ) %>%
@@ -315,66 +320,92 @@ pb_summaries = list(
   bind_rows() %>%
   mutate( analysis = paste(matrix, model, sep=" ")) %>%
   mutate( model=factor(model, levels=c("Poisson+nCAT60", "Poisson+CAT")) )
+
 pb_frequencies = pb_summaries %>% select( starts_with("aa.") ) %>% data.matrix()
+
 # Identify the midpoint of each set of allocations
 mid_phil_cat =
   pb_summaries %>%
   filter( matrix=="Philippe2009" ) %>%
   filter( model=="Poisson+CAT" ) %>%
   allocation_midpoint()
+
 mid_phil_ncat60 =
   pb_summaries %>%
   filter( matrix=="Philippe2009" ) %>%
   filter( model=="Poisson+nCAT60" ) %>%
   allocation_midpoint()
+
 mid_whel_cat =
   pb_summaries %>%
   filter( matrix=="Whelan2017_strict" ) %>%
   filter( model=="Poisson+CAT" ) %>%
   allocation_midpoint()
+
 mid_whel_ncat60 =
   pb_summaries %>%
   filter( matrix=="Whelan2017_strict" ) %>%
   filter( model=="Poisson+nCAT60" ) %>%
   allocation_midpoint()
+
 n_categories_phil_cat =
   pb_summaries %>%
   filter( matrix=="Philippe2009" ) %>%
   filter( model=="Poisson+CAT" ) %>%
   nrow()
+
 n_categories_whel_cat =
   pb_summaries %>%
   filter( matrix=="Whelan2017_strict" ) %>%
   filter( model=="Poisson+CAT" ) %>%
   nrow()
+
+
 # Perform global MDS analysys
 fit = cmdscale( dist( pb_frequencies ) ,eig=TRUE, k=2)
 pb_summaries %<>% mutate( x_global = fit$points[,1], y_global = fit$points[,2] )
+
 # Generate plots
 gg_rank_phil =
   pb_summaries %>%
   filter( matrix=="Philippe2009" ) %>%
   ggplot() +
   geom_line(aes(x=rank, y=count, col=model)) +
+  xlab( "category rank" ) +
+  ylab( "site count" ) +
   theme(legend.position="right") + ggtitle("Philippe2009_Choanimalia")
+
 gg_rank_whel =
   pb_summaries %>%
   filter( matrix=="Whelan2017_strict" ) %>%
   ggplot() +
   geom_line(aes(x=rank, y=count, col=model)) +
-  theme(legend.position="right") + ggtitle("Whelan2017_strict")
+  xlab( "category rank" ) +
+  ylab( "site count" ) +
+  theme(legend.position="right")+ ggtitle("Whelan2017_strict")
+
 gg_mds_phil =
- pb_summaries %>%
+  pb_summaries %>%
   filter( matrix=="Philippe2009" ) %>%
   ggplot() +
   geom_point(aes(x=x_global, y=y_global, size=count, col=model), alpha=0.4 ) +
+  xlim( -0.5, 0.5) +
+  ylim( -0.6, 0.6) +
+  xlab( "MDS1" ) +
+  ylab( "MDS2" ) +
   theme(legend.position="right")
+
 gg_mds_whel =
- pb_summaries %>%
+  pb_summaries %>%
   filter( matrix=="Whelan2017_strict" ) %>%
   ggplot() +
   geom_point(aes(x=x_global, y=y_global, size=count, col=model), alpha=0.4 ) +  
+  xlim( -0.5, 0.5) +
+  ylim( -0.6, 0.6) +
+  xlab( "MDS1" ) +
+  ylab( "MDS2" ) +
   theme(legend.position="right")
+
 gg_chain =
 ggarrange(
   gg_rank_phil,
@@ -393,7 +424,7 @@ There are several impacts of increasing the number of equilibrium frequency cate
 
 We can further assess the distribution of equilibrium frequencies across categories when the number of categories are constrained to 50 versus when they are unconstrained and allowed to range into the hundred. It could be that the sites that are allocated to rate categories are very different from the sites in the common categories, in which case the added parameters are helping to explain big variation found in rare sites that models with smaller numbers of categories are unable to adequately explain. Alternatively, when a large number of categories are allowed it may be that categories with many sites fragment into clouds of similar categories, in which case the added parameters are soaking up small variations between sites and adding little value. We find support for this second scenario (Extended Data Fig. 3C-D).
 
-Taken together, these results indicate that when CAT models are run without constraint on the number of categories, they select a very large number of categories. A large number of these categories are allocated to a small number of sites that have small differences from other categories. Given the very large number of parameters that must be estimated for this large number of rare categories, this suggests that unconstrained CAT analyses are overparameterized. While models that accommodate site heterogeneity in equilibrium frequency are important in phylogenetic analyses, and tools such as PhyloBayes and IQ-TREE that implement such models are critical to phylogenetic questions considered here, the present analyses suggest that there are potential problems with constrained CAT analyses that are prone to create a large number of categories for a small fraction of sites. In the context of the present question, this means we should be skeptical of Porifera-sister not only because it is obtained under such a narrow range of analysis conditions, but because the very large number of  categories needed to recover this result are adding a large number of parameters that explain a small fraction of the data.
+Taken together, these results indicate that when CAT models are run without constraint on the number of categories, they select a very large number of categories. A large number of these categories are allocated to a small number of sites that have small differences from other categories. Given the very large number of parameters that must be estimated for this large number of rare categories, this suggests that unconstrained CAT analyses are overparameterized. While models that accommodate site heterogeneity in equilibrium frequency are important in phylogenetic analyses, and tools such as PhyloBayes and IQ-TREE that implement such models are critical to phylogenetic questions considered here, the present analyses suggest that there are potential problems with constrained CAT analyses that are prone to create a large number of categories for a small fraction of sites. In the context of the present question, this means we should be skeptical of Porifera-sister not only because it is obtained under such a narrow range of analysis conditions, but because the very large number of categories needed to recover this result are adding a large number of parameters that explain a small fraction of the data.
 
 ``` {r sensitive, fig.width=7.2, fig.height=7.2}
 
