@@ -288,47 +288,16 @@ These results further clarify when analyses support Porifera-sister (*e.g.* Phil
 
 ```{r n_cat, fig.width=6, fig.height=12}
 
-summarise_sample = function( pb ){
-
-  allocation_counts = table(pb@allocation)
-  index = allocation_counts %>% names() %>% as.numeric()
-  
-  if( ! all( index %in% rownames(pb@frequencies) ) ){
-    stop("Allocations are outside available category range")
-  }
-  
-  # Consider only the subset of frequencies that are allocated
-  frequencies = pb@frequencies[ match(index , rownames(pb@frequencies) ), ]
-  
-  # Building on https://www.statmethods.net/advstats/mds.html
-  d = dist( frequencies )
-  fit = cmdscale(d,eig=TRUE, k=2)
-  
-  categories = 
-    tibble(
-      index = index,
-      count = c(allocation_counts),
-      x = fit$points[,1],
-      y = fit$points[,2]
-    ) 
-  
-  if( ! all( categories$index == rownames(frequencies) ) ){
-    stop("category indexes and frequency vector names do not match")
-  }
-  
-  frequencies_tib = 
-    as_tibble( frequencies )
-  
-  names( frequencies_tib ) = paste0( "aa.", names( frequencies_tib ) )
-  
-  categories %<>% 
-    bind_cols( frequencies_tib ) %>%
-    arrange(desc(count)) %>% 
-    mutate( cumsum = cumsum(count)) %<>% 
-    mutate(rank = 1:nrow(categories))
-  
+# Return the allocation midpoint, ie the percent of sites that are allocated to the 
+# 50% of the least frequent categories
+allocation_midpoint = function ( pb_summary ) {
+  x = pb_summary %>% pull( count ) %>% sort(decreasing = FALSE)
+  x = x/ sum(x)
+  y = cumsum( x )
+  return ( round( median( y ) *100, 2 ) )
 }
 
+# Parse the last sample from chain 1 of each analysis
 phil_cat_c1 = 
   parse_phylobayes_last_sample("../trees_new/frequency/subsampled_Philippe2009_only_choanozoa.phy_Poisson_CAT_Chain_1.chain")
 
@@ -341,7 +310,8 @@ whel_cat_c1 =
 whel_cat60_c1 = 
   parse_phylobayes_last_sample("../trees_new/frequency/subsampled_Whelan2017_strict.phy_Poisson_CAT60_Chain_1.chain")
 
-pb_samples = list(
+# Create a single tibble with summaries of all analyses
+pb_summaries = list(
   summarise_sample( phil_cat_c1 ) %>% 
     mutate ( chain=1, matrix="Philippe2009", model="Poisson+CAT"),
   summarise_sample( phil_cat60_c1 ) %>% 
@@ -355,44 +325,78 @@ pb_samples = list(
   mutate( analysis = paste(matrix, model, sep=" ")) %>%
   mutate( model=factor(model, levels=c("Poisson+nCAT60", "Poisson+CAT")) )
 
-pb_frequencies = pb_samples %>% select( starts_with("aa.") ) %>% data.matrix()
+pb_frequencies = pb_summaries %>% select( starts_with("aa.") ) %>% data.matrix()
 
+# Identify the midpoint of each set of allocations
+mid_phil_cat = 
+  pb_summaries %>% 
+  filter( matrix=="Philippe2009" ) %>%
+  filter( model=="Poisson+CAT" ) %>%
+  allocation_midpoint()
+
+mid_phil_ncat60 = 
+  pb_summaries %>% 
+  filter( matrix=="Philippe2009" ) %>%
+  filter( model=="Poisson+nCAT60" ) %>%
+  allocation_midpoint()
+
+mid_whel_cat = 
+  pb_summaries %>% 
+  filter( matrix=="Whelan2017_strict" ) %>%
+  filter( model=="Poisson+CAT" ) %>%
+  allocation_midpoint()
+
+mid_whel_ncat60 = 
+  pb_summaries %>% 
+  filter( matrix=="Whelan2017_strict" ) %>%
+  filter( model=="Poisson+nCAT60" ) %>%
+  allocation_midpoint()
+
+n_categories_phil_cat =
+  pb_summaries %>% 
+  filter( matrix=="Philippe2009" ) %>%
+  filter( model=="Poisson+CAT" ) %>%
+  nrow()
+
+n_categories_whel_cat =
+  pb_summaries %>% 
+  filter( matrix=="Whelan2017_strict" ) %>%
+  filter( model=="Poisson+CAT" ) %>%
+  nrow()
+
+
+# Perform global MDS analysys
 fit = cmdscale( dist( pb_frequencies ) ,eig=TRUE, k=2)
+pb_summaries %<>% mutate( x_global = fit$points[,1], y_global = fit$points[,2] )
 
-pb_samples %<>% mutate( x_global = fit$points[,1], y_global = fit$points[,2] )
-
-
-pb_samples %>% 
-ggplot() + geom_line(aes(x = rank, y = cumsum, col=analysis))
-
+# Generate plots
 gg_rank_phil = 
-  pb_samples %>% 
+  pb_summaries %>% 
   filter( matrix=="Philippe2009" ) %>%
   ggplot() +
   geom_line(aes(x=rank, y=count, col=model)) + 
   theme(legend.position="right")
 
 gg_rank_whel = 
-  pb_samples %>% 
+  pb_summaries %>% 
   filter( matrix=="Whelan2017_strict" ) %>%
   ggplot() +
   geom_line(aes(x=rank, y=count, col=model)) + 
   theme(legend.position="right")
 
 gg_mds_phil = 
- pb_samples %>% 
+ pb_summaries %>% 
   filter( matrix=="Philippe2009" ) %>% 
   ggplot() +
   geom_point(aes(x=x_global, y=y_global, size=count, col=model), alpha=0.4 ) + 
   theme(legend.position="right")
 
 gg_mds_whel = 
- pb_samples %>% 
+ pb_summaries %>% 
   filter( matrix=="Whelan2017_strict" ) %>% 
   ggplot() +
   geom_point(aes(x=x_global, y=y_global, size=count, col=model), alpha=0.4 ) +  
   theme(legend.position="right")
-
 
 gg_chain = 
 ggarrange(
@@ -408,9 +412,11 @@ ggarrange(
 
 ```
 
-There are several impacts of increasing the number of equilibrium frequency categories from dozens (which leads to support for Ctenophora-Sister) to hundreds (which supports Porifera-sister). It could be that there are a large fraction of sites with diverse equilibrium frequencies that are not accommodated well when there is a smaller number of categories, and that by increasing the number of categories the model is able to overcome biases when too few categroies are available. This would suggest that we should favor the result under a very large number of categories, Porifera-sister. Alternatively, it could be that adding a large number of categories is adding so many parameters that the information in the data are insufficient to infer both the topology and those parameter. This would suggest that we should favor the result under a smaller number of categories, Ctenophora-sister. One way to assess this is to look at the allocation of sites to equilibrium frequency categories. Each new category adds the same number of parameters, but that site can be allocated to any number of sites. If as we add categories those categories are allocated to a small fraction of sites, then the negative cost of those sites is high relative to the fraction of the data they help explain, and we should be skeptical of the results shen adding so many sites. That is exactly what we see (Extended Data Fig. 3.5 a-b). This suggests that support for Prorifera-sister is due to adding a very large number of parameters that explain a tiny fraction of the data.
+There are several impacts of increasing the number of equilibrium frequency categories from dozens (which leads to support for Ctenophora-Sister) to hundreds (which supports Porifera-sister). It could be that there are a large fraction of sites with diverse equilibrium frequencies that are not accommodated well when there is a smaller number of categories, and that by increasing the number of categories the model is able to overcome biases when too few categroies are available. This would suggest that we should favor the result under a very large number of categories, Porifera-sister. Alternatively, it could be that adding a large number of categories is adding so many parameters that the information in the data are insufficient to infer both the topology and those parameter. This would suggest that we should favor the result under a smaller number of categories, Ctenophora-sister. One way to assess this is to look at the allocation of sites to equilibrium frequency categories. Each new category adds the same number of parameters, but that site can be allocated to any number of sites. If as we add categories those categories are allocated to a small fraction of sites, then the negative cost of those sites is high relative to the fraction of the data they help explain, and we should be skeptical of the results shen adding so many sites. That is exactly what we see when we examine category allocations in the last chain samples of analyses of the Philippe2009 and Whelan2017_strict matrices (Extended Data Fig. 3.5 a-b), which have `r n_categories_phil_cat` and `n_categories_whel_cat` categories. The fraction of sites allocated to the 50% of the least frequent categories is `r mid_phil_cat`% in the analysis of the Philippe2009 matrix and `r mid_whel_cat`% in the analysis of the Whelan2017_strict matrix. This is in stark contrast to nCAT60 analyses, constrained to 60 categories, that have no such long tail of rare categories (Extended Data Fig. 3.5 a-b). This suggests that support for Prorifera-sister is due to adding a very large number of parameters that explain a tiny fraction of the data.
 
-We can further assess how, when a add parameters for a very large number of categories, the categories that are allocated to a small number of sites differ from those that are allocated to a large number of sites. It could be that the sites that are allocated to rate caetgories are very different from the sites in the common categories, in which case the added parameters are helping to explain big variation found in rare sites that models with smaller numbers of categories are unable to adequately explain. Alternatively, when a large number of caetgories are allowed it may be that categories with many sites fragment into clouds of similar categories, in which case the added parameters are soaking up small variations between sites and adding little value. We find support for this second scenario (Extended Data Fig. 3.5 d-c).
+We can further assess the distribution of equilibrium frequencies across categories when the number of categories are constrained to 50 versus when they are unconstrained and allowed to range into the hundred. It could be that the sites that are allocated to rate caetgories are very different from the sites in the common categories, in which case the added parameters are helping to explain big variation found in rare sites that models with smaller numbers of categories are unable to adequately explain. Alternatively, when a large number of caetgories are allowed it may be that categories with many sites fragment into clouds of similar categories, in which case the added parameters are soaking up small variations between sites and adding little value. We find support for this second scenario (Extended Data Fig. 3.5 d-c).
+
+Taken together, these results indicate that when CAT models are run without constraint on the number of categories, they select a very large number of categories. A large number of these categories are allocated to a small number of sites that have small differences from other categories. Given the very large number of parameters that must be estimated for this large number of rare categories, this suggests that unconstrained CAT analyses are overparameterized. While models that accommodate site heterogeneity in equilibrium frequency are important in phylogenetic analyses, and tools such as PhyloBayes and IQtree that implement such models are critical to phylogenetic questions considered here, the present analyses suggest that there are potential problems with constrained CAT analyses that are prone to create a large number of categories for a small fraction of sites. In the context of the present question, this means we should be skeptical of Porifera-sister not only because it is obtained under such a narrow range of analysis conditions, but because the very large number of caetegories needed to recover this result are adding a large number of parameters that explain a small fraction of the data.
 
 ``` {r sensitive, fig.width=7.2, fig.height=7.2}
 

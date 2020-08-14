@@ -167,3 +167,51 @@ parse_phylobayes_last_sample = function( file_name ){
   chain[[length(chain)]]
 }
 
+
+
+#' Summarise each category
+#'
+#' @param pb A PhylobayesSample object
+#' @return A tibble, with one row per equilibrium frequency category
+#' @export
+
+summarise_sample = function( pb ){
+  
+  allocation_counts = table(pb@allocation)
+  index = allocation_counts %>% names() %>% as.numeric()
+  
+  if( ! all( index %in% rownames(pb@frequencies) ) ){
+    stop("Allocations are outside available category range")
+  }
+  
+  # Consider only the subset of frequencies that are allocated
+  frequencies = pb@frequencies[ match(index , rownames(pb@frequencies) ), ]
+  
+  # Building on https://www.statmethods.net/advstats/mds.html
+  d = dist( frequencies )
+  fit = cmdscale(d,eig=TRUE, k=2)
+  
+  categories = 
+    tibble(
+      index = index,
+      count = c(allocation_counts),
+      x = fit$points[,1],
+      y = fit$points[,2]
+    ) 
+  
+  if( ! all( categories$index == rownames(frequencies) ) ){
+    stop("category indexes and frequency vector names do not match")
+  }
+  
+  frequencies_tib = 
+    as_tibble( frequencies )
+  
+  names( frequencies_tib ) = paste0( "aa.", names( frequencies_tib ) )
+  
+  categories %<>% 
+    bind_cols( frequencies_tib ) %>%
+    arrange(desc(count)) %>% 
+    mutate( cumsum = cumsum(count)) %<>% 
+    mutate(rank = 1:nrow(categories))
+  
+}
