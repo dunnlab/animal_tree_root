@@ -18,6 +18,7 @@ library( igraph )
 library( doParallel )
 
 source( "functions.R" )
+source( "phylobayes.R" )
 
 # Set system computational parameters
 cores = detectCores() - 1
@@ -332,6 +333,80 @@ partition_network_summary =
 
 ### Summarize phylogenetic signal by genes
 au_tests = parse_au_gene_tests()
+
+### Summarize categories from pbmpi
+
+# Parse the last sample from chain 1 of each analysis
+phil_cat_c1 =
+  parse_phylobayes_last_sample("../trees_new/frequency/subsampled_Philippe2009_only_choanozoa.phy_Poisson_CAT_Chain_1.chain")
+
+phil_cat60_c1 =
+  parse_phylobayes_last_sample("../trees_new/frequency/subsampled_Philippe2009_only_choanozoa.phy_Poisson_nCAT60_Chain_1.chain")
+
+whel_cat_c1 =
+  parse_phylobayes_last_sample("../trees_new/frequency/subsampled_Whelan2017_strict.phy_Poisson_CAT_Chain1.chain")
+
+whel_cat60_c1 =
+  parse_phylobayes_last_sample("../trees_new/frequency/subsampled_Whelan2017_strict.phy_Poisson_CAT60_Chain_1.chain")
+
+# Create a single tibble with summaries of all analyses
+pb_summaries = list(
+  summarise_sample(phil_cat_c1) %>%
+    mutate ( chain=1, matrix="Philippe2009", model="Poisson+CAT"), 
+  summarise_sample(phil_cat60_c1) %>%
+    mutate ( chain=1, matrix="Philippe2009", model="Poisson+nCAT60"), 
+  summarise_sample(whel_cat_c1) %>%
+    mutate ( chain=1, matrix="Whelan2017_strict", model="Poisson+CAT"), 
+  summarise_sample(whel_cat60_c1) %>%
+    mutate ( chain=1, matrix="Whelan2017_strict", model="Poisson+nCAT60")
+) %>%
+  bind_rows() %>%
+  mutate( analysis = paste(matrix, model, sep=" ")) %>%
+  mutate( model=factor(model, levels=c("Poisson+nCAT60", "Poisson+CAT")) )
+
+pb_frequencies = pb_summaries %>% select( starts_with("aa.") ) %>% data.matrix()
+
+# Identify the midpoint of each set of allocations
+mid_phil_cat =
+  pb_summaries %>%
+  filter( matrix=="Philippe2009" ) %>%
+  filter( model=="Poisson+CAT" ) %>%
+  allocation_midpoint()
+
+mid_phil_ncat60 =
+  pb_summaries %>%
+  filter( matrix=="Philippe2009" ) %>%
+  filter( model=="Poisson+nCAT60" ) %>%
+  allocation_midpoint()
+
+mid_whel_cat =
+  pb_summaries %>%
+  filter( matrix=="Whelan2017_strict" ) %>%
+  filter( model=="Poisson+CAT" ) %>%
+  allocation_midpoint()
+
+mid_whel_ncat60 =
+  pb_summaries %>%
+  filter( matrix=="Whelan2017_strict" ) %>%
+  filter( model=="Poisson+nCAT60" ) %>%
+  allocation_midpoint()
+
+n_categories_phil_cat =
+  pb_summaries %>%
+  filter( matrix=="Philippe2009" ) %>%
+  filter( model=="Poisson+CAT" ) %>%
+  nrow()
+
+n_categories_whel_cat =
+  pb_summaries %>%
+  filter( matrix=="Whelan2017_strict" ) %>%
+  filter( model=="Poisson+CAT" ) %>%
+  nrow()
+
+
+# Perform global MDS analysys
+fit = cmdscale( dist( pb_frequencies ) ,eig=TRUE, k=2)
+pb_summaries %<>% mutate( x_global = fit$points[,1], y_global = fit$points[,2] )
 
 ## Record information about the session
 session_info_kernel = sessionInfo()
