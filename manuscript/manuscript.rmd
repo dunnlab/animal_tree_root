@@ -520,7 +520,7 @@ matrix_overlap_rectangles %>%
     scale_x_continuous(name = "Genes") +
     scale_y_continuous(name = "Species") +
     geom_rect( mapping = aes(xmin = xmin, xmax = xmax, ymin = ymin, ymax = ymax, fill = MSA ), alpha = 0.5) +
-    facet_grid( matrix_1 ~ matrix_2, scales = "free" ) +
+    facet_grid( matrix_1 ~ matrix_2) +
     theme( axis.text.x = element_text(angle = 45, hjust = 1),
            strip.text.y = element_text(angle = 0),
            strip.text.x = element_text(angle = 60))
