@@ -168,7 +168,6 @@ parse_phylobayes_last_sample = function( file_name ){
 }
 
 
-
 #' Summarise each category
 #'
 #' @param pb A PhylobayesSample object
@@ -214,4 +213,13 @@ summarise_sample = function( pb ){
     mutate( cumsum = cumsum(count)) %<>% 
     mutate(rank = 1:nrow(categories))
   
+}
+
+# Return the allocation midpoint, ie the percent of sites that are allocated to the
+# 50% of the least frequent categories
+allocation_midpoint = function ( pb_summary ) {
+  x = pb_summary %>% pull( count ) %>% sort(decreasing = FALSE)
+  x = x/ sum(x)
+  y = cumsum( x )
+  return ( round( median( y ) *100, 2 ) )
 }
