@@ -86,7 +86,7 @@ PhylobayesSample = function(
     rr = as.numeric(text_6),
     dirweight = text_7 %>% str_split("\t") %>% unlist() %>% as.numeric(),
     frequencies = text[freq_start:(length(text)-1)] %>% str_split("\t", 20) %>% lapply( as.numeric ) %>% do.call( rbind, . ), 
-    allocation = text[length(text)] %>% str_split("\t") %>% unlist() %>% as.numeric()
+    allocation = text[length(text)] %>% str_trim() %>% str_split("\t") %>% unlist() %>% as.numeric()
   )
   
   rownames( object@frequencies ) = 0:( nrow( object@frequencies ) - 1 )

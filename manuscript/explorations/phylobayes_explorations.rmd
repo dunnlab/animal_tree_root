@@ -136,14 +136,63 @@ plot_chain( pb, site_occupancy )
 
 ```{r}
 
-chain = parse_phylobayes_chain( "Whelan2017_strict.phy_Chain1_last50000.chain" )
+chain_whel_cat = parse_phylobayes_chain( "../../trees_new/frequency/subsampled_Whelan2017_strict.phy_Poisson_CAT_Chain1.chain" )
   
 # Take just the last sample for now
-pb = chain[[length(chain)]]
+pb_whel_cat = chain_whel_cat[[length(chain_whel_cat)]]
 
-plot_chain( pb, site_occupancy )
+plot_chain( pb_whel_cat, site_occupancy )
 
 ```
 
-**Figure CAT.** Plots for CAT.
+**Figure CAT.** Plots for Whelan CAT.
+
+```{r}
+
+chain_phil_cat = parse_phylobayes_chain( "../../trees_new/frequency/subsampled_Philippe2009_only_choanozoa.phy_Poisson_CAT_Chain_1.chain" )
+  
+# Take just the last sample for now
+pb_phil_cat = chain_phil_cat[[length(chain_phil_cat)]]
+
+plot_chain( pb_phil_cat, site_occupancy )
+
+```
+
+
+**Figure Philippe CAT.**
+
+
+## Assessing consistency of allocations
+
+The goal of these analyses is to investigate the consistency of site allocation to rare or frequent categories across generations and chains. The metric we looked at was, for each site, the mean and distribution of the mean number of sites allocated to the category the site belongs to across generations.
+
+First, we extracted these statistics from each chain ising `allocation_job.sh`, which runs `pb_allocation.py`
+
+```{r}
+
+allocations_phil_cat_chain1 = read_delim( "Philippe2009_only_choanozoa.phy_Poisson_CAT_Chain_1.category.summary", delim=" ", col_names=c("mean_chain1", "std_chain1") )
+allocations_phil_cat_chain2 = read_delim( "Philippe2009_only_choanozoa.phy_Poisson_CAT_Chain_2.category.summary", delim=" ", col_names=c("mean_chain2", "std_chain2") )
+
+allocations_phil_cat = 
+  bind_cols( allocations_phil_cat_chain1, allocations_phil_cat_chain2 ) %>% 
+  mutate( site=1:nrow(allocations_phil_cat_chain1)) %>%
+  mutate( sample=pb_phil_cat@allocation) %>%
+  mutate( sample_1=chain_phil_cat[[length(chain_phil_cat)-1]]@allocation)
+
+allocations_phil_cat %>% ggplot() + geom_point(aes(x=mean_chain1, y=mean_chain2), alpha=0.1) + ggtitle("Philippe2009")
+
+allocations_phil_cat %>% ggplot() + geom_point(aes(x=mean_chain1, y=sample_1), alpha=0.1) + ggtitle("Philippe2009")
+
+allocations_phil_cat %>% ggplot() + geom_point(aes(x=sample_1, y=sample), alpha=0.1) + ggtitle("Philippe2009")
+
+allocations_whel_cat_chain1 = read_delim( "Whelan2017_strict.phy_Poisson_CAT_Chain1.category.summary", delim=" ", col_names=c("mean_chain1", "std_chain1") )
+allocations_whel_cat_chain2 = read_delim( "Whelan2017_strict.phy_Poisson_CAT_Chain2.category.summary", delim=" ", col_names=c("mean_chain2", "std_chain2") )
+
+allocations_whel_cat = bind_cols( allocations_whel_cat_chain1, allocations_whel_cat_chain2 ) %>% mutate( site=1:nrow(allocations_whel_cat_chain1))
+
+allocations_whel_cat %>% ggplot() + geom_point(aes(x=mean_chain1, y=mean_chain2), alpha=0.1) + ggtitle("Whelan2017")
+
+
+```
+
 
