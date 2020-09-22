@@ -87,7 +87,7 @@ There has been considerable debate about the placement of the root in the animal
 
 Historically, there was little debate about the root of the animal tree of life. Porifera-sister (Figs. 1B, 1E), the hypothesis that the animal root marks the divergence of Porifera (sponges) from all other animals, was widely accepted though rarely tested. By contrast, there has long been uncertainty about the placement of Ctenophora (comb jellies) in the animal tree of life [@Wallberg:2004ws]. The first phylogenomic study to include ctenophores [@Dunn:2008ky] suggested a new hypothesis, now referred to as Ctenophora-sister, that ctenophores rather than sponges are our most distant living animal relative (Figs. 1A, 1D). Since then, many more relevant phylogenomic studies have been published (Fig. 2), with some analyses finding support for Ctenophora-sister, some for Porifera-sister, and some neither [@King:2017ie] (Extended Data Table 1, Supplementary Information section S1). The extensive technical variation across these studies has been important to advancing the understanding of the sensitivity of these analyses, demonstrating for example that outgroup and model selection can have a large impact on these results (Fig. 3A). But the extensive technical variation has also made it difficult to synthesize these results to understand the underlying causes of this sensitivity. This is because methodological variance is often confounded, for example when a particular model is only available in one software package.  
 
-To advance this problem it is therefore critical to synthesize published studies and explore variation in methods and results in a standardized and systematic framework. Here, we synthesize data and results from previous phylogenomic analyses that tested Ctenophora-sister and Porifera-sister from 15 studies (Fig. 2A, Extended Data Table 1). These include all such phylogenomic studies of amino acid sequence data published before 2019 for which we could obtain data matrices with gene partition annotations. Among these 15 studies,  three studies [@pisani2015genomic; @whelan2016let; @feuda2017improved] are based entirely on previously published data and gene-partition data is not available from one study [@Pick:2010eb]. 
+To advance this problem it is therefore critical to synthesize published studies and explore variation in methods and results in a standardized and systematic framework. Here, we synthesize data and results from previous phylogenomic analyses that tested Ctenophora-sister and Porifera-sister from 15 studies (Fig. 2A, Extended Data Table 1). These include all such phylogenomic studies of amino acid sequence data published before 2019 for which we could obtain data matrices with gene partition annotations. Among these 15 studies,  three studies [@pisani2015genomic; @whelan2016let; @feuda2017improved] are based entirely on previously published data and gene-partition data is not available from one study [@Pick:2010eb].
 
 ![](figures/Figure_overview.png)
 **Fig. 1.** Two alternative phylogenetic hypotheses from previous phylogenomic studies. (A) The Ctenophora-sister hypothesis posits that there is a clade (designated by the orange node) that includes all animals except Ctenophora, and that Ctenophora is sister to this clade. (B) The Porifera-sister hypothesis posits that there is a clade (designated by the green node) that includes all animals except Porifera, and that Porifera is sister to this clade. Testing these hypotheses requires evaluating the support for each of these alternative nodes. (C) The animals and their outgroup choice, showing the three progressively more inclusive clades Choanimalia, Holozoa, and Opisthokonta. (D) A ctenophore, commonly known as comb jellies. (E) A poriferan, commonly known as sponges.
@@ -856,7 +856,7 @@ The vector of equilibrium frequencies $\Pi$ describes the stationary frequency o
 
 ### S.3 Data-recoding methods
 
-Feuda *et al.* [@feuda2017improved] were concerned that the Ctenophora-sister results Chang *et al.* [@Chang:2015hl] and Whelan *et al.* [@Whelan:2015jj] were artefacts of lineage-specific differences in amino acid frequencies. In an attempt to reduce these differences, they recoded the full set of twenty amino acids into six groups of amino acids. These groups have more frequent evolutionary changes within them than between them, based on empirical observations in large protein datasets [@Susko:2007ds]. The intent is to discard many lineage-specific changes, which are expected to fall within these groups. Rather than model compositional heterogeneity, as their title suggests, this approach discards heterogeneous information so that much simpler models with fewer states can be applied. 
+Feuda *et al.* [@feuda2017improved] were concerned that the Ctenophora-sister results Chang *et al.* [@Chang:2015hl] and Whelan *et al.* [@Whelan:2015jj] were artefacts of lineage-specific differences in amino acid frequencies. In an attempt to reduce these differences, they recoded the full set of twenty amino acids into six groups of amino acids. These groups have more frequent evolutionary changes within them than between them, based on empirical observations in large protein datasets [@Susko:2007ds]. The intent is to discard many lineage-specific changes, which are expected to fall within these groups. Rather than model compositional heterogeneity, as their title suggests, this approach discards heterogeneous information so that much simpler models with fewer states can be applied.
 
 Feuda *et al.* [@feuda2017improved] report that posterior predictive (PP) analyses [@Bollback:2002to] indicate 6-state recoded analyses have better model adequacy than 20-state amino acid analyses, and "Porifera-sister was favored under all recoding strategies" in Whelan2015_D20 and Chang2015 data matrices. Here we focus on two aspects of Feuda *et al.* First, we point out that many of their recoded analyses are actually unresolved (*i.e.*, without strong support for either Porifera-sister or Ctenophora-sister) (Extended Data Fig. 5). Second, we present new analyses that show the impact of recoding is largely due to discarding information, not accommodating variation in amino acid composition. These findings indicate that recoding can be a problematic method for addressing compositional variation.
 
@@ -885,3 +885,80 @@ Supplementary_Table 6. Summary of sensitive analyses with different number of CA
 Supplementary_Table 7. Distribution of phylogenetic signal of different models and outgroup sampling for two alternative hypotheses on the animal-root position in Philippe2009, Ryan2013 and Whelan2017_full matrices (Table is converted from au_tests in Rdata).  
 
 ## References
+
+
+branch_lengths = read.csv("../data_processed/tables/branch_lengths.tsv", header=TRUE, sep="\t")
+
+branch_lengths$Clade =
+    factor(
+        branch_lengths$Clade,
+        levels = c("Bilateria", "Cnidaria", "Placozoa", "Porifera", "Ctenophora", "Choanoflagellata"))
+
+p=ggplot (branch_lengths, aes(x=Clade, y=branch_length, fill=Clade)) + geom_violin(trim=FALSE) + geom_boxplot(width=0.1) + theme_classic()+  labs(x="Clade", y = "Branch Lengths")
+
+p+scale_fill_manual(values=c("#E6BEFF", "#911EB4", "#82D1F4", "#009E73", "#E69F00", "#4363D8"))
+
+
+Bilateria_branch_mean = branch_lengths %>% filter(Clade=="Bilateria") %>% summarise(mean = mean(branch_length), n = n())
+Porifera_branch_mean = branch_lengths %>% filter(Clade=="Porifera") %>% summarise(mean = mean(branch_length), n = n())
+Ctenophora_branch_mean = branch_lengths %>% filter(Clade=="Ctenophora") %>% summarise(mean = mean(branch_length), n = n())
+
+taxa_map=read_tsv("../reconciliation/taxonomy_info/taxon_table.tsv") %>% filter(original_matrix=="../considered_data/Whelan2017/strict.phy")
+outgroup= taxa_map %>% filter (clade_assignment=="Choanoflagellida")
+Bilateria= taxa_map %>% filter (clade_assignment=="Bilateria")
+Cnidaria= taxa_map %>% filter (clade_assignment=="Cnidaria")
+Placozoa= taxa_map %>% filter (clade_assignment=="Placozoa")
+Porifera= taxa_map %>% filter (clade_assignment=="Porifera")
+Ctenophora= taxa_map %>% filter (clade_assignment=="Ctenophora")
+
+
+tree1= read.tree("../trees_new/iqtree/Whelan2017_strict.model_test.treefile")
+tree1_rooted =  root(tree1, outgroup$relabelled_name, resolved.root=TRUE)
+p1 = ggtree(tree1_rooted) +
+  geom_cladelabel(node=90, label="Ctenophora", color="#E69F00") +
+  geom_cladelabel(node=114, label="Porifera", color="#009E73") +
+  geom_hilight(node=90, fill="#E69F00") +
+  geom_hilight(node=114, fill="#009E73") +
+  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 100)) + ggtitle("    WAG+C60")
+
+
+tree2=read.tree("../trees_new/sensitive/Whelan2017_strict.phy_Poisson_CAT60.con.tre")
+tree2_rooted =  root(tree2, outgroup$relabelled_name, resolved.root=TRUE)
+p2= ggtree(tree2_rooted) +
+  geom_cladelabel(node=119, label="Ctenophora", color="#E69F00") +
+  geom_cladelabel(node=100, label="Porifera", color="#009E73") +
+  geom_hilight(node=119, fill="#E69F00") +
+  geom_hilight(node=100, fill="#009E73") +
+  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 100)) + ggtitle("    Poisson+nCAT60")
+
+
+tree3=read.tree("../trees_new/sensitive/Whelan2017_strict.phy_Poisson_CAT90.con.tre")
+tree3_rooted =  root(tree3, outgroup$relabelled_name, resolved.root=TRUE)
+p3=ggtree(tree3_rooted) +
+  geom_cladelabel(node=100, label="Ctenophora", color="#E69F00") +
+  geom_cladelabel(node=130, label="Porifera", color="#009E73") +
+  geom_hilight(node=100, fill="#E69F00") +
+  geom_hilight(node=130, fill="#009E73") +
+  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 100)) + ggtitle("    Poisson+nCAT90")
+p3 = flip(p3, 100, 98)
+
+tree4=read.tree("../trees_new/phylobayes/Whelan2017_strict.bpcomp.con.tre")
+tree4_rooted =  root(tree4, outgroup$relabelled_name, resolved.root=TRUE)
+p4=ggtree(tree4_rooted) +
+  geom_cladelabel(node=100, label="Ctenophora", color="#E69F00") +
+  geom_cladelabel(node=130, label="Porifera", color="#009E73") +
+  geom_hilight(node=100, fill="#E69F00") +
+  geom_hilight(node=130, fill="#009E73") +
+  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 100)) + ggtitle("    Poisson+CAT")
+p4 = flip(p4, 100, 98)
+
+tree5=read.tree("../trees_new/phylobayes/Whelan2017_strict.phy_GTR_CAT.con.tre")
+tree5_rooted =  root(tree5, outgroup$relabelled_name, resolved.root=TRUE)
+p5=ggtree(tree5_rooted) +
+  geom_cladelabel(node=119, label="Ctenophora", color="#E69F00") +
+  geom_cladelabel(node=100, label="Porifera", color="#009E73") +
+  geom_hilight(node=119, fill="#E69F00") +
+  geom_hilight(node=100, fill="#009E73") +
+  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 100)) + ggtitle("    GTR+CAT")
+
+ggarrange(p1, p2, p3, p4, p5,  ncol  = 3, nrow = 2, labels = c("A", "B", "C", "D" , "E"), common.legend = TRUE)
