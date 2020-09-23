@@ -279,7 +279,7 @@ A primary difference between the C (like C60) and CAT site-heterogeneous models 
 
 We examined the specific impact of these large difference in category number on animal root position. It is not possible to use more than 60 categories for C models in IQ-TREE, but the number of categories can be set *a priori* in Phylobayes using nCAT. We therefore varied the number of categories in Phylobayes analyses (Fig. 4; Supplementary Table 6). We found that Poisson+nCAT60 analyses in PhyloBayes, like Poisson+C60 and WAG+C60 IQ-TREE analyses, provide strong support of Ctenophora-sister. This indicates that the difference in results between unconstrained CAT analyses in PhyloBayes and C60 analyses in IQ-TREE is not due to differences in the software or other implementation factors, but due to the large difference, in excess of ten-fold, in the number of site categories. When we increased the number of categories in PhyloBayes nCAT analyses, we observe the transition from support for Ctenophora-sister to an unresolved root to Porifera-sister (Fig. 4). For example, for the Whelan2017_strict matrix this transition occurs between 60 -- 120 categories when using Poisson+nCAT model.
 
-Due to computational limitations of GTR models, we only ran GTR+CAT and GTR+nCAT60 models on representative matrices with Choanimalia sampling. We found that for both Whelan2017 and Philippe2009 matrices, support shifted from Porifera-sister with Poisson+CAT model to Ctenophora-sister using GTR+CAT model. Moreover, we also found all results strongly supported Ctenophora-sister with GTR+nCAT60 models.
+Due to computational limitations of GTR models, we only ran GTR+CAT and GTR+nCAT60 models on representative matrices with Choanimalia sampling. We found that for Whelan2017 matrices, support shifted from Porifera-sister with Poisson+CAT model to Ctenophora-sister using GTR+CAT model. Moreover, we also found all results strongly supported Ctenophora-sister with GTR+nCAT60 models.
 
 These results further clarify when analyses support Porifera-sister (*e.g.* Philippe2009, Whelan2017). Outgroup sampling must be restricted (Choanimalia), a Poisson rather than GTR exchange matrix must be used, and a very large number of site categories must be used (unconstrained CAT, giving hundreds of equilibrium frequency categories). Analyses under other conditions either support Ctenophora-sister or are unresolved. This is consistent across published analyses and our new panels of analyses. The question, then, isn't why similar analyses give different results, but how we should interpret variation in results when we run analyses that differ in these specific respects. If we fix the first two features to conditions that are necessary for Porifera-sister support (Choanimalia taxon sampling and a Poisson exchange matrix), there are several things we can learn from examining how the number of equilibrium frequency categories impacts results that sheds light on interpretation of those results.
 
@@ -919,7 +919,7 @@ p1 = ggtree(tree1_rooted) +
   geom_cladelabel(node=114, label="Porifera", color="#009E73") +
   geom_hilight(node=90, fill="#E69F00") +
   geom_hilight(node=114, fill="#009E73") +
-  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 100)) + ggtitle("    WAG+C60")
+  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 95)) + ggtitle("    WAG+C60")
 
 
 tree2=read.tree("../trees_new/sensitive/Whelan2017_strict.phy_Poisson_CAT60.con.tre")
@@ -929,7 +929,7 @@ p2= ggtree(tree2_rooted) +
   geom_cladelabel(node=100, label="Porifera", color="#009E73") +
   geom_hilight(node=119, fill="#E69F00") +
   geom_hilight(node=100, fill="#009E73") +
-  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 100)) + ggtitle("    Poisson+nCAT60")
+  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 1)) + ggtitle("    Poisson+nCAT60")
 
 
 tree3=read.tree("../trees_new/sensitive/Whelan2017_strict.phy_Poisson_CAT90.con.tre")
@@ -939,7 +939,7 @@ p3=ggtree(tree3_rooted) +
   geom_cladelabel(node=130, label="Porifera", color="#009E73") +
   geom_hilight(node=100, fill="#E69F00") +
   geom_hilight(node=130, fill="#009E73") +
-  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 100)) + ggtitle("    Poisson+nCAT90")
+  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 1)) + ggtitle("    Poisson+nCAT90")
 p3 = flip(p3, 100, 98)
 
 tree4=read.tree("../trees_new/phylobayes/Whelan2017_strict.bpcomp.con.tre")
@@ -949,7 +949,7 @@ p4=ggtree(tree4_rooted) +
   geom_cladelabel(node=130, label="Porifera", color="#009E73") +
   geom_hilight(node=100, fill="#E69F00") +
   geom_hilight(node=130, fill="#009E73") +
-  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 100)) + ggtitle("    Poisson+CAT")
+  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) <1)) + ggtitle("    Poisson+CAT")
 p4 = flip(p4, 100, 98)
 
 tree5=read.tree("../trees_new/phylobayes/Whelan2017_strict.phy_GTR_CAT.con.tre")
@@ -959,6 +959,91 @@ p5=ggtree(tree5_rooted) +
   geom_cladelabel(node=100, label="Porifera", color="#009E73") +
   geom_hilight(node=119, fill="#E69F00") +
   geom_hilight(node=100, fill="#009E73") +
-  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 100)) + ggtitle("    GTR+CAT")
+  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 1)) + ggtitle("    GTR+CAT")
+
+ggarrange(p1, p2, p3, p4, p5,  ncol  = 3, nrow = 2, labels = c("A", "B", "C", "D" , "E"), common.legend = TRUE)
+
+taxa_map=read_tsv("../reconciliation/taxonomy_info/taxon_table.tsv") %>% filter(original_matrix=="../considered_data/Philippe2009/Philippe2009.nex")
+outgroup= taxa_map %>% filter (clade_assignment=="Choanoflagellida")
+
+tree1= read.tree("../trees_new/iqtree/Philippe2009_only_choanozoa.WAG+C60.treefile")
+tree1_rooted =  root(tree1, outgroup=outgroup$relabelled_name, resolved.root=TRUE)
+p1 = ggtree(tree1_rooted) +
+  geom_cladelabel(node=85, label="Ctenophora") +
+  geom_cladelabel(node=76, label="Porifera", angle=90, hjust='center', offset.text=.01) +
+  geom_cladelabel(node=33, label="Placozoa") +
+  geom_cladelabel(node=53, label="Bilateria") +
+  geom_cladelabel(node=51, label="Cnidaria") +
+  geom_hilight(node=85, fill="#E69F00") +
+  geom_hilight(node=76, fill="#009E73") +
+  geom_hilight(node=33, fill="#82D1F4") +
+  geom_hilight(node=53, fill="#E6BEFF") +
+  geom_hilight(node=51, fill="#911EB4") +
+  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 95), hjust=-.3, size=2) + ggtitle("    WAG+C60")
+
+
+tree2=read.tree("../trees_new/sensitive/Philippe2009_only_choanozoa.phy_Poisson_CAT60.con.tre")
+tree2_rooted =  root(tree2, outgroup$relabelled_name, resolved.root=TRUE)
+p2= ggtree(tree2_rooted) +
+  geom_cladelabel(node=83, label="Ctenophora") +
+  geom_cladelabel(node=85, label="Porifera", angle=90, hjust='center', offset.text=.01) +
+  geom_cladelabel(node=32, label="Placozoa") +
+  geom_cladelabel(node=58, label="Bilateria") +
+  geom_cladelabel(node=52, label="Cnidaria") +
+  geom_hilight(node=83, fill="#E69F00") +
+  geom_hilight(node=85, fill="#009E73") +
+  geom_hilight(node=32, fill="#82D1F4") +
+  geom_hilight(node=58, fill="#E6BEFF") +
+  geom_hilight(node=52, fill="#911EB4") +
+  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 0.95), hjust=-.3, size=2) + ggtitle("    Poisson+nCAT60")
+
+
+tree3=read.tree("../trees_new/sensitive/Philippe2009_only_choanozoa.phy_Poisson_CAT150.con.tre")
+tree3_rooted =  root(tree3, outgroup$relabelled_name, resolved.root=TRUE)
+p3=ggtree(tree3_rooted) +
+  geom_cladelabel(node=83, label="Ctenophora") +
+  geom_cladelabel(node=85, label="Porifera", angle=90, hjust='center', offset.text=.01) +
+  geom_cladelabel(node=32, label="Placozoa") +
+  geom_cladelabel(node=58, label="Bilateria") +
+  geom_cladelabel(node=52, label="Cnidaria") +
+  geom_hilight(node=83, fill="#E69F00") +
+  geom_hilight(node=85, fill="#009E73") +
+  geom_hilight(node=32, fill="#82D1F4") +
+  geom_hilight(node=58, fill="#E6BEFF") +
+  geom_hilight(node=52, fill="#911EB4") +
+  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 0.95), hjust=-.3, size=2) + ggtitle("    Poisson+nCAT90")
+
+
+tree4=read.tree("../trees_new/phylobayes/Philippe2009_only_choanozoa.bpcomp.con.tre")
+tree4_rooted =  root(tree4, outgroup$relabelled_name, resolved.root=TRUE)
+p4=ggtree(tree4_rooted) +
+  geom_cladelabel(node=58, label="Ctenophora") +
+  geom_cladelabel(node=84, label="Porifera", angle=90, hjust='center', offset.text=.01) +
+  geom_cladelabel(node=35, label="Placozoa") +
+  geom_cladelabel(node=60, label="Bilateria") +
+  geom_cladelabel(node=52, label="Cnidaria") +
+  geom_hilight(node=58, fill="#E69F00") +
+  geom_hilight(node=84, fill="#009E73") +
+  geom_hilight(node=35, fill="#82D1F4") +
+  geom_hilight(node=60, fill="#E6BEFF") +
+  geom_hilight(node=52, fill="#911EB4") +
+  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 0.95), hjust=-.3, size=2) + ggtitle("    Poisson+CAT")
+
+
+tree5=read.tree("../trees_new/phylobayes/Philippe2009_only_choanozoa.phy_GTR_CAT.con.tre")
+tree5_rooted =  root(tree5, outgroup$relabelled_name, resolved.root=TRUE)
+p5=ggtree(tree5_rooted) +
+  geom_cladelabel(node=58, label="Ctenophora") +
+  geom_cladelabel(node=85, label="Porifera", angle=90, hjust='center', offset.text=.01) +
+  geom_cladelabel(node=38, label="Placozoa") +
+  geom_cladelabel(node=61, label="Bilateria") +
+  geom_cladelabel(node=52, label="Cnidaria") +
+  geom_hilight(node=58, fill="#E69F00") +
+  geom_hilight(node=85, fill="#009E73") +
+  geom_hilight(node=38, fill="#82D1F4") +
+  geom_hilight(node=61, fill="#E6BEFF") +
+  geom_hilight(node=52, fill="#911EB4") +
+  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 0.95), hjust=-.3, size=2) + ggtitle("    GTR+CAT")
+p5 = flip(p5, 85, 38)
 
 ggarrange(p1, p2, p3, p4, p5,  ncol  = 3, nrow = 2, labels = c("A", "B", "C", "D" , "E"), common.legend = TRUE)
