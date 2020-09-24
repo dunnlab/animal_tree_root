@@ -37,6 +37,8 @@ knitr::opts_chunk$set(
   library( ggpubr )
   library( grid )
   library( gtable )
+  library( ggtree )
+  library( ape )
 
   theme_set(theme_pubr())
   source( "functions.R" )
@@ -279,13 +281,13 @@ A primary difference between the C (like C60) and CAT site-heterogeneous models 
 
 We examined the specific impact of these large difference in category number on animal root position. It is not possible to use more than 60 categories for C models in IQ-TREE, but the number of categories can be set *a priori* in Phylobayes using nCAT. We therefore varied the number of categories in Phylobayes analyses (Fig. 4; Supplementary Table 6). We found that Poisson+nCAT60 analyses in PhyloBayes, like Poisson+C60 and WAG+C60 IQ-TREE analyses, provide strong support of Ctenophora-sister. This indicates that the difference in results between unconstrained CAT analyses in PhyloBayes and C60 analyses in IQ-TREE is not due to differences in the software or other implementation factors, but due to the large difference, in excess of ten-fold, in the number of site categories. When we increased the number of categories in PhyloBayes nCAT analyses, we observe the transition from support for Ctenophora-sister to an unresolved root to Porifera-sister (Fig. 4). For example, for the Whelan2017_strict matrix this transition occurs between 60 -- 120 categories when using Poisson+nCAT model.
 
-Due to computational limitations of GTR models, we only ran GTR+CAT and GTR+nCAT60 models on representative matrices with Choanimalia sampling. We found that for Whelan2017 matrices, support shifted from Porifera-sister with Poisson+CAT model to Ctenophora-sister using GTR+CAT model. Moreover, we also found all results strongly supported Ctenophora-sister with GTR+nCAT60 models.
+Due to computational limitations of GTR models, we only ran GTR+CAT and GTR+nCAT60 models on representative matrices with Choanimalia sampling. We found that for Whelan2017 matrices, support shifted from Porifera-sister with Poisson+CAT model to Ctenophora-sister using GTR+CAT model (Extended Data Fig. 3E). Moreover, we also found all results strongly supported Ctenophora-sister with GTR+nCAT60 models.
 
-These results further clarify when analyses support Porifera-sister (*e.g.* Philippe2009, Whelan2017). Outgroup sampling must be restricted (Choanimalia), a Poisson rather than GTR exchange matrix must be used, and a very large number of site categories must be used (unconstrained CAT, giving hundreds of equilibrium frequency categories). Analyses under other conditions either support Ctenophora-sister or are unresolved. This is consistent across published analyses and our new panels of analyses. The question, then, isn't why similar analyses give different results, but how we should interpret variation in results when we run analyses that differ in these specific respects. If we fix the first two features to conditions that are necessary for Porifera-sister support (Choanimalia taxon sampling and a Poisson exchange matrix), there are several things we can learn from examining how the number of equilibrium frequency categories impacts results that sheds light on interpretation of those results.
+These results further clarify when analyses support Porifera-sister (*e.g.* Whelan2017 Extended Data Fig. 3; Philippe2009 Extended Data Fig. 4). Outgroup sampling must be restricted (Choanimalia), a Poisson rather than GTR exchange matrix must be used, and a very large number of site categories must be used (unconstrained CAT, giving hundreds of equilibrium frequency categories). Analyses under other conditions either support Ctenophora-sister or are unresolved. This is consistent across published analyses and our new panels of analyses. The question, then, isn't why similar analyses give different results, but how we should interpret variation in results when we run analyses that differ in these specific respects. If we fix the first two features to conditions that are necessary for Porifera-sister support (Choanimalia taxon sampling and a Poisson exchange matrix), there are several things we can learn from examining how the number of equilibrium frequency categories impacts results that sheds light on interpretation of those results.
 
-There are several impacts of increasing the number of equilibrium frequency categories from dozens (which leads to support for Ctenophora-Sister) to hundreds (which supports Porifera-sister). It could be that there are a large fraction of sites with diverse equilibrium frequencies that are not accommodated well when there is a smaller number of categories, and that by increasing the number of categories the model is able to overcome biases when too few categories are available. This would suggest that we should favor the result under a very large number of categories, Porifera-sister. Alternatively, it could be that adding a large number of categories is adding so many parameters that the information in the data are insufficient to infer both the topology and those parameters. This would suggest that we should favor the result under a smaller number of categories, Ctenophora-sister. One way to assess this is to look at the allocation of sites to equilibrium frequency categories. Each new category adds the same number of parameters, but that site can be allocated to any number of sites. If as we add categories those categories are allocated to a small fraction of sites, then the cost of those additional categories is high relative to the fraction of the data they help explain, and we should be skeptical of the results when adding so many categories. That is exactly what we see when we examine category allocations in the last chain samples of analyses of the Philippe2009_Choanimalia and Whelan2017_strict matrices (Extended Data Fig. 3A-B), which have `r n_categories_phil_cat` and `n_categories_whel_cat` categories. The fraction of sites allocated to the 50% of the least frequent categories is `r mid_phil_cat`% in the analysis of the Philippe2009_Choanimalia matrix and `r mid_whel_cat`% in the analysis of the Whelan2017_strict matrix. This long tail of categories that apply to a very small fraction of sites is in stark contrast to nCAT60 analyses, constrained to 60 categories, which have no such long tail of rare categories (Extended Data Fig. 3A-B). This suggests that support for Porifera-sister is due to adding a large number of parameters that apply to a small fraction of the data.
+There are several impacts of increasing the number of equilibrium frequency categories from dozens (which leads to support for Ctenophora-Sister) to hundreds (which supports Porifera-sister). It could be that there are a large fraction of sites with diverse equilibrium frequencies that are not accommodated well when there is a smaller number of categories, and that by increasing the number of categories the model is able to overcome biases when too few categories are available. This would suggest that we should favor the result under a very large number of categories, Porifera-sister. Alternatively, it could be that adding a large number of categories is adding so many parameters that the information in the data are insufficient to infer both the topology and those parameters. This would suggest that we should favor the result under a smaller number of categories, Ctenophora-sister. One way to assess this is to look at the allocation of sites to equilibrium frequency categories. Each new category adds the same number of parameters, but that site can be allocated to any number of sites. If as we add categories those categories are allocated to a small fraction of sites, then the cost of those additional categories is high relative to the fraction of the data they help explain, and we should be skeptical of the results when adding so many categories. That is exactly what we see when we examine category allocations in the last chain samples of analyses of the Philippe2009_Choanimalia and Whelan2017_strict matrices (Extended Data Fig. 5A-B), which have `r n_categories_phil_cat` and `n_categories_whel_cat` categories. The fraction of sites allocated to the 50% of the least frequent categories is `r mid_phil_cat`% in the analysis of the Philippe2009_Choanimalia matrix and `r mid_whel_cat`% in the analysis of the Whelan2017_strict matrix. This long tail of categories that apply to a very small fraction of sites is in stark contrast to nCAT60 analyses, constrained to 60 categories, which have no such long tail of rare categories (Extended Data Fig. 5A-B). This suggests that support for Porifera-sister is due to adding a large number of parameters that apply to a small fraction of the data.
 
-It could be that the sites that are allocated to rare categories are very different from the sites in the common categories, in which case the added parameters are helping to explain big variation found in rare sites that models with smaller numbers of categories are unable to adequately explain. Alternatively, when a large number of categories are allowed it may be that categories with many sites fragment into clouds of similar categories, in which case the added parameters are soaking up small variations between sites and adding little value. We find support for this second scenario (Extended Data Fig. 3C-D).
+It could be that the sites that are allocated to rare categories are very different from the sites in the common categories, in which case the added parameters are helping to explain big variation found in rare sites that models with smaller numbers of categories are unable to adequately explain. Alternatively, when a large number of categories are allowed it may be that categories with many sites fragment into clouds of similar categories, in which case the added parameters are soaking up small variations between sites and adding little value. We find support for this second scenario (Extended Data Fig5. 3C-D).
 
 Taken together, this suggests that unconstrained CAT analyses are overparameterized. While models that accommodate site heterogeneity in equilibrium frequency are important in phylogenetic analyses, and tools such as PhyloBayes and IQ-TREE that implement such models are critical to phylogenetic questions considered here, the present analyses suggest that there are problems with unconstrained CAT analyses that are prone to create a large number of categories for a small fraction of sites. In the context of the present question, this means we should be skeptical of Porifera-sister not only because it is obtained under such a narrow range of analysis conditions, but because the very large number of categories needed to recover this result are adding a large number of parameters that explain a small fraction of the data.
 
@@ -385,9 +387,9 @@ ggsave("figures/Figure4_raw.pdf", width=7.2, height=7.2)
 
 ### Phylogenetic signal
 
-To further explore the variation described above, we quantified the phylogenetic signal for Porifera-sister and Ctenophora-sister topologies across three representative data matrices when varying outgroup sampling and model (Extended Data Fig. 4). By calculating differences in log-likelihood scores for these topologies for every gene ($\Delta$|lnL|) in each matrix, we found that the Ctenophora-sister had the higher proportions of supporting genes in every analysis when using site-homogeneous models in IQ-TREE. Moreover, the outgroup choice has little impact on the distribution of the support for phylogenetic signals in analyses with site-homogeneous models. This finding is largely consistent with the previously observed distribution of support for Ctenophora-sister in other data matrices [@shen2017contentious].  
+To further explore the variation described above, we quantified the phylogenetic signal for Porifera-sister and Ctenophora-sister topologies across three representative data matrices when varying outgroup sampling and model (Extended Data Fig. 6). By calculating differences in log-likelihood scores for these topologies for every gene ($\Delta$|lnL|) in each matrix, we found that the Ctenophora-sister had the higher proportions of supporting genes in every analysis when using site-homogeneous models in IQ-TREE. Moreover, the outgroup choice has little impact on the distribution of the support for phylogenetic signals in analyses with site-homogeneous models. This finding is largely consistent with the previously observed distribution of support for Ctenophora-sister in other data matrices [@shen2017contentious].  
 
-Although a higher proportion of genes support Ctenophora-sister with site-heterogeneous C60 models, the phylogenetic signal decreases in many genes using C60 models compared to site-homogeneous models. In an extreme case, in matrices from Ryan2013_est nearly 30% of genes changed from strong to weak Ctenophora-sister signal ($\Delta$|lnL|<2) (Extended Data Fig. 4; Supplementary Table 7). In contrast to the C60 models, the phylogenetic signal largely increased in Poisson+CAT models in PhyloBayes towards Porifera-sister, and the outgroup choice has a major effect of the distribution of phylogenetic signal (Extended Data Fig. 4). For example in Whelan2017_full matrix, we found that the number of genes that support Ctenophora-sister in analyses with CAT decreases from 57.5% in matrices with distant outgroups (Holozoa) to 35.4% when outgroups are restricted (Choanimalia, Supplementary Table 7).
+Although a higher proportion of genes support Ctenophora-sister with site-heterogeneous C60 models, the phylogenetic signal decreases in many genes using C60 models compared to site-homogeneous models. In an extreme case, in matrices from Ryan2013_est nearly 30% of genes changed from strong to weak Ctenophora-sister signal ($\Delta$|lnL|<2) (Extended Data Fig. 6; Supplementary Table 7). In contrast to the C60 models, the phylogenetic signal largely increased in Poisson+CAT models in PhyloBayes towards Porifera-sister, and the outgroup choice has a major effect of the distribution of phylogenetic signal (Extended Data Fig. 6). For example in Whelan2017_full matrix, we found that the number of genes that support Ctenophora-sister in analyses with CAT decreases from 57.5% in matrices with distant outgroups (Holozoa) to 35.4% when outgroups are restricted (Choanimalia, Supplementary Table 7).
 
 
 ### Other approaches to accommodating site heterogeneity
@@ -464,11 +466,11 @@ The `alt_recode.py` script was used to generate the randomized recoding schemes 
 
 To apply these to the data, each amino acid was replaced with the first amino acid in the group. When applying `random-00`, for example, each instance of `R` and `C` would be replaced by a `T`.
 
-The 20 state matrices are the same across all analyses since they are not recoded. Since all 20 state matrices are the same, variation between 20-state results (as in the left side of each pane of Extended Data Fig. 7) gives insight into the technical variance of the inference process.
+The 20 state matrices are the same across all analyses since they are not recoded. Since all 20 state matrices are the same, variation between 20-state results (as in the left side of each pane of Extended Data Fig. 9) gives insight into the technical variance of the inference process.
 
 Each new matrix was analyzed with PhyloBayes-MPI. Analyses were run for 1000 generations, and a 200 generation burnin applied. The resulting tree files and posterior predictive scores were parsed for display with the code in `manuscript.rmd`.
 
-The statistics presented in  Extended Data Figs. 5 and 6 were parsed from the Feuda *et al.* manuscript into the file `tidy_table_3.tsv` and rendered for display with the code in `manuscript.rmd`.
+The statistics presented in  Extended Data Figs. 7 and 8 were parsed from the Feuda *et al.* manuscript into the file `tidy_table_3.tsv` and rendered for display with the code in `manuscript.rmd`.
 
 ## Acknowledgements
 
@@ -576,6 +578,189 @@ ggsave("figures/Extended_Data_Fig2_raw.pdf", width=10, height=4)
 
 
 
+```{r figure_Whelan2017_trees,, fig.height = 8, fig.width = 10}
+
+taxa_map=read_tsv("../reconciliation/taxonomy_info/taxon_table.tsv") %>% filter(original_matrix=="../considered_data/Whelan2017/strict.phy")
+outgroup= taxa_map %>% filter (clade_assignment=="Choanoflagellida")
+
+tree1= read.tree("../trees_new/iqtree/Whelan2017_strict.model_test.treefile")
+tree1_rooted =  root(tree1, outgroup$relabelled_name, resolved.root=TRUE)
+p1 = ggtree(tree1_rooted) +
+  geom_cladelabel(node=90, label="Ctenophora", angle=90, hjust='center', offset.text=.01) +
+  geom_cladelabel(node=114, label="Porifera", angle=90, hjust='center', offset.text=.01) +
+  geom_cladelabel(node=28, label="Placozoa") +
+  geom_cladelabel(node=109, label="Bilateria") +
+  geom_cladelabel(node=95, label="Cnidaria") +
+  geom_hilight(node=90, fill="#E69F00") +
+  geom_hilight(node=114, fill="#009E73") +
+  geom_hilight(node=28, fill="#82D1F4") +
+  geom_hilight(node=109, fill="#E6BEFF") +
+  geom_hilight(node=95, fill="#911EB4") +
+  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 95), hjust=-.3, size=2) + ggtitle("    WAG+C60")
+
+
+tree2=read.tree("../trees_new/sensitive/Whelan2017_strict.phy_Poisson_CAT60.con.tre")
+tree2_rooted =  root(tree2, outgroup$relabelled_name, resolved.root=TRUE)
+p2= ggtree(tree2_rooted) +
+  geom_cladelabel(node=119, label="Ctenophora", angle=90, hjust='center', offset.text=.01) +
+  geom_cladelabel(node=100, label="Porifera", angle=90, hjust='center', offset.text=.01) +
+  geom_cladelabel(node=22, label="Placozoa") +
+  geom_cladelabel(node=93, label="Bilateria") +
+  geom_cladelabel(node=86, label="Cnidaria") +
+  geom_hilight(node=119, fill="#E69F00") +
+  geom_hilight(node=100, fill="#009E73") +
+  geom_hilight(node=22, fill="#82D1F4") +
+  geom_hilight(node=93, fill="#E6BEFF") +
+  geom_hilight(node=86, fill="#911EB4") +
+  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 1), hjust=-.3, size=2) + ggtitle("    Poisson+nCAT60")
+
+
+tree3=read.tree("../trees_new/sensitive/Whelan2017_strict.phy_Poisson_CAT90.con.tre")
+tree3_rooted =  root(tree3, outgroup$relabelled_name, resolved.root=TRUE)
+p3=ggtree(tree3_rooted) +
+  geom_cladelabel(node=100, label="Ctenophora", angle=90, hjust='center', offset.text=.01) +
+  geom_cladelabel(node=130, label="Porifera", angle=90, hjust='center', offset.text=.01) +
+  geom_cladelabel(node=22, label="Placozoa") +
+  geom_cladelabel(node=93, label="Bilateria") +
+  geom_cladelabel(node=86, label="Cnidaria") +
+  geom_hilight(node=100, fill="#E69F00") +
+  geom_hilight(node=130, fill="#009E73") +
+  geom_hilight(node=22, fill="#82D1F4") +
+  geom_hilight(node=93, fill="#E6BEFF") +
+  geom_hilight(node=86, fill="#911EB4") +
+  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 1), hjust=-.3, size=2) + ggtitle("    Poisson+nCAT90")
+p3 = flip(p3, 100, 98)
+
+tree4=read.tree("../trees_new/phylobayes/Whelan2017_strict.bpcomp.con.tre")
+tree4_rooted =  root(tree4, outgroup$relabelled_name, resolved.root=TRUE)
+p4=ggtree(tree4_rooted) +
+geom_cladelabel(node=100, label="Ctenophora", angle=90, hjust='center', offset.text=.01) +
+geom_cladelabel(node=130, label="Porifera", angle=90, hjust='center', offset.text=.01) +
+geom_cladelabel(node=22, label="Placozoa") +
+geom_cladelabel(node=93, label="Bilateria") +
+geom_cladelabel(node=86, label="Cnidaria") +
+geom_hilight(node=100, fill="#E69F00") +
+geom_hilight(node=130, fill="#009E73") +
+geom_hilight(node=22, fill="#82D1F4") +
+geom_hilight(node=93, fill="#E6BEFF") +
+geom_hilight(node=86, fill="#911EB4") +
+  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) <1), hjust=-.3, size=2) + ggtitle("    Poisson+CAT")
+p4 = flip(p4, 100, 98)
+
+tree5=read.tree("../trees_new/phylobayes/Whelan2017_strict.phy_GTR_CAT.con.tre")
+tree5_rooted =  root(tree5, outgroup$relabelled_name, resolved.root=TRUE)
+p5=ggtree(tree5_rooted) +
+geom_cladelabel(node=119, label="Ctenophora", angle=90, hjust='center', offset.text=.01) +
+geom_cladelabel(node=100, label="Porifera", angle=90, hjust='center', offset.text=.01) +
+geom_cladelabel(node=22, label="Placozoa") +
+geom_cladelabel(node=93, label="Bilateria") +
+geom_cladelabel(node=86, label="Cnidaria") +
+geom_hilight(node=119, fill="#E69F00") +
+geom_hilight(node=100, fill="#009E73") +
+geom_hilight(node=22, fill="#82D1F4") +
+geom_hilight(node=93, fill="#E6BEFF") +
+geom_hilight(node=86, fill="#911EB4") +
+  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 1), hjust=-.3, size=2) + ggtitle("    GTR+CAT")
+
+ggarrange(p1, p2, p3, p4, p5,  ncol  = 3, nrow = 2, labels = c("A", "B", "C", "D" , "E"), common.legend = TRUE)
+
+ggsave("figures/Extended_Data_Fig3_raw.pdf", width=10, height=8)
+```
+
+**Extended Data Fig. 3.** Comparison of the tree topologies under different substitutional models in Whelan2017_strict data matrix. (A). WAG+C60. (B). Poisson+nCAT60. (C). Poisson+nCAT90. (D). Poisson+CAT. (E). GTR+CAT.
+
+```{r figure_Philippe2009_trees,, fig.height = 8, fig.width = 10}
+
+taxa_map=read_tsv("../reconciliation/taxonomy_info/taxon_table.tsv") %>% filter(original_matrix=="../considered_data/Philippe2009/Philippe2009.nex")
+outgroup= taxa_map %>% filter (clade_assignment=="Choanoflagellida")
+
+tree1= read.tree("../trees_new/iqtree/Philippe2009_only_choanozoa.WAG+C60.treefile")
+tree1_rooted =  root(tree1, outgroup=outgroup$relabelled_name, resolved.root=TRUE)
+p1 = ggtree(tree1_rooted) +
+  geom_cladelabel(node=85, label="Ctenophora") +
+  geom_cladelabel(node=76, label="Porifera", angle=90, hjust='center', offset.text=.01) +
+  geom_cladelabel(node=33, label="Placozoa") +
+  geom_cladelabel(node=53, label="Bilateria") +
+  geom_cladelabel(node=51, label="Cnidaria") +
+  geom_hilight(node=85, fill="#E69F00") +
+  geom_hilight(node=76, fill="#009E73") +
+  geom_hilight(node=33, fill="#82D1F4") +
+  geom_hilight(node=53, fill="#E6BEFF") +
+  geom_hilight(node=51, fill="#911EB4") +
+  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 95), hjust=-.3, size=2) + ggtitle("    WAG+C60")
+
+
+tree2=read.tree("../trees_new/sensitive/Philippe2009_only_choanozoa.phy_Poisson_CAT60.con.tre")
+tree2_rooted =  root(tree2, outgroup$relabelled_name, resolved.root=TRUE)
+p2= ggtree(tree2_rooted) +
+  geom_cladelabel(node=83, label="Ctenophora") +
+  geom_cladelabel(node=85, label="Porifera", angle=90, hjust='center', offset.text=.01) +
+  geom_cladelabel(node=32, label="Placozoa") +
+  geom_cladelabel(node=58, label="Bilateria") +
+  geom_cladelabel(node=52, label="Cnidaria") +
+  geom_hilight(node=83, fill="#E69F00") +
+  geom_hilight(node=85, fill="#009E73") +
+  geom_hilight(node=32, fill="#82D1F4") +
+  geom_hilight(node=58, fill="#E6BEFF") +
+  geom_hilight(node=52, fill="#911EB4") +
+  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 0.95), hjust=-.3, size=2) + ggtitle("    Poisson+nCAT60")
+
+
+tree3=read.tree("../trees_new/sensitive/Philippe2009_only_choanozoa.phy_Poisson_CAT150.con.tre")
+tree3_rooted =  root(tree3, outgroup$relabelled_name, resolved.root=TRUE)
+p3=ggtree(tree3_rooted) +
+  geom_cladelabel(node=83, label="Ctenophora") +
+  geom_cladelabel(node=85, label="Porifera", angle=90, hjust='center', offset.text=.01) +
+  geom_cladelabel(node=32, label="Placozoa") +
+  geom_cladelabel(node=58, label="Bilateria") +
+  geom_cladelabel(node=52, label="Cnidaria") +
+  geom_hilight(node=83, fill="#E69F00") +
+  geom_hilight(node=85, fill="#009E73") +
+  geom_hilight(node=32, fill="#82D1F4") +
+  geom_hilight(node=58, fill="#E6BEFF") +
+  geom_hilight(node=52, fill="#911EB4") +
+  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 0.95), hjust=-.3, size=2) + ggtitle("    Poisson+nCAT150")
+
+
+tree4=read.tree("../trees_new/phylobayes/Philippe2009_only_choanozoa.bpcomp.con.tre")
+tree4_rooted =  root(tree4, outgroup$relabelled_name, resolved.root=TRUE)
+p4=ggtree(tree4_rooted) +
+  geom_cladelabel(node=58, label="Ctenophora") +
+  geom_cladelabel(node=84, label="Porifera", angle=90, hjust='center', offset.text=.01) +
+  geom_cladelabel(node=35, label="Placozoa") +
+  geom_cladelabel(node=60, label="Bilateria") +
+  geom_cladelabel(node=52, label="Cnidaria") +
+  geom_hilight(node=58, fill="#E69F00") +
+  geom_hilight(node=84, fill="#009E73") +
+  geom_hilight(node=35, fill="#82D1F4") +
+  geom_hilight(node=60, fill="#E6BEFF") +
+  geom_hilight(node=52, fill="#911EB4") +
+  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 0.95), hjust=-.3, size=2) + ggtitle("    Poisson+CAT")
+
+
+  tree5=read.tree("../trees_new/phylobayes/Philippe2009_only_choanozoa.phy_GTR_CAT.con.tre")
+  tree5_rooted =  root(tree5, outgroup$relabelled_name, resolved.root=TRUE)
+  p5=ggtree(tree5_rooted) +
+    geom_cladelabel(node=58, label="Ctenophora") +
+    geom_cladelabel(node=85, label="Porifera", angle=90, hjust='center', offset.text=.01) +
+    geom_cladelabel(node=38, label="Placozoa") +
+    geom_cladelabel(node=61, label="Bilateria") +
+    geom_cladelabel(node=52, label="Cnidaria") +
+    geom_hilight(node=58, fill="#E69F00") +
+    geom_hilight(node=85, fill="#009E73") +
+    geom_hilight(node=38, fill="#82D1F4") +
+    geom_hilight(node=61, fill="#E6BEFF") +
+    geom_hilight(node=52, fill="#911EB4") +
+    geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 0.95), hjust=-.3, size=2) + ggtitle("    GTR+CAT")
+  p5 = flip(p5, 85, 38)
+
+ggarrange(p1, p2, p3, p4, p5,  ncol  = 3, nrow = 2, labels = c("A", "B", "C", "D" , "E"), common.legend = TRUE)
+
+ggsave("figures/Extended_Data_Fig4_raw.pdf", width=10, height=8)
+```
+**Extended Data Fig. 4.** Comparison of the tree topologies under different substitutional models in Philippe2009_Choanimalia data matrix. (A). WAG+C60. (B). Poisson+nCAT60. (C). Poisson+nCAT150. (D). Poisson+CAT. (E). GTR+CAT.
+
+
 ```{r n_cat_render, fig.width=6, fig.height=7}
 
 edf2_cols = c("#74c2e7", "#410058")
@@ -640,7 +825,7 @@ ggarrange(
 
 ```
 
-**Extended Data Fig. 3** The allocation of frequency categories across sites in the Philippe2009 matrix (left column) and Whelan2017_strict matrix (right column) for the constrained Posson+nCAT60 model and unconstrained Posson+CAT models (differentiated with color). These plots are for singe sample isolated from the end of PhyloBayes chain files. (A,B) The count of sites allocated to each equilibrium frequency category, with the categories ranked from the most abundant to least abundant along the x axis. The unconstrained CAT analyses have a long tail of categories that are allocated to very few sites, which adds a considerable number of parameters that pertain to only a small fraction of the data. The nCAT60 analyses, which are constrained to 60 sites, have no such long tail and the rarest categories are allocated to a far greater number of sites than any of the sites in the long tail of the CAT analyses. (C,D) MDS plots for the amino acid frequencies. Each point is for a single category, the area of the point is proportional to the number of sites allocated to that category, and categories with closer points have more similar amino acid frequencies. A single MDS analysis was done for all analyses, so that the projections are the same in each plot. For both matrices, the much larger number of categories in the unconstrained CAT analyses laregely subdivide the amino acid frequency space already covered in the constrained nCAT60 analyses, and just subdivide that space into a far greater number of rare categories. This adds a considerable number of parameters for describing a similar overall space.
+**Extended Data Fig. 5** The allocation of frequency categories across sites in the Philippe2009 matrix (left column) and Whelan2017_strict matrix (right column) for the constrained Posson+nCAT60 model and unconstrained Posson+CAT models (differentiated with color). These plots are for singe sample isolated from the end of PhyloBayes chain files. (A,B) The count of sites allocated to each equilibrium frequency category, with the categories ranked from the most abundant to least abundant along the x axis. The unconstrained CAT analyses have a long tail of categories that are allocated to very few sites, which adds a considerable number of parameters that pertain to only a small fraction of the data. The nCAT60 analyses, which are constrained to 60 sites, have no such long tail and the rarest categories are allocated to a far greater number of sites than any of the sites in the long tail of the CAT analyses. (C,D) MDS plots for the amino acid frequencies. Each point is for a single category, the area of the point is proportional to the number of sites allocated to that category, and categories with closer points have more similar amino acid frequencies. A single MDS analysis was done for all analyses, so that the projections are the same in each plot. For both matrices, the much larger number of categories in the unconstrained CAT analyses laregely subdivide the amino acid frequency space already covered in the constrained nCAT60 analyses, and just subdivide that space into a far greater number of rare categories. This adds a considerable number of parameters for describing a similar overall space.
 
 ```{r figure_phylogenetic_signal, fig.width=6, fig.height=12}
 
@@ -656,26 +841,26 @@ p=au_tests %>%
     coord_flip() +
     theme(axis.text.y = element_blank(), axis.title.y = element_blank())
 
-ggsave("figures/Extended_Data_Fig4_raw.pdf", width=6, height=12)
+ggsave("figures/Extended_Data_Fig5_raw.pdf", width=6, height=12)
 
 ```
 
 ![](figures/Extended_Data_Fig4_manuscript.png)
 
-**Extended Data Fig. 4** The distribution of phylogenetic signal for two alternative topological hypotheses on the earliest-branching animal lineage with different models and outgroup choice in Philippe2009, Ryan2013 and Whelan2017_full matrices (with two outgroup sampling: Choanimalia and full matrices). The two alternative topological hypotheses are: Ctenophora-sister; T1 (Orange); Porifera-sister T2 (Green). Proportions of genes supporting each of two alternative hypotheses in the Philippe2009, Ryan2013_est and Whelan2017_full data matrices with different outgroups sampling and substitutional models. The GLS values for each gene in each data matrix are provided in Table S5. We considered a gene with an absolute value of log-likelihood difference of two as a gene with strong (|ΔlnL| $\geq$ 2) or weak ( 0 < |ΔlnL| < 2) phylogenetic signal.
+**Extended Data Fig. 6** The distribution of phylogenetic signal for two alternative topological hypotheses on the earliest-branching animal lineage with different models and outgroup choice in Philippe2009, Ryan2013 and Whelan2017_full matrices (with two outgroup sampling: Choanimalia and full matrices). The two alternative topological hypotheses are: Ctenophora-sister; T1 (Orange); Porifera-sister T2 (Green). Proportions of genes supporting each of two alternative hypotheses in the Philippe2009, Ryan2013_est and Whelan2017_full data matrices with different outgroups sampling and substitutional models. The GLS values for each gene in each data matrix are provided in Table S5. We considered a gene with an absolute value of log-likelihood difference of two as a gene with strong (|ΔlnL| $\geq$ 2) or weak ( 0 < |ΔlnL| < 2) phylogenetic signal.
 
 
 ![](figures/Extended_Data_Fig5.png)
 
-**Extended Data Fig. 5.** A graphical representation of the posterior probabilities for the 32 analyses presented by Feuda *et al.* in their Table 3. Cells are color coded by whether posterior probability is > 95 for Porifera-sister, > 95 for Ctenophora-sister, or neither (unresolved). Posterior predictive (PP) statistics were estimated for the 16 analyses in the top two rows of this figure (the Chang and full Whelan matrices), but not the bottom two (the Whelan matrices with reduced outgroup sampling).
+**Extended Data Fig. 7.** A graphical representation of the posterior probabilities for the 32 analyses presented by Feuda *et al.* in their Table 3. Cells are color coded by whether posterior probability is > 95 for Porifera-sister, > 95 for Ctenophora-sister, or neither (unresolved). Posterior predictive (PP) statistics were estimated for the 16 analyses in the top two rows of this figure (the Chang and full Whelan matrices), but not the bottom two (the Whelan matrices with reduced outgroup sampling).
 
 
 ![](figures/Extended_Data_Fig6.png)
 
-**Extended Data Fig. 6.** The subset of eight GTR+CAT analyses with posterior predictive (PP) scores that is the focus of Feuda *et al.*'s primary conclusions. These are a subset of the 32 analyses presented in their Table 3 and graphically here in the upper right pane. The eight analyses are for two datasets (Chang and Whelan) and four coding schemes. The coding schemes are the original 20 state amino acid data, and three different six state recodings that group amino acids based on different criteria: KGB6, D6, and SR6. Only one of these analyses, the SR6 coding of the Whelan matrix, has > 95 support for Porifera-sister. The 20-state and 6-state points on the plots in Extended Data Fig. 5 correspond to the 20 and SR6 Whelan cells shown here. The presented statistics for these cells are posterior probability of Porifera-sister, Maxdiff (with lower scores indicating better convergence of runs), and five posterior predictive statistics (where lower absolute value indicates better model adequacy). The only one of these eight analyses that provides strong support for Porifera-sister is not the most adequate analysis by any of the posterior predictive scores, and showed the poorest convergence according to Maxdiff.
+**Extended Data Fig. 8.** The subset of eight GTR+CAT analyses with posterior predictive (PP) scores that is the focus of Feuda *et al.*'s primary conclusions. These are a subset of the 32 analyses presented in their Table 3 and graphically here in the upper right pane. The eight analyses are for two datasets (Chang and Whelan) and four coding schemes. The coding schemes are the original 20 state amino acid data, and three different six state recodings that group amino acids based on different criteria: KGB6, D6, and SR6. Only one of these analyses, the SR6 coding of the Whelan matrix, has > 95 support for Porifera-sister. The 20-state and 6-state points on the plots in Extended Data Fig. 5 correspond to the 20 and SR6 Whelan cells shown here. The presented statistics for these cells are posterior probability of Porifera-sister, Maxdiff (with lower scores indicating better convergence of runs), and five posterior predictive statistics (where lower absolute value indicates better model adequacy). The only one of these eight analyses that provides strong support for Porifera-sister is not the most adequate analysis by any of the posterior predictive scores, and showed the poorest convergence according to Maxdiff.
 
 ![](figures/Extended_Data_Fig7.png)
-**Extended Data Fig. 7.** Each of the six plots presents one statistic, which include Posterior probability of Porifera-sister and the five Posterior Predictive (PP) statistics considered by Feuda *et al.* Within each plot, there are six lines for six different analyses. These five analyses are the published SR-6 analyses presented by Feuda *et al.* (SR6-published), and four analyses based on randomized recoding matrices obtained by shuffling the SR-6 coding scheme (random-00 - random-03). Each analysis includes results for 20 states (the raw amino acid data, shown by the left point) and for 6 states (the 6-state recoded data, shown by the right point). For each statistic, the results obtained with the random recoding are similar to those of the SR6 recoding. This indicates that the impact of recoding is dominated by discarding data when collapsing from 20 states to 6 states, not accommodating compositional heterogeneity across lineages.
+**Extended Data Fig. 9.** Each of the six plots presents one statistic, which include Posterior probability of Porifera-sister and the five Posterior Predictive (PP) statistics considered by Feuda *et al.* Within each plot, there are six lines for six different analyses. These five analyses are the published SR-6 analyses presented by Feuda *et al.* (SR6-published), and four analyses based on randomized recoding matrices obtained by shuffling the SR-6 coding scheme (random-00 - random-03). Each analysis includes results for 20 states (the raw amino acid data, shown by the left point) and for 6 states (the 6-state recoded data, shown by the right point). For each statistic, the results obtained with the random recoding are similar to those of the SR6 recoding. This indicates that the impact of recoding is dominated by discarding data when collapsing from 20 states to 6 states, not accommodating compositional heterogeneity across lineages.
 
 
 \pagebreak
@@ -858,13 +1043,13 @@ The vector of equilibrium frequencies $\Pi$ describes the stationary frequency o
 
 Feuda *et al.* [@feuda2017improved] were concerned that the Ctenophora-sister results Chang *et al.* [@Chang:2015hl] and Whelan *et al.* [@Whelan:2015jj] were artefacts of lineage-specific differences in amino acid frequencies. In an attempt to reduce these differences, they recoded the full set of twenty amino acids into six groups of amino acids. These groups have more frequent evolutionary changes within them than between them, based on empirical observations in large protein datasets [@Susko:2007ds]. The intent is to discard many lineage-specific changes, which are expected to fall within these groups. Rather than model compositional heterogeneity, as their title suggests, this approach discards heterogeneous information so that much simpler models with fewer states can be applied.
 
-Feuda *et al.* [@feuda2017improved] report that posterior predictive (PP) analyses [@Bollback:2002to] indicate 6-state recoded analyses have better model adequacy than 20-state amino acid analyses, and "Porifera-sister was favored under all recoding strategies" in Whelan2015_D20 and Chang2015 data matrices. Here we focus on two aspects of Feuda *et al.* First, we point out that many of their recoded analyses are actually unresolved (*i.e.*, without strong support for either Porifera-sister or Ctenophora-sister) (Extended Data Fig. 5). Second, we present new analyses that show the impact of recoding is largely due to discarding information, not accommodating variation in amino acid composition. These findings indicate that recoding can be a problematic method for addressing compositional variation.
+Feuda *et al.* [@feuda2017improved] report that posterior predictive (PP) analyses [@Bollback:2002to] indicate 6-state recoded analyses have better model adequacy than 20-state amino acid analyses, and "Porifera-sister was favored under all recoding strategies" in Whelan2015_D20 and Chang2015 data matrices. Here we focus on two aspects of Feuda *et al.* First, we point out that many of their recoded analyses are actually unresolved (*i.e.*, without strong support for either Porifera-sister or Ctenophora-sister) (Extended Data Fig. 7). Second, we present new analyses that show the impact of recoding is largely due to discarding information, not accommodating variation in amino acid composition. These findings indicate that recoding can be a problematic method for addressing compositional variation.
 
-Feuda *et al.* examine support for Ctenophora-sister and Porifera-sister under all combinations of two models of molecular evolution, four datasets, and four coding schemes. This provides 32 analyses that they report in their Table 3 and that we present graphically here as Extended Data Fig. 5. There is striking variation in support for Ctenophora-sister and Porifera-sister across these analyses (Extended Data Fig. 5). Feuda *et al.* accept the results of some analyses and reject others based on posterior predictive (PP) analyses of model adequacy, which assess how well a model explains variation in the data [@Bollback:2002to]. They considered five different posterior predictive statistics that capture different types of variation in the data. From this they conclude that their "results strongly support sponges as the sister group of all other animals".
+Feuda *et al.* examine support for Ctenophora-sister and Porifera-sister under all combinations of two models of molecular evolution, four datasets, and four coding schemes. This provides 32 analyses that they report in their Table 3 and that we present graphically here as Extended Data Fig. 7. There is striking variation in support for Ctenophora-sister and Porifera-sister across these analyses (Extended Data Fig. 7). Feuda *et al.* accept the results of some analyses and reject others based on posterior predictive (PP) analyses of model adequacy, which assess how well a model explains variation in the data [@Bollback:2002to]. They considered five different posterior predictive statistics that capture different types of variation in the data. From this they conclude that their "results strongly support sponges as the sister group of all other animals".
 
-This conclusion does not follow from their own presented results. Only a single analysis with posterior predictive scores provides what could be considered strong support > 95 posterior probability) for Porifera-sister. Of the 32 analyses, posterior predictive scores were calculated for 16 (those for the full Whelan and Chang matrices). Based on posterior predictive scores, Feuda *et al.* reject eight of these that were conducted under the GTR+G model (which all have strong support for Ctenophora-sister). This leaves eight GTR+CAT analyses (Extended Data Fig. 5). Two of these eight are analyses of the original 20-state amino acid data, both of which provide strong support for Ctenophora-sister. Of the six recoded analyses, five are unresolved. Only a single analysis for which posterior predictive scores are available provides strong support for Porifera-sister, the GTR+CAT analysis of the SR-6 [@Susko:2007ds] recoded Whelan [@Whelan:2015jj] matrix. Furthermore, this analysis does not have the best score according to any of the five posterior predictive statistics they considered (Extended Data Fig. 6). The only statistic that stands out for this one analysis is that it has the highest maxdiff (Extended Data Fig. 6), indicating that it did not converge as well as other analyses.
+This conclusion does not follow from their own presented results. Only a single analysis with posterior predictive scores provides what could be considered strong support > 95 posterior probability) for Porifera-sister. Of the 32 analyses, posterior predictive scores were calculated for 16 (those for the full Whelan and Chang matrices). Based on posterior predictive scores, Feuda *et al.* reject eight of these that were conducted under the GTR+G model (which all have strong support for Ctenophora-sister). This leaves eight GTR+CAT analyses (Extended Data Fig. 7). Two of these eight are analyses of the original 20-state amino acid data, both of which provide strong support for Ctenophora-sister. Of the six recoded analyses, five are unresolved. Only a single analysis for which posterior predictive scores are available provides strong support for Porifera-sister, the GTR+CAT analysis of the SR-6 [@Susko:2007ds] recoded Whelan [@Whelan:2015jj] matrix. Furthermore, this analysis does not have the best score according to any of the five posterior predictive statistics they considered (Extended Data Fig. 8). The only statistic that stands out for this one analysis is that it has the highest maxdiff (Extended Data Fig. 8), indicating that it did not converge as well as other analyses.
 
-Though their study does not provide strong support for Porifera-sister, the sensitivity of their results to recoding provides an opportunity to better understand and evaluate the impact of recoding more generally. This is important given the growing interest in recoding [@Feuda:2017ew]. Feuda *et al.* hoped recoding would reduce potential artefacts due to differences across species in amino acid frequencies. They interpreted the fact that their analyses are sensitive to recoding as evidence that such an artefact exists and that they successfully addressed it by recoding. An alternative hypothesis is that recoding impacts phylogenetic analyses because it discards so much information. These two hypotheses can be tested by applying new recoding schemes that also reduce twenty states down to six, but are based on random grouping rather than empirical frequencies of amino acid exchange. Empirical and random recodings both discard the same amount of information, but only empirical recoding reduce the impact of amino-acid frequency as intended. Different results between empirical and random recoding would be consistent with the hypothesis that the empirical approach works as intended to accommodate compositional heterogeneity. Similar results would suggest that the impact of recoding is due to discarding information. Here we focus on their single analysis with a posterior predictive score that supports Porifera-sister, the GTR+CAT analysis of the SR-6 recoded Whelan data. We created four new random recoding schemes by shuffling the amino acids in the SR-6 scheme (see Supplemental Methods and analysis code at https://github.com/caseywdunn/feuda_2017). When we applied each of these randomized codes to the Whelan matrix and analyzed them under the GTR+CAT model with PhyloBayes-MPI, we observed similar results as for the empirical SR-6 recoding. Like SR-6 recoding, random recoding increases support for Porifera-sister and improves the apparent adequacy of models to explain heterogeneity of states across taxa (PP taxon hetero mean and max, Extended Data Fig. 7).
+Though their study does not provide strong support for Porifera-sister, the sensitivity of their results to recoding provides an opportunity to better understand and evaluate the impact of recoding more generally. This is important given the growing interest in recoding [@Feuda:2017ew]. Feuda *et al.* hoped recoding would reduce potential artefacts due to differences across species in amino acid frequencies. They interpreted the fact that their analyses are sensitive to recoding as evidence that such an artefact exists and that they successfully addressed it by recoding. An alternative hypothesis is that recoding impacts phylogenetic analyses because it discards so much information. These two hypotheses can be tested by applying new recoding schemes that also reduce twenty states down to six, but are based on random grouping rather than empirical frequencies of amino acid exchange. Empirical and random recodings both discard the same amount of information, but only empirical recoding reduce the impact of amino-acid frequency as intended. Different results between empirical and random recoding would be consistent with the hypothesis that the empirical approach works as intended to accommodate compositional heterogeneity. Similar results would suggest that the impact of recoding is due to discarding information. Here we focus on their single analysis with a posterior predictive score that supports Porifera-sister, the GTR+CAT analysis of the SR-6 recoded Whelan data. We created four new random recoding schemes by shuffling the amino acids in the SR-6 scheme (see Supplemental Methods and analysis code at https://github.com/caseywdunn/feuda_2017). When we applied each of these randomized codes to the Whelan matrix and analyzed them under the GTR+CAT model with PhyloBayes-MPI, we observed similar results as for the empirical SR-6 recoding. Like SR-6 recoding, random recoding increases support for Porifera-sister and improves the apparent adequacy of models to explain heterogeneity of states across taxa (PP taxon hetero mean and max, Extended Data Fig. 9).
 
 These analyses suggest that the major impact of recoding on phylogenetic analyses is data reduction, not accommodation of compositional heterogeneity across species. This indicates that recoding may not be an effective tool for accommodating among-species differences in amino acid frequencies. Compositional heterogeneity would be better addressed with models of molecular evolution that explicitly describe such differences [@Blanquart:2008gl, @Foster:2004tw], if progress can be made on the considerable computational challenges of such complex models.
 
@@ -885,165 +1070,3 @@ Supplementary_Table 6. Summary of sensitive analyses with different number of CA
 Supplementary_Table 7. Distribution of phylogenetic signal of different models and outgroup sampling for two alternative hypotheses on the animal-root position in Philippe2009, Ryan2013 and Whelan2017_full matrices (Table is converted from au_tests in Rdata).  
 
 ## References
-
-
-branch_lengths = read.csv("../data_processed/tables/branch_lengths.tsv", header=TRUE, sep="\t")
-
-branch_lengths$Clade =
-    factor(
-        branch_lengths$Clade,
-        levels = c("Bilateria", "Cnidaria", "Placozoa", "Porifera", "Ctenophora", "Choanoflagellata"))
-
-p=ggplot (branch_lengths, aes(x=Clade, y=branch_length, fill=Clade)) + geom_violin(trim=FALSE) + geom_boxplot(width=0.1) + theme_classic()+  labs(x="Clade", y = "Branch Lengths")
-
-p+scale_fill_manual(values=c("#E6BEFF", "#911EB4", "#82D1F4", "#009E73", "#E69F00", "#4363D8"))
-
-
-Bilateria_branch_mean = branch_lengths %>% filter(Clade=="Bilateria") %>% summarise(mean = mean(branch_length), n = n())
-Porifera_branch_mean = branch_lengths %>% filter(Clade=="Porifera") %>% summarise(mean = mean(branch_length), n = n())
-Ctenophora_branch_mean = branch_lengths %>% filter(Clade=="Ctenophora") %>% summarise(mean = mean(branch_length), n = n())
-
-taxa_map=read_tsv("../reconciliation/taxonomy_info/taxon_table.tsv") %>% filter(original_matrix=="../considered_data/Whelan2017/strict.phy")
-outgroup= taxa_map %>% filter (clade_assignment=="Choanoflagellida")
-Bilateria= taxa_map %>% filter (clade_assignment=="Bilateria")
-Cnidaria= taxa_map %>% filter (clade_assignment=="Cnidaria")
-Placozoa= taxa_map %>% filter (clade_assignment=="Placozoa")
-Porifera= taxa_map %>% filter (clade_assignment=="Porifera")
-Ctenophora= taxa_map %>% filter (clade_assignment=="Ctenophora")
-
-
-tree1= read.tree("../trees_new/iqtree/Whelan2017_strict.model_test.treefile")
-tree1_rooted =  root(tree1, outgroup$relabelled_name, resolved.root=TRUE)
-p1 = ggtree(tree1_rooted) +
-  geom_cladelabel(node=90, label="Ctenophora", color="#E69F00") +
-  geom_cladelabel(node=114, label="Porifera", color="#009E73") +
-  geom_hilight(node=90, fill="#E69F00") +
-  geom_hilight(node=114, fill="#009E73") +
-  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 95)) + ggtitle("    WAG+C60")
-
-
-tree2=read.tree("../trees_new/sensitive/Whelan2017_strict.phy_Poisson_CAT60.con.tre")
-tree2_rooted =  root(tree2, outgroup$relabelled_name, resolved.root=TRUE)
-p2= ggtree(tree2_rooted) +
-  geom_cladelabel(node=119, label="Ctenophora", color="#E69F00") +
-  geom_cladelabel(node=100, label="Porifera", color="#009E73") +
-  geom_hilight(node=119, fill="#E69F00") +
-  geom_hilight(node=100, fill="#009E73") +
-  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 1)) + ggtitle("    Poisson+nCAT60")
-
-
-tree3=read.tree("../trees_new/sensitive/Whelan2017_strict.phy_Poisson_CAT90.con.tre")
-tree3_rooted =  root(tree3, outgroup$relabelled_name, resolved.root=TRUE)
-p3=ggtree(tree3_rooted) +
-  geom_cladelabel(node=100, label="Ctenophora", color="#E69F00") +
-  geom_cladelabel(node=130, label="Porifera", color="#009E73") +
-  geom_hilight(node=100, fill="#E69F00") +
-  geom_hilight(node=130, fill="#009E73") +
-  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 1)) + ggtitle("    Poisson+nCAT90")
-p3 = flip(p3, 100, 98)
-
-tree4=read.tree("../trees_new/phylobayes/Whelan2017_strict.bpcomp.con.tre")
-tree4_rooted =  root(tree4, outgroup$relabelled_name, resolved.root=TRUE)
-p4=ggtree(tree4_rooted) +
-  geom_cladelabel(node=100, label="Ctenophora", color="#E69F00") +
-  geom_cladelabel(node=130, label="Porifera", color="#009E73") +
-  geom_hilight(node=100, fill="#E69F00") +
-  geom_hilight(node=130, fill="#009E73") +
-  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) <1)) + ggtitle("    Poisson+CAT")
-p4 = flip(p4, 100, 98)
-
-tree5=read.tree("../trees_new/phylobayes/Whelan2017_strict.phy_GTR_CAT.con.tre")
-tree5_rooted =  root(tree5, outgroup$relabelled_name, resolved.root=TRUE)
-p5=ggtree(tree5_rooted) +
-  geom_cladelabel(node=119, label="Ctenophora", color="#E69F00") +
-  geom_cladelabel(node=100, label="Porifera", color="#009E73") +
-  geom_hilight(node=119, fill="#E69F00") +
-  geom_hilight(node=100, fill="#009E73") +
-  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 1)) + ggtitle("    GTR+CAT")
-
-ggarrange(p1, p2, p3, p4, p5,  ncol  = 3, nrow = 2, labels = c("A", "B", "C", "D" , "E"), common.legend = TRUE)
-
-taxa_map=read_tsv("../reconciliation/taxonomy_info/taxon_table.tsv") %>% filter(original_matrix=="../considered_data/Philippe2009/Philippe2009.nex")
-outgroup= taxa_map %>% filter (clade_assignment=="Choanoflagellida")
-
-tree1= read.tree("../trees_new/iqtree/Philippe2009_only_choanozoa.WAG+C60.treefile")
-tree1_rooted =  root(tree1, outgroup=outgroup$relabelled_name, resolved.root=TRUE)
-p1 = ggtree(tree1_rooted) +
-  geom_cladelabel(node=85, label="Ctenophora") +
-  geom_cladelabel(node=76, label="Porifera", angle=90, hjust='center', offset.text=.01) +
-  geom_cladelabel(node=33, label="Placozoa") +
-  geom_cladelabel(node=53, label="Bilateria") +
-  geom_cladelabel(node=51, label="Cnidaria") +
-  geom_hilight(node=85, fill="#E69F00") +
-  geom_hilight(node=76, fill="#009E73") +
-  geom_hilight(node=33, fill="#82D1F4") +
-  geom_hilight(node=53, fill="#E6BEFF") +
-  geom_hilight(node=51, fill="#911EB4") +
-  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 95), hjust=-.3, size=2) + ggtitle("    WAG+C60")
-
-
-tree2=read.tree("../trees_new/sensitive/Philippe2009_only_choanozoa.phy_Poisson_CAT60.con.tre")
-tree2_rooted =  root(tree2, outgroup$relabelled_name, resolved.root=TRUE)
-p2= ggtree(tree2_rooted) +
-  geom_cladelabel(node=83, label="Ctenophora") +
-  geom_cladelabel(node=85, label="Porifera", angle=90, hjust='center', offset.text=.01) +
-  geom_cladelabel(node=32, label="Placozoa") +
-  geom_cladelabel(node=58, label="Bilateria") +
-  geom_cladelabel(node=52, label="Cnidaria") +
-  geom_hilight(node=83, fill="#E69F00") +
-  geom_hilight(node=85, fill="#009E73") +
-  geom_hilight(node=32, fill="#82D1F4") +
-  geom_hilight(node=58, fill="#E6BEFF") +
-  geom_hilight(node=52, fill="#911EB4") +
-  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 0.95), hjust=-.3, size=2) + ggtitle("    Poisson+nCAT60")
-
-
-tree3=read.tree("../trees_new/sensitive/Philippe2009_only_choanozoa.phy_Poisson_CAT150.con.tre")
-tree3_rooted =  root(tree3, outgroup$relabelled_name, resolved.root=TRUE)
-p3=ggtree(tree3_rooted) +
-  geom_cladelabel(node=83, label="Ctenophora") +
-  geom_cladelabel(node=85, label="Porifera", angle=90, hjust='center', offset.text=.01) +
-  geom_cladelabel(node=32, label="Placozoa") +
-  geom_cladelabel(node=58, label="Bilateria") +
-  geom_cladelabel(node=52, label="Cnidaria") +
-  geom_hilight(node=83, fill="#E69F00") +
-  geom_hilight(node=85, fill="#009E73") +
-  geom_hilight(node=32, fill="#82D1F4") +
-  geom_hilight(node=58, fill="#E6BEFF") +
-  geom_hilight(node=52, fill="#911EB4") +
-  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 0.95), hjust=-.3, size=2) + ggtitle("    Poisson+nCAT90")
-
-
-tree4=read.tree("../trees_new/phylobayes/Philippe2009_only_choanozoa.bpcomp.con.tre")
-tree4_rooted =  root(tree4, outgroup$relabelled_name, resolved.root=TRUE)
-p4=ggtree(tree4_rooted) +
-  geom_cladelabel(node=58, label="Ctenophora") +
-  geom_cladelabel(node=84, label="Porifera", angle=90, hjust='center', offset.text=.01) +
-  geom_cladelabel(node=35, label="Placozoa") +
-  geom_cladelabel(node=60, label="Bilateria") +
-  geom_cladelabel(node=52, label="Cnidaria") +
-  geom_hilight(node=58, fill="#E69F00") +
-  geom_hilight(node=84, fill="#009E73") +
-  geom_hilight(node=35, fill="#82D1F4") +
-  geom_hilight(node=60, fill="#E6BEFF") +
-  geom_hilight(node=52, fill="#911EB4") +
-  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 0.95), hjust=-.3, size=2) + ggtitle("    Poisson+CAT")
-
-
-tree5=read.tree("../trees_new/phylobayes/Philippe2009_only_choanozoa.phy_GTR_CAT.con.tre")
-tree5_rooted =  root(tree5, outgroup$relabelled_name, resolved.root=TRUE)
-p5=ggtree(tree5_rooted) +
-  geom_cladelabel(node=58, label="Ctenophora") +
-  geom_cladelabel(node=85, label="Porifera", angle=90, hjust='center', offset.text=.01) +
-  geom_cladelabel(node=38, label="Placozoa") +
-  geom_cladelabel(node=61, label="Bilateria") +
-  geom_cladelabel(node=52, label="Cnidaria") +
-  geom_hilight(node=58, fill="#E69F00") +
-  geom_hilight(node=85, fill="#009E73") +
-  geom_hilight(node=38, fill="#82D1F4") +
-  geom_hilight(node=61, fill="#E6BEFF") +
-  geom_hilight(node=52, fill="#911EB4") +
-  geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 0.95), hjust=-.3, size=2) + ggtitle("    GTR+CAT")
-p5 = flip(p5, 85, 38)
-
-ggarrange(p1, p2, p3, p4, p5,  ncol  = 3, nrow = 2, labels = c("A", "B", "C", "D" , "E"), common.legend = TRUE)
