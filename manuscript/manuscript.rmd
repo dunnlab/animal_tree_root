@@ -204,12 +204,11 @@ p = analyses_processed %>%
     xlab("Model") +
     ylab("Clade")
 
-p
 
 ggsave("figures/Figure3_raw.pdf", width=7.2, height=3.6)
 ```
 
-
+![](figures/Figure3_published.png)
 **Fig. 3.**  Summary of phylogenomic results from previous studies and reanalysis conducted in this study. Each point represents a phylogenetic analysis with a support of bootstrap values less than `r bootstrap_threshold`% or a posterior probability less than `r posterior_prob_threshold`% are considered as unresolved. The clades are organized with increased outgroup sampling higher on the vertical axis, and the models are organized in general by increasing complexity in terms of numbers of parameters to the right on the horizontal axis. (A) Analyses transcribed from the literature (related to Supplementary Table 2). (B) New phylogenomic analyses conducted in this study (related to Supplementary Table 3).
 
 We parsed `r analyses_processed %>% filter(status=="published") %>% nrow()` previous phylogenetic analyses from `r analyses_processed %>% filter(status=="published") %>% pull (manuscript) %>% unique() %>% length()` studies (Fig. 3A and Supplementary Table 2). The conclusions of five studies strongly favor Porifera-sister and 10 favor Ctenophora-sister (Extended Data Table 1). Three studies are based entirely on previously published data, and the remainder add data for one or more species.
@@ -262,7 +261,7 @@ For all but the three largest matrices, we tested the relative fit of a variety 
 
 All IQ-TREE analyses, apart from unresolved analyses of Moroz2014_3d and all Nosenko2013 matrices, supported the Ctenophora-sister hypothesis (Fig. 3B). No IQ-TREE analyses supported Porifera-sister, including those that restrict outgroup sampling to Choanoflagellata and use models with site-heterogeneous equilibrium frequencies (Fig. 3B lower right; Supplementary Table 3), the conditions under which published PhyloBayes CAT analyses recover strong support for Porifera-sister (Fig. 3A). To further verify this difference in a controlled manner we reran PhyloBayes analyses with CAT, using both Poisson and GTR substitution matrices, for some matrices that had led to support for Porifera-sister in published analyses. Consistent with published results, some of these supported Porifera-sister.
 
-Our new analyses show that, with restricted outgroup sampling, analyses of the same matrices with two different means of accommodating site heterogeneity in equilibrium frequencies (C60 in IQ-TREE and CAT in PhyloBayes) yield different results. This indicates that the traditional framing of the problem, that accommodating rate heterogeneity leads to support for Porifera-sister, is not correct. Instead, there is something about PhyloBayes CAT analyses specifically that leads to support for Porifera-sister.
+Our new analyses show that, with restricted outgroup sampling, analyses of the same matrices with two different means of accommodating site heterogeneity in equilibrium frequencies (C60 in IQ-TREE and CAT in PhyloBayes) yield different results. This indicates that the traditional framing of the problem, that accommodating rate heterogeneity leads to support for Porifera-sister, is not correct. Instead, there is something about PhyloBayes CAT analyses specifically that leads to support for Porifera-sister. Moreover, we found that the branch lengths of Ctenophora taxa are generally longer than other animals with both site-homogeneous and site-heterogeneous models in many data matrices (*e.g.* Extended Data Figs. 3, 4). 
 
 ### Category number explains differences between heterogeneous analyses
 
@@ -289,12 +288,13 @@ There are several impacts of increasing the number of equilibrium frequency cate
 
 It could be that the sites that are allocated to rare categories are very different from the sites in the common categories, in which case the added parameters are helping to explain big variation found in rare sites that models with smaller numbers of categories are unable to adequately explain. Alternatively, when a large number of categories are allowed it may be that categories with many sites fragment into clouds of similar categories, in which case the added parameters are soaking up small variations between sites and adding little value. We find support for this second scenario (Extended Data Fig5. 3C-D).
 
-Taken together, this suggests that unconstrained CAT analyses are overparameterized. While models that accommodate site heterogeneity in equilibrium frequency are important in phylogenetic analyses, and tools such as PhyloBayes and IQ-TREE that implement such models are critical to phylogenetic questions considered here, the present analyses suggest that there are problems with unconstrained CAT analyses that are prone to create a large number of categories for a small fraction of sites. In the context of the present question, this means we should be skeptical of Porifera-sister not only because it is obtained under such a narrow range of analysis conditions, but because the very large number of categories needed to recover this result are adding a large number of parameters that explain a small fraction of the data.
+Taken together, although further analysis are warranted, this suggests that unconstrained CAT analyses might be overparameterized. While models that accommodate site heterogeneity in equilibrium frequency are important in phylogenetic analyses, and tools such as PhyloBayes and IQ-TREE that implement such models are critical to phylogenetic questions considered here, the present analyses suggest that there are problems with unconstrained CAT analyses that are prone to create a large number of categories for a small fraction of sites. In the context of the present question, this means we should be skeptical of Porifera-sister not only because it is obtained under such a narrow range of analysis conditions, but because the very large number of categories needed to recover this result are adding a large number of parameters that explain a small fraction of the data.
 
 ``` {r sensitive, fig.width=7.2, fig.height=7.2}
 
 Philippe2009 =
   analyses_sensitive %>%
+  filter(model != "GTR+CAT60") %>%
   filter(matrix == "Philippe2009_only_choanozoa" )
 
 Philippe2009$model =
@@ -337,6 +337,7 @@ p2 = Philippe2009 %>%
 
 Whelan2017_full_only_choanozoa =
   analyses_sensitive %>%
+  filter(model != "GTR+CAT60") %>%
   filter(matrix == "Whelan2017_full_only_choanozoa")
 
 Whelan2017_full_only_choanozoa$model =
@@ -378,11 +379,12 @@ p4 = Whelan2017_strict %>%
   labs(x = "Number of CAT substitutional categories", y = "Support") +
   ggtitle("Whelan2017_strict")
 
-ggarrange(p1, p2, p3, p4,  ncol  = 2, nrow = 2, labels = c("A", "B", "C", "D"), common.legend = TRUE)
+p=ggarrange(p1, p2, p3, p4,  ncol  = 2, nrow = 2, labels = c("A", "B", "C", "D"), common.legend = TRUE)
 
 ggsave("figures/Figure4_raw.pdf", width=7.2, height=7.2)
 
 ```
+![](figures/Figure4_manuscript.png)
 **Fig. 4.**  Sensitive analyses with representative data matrices analyzed by different number of equilibrium frequency categories (nCAT) in PhyloBayes. Statistical support values (posterior probabilities) were obtained from three data matrices using the site-heterogeneous Poisson+CAT model with different categories. (A) Phlippe2009_Choanozoa; (B) Philippe2009_Holozoa; (C) Whelan2017_full_Choanozoa; (D) Whelan2017_strict. Statistical support for Ctenophora-sister and Porifera-sister is indicated in orange and green, respectively. Support values from the sensitive analyses are shown in Supplementary Table 6.
 
 ### Phylogenetic signal
@@ -401,7 +403,7 @@ Other approaches have been taken to addressing base compositional heterogeneity 
 
 Resolving the placement of the root in the animal tree of life has been a very difficult phylogenetic problem [@laumer2019revisiting]. By synthesizing past phylogenomic studies and performing new analyses, we confirm that support of Porifera-sister is only recovered by site-heterogeneous CAT models with restricted outgroup sampling, and then only in some of such analyses. This demonstrates an important interaction between model selection and taxon sampling. Through controlled analyses we are able to identify the specific aspect of the models that is involved in this variation -- the number of categories used to accommodate site heterogeneity in equilibrium frequency. Site-homogeneous models have a single category that is applied to all sites. C models, as implemented in IQ-TREE, have 10-60 categories. CAT models can estimate the number of categories, in which case they use more than 500 for the matrices assessed here, or set to a specific number with nCAT. When outgroup sampling is fixed to a restricted subset (a requirement for any analysis to support Porifera-sister), root position is dependent on the number of categories. As the number of categories is increased, at some point support for Ctenophora-sister diminishes and support for Porifera-sister increases (Fig. 4). As part of this process, the number of genes with phylogenetic signal for each hypothesis also changes.
 
-Overcoming the challenges associated with this difficult and important question goes beyond models. In particular, there are many organisms that are highly relevant to this problem, in particular better sampling of outgroups, ctenophores, and sponges, for which no genome or transcriptome data are available [@King:2017ie]. In particular, there are very few chromosome-level genome assemblies for animals outside of Bilateria. There will be important advances in genome sequencing in coming years that will have a major impact on this problem. This is about more than more data - high quality chromosome-level assemblies will greatly facilitate gene homology assessments made during matrix construction and reduce the possibility of contamination and address occupancy issues in transcripomic data. We hope that the work we have conducted here to consolidate many datasets and analyses in standard formats will make it easier for other investigators to engage in this particularly interesting difficult phylogenetic problem, and also to develop methods and tools that will help with other difficult phylogenetic problems.
+Overcoming the challenges associated with this difficult and important question goes beyond models. In particular, there are many organisms that are highly relevant to this problem, in particular better sampling of outgroups, ctenophores, and sponges, for which no genome or transcriptome data are available [@King:2017ie]. In particular, there are very few chromosome-level genome assemblies for animals outside of Bilateria. There will be important advances in genome sequencing in coming years that will have a major impact on this problem. This is about more than more data - high quality chromosome-level assemblies will greatly facilitate gene homology assessments made during matrix construction and reduce the possibility of contamination and address occupancy issues in transcriptomic data. We hope that the work we have conducted here to consolidate many datasets and analyses in standard formats will make it easier for other investigators to engage in this particularly interesting difficult phylogenetic problem, and also to develop methods and tools that will help with other difficult phylogenetic problems.
 
 ## Methods
 
@@ -662,11 +664,11 @@ geom_hilight(node=93, fill="#E6BEFF") +
 geom_hilight(node=86, fill="#911EB4") +
   geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 1), hjust=-.3, size=2) + ggtitle("    GTR+CAT")
 
-ggarrange(p1, p2, p3, p4, p5,  ncol  = 3, nrow = 2, labels = c("A", "B", "C", "D" , "E"), common.legend = TRUE)
+p=ggarrange(p1, p2, p3, p4, p5,  ncol  = 3, nrow = 2, labels = c("A", "B", "C", "D" , "E"), common.legend = TRUE)
 
 ggsave("figures/Extended_Data_Fig3_raw.pdf", width=10, height=8)
 ```
-
+![](figures/Extended_Data_Fig3_manuscript.png)
 **Extended Data Fig. 3.** Comparison of the tree topologies under different substitutional models in Whelan2017_strict data matrix. (A). WAG+C60. (B). Poisson+nCAT60. (C). Poisson+nCAT90. (D). Poisson+CAT. (E). GTR+CAT.
 
 ```{r figure_Philippe2009_trees,, fig.height = 8, fig.width = 10}
@@ -754,10 +756,11 @@ p4=ggtree(tree4_rooted) +
     geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 0.95), hjust=-.3, size=2) + ggtitle("    GTR+CAT")
   p5 = flip(p5, 85, 38)
 
-ggarrange(p1, p2, p3, p4, p5,  ncol  = 3, nrow = 2, labels = c("A", "B", "C", "D" , "E"), common.legend = TRUE)
+p= ggarrange(p1, p2, p3, p4, p5,  ncol  = 3, nrow = 2, labels = c("A", "B", "C", "D" , "E"), common.legend = TRUE)
 
 ggsave("figures/Extended_Data_Fig4_raw.pdf", width=10, height=8)
 ```
+![](figures/Extended_Data_Fig4_manuscript.png)
 **Extended Data Fig. 4.** Comparison of the tree topologies under different substitutional models in Philippe2009_Choanimalia data matrix. (A). WAG+C60. (B). Poisson+nCAT60. (C). Poisson+nCAT150. (D). Poisson+CAT. (E). GTR+CAT.
 
 
