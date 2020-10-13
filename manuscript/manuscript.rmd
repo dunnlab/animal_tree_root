@@ -278,7 +278,28 @@ There are several factors, including variations in models (C60 vs CAT), software
 cat_categories$n_categories_poisson = cat_categories$`Infered categories from Poisson-CAT`
 cat_categories$n_categories_gtr = cat_categories$`Infered categories from GTR-CAT`
 
+# https://www.datanovia.com/en/lessons/t-test-in-r/
+cross_validation %>%
+  group_by(matrix,model) %>%
+  get_summary_stats(score, type = "mean_sd")
+# Whelan
+Dw = cross_validation %>%
+  filter(matrix=="Whelan2017_strict")
+
+stat_test_w =
+  t.test(score ~ model, var.equal = TRUE, data=Dw)
+P_value_Whelan2017_strict=stat.test_w$p.value
+
+# Philippe
+Dp = cross_validation %>%
+  filter(matrix=="Philippe2009_Chanimalia")
+
+stat.test_p =
+    t.test(score ~ model, var.equal = TRUE, data=Dp)
+
+P_value_Philippe2009=stat.test_p$p.value
 ```
+
 
 A primary difference between the C (like C60) and CAT site-heterogeneous models is the number of equilibrium frequency categories. The standard CAT model employs a Dirichlet process prior to inferring the number of equilibrium frequency categories, so the number of categories is variable [@Lartillot:2004dq]. IQ-TREE implements C models [@si2008empirical] with a fixed number of categories, from 10 (C10) to 60 (C60). Differences in analysis results could therefore be due to differences in the number of categories. The number of categories inferred by CAT in PhyloBayes can be very high (Supplementary Table 4), with a mean here of `r cat_categories$n_categories_poisson %>% mean() %>% round(1)` categories for Poisson+CAT analyses and `r cat_categories$n_categories_gtr  %>% mean(na.rm=TRUE) %>% round(1)` categories for GTR+CAT analyses. This requires a very large number of additional parameters that must be estimated from the data. Though C60 models have a better fit than site-homogeneous models in ModelFinder, the program reported that the C60 model might be overfitting because some category frequencies are estimated close to zero (except the Whelan2015, Whelan2017 and Simion2017 matrices), suggesting that 60 is probably already too high according to ModelFinder (Supplementary Table 5). These findings are consistent with earlier concern that CAT models can overestimate the number of equilibrium frequency categories in simulated matrices [@whelan2016let].
 
@@ -847,17 +868,12 @@ ggsave("figures/Extended_Data_Fig5_raw.pdf", width=6, height=12)
 
 ![](figures/Extended_Data_Fig10.png)
 
-**Extended Data Fig. 7.** A graphical representation of the posterior probabilities for the 32 analyses presented by Feuda *et al.* in their Table 3. Cells are color coded by whether posterior probability is > 95 for Porifera-sister, > 95 for Ctenophora-sister, or neither (unresolved). Posterior predictive (PP) statistics were estimated for the 16 analyses in the top two rows of this figure (the Chang and full Whelan matrices), but not the bottom two (the Whelan matrices with reduced outgroup sampling).
-
-
-**Extended Data Fig. 8.** The subset of eight GTR+CAT analyses with posterior predictive (PP) scores that is the focus of Feuda *et al.*'s primary conclusions. These are a subset of the 32 analyses presented in their Table 3 and graphically here in the upper right pane. The eight analyses are for two datasets (Chang and Whelan) and four coding schemes. The coding schemes are the original 20 state amino acid data, and three different six state recodings that group amino acids based on different criteria: KGB6, D6, and SR6. Only one of these analyses, the SR6 coding of the Whelan matrix, has > 95 support for Porifera-sister. The 20-state and 6-state points on the plots in Extended Data Fig. 5 correspond to the 20 and SR6 Whelan cells shown here. The presented statistics for these cells are posterior probability of Porifera-sister, Maxdiff (with lower scores indicating better convergence of runs), and five posterior predictive statistics (where lower absolute value indicates better model adequacy). The only one of these eight analyses that provides strong support for Porifera-sister is not the most adequate analysis by any of the posterior predictive scores, and showed the poorest convergence according to Maxdiff.
+**Extended Data Fig. 7.** A graphical representation of the posterior probabilities for the 32 analyses presented by Feuda *et al.* in their Table 3 and the subset of eight GTR+CAT analyses with posterior predictive (PP) scores that is the focus of Feuda *et al.*'s primary conclusions. (A). Cells are color coded by whether posterior probability is > 95 for Porifera-sister, > 95 for Ctenophora-sister, or neither (unresolved). Posterior predictive (PP) statistics were estimated for the 16 analyses in the top two rows of this figure (the Chang and full Whelan matrices), but not the bottom two (the Whelan matrices with reduced outgroup sampling). (B). These are a subset of the 32 analyses presented in their Table 3 and graphically here in the upper right pane. The eight analyses are for two datasets (Chang and Whelan) and four coding schemes. The coding schemes are the original 20 state amino acid data, and three different six state recodings that group amino acids based on different criteria: KGB6, D6, and SR6. Only one of these analyses, the SR6 coding of the Whelan matrix, has > 95 support for Porifera-sister. The 20-state and 6-state points on the plots in Extended Data Fig. 5 correspond to the 20 and SR6 Whelan cells shown here. The presented statistics for these cells are posterior probability of Porifera-sister, Maxdiff (with lower scores indicating better convergence of runs), and five posterior predictive statistics (where lower absolute value indicates better model adequacy). The only one of these eight analyses that provides strong support for Porifera-sister is not the most adequate analysis by any of the posterior predictive scores, and showed the poorest convergence according to Maxdiff.
 
 ![](figures/Extended_Data_Fig9.png)
 **Extended Data Fig. 9.** Each of the six plots presents one statistic, which include Posterior probability of Porifera-sister and the five Posterior Predictive (PP) statistics considered by Feuda *et al.* Within each plot, there are six lines for six different analyses. These five analyses are the published SR-6 analyses presented by Feuda *et al.* (SR6-published), and four analyses based on randomized recoding matrices obtained by shuffling the SR-6 coding scheme (random-00 - random-03). Each analysis includes results for 20 states (the raw amino acid data, shown by the left point) and for 6 states (the 6-state recoded data, shown by the right point). For each statistic, the results obtained with the random recoding are similar to those of the SR6 recoding. This indicates that the impact of recoding is dominated by discarding data when collapsing from 20 states to 6 states, not accommodating compositional heterogeneity across lineages.
 
 
-![](figures/Extended_Data_Fig9.png)
-**Extended Data Fig. 10.**
 cross_validation =
   read_tsv("../data_processed/tables/cross_validation.tsv") %>%
   gather("model", "score", `nCAT60`, `Poisson-CAT`)
@@ -881,28 +897,9 @@ ggarrange(
   ncol=2, labels = c("A", "B"))
 
 ```
-```{r}
-# https://www.datanovia.com/en/lessons/t-test-in-r/
-cross_validation %>%
-  group_by(matrix,model) %>%
-  get_summary_stats(score, type = "mean_sd")
-# Whelan
-Dw = cross_validation %>%
-  filter(matrix=="Whelan2017_strict")
 
-stat_test_w =
-  t.test(score ~ model, var.equal = TRUE, data=Dw)
-stat.test_w$p.value
+**Extended Data Fig. 10.** Cross validation..
 
-# Philippe
-Dp = cross_validation %>%
-  filter(matrix=="Philippe2009_Chanimalia")
-
-stat.test_p =
-    t.test(score ~ model, var.equal = TRUE, data=Dp)
-stat.test_p
-stat.test_p$p.value
-```
 
 \pagebreak
 
