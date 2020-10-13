@@ -273,7 +273,6 @@ There are several factors, including variations in models (C60 vs CAT), software
 
 ```{r}
 
-cat_categories = read_tsv("../data_processed/tables/cat_categories.tsv")
 
 cat_categories$n_categories_poisson = cat_categories$`Infered categories from Poisson-CAT`
 cat_categories$n_categories_gtr = cat_categories$`Infered categories from GTR-CAT`
@@ -491,7 +490,7 @@ We thank members of the Dunn and Rokas laboratories for discussions and comments
 
 **Extended Data Table 1.** Table 1. Overview of data matrices used in this study.
 ```{r table_study_summary}
-table_study_summary = read_tsv("../data_processed/tables/study_summary.tsv")
+
 opts <- options(knitr.kable.NA = "")
 knitr::kable(table_study_summary) %>%
   kable_styling(full_width = F)
@@ -512,10 +511,8 @@ analyses_new %>%
 
 ```{r figure_Whelan2017_trees,, fig.height = 8, fig.width = 10}
 
-taxa_map=read_tsv("../reconciliation/taxonomy_info/taxon_table.tsv") %>% filter(original_matrix=="../considered_data/Whelan2017/strict.phy")
-outgroup= taxa_map %>% filter (clade_assignment=="Choanoflagellida")
+outgroup= taxa_map_whelan %>% filter (clade_assignment=="Choanoflagellida")
 
-tree1= read.tree("../trees_new/iqtree/Whelan2017_strict.model_test.treefile")
 tree1_rooted =  root(tree1, outgroup$relabelled_name, resolved.root=TRUE)
 p1 = ggtree(tree1_rooted) +
   geom_cladelabel(node=90, label="Ctenophora", angle=90, hjust='center', offset.text=.01) +
@@ -531,7 +528,6 @@ p1 = ggtree(tree1_rooted) +
   geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 95), hjust=-.3, size=2) + ggtitle("    WAG+C60")
 
 
-tree2=read.tree("../trees_new/sensitive/Whelan2017_strict.phy_Poisson_CAT60.con.tre")
 tree2_rooted =  root(tree2, outgroup$relabelled_name, resolved.root=TRUE)
 p2= ggtree(tree2_rooted) +
   geom_cladelabel(node=119, label="Ctenophora", angle=90, hjust='center', offset.text=.01) +
@@ -547,7 +543,6 @@ p2= ggtree(tree2_rooted) +
   geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 1), hjust=-.3, size=2) + ggtitle("    Poisson+nCAT60")
 
 
-tree3=read.tree("../trees_new/sensitive/Whelan2017_strict.phy_Poisson_CAT90.con.tre")
 tree3_rooted =  root(tree3, outgroup$relabelled_name, resolved.root=TRUE)
 p3=ggtree(tree3_rooted) +
   geom_cladelabel(node=100, label="Ctenophora", angle=90, hjust='center', offset.text=.01) +
@@ -563,7 +558,6 @@ p3=ggtree(tree3_rooted) +
   geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 1), hjust=-.3, size=2) + ggtitle("    Poisson+nCAT90")
 p3 = flip(p3, 100, 98)
 
-tree4=read.tree("../trees_new/phylobayes/Whelan2017_strict.bpcomp.con.tre")
 tree4_rooted =  root(tree4, outgroup$relabelled_name, resolved.root=TRUE)
 p4=ggtree(tree4_rooted) +
 geom_cladelabel(node=100, label="Ctenophora", angle=90, hjust='center', offset.text=.01) +
@@ -579,7 +573,6 @@ geom_hilight(node=86, fill="#911EB4") +
   geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) <1), hjust=-.3, size=2) + ggtitle("    Poisson+CAT")
 p4 = flip(p4, 100, 98)
 
-tree5=read.tree("../trees_new/phylobayes/Whelan2017_strict.phy_GTR_CAT.con.tre")
 tree5_rooted =  root(tree5, outgroup$relabelled_name, resolved.root=TRUE)
 p5=ggtree(tree5_rooted) +
 geom_cladelabel(node=119, label="Ctenophora", angle=90, hjust='center', offset.text=.01) +
@@ -603,10 +596,8 @@ ggsave("figures/Extended_Data_Fig1_raw.pdf", width=10, height=8)
 
 ```{r figure_Philippe2009_trees,, fig.height = 8, fig.width = 10}
 
-taxa_map=read_tsv("../reconciliation/taxonomy_info/taxon_table.tsv") %>% filter(original_matrix=="../considered_data/Philippe2009/Philippe2009.nex")
-outgroup= taxa_map %>% filter (clade_assignment=="Choanoflagellida")
+outgroup= taxa_map_philippe %>% filter (clade_assignment=="Choanoflagellida")
 
-tree6= read.tree("../trees_new/iqtree/Philippe2009_only_choanozoa.WAG+C60.treefile")
 tree6_rooted =  root(tree6, outgroup=outgroup$relabelled_name, resolved.root=TRUE)
 p1 = ggtree(tree6_rooted) +
   geom_cladelabel(node=85, label="Ctenophora") +
@@ -622,7 +613,6 @@ p1 = ggtree(tree6_rooted) +
   geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 95), hjust=-.3, size=2) + ggtitle("    WAG+C60")
 
 
-tree7=read.tree("../trees_new/sensitive/Philippe2009_only_choanozoa.phy_Poisson_CAT60.con.tre")
 tree7_rooted =  root(tree7, outgroup$relabelled_name, resolved.root=TRUE)
 p2= ggtree(tree7_rooted) +
   geom_cladelabel(node=83, label="Ctenophora") +
@@ -638,7 +628,6 @@ p2= ggtree(tree7_rooted) +
   geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 0.95), hjust=-.3, size=2) + ggtitle("    Poisson+nCAT60")
 
 
-tree8=read.tree("../trees_new/sensitive/Philippe2009_only_choanozoa.phy_Poisson_CAT150.con.tre")
 tree8_rooted =  root(tree8, outgroup$relabelled_name, resolved.root=TRUE)
 p3=ggtree(tree8_rooted) +
   geom_cladelabel(node=83, label="Ctenophora") +
@@ -654,7 +643,6 @@ p3=ggtree(tree8_rooted) +
   geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 0.95), hjust=-.3, size=2) + ggtitle("    Poisson+nCAT150")
 
 
-tree9=read.tree("../trees_new/phylobayes/Philippe2009_only_choanozoa.bpcomp.con.tre")
 tree9_rooted =  root(tree9, outgroup$relabelled_name, resolved.root=TRUE)
 p4=ggtree(tree9_rooted) +
   geom_cladelabel(node=58, label="Ctenophora") +
@@ -670,7 +658,6 @@ p4=ggtree(tree9_rooted) +
   geom_text2(aes(label=label, subset = !is.na(as.numeric(label)) & as.numeric(label) < 0.95), hjust=-.3, size=2) + ggtitle("    Poisson+CAT")
 
 
-  tree10=read.tree("../trees_new/phylobayes/Philippe2009_only_choanozoa.phy_GTR_CAT.con.tre")
   tree10_rooted =  root(tree10, outgroup$relabelled_name, resolved.root=TRUE)
   p5=ggtree(tree10_rooted) +
     geom_cladelabel(node=58, label="Ctenophora") +
@@ -695,8 +682,7 @@ ggsave("figures/Extended_Data_Fig2_raw.pdf", width=10, height=8)
 
 ```{r figure_gene_composition,, fig.height = 4, fig.width = 10}
 
-ribo = read_tsv("../data_processed/tables/ribosomal_gene.tsv")
-busco = read_tsv("../data_processed/tables/busco_gene.tsv")
+
 
 ribo$matrix =
   factor(

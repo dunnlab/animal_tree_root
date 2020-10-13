@@ -430,4 +430,24 @@ write_csv(analyses_new, "./Supplementary_tables/Supplementary_Table_3.csv", na =
 write_csv(analyses_sensitive, "./Supplementary_tables/Supplementary_Table_6.csv", na = "NA", quote_escape = "double")
 write_csv(au_tests, "./Supplementary_tables/Supplementary_Table_7.csv", na = "NA", quote_escape = "double")
 
+## Move all read functions to kernel so all vairables are stored in Rdata
+
+cat_categories = read_tsv("../data_processed/tables/cat_categories.tsv")
+table_study_summary = read_tsv("../data_processed/tables/study_summary.tsv")
+taxa_map_whelan=read_tsv("../reconciliation/taxonomy_info/taxon_table.tsv") %>% filter(original_matrix=="../considered_data/Whelan2017/strict.phy")
+taxa_map_philippe=read_tsv("../reconciliation/taxonomy_info/taxon_table.tsv") %>% filter(original_matrix=="../considered_data/Philippe2009/Philippe2009.nex")
+tree1= read.tree("../trees_new/iqtree/Whelan2017_strict.model_test.treefile")
+tree2=read.tree("../trees_new/sensitive/Whelan2017_strict.phy_Poisson_CAT60.con.tre")
+tree3=read.tree("../trees_new/sensitive/Whelan2017_strict.phy_Poisson_CAT90.con.tre")
+tree4=read.tree("../trees_new/phylobayes/Whelan2017_strict.bpcomp.con.tre")
+tree5=read.tree("../trees_new/phylobayes/Whelan2017_strict.phy_GTR_CAT.con.tre")
+tree6= read.tree("../trees_new/iqtree/Philippe2009_only_choanozoa.WAG+C60.treefile")
+tree7=read.tree("../trees_new/sensitive/Philippe2009_only_choanozoa.phy_Poisson_CAT60.con.tre")
+tree8=read.tree("../trees_new/sensitive/Philippe2009_only_choanozoa.phy_Poisson_CAT150.con.tre")
+tree9=read.tree("../trees_new/phylobayes/Philippe2009_only_choanozoa.bpcomp.con.tre")
+tree10=read.tree("../trees_new/phylobayes/Philippe2009_only_choanozoa.phy_GTR_CAT.con.tre")
+ribo = read_tsv("../data_processed/tables/ribosomal_gene.tsv")
+busco = read_tsv("../data_processed/tables/busco_gene.tsv")
+
+
 
