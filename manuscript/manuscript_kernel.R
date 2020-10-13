@@ -448,6 +448,9 @@ tree9=read.tree("../trees_new/phylobayes/Philippe2009_only_choanozoa.bpcomp.con.
 tree10=read.tree("../trees_new/phylobayes/Philippe2009_only_choanozoa.phy_GTR_CAT.con.tre")
 ribo = read_tsv("../data_processed/tables/ribosomal_gene.tsv")
 busco = read_tsv("../data_processed/tables/busco_gene.tsv")
+cross_validation =
+  read_tsv("../data_processed/tables/cross_validation.tsv") %>%
+  gather("model", "score", `nCAT60`, `Poisson-CAT`)
 
 
 

@@ -32,6 +32,7 @@ knitr::opts_chunk$set(
 
 
 ```{r preliminaries}
+  library( rstatix )
   library( tidyverse )
   library( magrittr )
   library( viridis )
@@ -856,6 +857,54 @@ ggsave("figures/Extended_Data_Fig5_raw.pdf", width=6, height=12)
 ![](figures/Extended_Data_Fig9.png)
 **Extended Data Fig. 9.** Each of the six plots presents one statistic, which include Posterior probability of Porifera-sister and the five Posterior Predictive (PP) statistics considered by Feuda *et al.* Within each plot, there are six lines for six different analyses. These five analyses are the published SR-6 analyses presented by Feuda *et al.* (SR6-published), and four analyses based on randomized recoding matrices obtained by shuffling the SR-6 coding scheme (random-00 - random-03). Each analysis includes results for 20 states (the raw amino acid data, shown by the left point) and for 6 states (the 6-state recoded data, shown by the right point). For each statistic, the results obtained with the random recoding are similar to those of the SR6 recoding. This indicates that the impact of recoding is dominated by discarding data when collapsing from 20 states to 6 states, not accommodating compositional heterogeneity across lineages.
 
+
+![](figures/Extended_Data_Fig9.png)
+**Extended Data Fig. 10.**
+cross_validation =
+  read_tsv("../data_processed/tables/cross_validation.tsv") %>%
+  gather("model", "score", `nCAT60`, `Poisson-CAT`)
+
+```{r cross_validation, fig.width=6, fig.height=7}
+p_w = cross_validation %>%
+  filter(matrix=="Whelan2017_strict") %>%
+  ggplot(aes(x=model, y=score)) +
+  geom_boxplot() +
+  ggtitle("Whelan2017") +
+  theme_classic()
+p_p = cross_validation %>%
+  filter(matrix=="Philippe2009_Chanimalia") %>%
+  ggplot(aes(x=model, y=score)) +
+  geom_boxplot() +
+  ggtitle("Philippe2009") +
+  theme_classic()
+ggarrange(
+  p_w,
+  p_p,
+  ncol=2, labels = c("A", "B"))
+
+```
+```{r}
+# https://www.datanovia.com/en/lessons/t-test-in-r/
+cross_validation %>%
+  group_by(matrix,model) %>%
+  get_summary_stats(score, type = "mean_sd")
+# Whelan
+Dw = cross_validation %>%
+  filter(matrix=="Whelan2017_strict")
+
+stat_test_w =
+  t.test(score ~ model, var.equal = TRUE, data=Dw)
+stat.test_w$p.value
+
+# Philippe
+Dp = cross_validation %>%
+  filter(matrix=="Philippe2009_Chanimalia")
+
+stat.test_p =
+    t.test(score ~ model, var.equal = TRUE, data=Dp)
+stat.test_p
+stat.test_p$p.value
+```
 
 \pagebreak
 
