@@ -5,9 +5,9 @@ header-includes:
    - \usepackage{lineno}
    - \linenumbers
 output:
+  html_document: default
   pdf_document:
     latex_engine: xelatex
-  html_document: default
   word_document: default
   github_document: default
 ---
@@ -32,7 +32,6 @@ knitr::opts_chunk$set(
 
 
 ```{r preliminaries}
-  library( rstatix )
   library( tidyverse )
   library( magrittr )
   library( viridis )
@@ -54,6 +53,25 @@ knitr::opts_chunk$set(
 
   result_colors = c( cbPalette[2], cbPalette[4], cbPalette[1] )
   names( result_colors ) = c( "Ctenophora-sister", "Porifera-sister", "Unresolved" )
+  cat_categories = read_tsv("../data_processed/tables/cat_categories.tsv")
+table_study_summary = read_tsv("../data_processed/tables/study_summary.tsv")
+taxa_map_whelan=read_tsv("../reconciliation/taxonomy_info/taxon_table.tsv") %>% filter(original_matrix=="../considered_data/Whelan2017/strict.phy")
+taxa_map_philippe=read_tsv("../reconciliation/taxonomy_info/taxon_table.tsv") %>% filter(original_matrix=="../considered_data/Philippe2009/Philippe2009.nex")
+tree1= read.tree("../trees_new/iqtree/Whelan2017_strict.model_test.treefile")
+tree2=read.tree("../trees_new/sensitive/Whelan2017_strict.phy_Poisson_CAT60.con.tre")
+tree3=read.tree("../trees_new/sensitive/Whelan2017_strict.phy_Poisson_CAT90.con.tre")
+tree4=read.tree("../trees_new/phylobayes/Whelan2017_strict.bpcomp.con.tre")
+tree5=read.tree("../trees_new/phylobayes/Whelan2017_strict.phy_GTR_CAT.con.tre")
+tree6= read.tree("../trees_new/iqtree/Philippe2009_only_choanozoa.WAG+C60.treefile")
+tree7=read.tree("../trees_new/sensitive/Philippe2009_only_choanozoa.phy_Poisson_CAT60.con.tre")
+tree8=read.tree("../trees_new/sensitive/Philippe2009_only_choanozoa.phy_Poisson_CAT150.con.tre")
+tree9=read.tree("../trees_new/phylobayes/Philippe2009_only_choanozoa.bpcomp.con.tre")
+tree10=read.tree("../trees_new/phylobayes/Philippe2009_only_choanozoa.phy_GTR_CAT.con.tre")
+ribo = read_tsv("../data_processed/tables/ribosomal_gene.tsv")
+busco = read_tsv("../data_processed/tables/busco_gene.tsv")
+cross_validation =
+  read_tsv("../data_processed/tables/cross_validation.tsv") %>%
+  gather("model", "score", `nCAT60`, `Poisson-CAT`)
 
 ```
 
@@ -280,24 +298,23 @@ cat_categories$n_categories_gtr = cat_categories$`Infered categories from GTR-CA
 
 # https://www.datanovia.com/en/lessons/t-test-in-r/
 cross_validation %>%
-  group_by(matrix,model) %>%
-  get_summary_stats(score, type = "mean_sd")
+  group_by(matrix,model)
 # Whelan
 Dw = cross_validation %>%
   filter(matrix=="Whelan2017_strict")
 
 stat_test_w =
   t.test(score ~ model, var.equal = TRUE, data=Dw)
-P_value_Whelan2017_strict=stat.test_w$p.value
+P_value_Whelan2017_strict=stat_test_w$p.value
 
 # Philippe
 Dp = cross_validation %>%
   filter(matrix=="Philippe2009_Chanimalia")
 
-stat.test_p =
+stat_test_p =
     t.test(score ~ model, var.equal = TRUE, data=Dp)
 
-P_value_Philippe2009=stat.test_p$p.value
+P_value_Philippe2009=stat_test_p$p.value
 ```
 
 
@@ -512,10 +529,9 @@ We thank members of the Dunn and Rokas laboratories for discussions and comments
 
 **Extended Data Table 1.** Table 1. Overview of data matrices used in this study.
 ```{r table_study_summary}
-
+table_study_summary = read_tsv("../data_processed/tables/study_summary.tsv")
 opts <- options(knitr.kable.NA = "")
-knitr::kable(table_study_summary) %>%
-  kable_styling(full_width = F)
+knitr::kable(table_study_summary)
 
 ```
 
@@ -878,7 +894,7 @@ cross_validation =
   read_tsv("../data_processed/tables/cross_validation.tsv") %>%
   gather("model", "score", `nCAT60`, `Poisson-CAT`)
 
-```{r cross_validation, fig.width=6, fig.height=7}
+```{r cross_validation, fig.width=6, fig.height=3.5}
 p_w = cross_validation %>%
   filter(matrix=="Whelan2017_strict") %>%
   ggplot(aes(x=model, y=score)) +
