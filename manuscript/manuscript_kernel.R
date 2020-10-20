@@ -408,21 +408,6 @@ n_categories_whel_cat =
 fit = cmdscale( dist( pb_frequencies ) ,eig=TRUE, k=2)
 pb_summaries %<>% mutate( x_global = fit$points[,1], y_global = fit$points[,2] )
 
-## Record information about the session
-session_info_kernel = sessionInfo()
-system_time_kernel = Sys.time()
-
-commit_kernel =
-  system("git log | head -n 1", intern = TRUE) %>%
-  str_replace("commit ", "")
-
-time_stop = Sys.time()
-time_run = time_stop - time_start
-
-## Write the results to prepare them for manuscript.rmd
-
-save.image("manuscript.RData")
-
 ## Write the results from RData to prepare them for supplementary tables
 write_csv(partition_map_global, "./Supplementary_tables/Supplementary_Table_1.csv", na = "NA", quote_escape = "double")
 write_csv(analyses_published, "./Supplementary_tables/Supplementary_Table_2.csv", na = "NA", quote_escape = "double")
@@ -452,5 +437,17 @@ cross_validation =
   read_tsv("../data_processed/tables/cross_validation.tsv") %>%
   gather("model", "score", `nCAT60`, `Poisson-CAT`)
 
+## Record information about the session
+session_info_kernel = sessionInfo()
+system_time_kernel = Sys.time()
 
+commit_kernel =
+  system("git log | head -n 1", intern = TRUE) %>%
+  str_replace("commit ", "")
 
+time_stop = Sys.time()
+time_run = time_stop - time_start
+
+## Write the results to prepare them for manuscript.rmd
+
+save.image("manuscript.RData")
