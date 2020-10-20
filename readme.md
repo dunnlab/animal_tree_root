@@ -9,23 +9,12 @@ A comparison of phylogenetic studies relevant to placing the root of the animal 
 ```
 .
 ├── data_processed         # Data processed for analyses in this manuscript
-│   ├── matrices             # Matrices in consistent formats with harmonized taxon names
-│   └── tables               # Tabular summaries of previously published datasets and results, reconciliation results (taxon-clade maps, partition-gene maps, etc...)
-├── data_raw               # Data as downloaded from manuscripts and provided by author. Contains one directory per previously published manuscript.
-│   ├── Borowiec2015
-│   ...
-│   └── Whelan2017
+│   ├── matrices           # Matrices in consistent formats with harmonized taxon names
+│   └── tables             # Tabular summaries of previously published datasets and results, reconciliation results (taxon-clade maps, partition-gene maps, etc...)
 ├── docker                 # All files needed to create environment for reproducing analyses
-├── manuscript             # Files for the manuscript, an R project and associated manuscript code
-│   ├── figures            # Figures for the manuscript
-│   └── manuscript_files   # Ancillary files for the manuscript
-├── reconciliation         # Files relevant to identifying common taxa and genes across matrices.
-│   ├── blast              # Results from varied blast 
-│   ├── considered_data    # subset of the data_raw considered in this manuscript
-│   ├── scripts            # Scripts to filter, analyze, generate data
-│   └── taxonomy_info      # Working directory to reconcile taxon names. Final table in data_processed/tables
-└── trees_new              # Results from new phylogenetic analyses in this manuscript
-
+└── manuscript             # Files for the manuscript, an R project and associated manuscript code
+    ├── figures            # Figures for the manuscript
+    └── manuscript_files   # Ancillary files for the manuscript
 ```
 
 
@@ -64,22 +53,14 @@ git submodule update --init --recursive
 git lfs clone
 ```
 
-If you would like to clone just like the files for interacting with the `manuscript.rmd`, you can run the following:
+## Recreating full project
 
-``` bash
-git lfs uninstall
-git clone git@github.com:dunnlab/animal_root.git
-cd animal_root
-git lfs install
-git lfs pull --include=manuscript
+Because the original repo for this project is quite large, we present a pared down repo for general consumption. If you would like to recreate it, download the data from Figshare:
+
+```
+TODO
 ```
 
-## Development
+## Citation
 
-### Running tests
-
-To run tests of the code, launch an R console from the `manuscript/` directory of this
-repository and run:
-
-    library( testthat )
-    test_dir( "tests/testthat/" )
+citation here
