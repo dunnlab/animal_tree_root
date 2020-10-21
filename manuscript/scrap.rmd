@@ -1,0 +1,69 @@
+# Scrap
+
+Misc code removed fromt he main manuscript that may still be of use later.
+
+### Taxa
+
+The primary intent of comparing taxa across matrices was to validate our taxon name reconciliation across studies. 
+
+We first considered pairwise similarity between the same species from different matrices in different studies.
+
+```{r taxon_mapping_across_studies, eval=FALSE}
+
+Dtaxaxman = 
+	read_tsv("../reconciliation/blast/graphs/cross_mscript_taxa.tsv") %>%
+	arrange( mscript1, dataset1, taxon1, mscript2, dataset2, taxon2 ) 
+
+Dtaxaxman_raw_count = nrow(Dtaxaxman)
+
+Dtaxaxman %<>%
+	distinct( mscript1, dataset1, taxon1, mscript2, dataset2, taxon2, .keep_all = TRUE )
+
+```
+
+`r Dtaxaxman_raw_count` raw pairwise comparisons passed the similarity thresholds under these sampling criteria. These included multiple hits for the same sequence pairs from different regions. When only a single hit is retained, there are `r nrow(Dtaxaxman)` retained sequence pairs.
+
+We next considered taxon mapping more generally.
+
+```{r taxon_mapping, eval=FALSE}
+
+Dtaxa = 
+	read_tsv("../blast/graphs/taxon_graph.tsv") %>%
+	arrange( mscript1, dataset1, taxon1, mscript2, dataset2, taxon2 ) 
+
+# Set aside species correspondense to same species in same matrix in same matrix
+Dtaxa_self =
+	Dtaxa %>%
+		filter( mscript1 == mscript2 & dataset1==dataset2 & taxon1==taxon2  )
+
+# Remove species correspondense to same species in same matrix in same study
+Dtaxa %<>%
+	filter( !(mscript1 == mscript2 & dataset1==dataset2 & taxon1==taxon2) )
+
+n_not_self = nrow(Dtaxa)
+
+# Remove hits in same matrix in same study
+Dtaxa %<>%
+	filter( !(mscript1==mscript2 & dataset1==dataset2))
+
+# Remove hits same study, presume that taxon resolution is OK within study.
+Dtaxa %<>%
+	filter( !(mscript1==mscript2))
+
+
+ggplot(Dtaxa) + geom_density(aes(count)) + xlim(0,50)
+
+ggplot(Dtaxa_self) + geom_density(aes(count))
+
+# Top of this list are candidates for renaming because they are very similar but have different names
+Dtaxa %>% filter(taxon1!=taxon2) %>% arrange( desc(count))
+
+
+# Top of this list are candidates for renaming because they are very different but have same names
+
+Dtaxa %>% filter(taxon1==taxon2) %>% arrange( count )
+
+
+
+
+```

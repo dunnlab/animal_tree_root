@@ -1,0 +1,198 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+  github_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  message = FALSE,
+  warning = FALSE,
+  echo = FALSE,
+  dpi = 300,
+  cache = FALSE
+  )
+```
+
+```{r preliminaries}
+  library( tidyverse )
+  library( magrittr )
+  library( gridExtra )
+
+  source( "../phylobayes.R" )
+  source( "../functions.R" )
+
+  # A colorblind friendly palette from http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/#a-colorblind-friendly-palette:
+  cbPalette = c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
+  result_colors = c( cbPalette[2], cbPalette[4], cbPalette[1] )
+  names( result_colors ) = c( "Ctenophora-sister", "Porifera-sister", "Unresolved" )
+  
+  aa = PartitionedMultipleAlignment ("../../data_processed/matrices/Whelan2017_strict.phy", "../../data_processed/matrices/Whelan2017_strict.nex")
+  
+  m = as.matrix(aa)
+  site_occupancy = colSums(m != "-" ) / nrow(m)
+
+```
+
+
+An exploration of phylobayes chain samples.
+
+```{r}
+
+plot_chain = function( pb, site_occupancy ){
+
+  allocation_counts = table(pb@allocation)
+  index = allocation_counts %>% names() %>% as.numeric()
+  
+  if( ! all( index %in% rownames(pb@frequencies) ) ){
+    stop("Allocations are outside available category range")
+  }
+  
+  # Consider only the subset of frequencies that are allocated
+  frequencies = pb@frequencies[ match(index , rownames(pb@frequencies) ), ]
+  
+  # Building on https://www.statmethods.net/advstats/mds.html
+  d = dist( frequencies )
+  fit = cmdscale(d,eig=TRUE, k=2)
+  
+  # Calculate the mean occupancy for each site in the original matrix
+  occupancy = sapply( index, function(i){
+    sites = which( pb@allocation == i  )
+    mean( site_occupancy[ sites ] )
+  })
+  
+  
+  categories = 
+    tibble(
+      index = index,
+      count = c(allocation_counts),
+      occupancy = occupancy,
+      x = fit$points[,1],
+      y = fit$points[,2]
+    ) %>%
+    arrange(desc(count))
+  
+  categories %<>% mutate(rank = 1:nrow(categories))
+  
+  gg_mds = 
+  categories %>% 
+    ggplot() +
+    geom_point(aes(x=x, y=y, size=count), alpha=0.4 ) +
+    ggtitle("MDS plot of frequency categories") +
+    theme_classic()
+  
+  
+  gg_rank = 
+    categories %>%
+    ggplot() +
+      geom_point(aes(x=rank, y=cumsum(count)) ) +
+      ggtitle("Cumulative sum of sites") +
+      theme_classic()
+  
+  p = grid.arrange(
+  	gg_rank,
+  	gg_mds,
+  	ncol = 2
+  )
+  
+  return(p)
+}
+
+
+```
+
+
+
+
+```{r}
+
+chain = parse_phylobayes_chain( "../tests/testthat/example.chain" )
+  
+# Take just the last sample for now
+pb = chain[[length(chain)]]
+
+plot_chain( pb, site_occupancy )
+
+```
+
+**Figure n60.** Plots for nCAT=60.
+
+
+```{r}
+
+chain = parse_phylobayes_chain( "Whelan2017_strict.phy_Poisson_CAT100_Chain_1_last500.chain" )
+  
+# Take just the last sample for now
+pb = chain[[length(chain)]]
+
+plot_chain( pb, site_occupancy )
+
+```
+
+**Figure n100.** Plots for nCAT=100.
+
+```{r}
+
+chain_whel_cat = parse_phylobayes_chain( "../../trees_new/frequency/subsampled_Whelan2017_strict.phy_Poisson_CAT_Chain1.chain" )
+  
+# Take just the last sample for now
+pb_whel_cat = chain_whel_cat[[length(chain_whel_cat)]]
+
+plot_chain( pb_whel_cat, site_occupancy )
+
+```
+
+**Figure CAT.** Plots for Whelan CAT.
+
+```{r}
+
+chain_phil_cat = parse_phylobayes_chain( "../../trees_new/frequency/subsampled_Philippe2009_only_choanozoa.phy_Poisson_CAT_Chain_1.chain" )
+  
+# Take just the last sample for now
+pb_phil_cat = chain_phil_cat[[length(chain_phil_cat)]]
+
+plot_chain( pb_phil_cat, site_occupancy )
+
+```
+
+
+**Figure Philippe CAT.**
+
+
+## Assessing consistency of allocations
+
+The goal of these analyses is to investigate the consistency of site allocation to rare or frequent categories across generations and chains. The metric we looked at was, for each site, the mean and distribution of the mean number of sites allocated to the category the site belongs to across generations.
+
+First, we extracted these statistics from each chain ising `allocation_job.sh`, which runs `pb_allocation.py`
+
+```{r}
+
+allocations_phil_cat_chain1 = read_delim( "Philippe2009_only_choanozoa.phy_Poisson_CAT_Chain_1.category.summary", delim=" ", col_names=c("mean_chain1", "std_chain1") )
+allocations_phil_cat_chain2 = read_delim( "Philippe2009_only_choanozoa.phy_Poisson_CAT_Chain_2.category.summary", delim=" ", col_names=c("mean_chain2", "std_chain2") )
+
+allocations_phil_cat = 
+  bind_cols( allocations_phil_cat_chain1, allocations_phil_cat_chain2 ) %>% 
+  mutate( site=1:nrow(allocations_phil_cat_chain1)) %>%
+  mutate( sample=pb_phil_cat@allocation) %>%
+  mutate( sample_1=chain_phil_cat[[length(chain_phil_cat)-1]]@allocation)
+
+allocations_phil_cat %>% ggplot() + geom_point(aes(x=mean_chain1, y=mean_chain2), alpha=0.1) + ggtitle("Philippe2009")
+
+allocations_phil_cat %>% ggplot() + geom_point(aes(x=mean_chain1, y=sample_1), alpha=0.1) + ggtitle("Philippe2009")
+
+allocations_phil_cat %>% ggplot() + geom_point(aes(x=sample_1, y=sample), alpha=0.1) + ggtitle("Philippe2009")
+
+allocations_whel_cat_chain1 = read_delim( "Whelan2017_strict.phy_Poisson_CAT_Chain1.category.summary", delim=" ", col_names=c("mean_chain1", "std_chain1") )
+allocations_whel_cat_chain2 = read_delim( "Whelan2017_strict.phy_Poisson_CAT_Chain2.category.summary", delim=" ", col_names=c("mean_chain2", "std_chain2") )
+
+allocations_whel_cat = bind_cols( allocations_whel_cat_chain1, allocations_whel_cat_chain2 ) %>% mutate( site=1:nrow(allocations_whel_cat_chain1))
+
+allocations_whel_cat %>% ggplot() + geom_point(aes(x=mean_chain1, y=mean_chain2), alpha=0.1) + ggtitle("Whelan2017")
+
+
+```
+
+
