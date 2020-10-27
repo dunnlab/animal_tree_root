@@ -481,7 +481,7 @@ To compare the allocation of frequency categories across sites in the Philippe20
 Bayesian cross-validation implemented in PhyloBayes-MPI was used to compare the fit of Poisson+nCAT60 and Poisson+CAT models coupled with a gamma distribution of site-rate heterogeneity in Whelan2017_strict and Philippe2009_Choanimalia data matrices. Ten replicates were run, each replicate consisting of a random subsample of 10,000 sites for training the model and 2,000 sites for computing the cross-validation likelihood score. For each  run, 5,000 generations were run and the first 2,000 generations were discarded as burn-in.
 
 #### Performance of data-recoding
-All code used for the analyses presented here is available in a git repository at https://github.com/caseywdunn/animal_root/feuda_2017_response. The randomized recoding analyses are in the `recoding/alternative` subdirectory of the git repository.
+All code used for the analyses presented here is available in a git repository at https://github.com/caseywdunn/feuda_2017. The randomized recoding analyses are in the `recoding/alternative` subdirectory of the git repository.
 
 The original SR-6 recoding scheme is "`APST CW DEGN FHY ILMV KQR`" [@Susko:2007ds], where spaces separate amino acids that are placed into the same group. This recoding is one member of a family of recodings, each with a different number of groups, based on clustering of the JTT matrix. The other recoding used by Feuda *et al.*, KGB-6 and D-6, are based on different matrices and methods [@Feuda:2017ew].
 

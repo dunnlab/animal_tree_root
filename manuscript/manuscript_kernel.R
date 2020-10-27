@@ -1,5 +1,5 @@
 # The computationally intensive analyses for the manuscript
-# presented at https://github.com/caseywdunn/animal_root/tree/master/manuscript .
+# presented at https://github.com/dunnlab/animal_tree_root/tree/master/manuscript .
 #
 # Executing this code generates manuscript.RData, which contains analysis
 # results. That file is then read by manuscript.rmd for rendering and

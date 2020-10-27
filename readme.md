@@ -1,4 +1,4 @@
-# Animal root
+# Animal tree root
 
 A comparison of phylogenetic studies relevant to placing the root of the animal phylogeny.
 
@@ -6,7 +6,7 @@ A comparison of phylogenetic studies relevant to placing the root of the animal 
 
 (See each directory for more documentation)
 
-```
+``` text
 .
 ├── data_processed         # Data processed for analyses in this manuscript
 │   ├── matrices           # Matrices in consistent formats with harmonized taxon names
@@ -16,7 +16,6 @@ A comparison of phylogenetic studies relevant to placing the root of the animal 
     ├── figures            # Figures for the manuscript
     └── manuscript_files   # Ancillary files for the manuscript
 ```
-
 
 ## Glossary
 
@@ -39,18 +38,13 @@ of a matrix row.
 
 ## git LFS
 
-All the files in this repo that match the patterns defined in [`.gitattributes`](.gitattributes) are tracked with [git large file storage](https://git-lfs.github.com/). You'll need to install it following the instructions on the project's website to work with this repo. 
-
-Git LFS keeps the history of the repo cleaner and more performant, while maintaining the data files in the same repo.
+All the files in this repo that match the patterns defined in [`.gitattributes`](.gitattributes) are tracked with [git large file storage](https://git-lfs.github.com/). Install Git LFS following the instructions on the project's website to work with this repo.
 
 Getting a fresh copy of the full repo would look something like this:
 
 ``` bash
-git clone git@github.com:dunnlab/animal_root.git
-cd animal_root
 git lfs install
-git submodule update --init --recursive
-git lfs clone
+git clone https://github.com/dunnlab/animal_tree_root.git
 ```
 
 ## Recreating full project

@@ -39,9 +39,9 @@ RUN wget --quiet https://repo.continuum.io/miniconda/Miniconda3-${minicondaversi
 
 ENV PATH=${condaprefix}/bin:$PATH
 
-COPY conda_animal_root.yml ${condaprefix}
+COPY conda_animal_tree_root.yml ${condaprefix}
 
-RUN conda env create -f ${condaprefix}/conda_animal_root.yml
+RUN conda env create -f ${condaprefix}/conda_animal_tree_root.yml
 
 RUN install2.r --error \
     --deps TRUE \
