@@ -68,6 +68,72 @@ tar xf $t && rm $t
 done
 ```
 
+## Example Analyses
+
+### IQ-TREE
+
+We used [IQ-TREE 1.6.7](https://github.com/Cibiv/IQ-TREE/releases/tag/v1.6.7) for these analyses. To run the examples below as-is you will need the container image for this study set up. To do so, please see the [docker directory](docker/) and readme. Otherwise you may need to change your `iqtree` options/parameters depending on your version.
+
+``` bash
+# navigate to this repo on your computer
+numthreads=4 # change this to suit your computer hardware / container settings
+
+# you can use our docker image to run iqtree, or use your own by setting the variable iqtree=iqtree
+# change /path/to/animal_tree_root to the location of this repo on your computer
+iqtree="docker run --rm -it -w /animal_tree_root -v /path/to/animal_tree_root:/animal_tree_root animal_tree_root iqtree"
+# iqtree=iqtree
+
+# make a directory for output if it doesn't exist
+mkdir -p examples_out
+
+# GTR20
+$iqtree -s data_processed/matrices/Philippe2009.phy -nt $numthreads -bb 1000 -m GTR20+F+G -pre examples_out/Philippe2009.GTR20 -wbt
+
+# poisson_C60
+$iqtree -s data_processed/matrices/Philippe2009.phy -nt $numthreads -bb 1000 -m Poisson+C60+F+G -pre examples_out/Philippe2009.poisson_C60 -wbt
+
+# WAG
+$iqtree -s data_processed/matrices/Philippe2009.phy -nt $numthreads -bb 1000 -m WAG+F+G -pre examples_out/Philippe2009.WAG -wbt
+
+# Modelfinder
+$iqtree -s data_processed/matrices/Philippe2009.phy -nt $numthreads -bb 1000 -mset LG,GTR20,WAG,Poisson -madd Poisson+C10+F+G,Poisson+C20+F+G,Poisson+C30+F+G,Poisson+C40+F+G,Poisson+C50+F+G,Poisson+C60+F+G,WAG+C10+F+G,WAG+C20+F+G,WAG+C30+F+G,WAG+C40+F+G,WAG+C50+F+G,WAG+C60+F+G,LG+C10+F+G,LG+C20+F+G,LG+C30+F+G,LG+C40+F+G,LG+C50+F+G,LG+C60+F+G -pre exampples_out/Philippe2009.model_test -wbt
+```
+
+### PhyloBayes MPI
+
+We used [Phylobayes MPI](https://github.com/bayesiancook/pbmpi) compiled from commit [`01cbc7d`](https://github.com/bayesiancook/pbmpi/tree/01cbc7d9d9f192eb7be0e1dc7614169d444faa3d) in that repo on the Yale HPC cluster [Farnam](https://docs.ycrc.yale.edu/clusters-at-yale/clusters/farnam/) for these analyses. To run Phylobayes MPI you need MPI installed, and it makes most sense to run on an HPC cluster if you have one available. If you are not using slurm for job scheduling, you will need to change `srun` to `mpirun` and possibly pass some options/parameters to `mpirun`. Below are some example commands from our analyses of Philippe2009_only_choanozoa.phy
+
+``` bash
+# make a directory for output if it doesn't exist
+mkdir -p examples_out
+
+## PhyloBayes with poisson+CAT model
+srun pb_mpi -cat -poisson -dgam 4 -s -d data_processed/matrices/Philippe2009_only_choanozoa.phy examples_out/Philippe2009_only_choanozoa.phy_Poisson_CAT_Chain_1
+srun pb_mpi -cat -poisson -dgam 4 -s -d data_processed/matrices/Philippe2009_only_choanozoa.phy examples_out/Philippe2009_only_choanozoa.phy_Poisson_CAT_Chain_2
+
+## PhyloBayes with GTR+CAT model
+srun pb_mpi -cat -gtr -dgam 4 -s -d data_processed/matrices/Philippe2009_only_choanozoa.phy examples_out/Philippe2009_only_choanozoa.phy_GTR_CAT_Chain_1
+srun pb_mpi -cat -gtr -dgam 4 -s -d data_processed/matrices/Philippe2009_only_choanozoa.phy examples_out/Philippe2009_only_choanozoa.phy_GTR_CAT_Chain_2
+
+## PhyloBayes with poisson+nCAT60 model
+srun pb_mpi -ncat 60 -poisson -dgam 4 -s -d data_processed/matrices/Philippe2009_only_choanozoa.phy examples_out/Philippe2009_only_choanozoa.phy_Poisson_CAT60_Chain_1
+srun pb_mpi -ncat 60 -poisson -dgam 4 -s -d data_processed/matrices/Philippe2009_only_choanozoa.phy examples_out/Philippe2009_only_choanozoa.phy_Poisson_CAT60_Chain_2
+```
+
+Here is an example slurm submission script that would run 2 chains each across 2 cores for a maximum of 30 days.
+
+``` bash
+#!/bin/bash
+#SBATCH -J phylobayes -p general
+#SBATCH --ntasks=20 --mem-per-cpu 6G
+#SBATCH --array=1-2
+#SBATCH -t 30-00:00:00
+#SBATCH --mail-type=ALL
+
+module load PhyloBayes-MPI/20170808-foss-2016b
+srun pb_mpi -cat -gtr -dgam 4 -s -d data_processed/matrices/Philippe2009_only_choanozoa.phy examples_out/Philippe2009_only_choanozoa.phy_GTR_CAT_Chain_${SLURM_ARRAY_TASK_ID}
+```
+
 ## Citation
 
 citation here
