@@ -49,10 +49,18 @@ git clone https://github.com/dunnlab/animal_tree_root.git
 
 ## Recreating full project
 
-Because the original repo for this project is quite large, we present a pared down repo for general consumption. If you would like to recreate it, download the data from Figshare:
+Because the original git repository for this project is quite large, this one pared down repo for general consumption. If you would like to recreate it, download the data from [Figshare](https://doi.org/10.6084/m9.figshare.13122881.v1):
 
-```
-TODO
+``` bash
+cd animal_tree_root
+wget https://ndownloader.figshare.com/articles/13122881/versions/1 -O tmp.zip
+unzip tmp.zip && rm tmp.zip
+
+# this may take a bit
+for t in *.tar.xz; do
+echo "Expanding $t ..."
+tar xf $t && rm $t
+done
 ```
 
 ## Citation
