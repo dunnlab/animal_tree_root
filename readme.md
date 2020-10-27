@@ -33,8 +33,7 @@ Throughout this repo and the manuscript itself we standardize the following term
 
 **_clade_**: a set of taxa, eg Cnidaria
 
-**_sequence_**: a gene sequence in a specific partition for a specific taxon. It is a 1D character string, and a segment 
-of a matrix row.
+**_sequence_**: a gene sequence in a specific partition for a specific taxon. It is a 1D character string, and a segment of a matrix row.
 
 ## git LFS
 
