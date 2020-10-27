@@ -17,23 +17,7 @@ A comparison of phylogenetic studies relevant to placing the root of the animal 
 
 The matrices we curated, standardized, and started from for all new phylogenetic analyses are stored in [`data_processed/matrices`](data_processed/matrices/), eponymously named for their original manuscript. Tables containing summaries, taxon-clade maps, partition-gene maps, etc. are all in [`data_processed/tables`](data_processed/tables/). We maintained a frozen set of applications for the project as a Docker container image, defined in the [`docker`](docker) directory. See the readme there for instructions for building and running an RStudio Server that is compatible with the manuscript. The manuscript is stored in the [`manuscript`](manuscript) directory as an [R Markdown file](manuscript/manuscript.rmd), and the data we use in visualization and summary are all stored in an [RData file](manuscript/manuscript.RData) to avoid needing to re-run some [time-consuming functions](manuscript/manuscript_kernel.R).
 
-## Glossary
 
-Throughout this repo and the manuscript itself we standardize the following terms and their definitions:
-
-**_manuscript_**: The study from which a dataset or analysis is derived.
-
-**_matrix_**: What we call a multiple sequence alignment that consists of one or more partitions. A manuscript can have one or more matrices.
-
-**_gene_**: a set of homologous partitions. Globally consistent across matrices.
-
-**_partition_**: a set of homologous sequences within a matrix, they consist of the same matrix columns
-
-**_taxon_**: The name of a taxon as it appears in a matrix row name or tree tip. Usually but not always a species.
-
-**_clade_**: a set of taxa, eg Cnidaria
-
-**_sequence_**: a gene sequence in a specific partition for a specific taxon. It is a 1D character string, and a segment of a matrix row.
 
 ## git LFS
 
@@ -73,41 +57,24 @@ tar xf $t && rm $t
 done
 ```
 
-## Example Analyses
+## Glossary
 
-### IQ-TREE
+Throughout this repo and the manuscript itself we standardize the following terms and their definitions:
 
-We used [IQ-TREE 1.6.7](https://github.com/Cibiv/IQ-TREE/releases/tag/v1.6.7) for these analyses. The latest versions are available from the [IQ-TREE Downloads page](http://www.iqtree.org/#download). You may need to change your `iqtree` options/parameters depending on your version - some options changed in v2.x.
+**_manuscript_**: The study from which a dataset or analysis is derived.
 
-``` bash
-# navigate to this repo on your computer
-# cd ~/repos/animal_tree_root
+**_matrix_**: What we call a multiple sequence alignment that consists of one or more partitions. A manuscript can have one or more matrices.
 
-# make a directory for output if it doesn't exist
-mkdir -p examples_out
+**_gene_**: a set of homologous partitions. Globally consistent across matrices.
 
-# run modelfinder for the Philippe2009 matrix
-iqtree -s data_processed/matrices/Philippe2009_only_choanozoa.phy -nt AUTO -bb 1000 -o Monosiga_ovata -mset LG,GTR20,WAG,Poisson -madd Poisson+C10+F+G,Poisson+C20+F+G,Poisson+C30+F+G,Poisson+C40+F+G,Poisson+C50+F+G,Poisson+C60+F+G,WAG+C10+F+G,WAG+C20+F+G,WAG+C30+F+G,WAG+C40+F+G,WAG+C50+F+G,WAG+C60+F+G,LG+C10+F+G,LG+C20+F+G,LG+C30+F+G,LG+C40+F+G,LG+C50+F+G,LG+C60+F+G -pre examples_out/Philippe2009.model_test -wbt
-```
+**_partition_**: a set of homologous sequences within a matrix, they consist of the same matrix columns
 
-### PhyloBayes MPI
+**_taxon_**: The name of a taxon as it appears in a matrix row name or tree tip. Usually but not always a species.
 
-We used [Phylobayes MPI](https://github.com/bayesiancook/pbmpi) compiled from commit [`01cbc7d`](https://github.com/bayesiancook/pbmpi/tree/01cbc7d9d9f192eb7be0e1dc7614169d444faa3d) in that repo on the Yale HPC cluster [Farnam](https://docs.ycrc.yale.edu/clusters-at-yale/clusters/farnam/) for these analyses. To run Phylobayes MPI you need MPI installed, and it makes most sense to run on an HPC cluster if you have one available. If you are not using slurm for job scheduling, you will need to change `srun` to `mpirun` and possibly pass some options/parameters to `mpirun`. Below are some example commands from our analyses of Philippe2009_only_choanozoa.phy
+**_clade_**: a set of taxa, eg Cnidaria
 
-Here is an example slurm submission script that would run `pbmpi` on the `Philippe2009_only_choanozoa` matrix with the GTR+CAT model. The job scheduler will run 2 chains as separate jobs, each across 20 cores for a maximum of 30 days.
+**_sequence_**: a gene sequence in a specific partition for a specific taxon. It is a 1D character string, and a segment of a matrix row.
 
-``` bash
-#!/bin/bash
-#SBATCH -J phylobayes -p general
-#SBATCH --ntasks=20 --mem-per-cpu 6G
-#SBATCH --array=1-2
-#SBATCH -t 30-00:00:00
-#SBATCH --mail-type=ALL
-
-module load PhyloBayes-MPI/20170808-foss-2016b
-# GTR+CAT model
-srun pb_mpi -cat -gtr -dgam 4 -s -d  Philippe2009_only_choanozoa.phy Philippe2009_only_choanozoa.phy_GTR_CAT_Chain_${SLURM_ARRAY_TASK_ID}
-```
 
 ## Citation
 
