@@ -50,6 +50,7 @@ RUN install2.r --error \
     doParallel \
     ggpubr \
     igraph \
+    kableExtra \
     R.utils \
     viridis
 
