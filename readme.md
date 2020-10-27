@@ -8,7 +8,7 @@ A comparison of phylogenetic studies relevant to placing the root of the animal 
 
 ``` text
 .
-├── data_processed         # Data processed for analyses in this manuscript
+├── data_processed         # Matrices and data tables used for analyses in this manuscript
 │   ├── matrices           # Matrices in consistent formats with harmonized taxon names
 │   └── tables             # Tabular summaries of previously published datasets and results, reconciliation results (taxon-clade maps, partition-gene maps, etc...)
 ├── docker                 # All files needed to create environment for reproducing analyses
@@ -48,7 +48,13 @@ git clone https://github.com/dunnlab/animal_tree_root.git
 
 ## Recreating full project
 
-Because the original git repository for this project is quite large, this one pared down repo for general consumption. If you would like to recreate it, download the data from [Figshare](https://doi.org/10.6084/m9.figshare.13122881.v1):
+Because the original git repository for this project is quite large, this one pared down repo for general consumption. If you would like to recreate it, download the data from [Figshare](https://doi.org/10.6084/m9.figshare.13122881.v1). The data are split into three archived directories which can be downloaded separately or all together.
+
+`data_raw.tar.xz` - The data from each previous study we used.
+`reconciliation.tar.xz` - Files and scripts used to standardize naming and formats across the datasets used here.
+`trees_new.tar.xz` - Results from the new analyses we did over the course of this study. Abbridged and summarized portiuons of these data are imported into the manuscript's R environment which is included in this repo as (`manuscript/manuscript.RData`)[manuscript/manuscript.RData]. You can examine it with the Docker environment, outlined in the (`docker`)[docker] directory.
+
+### Download everything
 
 ``` bash
 cd animal_tree_root
