@@ -409,11 +409,16 @@ fit = cmdscale( dist( pb_frequencies ) ,eig=TRUE, k=2)
 pb_summaries %<>% mutate( x_global = fit$points[,1], y_global = fit$points[,2] )
 
 ## Write the results from RData to prepare them for supplementary tables
-write_csv(partition_map_global, "./Supplementary_tables/Supplementary_Table_1.csv", na = "NA", quote_escape = "double")
-write_csv(analyses_published, "./Supplementary_tables/Supplementary_Table_2.csv", na = "NA", quote_escape = "double")
-write_csv(analyses_new, "./Supplementary_tables/Supplementary_Table_3.csv", na = "NA", quote_escape = "double")
-write_csv(analyses_sensitive, "./Supplementary_tables/Supplementary_Table_6.csv", na = "NA", quote_escape = "double")
+write_csv(partition_map_global, "./Supplementary_tables/Supplementary_Table_8.csv", na = "NA", quote_escape = "double")
+write_csv(analyses_published, "./Supplementary_tables/Supplementary_Table_1.csv", na = "NA", quote_escape = "double") 
+write_csv(analyses_new, "./Supplementary_tables/Supplementary_Table_2.csv", na = "NA", quote_escape = "double")
+write_csv(analyses_sensitive, "./Supplementary_tables/Supplementary_Table_5.csv", na = "NA", quote_escape = "double")
 write_csv(au_tests, "./Supplementary_tables/Supplementary_Table_7.csv", na = "NA", quote_escape = "double")
+modelfinder = analyses_new %>%
+  filter(modelfinder == TRUE) %>%
+  select( matrix, clade, result, model_summary)
+write_csv(modelfinder, "./Supplementary_tables/Supplementary_Table_3.csv", na = "NA", quote_escape = "double")
+
 
 ## Move all read functions to kernel so all vairables are stored in Rdata
 
