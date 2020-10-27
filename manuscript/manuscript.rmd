@@ -310,8 +310,6 @@ The first questions regard the relative fit of adding aditional site-heterogeneo
 
 In a site-heterogeneous model, each site is allocated to one of the categories in each sample. Different categories can have very different numbers of sites. We examine category allocations in the last chain samples of analyses of the Philippe2009_Choanimalia and Whelan2017_strict matrices (Extended Data Fig. 5A-B), which have `r n_categories_phil_cat` and `r n_categories_whel_cat` categories, repectively. The fraction of sites allocated to the 50% of the least frequent categories is `r mid_phil_cat`% in the analysis of the Philippe2009_Choanimalia matrix and `r mid_whel_cat`% in the analysis of the Whelan2017_strict matrix. This long tail of categories that apply to a very small fraction of sites is in stark contrast to nCAT60 analyses, constrained to 60 categories, which have no such long tail of rare categories (Extended Data Fig. 5A-B). The fact that so many categories apply to such a small fraction of data be help explain why increasing the number of categories more than ten-fold has so little impact on predictive power of these far more complex models.
 
-It could be that the sites that are allocated to rare categories are very different from the sites in the common categories, in which case the added categories are helping to explain big variation found in rare sites that models with smaller numbers of categories are unable to adequately explain. Alternatively, when a large number of categories are allowed it may be that categories with many sites fragment into clouds of similar categories, in which case the added parameters are soaking up small variations between sites and adding little value. Plots of amino acid space are consistent wit this second scenario (Extended Data Fig5. C-D).
-
 
 ``` {r sensitive, fig.width=7.2, fig.height=7.2}
 
@@ -770,7 +768,7 @@ ggsave("figures/Extended_Data_Fig4_raw.pdf", width=20, height=12)
 
 
 
-```{r n_cat_render, fig.width=6, fig.height=7}
+```{r n_cat_render, fig.width=6, fig.height=3.5}
 
 edf2_cols = c("#74c2e7", "#410058")
 names(edf2_cols) = c("Poisson+nCAT60", "Poisson+CAT")
@@ -823,18 +821,15 @@ gg_mds_whel =
 ggarrange(
   gg_rank_phil,
   gg_rank_whel,
-  gg_mds_phil,
-  gg_mds_whel,
   ncol  = 2,
-  nrow = 2,
-  labels = c("A", "B", "C", "D"),
+  labels = c("A", "B"),
   common.legend = TRUE
 )
 
-ggsave("figures/Extended_Data_Fig5_raw.pdf", width=6, height=7)
+ggsave("figures/Extended_Data_Fig5_raw.pdf", width=6, height=3.5)
 ```
 
-**Extended Data Fig. 5** The allocation of frequency categories across sites in the Philippe2009 matrix (left column) and Whelan2017_strict matrix (right column) for the constrained Posson+nCAT60 model and unconstrained Posson+CAT models (differentiated with color). These plots are for singe sample isolated from the end of PhyloBayes chain files. (A,B) The count of sites allocated to each equilibrium frequency category, with the categories ranked from the most abundant to least abundant along the x axis. The unconstrained CAT analyses have a long tail of categories that are allocated to very few sites, which adds a considerable number of parameters that pertain to only a small fraction of the data. The nCAT60 analyses, which are constrained to 60 sites, have no such long tail and the rarest categories are allocated to a far greater number of sites than any of the sites in the long tail of the CAT analyses. (C,D) MDS plots for the amino acid frequencies. Each point is for a single category, the area of the point is proportional to the number of sites allocated to that category, and categories with closer points have more similar amino acid frequencies. A single MDS analysis was done for all analyses, so that the projections are the same in each plot. For both matrices, the much larger number of categories in the unconstrained CAT analyses laregely subdivide the amino acid frequency space already covered in the constrained nCAT60 analyses, and just subdivide that space into a far greater number of rare categories. This adds a considerable number of parameters for describing a similar overall space.
+**Extended Data Fig. 5** The allocation of frequency categories across sites in the Philippe2009 matrix (left column) and Whelan2017_strict matrix (right column) for the constrained Posson+nCAT60 model and unconstrained Posson+CAT models (differentiated with color). These plots are for singe sample isolated from the end of PhyloBayes chain files. (A,B) The count of sites allocated to each equilibrium frequency category, with the categories ranked from the most abundant to least abundant along the x axis. The unconstrained CAT analyses have a long tail of categories that are allocated to very few sites, which adds a considerable number of parameters that pertain to only a small fraction of the data. The nCAT60 analyses, which are constrained to 60 sites, have no such long tail and the rarest categories are allocated to a far greater number of sites than any of the sites in the long tail of the CAT analyses.
 
 ```{r cross_validation, fig.width=6, fig.height=3.5}
 p_w = cross_validation %>%
@@ -881,7 +876,7 @@ ggsave("figures/Extended_Data_Fig7_raw.pdf", width=6, height=8)
 
 ![](figures/Extended_Data_Fig7_manuscript.png)
 
-**Extended Data Fig. 7** The distribution of phylogenetic signal for two alternative topological hypotheses on the earliest-branching animal lineage with different models and outgroup choice in Philippe2009, Ryan2013 and Whelan2017_full matrices (with two outgroup sampling: Choanimalia and full matrices). The two alternative topological hypotheses are: Ctenophora-sister; T1 (Orange); Porifera-sister T2 (Green). Proportions of genes supporting each of two alternative hypotheses in the Philippe2009, Ryan2013_est and Whelan2017_full data matrices with different outgroups sampling and substitutional models. The GLS values for each gene in each data matrix are provided in Table S5. We considered a gene with an absolute value of log-likelihood difference of two as a gene with strong (|ΔlnL| $\geq$ 2) or weak ( 0 < |ΔlnL| < 2) phylogenetic signal.
+**Extended Data Fig. 7** The distribution of phylogenetic signal for Ctenophora-sister and Porifera-sister with different models and outgroup choice in Philippe2009, Ryan2013 and Whelan2017_full matrices (with two outgroup sampling: Choanimalia and full matrices). The two alternative topological hypotheses are: Ctenophora-sister; T1 (Orange); Porifera-sister T2 (Green). Proportions of genes supporting each of two alternative hypotheses in the Philippe2009, Ryan2013_est and Whelan2017_full data matrices with different outgroups sampling and substitutional models. The GLS values for each gene in each data matrix are provided in Table S5. We considered a gene with an absolute value of log-likelihood difference of two as a gene with strong (|ΔlnL| $\geq$ 2) or weak ( 0 < |ΔlnL| < 2) phylogenetic signal.
 
 
 ![](figures/Extended_Data_Fig8.png)
@@ -928,7 +923,7 @@ Note that there was, in fact, an exception to strong support. An analysis of the
 
 #### Philippe *et al.* 2009
 
-Philippe *et al.* [@Philippe:2009hh] assembled an EST dataset for 55 species with 128 genes to explore the phylogenetic relationship among early diverging animals by adding 9 new species. The data matrix was assembled based on the phylogenetic analysis using Poisson+CAT model, which strongly supported Porifera-sister, and ctenophores were recovered as sister to cnidarians forming the "coelenterate" clade. Gene trees were then constructed, and potentially paralogs were removed by a bootstrap threshold of 70. Ambiguously aligned regions were trimmed and only genes sampled for at least two-thirds of species were retained. The phylogenetic analyses were conducted under the Poisson+CAT model in PhyloBayes.
+Philippe *et al.* [@Philippe:2009hh] assembled an EST dataset for 55 species with 128 genes to explore the deepest animal phylogenetic relationships by adding 9 new species. The data matrix was assembled based on the phylogenetic analysis using Poisson+CAT model, which strongly supported Porifera-sister, and ctenophores were recovered as sister to cnidarians forming the "coelenterate" clade. Gene trees were then constructed, and potentially paralogs were removed by a bootstrap threshold of 70. Ambiguously aligned regions were trimmed and only genes sampled for at least two-thirds of species were retained. The phylogenetic analyses were conducted under the Poisson+CAT model in PhyloBayes.
 
 Regarding the recovery of Ctenophora-sister, the authors concluded:
 
