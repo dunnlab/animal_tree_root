@@ -87,7 +87,7 @@ We used [IQ-TREE 1.6.7](https://github.com/Cibiv/IQ-TREE/releases/tag/v1.6.7) fo
 mkdir -p examples_out
 
 # run modelfinder for the Philippe2009 matrix
-iqtree -s data_processed/matrices/Philippe2009.phy -nt AUTO -bb 1000 -o Monosiga_ovata -mset LG,GTR20,WAG,Poisson -madd Poisson+C10+F+G,Poisson+C20+F+G,Poisson+C30+F+G,Poisson+C40+F+G,Poisson+C50+F+G,Poisson+C60+F+G,WAG+C10+F+G,WAG+C20+F+G,WAG+C30+F+G,WAG+C40+F+G,WAG+C50+F+G,WAG+C60+F+G,LG+C10+F+G,LG+C20+F+G,LG+C30+F+G,LG+C40+F+G,LG+C50+F+G,LG+C60+F+G -pre examples_out/Philippe2009.model_test -wbt
+iqtree -s data_processed/matrices/Philippe2009_only_choanozoa.phy -nt AUTO -bb 1000 -o Monosiga_ovata -mset LG,GTR20,WAG,Poisson -madd Poisson+C10+F+G,Poisson+C20+F+G,Poisson+C30+F+G,Poisson+C40+F+G,Poisson+C50+F+G,Poisson+C60+F+G,WAG+C10+F+G,WAG+C20+F+G,WAG+C30+F+G,WAG+C40+F+G,WAG+C50+F+G,WAG+C60+F+G,LG+C10+F+G,LG+C20+F+G,LG+C30+F+G,LG+C40+F+G,LG+C50+F+G,LG+C60+F+G -pre examples_out/Philippe2009.model_test -wbt
 ```
 
 ### PhyloBayes MPI
