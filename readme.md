@@ -39,9 +39,11 @@ Because the original git repository for this project is quite large, this one is
 
 If you would like to recreate the full repository that includes raw output from our analyses, download the data from [Figshare](https://doi.org/10.6084/m9.figshare.13122881.v1). The data are split into three archived directories which can be downloaded separately or all together.
 
-`data_raw.tar.xz` - The data from each previous study we used.
-`reconciliation.tar.xz` - Files and scripts used to standardize naming and formats across the datasets used here.
-`trees_new.tar.xz` - Results from the new analyses we did over the course of this study. Abbridged and summarized portiuons of these data are imported into the manuscript's R environment which is included in this repo as (`manuscript/manuscript.RData`)[manuscript/manuscript.RData]. You can examine it with the Docker environment, outlined in the (`docker`)[docker] directory.
+`data_raw.tar.xz`: The data from each previous study we used.
+
+`reconciliation.tar.xz`: Files and scripts used to standardize naming and formats across the datasets used here.
+
+`trees_new.tar.xz`: Results from the new analyses we did over the course of this study. Abbridged and summarized portiuons of these data are imported into the manuscript's R environment which is included in this repo as (`manuscript/manuscript.RData`)[manuscript/manuscript.RData]. You can examine it with the Docker environment, outlined in the (`docker`)[docker] directory.
 
 ### Download everything
 
