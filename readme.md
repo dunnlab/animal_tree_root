@@ -120,7 +120,7 @@ srun pb_mpi -ncat 60 -poisson -dgam 4 -s -d data_processed/matrices/Philippe2009
 srun pb_mpi -ncat 60 -poisson -dgam 4 -s -d data_processed/matrices/Philippe2009_only_choanozoa.phy examples_out/Philippe2009_only_choanozoa.phy_Poisson_CAT60_Chain_2
 ```
 
-Here is an example slurm submission script that would run 2 chains each across 2 cores for a maximum of 30 days.
+Here is an example slurm submission script that would run 2 chains each across 20 cores for a maximum of 30 days.
 
 ``` bash
 #!/bin/bash
