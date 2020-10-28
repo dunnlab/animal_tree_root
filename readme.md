@@ -81,7 +81,7 @@ Throughout this repo and the manuscript itself we standardize the following term
 ## Citation
 
 ### Pre-print
-
+Yuanning Li, Xing-Xing Shen, Benjamin Evans, Casey W Dunn, Antonis Rokas. bioRxiv 2020.10.27.357798; doi: https://doi.org/10.1101/2020.10.27.357798
 
 
 ### Additional Datasets
