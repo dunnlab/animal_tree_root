@@ -1,13 +1,13 @@
 ---
 bibliography: manuscript.bib
-csl: nature.csl
+csl: science.csl
 header-includes:
    - \usepackage{lineno}
    - \linenumbers
 output:
+  html_document: default
   pdf_document:
     latex_engine: xelatex
-  html_document: default
   word_document: default
   github_document: default
 ---
@@ -85,6 +85,9 @@ Casey W. Dunn: 0000-0003-0628-5150
 
 Antonis Rokas: 0000-0002-7248-6551
 
+**Short title:** Rooting the animal tree of life
+
+**One sentence Summary**: We explore the root of animal tree by synthesizing past work, perform new phylogenomic and sensitivity analyses, and found that the primary source of variation between results is the number of categories used in site-heterogeneous models.
 
 
 ## Abstract
@@ -92,7 +95,7 @@ Antonis Rokas: 0000-0002-7248-6551
 There has been considerable debate about the placement of the root in the animal tree of life, which has emerged as one of the most challenging problems in animal phylogenetics. This debate has major implications for our understanding of the earliest events in animal evolution, including the origin of the nervous system. Some phylogenetic analyses support a root that places the first split in the phylogeny of living animals between sponges and all other animals (the Porifera-sister hypothesis), and others find support for a split between comb jellies and all other animals (Ctenophora-sister). These analyses differ in many respects, including in the genes considered, species considered, molecular evolution models, and software. Here we systematically explore the rooting of the animal tree of life under consistent conditions by synthesizing data and results from 15 previous phylogenomic studies and performing a comprehensive set of new standardized analyses. It has previously been suggested that site-heterogeneous models favor Porifera-sister, but we find that this is not the case. Rather, Porifera-sister is only obtained under a narrow set of conditions when the number of site-heterogeneous categories is unconstrained and range into the hundreds. Site-heterogenous models with a fixed number of dozens of categories support Ctenophora-sister, and cross-validation indicates that such models fit the data just as well as the unconstrained models. Our analyses shed light on an important source of variation between phylogenomic studies of the animal root. The datasets and analyses consolidated here will also be a useful test-platform for the development of phylogenomic methods for this and other difficult problems.
 
 
-## Main
+## Main Text
 
 Historically, there was little debate about the root of the animal tree of life. Porifera-sister (Fig. 1E), the hypothesis that the animal root marks the divergence of Porifera (sponges) from all other animals (Fig. 1B), was widely accepted though rarely tested. By contrast, there has long been uncertainty about the placement of Ctenophora (comb jellies) (Fig. 1D) in the animal tree of life [@Wallberg:2004ws]. The first phylogenomic study to include ctenophores [@Dunn:2008ky] suggested a new hypothesis, now referred to as Ctenophora-sister, that ctenophores rather than sponges are our most distant living animal relative (Fig. 1A). Since then, many more phylogenomic studies have been published (Fig. 2), with some analyses finding support for Ctenophora-sister, some for Porifera-sister, and some neither [@King:2017ie] (Table 1, Supplementary Information section S1). The extensive technical variation across these studies has been important to advancing our understanding of the sensitivity of these analyses, demonstrating for example that outgroup and model selection can have a large impact on these results (Fig. 3A). But the extensive technical variation has also made it difficult to synthesize these results to understand the underlying causes of this sensitivity. Several factors make resolution of the root of the animal tree a particularly challenging problem. For one, the nodes in question are the deepest in the animal tree of life. Another factor that has been invoked is branch lengths (*e.g.* Figs. S1, S2), which are impacted by both divergence times and shifts in rate of evolution. Some sponges have a longer root to tip length, indicating an accelerated rate of evolution in those lineages. The stem branch of Ctenophora is longer than Porifera stem which, together with a more typical root-to-tip distance, is consistent with a more recent radiation of extant ctenophores [@podar2001] than extant poriferans. The longer ctenophore stem has led some to suggest that Ctenophora-sister could be an artifact of long-branch attraction to outgroups [@pisani2015genomic].
 
@@ -428,7 +431,22 @@ Resolving the placement of the root in the animal tree of life has proved very c
 
 Pin-pointing category number as an issue with large effect on analyses of the animal root will help guide future analyses that address this question. We hope that the work we have conducted here to consolidate many datasets and analyses in standard formats will make it easier for other investigators to engage in this particularly interesting and difficult phylogenetic problem, and that this problem can be a test-bed to develop methods and tools that will help with other difficult phylogenetic problems as well. Advances on the question of the animal root will come from progress on other fronts as well. For example, there are many organisms that are highly relevant to this problem, in particular outgroup, ctenophore, and sponge taxa, for which no genome or transcriptome data are available [@King:2017ie]. More broadly, there are very few chromosome-level genome assemblies for animals outside of Bilateria. Future analyses focused on complete genomes rather than transcriptomes and partial genomes will have multiple advantages. Data matrices derived from these more complete sources will have a lower fraction of missing sequences. Complete gene sampling within each species will also greatly improve analyses of gene duplciation and loss, a crititical step in building phylogenomic matrices such as those presented here. Analyses of this new generation of matrices derived from complete genomes will be well served my understandind the sources of analysis variation in the generation of matrices that came before them.
 
-## Supplementary materials
+## Acknowledgements
+
+We thank members of the Dunn and Rokas laboratories for discussions and comments. We are grateful to Steve Haddock, Kyle David, Stephen Haddock and Nathan Whelan for feedback on an earlier version of this manuscript. We are grateful to Nicole King, Daniel Richter, Paul Lewis, Warren Francis and Joseph Ryan for feedback on the preprint version of this manuscript. We thank the Yale Center for Research Computing for use of the research computing infrastructure, specifically the Farnam HPC cluster. Yuanning Li was partially supported by a scholarship from the China Scholarship Council (CSC) for studying and living abroad. This work was conducted in part using the resources of the Advanced Computing Center for Research and Education (ACCRE) at Vanderbilt University. Research in A.R.'s lab is supported by the National Science Foundation (DEB-1442113), the National Institutes of Health / National Institute of Allergy and Infectious Diseases (1R56AI146096-01A1), the Guggenheim Foundation, and the Burroughs Wellcome Fund.
+
+
+## Author contributions
+C.W.D., Y.L. conceived this study. C.W.D. and A.R. supervised the project. Y.L., B.E., X-X.S., and C.W.D. conducted analyses. Y.L., B.E. and C.W.D. wrote the paper. All authors discussed the results and implications and commented on the manuscript at all stages.
+
+
+## List of Supplementary materials
+Materials and methods
+Table S1 - S8
+Fig. S1 - S9
+Supplementary text S1 - S3
+
+## Supplementary Materials
 
 ## Materials and Methods
 
@@ -460,7 +478,6 @@ We constructed a network with Python and NetworkX v2.2 [@Hagberg:2008] where eac
 
 
 ### Phylogenetic analyses
-
 
 #### Phylogenetic analyses in IQ-TREE
 To investigate the phylogenetic hypotheses and distribution of phylogenetic signal in studies aiming to find the root position of animal phylogeny, we considered 16 data matrices from all phylogenomic studies that were constructed from EST, transcriptomic, or genomic data (Table 1). Because different choices of substitution models could largely influence phylogenetic inference of the placement of the root position of animal phylogeny (*e.g.* site-heterogeneous vs. site-homogeneous models), we first investigated model-fit from each matrix using ModelFinder in IQ-TREE v1.6.7, including site-heterogenous C10 to C60 profile mixture models (C60 models) as variants of the CAT models in ML framework (C10-C60 model were included for model comparison via -madd option). We included models that are commonly used in previous analyses, including site-homogeneous Poisson, WAG, LG, GTR models plus C10-C60 models in the model testing. For computational efficiency, the GTR+C60 models were not included in model testing since it requires to estimate over 10,000 parameters. For large matrices like those from Hejnol2009, Borrowiec2015, and Simion2017, model testing is also not computational feasible so only LG+C60 models were used since LG/WAG+C60 models were suggested as the best-fit model in all other matrices.
@@ -505,13 +522,6 @@ Each new matrix was analyzed with PhyloBayes-MPI. Analyses were run for 1000 gen
 
 The statistics presented in  Fig. S8A were parsed from the Feuda *et al.* manuscript into the file `tidy_table_3.tsv` and rendered for display with the code in `manuscript.rmd`.
 
-## Acknowledgements
-
-We thank members of the Dunn and Rokas laboratories for discussions and comments. We are grateful to Steve Haddock, Kyle David, Stephen Haddock and Nathan Whelan for feedback on an earlier version of this manuscript. We are grateful to Nicole King, Daniel Richter, Paul Lewis, Warren Francis and Joseph Ryan for feedback on the preprint version of this manuscript. We thank the Yale Center for Research Computing for use of the research computing infrastructure, specifically the Farnam HPC cluster. Yuanning Li was partially supported by a scholarship from the China Scholarship Council (CSC) for studying and living abroad. This work was conducted in part using the resources of the Advanced Computing Center for Research and Education (ACCRE) at Vanderbilt University. Research in A.R.'s lab is supported by the National Science Foundation (DEB-1442113), the National Institutes of Health / National Institute of Allergy and Infectious Diseases (1R56AI146096-01A1), the Guggenheim Foundation, and the Burroughs Wellcome Fund.
-
-
-## Author contributions
-C.W.D., Y.L. conceived this study. C.W.D. and A.R. supervised the project. Y.L., B.E., X-X.S., and C.W.D. conducted analyses. Y.L., B.E. and C.W.D. wrote the paper. All authors discussed the results and implications and commented on the manuscript at all stages.
 
 ## Tables
 
@@ -896,9 +906,9 @@ ggsave("figures/Extended_Data_Fig7_raw.pdf", width=6, height=8)
 
 \pagebreak
 
-## Supplementary Information
+## Supplementary text
 
-### S.1 Summaries of published analyses
+### S1 Summaries of published analyses
 
 Narrative summaries of the studies considered here.
 
@@ -1037,7 +1047,7 @@ Regarding the recovery of Ctenophora-sister, the authors concluded:
 It should be noted that all the PhyloBayes runs have not reached convergence due to the computational cost in these large matrices.
 
 
-### S.2 Models of molecular evolution
+### S2 Models of molecular evolution
 
 The exchangeability matrix $R$ describes the relative rates at which one amino acid changes to others. Exchangeability matrices have been used in the studies under consideration here include: Poisson (or F81), WAG, LG, GTR. While the exchangeability matrix describes the relative rate of different changes between amino acids, the actual rate can be further scaled. There are a couple approaches that have been used in the studies considered here:
 
@@ -1067,7 +1077,7 @@ The vector of equilibrium frequencies $\Pi$ describes the stationary frequency o
 - C10 to C60 [@si2008empirical]. 10 to 60-profile mixture models as variants of the CAT model under the maximum-likelihood framework.
 
 
-### S.3 Data-recoding methods
+### S3 Data-recoding methods
 
 Feuda *et al.* [@feuda2017improved] were concerned that the Ctenophora-sister results Chang *et al.* [@Chang:2015hl] and Whelan *et al.* [@Whelan:2015jj] were artefacts of lineage-specific differences in amino acid frequencies. In an attempt to reduce these differences, they recoded the full set of twenty amino acids into six groups of amino acids. These groups have more frequent evolutionary changes within them than between them, based on empirical observations in large protein datasets [@Susko:2007ds]. The intent is to discard many lineage-specific changes, which are expected to fall within these groups. Rather than model compositional heterogeneity, as their title suggests, this approach discards heterogeneous information so that much simpler models with fewer states can be applied.
 
