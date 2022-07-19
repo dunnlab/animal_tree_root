@@ -16,6 +16,12 @@ library( tidyverse )
 library( magrittr )
 library( igraph )
 library( doParallel )
+library( Biostrings )
+library( "R.utils")
+library( ape )
+library( hutan )
+library( tidyverse )
+library (dplyr)
 
 source( "functions.R" )
 source( "phylobayes.R" )
@@ -33,18 +39,9 @@ registerDoParallel( cores )
 focal_matrices =
   read.table(text =
     "manuscript matrix
-    Borowiec2015 Total1080
-    Chang2015 Chang2015
     Dunn2008  Dunn2008
-    Hejnol2009 Hejnol2009
-    Moroz2014 ED3a
-    Nosenko2013 nonribosomal_9187_smatrix
-    Nosenko2013 ribosomal_11057_smatrix
     Philippe2009 Philippe2009
-    Ryan2013 est.opisthokonta
-    Ryan2013 genome.opisthokonta
-    Simion2017 supermatrix_97sp_401632pos_1719genes
-    Whelan2015 Metazoa_Choano_RCFV_strict",
+    ",
     header = TRUE,
     stringsAsFactors = FALSE)
 
@@ -95,17 +92,23 @@ analyses_published$model_combined =
 clades = c( "Fungi", "Ichthyosporea", "Filasterea", "Choanoflagellida", "Ctenophora", 
             "Porifera", "Placozoa", "Bilateria", "Cnidaria" )
 
+######################################################################################
+
 taxa =
   taxonomy_reference %>%
   distinct( relabelled_name, clade_assignment, ncbi_tax_id ) %>%
   dplyr::rename( taxon = relabelled_name, clade = clade_assignment ) %>%
   mutate( clade = factor( clade, levels = clades )  )
 
-matrix_path = "../data_processed/matrices"
+matrix_path = "../data_processed/phy_files"
 phylip_file_names = list.files(path = matrix_path, pattern = ".+\\.phy$", full.names = TRUE)
 
-sequence_matrices = foreach( phylip_file = phylip_file_names) %dopar%
-  parse_phylip( phylip_file )
+#sequence_matrices = foreach( phylip_file = phylip_file_names) %dopar% parse_phylip( phylip_file )   #Error messages?
+
+sequence_matrices = lapply(phylip_file , parse_phylip)
+
+#####################################################################################
+
 
 # Make contraint trees for each matrix
 constraint_tree_path = "../trees_new/constraint_trees/"
@@ -196,6 +199,13 @@ matrix_overlap =
   lapply(sequence_matrices, function(x) lapply(sequence_matrices, function(y) compute_matrix_overlap(x, y))) %>%
   unlist(recursive = FALSE) %>%
   bind_rows()
+
+##########################################################################################
+overlap_rects =  
+  lapply(sequence_matrices, function(x) lapply(sequence_matrices, function(y) overlap_rects(x, y))) %>%
+  unlist(recursive = FALSE) %>%
+  bind_rows()
+##########################################################################################
 
 # Remove reciprocal comparisons and comparisons to self
 n = nrow(matrix_overlap)

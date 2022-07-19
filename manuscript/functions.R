@@ -3,6 +3,8 @@ library( "R.utils")
 library( ape )
 library( hutan )
 library( tidyverse )
+library (magrittr )
+library (dplyr)
 
 
 #######################################
@@ -456,6 +458,9 @@ parse_tree_iqtree = function( tree_file, taxonomy_reference ){
 
 
 parse_phylip = function( phylip_path ){
+  library(magrittr)
+  
+  
   
   partition_path = sub( "phy$", "nex", phylip_path )
   base_name = sub( "\\.phy$", "", basename( phylip_path ) )
