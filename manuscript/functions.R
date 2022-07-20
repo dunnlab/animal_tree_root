@@ -168,6 +168,8 @@ stat_clades = function(mapping = NULL, data = NULL, geom = "rect",
 
 compute_matrix_overlap = function( msa1, msa2 ){
   
+  #component nr of overlapping genes sequence_matrices[[2]]@partitions$component_number[na.omit(sequence_matrices[[2]]@partitions$component_number) %in% na.omit(sequence_matrices[[1]]@partitions$component_number) == TRUE]
+  
   n_gene_overlap = sum( na.omit(msa1@partitions$component_number) %in% na.omit(msa2@partitions$component_number) )
   
   n_species_overlap = sum( rownames(msa1) %in% rownames(msa2) )
@@ -196,7 +198,7 @@ overlap_rects = function( msa1, msa2 ){
   # First row is msa1 rectangle, second row is msa2 rectangle
   D = data.frame( MSA = c("Matrix_1", "Matrix_2") )
   
-  D$xmin = c( 0, overlap$n_partitions_1 - overlap$n_gene_overlap )
+  D$xmin = c( 0, overlap$n_partitions_1 - overlap$n_gene_overlap ) #nr of genes in matrix 1 - nr of overlapping genes, nr of genes not sorted by position(?)
   D$xmax = c( overlap$n_partitions_1, overlap$n_partitions_1 + overlap$n_partitions_2 - overlap$n_gene_overlap )
   D$ymin = c(0, overlap$n_species_1 - overlap$n_species_overlap )
   D$ymax = c( overlap$n_species_1, overlap$n_species_1 + overlap$n_species_2 - overlap$n_species_overlap )

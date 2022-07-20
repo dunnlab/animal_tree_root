@@ -105,7 +105,7 @@ phylip_file_names = list.files(path = matrix_path, pattern = ".+\\.phy$", full.n
 
 #sequence_matrices = foreach( phylip_file = phylip_file_names) %dopar% parse_phylip( phylip_file )   #Error messages?
 
-sequence_matrices = lapply(phylip_file , parse_phylip)
+sequence_matrices = lapply(phylip_file_names , parse_phylip)
 
 #####################################################################################
 
