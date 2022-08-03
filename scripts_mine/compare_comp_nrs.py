@@ -17,9 +17,9 @@ Created on Tue Aug  2 10:15:14 2022
 from glob import glob
 # import matplotlib.pyplot as plt
 import pandas as pd
-from goatools import obo_parser
-import sys
-import time
+#from goatools import obo_parser
+#import sys
+#import time
 
 # read in blast results, function copied from blast_partitions_graph.py
 def read_blast_results(dirpattern, colnames, pident_cutoff, evalue_cutoff):
@@ -75,7 +75,8 @@ def find_one_empty(df):
     return empty_df
 
 #process partition df to standardise naming and remove excess columns
-def process_df(df,col_names):
+def process_df(df):
+    col_names = ["component_number","matrix","partition"]
     df = df[col_names]
     df_sep = df.copy()
     df_sep["matrix_partition"] = df[col_names[1]] + df[col_names[2]].astype(str)+","
@@ -85,6 +86,8 @@ def process_df(df,col_names):
     group_df = df_sep.groupby([col_names[0]]).agg({'matrix_partition':'sum'}) #group, non expanded file
     return df,group_df
 
+def main():
+    print("Hello World!")
 # Read in All vs All results (ava) from diaomond blast runs 
 # cutoffs: chose to retain enough results to keep at least 1 hit for ~90% of partitions
 ava_pident_cutoff = 50
@@ -118,10 +121,8 @@ partitions_df_expanded_r = pd.read_csv("../manuscript/part_map_glob.csv", sep="\
 #supp_mat_df = supp_mat_df[supp_mat_df["nodes_in_component"] !=1] 
 
 
-part_col_names = ["component_number","matrix","partition"]
-
-partitions_df_expanded,group_df_supp = process_df(supp_mat_df,part_col_names)
-partitions_df_expanded_r,group_df_r = process_df(supp_mat_df,part_col_names)
+partitions_df_expanded,group_df_supp = process_df(supp_mat_df)
+partitions_df_expanded_r,group_df_r = process_df(partitions_df_expanded_r)
 
 #process all v all dataframe
 ava_df_process = edit_df(ava_df.copy(),partitions_df_expanded)
@@ -148,3 +149,6 @@ no_hits_df_unique_r = no_hits_df_r.drop_duplicates()
 #get dataframe with at least one misisng comp nr
 no_hits_df_one_r = find_one_empty(ava_df_process_r)
 no_hits_df_one_unique_r = no_hits_df_one_r.drop_duplicates()    #30 rows
+
+if __name__ == "__main__":
+    main()
