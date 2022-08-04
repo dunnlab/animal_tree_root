@@ -69,4 +69,4 @@ for i in dfs:
     
     
 for i in range(0,len(records)):
-    SeqIO.write(records[i][0], "component"+str(records[i][1])+".fasta", "fasta")
+    SeqIO.write(records[i][0], "../files_mine/fasta/component"+str(int(records[i][1]))+".fasta", "fasta")
