@@ -45,7 +45,7 @@ headers_df = read_blast_query(infile,colnames)
 headers_df = headers_df.join(headers_df.fasta_header.str.split(':', expand = True))[[colnames[0],colnames[1],0,3]]
 headers_df["name"] = headers_df[0] + headers_df[3]
 #import partition map 
-partitions_df_expanded_r = pd.read_csv("../manuscript/part_map_glob.csv", sep="\t")
+partitions_df_expanded_r = pd.read_csv("../files_mine/part_map_glob.csv", sep="\t")
 headers_df = headers_df.drop([0,3],axis=1)
 
 #process partition map
@@ -70,3 +70,4 @@ for i in dfs:
     
 for i in range(0,len(records)):
     SeqIO.write(records[i][0], "../files_mine/fasta/component"+str(int(records[i][1]))+".fasta", "fasta")
+    
