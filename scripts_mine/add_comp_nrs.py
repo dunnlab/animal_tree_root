@@ -71,3 +71,4 @@ for i in dfs:
 for i in range(0,len(records)):
     SeqIO.write(records[i][0], "../files_mine/fasta/component"+str(int(records[i][1]))+".fasta", "fasta")
     
+partitions_df_expanded_r.component_number.drop_duplicates().to_csv("comp_nrs.txt",index=False,header=False)
