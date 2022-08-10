@@ -48,7 +48,7 @@ def set_co_nr(name,partition_df):
 def add_co_nr(i,df,col_name,col_name2,name,partition_df):
     com_nr = set_co_nr(name,partition_df)
     df.at[i,col_name]=com_nr
-    df.at[i,col_name2]=name
+    #df.at[i,col_name2]=name
     return df
 
 #Add component numbers for both search and query in all rows of dataframe, input df must have columns with names qreqid and sseqid
@@ -95,7 +95,7 @@ ava_evalue_cutoff = 1e-5
 ava_colnames = ['qseqid', 'sseqid', 'pident', 'length', 
                 'mismatch', 'gapopen', 'qstart', 'qend', 
                 'sstart', 'send', 'evalue', 'bitscore']
-ava_df = read_blast_results('../reconciliation/blast/diamond_results/dunn_philippe/*_permissive.txt',   #read only Dunn and Philippe) 
+ava_df = read_blast_results('../add_new_data_test/diamond_results/*_permissive.txt',   #read only Dunn and Philippe) 
                             ava_colnames, 
                             ava_pident_cutoff, 
                             ava_evalue_cutoff)
@@ -115,7 +115,7 @@ ava_df = ava_df[['sseqid','qseqid']]
 
 #load partition maps
 supp_mat_df = pd.read_excel('../Li_etal_Supplementary_Tables.xlsx', sheet_name="Table S9",)
-partitions_df_expanded_r = pd.read_csv("../manuscript/part_map_glob.csv", sep="\t")
+partitions_df_expanded_r = pd.read_csv("../files_mine/part_map_glob.csv", sep="\t")
 
 #filter out hits with only one match
 #supp_mat_df = supp_mat_df[supp_mat_df["nodes_in_component"] !=1] 
