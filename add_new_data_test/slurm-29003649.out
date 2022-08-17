@@ -1,0 +1,58 @@
+augustus/3.4.0 : If you see errors about not being able to write to an augustus directory, see 'module help augustus/3.4.0'
+Nearly all CRAN and BioConductor packages are installed and available by
+loading the module R_packages/4.1.1 
+The environment variable BUSCO_LINEAGE_SETS is set to a directory containing
+BUSCO v5 lineage sets.  Use with the -l option, for example:
+    run_BUSCO.py -l $BUSCO_LINEAGE_SETS/fungi_odb10 ...
+A list of available lineage sets is provided via 'module help BUSCO/5.3.1'
+----
+If you see this error from BUSCO:
+    Error: Cannot write to Augustus directory, please make sure you have write permissions to <directory>
+then you need to create a local copy of the config directory from the augustus
+module with 'source $AUGUSTUS_CONFIG_COPY'.  See 'module help augustus/3.4.0'
+augustus/3.3.3-CGP : If you see errors about not being able to write to an augustus directory, see 'module help augustus/3.3.3-CGP'
+
+Activating Modules:
+  1) BLAST+/2.10.1-gompi-2020a      5) PCRE/8.44-GCCcore-9.3.0
+  2) GMP/6.2.0-GCCcore-9.3.0        6) libjpeg-turbo/2.0.4-GCCcore-9.3.0
+  3) LMDB/0.9.24-GCCcore-9.3.0      7) libpng/1.6.37-GCCcore-9.3.0
+  4) NASM/2.14.02-GCCcore-9.3.0
+
+The following have been reloaded with a version change:
+  1) augustus/3.4.0 => augustus/3.3.3-CGP
+
+augustus/3.4.0 : If you see errors about not being able to write to an augustus directory, see 'module help augustus/3.4.0'
+The environment variable BUSCO_LINEAGE_SETS is set to a directory containing
+BUSCO v5 lineage sets.  Use with the -l option, for example:
+    run_BUSCO.py -l $BUSCO_LINEAGE_SETS/fungi_odb10 ...
+A list of available lineage sets is provided via 'module help BUSCO/5.3.1'
+----
+If you see this error from BUSCO:
+    Error: Cannot write to Augustus directory, please make sure you have write permissions to <directory>
+then you need to create a local copy of the config directory from the augustus
+module with 'source $AUGUSTUS_CONFIG_COPY'.  See 'module help augustus/3.4.0'
+
+Inactive Modules:
+  1) BLAST+                         5) PCRE/8.44-GCCcore-9.3.0
+  2) GMP/6.2.0-GCCcore-9.3.0        6) libjpeg-turbo/2.0.4-GCCcore-9.3.0
+  3) LMDB/0.9.24-GCCcore-9.3.0      7) libpng/1.6.37-GCCcore-9.3.0
+  4) NASM/2.14.02-GCCcore-9.3.0
+
+The following have been reloaded with a version change:
+  1) augustus/3.3.3-CGP => augustus/3.4.0
+
+2022-08-10 11:14:28 INFO:	***** Start a BUSCO v5.3.1 analysis, current time: 08/10/2022 11:14:28 *****
+2022-08-10 11:14:28 INFO:	Configuring BUSCO with /sw/bioinfo/BUSCO/5.3.1/rackham/config.ini
+2022-08-10 11:14:28 INFO:	Mode is proteins
+2022-08-10 11:14:28 WARNING:	There is a conflict in your config. You specified a dataset from odb9 while simultaneously requesting the datasets_version parameter be odb10. Proceeding with the lineage dataset as specified from odb9
+2022-08-10 11:14:28 ERROR:	BUSCO v5 only works with datasets from OrthoDB v10 (with the suffix '_odb10'). For a full list of available datasets, enter 'busco --list-datasets'. You can also run BUSCO using --auto-lineage, to allow BUSCO to automatically select the best dataset for your input data.
+2022-08-10 11:14:28 ERROR:	BUSCO analysis failed !
+2022-08-10 11:14:28 ERROR:	Check the logs, read the user guide (https://busco.ezlab.org/busco_userguide.html), and check the BUSCO issue board on https://gitlab.com/ezlab/busco/issues
+
+2022-08-10 11:14:28 INFO:	***** Start a BUSCO v5.3.1 analysis, current time: 08/10/2022 11:14:28 *****
+2022-08-10 11:14:28 INFO:	Configuring BUSCO with /sw/bioinfo/BUSCO/5.3.1/rackham/config.ini
+2022-08-10 11:14:28 INFO:	Mode is proteins
+2022-08-10 11:14:28 ERROR:	Input /crex/proj/metazoa_phylo/private/animal_tree_root_fork/db_test/animal_root_test.fa does not exist
+2022-08-10 11:14:28 ERROR:	BUSCO analysis failed !
+2022-08-10 11:14:28 ERROR:	Check the logs, read the user guide (https://busco.ezlab.org/busco_userguide.html), and check the BUSCO issue board on https://gitlab.com/ezlab/busco/issues
+

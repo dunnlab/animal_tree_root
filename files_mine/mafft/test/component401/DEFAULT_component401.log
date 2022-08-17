@@ -1,0 +1,219 @@
+IQ-TREE version 1.5.3 for Linux 64-bit built Mar 12 2017
+Copyright (c) 2011-2016 Nguyen Lam Tung, Olga Chernomor, Arndt von Haeseler and Bui Quang Minh.
+
+Host:    r1226.uppmax.uu.se (AVX2, FMA3, 243 GB RAM)
+Command: iqtree -s mafft/test/component401/component401.mafft -nt 1 -bb 1000 -pre mafft/test/component401/DEFAULT_component401
+Seed:    599855 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug  8 09:33:11 2022
+Kernel:  AVX+FMA
+
+NOTE: Consider using the multicore version because your CPU has 16 cores!
+
+Reading alignment file mafft/test/component401/component401.mafft ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 40 sequences with 51 columns and 42 patterns (25 informative sites, 18 constant sites)
+WARNING: Some sequence names are changed as follows:
+Philippe2009:Acropora_millepora:45264:Gene_0081 -> Philippe2009_Acropora_millepora_45264_Gene_0081
+Philippe2009:Allomyces_macrogynus:28583:Gene_0081 -> Philippe2009_Allomyces_macrogynus_28583_Gene_0081
+Philippe2009:Amoebidium_parasiticum:4881:Gene_0081 -> Philippe2009_Amoebidium_parasiticum_4881_Gene_0081
+Philippe2009:Anoplodactylus_eroticus:488521:Gene_0081 -> Philippe2009_Anoplodactylus_eroticus_488521_Gene_0081
+Philippe2009:Aplysia_californica:6500:Gene_0081 -> Philippe2009_Aplysia_californica_6500_Gene_0081
+Philippe2009:Branchiostoma_floridae:7739:Gene_0081 -> Philippe2009_Branchiostoma_floridae_7739_Gene_0081
+Philippe2009:Capitella_teleta:283909:Gene_0081 -> Philippe2009_Capitella_teleta_283909_Gene_0081
+Philippe2009:Capsaspora_owczarzaki:192875:Gene_0081 -> Philippe2009_Capsaspora_owczarzaki_192875_Gene_0081
+Philippe2009:Ciona_savignyi:51511:Gene_0081 -> Philippe2009_Ciona_savignyi_51511_Gene_0081
+Philippe2009:Crassostrea_gigas:29159:Gene_0081 -> Philippe2009_Crassostrea_gigas_29159_Gene_0081
+Philippe2009:Cyanea_capillata:27804:Gene_0081 -> Philippe2009_Cyanea_capillata_27804_Gene_0081
+Philippe2009:Danio_rerio:7955:Gene_0081 -> Philippe2009_Danio_rerio_7955_Gene_0081
+Philippe2009:Daphnia_pulex:6669:Gene_0081 -> Philippe2009_Daphnia_pulex_6669_Gene_0081
+Philippe2009:Euperipatoides_kanangrensis:488523:Gene_0081 -> Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0081
+Philippe2009:Helobdella_robusta:6412:Gene_0081 -> Philippe2009_Helobdella_robusta_6412_Gene_0081
+Philippe2009:Hydra_magnipapillata:6087:Gene_0081 -> Philippe2009_Hydra_magnipapillata_6087_Gene_0081
+Philippe2009:Hydractinia_echinata:35630:Gene_0081 -> Philippe2009_Hydractinia_echinata_35630_Gene_0081
+Philippe2009:Ixodes_scapularis:6945:Gene_0081 -> Philippe2009_Ixodes_scapularis_6945_Gene_0081
+Philippe2009:Metridium_senile:6116:Gene_0081 -> Philippe2009_Metridium_senile_6116_Gene_0081
+Philippe2009:Mnemiopsis_leidyi:27923:Gene_0081 -> Philippe2009_Mnemiopsis_leidyi_27923_Gene_0081
+Philippe2009:Molgula_tectiformis:30286:Gene_0081 -> Philippe2009_Molgula_tectiformis_30286_Gene_0081
+Philippe2009:Monosiga_brevicollis:81824:Gene_0081 -> Philippe2009_Monosiga_brevicollis_81824_Gene_0081
+Philippe2009:Montastraea_faveolata:48498:Gene_0081 -> Philippe2009_Montastraea_faveolata_48498_Gene_0081
+Philippe2009:Nasonia_vitripennis:7425:Gene_0081 -> Philippe2009_Nasonia_vitripennis_7425_Gene_0081
+Philippe2009:Nematostella_vectensis:45351:Gene_0081 -> Philippe2009_Nematostella_vectensis_45351_Gene_0081
+Philippe2009:Pedicellina_cernua:43123:Gene_0081 -> Philippe2009_Pedicellina_cernua_43123_Gene_0081
+Philippe2009:Petromyzon_marinus:7757:Gene_0081 -> Philippe2009_Petromyzon_marinus_7757_Gene_0081
+Philippe2009:Podocoryne_carnea:6096:Gene_0081 -> Philippe2009_Podocoryne_carnea_6096_Gene_0081
+Philippe2009:Amphimedon_queenslandica:400682:Gene_0081 -> Philippe2009_Amphimedon_queenslandica_400682_Gene_0081
+Philippe2009:Rhizopus_oryzae:64495:Gene_0081 -> Philippe2009_Rhizopus_oryzae_64495_Gene_0081
+Philippe2009:Saccoglossus_kowalevskii:10224:Gene_0081 -> Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0081
+Philippe2009:Scutigera_coleoptrata:29022:Gene_0081 -> Philippe2009_Scutigera_coleoptrata_29022_Gene_0081
+Philippe2009:Sphaeroforma_arctica:72019:Gene_0081 -> Philippe2009_Sphaeroforma_arctica_72019_Gene_0081
+Philippe2009:Spizellomyces_punctatus:109760:Gene_0081 -> Philippe2009_Spizellomyces_punctatus_109760_Gene_0081
+Philippe2009:Strongylocentrotus_purpuratus:7668:Gene_0081 -> Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0081
+Philippe2009:Sycon_raphanus:56443:Gene_0081 -> Philippe2009_Sycon_raphanus_56443_Gene_0081
+Philippe2009:Trichoplax_adhaerens:10228:Gene_0081 -> Philippe2009_Trichoplax_adhaerens_10228_Gene_0081
+Philippe2009:Tubifex_tubifex:6386:Gene_0081 -> Philippe2009_Tubifex_tubifex_6386_Gene_0081
+Philippe2009:Xenoturbella_bocki:242395:Gene_0081 -> Philippe2009_Xenoturbella_bocki_242395_Gene_0081
+Philippe2009:Mertensiid_sp:140499:Gene_0081 -> Philippe2009_Mertensiid_sp_140499_Gene_0081
+
+WARNING: C is not present in alignment that may cause numerical problems
+                                                           Gap/Ambiguity  Composition  p-value
+   1  Philippe2009_Acropora_millepora_45264_Gene_0081              0.00%    passed     99.99%
+   2  Philippe2009_Allomyces_macrogynus_28583_Gene_0081            0.00%    passed      5.73%
+   3  Philippe2009_Amoebidium_parasiticum_4881_Gene_0081           0.00%    passed     98.96%
+   4  Philippe2009_Anoplodactylus_eroticus_488521_Gene_0081        0.00%    passed     99.97%
+   5  Philippe2009_Aplysia_californica_6500_Gene_0081              3.92%    passed    100.00%
+   6  Philippe2009_Branchiostoma_floridae_7739_Gene_0081           0.00%    passed    100.00%
+   7  Philippe2009_Capitella_teleta_283909_Gene_0081               0.00%    passed    100.00%
+   8  Philippe2009_Capsaspora_owczarzaki_192875_Gene_0081          0.00%    passed     88.05%
+   9  Philippe2009_Ciona_savignyi_51511_Gene_0081                  0.00%    passed     99.72%
+  10  Philippe2009_Crassostrea_gigas_29159_Gene_0081               3.92%    passed     99.27%
+  11  Philippe2009_Cyanea_capillata_27804_Gene_0081                0.00%    passed    100.00%
+  12  Philippe2009_Danio_rerio_7955_Gene_0081                      0.00%    passed    100.00%
+  13  Philippe2009_Daphnia_pulex_6669_Gene_0081                    0.00%    passed     98.09%
+  14  Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0081    0.00%    passed    100.00%
+  15  Philippe2009_Helobdella_robusta_6412_Gene_0081               0.00%    passed     99.98%
+  16  Philippe2009_Hydra_magnipapillata_6087_Gene_0081             0.00%    passed     99.99%
+  17  Philippe2009_Hydractinia_echinata_35630_Gene_0081            0.00%    passed    100.00%
+  18  Philippe2009_Ixodes_scapularis_6945_Gene_0081                0.00%    passed     99.99%
+  19  Philippe2009_Metridium_senile_6116_Gene_0081                 0.00%    passed    100.00%
+  20  Philippe2009_Mnemiopsis_leidyi_27923_Gene_0081               0.00%    passed     99.74%
+  21  Philippe2009_Molgula_tectiformis_30286_Gene_0081             0.00%    passed     99.99%
+  22  Philippe2009_Monosiga_brevicollis_81824_Gene_0081            0.00%    passed     99.50%
+  23  Philippe2009_Montastraea_faveolata_48498_Gene_0081           0.00%    passed    100.00%
+  24  Philippe2009_Nasonia_vitripennis_7425_Gene_0081              0.00%    passed    100.00%
+  25  Philippe2009_Nematostella_vectensis_45351_Gene_0081          0.00%    passed    100.00%
+  26  Philippe2009_Pedicellina_cernua_43123_Gene_0081              0.00%    passed     19.99%
+  27  Philippe2009_Petromyzon_marinus_7757_Gene_0081               0.00%    passed     99.62%
+  28  Philippe2009_Podocoryne_carnea_6096_Gene_0081                0.00%    passed    100.00%
+  29  Philippe2009_Amphimedon_queenslandica_400682_Gene_0081       0.00%    passed    100.00%
+  30  Philippe2009_Rhizopus_oryzae_64495_Gene_0081                 0.00%    passed     97.24%
+  31  Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0081        0.00%    passed     99.96%
+  32  Philippe2009_Scutigera_coleoptrata_29022_Gene_0081           0.00%    passed     99.99%
+  33  Philippe2009_Sphaeroforma_arctica_72019_Gene_0081            0.00%    passed     98.20%
+  34  Philippe2009_Spizellomyces_punctatus_109760_Gene_0081        1.96%    passed     91.99%
+  35  Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0081    0.00%    passed     99.99%
+  36  Philippe2009_Sycon_raphanus_56443_Gene_0081                  0.00%    passed     69.83%
+  37  Philippe2009_Trichoplax_adhaerens_10228_Gene_0081            0.00%    passed     99.96%
+  38  Philippe2009_Tubifex_tubifex_6386_Gene_0081                  0.00%    passed     99.06%
+  39  Philippe2009_Xenoturbella_bocki_242395_Gene_0081             0.00%    passed     99.96%
+  40  Philippe2009_Mertensiid_sp_140499_Gene_0081                  0.00%    passed     99.74%
+****  TOTAL                                                        0.25%  0 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.004 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 599855)...
+WARNING: Default model LG may be under-fitting. Use option '-m TEST' to determine the best-fit model.
+
+NOTE: 0 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -1284.076
+Optimal log-likelihood: -1267.858
+Parameters optimization took 1 rounds (0.004 sec)
+Computing ML distances based on estimated model parameters... 0.080 sec
+Computing BIONJ tree...
+0.003 seconds
+Log-likelihood of BIONJ tree: -1268.994
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.470 second
+Computing log-likelihood of 98 initial trees ... 0.301 seconds
+Current best score: -1252.149
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -1251.061
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -1250.976
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 3: -1246.903
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 5: -1240.462
+Iteration 10 / LogL: -1257.809 / Time: 0h:0m:1s
+Iteration 20 / LogL: -1252.659 / Time: 0h:0m:1s
+Finish initializing candidate tree set (20)
+Current best tree score: -1240.462 / CPU time: 1.483
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 23: -1239.463
+BETTER TREE FOUND at iteration 28: -1239.463
+Iteration 30 / LogL: -1240.083 / Time: 0h:0m:2s (0h:0m:7s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 31: -1237.951
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 33: -1237.071
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 34: -1236.766
+Iteration 40 / LogL: -1237.188 / Time: 0h:0m:2s (0h:0m:6s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 42: -1233.578
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 50: -1233.562
+Iteration 50 / LogL: -1233.562 / Time: 0h:0m:3s (0h:0m:6s left)
+Log-likelihood cutoff on original alignment: -1271.399
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 51: -1231.766
+Iteration 60 / LogL: -1231.804 / Time: 0h:0m:3s (0h:0m:5s left)
+Iteration 70 / LogL: -1238.336 / Time: 0h:0m:4s (0h:0m:5s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 76: -1231.123
+Iteration 80 / LogL: -1232.956 / Time: 0h:0m:4s (0h:0m:5s left)
+Iteration 90 / LogL: -1231.177 / Time: 0h:0m:5s (0h:0m:5s left)
+Iteration 100 / LogL: -1245.222 / Time: 0h:0m:6s (0h:0m:4s left)
+Log-likelihood cutoff on original alignment: -1271.399
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.974
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 110 / LogL: -1236.069 / Time: 0h:0m:6s (0h:0m:5s left)
+Iteration 120 / LogL: -1232.329 / Time: 0h:0m:7s (0h:0m:4s left)
+Iteration 130 / LogL: -1245.288 / Time: 0h:0m:7s (0h:0m:4s left)
+Iteration 140 / LogL: -1238.955 / Time: 0h:0m:8s (0h:0m:3s left)
+Iteration 150 / LogL: -1231.123 / Time: 0h:0m:9s (0h:0m:3s left)
+Log-likelihood cutoff on original alignment: -1271.399
+Iteration 160 / LogL: -1233.717 / Time: 0h:0m:9s (0h:0m:2s left)
+Iteration 170 / LogL: -1231.123 / Time: 0h:0m:10s (0h:0m:1s left)
+UPDATE BEST LOG-LIKELIHOOD: -1231.123
+Iteration 180 / LogL: -1231.178 / Time: 0h:0m:11s (0h:0m:1s left)
+Iteration 190 / LogL: -1231.123 / Time: 0h:0m:11s (0h:0m:0s left)
+Iteration 200 / LogL: -1238.228 / Time: 0h:0m:12s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -1271.399
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.996
+TREE SEARCH COMPLETED AFTER 200 ITERATIONS / Time: 0h:0m:12s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -1231.123
+Optimal log-likelihood: -1231.123
+Parameters optimization took 1 rounds (0.003 sec)
+BEST SCORE FOUND : -1231.123
+Creating bootstrap support values...
+Split supports printed to NEXUS file mafft/test/component401/DEFAULT_component401.splits.nex
+Total tree length: 4.253
+
+Total number of iterations: 200
+CPU time used for tree search: 12.237 sec (0h:0m:12s)
+Wall-clock time used for tree search: 12.282 sec (0h:0m:12s)
+Total CPU time used: 12.457 sec (0h:0m:12s)
+Total wall-clock time used: 12.514 sec (0h:0m:12s)
+
+Computing bootstrap consensus tree...
+Reading input file mafft/test/component401/DEFAULT_component401.splits.nex...
+40 taxa and 755 splits.
+Consensus tree written to mafft/test/component401/DEFAULT_component401.contree
+Reading input trees file mafft/test/component401/DEFAULT_component401.contree
+Log-likelihood of consensus tree: -1231.766
+
+Analysis results written to: 
+  IQ-TREE report:                mafft/test/component401/DEFAULT_component401.iqtree
+  Maximum-likelihood tree:       mafft/test/component401/DEFAULT_component401.treefile
+  Likelihood distances:          mafft/test/component401/DEFAULT_component401.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          mafft/test/component401/DEFAULT_component401.splits.nex
+  Consensus tree:                mafft/test/component401/DEFAULT_component401.contree
+  Screen log file:               mafft/test/component401/DEFAULT_component401.log
+
+Date and Time: Mon Aug  8 09:33:24 2022

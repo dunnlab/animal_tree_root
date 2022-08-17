@@ -1,0 +1,444 @@
+IQ-TREE 1.5.3 built Mar 12 2017
+
+Input file name: mafft/test/component393/component393.mafft
+Type of analysis: tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 499834
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh (2015)
+IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol. Biol. Evol., 32:268-274.
+http://dx.doi.org/10.1093/molbev/msu300
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Bui Quang Minh, Minh Anh Thi Nguyen, and Arndt von Haeseler (2013) Ultrafast
+approximation for phylogenetic bootstrap. Mol. Biol. Evol., 30:1188-1195.
+http://dx.doi.org/10.1093/molbev/mst024
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 48 sequences with 777 amino-acid sites
+Number of constant sites: 295 (= 37.9665% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 295 (= 37.9665% of all sites)
+Number of distinct site patterns: 665
+
+MODEL SELECTION
+---------------
+
+Best-fit model according to BIC: LG+I+G4
+
+List of models sorted by BIC scores: 
+
+Model             LogL          AIC      w-AIC      AICc     w-AICc       BIC      w-BIC
+LG+I+G4         -19890.3975  39970.7949 - 0.0000  39997.5791 - 0.0000  40413.0618 + 1.0000
+LG+F+I+G4       -19846.0572  39920.1143 + 1.0000  39959.7216 + 1.0000  40450.8345 - 0.0000
+LG+G4           -19953.1111  40094.2223 - 0.0000  40120.4100 - 0.0000  40531.8337 - 0.0000
+rtREV+F+I+G4    -19892.9170  40013.8339 - 0.0000  40053.4412 - 0.0000  40544.5541 - 0.0000
+LG+F+G4         -19902.6407  40031.2814 - 0.0000  40070.1411 - 0.0000  40557.3461 - 0.0000
+rtREV+F+G4      -19950.9044  40127.8088 - 0.0000  40166.6686 - 0.0000  40653.8736 - 0.0000
+WAG+I+G4        -20073.8243  40337.6486 - 0.0000  40364.4328 - 0.0000  40779.9155 - 0.0000
+rtREV+I+G4      -20091.4369  40372.8738 - 0.0000  40399.6579 - 0.0000  40815.1406 - 0.0000
+mtZOA+F+I+G4    -20049.4282  40326.8565 - 0.0000  40366.4637 - 0.0000  40857.5767 - 0.0000
+WAG+G4          -20131.0174  40450.0347 - 0.0000  40476.2224 - 0.0000  40887.6461 - 0.0000
+WAG+F+I+G4      -20070.1301  40368.2602 - 0.0000  40407.8675 - 0.0000  40898.9804 - 0.0000
+rtREV+G4        -20154.6719  40497.3437 - 0.0000  40523.5314 - 0.0000  40934.9551 - 0.0000
+mtZOA+F+G4      -20114.7283  40455.4566 - 0.0000  40494.3163 - 0.0000  40981.5213 - 0.0000
+JTTDCMut+I+G4   -20182.2159  40554.4318 - 0.0000  40581.2159 - 0.0000  40996.6986 - 0.0000
+WAG+F+G4        -20126.7656  40479.5312 - 0.0000  40518.3910 - 0.0000  41005.5960 - 0.0000
+Dayhoff+I+G4    -20190.4396  40570.8792 - 0.0000  40597.6633 - 0.0000  41013.1460 - 0.0000
+DCMut+I+G4      -20192.9258  40575.8516 - 0.0000  40602.6357 - 0.0000  41018.1184 - 0.0000
+JTT+I+G4        -20193.7368  40577.4736 - 0.0000  40604.2578 - 0.0000  41019.7405 - 0.0000
+Dayhoff+F+I+G4  -20139.7682  40507.5364 - 0.0000  40547.1437 - 0.0000  41038.2566 - 0.0000
+VT+I+G4         -20203.1214  40596.2428 - 0.0000  40623.0270 - 0.0000  41038.5097 - 0.0000
+DCMut+F+I+G4    -20141.7693  40511.5385 - 0.0000  40551.1458 - 0.0000  41042.2587 - 0.0000
+JTTDCMut+G4     -20239.0441  40666.0881 - 0.0000  40692.2758 - 0.0000  41103.6995 - 0.0000
+Dayhoff+G4      -20244.5642  40677.1284 - 0.0000  40703.3161 - 0.0000  41114.7398 - 0.0000
+JTTDCMut+F+I+G4 -20179.8142  40587.6285 - 0.0000  40627.2357 - 0.0000  41118.3487 - 0.0000
+DCMut+G4        -20247.0162  40682.0324 - 0.0000  40708.2200 - 0.0000  41119.6437 - 0.0000
+VT+F+I+G4       -20181.6307  40591.2614 - 0.0000  40630.8686 - 0.0000  41121.9816 - 0.0000
+JTT+G4          -20250.4512  40688.9023 - 0.0000  40715.0900 - 0.0000  41126.5137 - 0.0000
+VT+G4           -20252.2282  40692.4564 - 0.0000  40718.6440 - 0.0000  41130.0677 - 0.0000
+Dayhoff+F+G4    -20191.9992  40609.9985 - 0.0000  40648.8582 - 0.0000  41136.0632 - 0.0000
+mtART+F+I+G4    -20189.2151  40606.4301 - 0.0000  40646.0374 - 0.0000  41137.1503 - 0.0000
+DCMut+F+G4      -20193.9843  40613.9686 - 0.0000  40652.8284 - 0.0000  41140.0334 - 0.0000
+JTT+F+I+G4      -20192.3144  40612.6287 - 0.0000  40652.2360 - 0.0000  41143.3489 - 0.0000
+VT+F+G4         -20228.5079  40683.0157 - 0.0000  40721.8755 - 0.0000  41209.0805 - 0.0000
+JTTDCMut+F+G4   -20235.0759  40696.1518 - 0.0000  40735.0116 - 0.0000  41222.2166 - 0.0000
+JTT+F+G4        -20247.4815  40720.9631 - 0.0000  40759.8228 - 0.0000  41247.0278 - 0.0000
+Blosum62+I+G4   -20310.0528  40810.1056 - 0.0000  40836.8897 - 0.0000  41252.3724 - 0.0000
+mtART+F+G4      -20251.6034  40729.2068 - 0.0000  40768.0666 - 0.0000  41255.2716 - 0.0000
+cpREV+F+I+G4    -20276.3112  40780.6225 - 0.0000  40820.2297 - 0.0000  41311.3427 - 0.0000
+PMB+I+G4        -20341.1114  40872.2228 - 0.0000  40899.0069 - 0.0000  41314.4896 - 0.0000
+Blosum62+G4     -20361.0050  40910.0100 - 0.0000  40936.1976 - 0.0000  41347.6214 - 0.0000
+cpREV+I+G4      -20375.4013  40940.8026 - 0.0000  40967.5868 - 0.0000  41383.0695 - 0.0000
+Blosum62+F+I+G4 -20317.2121  40862.4242 - 0.0000  40902.0314 - 0.0000  41393.1444 - 0.0000
+PMB+G4          -20390.0277  40968.0554 - 0.0000  40994.2430 - 0.0000  41405.6667 - 0.0000
+cpREV+F+G4      -20333.3676  40892.7352 - 0.0000  40931.5949 - 0.0000  41418.7999 - 0.0000
+PMB+F+I+G4      -20336.3728  40900.7456 - 0.0000  40940.3529 - 0.0000  41431.4658 - 0.0000
+Blosum62+F+G4   -20367.5857  40961.1714 - 0.0000  41000.0311 - 0.0000  41487.2361 - 0.0000
+cpREV+G4        -20433.3536  41054.7073 - 0.0000  41080.8950 - 0.0000  41492.3187 - 0.0000
+mtZOA+I+G4      -20430.6425  41051.2849 - 0.0000  41078.0691 - 0.0000  41493.5518 - 0.0000
+PMB+F+G4        -20385.4298  40996.8597 - 0.0000  41035.7194 - 0.0000  41522.9245 - 0.0000
+mtZOA+G4        -20474.7689  41137.5379 - 0.0000  41163.7256 - 0.0000  41575.1493 - 0.0000
+mtREV+F+I+G4    -20547.5288  41323.0575 - 0.0000  41362.6648 - 0.0000  41853.7777 - 0.0000
+mtREV+F+G4      -20608.5019  41443.0037 - 0.0000  41481.8635 - 0.0000  41969.0685 - 0.0000
+LG+I            -20702.5472  41593.0944 - 0.0000  41619.2820 - 0.0000  42030.7057 - 0.0000
+LG+F+I          -20671.8590  41569.7179 - 0.0000  41608.5776 - 0.0000  42095.7827 - 0.0000
+mtART+I+G4      -20746.7383  41683.4766 - 0.0000  41710.2608 - 0.0000  42125.7435 - 0.0000
+mtART+G4        -20786.4697  41760.9394 - 0.0000  41787.1270 - 0.0000  42198.5507 - 0.0000
+rtREV+F+I       -20731.1972  41688.3944 - 0.0000  41727.2541 - 0.0000  42214.4592 - 0.0000
+WAG+I           -20814.2209  41816.4418 - 0.0000  41842.6295 - 0.0000  42254.0532 - 0.0000
+FLU+I+G4        -20846.9742  41883.9483 - 0.0000  41910.7325 - 0.0000  42326.2152 - 0.0000
+FLU+F+I+G4      -20789.8504  41807.7007 - 0.0000  41847.3080 - 0.0000  42338.4209 - 0.0000
+WAG+F+I         -20828.5199  41883.0399 - 0.0000  41921.8996 - 0.0000  42409.1046 - 0.0000
+rtREV+I         -20905.0856  41998.1713 - 0.0000  42024.3589 - 0.0000  42435.7827 - 0.0000
+VT+I            -20909.1554  42006.3109 - 0.0000  42032.4986 - 0.0000  42443.9223 - 0.0000
+FLU+G4          -20920.8498  42029.6996 - 0.0000  42055.8873 - 0.0000  42467.3110 - 0.0000
+FLU+F+G4        -20865.9621  41957.9243 - 0.0000  41996.7840 - 0.0000  42483.9890 - 0.0000
+JTTDCMut+I      -20956.5439  42101.0879 - 0.0000  42127.2756 - 0.0000  42538.6993 - 0.0000
+VT+F+I          -20896.4657  42018.9314 - 0.0000  42057.7911 - 0.0000  42544.9961 - 0.0000
+HIVb+F+I+G4     -20894.7906  42017.5812 - 0.0000  42057.1885 - 0.0000  42548.3014 - 0.0000
+JTT+I           -20968.5110  42125.0219 - 0.0000  42151.2096 - 0.0000  42562.6333 - 0.0000
+Dayhoff+I       -20994.3740  42176.7479 - 0.0000  42202.9356 - 0.0000  42614.3593 - 0.0000
+DCMut+I         -20994.7691  42177.5381 - 0.0000  42203.7258 - 0.0000  42615.1495 - 0.0000
+DCMut+F+I       -20956.6317  42139.2635 - 0.0000  42178.1232 - 0.0000  42665.3282 - 0.0000
+Dayhoff+F+I     -20956.7558  42139.5116 - 0.0000  42178.3713 - 0.0000  42665.5763 - 0.0000
+HIVb+I+G4       -21016.9657  42223.9314 - 0.0000  42250.7156 - 0.0000  42666.1983 - 0.0000
+JTTDCMut+F+I    -20971.7379  42169.4758 - 0.0000  42208.3355 - 0.0000  42695.5405 - 0.0000
+HIVb+F+G4       -20977.3042  42180.6084 - 0.0000  42219.4682 - 0.0000  42706.6732 - 0.0000
+Blosum62+I      -21044.3095  42276.6191 - 0.0000  42302.8068 - 0.0000  42714.2305 - 0.0000
+JTT+F+I         -20984.3648  42194.7297 - 0.0000  42233.5894 - 0.0000  42720.7945 - 0.0000
+PMB+I           -21068.2455  42324.4910 - 0.0000  42350.6787 - 0.0000  42762.1024 - 0.0000
+HIVb+G4         -21102.4294  42392.8588 - 0.0000  42419.0465 - 0.0000  42830.4702 - 0.0000
+Blosum62+F+I    -21056.2253  42338.4506 - 0.0000  42377.3104 - 0.0000  42864.5154 - 0.0000
+PMB+F+I         -21072.0593  42370.1186 - 0.0000  42408.9783 - 0.0000  42896.1834 - 0.0000
+mtMAM+F+I+G4    -21127.3121  42482.6242 - 0.0000  42522.2314 - 0.0000  43013.3444 - 0.0000
+cpREV+F+I       -21133.6887  42493.3774 - 0.0000  42532.2371 - 0.0000  43019.4421 - 0.0000
+mtZOA+F+I       -21133.7082  42493.4164 - 0.0000  42532.2762 - 0.0000  43019.4812 - 0.0000
+mtREV+I+G4      -21209.4900  42608.9799 - 0.0000  42635.7640 - 0.0000  43051.2467 - 0.0000
+cpREV+I         -21223.8432  42635.6863 - 0.0000  42661.8740 - 0.0000  43073.2977 - 0.0000
+mtMAM+F+G4      -21188.6741  42603.3483 - 0.0000  42642.2080 - 0.0000  43129.4130 - 0.0000
+mtREV+G4        -21267.8492  42723.6983 - 0.0000  42749.8860 - 0.0000  43161.3097 - 0.0000
+mtART+F+I       -21480.3308  43186.6616 - 0.0000  43225.5213 - 0.0000  43712.7264 - 0.0000
+mtREV+F+I       -21572.2638  43370.5276 - 0.0000  43409.3874 - 0.0000  43896.5924 - 0.0000
+mtMAM+I+G4      -21742.8826  43675.7652 - 0.0000  43702.5493 - 0.0000  44118.0320 - 0.0000
+mtMAM+G4        -21793.1477  43774.2953 - 0.0000  43800.4830 - 0.0000  44211.9067 - 0.0000
+mtZOA+I         -21806.1276  43800.2551 - 0.0000  43826.4428 - 0.0000  44237.8665 - 0.0000
+FLU+I           -21882.1128  43952.2255 - 0.0000  43978.4132 - 0.0000  44389.8369 - 0.0000
+LG              -21893.9275  43973.8549 - 0.0000  43999.4538 - 0.0000  44406.8109 - 0.0000
+LG+F            -21854.7572  43933.5144 - 0.0000  43971.6348 - 0.0000  44454.9237 - 0.0000
+rtREV+F         -21884.3113  43992.6225 - 0.0000  44030.7430 - 0.0000  44514.0318 - 0.0000
+FLU+F+I         -21913.1985  44052.3969 - 0.0000  44091.2567 - 0.0000  44578.4617 - 0.0000
+WAG             -21999.1193  44184.2386 - 0.0000  44209.8374 - 0.0000  44617.1946 - 0.0000
+HIVb+F+I        -21968.1032  44162.2064 - 0.0000  44201.0661 - 0.0000  44688.2712 - 0.0000
+WAG+F           -22007.5156  44239.0311 - 0.0000  44277.1516 - 0.0000  44760.4404 - 0.0000
+rtREV           -22075.4547  44336.9094 - 0.0000  44362.5082 - 0.0000  44769.8653 - 0.0000
+HIVb+I          -22074.9124  44337.8248 - 0.0000  44364.0125 - 0.0000  44775.4362 - 0.0000
+VT              -22094.8344  44375.6688 - 0.0000  44401.2676 - 0.0000  44808.6248 - 0.0000
+HIVw+F+I+G4     -22031.1262  44290.2523 - 0.0000  44329.8596 - 0.0000  44820.9725 - 0.0000
+VT+F            -22077.2142  44378.4283 - 0.0000  44416.5488 - 0.0000  44899.8376 - 0.0000
+HIVw+F+G4       -22121.9105  44469.8210 - 0.0000  44508.6807 - 0.0000  44995.8857 - 0.0000
+Blosum62        -22190.3368  44566.6736 - 0.0000  44592.2724 - 0.0000  44999.6295 - 0.0000
+JTTDCMut        -22202.5043  44591.0086 - 0.0000  44616.6074 - 0.0000  45023.9646 - 0.0000
+JTT             -22214.8849  44615.7699 - 0.0000  44641.3687 - 0.0000  45048.7259 - 0.0000
+PMB             -22222.9466  44631.8932 - 0.0000  44657.4920 - 0.0000  45064.8492 - 0.0000
+Dayhoff         -22223.0170  44632.0341 - 0.0000  44657.6329 - 0.0000  45064.9900 - 0.0000
+DCMut           -22223.2641  44632.5283 - 0.0000  44658.1271 - 0.0000  45065.4842 - 0.0000
+DCMut+F         -22170.2026  44564.4052 - 0.0000  44602.5257 - 0.0000  45085.8145 - 0.0000
+Dayhoff+F       -22170.4681  44564.9361 - 0.0000  44603.0566 - 0.0000  45086.3454 - 0.0000
+JTTDCMut+F      -22207.6538  44639.3077 - 0.0000  44677.4282 - 0.0000  45160.7170 - 0.0000
+Blosum62+F      -22208.2769  44640.5538 - 0.0000  44678.6743 - 0.0000  45161.9632 - 0.0000
+JTT+F           -22220.7863  44665.5726 - 0.0000  44703.6931 - 0.0000  45186.9820 - 0.0000
+PMB+F           -22234.1504  44692.3007 - 0.0000  44730.4212 - 0.0000  45213.7101 - 0.0000
+HIVw+I+G4       -22308.3559  44806.7118 - 0.0000  44833.4960 - 0.0000  45248.9786 - 0.0000
+mtZOA+F         -22268.8814  44761.7628 - 0.0000  44799.8832 - 0.0000  45283.1721 - 0.0000
+cpREV+F         -22306.5303  44837.0605 - 0.0000  44875.1810 - 0.0000  45358.4699 - 0.0000
+mtART+I         -22374.3054  44936.6107 - 0.0000  44962.7984 - 0.0000  45374.2221 - 0.0000
+cpREV           -22387.0163  44960.0327 - 0.0000  44985.6315 - 0.0000  45392.9886 - 0.0000
+HIVw+G4         -22393.1642  44974.3283 - 0.0000  45000.5160 - 0.0000  45411.9397 - 0.0000
+mtREV+I         -22410.0298  45008.0596 - 0.0000  45034.2473 - 0.0000  45445.6710 - 0.0000
+mtMAM+F+I       -22610.2850  45446.5700 - 0.0000  45485.4298 - 0.0000  45972.6348 - 0.0000
+mtART+F         -22646.6124  45517.2247 - 0.0000  45555.3452 - 0.0000  46038.6341 - 0.0000
+mtREV+F         -22724.0716  45672.1433 - 0.0000  45710.2638 - 0.0000  46193.5526 - 0.0000
+mtZOA           -22915.8381  46017.6761 - 0.0000  46043.2750 - 0.0000  46450.6321 - 0.0000
+FLU             -23205.3910  46596.7821 - 0.0000  46622.3809 - 0.0000  47029.7380 - 0.0000
+HIVw+F+I        -23196.6557  46619.3114 - 0.0000  46658.1711 - 0.0000  47145.3761 - 0.0000
+FLU+F           -23227.7615  46679.5231 - 0.0000  46717.6436 - 0.0000  47200.9324 - 0.0000
+HIVb+F          -23377.1719  46978.3439 - 0.0000  47016.4644 - 0.0000  47499.7532 - 0.0000
+HIVw+I          -23460.1881  47108.3761 - 0.0000  47134.5638 - 0.0000  47545.9875 - 0.0000
+HIVb            -23503.5226  47193.0453 - 0.0000  47218.6441 - 0.0000  47626.0012 - 0.0000
+mtMAM+I         -23518.1795  47224.3590 - 0.0000  47250.5467 - 0.0000  47661.9704 - 0.0000
+mtART           -23534.8439  47255.6878 - 0.0000  47281.2866 - 0.0000  47688.6438 - 0.0000
+mtREV           -23555.0692  47296.1384 - 0.0000  47321.7373 - 0.0000  47729.0944 - 0.0000
+mtMAM+F         -23947.8469  48119.6938 - 0.0000  48157.8142 - 0.0000  48641.1031 - 0.0000
+HIVw+F          -24759.4280  49742.8560 - 0.0000  49780.9765 - 0.0000  50264.2654 - 0.0000
+mtMAM           -24854.3512  49894.7025 - 0.0000  49920.3013 - 0.0000  50327.6584 - 0.0000
+HIVw            -25046.3458  50278.6916 - 0.0000  50304.2904 - 0.0000  50711.6475 - 0.0000
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+I+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Invar+Gamma with 4 categories
+Proportion of invariable sites: 0.3181
+Gamma shape alpha: 0.9059
+
+ Category  Relative_rate  Proportion
+  0         0              0.3181
+  1         0.1728         0.1705
+  2         0.6548         0.1705
+  3         1.4407         0.1705
+  4         3.5975         0.1705
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -19819.6268 (s.e. 714.8411)
+Unconstrained log-likelihood (without tree): -4982.9062
+Number of free parameters (#branches + #model parameters): 95
+Akaike information criterion (AIC) score: 39829.2537
+Corrected Akaike information criterion (AICc) score: 39856.0378
+Bayesian information criterion (BIC) score: 40271.5205
+
+Total tree length (sum of branch lengths): 8.2031
+Sum of internal branch lengths: 2.2682 (27.6503% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Philippe2009_Acropora_millepora_45264_Gene_0015' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++--------------Philippe2009_Acropora_millepora_45264_Gene_0015
+|
+|                                       +----------Philippe2009_Allomyces_macrogynus_28583_Gene_0015
+|                                    +--| (94)
+|                                    |  |  +-------Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0015
+|                                    |  +--| (99)
+|                                    |     +---Philippe2009_Spizellomyces_punctatus_109760_Gene_0015
+|              +---------------------| (100)
+|              |                     |     +-----Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0015
+|              |                     +-----| (100)
+|              |                           +-----Philippe2009_Rhizopus_oryzae_64495_Gene_0015
+|           +--| (34)
+|           |  |                                  +---Philippe2009_Amoebidium_parasiticum_4881_Gene_0015
+|           |  |                      +-----------| (98)
+|           |  |                      |           +------------Philippe2009_Sphaeroforma_arctica_72019_Gene_0015
+|           |  |                 +----| (84)
+|           |  |                 |    +---------------Philippe2009_Capsaspora_owczarzaki_192875_Gene_0015
+|           |  |              +--| (73)
+|           |  |              |  |    +--Philippe2009_Danio_rerio_7955_Gene_0015
+|           |  |              |  +----| (100)
+|           |  |              |       +---Philippe2009_Petromyzon_marinus_7757_Gene_0015
+|           |  |           +--| (27)
+|           |  |           |  |     +------Philippe2009_Carteriospongia_foliascens_593584_Gene_0015
+|           |  |           |  |  +--| (58)
+|           |  |           |  |  |  |  +----------Philippe2009_Ephydatia_muelleri_6052_Gene_0015
+|           |  |           |  |  |  +--| (65)
+|           |  |           |  |  |     +----Philippe2009_Amphimedon_queenslandica_400682_Gene_0015
+|           |  |           |  +--| (62)
+|           |  |           |     +-----------------Philippe2009_Heterochone_sp_367900_Gene_0015
+|           |  |        +--| (26)
+|           |  |        |  |              +----------Philippe2009_Aplysia_californica_6500_Gene_0015
+|           |  |        |  |           +--| (99)
+|           |  |        |  |           |  +-------Philippe2009_Crassostrea_gigas_29159_Gene_0015
+|           |  |        |  |        +--| (91)
+|           |  |        |  |        |  +-------------Philippe2009_Euprymna_scolopes_6613_Gene_0015
+|           |  |        |  |     +--| (91)
+|           |  |        |  |     |  |     +----------Philippe2009_Capitella_teleta_283909_Gene_0015
+|           |  |        |  |     |  |  +--| (82)
+|           |  |        |  |     |  |  |  +----------------Philippe2009_Pedicellina_cernua_43123_Gene_0015
+|           |  |        |  |     |  +--| (73)
+|           |  |        |  |     |     |  +--Philippe2009_Helobdella_robusta_6412_Gene_0015
+|           |  |        |  |     |     +--| (100)
+|           |  |        |  |     |        +----Philippe2009_Tubifex_tubifex_6386_Gene_0015
+|           |  |        |  |  +--| (48)
+|           |  |        |  |  |  |                              +----------Philippe2009_Mnemiopsis_leidyi_27923_Gene_0015
+|           |  |        |  |  |  +------------------------------| (100)
+|           |  |        |  |  |                                 +------Philippe2009_Pleurobrachia_pileus_140457_Gene_0015
+|           |  |        |  +--| (25)
+|           |  |        |     +--------Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0015
+|           |  |     +--| (36)
+|           |  |     |  |        +----------Philippe2009_Branchiostoma_floridae_7739_Gene_0015
+|           |  |     |  |     +--| (44)
+|           |  |     |  |     |  +-----Philippe2009_Sycon_raphanus_56443_Gene_0015
+|           |  |     |  |  +--| (33)
+|           |  |     |  |  |  +--------Philippe2009_Trichoplax_adhaerens_10228_Gene_0015
+|           |  |     |  +--| (17)
+|           |  |     |     |         +--------Philippe2009_Daphnia_pulex_6669_Gene_0015
+|           |  |     |     |      +--| (96)
+|           |  |     |     |      |  |  +--Philippe2009_Nasonia_vitripennis_7425_Gene_0015
+|           |  |     |     |      |  +--| (98)
+|           |  |     |     |      |     +----Philippe2009_Pediculus_humanus_121225_Gene_0015
+|           |  |     |     |   +--| (41)
+|           |  |     |     |   |  |  +-------Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0015
+|           |  |     |     |   |  +--| (89)
+|           |  |     |     |   |     +---Philippe2009_Scutigera_coleoptrata_29022_Gene_0015
+|           |  |     |     +---| (95)
+|           |  |     |         +-------Philippe2009_Ixodes_scapularis_6945_Gene_0015
+|           |  |  +--| (34)
+|           |  |  |  |  +----------Philippe2009_Oscarella_carmela_386100_Gene_0015
+|           |  |  |  +--| (52)
+|           |  |  |     +---------Philippe2009_Xenoturbella_bocki_242395_Gene_0015
+|           |  +--| (63)
+|           |     |    +-----------Philippe2009_Ciona_savignyi_51511_Gene_0015
+|           |     +----| (93)
+|           |          +----------------Philippe2009_Molgula_tectiformis_30286_Gene_0015
+|        +--| (21)
+|        |  +-----------Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0015
+|     +--| (70)
+|     |  |     +--------Philippe2009_Monosiga_brevicollis_81824_Gene_0015
+|     |  |  +--| (97)
+|     |  |  |  +-----------Philippe2009_Proterospongia_sp_218847_Gene_0015
+|     |  +--| (88)
+|     |     +--------------Philippe2009_Monosiga_ovata_81526_Gene_0015
+|  +--| (98)
+|  |  |          +-------------Philippe2009_Clytia_hemisphaerica_252671_Gene_0015
+|  |  |       +--| (97)
+|  |  |       |  |  +--Philippe2009_Hydractinia_echinata_35630_Gene_0015
+|  |  |       |  +--| (99)
+|  |  |       |     +--Philippe2009_Podocoryne_carnea_6096_Gene_0015
+|  |  +-------| (100)
+|  |          +----Philippe2009_Hydra_magnipapillata_6087_Gene_0015
++--| (94)
+|  +----------Philippe2009_Nematostella_vectensis_45351_Gene_0015
+|
++-------Philippe2009_Metridium_senile_6116_Gene_0015
+
+Tree in newick format:
+
+(Philippe2009_Acropora_millepora_45264_Gene_0015:0.2080255424,(((((((Philippe2009_Allomyces_macrogynus_28583_Gene_0015:0.1454796644,(Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0015:0.1165472700,Philippe2009_Spizellomyces_punctatus_109760_Gene_0015:0.0637360856)99:0.035089)94:0.048750,(Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0015:0.0838243594,Philippe2009_Rhizopus_oryzae_64495_Gene_0015:0.0850160506)100:0.088656)100:0.298044,((((((((Philippe2009_Amoebidium_parasiticum_4881_Gene_0015:0.0533435736,Philippe2009_Sphaeroforma_arctica_72019_Gene_0015:0.1796792179)98:0.165303,Philippe2009_Capsaspora_owczarzaki_192875_Gene_0015:0.2112977745)84:0.074226,(Philippe2009_Danio_rerio_7955_Gene_0015:0.0344556604,Philippe2009_Petromyzon_marinus_7757_Gene_0015:0.0573828266)100:0.071505)73:0.023313,((Philippe2009_Carteriospongia_foliascens_593584_Gene_0015:0.0931073300,(Philippe2009_Ephydatia_muelleri_6052_Gene_0015:0.1520142062,Philippe2009_Amphimedon_queenslandica_400682_Gene_0015:0.0717799303)65:0.004357)58:0.009837,Philippe2009_Heterochone_sp_367900_Gene_0015:0.2463712363)62:0.030241)27:0.019082,(((((Philippe2009_Aplysia_californica_6500_Gene_0015:0.1449098410,Philippe2009_Crassostrea_gigas_29159_Gene_0015:0.1165856319)99:0.050888,Philippe2009_Euprymna_scolopes_6613_Gene_0015:0.1872097281)91:0.040643,((Philippe2009_Capitella_teleta_283909_Gene_0015:0.1460427279,Philippe2009_Pedicellina_cernua_43123_Gene_0015:0.2225350131)82:0.039852,(Philippe2009_Helobdella_robusta_6412_Gene_0015:0.0462167885,Philippe2009_Tubifex_tubifex_6386_Gene_0015:0.0759386721)100:0.049621)73:0.020300)91:0.030462,(Philippe2009_Mnemiopsis_leidyi_27923_Gene_0015:0.1527800400,Philippe2009_Pleurobrachia_pileus_140457_Gene_0015:0.1000595539)100:0.407679)48:0.027728,Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0015:0.1271258023)25:0.014195)26:0.017913,(((Philippe2009_Branchiostoma_floridae_7739_Gene_0015:0.1546428878,Philippe2009_Sycon_raphanus_56443_Gene_0015:0.0824630735)44:0.017853,Philippe2009_Trichoplax_adhaerens_10228_Gene_0015:0.1188627628)33:0.026006,(((Philippe2009_Daphnia_pulex_6669_Gene_0015:0.1211031561,(Philippe2009_Nasonia_vitripennis_7425_Gene_0015:0.0410674780,Philippe2009_Pediculus_humanus_121225_Gene_0015:0.0659739919)98:0.020477)96:0.041443,(Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0015:0.1076399238,Philippe2009_Scutigera_coleoptrata_29022_Gene_0015:0.0651174550)89:0.014453)41:0.013793,Philippe2009_Ixodes_scapularis_6945_Gene_0015:0.1100870900)95:0.057003)17:0.006211)36:0.028732,(Philippe2009_Oscarella_carmela_386100_Gene_0015:0.1542577093,Philippe2009_Xenoturbella_bocki_242395_Gene_0015:0.1408205830)52:0.016577)34:0.013125,(Philippe2009_Ciona_savignyi_51511_Gene_0015:0.1570055458,Philippe2009_Molgula_tectiformis_30286_Gene_0015:0.2286636218)93:0.070819)63:0.014106)34:0.015155,Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0015:0.1669667871)21:0.015481,((Philippe2009_Monosiga_brevicollis_81824_Gene_0015:0.1233902827,Philippe2009_Proterospongia_sp_218847_Gene_0015:0.1572631867)97:0.048188,Philippe2009_Monosiga_ovata_81526_Gene_0015:0.2027873830)88:0.050521)70:0.022628,((Philippe2009_Clytia_hemisphaerica_252671_Gene_0015:0.1853308513,(Philippe2009_Hydractinia_echinata_35630_Gene_0015:0.0454505864,Philippe2009_Podocoryne_carnea_6096_Gene_0015:0.0439885450)99:0.018926)97:0.026736,Philippe2009_Hydra_magnipapillata_6087_Gene_0015:0.0735810307)100:0.108450)98:0.036215,Philippe2009_Nematostella_vectensis_45351_Gene_0015:0.1564099917)94:0.017591,Philippe2009_Metridium_senile_6116_Gene_0015:0.1105638082);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -19820.767713
+Robinson-Foulds distance between ML tree and consensus tree: 6
+
+Branches with bootstrap support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++---------------Philippe2009_Acropora_millepora_45264_Gene_0015
+|
+|                                       +----------Philippe2009_Allomyces_macrogynus_28583_Gene_0015
+|                                    +--| (94)
+|                                    |  |  +-------Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0015
+|                                    |  +--| (99)
+|                                    |     +---Philippe2009_Spizellomyces_punctatus_109760_Gene_0015
+|              +---------------------| (100)
+|              |                     |     +-----Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0015
+|              |                     +-----| (100)
+|              |                           +-----Philippe2009_Rhizopus_oryzae_64495_Gene_0015
+|           +--| (46)
+|           |  |     +--------Philippe2009_Monosiga_brevicollis_81824_Gene_0015
+|           |  |  +--| (97)
+|           |  |  |  +----------Philippe2009_Proterospongia_sp_218847_Gene_0015
+|           |  +--| (88)
+|           |     +--------------Philippe2009_Monosiga_ovata_81526_Gene_0015
+|        +--| (66)
+|        |  |                                  +---Philippe2009_Amoebidium_parasiticum_4881_Gene_0015
+|        |  |                      +-----------| (98)
+|        |  |                      |           +------------Philippe2009_Sphaeroforma_arctica_72019_Gene_0015
+|        |  |                 +----| (84)
+|        |  |                 |    +---------------Philippe2009_Capsaspora_owczarzaki_192875_Gene_0015
+|        |  |              +--| (73)
+|        |  |              |  |    +--Philippe2009_Danio_rerio_7955_Gene_0015
+|        |  |              |  +----| (100)
+|        |  |              |       +---Philippe2009_Petromyzon_marinus_7757_Gene_0015
+|        |  |           +--| (27)
+|        |  |           |  |     +------Philippe2009_Carteriospongia_foliascens_593584_Gene_0015
+|        |  |           |  |  +--| (58)
+|        |  |           |  |  |  |  +----------Philippe2009_Ephydatia_muelleri_6052_Gene_0015
+|        |  |           |  |  |  +--| (65)
+|        |  |           |  |  |     +----Philippe2009_Amphimedon_queenslandica_400682_Gene_0015
+|        |  |           |  +--| (62)
+|        |  |           |     +-----------------Philippe2009_Heterochone_sp_367900_Gene_0015
+|        |  |        +--| (26)
+|        |  |        |  |              +----------Philippe2009_Aplysia_californica_6500_Gene_0015
+|        |  |        |  |           +--| (99)
+|        |  |        |  |           |  +--------Philippe2009_Crassostrea_gigas_29159_Gene_0015
+|        |  |        |  |        +--| (91)
+|        |  |        |  |        |  +-------------Philippe2009_Euprymna_scolopes_6613_Gene_0015
+|        |  |        |  |     +--| (91)
+|        |  |        |  |     |  |     +----------Philippe2009_Capitella_teleta_283909_Gene_0015
+|        |  |        |  |     |  |  +--| (82)
+|        |  |        |  |     |  |  |  +----------------Philippe2009_Pedicellina_cernua_43123_Gene_0015
+|        |  |        |  |     |  +--| (73)
+|        |  |        |  |     |     |  +--Philippe2009_Helobdella_robusta_6412_Gene_0015
+|        |  |        |  |     |     +--| (100)
+|        |  |        |  |     |        +----Philippe2009_Tubifex_tubifex_6386_Gene_0015
+|        |  |        |  |  +--| (48)
+|        |  |        |  |  |  |                              +----------Philippe2009_Mnemiopsis_leidyi_27923_Gene_0015
+|        |  |        |  |  |  +------------------------------| (100)
+|        |  |        |  |  |                                 +------Philippe2009_Pleurobrachia_pileus_140457_Gene_0015
+|        |  |        |  +--| (25)
+|        |  |        |     +--------Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0015
+|        |  |     +--| (36)
+|        |  |     |  |        +-----------Philippe2009_Branchiostoma_floridae_7739_Gene_0015
+|        |  |     |  |     +--| (44)
+|        |  |     |  |     |  +-----Philippe2009_Sycon_raphanus_56443_Gene_0015
+|        |  |     |  |  +--| (33)
+|        |  |     |  |  |  +--------Philippe2009_Trichoplax_adhaerens_10228_Gene_0015
+|        |  |     |  +--| (17)
+|        |  |     |     |      +--------Philippe2009_Daphnia_pulex_6669_Gene_0015
+|        |  |     |     |   +--| (96)
+|        |  |     |     |   |  |  +--Philippe2009_Nasonia_vitripennis_7425_Gene_0015
+|        |  |     |     |   |  +--| (98)
+|        |  |     |     |   |     +----Philippe2009_Pediculus_humanus_121225_Gene_0015
+|        |  |     |     +---| (95)
+|        |  |     |         |     +-------Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0015
+|        |  |     |         |  +--| (89)
+|        |  |     |         |  |  +---Philippe2009_Scutigera_coleoptrata_29022_Gene_0015
+|        |  |     |         +--| (55)
+|        |  |     |            +-------Philippe2009_Ixodes_scapularis_6945_Gene_0015
+|        |  |  +--| (34)
+|        |  |  |  |  +----------Philippe2009_Oscarella_carmela_386100_Gene_0015
+|        |  |  |  +--| (52)
+|        |  |  |     +---------Philippe2009_Xenoturbella_bocki_242395_Gene_0015
+|        |  +--| (63)
+|        |     |    +-----------Philippe2009_Ciona_savignyi_51511_Gene_0015
+|        |     +----| (93)
+|        |          +----------------Philippe2009_Molgula_tectiformis_30286_Gene_0015
+|     +--| (70)
+|     |  +-----------Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0015
+|  +--| (98)
+|  |  |          +-------------Philippe2009_Clytia_hemisphaerica_252671_Gene_0015
+|  |  |       +--| (97)
+|  |  |       |  |  +--Philippe2009_Hydractinia_echinata_35630_Gene_0015
+|  |  |       |  +--| (99)
+|  |  |       |     +--Philippe2009_Podocoryne_carnea_6096_Gene_0015
+|  |  +-------| (100)
+|  |          +----Philippe2009_Hydra_magnipapillata_6087_Gene_0015
++--| (94)
+|  +-----------Philippe2009_Nematostella_vectensis_45351_Gene_0015
+|
++-------Philippe2009_Metridium_senile_6116_Gene_0015
+
+
+Consensus tree in newick format: 
+
+(Philippe2009_Acropora_millepora_45264_Gene_0015:0.2094895691,(((((((Philippe2009_Allomyces_macrogynus_28583_Gene_0015:0.1460342338,(Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0015:0.1164410298,Philippe2009_Spizellomyces_punctatus_109760_Gene_0015:0.0642145973)99:0.0356160000)94:0.0461440000,(Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0015:0.0838135115,Philippe2009_Rhizopus_oryzae_64495_Gene_0015:0.0853546514)100:0.0888890000)100:0.2859290000,((Philippe2009_Monosiga_brevicollis_81824_Gene_0015:0.1266075460,Philippe2009_Proterospongia_sp_218847_Gene_0015:0.1556064505)97:0.0501660000,Philippe2009_Monosiga_ovata_81526_Gene_0015:0.1964400902)88:0.0310850000)46:0.0273090000,((((((((Philippe2009_Amoebidium_parasiticum_4881_Gene_0015:0.0542160219,Philippe2009_Sphaeroforma_arctica_72019_Gene_0015:0.1798410849)98:0.1658570000,Philippe2009_Capsaspora_owczarzaki_192875_Gene_0015:0.2115142879)84:0.0744210000,(Philippe2009_Danio_rerio_7955_Gene_0015:0.0344589861,Philippe2009_Petromyzon_marinus_7757_Gene_0015:0.0574987521)100:0.0717780000)73:0.0236900000,((Philippe2009_Carteriospongia_foliascens_593584_Gene_0015:0.0941506633,(Philippe2009_Ephydatia_muelleri_6052_Gene_0015:0.1512682068,Philippe2009_Amphimedon_queenslandica_400682_Gene_0015:0.0726341760)65:0.0039350000)58:0.0097440000,Philippe2009_Heterochone_sp_367900_Gene_0015:0.2466569992)62:0.0303250000)27:0.0200450000,(((((Philippe2009_Aplysia_californica_6500_Gene_0015:0.1448221644,Philippe2009_Crassostrea_gigas_29159_Gene_0015:0.1171242919)99:0.0504660000,Philippe2009_Euprymna_scolopes_6613_Gene_0015:0.1885134693)91:0.0408170000,((Philippe2009_Capitella_teleta_283909_Gene_0015:0.1458976843,Philippe2009_Pedicellina_cernua_43123_Gene_0015:0.2232112115)82:0.0402230000,(Philippe2009_Helobdella_robusta_6412_Gene_0015:0.0460713302,Philippe2009_Tubifex_tubifex_6386_Gene_0015:0.0763754978)100:0.0495950000)73:0.0205570000)91:0.0310970000,(Philippe2009_Mnemiopsis_leidyi_27923_Gene_0015:0.1541378758,Philippe2009_Pleurobrachia_pileus_140457_Gene_0015:0.0994818307)100:0.4089120000)48:0.0265780000,Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0015:0.1280742367)25:0.0139450000)26:0.0159130000,(((Philippe2009_Branchiostoma_floridae_7739_Gene_0015:0.1567361243,Philippe2009_Sycon_raphanus_56443_Gene_0015:0.0807223702)44:0.0172250000,Philippe2009_Trichoplax_adhaerens_10228_Gene_0015:0.1188934784)33:0.0269130000,((Philippe2009_Daphnia_pulex_6669_Gene_0015:0.1207454828,(Philippe2009_Nasonia_vitripennis_7425_Gene_0015:0.0418935545,Philippe2009_Pediculus_humanus_121225_Gene_0015:0.0660177637)98:0.0212990000)96:0.0383960000,((Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0015:0.1068010364,Philippe2009_Scutigera_coleoptrata_29022_Gene_0015:0.0633913299)89:0.0131820000,Philippe2009_Ixodes_scapularis_6945_Gene_0015:0.1102758845)55:0.0201050000)95:0.0560810000)17:0.0068420000)36:0.0272350000,(Philippe2009_Oscarella_carmela_386100_Gene_0015:0.1547041698,Philippe2009_Xenoturbella_bocki_242395_Gene_0015:0.1412370927)52:0.0200510000)34:0.0145130000,(Philippe2009_Ciona_savignyi_51511_Gene_0015:0.1577489969,Philippe2009_Molgula_tectiformis_30286_Gene_0015:0.2288531789)93:0.0718590000)63:0.0231830000)66:0.0180450000,Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0015:0.1660274991)70:0.0248860000,((Philippe2009_Clytia_hemisphaerica_252671_Gene_0015:0.1858817420,(Philippe2009_Hydractinia_echinata_35630_Gene_0015:0.0456294125,Philippe2009_Podocoryne_carnea_6096_Gene_0015:0.0439935454)99:0.0189180000)97:0.0268180000,Philippe2009_Hydra_magnipapillata_6087_Gene_0015:0.0740581534)100:0.1116490000)98:0.0356950000,Philippe2009_Nematostella_vectensis_45351_Gene_0015:0.1578298021)94:0.0164490000,Philippe2009_Metridium_senile_6116_Gene_0015:0.1121999844);
+
+TIME STAMP
+----------
+
+Date and time: Mon Aug  8 09:30:02 2022
+Total CPU time used: 1185.487512 seconds (0h:19m:45s)
+Total wall-clock time used: 1186.526165 seconds (0h:19m:46s)
+

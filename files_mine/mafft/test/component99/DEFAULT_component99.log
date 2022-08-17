@@ -1,0 +1,166 @@
+IQ-TREE version 1.5.3 for Linux 64-bit built Mar 12 2017
+Copyright (c) 2011-2016 Nguyen Lam Tung, Olga Chernomor, Arndt von Haeseler and Bui Quang Minh.
+
+Host:    r1226.uppmax.uu.se (AVX2, FMA3, 243 GB RAM)
+Command: iqtree -s mafft/test/component99/component99.mafft -nt 1 -bb 1000 -pre mafft/test/component99/DEFAULT_component99
+Seed:    272432 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug  8 09:33:24 2022
+Kernel:  AVX+FMA
+
+NOTE: Consider using the multicore version because your CPU has 16 cores!
+
+Reading alignment file mafft/test/component99/component99.mafft ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 21 sequences with 104 columns and 103 patterns (75 informative sites, 6 constant sites)
+WARNING: Some sequence names are changed as follows:
+Dunn2008:Acropora_millepora:45264:Tribe1190 -> Dunn2008_Acropora_millepora_45264_Tribe1190
+Dunn2008:Asterina_pectinifera:7594:Tribe1190 -> Dunn2008_Asterina_pectinifera_7594_Tribe1190
+Dunn2008:Boophilus_microplus:6941:Tribe1190 -> Dunn2008_Boophilus_microplus_6941_Tribe1190
+Dunn2008:Carinoma_mutabilis:187807:Tribe1190 -> Dunn2008_Carinoma_mutabilis_187807_Tribe1190
+Dunn2008:Chaetopterus_variopedatus:34590:Tribe1190 -> Dunn2008_Chaetopterus_variopedatus_34590_Tribe1190
+Dunn2008:Crassostrea_virginica:6565:Tribe1190 -> Dunn2008_Crassostrea_virginica_6565_Tribe1190
+Dunn2008:Cyanea_capillata:27804:Tribe1190 -> Dunn2008_Cyanea_capillata_27804_Tribe1190
+Dunn2008:Drosophila_melanogaster:7227:Tribe1190 -> Dunn2008_Drosophila_melanogaster_7227_Tribe1190
+Dunn2008:Echinococcus_granulosus:6210:Tribe1190 -> Dunn2008_Echinococcus_granulosus_6210_Tribe1190
+Dunn2008:Echinoderes_horni:488522:Tribe1190 -> Dunn2008_Echinoderes_horni_488522_Tribe1190
+Dunn2008:Fenneropenaeus_chinensis:139456:Tribe1190 -> Dunn2008_Fenneropenaeus_chinensis_139456_Tribe1190
+Dunn2008:Hydra_vulgaris_01:6087:Tribe1190 -> Dunn2008_Hydra_vulgaris_01_6087_Tribe1190
+Dunn2008:Hydractinia_echinata:35630:Tribe1190 -> Dunn2008_Hydractinia_echinata_35630_Tribe1190
+Dunn2008:Mertensiid_sp:140499:Tribe1190 -> Dunn2008_Mertensiid_sp_140499_Tribe1190
+Dunn2008:Mnemiopsis_leidyi:27923:Tribe1190 -> Dunn2008_Mnemiopsis_leidyi_27923_Tribe1190
+Dunn2008:Nematostella_vectensis:45351:Tribe1190 -> Dunn2008_Nematostella_vectensis_45351_Tribe1190
+Dunn2008:Ptychodera_flava:63121:Tribe1190 -> Dunn2008_Ptychodera_flava_63121_Tribe1190
+Dunn2008:Schmidtea_mediterranea:79327:Tribe1190 -> Dunn2008_Schmidtea_mediterranea_79327_Tribe1190
+Dunn2008:Strongylocentrotus_purpuratus:7668:Tribe1190 -> Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe1190
+Dunn2008:Themiste_lageniformis:216211:Tribe1190 -> Dunn2008_Themiste_lageniformis_216211_Tribe1190
+Dunn2008:Trichinella_spiralis:6334:Tribe1190 -> Dunn2008_Trichinella_spiralis_6334_Tribe1190
+
+                                                       Gap/Ambiguity  Composition  p-value
+   1  Dunn2008_Acropora_millepora_45264_Tribe1190              3.85%    passed     99.78%
+   2  Dunn2008_Asterina_pectinifera_7594_Tribe1190             0.96%    passed     92.93%
+   3  Dunn2008_Boophilus_microplus_6941_Tribe1190              1.92%    passed     97.15%
+   4  Dunn2008_Carinoma_mutabilis_187807_Tribe1190             2.88%    passed     99.99%
+   5  Dunn2008_Chaetopterus_variopedatus_34590_Tribe1190       1.92%    passed     97.33%
+   6  Dunn2008_Crassostrea_virginica_6565_Tribe1190            2.88%    passed     99.68%
+   7  Dunn2008_Cyanea_capillata_27804_Tribe1190                2.88%    passed     85.09%
+   8  Dunn2008_Drosophila_melanogaster_7227_Tribe1190          2.88%    passed     96.82%
+   9  Dunn2008_Echinococcus_granulosus_6210_Tribe1190         10.58%    passed     26.33%
+  10  Dunn2008_Echinoderes_horni_488522_Tribe1190              1.92%    passed     98.96%
+  11  Dunn2008_Fenneropenaeus_chinensis_139456_Tribe1190       4.81%    passed     99.70%
+  12  Dunn2008_Hydra_vulgaris_01_6087_Tribe1190               10.58%    passed     80.46%
+  13  Dunn2008_Hydractinia_echinata_35630_Tribe1190           11.54%    passed     98.60%
+  14  Dunn2008_Mertensiid_sp_140499_Tribe1190                  1.92%    passed     97.51%
+  15  Dunn2008_Mnemiopsis_leidyi_27923_Tribe1190              11.54%    passed     98.18%
+  16  Dunn2008_Nematostella_vectensis_45351_Tribe1190          3.85%    passed     99.78%
+  17  Dunn2008_Ptychodera_flava_63121_Tribe1190                2.88%    passed     96.90%
+  18  Dunn2008_Schmidtea_mediterranea_79327_Tribe1190          7.69%    passed     87.82%
+  19  Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe1190    1.92%    passed     97.39%
+  20  Dunn2008_Themiste_lageniformis_216211_Tribe1190          2.88%    passed     75.09%
+  21  Dunn2008_Trichinella_spiralis_6334_Tribe1190             3.85%    failed      0.00%
+****  TOTAL                                                    4.58%  1 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.001 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 272432)...
+WARNING: Default model LG may be under-fitting. Use option '-m TEST' to determine the best-fit model.
+
+NOTE: 0 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -2806.662
+Optimal log-likelihood: -2775.111
+Parameters optimization took 1 rounds (0.004 sec)
+Computing ML distances based on estimated model parameters... 0.027 sec
+Computing BIONJ tree...
+0.003 seconds
+Log-likelihood of BIONJ tree: -2776.466
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.209 second
+Computing log-likelihood of 98 initial trees ... 0.268 seconds
+Current best score: -2771.215
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -2767.800
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 3: -2766.421
+Iteration 10 / LogL: -2775.318 / Time: 0h:0m:0s
+Iteration 20 / LogL: -2776.382 / Time: 0h:0m:1s
+Finish initializing candidate tree set (18)
+Current best tree score: -2766.421 / CPU time: 0.979
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 29: -2765.963
+Iteration 30 / LogL: -2765.978 / Time: 0h:0m:1s (0h:0m:4s left)
+Iteration 40 / LogL: -2766.448 / Time: 0h:0m:1s (0h:0m:3s left)
+Iteration 50 / LogL: -2767.101 / Time: 0h:0m:1s (0h:0m:3s left)
+Log-likelihood cutoff on original alignment: -2789.608
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 55: -2765.455
+Iteration 60 / LogL: -2765.992 / Time: 0h:0m:2s (0h:0m:3s left)
+Iteration 70 / LogL: -2765.971 / Time: 0h:0m:2s (0h:0m:3s left)
+Iteration 80 / LogL: -2766.247 / Time: 0h:0m:3s (0h:0m:2s left)
+Iteration 90 / LogL: -2766.132 / Time: 0h:0m:3s (0h:0m:2s left)
+Iteration 100 / LogL: -2766.749 / Time: 0h:0m:3s (0h:0m:2s left)
+Log-likelihood cutoff on original alignment: -2790.494
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.998
+Iteration 110 / LogL: -2766.161 / Time: 0h:0m:4s (0h:0m:3s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 114: -2764.584
+Iteration 120 / LogL: -2766.007 / Time: 0h:0m:4s (0h:0m:3s left)
+UPDATE BEST LOG-LIKELIHOOD: -2764.582
+Iteration 130 / LogL: -2766.179 / Time: 0h:0m:4s (0h:0m:3s left)
+Iteration 140 / LogL: -2765.539 / Time: 0h:0m:5s (0h:0m:2s left)
+Iteration 150 / LogL: -2765.972 / Time: 0h:0m:5s (0h:0m:2s left)
+Log-likelihood cutoff on original alignment: -2790.494
+Iteration 160 / LogL: -2765.149 / Time: 0h:0m:5s (0h:0m:1s left)
+UPDATE BEST LOG-LIKELIHOOD: -2764.580
+Iteration 170 / LogL: -2777.023 / Time: 0h:0m:6s (0h:0m:1s left)
+Iteration 180 / LogL: -2764.612 / Time: 0h:0m:6s (0h:0m:1s left)
+Iteration 190 / LogL: -2764.586 / Time: 0h:0m:6s (0h:0m:0s left)
+Iteration 200 / LogL: -2768.541 / Time: 0h:0m:7s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -2790.494
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.992
+Iteration 210 / LogL: -2766.362 / Time: 0h:0m:7s (0h:0m:3s left)
+TREE SEARCH COMPLETED AFTER 215 ITERATIONS / Time: 0h:0m:7s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -2764.580
+Optimal log-likelihood: -2764.579
+Parameters optimization took 1 rounds (0.002 sec)
+BEST SCORE FOUND : -2764.579
+Creating bootstrap support values...
+Split supports printed to NEXUS file mafft/test/component99/DEFAULT_component99.splits.nex
+Total tree length: 7.185
+
+Total number of iterations: 215
+CPU time used for tree search: 7.655 sec (0h:0m:7s)
+Wall-clock time used for tree search: 7.671 sec (0h:0m:7s)
+Total CPU time used: 7.770 sec (0h:0m:7s)
+Total wall-clock time used: 7.792 sec (0h:0m:7s)
+
+Computing bootstrap consensus tree...
+Reading input file mafft/test/component99/DEFAULT_component99.splits.nex...
+21 taxa and 309 splits.
+Consensus tree written to mafft/test/component99/DEFAULT_component99.contree
+Reading input trees file mafft/test/component99/DEFAULT_component99.contree
+Log-likelihood of consensus tree: -2767.506
+
+Analysis results written to: 
+  IQ-TREE report:                mafft/test/component99/DEFAULT_component99.iqtree
+  Maximum-likelihood tree:       mafft/test/component99/DEFAULT_component99.treefile
+  Likelihood distances:          mafft/test/component99/DEFAULT_component99.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          mafft/test/component99/DEFAULT_component99.splits.nex
+  Consensus tree:                mafft/test/component99/DEFAULT_component99.contree
+  Screen log file:               mafft/test/component99/DEFAULT_component99.log
+
+Date and Time: Mon Aug  8 09:33:32 2022

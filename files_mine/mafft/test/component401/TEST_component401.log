@@ -1,0 +1,447 @@
+IQ-TREE version 1.5.3 for Linux 64-bit built Mar 12 2017
+Copyright (c) 2011-2016 Nguyen Lam Tung, Olga Chernomor, Arndt von Haeseler and Bui Quang Minh.
+
+Host:    r1226.uppmax.uu.se (AVX2, FMA3, 243 GB RAM)
+Command: iqtree -s mafft/test/component401/component401.mafft -m TEST -nt 1 -bb 1000 -pre mafft/test/component401/TEST_component401
+Seed:    588080 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug  8 10:37:51 2022
+Kernel:  AVX+FMA
+
+NOTE: Consider using the multicore version because your CPU has 16 cores!
+
+Reading alignment file mafft/test/component401/component401.mafft ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 40 sequences with 51 columns and 42 patterns (25 informative sites, 18 constant sites)
+WARNING: Some sequence names are changed as follows:
+Philippe2009:Acropora_millepora:45264:Gene_0081 -> Philippe2009_Acropora_millepora_45264_Gene_0081
+Philippe2009:Allomyces_macrogynus:28583:Gene_0081 -> Philippe2009_Allomyces_macrogynus_28583_Gene_0081
+Philippe2009:Amoebidium_parasiticum:4881:Gene_0081 -> Philippe2009_Amoebidium_parasiticum_4881_Gene_0081
+Philippe2009:Anoplodactylus_eroticus:488521:Gene_0081 -> Philippe2009_Anoplodactylus_eroticus_488521_Gene_0081
+Philippe2009:Aplysia_californica:6500:Gene_0081 -> Philippe2009_Aplysia_californica_6500_Gene_0081
+Philippe2009:Branchiostoma_floridae:7739:Gene_0081 -> Philippe2009_Branchiostoma_floridae_7739_Gene_0081
+Philippe2009:Capitella_teleta:283909:Gene_0081 -> Philippe2009_Capitella_teleta_283909_Gene_0081
+Philippe2009:Capsaspora_owczarzaki:192875:Gene_0081 -> Philippe2009_Capsaspora_owczarzaki_192875_Gene_0081
+Philippe2009:Ciona_savignyi:51511:Gene_0081 -> Philippe2009_Ciona_savignyi_51511_Gene_0081
+Philippe2009:Crassostrea_gigas:29159:Gene_0081 -> Philippe2009_Crassostrea_gigas_29159_Gene_0081
+Philippe2009:Cyanea_capillata:27804:Gene_0081 -> Philippe2009_Cyanea_capillata_27804_Gene_0081
+Philippe2009:Danio_rerio:7955:Gene_0081 -> Philippe2009_Danio_rerio_7955_Gene_0081
+Philippe2009:Daphnia_pulex:6669:Gene_0081 -> Philippe2009_Daphnia_pulex_6669_Gene_0081
+Philippe2009:Euperipatoides_kanangrensis:488523:Gene_0081 -> Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0081
+Philippe2009:Helobdella_robusta:6412:Gene_0081 -> Philippe2009_Helobdella_robusta_6412_Gene_0081
+Philippe2009:Hydra_magnipapillata:6087:Gene_0081 -> Philippe2009_Hydra_magnipapillata_6087_Gene_0081
+Philippe2009:Hydractinia_echinata:35630:Gene_0081 -> Philippe2009_Hydractinia_echinata_35630_Gene_0081
+Philippe2009:Ixodes_scapularis:6945:Gene_0081 -> Philippe2009_Ixodes_scapularis_6945_Gene_0081
+Philippe2009:Metridium_senile:6116:Gene_0081 -> Philippe2009_Metridium_senile_6116_Gene_0081
+Philippe2009:Mnemiopsis_leidyi:27923:Gene_0081 -> Philippe2009_Mnemiopsis_leidyi_27923_Gene_0081
+Philippe2009:Molgula_tectiformis:30286:Gene_0081 -> Philippe2009_Molgula_tectiformis_30286_Gene_0081
+Philippe2009:Monosiga_brevicollis:81824:Gene_0081 -> Philippe2009_Monosiga_brevicollis_81824_Gene_0081
+Philippe2009:Montastraea_faveolata:48498:Gene_0081 -> Philippe2009_Montastraea_faveolata_48498_Gene_0081
+Philippe2009:Nasonia_vitripennis:7425:Gene_0081 -> Philippe2009_Nasonia_vitripennis_7425_Gene_0081
+Philippe2009:Nematostella_vectensis:45351:Gene_0081 -> Philippe2009_Nematostella_vectensis_45351_Gene_0081
+Philippe2009:Pedicellina_cernua:43123:Gene_0081 -> Philippe2009_Pedicellina_cernua_43123_Gene_0081
+Philippe2009:Petromyzon_marinus:7757:Gene_0081 -> Philippe2009_Petromyzon_marinus_7757_Gene_0081
+Philippe2009:Podocoryne_carnea:6096:Gene_0081 -> Philippe2009_Podocoryne_carnea_6096_Gene_0081
+Philippe2009:Amphimedon_queenslandica:400682:Gene_0081 -> Philippe2009_Amphimedon_queenslandica_400682_Gene_0081
+Philippe2009:Rhizopus_oryzae:64495:Gene_0081 -> Philippe2009_Rhizopus_oryzae_64495_Gene_0081
+Philippe2009:Saccoglossus_kowalevskii:10224:Gene_0081 -> Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0081
+Philippe2009:Scutigera_coleoptrata:29022:Gene_0081 -> Philippe2009_Scutigera_coleoptrata_29022_Gene_0081
+Philippe2009:Sphaeroforma_arctica:72019:Gene_0081 -> Philippe2009_Sphaeroforma_arctica_72019_Gene_0081
+Philippe2009:Spizellomyces_punctatus:109760:Gene_0081 -> Philippe2009_Spizellomyces_punctatus_109760_Gene_0081
+Philippe2009:Strongylocentrotus_purpuratus:7668:Gene_0081 -> Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0081
+Philippe2009:Sycon_raphanus:56443:Gene_0081 -> Philippe2009_Sycon_raphanus_56443_Gene_0081
+Philippe2009:Trichoplax_adhaerens:10228:Gene_0081 -> Philippe2009_Trichoplax_adhaerens_10228_Gene_0081
+Philippe2009:Tubifex_tubifex:6386:Gene_0081 -> Philippe2009_Tubifex_tubifex_6386_Gene_0081
+Philippe2009:Xenoturbella_bocki:242395:Gene_0081 -> Philippe2009_Xenoturbella_bocki_242395_Gene_0081
+Philippe2009:Mertensiid_sp:140499:Gene_0081 -> Philippe2009_Mertensiid_sp_140499_Gene_0081
+
+WARNING: C is not present in alignment that may cause numerical problems
+                                                           Gap/Ambiguity  Composition  p-value
+   1  Philippe2009_Acropora_millepora_45264_Gene_0081              0.00%    passed     99.99%
+   2  Philippe2009_Allomyces_macrogynus_28583_Gene_0081            0.00%    passed      5.73%
+   3  Philippe2009_Amoebidium_parasiticum_4881_Gene_0081           0.00%    passed     98.96%
+   4  Philippe2009_Anoplodactylus_eroticus_488521_Gene_0081        0.00%    passed     99.97%
+   5  Philippe2009_Aplysia_californica_6500_Gene_0081              3.92%    passed    100.00%
+   6  Philippe2009_Branchiostoma_floridae_7739_Gene_0081           0.00%    passed    100.00%
+   7  Philippe2009_Capitella_teleta_283909_Gene_0081               0.00%    passed    100.00%
+   8  Philippe2009_Capsaspora_owczarzaki_192875_Gene_0081          0.00%    passed     88.05%
+   9  Philippe2009_Ciona_savignyi_51511_Gene_0081                  0.00%    passed     99.72%
+  10  Philippe2009_Crassostrea_gigas_29159_Gene_0081               3.92%    passed     99.27%
+  11  Philippe2009_Cyanea_capillata_27804_Gene_0081                0.00%    passed    100.00%
+  12  Philippe2009_Danio_rerio_7955_Gene_0081                      0.00%    passed    100.00%
+  13  Philippe2009_Daphnia_pulex_6669_Gene_0081                    0.00%    passed     98.09%
+  14  Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0081    0.00%    passed    100.00%
+  15  Philippe2009_Helobdella_robusta_6412_Gene_0081               0.00%    passed     99.98%
+  16  Philippe2009_Hydra_magnipapillata_6087_Gene_0081             0.00%    passed     99.99%
+  17  Philippe2009_Hydractinia_echinata_35630_Gene_0081            0.00%    passed    100.00%
+  18  Philippe2009_Ixodes_scapularis_6945_Gene_0081                0.00%    passed     99.99%
+  19  Philippe2009_Metridium_senile_6116_Gene_0081                 0.00%    passed    100.00%
+  20  Philippe2009_Mnemiopsis_leidyi_27923_Gene_0081               0.00%    passed     99.74%
+  21  Philippe2009_Molgula_tectiformis_30286_Gene_0081             0.00%    passed     99.99%
+  22  Philippe2009_Monosiga_brevicollis_81824_Gene_0081            0.00%    passed     99.50%
+  23  Philippe2009_Montastraea_faveolata_48498_Gene_0081           0.00%    passed    100.00%
+  24  Philippe2009_Nasonia_vitripennis_7425_Gene_0081              0.00%    passed    100.00%
+  25  Philippe2009_Nematostella_vectensis_45351_Gene_0081          0.00%    passed    100.00%
+  26  Philippe2009_Pedicellina_cernua_43123_Gene_0081              0.00%    passed     19.99%
+  27  Philippe2009_Petromyzon_marinus_7757_Gene_0081               0.00%    passed     99.62%
+  28  Philippe2009_Podocoryne_carnea_6096_Gene_0081                0.00%    passed    100.00%
+  29  Philippe2009_Amphimedon_queenslandica_400682_Gene_0081       0.00%    passed    100.00%
+  30  Philippe2009_Rhizopus_oryzae_64495_Gene_0081                 0.00%    passed     97.24%
+  31  Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0081        0.00%    passed     99.96%
+  32  Philippe2009_Scutigera_coleoptrata_29022_Gene_0081           0.00%    passed     99.99%
+  33  Philippe2009_Sphaeroforma_arctica_72019_Gene_0081            0.00%    passed     98.20%
+  34  Philippe2009_Spizellomyces_punctatus_109760_Gene_0081        1.96%    passed     91.99%
+  35  Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0081    0.00%    passed     99.99%
+  36  Philippe2009_Sycon_raphanus_56443_Gene_0081                  0.00%    passed     69.83%
+  37  Philippe2009_Trichoplax_adhaerens_10228_Gene_0081            0.00%    passed     99.96%
+  38  Philippe2009_Tubifex_tubifex_6386_Gene_0081                  0.00%    passed     99.06%
+  39  Philippe2009_Xenoturbella_bocki_242395_Gene_0081             0.00%    passed     99.96%
+  40  Philippe2009_Mertensiid_sp_140499_Gene_0081                  0.00%    passed     99.74%
+****  TOTAL                                                        0.25%  0 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.005 seconds
+NOTE: MODEL SELECTION REQUIRES 1 MB MEMORY!
+Testing 144 protein models (sample size: 51) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  Dayhoff       1271.597     77  2697.194     14709.194    2845.944
+  2  Dayhoff+I     1216.438     78  2588.876     14912.876    2739.559
+  3  Dayhoff+G4    1199.255     78  2554.510     14878.510    2705.193
+  4  Dayhoff+I+G4  1195.167     79  2548.335     15188.335    2700.949
+WARNING: C is not present in alignment that may cause numerical problems
+  5  Dayhoff+F     1276.225     96  2744.449     21368.449    2929.904
+WARNING: C is not present in alignment that may cause numerical problems
+  6  Dayhoff+F+I   1210.312     97  2614.623     21626.623    2802.010
+WARNING: C is not present in alignment that may cause numerical problems
+  7  Dayhoff+F+G4  1189.989     97  2573.979     21585.979    2761.366
+WARNING: C is not present in alignment that may cause numerical problems
+  8  Dayhoff+F+I+G4 1186.672     98  2569.344     21973.344    2758.663
+  9  mtMAM         1461.858     77  3077.715     15089.715    3226.466
+ 10  mtMAM+I       1403.366     78  2962.733     15286.733    3113.415
+ 11  mtMAM+G4      1335.671     78  2827.341     15151.341    2978.024
+ 12  mtMAM+I+G4    1334.540     79  2827.080     15467.080    2979.694
+WARNING: C is not present in alignment that may cause numerical problems
+ 13  mtMAM+F       1390.446     96  2972.892     21596.892    3158.348
+WARNING: C is not present in alignment that may cause numerical problems
+ 14  mtMAM+F+I     1332.440     97  2858.879     21870.879    3046.266
+WARNING: C is not present in alignment that may cause numerical problems
+ 15  mtMAM+F+G4    1260.158     97  2714.316     21726.316    2901.703
+WARNING: C is not present in alignment that may cause numerical problems
+ 16  mtMAM+F+I+G4  1261.782     98  2719.564     22123.564    2908.882
+ 17  JTT           1289.788     77  2733.576     14745.576    2882.327
+ 18  JTT+I         1233.765     78  2623.531     14947.531    2774.213
+ 19  JTT+G4        1218.386     78  2592.772     14916.772    2743.455
+ 20  JTT+I+G4      1214.395     79  2586.790     15226.790    2739.405
+WARNING: C is not present in alignment that may cause numerical problems
+ 21  JTT+F         1313.018     96  2818.035     21442.035    3003.491
+WARNING: C is not present in alignment that may cause numerical problems
+ 22  JTT+F+I       1245.885     97  2685.771     21697.771    2873.158
+WARNING: C is not present in alignment that may cause numerical problems
+ 23  JTT+F+G4      1221.344     97  2636.687     21648.687    2824.074
+WARNING: C is not present in alignment that may cause numerical problems
+ 24  JTT+F+I+G4    1219.246     98  2634.492     22038.492    2823.811
+ 25  WAG           1279.279     77  2712.558     14724.558    2861.309
+ 26  WAG+I         1222.103     78  2600.206     14924.206    2750.888
+ 27  WAG+G4        1209.679     78  2575.358     14899.358    2726.040
+ 28  WAG+I+G4      1205.498     79  2568.995     15208.995    2721.610
+WARNING: C is not present in alignment that may cause numerical problems
+ 29  WAG+F         1295.829     96  2783.657     21407.657    2969.112
+WARNING: C is not present in alignment that may cause numerical problems
+ 30  WAG+F+I       1231.170     97  2656.340     21668.340    2843.727
+WARNING: C is not present in alignment that may cause numerical problems
+ 31  WAG+F+G4      1210.601     97  2615.201     21627.201    2802.588
+WARNING: C is not present in alignment that may cause numerical problems
+ 32  WAG+F+I+G4    1208.189     98  2612.377     22016.377    2801.696
+ 33  cpREV         1276.096     77  2706.193     14718.193    2854.943
+ 34  cpREV+I       1215.298     78  2586.597     14910.597    2737.279
+ 35  cpREV+G4      1207.388     78  2570.777     14894.777    2721.459
+ 36  cpREV+I+G4    1201.777     79  2561.555     15201.555    2714.169
+WARNING: C is not present in alignment that may cause numerical problems
+ 37  cpREV+F       1316.576     96  2825.152     21449.152    3010.607
+WARNING: C is not present in alignment that may cause numerical problems
+ 38  cpREV+F+I     1242.667     97  2679.333     21691.333    2866.720
+WARNING: C is not present in alignment that may cause numerical problems
+ 39  cpREV+F+G4    1220.692     97  2635.384     21647.384    2822.771
+WARNING: C is not present in alignment that may cause numerical problems
+ 40  cpREV+F+I+G4  1213.576     98  2623.152     22027.152    2812.471
+ 41  mtREV         1375.401     77  2904.803     14916.803    3053.553
+ 42  mtREV+I       1321.723     78  2799.447     15123.447    2950.129
+ 43  mtREV+G4      1291.551     78  2739.102     15063.102    2889.784
+ 44  mtREV+I+G4    1290.871     79  2739.742     15379.742    2892.356
+WARNING: C is not present in alignment that may cause numerical problems
+ 45  mtREV+F       1335.108     96  2862.216     21486.216    3047.671
+WARNING: C is not present in alignment that may cause numerical problems
+ 46  mtREV+F+I     1278.579     97  2751.159     21763.159    2938.546
+WARNING: C is not present in alignment that may cause numerical problems
+ 47  mtREV+F+G4    1242.339     97  2678.678     21690.678    2866.065
+WARNING: C is not present in alignment that may cause numerical problems
+ 48  mtREV+F+I+G4  1239.918     98  2675.837     22079.837    2865.156
+ 49  rtREV         1269.248     77  2692.496     14704.496    2841.247
+ 50  rtREV+I       1214.731     78  2585.463     14909.463    2736.145
+ 51  rtREV+G4      1201.336     78  2558.672     14882.672    2709.354
+ 52  rtREV+I+G4    1197.477     79  2552.954     15192.954    2705.568
+WARNING: C is not present in alignment that may cause numerical problems
+ 53  rtREV+F       1282.488     96  2756.976     21380.976    2942.432
+WARNING: C is not present in alignment that may cause numerical problems
+ 54  rtREV+F+I     1218.842     97  2631.683     21643.683    2819.070
+WARNING: C is not present in alignment that may cause numerical problems
+ 55  rtREV+F+G4    1197.752     97  2589.504     21601.504    2776.891
+WARNING: C is not present in alignment that may cause numerical problems
+ 56  rtREV+F+I+G4  1195.244     98  2586.488     21990.488    2775.807
+ 57  mtART         1392.586     77  2939.172     14951.172    3087.923
+ 58  mtART+I       1330.387     78  2816.773     15140.773    2967.455
+ 59  mtART+G4      1278.257     78  2712.515     15036.515    2863.197
+ 60  mtART+I+G4    1276.193     79  2710.387     15350.387    2863.001
+WARNING: C is not present in alignment that may cause numerical problems
+ 61  mtART+F       1326.941     96  2845.882     21469.882    3031.337
+WARNING: C is not present in alignment that may cause numerical problems
+ 62  mtART+F+I     1259.651     97  2713.302     21725.302    2900.689
+WARNING: C is not present in alignment that may cause numerical problems
+ 63  mtART+F+G4    1214.932     97  2623.863     21635.863    2811.250
+WARNING: C is not present in alignment that may cause numerical problems
+ 64  mtART+F+I+G4  1214.818     98  2625.635     22029.635    2814.954
+ 65  mtZOA         1354.000     77  2862.000     14874.000    3010.751
+ 66  mtZOA+I       1301.817     78  2759.633     15083.633    2910.315
+ 67  mtZOA+G4      1261.699     78  2679.398     15003.398    2830.080
+ 68  mtZOA+I+G4    1259.684     79  2677.368     15317.368    2829.982
+WARNING: C is not present in alignment that may cause numerical problems
+ 69  mtZOA+F       1308.562     96  2809.123     21433.123    2994.578
+WARNING: C is not present in alignment that may cause numerical problems
+ 70  mtZOA+F+I     1245.361     97  2684.722     21696.722    2872.109
+WARNING: C is not present in alignment that may cause numerical problems
+ 71  mtZOA+F+G4    1215.356     97  2624.713     21636.713    2812.100
+WARNING: C is not present in alignment that may cause numerical problems
+ 72  mtZOA+F+I+G4  1215.544     98  2627.087     22031.087    2816.406
+ 73  VT            1279.649     77  2713.299     14725.299    2862.050
+ 74  VT+I          1224.955     78  2605.910     14929.910    2756.592
+ 75  VT+G4         1212.927     78  2581.854     14905.854    2732.537
+ 76  VT+I+G4       1208.861     79  2575.722     15215.722    2728.336
+WARNING: C is not present in alignment that may cause numerical problems
+ 77  VT+F          1292.790     96  2777.580     21401.580    2963.035
+WARNING: C is not present in alignment that may cause numerical problems
+ 78  VT+F+I        1230.947     97  2655.894     21667.894    2843.281
+WARNING: C is not present in alignment that may cause numerical problems
+ 79  VT+F+G4       1211.955     97  2617.911     21629.911    2805.298
+WARNING: C is not present in alignment that may cause numerical problems
+ 80  VT+F+I+G4     1209.442     98  2614.884     22018.884    2804.203
+ 81  LG            1273.757     77  2701.515     14713.515    2850.265
+ 82  LG+I          1218.786     78  2593.572     14917.572    2744.255
+ 83  LG+G4         1204.604     78  2565.209     14889.209    2715.891
+ 84  LG+I+G4       1200.665     79  2559.331     15199.331    2711.945
+WARNING: C is not present in alignment that may cause numerical problems
+ 85  LG+F          1293.796     96  2779.591     21403.591    2965.046
+WARNING: C is not present in alignment that may cause numerical problems
+ 86  LG+F+I        1228.295     97  2650.591     21662.591    2837.978
+WARNING: C is not present in alignment that may cause numerical problems
+ 87  LG+F+G4       1202.924     97  2599.848     21611.848    2787.235
+WARNING: C is not present in alignment that may cause numerical problems
+ 88  LG+F+I+G4     1200.438     98  2596.876     22000.876    2786.195
+ 89  DCMut         1271.585     77  2697.170     14709.170    2845.921
+ 90  DCMut+I       1216.486     78  2588.971     14912.971    2739.654
+ 91  DCMut+G4      1199.383     78  2554.765     14878.765    2705.447
+ 92  DCMut+I+G4    1195.291     79  2548.583     15188.583    2701.197
+WARNING: C is not present in alignment that may cause numerical problems
+ 93  DCMut+F       1276.208     96  2744.416     21368.416    2929.871
+WARNING: C is not present in alignment that may cause numerical problems
+ 94  DCMut+F+I     1210.354     97  2614.708     21626.708    2802.095
+WARNING: C is not present in alignment that may cause numerical problems
+ 95  DCMut+F+G4    1190.130     97  2574.261     21586.261    2761.648
+WARNING: C is not present in alignment that may cause numerical problems
+ 96  DCMut+F+I+G4  1186.808     98  2569.616     21973.616    2758.935
+ 97  PMB           1282.814     77  2719.628     14731.628    2868.378
+ 98  PMB+I         1226.387     78  2608.774     14932.774    2759.456
+ 99  PMB+G4        1216.196     78  2588.391     14912.391    2739.074
+100  PMB+I+G4      1211.758     79  2581.516     15221.516    2734.131
+WARNING: C is not present in alignment that may cause numerical problems
+101  PMB+F         1291.507     96  2775.015     21399.015    2960.470
+WARNING: C is not present in alignment that may cause numerical problems
+102  PMB+F+I       1229.221     97  2652.443     21664.443    2839.830
+WARNING: C is not present in alignment that may cause numerical problems
+103  PMB+F+G4      1212.984     97  2619.969     21631.969    2807.356
+WARNING: C is not present in alignment that may cause numerical problems
+104  PMB+F+I+G4    1210.015     98  2616.030     22020.030    2805.349
+105  HIVb          1334.424     77  2822.849     14834.849    2971.599
+106  HIVb+I        1262.683     78  2681.365     15005.365    2832.048
+107  HIVb+G4       1243.657     78  2643.314     14967.314    2793.996
+108  HIVb+I+G4     1239.043     79  2636.086     15276.086    2788.700
+WARNING: C is not present in alignment that may cause numerical problems
+109  HIVb+F        1383.956     96  2959.913     21583.913    3145.368
+WARNING: C is not present in alignment that may cause numerical problems
+110  HIVb+F+I      1296.264     97  2786.529     21798.529    2973.916
+WARNING: C is not present in alignment that may cause numerical problems
+111  HIVb+F+G4     1254.922     97  2703.845     21715.845    2891.232
+WARNING: C is not present in alignment that may cause numerical problems
+112  HIVb+F+I+G4   1251.988     98  2699.976     22103.976    2889.295
+113  HIVw          1385.052     77  2924.104     14936.104    3072.855
+114  HIVw+I        1304.228     78  2764.456     15088.456    2915.138
+115  HIVw+G4       1276.485     78  2708.971     15032.971    2859.653
+116  HIVw+I+G4     1272.953     79  2703.906     15343.906    2856.520
+WARNING: C is not present in alignment that may cause numerical problems
+117  HIVw+F        1430.533     96  3053.065     21677.065    3238.520
+WARNING: C is not present in alignment that may cause numerical problems
+118  HIVw+F+I      1329.988     97  2853.977     21865.977    3041.364
+WARNING: C is not present in alignment that may cause numerical problems
+119  HIVw+F+G4     1286.447     97  2766.895     21778.895    2954.282
+WARNING: C is not present in alignment that may cause numerical problems
+120  HIVw+F+I+G4   1282.366     98  2760.732     22164.732    2950.051
+121  JTTDCMut      1291.115     77  2736.230     14748.230    2884.980
+122  JTTDCMut+I    1234.984     78  2625.968     14949.968    2776.650
+123  JTTDCMut+G4   1219.103     78  2594.205     14918.205    2744.888
+124  JTTDCMut+I+G4 1215.222     79  2588.444     15228.444    2741.058
+WARNING: C is not present in alignment that may cause numerical problems
+125  JTTDCMut+F    1314.684     96  2821.368     21445.368    3006.823
+WARNING: C is not present in alignment that may cause numerical problems
+126  JTTDCMut+F+I  1247.281     97  2688.562     21700.562    2875.949
+WARNING: C is not present in alignment that may cause numerical problems
+127  JTTDCMut+F+G4 1222.208     97  2638.416     21650.416    2825.803
+WARNING: C is not present in alignment that may cause numerical problems
+128  JTTDCMut+F+I+G4 1220.053     98  2636.105     22040.105    2825.424
+129  FLU           1303.677     77  2761.353     14773.353    2910.104
+130  FLU+I         1233.410     78  2622.820     14946.820    2773.502
+131  FLU+G4        1221.318     78  2598.635     14922.635    2749.318
+132  FLU+I+G4      1216.213     79  2590.427     15230.427    2743.041
+WARNING: C is not present in alignment that may cause numerical problems
+133  FLU+F         1371.561     96  2935.121     21559.121    3120.577
+WARNING: C is not present in alignment that may cause numerical problems
+134  FLU+F+I       1276.940     97  2747.880     21759.880    2935.268
+WARNING: C is not present in alignment that may cause numerical problems
+135  FLU+F+G4      1244.646     97  2683.291     21695.291    2870.679
+WARNING: C is not present in alignment that may cause numerical problems
+136  FLU+F+I+G4    1238.475     98  2672.949     22076.949    2862.268
+137  Blosum62      1279.635     77  2713.270     14725.270    2862.021
+138  Blosum62+I    1225.076     78  2606.152     14930.152    2756.834
+139  Blosum62+G4   1214.421     78  2584.841     14908.841    2735.524
+140  Blosum62+I+G4 1210.196     79  2578.393     15218.393    2731.007
+WARNING: C is not present in alignment that may cause numerical problems
+141  Blosum62+F    1288.248     96  2768.496     21392.496    2953.951
+WARNING: C is not present in alignment that may cause numerical problems
+142  Blosum62+F+I  1227.568     97  2649.137     21661.137    2836.524
+WARNING: C is not present in alignment that may cause numerical problems
+143  Blosum62+F+G4 1210.472     97  2614.945     21626.945    2802.332
+WARNING: C is not present in alignment that may cause numerical problems
+144  Blosum62+F+I+G4 1207.720     98  2611.439     22015.439    2800.758
+Akaike Information Criterion:           Dayhoff+I+G4
+Corrected Akaike Information Criterion: rtREV
+Bayesian Information Criterion:         Dayhoff+I+G4
+Best-fit model: Dayhoff+I+G4 chosen according to BIC
+CPU time for model selection: 7.483 seconds.
+Generating 1000 samples for ultrafast bootstrap (seed: 588080)...
+
+NOTE: 1 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+
+Testing with init. pinv = 0.000 / init. alpha = 1.000
+Est. p_inv: 0.000 / Est. gamma shape: 0.566 / Logl: -1199.262
+
+Testing with init. pinv = 0.039 / init. alpha = 1.000
+Est. p_inv: 0.292 / Est. gamma shape: 1.507 / Logl: -1195.181
+
+Testing with init. pinv = 0.078 / init. alpha = 1.000
+Est. p_inv: 0.292 / Est. gamma shape: 1.503 / Logl: -1195.183
+
+Testing with init. pinv = 0.118 / init. alpha = 1.000
+Est. p_inv: 0.291 / Est. gamma shape: 1.501 / Logl: -1195.183
+
+Testing with init. pinv = 0.157 / init. alpha = 1.000
+Est. p_inv: 0.292 / Est. gamma shape: 1.511 / Logl: -1195.178
+
+Testing with init. pinv = 0.196 / init. alpha = 1.000
+Est. p_inv: 0.292 / Est. gamma shape: 1.504 / Logl: -1195.183
+
+Testing with init. pinv = 0.235 / init. alpha = 1.000
+Est. p_inv: 0.292 / Est. gamma shape: 1.506 / Logl: -1195.182
+
+Testing with init. pinv = 0.275 / init. alpha = 1.000
+Est. p_inv: 0.293 / Est. gamma shape: 1.518 / Logl: -1195.177
+
+Testing with init. pinv = 0.314 / init. alpha = 1.000
+Est. p_inv: 0.300 / Est. gamma shape: 1.568 / Logl: -1195.166
+
+Testing with init. pinv = 0.353 / init. alpha = 1.000
+Est. p_inv: 0.303 / Est. gamma shape: 1.590 / Logl: -1195.167
+
+Best p_inv: 0.300 / best gamma shape: 1.568 / Logl: -1195.166
+Parameters optimization took 1.282 sec
+Computing ML distances based on estimated model parameters... 0.459 sec
+Computing BIONJ tree...
+0.004 seconds
+Log-likelihood of BIONJ tree: -1189.032
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.497 second
+Computing log-likelihood of 98 initial trees ... 0.939 seconds
+Current best score: -1173.151
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -1168.716
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -1167.068
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 4: -1166.736
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 5: -1155.611
+Iteration 10 / LogL: -1166.708 / Time: 0h:0m:12s
+Iteration 20 / LogL: -1172.279 / Time: 0h:0m:13s
+Finish initializing candidate tree set (20)
+Current best tree score: -1155.611 / CPU time: 4.048
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 28: -1155.222
+Iteration 30 / LogL: -1155.632 / Time: 0h:0m:15s (0h:0m:25s left)
+Iteration 40 / LogL: -1155.249 / Time: 0h:0m:16s (0h:0m:20s left)
+Iteration 50 / LogL: -1155.222 / Time: 0h:0m:17s (0h:0m:16s left)
+Log-likelihood cutoff on original alignment: -1188.182
+UPDATE BEST LOG-LIKELIHOOD: -1155.222
+Iteration 60 / LogL: -1155.222 / Time: 0h:0m:19s (0h:0m:14s left)
+Iteration 70 / LogL: -1155.222 / Time: 0h:0m:21s (0h:0m:11s left)
+Iteration 80 / LogL: -1155.272 / Time: 0h:0m:22s (0h:0m:9s left)
+Iteration 90 / LogL: -1155.272 / Time: 0h:0m:24s (0h:0m:7s left)
+Iteration 100 / LogL: -1155.249 / Time: 0h:0m:26s (0h:0m:5s left)
+Log-likelihood cutoff on original alignment: -1188.182
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.997
+Iteration 110 / LogL: -1155.302 / Time: 0h:0m:27s (0h:0m:16s left)
+Iteration 120 / LogL: -1155.272 / Time: 0h:0m:29s (0h:0m:14s left)
+TREE SEARCH COMPLETED AFTER 129 ITERATIONS / Time: 0h:0m:30s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -1155.222
+Optimal log-likelihood: -1155.222
+Proportion of invariable sites: 0.299
+Gamma shape alpha: 1.614
+Parameters optimization took 1 rounds (0.017 sec)
+BEST SCORE FOUND : -1155.222
+Creating bootstrap support values...
+Split supports printed to NEXUS file mafft/test/component401/TEST_component401.splits.nex
+Total tree length: 5.003
+
+Total number of iterations: 129
+CPU time used for tree search: 21.678 sec (0h:0m:21s)
+Wall-clock time used for tree search: 21.695 sec (0h:0m:21s)
+Total CPU time used: 31.069 sec (0h:0m:31s)
+Total wall-clock time used: 31.103 sec (0h:0m:31s)
+
+Computing bootstrap consensus tree...
+Reading input file mafft/test/component401/TEST_component401.splits.nex...
+40 taxa and 670 splits.
+Consensus tree written to mafft/test/component401/TEST_component401.contree
+Reading input trees file mafft/test/component401/TEST_component401.contree
+Log-likelihood of consensus tree: -1156.538
+
+Analysis results written to: 
+  IQ-TREE report:                mafft/test/component401/TEST_component401.iqtree
+  Maximum-likelihood tree:       mafft/test/component401/TEST_component401.treefile
+  Likelihood distances:          mafft/test/component401/TEST_component401.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          mafft/test/component401/TEST_component401.splits.nex
+  Consensus tree:                mafft/test/component401/TEST_component401.contree
+  Screen log file:               mafft/test/component401/TEST_component401.log
+
+Date and Time: Mon Aug  8 10:38:22 2022
