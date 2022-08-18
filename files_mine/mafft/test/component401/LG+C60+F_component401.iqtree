@@ -1,0 +1,345 @@
+IQ-TREE 1.5.3 built Mar 12 2017
+
+Input file name: mafft/test/component401/component401.mafft
+Type of analysis: tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 191846
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh (2015)
+IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol. Biol. Evol., 32:268-274.
+http://dx.doi.org/10.1093/molbev/msu300
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Bui Quang Minh, Minh Anh Thi Nguyen, and Arndt von Haeseler (2013) Ultrafast
+approximation for phylogenetic bootstrap. Mol. Biol. Evol., 30:1188-1195.
+http://dx.doi.org/10.1093/molbev/mst024
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 40 sequences with 51 amino-acid sites
+Number of constant sites: 18 (= 35.2941% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 18 (= 35.2941% of all sites)
+Number of distinct site patterns: 42
+
+SUBSTITUTION PROCESS
+--------------------
+
+Mixture model of substitution: MIX{LG+F+F,LG+FC60pi1,LG+FC60pi2,LG+FC60pi3,LG+FC60pi4,LG+FC60pi5,LG+FC60pi6,LG+FC60pi7,LG+FC60pi8,LG+FC60pi9,LG+FC60pi10,LG+FC60pi11,LG+FC60pi12,LG+FC60pi13,LG+FC60pi14,LG+FC60pi15,LG+FC60pi16,LG+FC60pi17,LG+FC60pi18,LG+FC60pi19,LG+FC60pi20,LG+FC60pi21,LG+FC60pi22,LG+FC60pi23,LG+FC60pi24,LG+FC60pi25,LG+FC60pi26,LG+FC60pi27,LG+FC60pi28,LG+FC60pi29,LG+FC60pi30,LG+FC60pi31,LG+FC60pi32,LG+FC60pi33,LG+FC60pi34,LG+FC60pi35,LG+FC60pi36,LG+FC60pi37,LG+FC60pi38,LG+FC60pi39,LG+FC60pi40,LG+FC60pi41,LG+FC60pi42,LG+FC60pi43,LG+FC60pi44,LG+FC60pi45,LG+FC60pi46,LG+FC60pi47,LG+FC60pi48,LG+FC60pi49,LG+FC60pi50,LG+FC60pi51,LG+FC60pi52,LG+FC60pi53,LG+FC60pi54,LG+FC60pi55,LG+FC60pi56,LG+FC60pi57,LG+FC60pi58,LG+FC60pi59,LG+FC60pi60}+G4
+
+  No  Component      Rate    Weight   Parameters
+   1  LG+F          1.0000   0.1538   LG+F
+   2  LG+FC60pi1    1.0000   0.0000   LG+FC60pi1
+   3  LG+FC60pi2    1.0000   0.1677   LG+FC60pi2
+   4  LG+FC60pi3    1.0000   0.0000   LG+FC60pi3
+   5  LG+FC60pi4    1.0000   0.0000   LG+FC60pi4
+   6  LG+FC60pi5    1.0000   0.0000   LG+FC60pi5
+   7  LG+FC60pi6    1.0000   0.0000   LG+FC60pi6
+   8  LG+FC60pi7    1.0000   0.0000   LG+FC60pi7
+   9  LG+FC60pi8    1.0000   0.0000   LG+FC60pi8
+  10  LG+FC60pi9    1.0000   0.0000   LG+FC60pi9
+  11  LG+FC60pi10   1.0000   0.0000   LG+FC60pi10
+  12  LG+FC60pi11   1.0000   0.0000   LG+FC60pi11
+  13  LG+FC60pi12   1.0000   0.0549   LG+FC60pi12
+  14  LG+FC60pi13   1.0000   0.0000   LG+FC60pi13
+  15  LG+FC60pi14   1.0000   0.0000   LG+FC60pi14
+  16  LG+FC60pi15   1.0000   0.0000   LG+FC60pi15
+  17  LG+FC60pi16   1.0000   0.0000   LG+FC60pi16
+  18  LG+FC60pi17   1.0000   0.0000   LG+FC60pi17
+  19  LG+FC60pi18   1.0000   0.0283   LG+FC60pi18
+  20  LG+FC60pi19   1.0000   0.0000   LG+FC60pi19
+  21  LG+FC60pi20   1.0000   0.0225   LG+FC60pi20
+  22  LG+FC60pi21   1.0000   0.0340   LG+FC60pi21
+  23  LG+FC60pi22   1.0000   0.1248   LG+FC60pi22
+  24  LG+FC60pi23   1.0000   0.0000   LG+FC60pi23
+  25  LG+FC60pi24   1.0000   0.0000   LG+FC60pi24
+  26  LG+FC60pi25   1.0000   0.0373   LG+FC60pi25
+  27  LG+FC60pi26   1.0000   0.0000   LG+FC60pi26
+  28  LG+FC60pi27   1.0000   0.0000   LG+FC60pi27
+  29  LG+FC60pi28   1.0000   0.0000   LG+FC60pi28
+  30  LG+FC60pi29   1.0000   0.0000   LG+FC60pi29
+  31  LG+FC60pi30   1.0000   0.0000   LG+FC60pi30
+  32  LG+FC60pi31   1.0000   0.0438   LG+FC60pi31
+  33  LG+FC60pi32   1.0000   0.0000   LG+FC60pi32
+  34  LG+FC60pi33   1.0000   0.1118   LG+FC60pi33
+  35  LG+FC60pi34   1.0000   0.0000   LG+FC60pi34
+  36  LG+FC60pi35   1.0000   0.0220   LG+FC60pi35
+  37  LG+FC60pi36   1.0000   0.0438   LG+FC60pi36
+  38  LG+FC60pi37   1.0000   0.0000   LG+FC60pi37
+  39  LG+FC60pi38   1.0000   0.0000   LG+FC60pi38
+  40  LG+FC60pi39   1.0000   0.0000   LG+FC60pi39
+  41  LG+FC60pi40   1.0000   0.0000   LG+FC60pi40
+  42  LG+FC60pi41   1.0000   0.0000   LG+FC60pi41
+  43  LG+FC60pi42   1.0000   0.0000   LG+FC60pi42
+  44  LG+FC60pi43   1.0000   0.0019   LG+FC60pi43
+  45  LG+FC60pi44   1.0000   0.0000   LG+FC60pi44
+  46  LG+FC60pi45   1.0000   0.0000   LG+FC60pi45
+  47  LG+FC60pi46   1.0000   0.0206   LG+FC60pi46
+  48  LG+FC60pi47   1.0000   0.0000   LG+FC60pi47
+  49  LG+FC60pi48   1.0000   0.0268   LG+FC60pi48
+  50  LG+FC60pi49   1.0000   0.0000   LG+FC60pi49
+  51  LG+FC60pi50   1.0000   0.0000   LG+FC60pi50
+  52  LG+FC60pi51   1.0000   0.0000   LG+FC60pi51
+  53  LG+FC60pi52   1.0000   0.0000   LG+FC60pi52
+  54  LG+FC60pi53   1.0000   0.0483   LG+FC60pi53
+  55  LG+FC60pi54   1.0000   0.0000   LG+FC60pi54
+  56  LG+FC60pi55   1.0000   0.0000   LG+FC60pi55
+  57  LG+FC60pi56   1.0000   0.0000   LG+FC60pi56
+  58  LG+FC60pi57   1.0000   0.0000   LG+FC60pi57
+  59  LG+FC60pi58   1.0000   0.0000   LG+FC60pi58
+  60  LG+FC60pi59   1.0000   0.0577   LG+FC60pi59
+  61  LG+FC60pi60   1.0000   0.0000   LG+FC60pi60
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 0.4167
+
+ Category  Relative_rate  Proportion
+  1         0.0192         0.2500
+  2         0.1941         0.2500
+  3         0.7487         0.2500
+  4         3.0380         0.2500
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -1069.6631 (s.e. 128.2946)
+Unconstrained log-likelihood (without tree): -184.1582
+Number of free parameters (#branches + #model parameters): 157
+Akaike information criterion (AIC) score: 2453.3262
+Corrected Akaike information criterion (AICc) score: 52065.3262
+Bayesian information criterion (BIC) score: 2756.6228
+
+**************************** WARNING ****************************
+Number of parameters (K, model parameters and branch lengths): 157
+Sample size (n, alignment length): 51
+
+Given that K>=n, the parameter estimates might be inaccurate.
+Thus, phylogenetic estimates should be interpreted with caution.
+
+Ideally, it is desirable that n >> K. When selecting optimal models,
+1. use AIC or BIC if n > 40K;
+2. use AICc or BIC if 40K >= n > K;
+3. be extremely cautious if n <= K
+
+To improve the situation (3), consider the following options:
+  1. Increase the sample size (n)
+  2. Decrease the number of parameters (K) to be estimated. If
+     possible:
+     a. Remove the least important sequences from the alignment
+     b. Specify some of the parameter values for the substitution
+        model (e.g., the nucleotide or amino acid frequencies)
+     c. Specify some of the parameter values for the rates-across-
+        sites model (e.g., the shape parameter for the discrete
+        Gamma distribution, the proportion of invariable sites, or
+        the rates of change for different rate categories under
+        the FreeRate model)
+
+Reference:
+Burnham KR, Anderson DR (2002). Model Selection and Multimodel
+Inference: A Practical Information-Theoretic Approach. Springer,
+New York.
+************************ END OF WARNING ***********************
+
+Total tree length (sum of branch lengths): 7.7631
+Sum of internal branch lengths: 2.2100 (28.4685% of tree length)
+
+WARNING: 8 near-zero internal branches (<0.0196) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Philippe2009_Acropora_millepora_45264_Gene_0081' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++**Philippe2009_Acropora_millepora_45264_Gene_0081
+|
+|           +-----Philippe2009_Allomyces_macrogynus_28583_Gene_0081
++-----------| (99)
+|           +--Philippe2009_Spizellomyces_punctatus_109760_Gene_0081
+|
+|              +--------Philippe2009_Amoebidium_parasiticum_4881_Gene_0081
+|           +**| (52)
+|           |  +--------Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0081
+|        +--| (37)
+|        |  |             +------Philippe2009_Anoplodactylus_eroticus_488521_Gene_0081
+|        |  |        +----| (37)
+|        |  |        |    |                           +----Philippe2009_Aplysia_californica_6500_Gene_0081
+|        |  |        |    |                        +**| (54)
+|        |  |        |    |                        |  +----Philippe2009_Crassostrea_gigas_29159_Gene_0081
+|        |  |        |    |                     +--| (87)
+|        |  |        |    |                     |  +------------------------Philippe2009_Pedicellina_cernua_43123_Gene_0081
+|        |  |        |    |                  +**| (39)
+|        |  |        |    |                  |  |   +**Philippe2009_Helobdella_robusta_6412_Gene_0081
+|        |  |        |    |                  |  +---| (98)
+|        |  |        |    |                  |      +---Philippe2009_Tubifex_tubifex_6386_Gene_0081
+|        |  |        |    |               +--| (41)
+|        |  |        |    |               |  +---Philippe2009_Xenoturbella_bocki_242395_Gene_0081
+|        |  |        |    |            +**| (20)
+|        |  |        |    |            |  |  +**Philippe2009_Branchiostoma_floridae_7739_Gene_0081
+|        |  |        |    |            |  +--| (45)
+|        |  |        |    |            |     |     +-----Philippe2009_Ciona_savignyi_51511_Gene_0081
+|        |  |        |    |            |     +-----| (50)
+|        |  |        |    |            |           |        +**Philippe2009_Danio_rerio_7955_Gene_0081
+|        |  |        |    |            |           |  +-----| (76)
+|        |  |        |    |            |           |  |     +--Philippe2009_Petromyzon_marinus_7757_Gene_0081
+|        |  |        |    |            |           +**| (17)
+|        |  |        |    |            |              +-----Philippe2009_Molgula_tectiformis_30286_Gene_0081
+|        |  |        |    |         +--| (52)
+|        |  |        |    |         |  +---Philippe2009_Capitella_teleta_283909_Gene_0081
+|        |  |        |    |      +**| (25)
+|        |  |        |    |      |  |  +----------------Philippe2009_Daphnia_pulex_6669_Gene_0081
+|        |  |        |    |      |  +--| (81)
+|        |  |        |    |      |     +**Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0081
+|        |  |        |    |  +---| (46)
+|        |  |        |    |  |   |  +-----Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0081
+|        |  |        |    |  |   +--| (74)
+|        |  |        |    |  |      |  +**Philippe2009_Ixodes_scapularis_6945_Gene_0081
+|        |  |        |    |  |      +**| (68)
+|        |  |        |    |  |         +**Philippe2009_Scutigera_coleoptrata_29022_Gene_0081
+|        |  |        |    +--| (36)
+|        |  |        |       +**Philippe2009_Nasonia_vitripennis_7425_Gene_0081
+|        |  |     +**| (18)
+|        |  |     |  |  +------Philippe2009_Hydra_magnipapillata_6087_Gene_0081
+|        |  |     |  +--| (27)
+|        |  |     |     |     +--Philippe2009_Hydractinia_echinata_35630_Gene_0081
+|        |  |     |     |  +--| (96)
+|        |  |     |     |  |  +**Philippe2009_Podocoryne_carnea_6096_Gene_0081
+|        |  |     |     +--| (37)
+|        |  |     |        |                         +**Philippe2009_Mnemiopsis_leidyi_27923_Gene_0081
+|        |  |     |        |     +-------------------| (100)
+|        |  |     |        |     |                   +**Philippe2009_Mertensiid_sp_140499_Gene_0081
+|        |  |     |        +-----| (70)
+|        |  |     |              +--Philippe2009_Trichoplax_adhaerens_10228_Gene_0081
+|        |  |  +--| (29)
+|        |  |  |  +-----------------------Philippe2009_Sphaeroforma_arctica_72019_Gene_0081
+|        |  +--| (39)
+|        |     |         +---Philippe2009_Capsaspora_owczarzaki_192875_Gene_0081
+|        |     +---------| (88)
+|        |               +---------------------------------------Philippe2009_Rhizopus_oryzae_64495_Gene_0081
+|     +--| (43)
+|     |  |     +**Philippe2009_Metridium_senile_6116_Gene_0081
+|     |  |  +--| (97)
+|     |  |  |  +--Philippe2009_Nematostella_vectensis_45351_Gene_0081
+|     |  +--| (81)
+|     |     +------------------------------Philippe2009_Monosiga_brevicollis_81824_Gene_0081
+|  +--| (72)
+|  |  |      +--Philippe2009_Cyanea_capillata_27804_Gene_0081
+|  |  +------| (68)
+|  |         |     +-----Philippe2009_Amphimedon_queenslandica_400682_Gene_0081
+|  |         +-----| (80)
+|  |               +-------------Philippe2009_Sycon_raphanus_56443_Gene_0081
++--| (77)
+   +**Philippe2009_Montastraea_faveolata_48498_Gene_0081
+
+Tree in newick format:
+
+(Philippe2009_Acropora_millepora_45264_Gene_0081:0.0000023330,(Philippe2009_Allomyces_macrogynus_28583_Gene_0081:0.1294312471,Philippe2009_Spizellomyces_punctatus_109760_Gene_0081:0.0267479296)99:0.251130,(((((Philippe2009_Amoebidium_parasiticum_4881_Gene_0081:0.1898502450,Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0081:0.1846255186)52:0.014439,((((Philippe2009_Anoplodactylus_eroticus_488521_Gene_0081:0.1420664283,(((((((((Philippe2009_Aplysia_californica_6500_Gene_0081:0.1087988315,Philippe2009_Crassostrea_gigas_29159_Gene_0081:0.0981590506)54:0.000003,Philippe2009_Pedicellina_cernua_43123_Gene_0081:0.4952304854)87:0.072646,(Philippe2009_Helobdella_robusta_6412_Gene_0081:0.0000023854,Philippe2009_Tubifex_tubifex_6386_Gene_0081:0.0784321763)98:0.082749)39:0.000002,Philippe2009_Xenoturbella_bocki_242395_Gene_0081:0.0833104700)41:0.029153,(Philippe2009_Branchiostoma_floridae_7739_Gene_0081:0.0000020019,(Philippe2009_Ciona_savignyi_51511_Gene_0081:0.1234530083,((Philippe2009_Danio_rerio_7955_Gene_0081:0.0000025024,Philippe2009_Petromyzon_marinus_7757_Gene_0081:0.0771619680)76:0.130721,Philippe2009_Molgula_tectiformis_30286_Gene_0081:0.1258281443)17:0.000003)50:0.121561)45:0.058464)20:0.000002,Philippe2009_Capitella_teleta_283909_Gene_0081:0.0818877171)52:0.063406,(Philippe2009_Daphnia_pulex_6669_Gene_0081:0.3490194036,Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0081:0.0000027198)81:0.029277)25:0.000003,(Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0081:0.1203693777,(Philippe2009_Ixodes_scapularis_6945_Gene_0081:0.0000022092,Philippe2009_Scutigera_coleoptrata_29022_Gene_0081:0.0000022092)68:0.000003)74:0.053997)46:0.087586,Philippe2009_Nasonia_vitripennis_7425_Gene_0081:0.0000024679)36:0.027621)37:0.108424,(Philippe2009_Hydra_magnipapillata_6087_Gene_0081:0.1492250765,((Philippe2009_Hydractinia_echinata_35630_Gene_0081:0.0293767152,Philippe2009_Podocoryne_carnea_6096_Gene_0081:0.0000020097)96:0.064053,((Philippe2009_Mnemiopsis_leidyi_27923_Gene_0081:0.0000022092,Philippe2009_Mertensiid_sp_140499_Gene_0081:0.0000022092)100:0.410912,Philippe2009_Trichoplax_adhaerens_10228_Gene_0081:0.0401330063)70:0.122259)37:0.041473)27:0.069027)18:0.000002,Philippe2009_Sphaeroforma_arctica_72019_Gene_0081:0.4834081022)29:0.033763,(Philippe2009_Capsaspora_owczarzaki_192875_Gene_0081:0.0878208123,Philippe2009_Rhizopus_oryzae_64495_Gene_0081:0.7962488419)88:0.201167)39:0.047449)37:0.035621,((Philippe2009_Metridium_senile_6116_Gene_0081:0.0000026955,Philippe2009_Nematostella_vectensis_45351_Gene_0081:0.0516146571)97:0.074594,Philippe2009_Monosiga_brevicollis_81824_Gene_0081:0.6139640965)81:0.021854)43:0.034879,(Philippe2009_Cyanea_capillata_27804_Gene_0081:0.0772182681,(Philippe2009_Amphimedon_queenslandica_400682_Gene_0081:0.1177538735,Philippe2009_Sycon_raphanus_56443_Gene_0081:0.2810031779)80:0.130124)68:0.142562)72:0.035238,Philippe2009_Montastraea_faveolata_48498_Gene_0081:0.0000027217)77:0.024792);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -1069.672262
+Robinson-Foulds distance between ML tree and consensus tree: 4
+
+Branches with bootstrap support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--Philippe2009_Acropora_millepora_45264_Gene_0081
+|
+|           +-----Philippe2009_Allomyces_macrogynus_28583_Gene_0081
++-----------| (99)
+|           +--Philippe2009_Spizellomyces_punctatus_109760_Gene_0081
+|
+|              +--------Philippe2009_Amoebidium_parasiticum_4881_Gene_0081
+|           +--| (52)
+|           |  +--------Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0081
+|        +--| (37)
+|        |  |             +------Philippe2009_Anoplodactylus_eroticus_488521_Gene_0081
+|        |  |        +----| (37)
+|        |  |        |    |                           +----Philippe2009_Aplysia_californica_6500_Gene_0081
+|        |  |        |    |                        +**| (54)
+|        |  |        |    |                        |  +----Philippe2009_Crassostrea_gigas_29159_Gene_0081
+|        |  |        |    |                     +--| (87)
+|        |  |        |    |                     |  +------------------------Philippe2009_Pedicellina_cernua_43123_Gene_0081
+|        |  |        |    |                  +**| (39)
+|        |  |        |    |                  |  |   +--Philippe2009_Helobdella_robusta_6412_Gene_0081
+|        |  |        |    |                  |  +---| (98)
+|        |  |        |    |                  |      +---Philippe2009_Tubifex_tubifex_6386_Gene_0081
+|        |  |        |    |               +--| (41)
+|        |  |        |    |               |  +---Philippe2009_Xenoturbella_bocki_242395_Gene_0081
+|        |  |        |    |            +**| (24)
+|        |  |        |    |            |  +---Philippe2009_Capitella_teleta_283909_Gene_0081
+|        |  |        |    |         +--| (52)
+|        |  |        |    |         |  |  +--Philippe2009_Branchiostoma_floridae_7739_Gene_0081
+|        |  |        |    |         |  +--| (45)
+|        |  |        |    |         |     |      +-----Philippe2009_Ciona_savignyi_51511_Gene_0081
+|        |  |        |    |         |     |   +--| (64)
+|        |  |        |    |         |     |   |  +------Philippe2009_Molgula_tectiformis_30286_Gene_0081
+|        |  |        |    |         |     +---| (50)
+|        |  |        |    |         |         |      +--Philippe2009_Danio_rerio_7955_Gene_0081
+|        |  |        |    |         |         +------| (76)
+|        |  |        |    |         |                +--Philippe2009_Petromyzon_marinus_7757_Gene_0081
+|        |  |        |    |      +**| (25)
+|        |  |        |    |      |  |  +----------------Philippe2009_Daphnia_pulex_6669_Gene_0081
+|        |  |        |    |      |  +--| (81)
+|        |  |        |    |      |     +--Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0081
+|        |  |        |    |  +---| (46)
+|        |  |        |    |  |   |  +-----Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0081
+|        |  |        |    |  |   +--| (74)
+|        |  |        |    |  |      |  +--Philippe2009_Ixodes_scapularis_6945_Gene_0081
+|        |  |        |    |  |      +**| (68)
+|        |  |        |    |  |         +--Philippe2009_Scutigera_coleoptrata_29022_Gene_0081
+|        |  |        |    +--| (36)
+|        |  |        |       +--Philippe2009_Nasonia_vitripennis_7425_Gene_0081
+|        |  |     +**| (18)
+|        |  |     |  |  +------Philippe2009_Hydra_magnipapillata_6087_Gene_0081
+|        |  |     |  +--| (27)
+|        |  |     |     |     +--Philippe2009_Hydractinia_echinata_35630_Gene_0081
+|        |  |     |     |  +--| (96)
+|        |  |     |     |  |  +--Philippe2009_Podocoryne_carnea_6096_Gene_0081
+|        |  |     |     +--| (37)
+|        |  |     |        |                         +--Philippe2009_Mnemiopsis_leidyi_27923_Gene_0081
+|        |  |     |        |     +-------------------| (100)
+|        |  |     |        |     |                   +--Philippe2009_Mertensiid_sp_140499_Gene_0081
+|        |  |     |        +-----| (70)
+|        |  |     |              +--Philippe2009_Trichoplax_adhaerens_10228_Gene_0081
+|        |  |  +--| (29)
+|        |  |  |  +-----------------------Philippe2009_Sphaeroforma_arctica_72019_Gene_0081
+|        |  +--| (39)
+|        |     |         +---Philippe2009_Capsaspora_owczarzaki_192875_Gene_0081
+|        |     +---------| (88)
+|        |               +---------------------------------------Philippe2009_Rhizopus_oryzae_64495_Gene_0081
+|     +--| (43)
+|     |  |     +--Philippe2009_Metridium_senile_6116_Gene_0081
+|     |  |  +--| (97)
+|     |  |  |  +--Philippe2009_Nematostella_vectensis_45351_Gene_0081
+|     |  +--| (81)
+|     |     +------------------------------Philippe2009_Monosiga_brevicollis_81824_Gene_0081
+|  +--| (72)
+|  |  |      +--Philippe2009_Cyanea_capillata_27804_Gene_0081
+|  |  +------| (68)
+|  |         |     +-----Philippe2009_Amphimedon_queenslandica_400682_Gene_0081
+|  |         +-----| (80)
+|  |               +-------------Philippe2009_Sycon_raphanus_56443_Gene_0081
++--| (77)
+   +--Philippe2009_Montastraea_faveolata_48498_Gene_0081
+
+
+Consensus tree in newick format: 
+
+(Philippe2009_Acropora_millepora_45264_Gene_0081:0.0000022092,(Philippe2009_Allomyces_macrogynus_28583_Gene_0081:0.1299299101,Philippe2009_Spizellomyces_punctatus_109760_Gene_0081:0.0272390965)99:0.2520980000,(((((Philippe2009_Amoebidium_parasiticum_4881_Gene_0081:0.1908427256,Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0081:0.1855599177)52:0.0144150000,((((Philippe2009_Anoplodactylus_eroticus_488521_Gene_0081:0.1421460565,(((((((((Philippe2009_Aplysia_californica_6500_Gene_0081:0.1093432511,Philippe2009_Crassostrea_gigas_29159_Gene_0081:0.0986141530)54:0.0000020000,Philippe2009_Pedicellina_cernua_43123_Gene_0081:0.4995138903)87:0.0728810000,(Philippe2009_Helobdella_robusta_6412_Gene_0081:0.0000022092,Philippe2009_Tubifex_tubifex_6386_Gene_0081:0.0787441924)98:0.0830870000)39:0.0000020000,Philippe2009_Xenoturbella_bocki_242395_Gene_0081:0.0836017983)41:0.0292800000,Philippe2009_Capitella_teleta_283909_Gene_0081:0.0822210073)24:0.0000020000,(Philippe2009_Branchiostoma_floridae_7739_Gene_0081:0.0000026169,((Philippe2009_Ciona_savignyi_51511_Gene_0081:0.1370521761,Philippe2009_Molgula_tectiformis_30286_Gene_0081:0.1478772850)64:0.0270540000,(Philippe2009_Danio_rerio_7955_Gene_0081:0.0370735726,Philippe2009_Petromyzon_marinus_7757_Gene_0081:0.0412457546)76:0.1443920000)50:0.0800610000)45:0.0586720000)52:0.0637250000,(Philippe2009_Daphnia_pulex_6669_Gene_0081:0.3504346927,Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0081:0.0000022092)81:0.0294150000)25:0.0000020000,(Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0081:0.1209050058,(Philippe2009_Ixodes_scapularis_6945_Gene_0081:0.0000022092,Philippe2009_Scutigera_coleoptrata_29022_Gene_0081:0.0000022092)68:0.0000020000)74:0.0542080000)46:0.0881240000,Philippe2009_Nasonia_vitripennis_7425_Gene_0081:0.0000022221)36:0.0284000000)37:0.1091450000,(Philippe2009_Hydra_magnipapillata_6087_Gene_0081:0.1498782402,((Philippe2009_Hydractinia_echinata_35630_Gene_0081:0.0295163155,Philippe2009_Podocoryne_carnea_6096_Gene_0081:0.0000029546)96:0.0648420000,((Philippe2009_Mnemiopsis_leidyi_27923_Gene_0081:0.0000022092,Philippe2009_Mertensiid_sp_140499_Gene_0081:0.0000022092)100:0.4130300000,Philippe2009_Trichoplax_adhaerens_10228_Gene_0081:0.0403155909)70:0.1227460000)37:0.0415560000)27:0.0692450000)18:0.0000020000,Philippe2009_Sphaeroforma_arctica_72019_Gene_0081:0.4858746184)29:0.0338360000,(Philippe2009_Capsaspora_owczarzaki_192875_Gene_0081:0.0883100397,Philippe2009_Rhizopus_oryzae_64495_Gene_0081:0.7999370697)88:0.2022520000)39:0.0477450000)37:0.0357810000,((Philippe2009_Metridium_senile_6116_Gene_0081:0.0000022092,Philippe2009_Nematostella_vectensis_45351_Gene_0081:0.0518010875)97:0.0758480000,Philippe2009_Monosiga_brevicollis_81824_Gene_0081:0.6180285487)81:0.0212790000)43:0.0350010000,(Philippe2009_Cyanea_capillata_27804_Gene_0081:0.0785593704,(Philippe2009_Amphimedon_queenslandica_400682_Gene_0081:0.1181122760,Philippe2009_Sycon_raphanus_56443_Gene_0081:0.2826524491)80:0.1305020000)68:0.1425160000)72:0.0353160000,Philippe2009_Montastraea_faveolata_48498_Gene_0081:0.0000022092)77:0.0249120000);
+
+TIME STAMP
+----------
+
+Date and time: Mon Aug 15 20:13:14 2022
+Total CPU time used: 2375.022617 seconds (0h:39m:35s)
+Total wall-clock time used: 2382.758007 seconds (0h:39m:42s)
+

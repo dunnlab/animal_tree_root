@@ -1,0 +1,166 @@
+IQ-TREE 1.5.3 built Mar 12 2017
+
+Input file name: mafft/test/component99/component99.mafft
+Type of analysis: tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 272432
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh (2015)
+IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol. Biol. Evol., 32:268-274.
+http://dx.doi.org/10.1093/molbev/msu300
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Bui Quang Minh, Minh Anh Thi Nguyen, and Arndt von Haeseler (2013) Ultrafast
+approximation for phylogenetic bootstrap. Mol. Biol. Evol., 30:1188-1195.
+http://dx.doi.org/10.1093/molbev/mst024
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 21 sequences with 104 amino-acid sites
+Number of constant sites: 6 (= 5.76923% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 6 (= 5.76923% of all sites)
+Number of distinct site patterns: 103
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Uniform
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -2764.5794 (s.e. 151.2494)
+Unconstrained log-likelihood (without tree): -481.6304
+Number of free parameters (#branches + #model parameters): 39
+Akaike information criterion (AIC) score: 5607.1588
+Corrected Akaike information criterion (AICc) score: 5655.9088
+Bayesian information criterion (BIC) score: 5710.2901
+
+Total tree length (sum of branch lengths): 7.1848
+Sum of internal branch lengths: 1.8236 (25.3808% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Dunn2008_Acropora_millepora_45264_Tribe1190' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++----Dunn2008_Acropora_millepora_45264_Tribe1190
+|
+|            +-----Dunn2008_Asterina_pectinifera_7594_Tribe1190
+|         +--| (89)
+|         |  +---Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe1190
+|      +--| (72)
+|      |  +--Dunn2008_Ptychodera_flava_63121_Tribe1190
+|  +---| (74)
+|  |   |                    +---Dunn2008_Boophilus_microplus_6941_Tribe1190
+|  |   |                 +--| (25)
+|  |   |                 |  |      +----------Dunn2008_Echinococcus_granulosus_6210_Tribe1190
+|  |   |                 |  +------| (90)
+|  |   |                 |         +-------Dunn2008_Schmidtea_mediterranea_79327_Tribe1190
+|  |   |              +--| (14)
+|  |   |              |  +-----Dunn2008_Fenneropenaeus_chinensis_139456_Tribe1190
+|  |   |           +--| (7)
+|  |   |           |  +-----Dunn2008_Themiste_lageniformis_216211_Tribe1190
+|  |   |        +--| (6)
+|  |   |        |  |   +-----Dunn2008_Drosophila_melanogaster_7227_Tribe1190
+|  |   |        |  +---| (77)
+|  |   |        |      |            +---Dunn2008_Mertensiid_sp_140499_Tribe1190
+|  |   |        |      +------------| (100)
+|  |   |        |                   +--Dunn2008_Mnemiopsis_leidyi_27923_Tribe1190
+|  |   |     +--| (15)
+|  |   |     |  +---Dunn2008_Crassostrea_virginica_6565_Tribe1190
+|  |   |  +--| (37)
+|  |   |  |  |  +--Dunn2008_Chaetopterus_variopedatus_34590_Tribe1190
+|  |   |  |  +--| (9)
+|  |   |  |     |   +---Dunn2008_Echinoderes_horni_488522_Tribe1190
+|  |   |  |     +---| (17)
+|  |   |  |         +---------------------------------------------Dunn2008_Trichinella_spiralis_6334_Tribe1190
+|  |   +--| (19)
+|  |      +------Dunn2008_Carinoma_mutabilis_187807_Tribe1190
++--| (73)
+|  |  +-----------Dunn2008_Cyanea_capillata_27804_Tribe1190
+|  +--| (64)
+|     |     +----------------Dunn2008_Hydra_vulgaris_01_6087_Tribe1190
+|     +-----| (93)
+|           +----Dunn2008_Hydractinia_echinata_35630_Tribe1190
+|
++------Dunn2008_Nematostella_vectensis_45351_Tribe1190
+
+Tree in newick format:
+
+(Dunn2008_Acropora_millepora_45264_Tribe1190:0.1644305884,((((Dunn2008_Asterina_pectinifera_7594_Tribe1190:0.2008062931,Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe1190:0.1322355693)89:0.107125,Dunn2008_Ptychodera_flava_63121_Tribe1190:0.1083237426)72:0.081315,(((((((Dunn2008_Boophilus_microplus_6941_Tribe1190:0.1333466050,(Dunn2008_Echinococcus_granulosus_6210_Tribe1190:0.3312750733,Dunn2008_Schmidtea_mediterranea_79327_Tribe1190:0.2442929319)90:0.215548)25:0.075113,Dunn2008_Fenneropenaeus_chinensis_139456_Tribe1190:0.1849409330)14:0.048708,Dunn2008_Themiste_lageniformis_216211_Tribe1190:0.1906682145)7:0.045862,(Dunn2008_Drosophila_melanogaster_7227_Tribe1190:0.2059765631,(Dunn2008_Mertensiid_sp_140499_Tribe1190:0.1443676493,Dunn2008_Mnemiopsis_leidyi_27923_Tribe1190:0.0496572810)100:0.394078)77:0.145973)6:0.038050,Dunn2008_Crassostrea_virginica_6565_Tribe1190:0.1460340581)15:0.018628,(Dunn2008_Chaetopterus_variopedatus_34590_Tribe1190:0.0736626202,(Dunn2008_Echinoderes_horni_488522_Tribe1190:0.1334897781,Dunn2008_Trichinella_spiralis_6334_Tribe1190:1.3952880276)17:0.148768)9:0.021996)37:0.039853,Dunn2008_Carinoma_mutabilis_187807_Tribe1190:0.2202961600)19:0.018256)74:0.136238,(Dunn2008_Cyanea_capillata_27804_Tribe1190:0.3781440632,(Dunn2008_Hydra_vulgaris_01_6087_Tribe1190:0.5311584153,Dunn2008_Hydractinia_echinata_35630_Tribe1190:0.1750948855)93:0.200829)64:0.042863)73:0.044367,Dunn2008_Nematostella_vectensis_45351_Tribe1190:0.2177742738);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -2767.505529
+Robinson-Foulds distance between ML tree and consensus tree: 16
+
+Branches with bootstrap support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++----Dunn2008_Acropora_millepora_45264_Tribe1190
+|
+|               +-----Dunn2008_Asterina_pectinifera_7594_Tribe1190
+|            +--| (89)
+|            |  +---Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe1190
+|         +--| (72)
+|         |  +--Dunn2008_Ptychodera_flava_63121_Tribe1190
+|      +--| (48)
+|      |  +-----Dunn2008_Carinoma_mutabilis_187807_Tribe1190
+|  +---| (74)
+|  |   |                    +--Dunn2008_Boophilus_microplus_6941_Tribe1190
+|  |   |                 +--| (40)
+|  |   |                 |  +------------------------------------------Dunn2008_Trichinella_spiralis_6334_Tribe1190
+|  |   |              +--| (27)
+|  |   |              |  |     +---------Dunn2008_Echinococcus_granulosus_6210_Tribe1190
+|  |   |              |  +-----| (90)
+|  |   |              |        +------Dunn2008_Schmidtea_mediterranea_79327_Tribe1190
+|  |   |           +--| (22)
+|  |   |           |  +----Dunn2008_Fenneropenaeus_chinensis_139456_Tribe1190
+|  |   |        +--| (27)
+|  |   |        |  |   +----Dunn2008_Drosophila_melanogaster_7227_Tribe1190
+|  |   |        |  +---| (77)
+|  |   |        |      |           +---Dunn2008_Mertensiid_sp_140499_Tribe1190
+|  |   |        |      +-----------| (100)
+|  |   |        |                  +--Dunn2008_Mnemiopsis_leidyi_27923_Tribe1190
+|  |   |     +--| (30)
+|  |   |     |  +----Dunn2008_Themiste_lageniformis_216211_Tribe1190
+|  |   |  +--| (29)
+|  |   |  |  +---Dunn2008_Crassostrea_virginica_6565_Tribe1190
+|  |   +--| (37)
+|  |      |  +--Dunn2008_Chaetopterus_variopedatus_34590_Tribe1190
+|  |      +--| (31)
+|  |         +--------Dunn2008_Echinoderes_horni_488522_Tribe1190
++--| (73)
+|  |  +----------Dunn2008_Cyanea_capillata_27804_Tribe1190
+|  +--| (64)
+|     |     +---------------Dunn2008_Hydra_vulgaris_01_6087_Tribe1190
+|     +-----| (93)
+|           +----Dunn2008_Hydractinia_echinata_35630_Tribe1190
+|
++-----Dunn2008_Nematostella_vectensis_45351_Tribe1190
+
+
+Consensus tree in newick format: 
+
+(Dunn2008_Acropora_millepora_45264_Tribe1190:0.1706555136,(((((Dunn2008_Asterina_pectinifera_7594_Tribe1190:0.1978760308,Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe1190:0.1375183039)89:0.1028310000,Dunn2008_Ptychodera_flava_63121_Tribe1190:0.1158343964)72:0.0741420000,Dunn2008_Carinoma_mutabilis_187807_Tribe1190:0.2174460209)48:0.0184690000,(((((((Dunn2008_Boophilus_microplus_6941_Tribe1190:0.0601090643,Dunn2008_Trichinella_spiralis_6334_Tribe1190:1.3727962188)40:0.0901270000,(Dunn2008_Echinococcus_granulosus_6210_Tribe1190:0.3302930906,Dunn2008_Schmidtea_mediterranea_79327_Tribe1190:0.2448771048)90:0.2073820000)27:0.0679430000,Dunn2008_Fenneropenaeus_chinensis_139456_Tribe1190:0.1732010132)22:0.0453550000,(Dunn2008_Drosophila_melanogaster_7227_Tribe1190:0.1848429421,(Dunn2008_Mertensiid_sp_140499_Tribe1190:0.1291908866,Dunn2008_Mnemiopsis_leidyi_27923_Tribe1190:0.0662023835)100:0.4066140000)77:0.1475600000)27:0.0488950000,Dunn2008_Themiste_lageniformis_216211_Tribe1190:0.1880125864)30:0.0522960000,Dunn2008_Crassostrea_virginica_6565_Tribe1190:0.1516505270)29:0.0222730000,(Dunn2008_Chaetopterus_variopedatus_34590_Tribe1190:0.0661546844,Dunn2008_Echinoderes_horni_488522_Tribe1190:0.2943402168)31:0.0259850000)37:0.0396190000)74:0.1429580000,(Dunn2008_Cyanea_capillata_27804_Tribe1190:0.3740313455,(Dunn2008_Hydra_vulgaris_01_6087_Tribe1190:0.5377637614,Dunn2008_Hydractinia_echinata_35630_Tribe1190:0.1687911480)93:0.1972290000)64:0.0615100000)73:0.0313810000,Dunn2008_Nematostella_vectensis_45351_Tribe1190:0.2149914413);
+
+TIME STAMP
+----------
+
+Date and time: Mon Aug  8 09:33:32 2022
+Total CPU time used: 7.76987 seconds (0h:0m:7s)
+Total wall-clock time used: 7.811950922 seconds (0h:0m:7s)
+

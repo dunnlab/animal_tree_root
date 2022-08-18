@@ -1,0 +1,27 @@
+2022-08-10 11:34:01 DEBUG:busco.run_BUSCO	Command line: /sw/bioinfo/BUSCO/5.3.1/rackham/bin/run_BUSCO.py -c 20 -o busco_results/animal_root_metazoa_busco -m prot -l /sw/bioinfo/BUSCO/v5_lineage_sets/lineages/metazoa_odb10 -i /crex/proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/db_test/animal_root_test.fa
+2022-08-10 11:34:01 INFO:busco.run_BUSCO	***** Start a BUSCO v5.3.1 analysis, current time: 08/10/2022 11:34:01 *****
+2022-08-10 11:34:01 DEBUG:busco.ConfigManager	Getting config file
+2022-08-10 11:34:01 INFO:busco.ConfigManager	Configuring BUSCO with /sw/bioinfo/BUSCO/5.3.1/rackham/config.ini
+2022-08-10 11:34:01 INFO:busco.BuscoConfig	Mode is proteins
+2022-08-10 11:34:01 ERROR:busco.BuscoRunner	A run with the name /crex/proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/busco_results/animal_root_metazoa_busco already exists...
+	If you are sure you wish to overwrite existing files, please use the -f (force) option
+2022-08-10 11:34:01 DEBUG:busco.BuscoRunner	A run with the name /crex/proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/busco_results/animal_root_metazoa_busco already exists...
+	If you are sure you wish to overwrite existing files, please use the -f (force) option
+Traceback (most recent call last):
+  File "/sw/bioinfo/BUSCO/5.3.1/rackham/lib/python3.8/site-packages/busco/run_BUSCO.py", line 103, in run
+    self.load_config()
+  File "/sw/bioinfo/BUSCO/5.3.1/rackham/lib/python3.8/site-packages/busco/run_BUSCO.py", line 94, in load_config
+    self.config_manager.load_busco_config_main(sys.argv)
+  File "/sw/bioinfo/BUSCO/5.3.1/rackham/lib/python3.8/site-packages/busco/BuscoLogger.py", line 62, in wrapped_func
+    self.retval = func(*args, **kwargs)
+  File "/sw/bioinfo/BUSCO/5.3.1/rackham/lib/python3.8/site-packages/busco/ConfigManager.py", line 56, in load_busco_config_main
+    self.config_main.validate()
+  File "/sw/bioinfo/BUSCO/5.3.1/rackham/lib/python3.8/site-packages/busco/BuscoConfig.py", line 408, in validate
+    self._check_no_previous_run()
+  File "/sw/bioinfo/BUSCO/5.3.1/rackham/lib/python3.8/site-packages/busco/BuscoConfig.py", line 622, in _check_no_previous_run
+    raise BatchFatalError(
+busco.Exceptions.BatchFatalError: A run with the name /crex/proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/busco_results/animal_root_metazoa_busco already exists...
+	If you are sure you wish to overwrite existing files, please use the -f (force) option
+2022-08-10 11:34:01 ERROR:busco.BuscoRunner	BUSCO analysis failed !
+2022-08-10 11:34:01 ERROR:busco.BuscoRunner	Check the logs, read the user guide (https://busco.ezlab.org/busco_userguide.html), and check the BUSCO issue board on https://gitlab.com/ezlab/busco/issues
+

@@ -1,0 +1,119 @@
+augustus/3.4.0 : If you see errors about not being able to write to an augustus directory, see 'module help augustus/3.4.0'
+Nearly all CRAN and BioConductor packages are installed and available by
+loading the module R_packages/4.1.1 
+The environment variable BUSCO_LINEAGE_SETS is set to a directory containing
+BUSCO v5 lineage sets.  Use with the -l option, for example:
+    run_BUSCO.py -l $BUSCO_LINEAGE_SETS/fungi_odb10 ...
+A list of available lineage sets is provided via 'module help BUSCO/5.3.1'
+----
+If you see this error from BUSCO:
+    Error: Cannot write to Augustus directory, please make sure you have write permissions to <directory>
+then you need to create a local copy of the config directory from the augustus
+module with 'source $AUGUSTUS_CONFIG_COPY'.  See 'module help augustus/3.4.0'
+diamond_databases/latest : for available prebuilt databases, see 'module help diamond_databases/latest'
+augustus/3.3.3-CGP : If you see errors about not being able to write to an augustus directory, see 'module help augustus/3.3.3-CGP'
+
+The following have been reloaded with a version change:
+  1) augustus/3.4.0 => augustus/3.3.3-CGP
+
+
+The following have been reloaded with a version change:
+  1) Boost/1.71.0-gompi-2019b => Boost/1.72.0-gompi-2020a
+  2) GCC/8.3.0 => GCC/9.3.0
+  3) GCCcore/8.3.0 => GCCcore/9.3.0
+  4) OpenMPI/3.1.4-GCC-8.3.0 => OpenMPI/4.0.3-GCC-9.3.0
+  5) XZ/5.2.4-GCCcore-8.3.0 => XZ/5.2.5-GCCcore-9.3.0
+  6) binutils/2.32-GCCcore-8.3.0 => binutils/2.34-GCCcore-9.3.0
+  7) bzip2/1.0.8-GCCcore-8.3.0 => bzip2/1.0.8-GCCcore-9.3.0
+  8) gompi/2019b => gompi/2020a
+  9) hwloc/1.11.12-GCCcore-8.3.0 => hwloc/2.2.0-GCCcore-9.3.0
+ 10) libpciaccess/0.14-GCCcore-8.3.0 => libpciaccess/0.16-GCCcore-9.3.0
+ 11) libxml2/2.9.9-GCCcore-8.3.0 => libxml2/2.9.10-GCCcore-9.3.0
+ 12) numactl/2.0.12-GCCcore-8.3.0 => numactl/2.0.13-GCCcore-9.3.0
+ 13) zlib/1.2.11-GCCcore-8.3.0 => zlib/1.2.11-GCCcore-9.3.0
+
+diamond v2.0.14.152 (C) Max Planck Society for the Advancement of Science
+Documentation, support and updates available at http://www.diamondsearch.org
+Please cite: http://dx.doi.org/10.1038/s41592-021-01101-x Nature Methods (2021)
+
+#CPU threads: 20
+Scoring parameters: (Matrix=BLOSUM62 Lambda=0.201 K=0.012 Penalties=6/2)
+Temporary directory: diamond_results
+#Target sequences to report alignments for: 25
+Opening the database...  [0.338s]
+Database: db_test/animal_root_test_diamond.dmnd (type: Diamond database, sequences: 315749, letters: 68676841)
+Block size = 2000000000
+Opening the input file...  [0.019s]
+Opening the output file...  [0.01s]
+Loading query sequences...  [0.015s]
+Masking queries...  [0.101s]
+Algorithm: Double-indexed
+Building query histograms...  [0.07s]
+Allocating buffers...  [0s]
+Loading reference sequences...  [0.208s]
+Masking reference...  [2.23s]
+Initializing temporary storage...  [0.009s]
+Building reference histograms...  [2.158s]
+Allocating buffers...  [0s]
+Processing query block 1, reference block 1/1, shape 1/2, index chunk 1/4.
+Building reference seed array...  [0.677s]
+Building query seed array...  [0.018s]
+Computing hash join...  [0.054s]
+Masking low complexity seeds...  [0.005s]
+Searching alignments...  [4.15s]
+Processing query block 1, reference block 1/1, shape 1/2, index chunk 2/4.
+Building reference seed array...  [0.804s]
+Building query seed array...  [0.021s]
+Computing hash join...  [0.052s]
+Masking low complexity seeds...  [0.005s]
+Searching alignments...  [2.7s]
+Processing query block 1, reference block 1/1, shape 1/2, index chunk 3/4.
+Building reference seed array...  [0.849s]
+Building query seed array...  [0.027s]
+Computing hash join...  [0.052s]
+Masking low complexity seeds...  [0.005s]
+Searching alignments...  [2.26s]
+Processing query block 1, reference block 1/1, shape 1/2, index chunk 4/4.
+Building reference seed array...  [0.63s]
+Building query seed array...  [0.017s]
+Computing hash join...  [0.052s]
+Masking low complexity seeds...  [0.005s]
+Searching alignments...  [1.986s]
+Processing query block 1, reference block 1/1, shape 2/2, index chunk 1/4.
+Building reference seed array...  [0.672s]
+Building query seed array...  [0.021s]
+Computing hash join...  [0.056s]
+Masking low complexity seeds...  [0.005s]
+Searching alignments...  [2.435s]
+Processing query block 1, reference block 1/1, shape 2/2, index chunk 2/4.
+Building reference seed array...  [0.789s]
+Building query seed array...  [0.031s]
+Computing hash join...  [0.051s]
+Masking low complexity seeds...  [0.005s]
+Searching alignments...  [2.171s]
+Processing query block 1, reference block 1/1, shape 2/2, index chunk 3/4.
+Building reference seed array...  [0.86s]
+Building query seed array...  [0.029s]
+Computing hash join...  [0.058s]
+Masking low complexity seeds...  [0.005s]
+Searching alignments...  [1.944s]
+Processing query block 1, reference block 1/1, shape 2/2, index chunk 4/4.
+Building reference seed array...  [0.616s]
+Building query seed array...  [0.017s]
+Computing hash join...  [0.051s]
+Masking low complexity seeds...  [0.005s]
+Searching alignments...  [1.828s]
+Deallocating buffers...  [0.015s]
+Clearing query masking...  [0s]
+Computing alignments...  [25.861s]
+Deallocating reference...  [0.008s]
+Loading reference sequences...  [0s]
+Deallocating buffers...  [0s]
+Deallocating queries...  [0s]
+Loading query sequences...  [0s]
+Closing the input file...  [0s]
+Closing the output file...  [0.048s]
+Cleaning up...  [0s]
+Total time = 57.306s
+Reported 232567 pairwise alignments, 232567 HSPs.
+9381 queries aligned.
