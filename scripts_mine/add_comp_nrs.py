@@ -5,7 +5,7 @@ Created on Wed Aug  3 10:44:27 2022
 @author: matil
 """
 
-#Idea: add component number for each seq based on the blast query name 
+#Idea: add component number for each seq based on the blast query name and export to fastas
 import pandas as pd
 from Bio import SeqIO
 from compare_comp_nrs import add_co_nr,process_df
@@ -32,14 +32,13 @@ def edit_df(df,partition_df):
     return df
 
 #read fasta headers into dataframe
-def read_blast_query(dirpattern,colnames):
+def read_blast_db(dirpattern,colnames):
     l1 = []
     l2 = []
-    for i, infile in enumerate(sorted(glob(dirpattern))):
-        with open(infile, "r") as f:
-            for record in SeqIO.parse(f, "fasta"):
-                l1.append(record.name)
-                l2.append(record.seq)
+    with open(dirpattern, "r") as f:
+        for record in SeqIO.parse(f, "fasta"):
+            l1.append(record.name)
+            l2.append(record.seq)
                 #print(record)
 #        if i ==0:
 #            l = l
@@ -48,38 +47,16 @@ def read_blast_query(dirpattern,colnames):
     df = pd.DataFrame({colnames[0]:l1,colnames[1]:l2})
     return df
 
-#Read blast results, add component nrs only for result not for query
-ava_pident_cutoff = 50
-ava_evalue_cutoff = 1e-5
-ava_colnames = ['qseqid', 'sseqid', 'pident', 'length', 
-                'mismatch', 'gapopen', 'qstart', 'qend', 
-                'sstart', 'send', 'evalue', 'bitscore']
-ava_df = read_blast_results('../add_new_data_test/diamond_results/*_permissive.txt',   #read only Dunn and Philippe) 
-                            ava_colnames, 
-                            ava_pident_cutoff, 
-                            ava_evalue_cutoff)
-# filter out self-matches
-ava_df_sm = ava_df[ava_df['qseqid'] != ava_df['sseqid']]
-
-#unify names with partition map
-ava_df_sm = ava_df["qseqid"].str.split(":", n = 3, expand = True)
-ava_df["qseqid"]= ava_df_sm[0]+ava_df_sm[3]
-ava_df_sm = ava_df["sseqid"].str.split(":", n = 3, expand = True)
-ava_df["sseqid"]= ava_df_sm[0]+ava_df_sm[3]
-
-#keep only columns with names
-ava_df = ava_df[['sseqid','qseqid']]
-
 #import fasta headers from blast queries to use as name
-infile = r'..\reconciliation\blast\queries\dunn_philippe\*.fa'
+infile = r'C:\Users\matil\OneDrive\Dokument\GitHub\animal_tree_root_fork\reconciliation\reconciliation\blast\db\animal_root.fa'
 colnames = ["fasta_header","seq"]
-headers_df = read_blast_query(infile,colnames)
+headers_df = read_blast_db(infile,colnames)
 
 #add name column
 headers_df = headers_df.join(headers_df.fasta_header.str.split(':', expand = True))[[colnames[0],colnames[1],0,3]]
 headers_df["name"] = headers_df[0] + headers_df[3]
 #import partition map 
-partitions_df_expanded_r = pd.read_csv("../files_mine/part_map_glob.csv", sep="\t")
+partitions_df_expanded_r = pd.read_csv(r'C:\Users\matil\OneDrive\Dokument\GitHub\animal_tree_root_fork\files_mine\part_map_glob.csv', sep="\t")
 headers_df = headers_df.drop([0,3],axis=1)
 
 #process partition map
@@ -97,12 +74,12 @@ dfs = dict(tuple(headers_df_processed.groupby('comp_nr')))
 records = []
 for i in dfs:
     sep_rec = []
-    for l,j in zip(dfs[i].fasta_header,dfs[i].sequence):
+    for l,j in zip(dfs[i].fasta_header,dfs[i].seq):
         sep_rec.append(SeqIO.SeqRecord(j, id = l,description="Component_nr:"+str(int(i))))
     records.append([sep_rec,i])
     
-    
 for i in range(0,len(records)):
-    SeqIO.write(records[i][0], "../files_mine/fasta/component"+str(int(records[i][1]))+".fasta", "fasta")
+    SeqIO.write(records[i][0], r'C:\Users\matil\OneDrive\Dokument\GitHub\animal_tree_root_fork\files_mine\fasta\component'+str(int(records[i][1]))+".fasta", "fasta")
+    
     
 partitions_df_expanded_r.component_number.drop_duplicates().to_csv("comp_nrs.txt",index=False,header=False)
