@@ -1,0 +1,114 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax = 21;
+	taxlabels
+	Dunn2008_Acropora_millepora_45264_Tribe1190[&!color=#FF00FF]
+	Dunn2008_Asterina_pectinifera_7594_Tribe1190[&!color=#B8860B]
+	Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe1190[&!color=#B8860B]
+	Dunn2008_Ptychodera_flava_63121_Tribe1190[&!color=#B8860B]
+	Dunn2008_Carinoma_mutabilis_187807_Tribe1190[&!color=#008080]
+	Dunn2008_Boophilus_microplus_6941_Tribe1190[&!color=#0000FF]
+	Dunn2008_Trichinella_spiralis_6334_Tribe1190[&!color=#808000]
+	Dunn2008_Echinococcus_granulosus_6210_Tribe1190[&!color=#FFD700]
+	Dunn2008_Schmidtea_mediterranea_79327_Tribe1190[&!color=#FFD700]
+	Dunn2008_Fenneropenaeus_chinensis_139456_Tribe1190[&!color=#0000FF]
+	Dunn2008_Drosophila_melanogaster_7227_Tribe1190[&!color=#0000FF]
+	Dunn2008_Mertensiid_sp_140499_Tribe1190[&!color=#FF0000]
+	Dunn2008_Mnemiopsis_leidyi_27923_Tribe1190[&!color=#FF0000]
+	Dunn2008_Crassostrea_virginica_6565_Tribe1190[&!color=#008000]
+	Dunn2008_Themiste_lageniformis_216211_Tribe1190[&!color=#00FFFF]
+	Dunn2008_Chaetopterus_variopedatus_34590_Tribe1190[&!color=#00FFFF]
+	Dunn2008_Echinoderes_horni_488522_Tribe1190[&!color=#808000]
+	Dunn2008_Hydra_vulgaris_01_6087_Tribe1190[&!color=#FF00FF]
+	Dunn2008_Hydractinia_echinata_35630_Tribe1190[&!color=#FF00FF]
+	Dunn2008_Cyanea_capillata_27804_Tribe1190[&!color=#FF00FF]
+	Dunn2008_Nematostella_vectensis_45351_Tribe1190[&!color=#FF00FF]
+	;
+End;
+Begin trees;
+	Translate
+		1 Dunn2008_Acropora_millepora_45264_Tribe1190,
+		2 Dunn2008_Asterina_pectinifera_7594_Tribe1190,
+		3 Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe1190,
+		4 Dunn2008_Ptychodera_flava_63121_Tribe1190,
+		5 Dunn2008_Carinoma_mutabilis_187807_Tribe1190,
+		6 Dunn2008_Boophilus_microplus_6941_Tribe1190,
+		7 Dunn2008_Trichinella_spiralis_6334_Tribe1190,
+		8 Dunn2008_Echinococcus_granulosus_6210_Tribe1190,
+		9 Dunn2008_Schmidtea_mediterranea_79327_Tribe1190,
+		10 Dunn2008_Fenneropenaeus_chinensis_139456_Tribe1190,
+		11 Dunn2008_Drosophila_melanogaster_7227_Tribe1190,
+		12 Dunn2008_Mertensiid_sp_140499_Tribe1190,
+		13 Dunn2008_Mnemiopsis_leidyi_27923_Tribe1190,
+		14 Dunn2008_Crassostrea_virginica_6565_Tribe1190,
+		15 Dunn2008_Themiste_lageniformis_216211_Tribe1190,
+		16 Dunn2008_Chaetopterus_variopedatus_34590_Tribe1190,
+		17 Dunn2008_Echinoderes_horni_488522_Tribe1190,
+		18 Dunn2008_Hydra_vulgaris_01_6087_Tribe1190,
+		19 Dunn2008_Hydractinia_echinata_35630_Tribe1190,
+		20 Dunn2008_Cyanea_capillata_27804_Tribe1190,
+		21 Dunn2008_Nematostella_vectensis_45351_Tribe1190
+;
+Begin trees;	 tree Bioperl_1 = [&R] (1:0.2410241372,((((((2:0.2566444339,3:0.1652733655):0.142429[93],4:0.1267060629):0.105588[57],5:0.2903933732):0.028322[43],(((((6:0.0000028264,7:2.2715481465):0.178062[72],(8:0.4202079139,9:0.3145011685):0.261271[87]):0.098396[49],10:0.1997865731):0.059559[48],(11:0.2614449493,(12:0.1688536694,13:0.0492921769):0.578785[100]):0.170375[85]):0.086441[45],(14:0.1761879038,15:0.2105082809):0.043021[60]):0.040985[39]):0.032652[37],(16:0.0827425800,17:0.3892357031):0.020301[42]):0.174295[65],(18:0.6681089317,19:0.2532882552):0.254808[93]):0.029544[54],(20:0.5579978366,21:0.2263130713):0.034195[51]);
+End;
+
+begin figtree;
+        set appearance.backgroundColour=#-1;
+        set appearance.branchColorAttribute="User Selection";
+        set appearance.branchLineWidth=1.0;
+        set appearance.foregroundColour=#-16777216;
+        set appearance.selectionColour=#-2144520576;
+        set branchLabels.displayAttribute="bootstrap";
+        set branchLabels.fontName="Arial";
+        set branchLabels.fontSize=10;
+        set branchLabels.fontStyle=0;
+        set branchLabels.isShown=true;
+        set branchLabels.significantDigits=4;
+        set layout.layoutType="RECTILINEAR";
+        set layout.zoom=0;
+        set nodeBars.barWidth=4.0;
+        set nodeLabels.displayAttribute="Node ages";
+        set nodeLabels.fontName="Arial";
+        set nodeLabels.fontSize=8;
+        set nodeLabels.fontStyle=0;
+        set nodeLabels.isShown=false;
+        set nodeLabels.significantDigits=4;
+        set polarLayout.alignTipLabels=false;
+        set polarLayout.angularRange=0;
+        set polarLayout.rootAngle=0;
+        set polarLayout.rootLength=100;
+        set polarLayout.showRoot=true;
+        set radialLayout.spread=0.0;
+        set rectilinearLayout.alignTipLabels=false;
+        set rectilinearLayout.curvature=0;
+        set rectilinearLayout.rootLength=100;
+        set scale.offsetAge=0.0;
+        set scale.rootAge=1.0;
+        set scale.scaleFactor=1.0;
+        set scale.scaleRoot=false;
+        set scaleAxis.automaticScale=true;
+        set scaleAxis.fontSize=8.0;
+        set scaleAxis.isShown=false;
+        set scaleAxis.lineWidth=1.0;
+        set scaleAxis.majorTicks=0.1;
+        set scaleAxis.origin=0.0;
+        set scaleAxis.significantDigits=4;
+        set scaleBar.automaticScale=true;
+        set scaleBar.fontSize=10.0;
+        set scaleBar.isShown=true;
+        set scaleBar.lineWidth=1.0;
+        set scaleBar.scaleRange=0.0;
+        set scaleBar.significantDigits=4;
+        set tipLabels.displayAttribute="Names";
+        set tipLabels.fontName="Arial";
+        set tipLabels.fontSize=12;
+        set tipLabels.fontStyle=0;
+        set tipLabels.isShown=true;
+        set tipLabels.significantDigits=4;
+        set trees.order=false;
+        set trees.orderType="increasing";
+        set trees.rootingType="User Selection";
+        set trees.transform=false;
+        set trees.transformType="cladogram";
+end;

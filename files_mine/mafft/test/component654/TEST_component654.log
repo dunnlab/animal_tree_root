@@ -1,0 +1,379 @@
+IQ-TREE version 1.5.3 for Linux 64-bit built Mar 12 2017
+Copyright (c) 2011-2016 Nguyen Lam Tung, Olga Chernomor, Arndt von Haeseler and Bui Quang Minh.
+
+Host:    r1185.uppmax.uu.se (AVX2, FMA3, 243 GB RAM)
+Command: iqtree -s /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test/component654/component654.mafft -m TEST -nt 1 -bb 1000 -pre /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test/component654/TEST_component654
+Seed:    231812 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 22 16:37:57 2022
+Kernel:  AVX+FMA
+
+NOTE: Consider using the multicore version because your CPU has 16 cores!
+
+Reading alignment file /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test/component654/component654.mafft ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 30 sequences with 76 columns and 74 patterns (48 informative sites, 14 constant sites)
+WARNING: Some sequence names are changed as follows:
+Dunn2008:Acanthoscurria_gomesiana:115339:Tribe726 -> Dunn2008_Acanthoscurria_gomesiana_115339_Tribe726
+Dunn2008:Amoebidium_parasiticum:4881:Tribe726 -> Dunn2008_Amoebidium_parasiticum_4881_Tribe726
+Dunn2008:Asterina_pectinifera:7594:Tribe726 -> Dunn2008_Asterina_pectinifera_7594_Tribe726
+Dunn2008:Biomphalaria_glabrata:6526:Tribe726 -> Dunn2008_Biomphalaria_glabrata_6526_Tribe726
+Dunn2008:Branchiostoma_floridae:7739:Tribe726 -> Dunn2008_Branchiostoma_floridae_7739_Tribe726
+Dunn2008:Capsaspora_owczarzaki:192875:Tribe726 -> Dunn2008_Capsaspora_owczarzaki_192875_Tribe726
+Dunn2008:Carcinus_maenas:6759:Tribe726 -> Dunn2008_Carcinus_maenas_6759_Tribe726
+Dunn2008:Cerebratulus_lacteus:6221:Tribe726 -> Dunn2008_Cerebratulus_lacteus_6221_Tribe726
+Dunn2008:Chaetoderma_nitidulum:256131:Tribe726 -> Dunn2008_Chaetoderma_nitidulum_256131_Tribe726
+Dunn2008:Chaetopleura_apiculata:58794:Tribe726 -> Dunn2008_Chaetopleura_apiculata_58794_Tribe726
+Dunn2008:Cryptococcus_neoformans:5207:Tribe726 -> Dunn2008_Cryptococcus_neoformans_5207_Tribe726
+Dunn2008:Cyanea_capillata:27804:Tribe726 -> Dunn2008_Cyanea_capillata_27804_Tribe726
+Dunn2008:Drosophila_melanogaster:7227:Tribe726 -> Dunn2008_Drosophila_melanogaster_7227_Tribe726
+Dunn2008:Euperipatoides_kanangrensis:488523:Tribe726 -> Dunn2008_Euperipatoides_kanangrensis_488523_Tribe726
+Dunn2008:Fenneropenaeus_chinensis:139456:Tribe726 -> Dunn2008_Fenneropenaeus_chinensis_139456_Tribe726
+Dunn2008:Hydra_vulgaris_01:6087:Tribe726 -> Dunn2008_Hydra_vulgaris_01_6087_Tribe726
+Dunn2008:Hypsibius_dujardini:232323:Tribe726 -> Dunn2008_Hypsibius_dujardini_232323_Tribe726
+Dunn2008:Lumbricus_rubellus:35632:Tribe726 -> Dunn2008_Lumbricus_rubellus_35632_Tribe726
+Dunn2008:Mnemiopsis_leidyi:27923:Tribe726 -> Dunn2008_Mnemiopsis_leidyi_27923_Tribe726
+Dunn2008:Nematostella_vectensis:45351:Tribe726 -> Dunn2008_Nematostella_vectensis_45351_Tribe726
+Dunn2008:Paraplanocera_oligoglena:1468194:Tribe726 -> Dunn2008_Paraplanocera_oligoglena_1468194_Tribe726
+Dunn2008:Ptychodera_flava:63121:Tribe726 -> Dunn2008_Ptychodera_flava_63121_Tribe726
+Dunn2008:Saccharomyces_cerevisiae:4932:Tribe726 -> Dunn2008_Saccharomyces_cerevisiae_4932_Tribe726
+Dunn2008:Schmidtea_mediterranea:79327:Tribe726 -> Dunn2008_Schmidtea_mediterranea_79327_Tribe726
+Dunn2008:Scutigera_coleoptrata:29022:Tribe726 -> Dunn2008_Scutigera_coleoptrata_29022_Tribe726
+Dunn2008:Sphaeroforma_arctica:72019:Tribe726 -> Dunn2008_Sphaeroforma_arctica_72019_Tribe726
+Dunn2008:Strongylocentrotus_purpuratus:7668:Tribe726 -> Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe726
+Dunn2008:Terebratalia_transversa:34513:Tribe726 -> Dunn2008_Terebratalia_transversa_34513_Tribe726
+Dunn2008:Urechis_caupo:6431:Tribe726 -> Dunn2008_Urechis_caupo_6431_Tribe726
+Dunn2008:Xiphinema_index:46003:Tribe726 -> Dunn2008_Xiphinema_index_46003_Tribe726
+
+                                                      Gap/Ambiguity  Composition  p-value
+   1  Dunn2008_Acanthoscurria_gomesiana_115339_Tribe726      17.11%    passed     17.60%
+   2  Dunn2008_Amoebidium_parasiticum_4881_Tribe726          10.53%    passed     87.67%
+   3  Dunn2008_Asterina_pectinifera_7594_Tribe726            10.53%    passed     92.10%
+   4  Dunn2008_Biomphalaria_glabrata_6526_Tribe726           10.53%    passed     94.51%
+   5  Dunn2008_Branchiostoma_floridae_7739_Tribe726          10.53%    passed     91.88%
+   6  Dunn2008_Capsaspora_owczarzaki_192875_Tribe726         13.16%    passed     74.52%
+   7  Dunn2008_Carcinus_maenas_6759_Tribe726                 10.53%    passed     99.30%
+   8  Dunn2008_Cerebratulus_lacteus_6221_Tribe726            11.84%    passed     97.57%
+   9  Dunn2008_Chaetoderma_nitidulum_256131_Tribe726         10.53%    passed     99.57%
+  10  Dunn2008_Chaetopleura_apiculata_58794_Tribe726         10.53%    passed    100.00%
+  11  Dunn2008_Cryptococcus_neoformans_5207_Tribe726         10.53%    passed     95.24%
+  12  Dunn2008_Cyanea_capillata_27804_Tribe726               10.53%    passed     61.59%
+  13  Dunn2008_Drosophila_melanogaster_7227_Tribe726         10.53%    passed     99.99%
+  14  Dunn2008_Euperipatoides_kanangrensis_488523_Tribe726   10.53%    passed     99.55%
+  15  Dunn2008_Fenneropenaeus_chinensis_139456_Tribe726      10.53%    passed     97.41%
+  16  Dunn2008_Hydra_vulgaris_01_6087_Tribe726               10.53%    passed     71.13%
+  17  Dunn2008_Hypsibius_dujardini_232323_Tribe726           10.53%    passed    100.00%
+  18  Dunn2008_Lumbricus_rubellus_35632_Tribe726             10.53%    passed     99.87%
+  19  Dunn2008_Mnemiopsis_leidyi_27923_Tribe726              10.53%    passed     75.82%
+  20  Dunn2008_Nematostella_vectensis_45351_Tribe726         30.26%    passed     95.93%
+  21  Dunn2008_Paraplanocera_oligoglena_1468194_Tribe726     10.53%    passed     80.34%
+  22  Dunn2008_Ptychodera_flava_63121_Tribe726               10.53%    passed     99.68%
+  23  Dunn2008_Saccharomyces_cerevisiae_4932_Tribe726        10.53%    passed     99.24%
+  24  Dunn2008_Schmidtea_mediterranea_79327_Tribe726          2.63%    passed     42.58%
+  25  Dunn2008_Scutigera_coleoptrata_29022_Tribe726          10.53%    passed     99.32%
+  26  Dunn2008_Sphaeroforma_arctica_72019_Tribe726           10.53%    passed     97.20%
+  27  Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe726   27.63%    passed    100.00%
+  28  Dunn2008_Terebratalia_transversa_34513_Tribe726        10.53%    passed     95.79%
+  29  Dunn2008_Urechis_caupo_6431_Tribe726                   10.53%    passed    100.00%
+  30  Dunn2008_Xiphinema_index_46003_Tribe726                21.05%    passed     62.64%
+****  TOTAL                                                  12.19%  0 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.003 seconds
+NOTE: MODEL SELECTION REQUIRES 2 MB MEMORY!
+Testing 144 protein models (sample size: 76) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  Dayhoff       2518.286     57  5150.571     5517.905     5283.423
+  2  Dayhoff+I     2503.468     58  5122.935     5525.524     5258.118
+  3  Dayhoff+G4    2450.466     58  5016.932     5419.520     5152.114
+  4  Dayhoff+I+G4  2450.078     59  5018.156     5460.656     5155.669
+  5  Dayhoff+F     2518.150     76  5188.299     16892.299    5365.435
+  6  Dayhoff+F+I   2504.976     77  5163.951     17175.951    5343.418
+  7  Dayhoff+F+G4  2441.682     77  5037.365     17049.365    5216.831
+  8  Dayhoff+F+I+G4 2441.638     78  5039.276     17363.276    5221.073
+  9  mtMAM         2874.683     57  5863.367     6230.700     5996.218
+ 10  mtMAM+I       2827.627     58  5771.254     6173.842     5906.436
+ 11  mtMAM+G4      2707.195     58  5530.389     5932.977     5665.572
+ 12  mtMAM+I+G4    2703.119     59  5524.238     5966.738     5661.751
+ 13  mtMAM+F       2767.028     76  5686.056     17390.056    5863.192
+ 14  mtMAM+F+I     2729.407     77  5612.814     17624.814    5792.280
+ 15  mtMAM+F+G4    2625.231     77  5404.462     17416.462    5583.929
+ 16  mtMAM+F+I+G4  2624.010     78  5404.020     17728.020    5585.817
+ 17  JTT           2541.090     57  5196.179     5563.512     5329.031
+ 18  JTT+I         2511.518     58  5139.035     5541.623     5274.218
+ 19  JTT+G4        2471.885     58  5059.769     5462.358     5194.952
+ 20  JTT+I+G4      2469.694     59  5057.388     5499.888     5194.901
+ 21  JTT+F         2548.616     76  5249.232     16953.232    5426.367
+ 22  JTT+F+I       2519.269     77  5192.538     17204.538    5372.004
+ 23  JTT+F+G4      2469.270     77  5092.539     17104.539    5272.006
+ 24  JTT+F+I+G4    2467.841     78  5091.682     17415.682    5273.479
+ 25  WAG           2510.201     57  5134.402     5501.735     5267.254
+ 26  WAG+I         2490.472     58  5096.944     5499.533     5232.127
+ 27  WAG+G4        2449.797     58  5015.593     5418.181     5150.776
+ 28  WAG+I+G4      2448.904     59  5015.809     5458.309     5153.322
+ 29  WAG+F         2530.132     76  5212.264     16916.264    5389.400
+ 30  WAG+F+I       2513.428     77  5180.856     17192.856    5360.322
+ 31  WAG+F+G4      2457.728     77  5069.456     17081.456    5248.922
+ 32  WAG+F+I+G4    2457.493     78  5070.986     17394.986    5252.784
+ 33  cpREV         2569.856     57  5253.712     5621.046     5386.564
+ 34  cpREV+I       2531.803     58  5179.607     5582.195     5314.789
+ 35  cpREV+G4      2489.980     58  5095.960     5498.548     5231.142
+ 36  cpREV+I+G4    2485.668     59  5089.336     5531.836     5226.849
+ 37  cpREV+F       2609.516     76  5371.032     17075.032    5548.168
+ 38  cpREV+F+I     2577.616     77  5309.231     17321.231    5488.698
+ 39  cpREV+F+G4    2511.970     77  5177.940     17189.940    5357.407
+ 40  cpREV+F+I+G4  2510.424     78  5176.848     17500.848    5358.646
+ 41  mtREV         2715.326     57  5544.653     5911.986     5677.505
+ 42  mtREV+I       2683.235     58  5482.471     5885.059     5617.653
+ 43  mtREV+G4      2623.020     58  5362.041     5764.629     5497.223
+ 44  mtREV+I+G4    2619.081     59  5356.162     5798.662     5493.675
+ 45  mtREV+F       2646.840     76  5445.680     17149.680    5622.816
+ 46  mtREV+F+I     2623.075     77  5400.149     17412.149    5579.616
+ 47  mtREV+F+G4    2543.238     77  5240.475     17252.475    5419.941
+ 48  mtREV+F+I+G4  2542.964     78  5241.929     17565.929    5423.726
+ 49  rtREV         2539.877     57  5193.753     5561.086     5326.605
+ 50  rtREV+I       2491.428     58  5098.857     5501.445     5234.039
+ 51  rtREV+G4      2450.566     58  5017.132     5419.720     5152.314
+ 52  rtREV+I+G4    2445.648     59  5009.296     5451.796     5146.810
+ 53  rtREV+F       2557.860     76  5267.720     16971.720    5444.855
+ 54  rtREV+F+I     2517.356     77  5188.712     17200.712    5368.179
+ 55  rtREV+F+G4    2464.879     77  5083.758     17095.758    5263.225
+ 56  rtREV+F+I+G4  2462.204     78  5080.408     17404.408    5262.205
+ 57  mtART         2796.423     57  5706.847     6074.180     5839.699
+ 58  mtART+I       2710.739     58  5537.478     5940.066     5672.660
+ 59  mtART+G4      2619.278     58  5354.556     5757.144     5489.738
+ 60  mtART+I+G4    2611.334     59  5340.668     5783.168     5478.181
+ 61  mtART+F       2674.681     76  5501.363     17205.363    5678.498
+ 62  mtART+F+I     2629.682     77  5413.364     17425.364    5592.830
+ 63  mtART+F+G4    2550.054     77  5254.107     17266.107    5433.574
+ 64  mtART+F+I+G4  2548.164     78  5252.327     17576.327    5434.124
+ 65  mtZOA         2713.742     57  5541.485     5908.818     5674.336
+ 66  mtZOA+I       2637.776     58  5391.552     5794.140     5526.734
+ 67  mtZOA+G4      2571.713     58  5259.427     5662.015     5394.609
+ 68  mtZOA+I+G4    2563.900     59  5245.801     5688.301     5383.314
+ 69  mtZOA+F       2622.822     76  5397.643     17101.643    5574.779
+ 70  mtZOA+F+I     2579.947     77  5313.893     17325.893    5493.360
+ 71  mtZOA+F+G4    2515.470     77  5184.941     17196.941    5364.407
+ 72  mtZOA+F+I+G4  2512.612     78  5181.223     17505.223    5363.020
+ 73  VT            2529.084     57  5172.168     5539.501     5305.020
+ 74  VT+I          2499.708     58  5115.416     5518.004     5250.598
+ 75  VT+G4         2467.316     58  5050.633     5453.221     5185.815
+ 76  VT+I+G4       2464.727     59  5047.454     5489.954     5184.967
+ 77  VT+F          2544.275     76  5240.551     16944.551    5417.687
+ 78  VT+F+I        2518.388     77  5190.775     17202.775    5370.242
+ 79  VT+F+G4       2474.528     77  5103.057     17115.057    5282.523
+ 80  VT+F+I+G4     2473.289     78  5102.578     17426.578    5284.375
+ 81  LG            2527.589     57  5169.179     5536.512     5302.031
+ 82  LG+I          2489.848     58  5095.696     5498.284     5230.879
+ 83  LG+G4         2446.571     58  5009.142     5411.730     5144.325
+ 84  LG+I+G4       2443.570     59  5005.141     5447.641     5142.654
+ 85  LG+F          2550.130     76  5252.261     16956.261    5429.397
+ 86  LG+F+I        2518.147     77  5190.295     17202.295    5369.761
+ 87  LG+F+G4       2461.883     77  5077.765     17089.765    5257.231
+ 88  LG+F+I+G4     2460.744     78  5077.488     17401.488    5259.285
+ 89  DCMut         2518.104     57  5150.208     5517.542     5283.060
+ 90  DCMut+I       2503.257     58  5122.515     5525.103     5257.697
+ 91  DCMut+G4      2450.475     58  5016.950     5419.538     5152.133
+ 92  DCMut+I+G4    2450.083     59  5018.166     5460.666     5155.679
+ 93  DCMut+F       2517.933     76  5187.867     16891.867    5365.003
+ 94  DCMut+F+I     2504.726     77  5163.452     17175.452    5342.919
+ 95  DCMut+F+G4    2441.607     77  5037.215     17049.215    5216.681
+ 96  DCMut+F+I+G4  2441.560     78  5039.120     17363.120    5220.917
+ 97  PMB           2534.867     57  5183.734     5551.067     5316.586
+ 98  PMB+I         2513.781     58  5143.563     5546.151     5278.745
+ 99  PMB+G4        2477.553     58  5071.107     5473.695     5206.289
+100  PMB+I+G4      2476.373     59  5070.746     5513.246     5208.259
+101  PMB+F         2555.809     76  5263.618     16967.618    5440.754
+102  PMB+F+I       2536.414     77  5226.828     17238.828    5406.294
+103  PMB+F+G4      2487.753     77  5129.506     17141.506    5308.972
+104  PMB+F+I+G4    2487.300     78  5130.600     17454.600    5312.397
+105  HIVb          2644.666     57  5403.332     5770.665     5536.184
+106  HIVb+I        2605.894     58  5327.789     5730.377     5462.971
+107  HIVb+G4       2537.522     58  5191.043     5593.632     5326.226
+108  HIVb+I+G4     2535.736     59  5189.471     5631.971     5326.984
+109  HIVb+F        2670.177     76  5492.354     17196.354    5669.490
+110  HIVb+F+I      2619.171     77  5392.343     17404.343    5571.809
+111  HIVb+F+G4     2539.397     77  5232.794     17244.794    5412.260
+112  HIVb+F+I+G4   2538.148     78  5232.297     17556.297    5414.094
+113  HIVw          2775.727     57  5665.453     6032.787     5798.305
+114  HIVw+I        2750.090     58  5616.180     6018.768     5751.362
+115  HIVw+G4       2684.606     58  5485.212     5887.801     5620.395
+116  HIVw+I+G4     2682.893     59  5483.786     5926.286     5621.299
+117  HIVw+F        2740.868     76  5633.737     17337.737    5810.872
+118  HIVw+F+I      2709.913     77  5573.826     17585.826    5753.293
+119  HIVw+F+G4     2632.796     77  5419.592     17431.592    5599.058
+120  HIVw+F+I+G4   2631.112     78  5418.224     17742.224    5600.022
+121  JTTDCMut      2538.958     57  5191.916     5559.250     5324.768
+122  JTTDCMut+I    2510.536     58  5137.073     5539.661     5272.256
+123  JTTDCMut+G4   2470.421     58  5056.843     5459.431     5192.025
+124  JTTDCMut+I+G4 2468.420     59  5054.840     5497.340     5192.353
+125  JTTDCMut+F    2546.915     76  5245.830     16949.830    5422.965
+126  JTTDCMut+F+I  2518.586     77  5191.172     17203.172    5370.638
+127  JTTDCMut+F+G4 2467.919     77  5089.837     17101.837    5269.304
+128  JTTDCMut+F+I+G4 2466.675     78  5089.350     17413.350    5271.147
+129  FLU           2572.283     57  5258.565     5625.899     5391.417
+130  FLU+I         2553.676     58  5223.353     5625.941     5358.535
+131  FLU+G4        2502.748     58  5121.496     5524.085     5256.679
+132  FLU+I+G4      2501.026     59  5120.053     5562.553     5257.566
+133  FLU+F         2551.555     76  5255.110     16959.110    5432.246
+134  FLU+F+I       2530.324     77  5214.648     17226.648    5394.114
+135  FLU+F+G4      2466.791     77  5087.581     17099.581    5267.048
+136  FLU+F+I+G4    2464.777     78  5085.553     17409.553    5267.350
+137  Blosum62      2537.770     57  5189.540     5556.874     5322.392
+138  Blosum62+I    2514.754     58  5145.509     5548.097     5280.692
+139  Blosum62+G4   2481.185     58  5078.370     5480.959     5213.553
+140  Blosum62+I+G4 2479.550     59  5077.100     5519.600     5214.613
+141  Blosum62+F    2554.863     76  5261.725     16965.725    5438.861
+142  Blosum62+F+I  2535.176     77  5224.352     17236.352    5403.819
+143  Blosum62+F+G4 2489.283     77  5132.566     17144.566    5312.032
+144  Blosum62+F+I+G4 2488.685     78  5133.370     17457.370    5315.167
+Akaike Information Criterion:           LG+I+G4
+Corrected Akaike Information Criterion: LG+G4
+Bayesian Information Criterion:         LG+I+G4
+Best-fit model: LG+I+G4 chosen according to BIC
+CPU time for model selection: 7.103 seconds.
+Generating 1000 samples for ultrafast bootstrap (seed: 231812)...
+
+NOTE: 2 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+
+Testing with init. pinv = 0.000 / init. alpha = 1.000
+Est. p_inv: 0.000 / Est. gamma shape: 1.033 / Logl: -2446.576
+
+Testing with init. pinv = 0.020 / init. alpha = 1.000
+Est. p_inv: 0.094 / Est. gamma shape: 1.805 / Logl: -2443.577
+
+Testing with init. pinv = 0.041 / init. alpha = 1.000
+Est. p_inv: 0.093 / Est. gamma shape: 1.795 / Logl: -2443.579
+
+Testing with init. pinv = 0.061 / init. alpha = 1.000
+Est. p_inv: 0.094 / Est. gamma shape: 1.797 / Logl: -2443.574
+
+Testing with init. pinv = 0.082 / init. alpha = 1.000
+Est. p_inv: 0.095 / Est. gamma shape: 1.813 / Logl: -2443.570
+
+Testing with init. pinv = 0.102 / init. alpha = 1.000
+Est. p_inv: 0.096 / Est. gamma shape: 1.819 / Logl: -2443.570
+
+Testing with init. pinv = 0.123 / init. alpha = 1.000
+Est. p_inv: 0.097 / Est. gamma shape: 1.821 / Logl: -2443.571
+
+Testing with init. pinv = 0.143 / init. alpha = 1.000
+Est. p_inv: 0.097 / Est. gamma shape: 1.824 / Logl: -2443.572
+
+Testing with init. pinv = 0.164 / init. alpha = 1.000
+Est. p_inv: 0.097 / Est. gamma shape: 1.825 / Logl: -2443.573
+
+Testing with init. pinv = 0.184 / init. alpha = 1.000
+Est. p_inv: 0.097 / Est. gamma shape: 1.826 / Logl: -2443.575
+
+Best p_inv: 0.096 / best gamma shape: 1.819 / Logl: -2443.570
+Parameters optimization took 0.932 sec
+Computing ML distances based on estimated model parameters... 0.232 sec
+Computing BIONJ tree...
+0.003 seconds
+Log-likelihood of BIONJ tree: -2422.722
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.387 second
+Computing log-likelihood of 98 initial trees ... 1.070 seconds
+Current best score: -2422.722
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -2412.554
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 4: -2410.538
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 6: -2408.376
+Iteration 10 / LogL: -2420.879 / Time: 0h:0m:11s
+Iteration 20 / LogL: -2421.804 / Time: 0h:0m:12s
+Finish initializing candidate tree set (20)
+Current best tree score: -2408.376 / CPU time: 4.144
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -2411.240 / Time: 0h:0m:13s (0h:0m:17s left)
+Iteration 40 / LogL: -2408.700 / Time: 0h:0m:15s (0h:0m:13s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 41: -2406.810
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 50: -2406.597
+Iteration 50 / LogL: -2406.597 / Time: 0h:0m:16s (0h:0m:19s left)
+Log-likelihood cutoff on original alignment: -2445.664
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 52: -2406.565
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 55: -2406.431
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 56: -2406.212
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 58: -2403.986
+Iteration 60 / LogL: -2408.545 / Time: 0h:0m:18s (0h:0m:18s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 63: -2403.196
+Iteration 70 / LogL: -2407.701 / Time: 0h:0m:20s (0h:0m:17s left)
+Iteration 80 / LogL: -2403.196 / Time: 0h:0m:21s (0h:0m:15s left)
+BETTER TREE FOUND at iteration 83: -2403.196
+UPDATE BEST LOG-LIKELIHOOD: -2403.196
+Iteration 90 / LogL: -2403.196 / Time: 0h:0m:23s (0h:0m:16s left)
+Iteration 100 / LogL: -2403.196 / Time: 0h:0m:24s (0h:0m:14s left)
+Log-likelihood cutoff on original alignment: -2445.664
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.950
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 110 / LogL: -2403.368 / Time: 0h:0m:26s (0h:0m:16s left)
+Iteration 120 / LogL: -2403.925 / Time: 0h:0m:28s (0h:0m:14s left)
+UPDATE BEST LOG-LIKELIHOOD: -2403.196
+Iteration 130 / LogL: -2405.914 / Time: 0h:0m:29s (0h:0m:12s left)
+Iteration 140 / LogL: -2403.196 / Time: 0h:0m:31s (0h:0m:10s left)
+UPDATE BEST LOG-LIKELIHOOD: -2403.196
+Iteration 150 / LogL: -2405.693 / Time: 0h:0m:33s (0h:0m:8s left)
+Log-likelihood cutoff on original alignment: -2445.664
+Iteration 160 / LogL: -2403.197 / Time: 0h:0m:35s (0h:0m:7s left)
+Iteration 170 / LogL: -2403.783 / Time: 0h:0m:36s (0h:0m:5s left)
+Iteration 180 / LogL: -2403.196 / Time: 0h:0m:38s (0h:0m:3s left)
+Iteration 190 / LogL: -2405.425 / Time: 0h:0m:40s (0h:0m:1s left)
+Iteration 200 / LogL: -2403.196 / Time: 0h:0m:42s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -2445.664
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.995
+TREE SEARCH COMPLETED AFTER 200 ITERATIONS / Time: 0h:0m:42s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -2403.196
+Optimal log-likelihood: -2403.196
+Proportion of invariable sites: 0.094
+Gamma shape alpha: 1.861
+Parameters optimization took 1 rounds (0.020 sec)
+BEST SCORE FOUND : -2403.196
+Creating bootstrap support values...
+Split supports printed to NEXUS file /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test/component654/TEST_component654.splits.nex
+Total tree length: 11.401
+
+Total number of iterations: 200
+CPU time used for tree search: 33.789 sec (0h:0m:33s)
+Wall-clock time used for tree search: 33.832 sec (0h:0m:33s)
+Total CPU time used: 42.198 sec (0h:0m:42s)
+Total wall-clock time used: 42.279 sec (0h:0m:42s)
+
+Computing bootstrap consensus tree...
+Reading input file /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test/component654/TEST_component654.splits.nex...
+30 taxa and 700 splits.
+Consensus tree written to /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test/component654/TEST_component654.contree
+Reading input trees file /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test/component654/TEST_component654.contree
+Log-likelihood of consensus tree: -2403.987
+
+Analysis results written to: 
+  IQ-TREE report:                /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test/component654/TEST_component654.iqtree
+  Maximum-likelihood tree:       /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test/component654/TEST_component654.treefile
+  Likelihood distances:          /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test/component654/TEST_component654.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test/component654/TEST_component654.splits.nex
+  Consensus tree:                /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test/component654/TEST_component654.contree
+  Screen log file:               /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test/component654/TEST_component654.log
+
+Date and Time: Mon Aug 22 16:38:39 2022

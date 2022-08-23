@@ -1,0 +1,963 @@
+/sw/apps/bioinfo/MAFFT/7.407/rackham/bin/mafft-linsi: Cannot open /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/fasta/.fasta.
+
+------------------------------------------------------------------------------
+  MAFFT v7.407 (2018/Jul/23)
+  https://mafft.cbrc.jp/alignment/software/
+  MBE 30:772-780 (2013), NAR 30:3059-3066 (2002)
+------------------------------------------------------------------------------
+High speed:
+  % mafft in > out
+  % mafft --retree 1 in > out (fast)
+
+High accuracy (for <~200 sequences x <~2,000 aa/nt):
+  % mafft --maxiterate 1000 --localpair  in > out (% linsi in > out is also ok)
+  % mafft --maxiterate 1000 --genafpair  in > out (% einsi in > out)
+  % mafft --maxiterate 1000 --globalpair in > out (% ginsi in > out)
+
+If unsure which option to use:
+  % mafft --auto in > out
+
+--op # :         Gap opening penalty, default: 1.53
+--ep # :         Offset (works like gap extension penalty), default: 0.0
+--maxiterate # : Maximum number of iterative refinement, default: 0
+--clustalout :   Output: clustal format, default: fasta
+--reorder :      Outorder: aligned, default: input order
+--quiet :        Do not report progress
+--thread # :     Number of threads (if unsure, --thread -1)
+IQ-TREE version 1.5.3 for Linux 64-bit built Mar 12 2017
+Copyright (c) 2011-2016 Nguyen Lam Tung, Olga Chernomor, Arndt von Haeseler and Bui Quang Minh.
+
+Host:    r1236.uppmax.uu.se (AVX2, FMA3, 251 GB RAM)
+Command: iqtree -s /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test//.mafft -m TEST -nt 1 -bb 1000 -pre /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test//TEST_
+Seed:    998440 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 22 14:38:13 2022
+Kernel:  AVX+FMA
+
+NOTE: Consider using the multicore version because your CPU has 16 cores!
+
+terminate called after throwing an instance of 'std::ios_base::failure'
+  what():  basic_ios::clear
+Reading alignment file /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test//.mafft ... 
+*** IQ-TREE CRASHES WITH SIGNAL ABORTED
+*** For bug report please send to developers:
+***    Log file: /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test//TEST_.log
+***    Alignment files (if possible)
+/var/spool/slurmd/job29335990/slurm_script: line 16:  3098 Aborted                 (core dumped) iqtree -s /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test/$line/$line.mafft -m TEST -nt $thread -bb 1000 -pre /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test/$line/TEST_$line
+outputhat23=16
+treein = 0
+compacttree = 0
+stacksize: -1 kb
+All-to-all alignment.
+    0 / 367    1 / 367    2 / 367    3 / 367    4 / 367    5 / 367    6 / 367    7 / 367    8 / 367    9 / 367   10 / 367   11 / 367   12 / 367   13 / 367   14 / 367   15 / 367   16 / 367   17 / 367   18 / 367   19 / 367   20 / 367   21 / 367   22 / 367   23 / 367   24 / 367   25 / 367   26 / 367   27 / 367   28 / 367   29 / 367   30 / 367   31 / 367   32 / 367   33 / 367   34 / 367   35 / 367   36 / 367   37 / 367   38 / 367   39 / 367   40 / 367   41 / 367   42 / 367   43 / 367   44 / 367   45 / 367   46 / 367   47 / 367   48 / 367   49 / 367   50 / 367   51 / 367   52 / 367   53 / 367   54 / 367   55 / 367   56 / 367   57 / 367   58 / 367   59 / 367   60 / 367   61 / 367   62 / 367   63 / 367   64 / 367   65 / 367   66 / 367   67 / 367   68 / 367   69 / 367   70 / 367   71 / 367   72 / 367   73 / 367   74 / 367   75 / 367   76 / 367   77 / 367   78 / 367   79 / 367   80 / 367   81 / 367   82 / 367   83 / 367   84 / 367   85 / 367   86 / 367   87 / 367   88 / 367   89 / 367   90 / 367   91 / 367   92 / 367   93 / 367   94 / 367   95 / 367   96 / 367   97 / 367   98 / 367   99 / 367  100 / 367  101 / 367  102 / 367  103 / 367  104 / 367  105 / 367  106 / 367  107 / 367  108 / 367  109 / 367  110 / 367  111 / 367  112 / 367  113 / 367  114 / 367  115 / 367  116 / 367  117 / 367  118 / 367  119 / 367  120 / 367  121 / 367  122 / 367  123 / 367  124 / 367  125 / 367  126 / 367  127 / 367  128 / 367  129 / 367  130 / 367  131 / 367  132 / 367  133 / 367  134 / 367  135 / 367  136 / 367  137 / 367  138 / 367  139 / 367  140 / 367  141 / 367  142 / 367  143 / 367  144 / 367  145 / 367  146 / 367  147 / 367  148 / 367  149 / 367  150 / 367  151 / 367  152 / 367  153 / 367  154 / 367  155 / 367  156 / 367  157 / 367  158 / 367  159 / 367  160 / 367  161 / 367  162 / 367  163 / 367  164 / 367  165 / 367  166 / 367  167 / 367  168 / 367  169 / 367  170 / 367  171 / 367  172 / 367  173 / 367  174 / 367  175 / 367  176 / 367  177 / 367  178 / 367  179 / 367  180 / 367  181 / 367  182 / 367  183 / 367  184 / 367  185 / 367  186 / 367  187 / 367  188 / 367  189 / 367  190 / 367  191 / 367  192 / 367  193 / 367  194 / 367  195 / 367  196 / 367  197 / 367  198 / 367  199 / 367  200 / 367  201 / 367  202 / 367  203 / 367  204 / 367  205 / 367  206 / 367  207 / 367  208 / 367  209 / 367  210 / 367  211 / 367  212 / 367  213 / 367  214 / 367  215 / 367  216 / 367  217 / 367  218 / 367  219 / 367  220 / 367  221 / 367  222 / 367  223 / 367  224 / 367  225 / 367  226 / 367  227 / 367  228 / 367  229 / 367  230 / 367  231 / 367  232 / 367  233 / 367  234 / 367  235 / 367  236 / 367  237 / 367  238 / 367  239 / 367  240 / 367  241 / 367  242 / 367  243 / 367  244 / 367  245 / 367  246 / 367  247 / 367  248 / 367  249 / 367  250 / 367  251 / 367  252 / 367  253 / 367  254 / 367  255 / 367  256 / 367  257 / 367  258 / 367  259 / 367  260 / 367  261 / 367  262 / 367  263 / 367  264 / 367  265 / 367  266 / 367  267 / 367  268 / 367  269 / 367  270 / 367  271 / 367  272 / 367  273 / 367  274 / 367  275 / 367  276 / 367  277 / 367  278 / 367  279 / 367  280 / 367  281 / 367  282 / 367  283 / 367  284 / 367  285 / 367  286 / 367  287 / 367  288 / 367  289 / 367  290 / 367  291 / 367  292 / 367  293 / 367  294 / 367  295 / 367  296 / 367  297 / 367  298 / 367  299 / 367  300 / 367  301 / 367  302 / 367  303 / 367  304 / 367  305 / 367  306 / 367  307 / 367  308 / 367  309 / 367  310 / 367  311 / 367  312 / 367  313 / 367  314 / 367  315 / 367  316 / 367  317 / 367  318 / 367  319 / 367  320 / 367  321 / 367  322 / 367  323 / 367  324 / 367  325 / 367  326 / 367  327 / 367  328 / 367  329 / 367  330 / 367  331 / 367  332 / 367  333 / 367  334 / 367  335 / 367  336 / 367  337 / 367  338 / 367  339 / 367  340 / 367  341 / 367  342 / 367  343 / 367  344 / 367  345 / 367  346 / 367  347 / 367  348 / 367  349 / 367  350 / 367  351 / 367  352 / 367  353 / 367  354 / 367  355 / 367  356 / 367  357 / 367  358 / 367  359 / 367  360 / 367  361 / 367  362 / 367  363 / 367  364 / 367  365 / 367tbfast-pair (aa) Version 7.407
+alg=L, model=BLOSUM62, 2.00, -0.10, +0.10, noshift, amax=0.0
+0 thread(s)
+
+outputhat23=16
+Loading 'hat3.seed' ... 
+done.
+Writing hat3 for iterative refinement
+Gap Penalty = -1.53, +0.00, +0.00
+tbutree = 1, compacttree = 0
+Constructing a UPGMA tree ... 
+    0 / 367   10 / 367   20 / 367   30 / 367   40 / 367   50 / 367   60 / 367   70 / 367   80 / 367   90 / 367  100 / 367  110 / 367  120 / 367  130 / 367  140 / 367  150 / 367  160 / 367  170 / 367  180 / 367  190 / 367  200 / 367  210 / 367  220 / 367  230 / 367  240 / 367  250 / 367  260 / 367  270 / 367  280 / 367  290 / 367  300 / 367  310 / 367  320 / 367  330 / 367  340 / 367  350 / 367  360 / 367
+done.
+
+Progressive alignment ... 
+STEP     1 /366 STEP     2 /366 STEP     3 /366 STEP     4 /366 STEP     5 /366 STEP     6 /366 STEP     7 /366 STEP     8 /366 STEP     9 /366 STEP    10 /366 STEP    11 /366 STEP    12 /366 STEP    13 /366 STEP    14 /366 STEP    15 /366 STEP    16 /366 STEP    17 /366 STEP    18 /366 STEP    19 /366 STEP    20 /366 STEP    21 /366 STEP    22 /366 STEP    23 /366 STEP    24 /366 STEP    25 /366 STEP    26 /366 STEP    27 /366 STEP    28 /366 STEP    29 /366 STEP    30 /366 STEP    31 /366 STEP    32 /366 STEP    33 /366 STEP    34 /366 STEP    35 /366 STEP    36 /366 STEP    37 /366 STEP    38 /366 STEP    39 /366 STEP    40 /366 STEP    41 /366 STEP    42 /366 STEP    43 /366 STEP    44 /366 STEP    45 /366 STEP    46 /366 STEP    47 /366 STEP    48 /366 STEP    49 /366 STEP    50 /366 STEP    51 /366 STEP    52 /366 STEP    53 /366 STEP    54 /366 STEP    55 /366 STEP    56 /366 STEP    57 /366 STEP    58 /366 STEP    59 /366 STEP    60 /366 STEP    61 /366 STEP    62 /366 STEP    63 /366 STEP    64 /366 STEP    65 /366 STEP    66 /366 STEP    67 /366 STEP    68 /366 STEP    69 /366 STEP    70 /366 STEP    71 /366 STEP    72 /366 STEP    73 /366 STEP    74 /366 STEP    75 /366 STEP    76 /366 STEP    77 /366 STEP    78 /366 STEP    79 /366 STEP    80 /366 STEP    81 /366 STEP    82 /366 STEP    83 /366 STEP    84 /366 STEP    85 /366 STEP    86 /366 STEP    87 /366 STEP    88 /366 STEP    89 /366 STEP    90 /366 STEP    91 /366 STEP    92 /366 STEP    93 /366 STEP    94 /366 STEP    95 /366 STEP    96 /366 STEP    97 /366 STEP    98 /366 STEP    99 /366 STEP   100 /366 STEP   101 /366 STEP   102 /366 STEP   103 /366 STEP   104 /366 STEP   105 /366 STEP   106 /366 STEP   107 /366 STEP   108 /366 STEP   109 /366 STEP   110 /366 STEP   111 /366 STEP   112 /366 STEP   113 /366 STEP   114 /366 STEP   115 /366 STEP   116 /366 STEP   117 /366 STEP   118 /366 STEP   119 /366 STEP   120 /366 STEP   121 /366 STEP   122 /366 STEP   123 /366 STEP   124 /366 STEP   125 /366 STEP   126 /366 STEP   127 /366 STEP   128 /366 STEP   129 /366 STEP   130 /366 STEP   131 /366 STEP   132 /366 STEP   133 /366 STEP   134 /366 STEP   135 /366 STEP   136 /366 STEP   137 /366 STEP   138 /366 STEP   139 /366 STEP   140 /366 STEP   141 /366 STEP   142 /366 STEP   143 /366 STEP   144 /366 STEP   145 /366 STEP   146 /366 STEP   147 /366 STEP   148 /366 STEP   149 /366 STEP   150 /366 STEP   151 /366 STEP   152 /366 STEP   153 /366 STEP   154 /366 STEP   155 /366 STEP   156 /366 STEP   157 /366 STEP   158 /366 STEP   159 /366 STEP   160 /366 STEP   161 /366 STEP   162 /366 STEP   163 /366 STEP   164 /366 STEP   165 /366 STEP   166 /366 STEP   167 /366 STEP   168 /366 STEP   169 /366 STEP   170 /366 STEP   171 /366 STEP   172 /366 STEP   173 /366 STEP   174 /366 STEP   175 /366 STEP   176 /366 STEP   177 /366 STEP   178 /366 STEP   179 /366 STEP   180 /366 STEP   181 /366 STEP   182 /366 STEP   183 /366 STEP   184 /366 STEP   185 /366 STEP   186 /366 STEP   187 /366 STEP   188 /366 STEP   189 /366 STEP   190 /366 STEP   191 /366 STEP   192 /366 STEP   193 /366 STEP   194 /366 STEP   195 /366 STEP   196 /366 STEP   197 /366 STEP   198 /366 STEP   199 /366 STEP   200 /366 STEP   201 /366 STEP   202 /366 STEP   203 /366 STEP   204 /366 STEP   205 /366 STEP   206 /366 STEP   207 /366 STEP   208 /366 STEP   209 /366 STEP   210 /366 STEP   211 /366 STEP   212 /366 STEP   213 /366 STEP   214 /366 STEP   215 /366 STEP   216 /366 STEP   217 /366 STEP   218 /366 STEP   219 /366 STEP   220 /366 STEP   221 /366 STEP   222 /366 STEP   223 /366 STEP   224 /366 STEP   225 /366 STEP   226 /366 STEP   227 /366 STEP   228 /366 STEP   229 /366 STEP   230 /366 STEP   231 /366 STEP   232 /366 STEP   233 /366 STEP   234 /366 STEP   235 /366 STEP   236 /366 STEP   237 /366 STEP   238 /366 STEP   239 /366 STEP   240 /366 STEP   241 /366 STEP   242 /366 STEP   243 /366 STEP   244 /366 STEP   245 /366 STEP   246 /366 STEP   247 /366 STEP   248 /366 STEP   249 /366 STEP   250 /366 STEP   251 /366 STEP   252 /366 STEP   253 /366 STEP   254 /366 STEP   255 /366 STEP   256 /366 STEP   257 /366 STEP   258 /366 STEP   259 /366 STEP   260 /366 STEP   261 /366 STEP   262 /366 STEP   263 /366 STEP   264 /366 STEP   265 /366 STEP   266 /366 STEP   267 /366 STEP   268 /366 STEP   269 /366 STEP   270 /366 STEP   271 /366 STEP   272 /366 STEP   273 /366 STEP   274 /366 STEP   275 /366 STEP   276 /366 STEP   277 /366 STEP   278 /366 STEP   279 /366 STEP   280 /366 STEP   281 /366 STEP   282 /366 STEP   283 /366 STEP   284 /366 STEP   285 /366 STEP   286 /366 STEP   287 /366 STEP   288 /366 STEP   289 /366 STEP   290 /366 STEP   291 /366 STEP   292 /366 STEP   293 /366 STEP   294 /366 STEP   295 /366 STEP   296 /366 STEP   297 /366 STEP   298 /366 STEP   299 /366 STEP   300 /366 STEP   301 /366 STEP   302 /366 STEP   303 /366 STEP   304 /366 STEP   305 /366 STEP   306 /366 STEP   307 /366 STEP   308 /366 STEP   309 /366 STEP   310 /366 STEP   311 /366 STEP   312 /366 STEP   313 /366 STEP   314 /366 STEP   315 /366 STEP   316 /366 STEP   317 /366 STEP   318 /366 STEP   319 /366 STEP   320 /366 STEP   321 /366 STEP   322 /366 STEP   323 /366 STEP   324 /366 STEP   325 /366 STEP   326 /366 STEP   327 /366 STEP   328 /366 STEP   329 /366 STEP   330 /366 STEP   331 /366 STEP   332 /366 STEP   333 /366 STEP   334 /366 STEP   335 /366 STEP   336 /366 STEP   337 /366 STEP   338 /366 STEP   339 /366 STEP   340 /366 STEP   341 /366 STEP   342 /366 STEP   343 /366 STEP   344 /366 STEP   345 /366 STEP   346 /366 STEP   347 /366 STEP   348 /366 STEP   349 /366 STEP   350 /366 STEP   351 /366 STEP   352 /366 STEP   353 /366 STEP   354 /366 STEP   355 /366 STEP   356 /366 STEP   357 /366 STEP   358 /366 
+Reallocating..done. *alloclen = 1527
+STEP   359 /366 STEP   360 /366 STEP   361 /366 STEP   362 /366 STEP   363 /366 STEP   364 /366 STEP   365 /366 STEP   366 /366 
+done.
+tbfast (aa) Version 7.407
+alg=A, model=BLOSUM62, 1.53, -0.00, -0.00, noshift, amax=0.0
+1 thread(s)
+
+minimumweight = 0.000010
+autosubalignment = 0.000000
+nthread = 0
+randomseed = 0
+blosum 62 / kimura 200
+poffset = 0
+niter = 16
+sueff_global = 0.100000
+nadd = 16
+Loading 'hat3' ... done.
+
+    0 / 367   10 / 367   20 / 367   30 / 367   40 / 367   50 / 367   60 / 367   70 / 367   80 / 367   90 / 367  100 / 367  110 / 367  120 / 367  130 / 367  140 / 367  150 / 367  160 / 367  170 / 367  180 / 367  190 / 367  200 / 367  210 / 367  220 / 367  230 / 367  240 / 367  250 / 367  260 / 367  270 / 367  280 / 367  290 / 367  300 / 367  310 / 367  320 / 367  330 / 367  340 / 367  350 / 367  360 / 367
+Segment   1/  1    1- 426
+STEP 001-001-0  identical.   STEP 001-001-1  identical.   STEP 001-002-0  identical.   STEP 001-002-1  identical.   STEP 001-003-0  identical.   STEP 001-003-1  identical.   STEP 001-004-0  identical.   STEP 001-004-1  identical.   STEP 001-005-0  identical.   STEP 001-005-1  identical.   STEP 001-006-0  identical.   STEP 001-006-1  identical.   STEP 001-007-0  identical.   STEP 001-007-1  identical.   STEP 001-008-0  identical.   STEP 001-008-1  identical.   STEP 001-009-0  identical.   STEP 001-009-1  identical.   STEP 001-010-0  identical.   STEP 001-010-1  identical.   STEP 001-011-0  identical.   STEP 001-011-1  identical.   STEP 001-012-0  identical.   STEP 001-012-1  identical.   STEP 001-013-0  identical.   STEP 001-013-1  identical.   STEP 001-014-0  identical.   STEP 001-014-1  identical.   STEP 001-015-0  identical.   STEP 001-015-1  identical.   STEP 001-016-0  identical.   STEP 001-016-1  rejected.STEP 001-017-0  identical.   STEP 001-017-1  identical.   STEP 001-018-0  identical.   STEP 001-018-1  identical.   STEP 001-019-0  identical.   STEP 001-019-1  identical.   STEP 001-020-0  identical.   STEP 001-020-1  identical.   STEP 001-021-0  identical.   STEP 001-021-1  identical.   STEP 001-022-0  identical.   STEP 001-022-1  identical.   STEP 001-023-0  identical.   STEP 001-023-1  identical.   STEP 001-024-0  identical.   STEP 001-024-1  identical.   STEP 001-025-0  identical.   STEP 001-025-1  identical.   STEP 001-026-0  identical.   STEP 001-026-1  identical.   STEP 001-027-0  identical.   STEP 001-027-1  identical.   STEP 001-028-0  identical.   STEP 001-028-1  identical.   STEP 001-029-0  identical.   STEP 001-029-1  identical.   STEP 001-030-0  identical.   STEP 001-030-1  identical.   STEP 001-031-0  identical.   STEP 001-031-1  identical.   STEP 001-032-0  identical.   STEP 001-032-1  identical.   STEP 001-033-0  identical.   STEP 001-033-1  identical.   STEP 001-034-0  identical.   STEP 001-034-1  identical.   STEP 001-035-0  identical.   STEP 001-035-1  identical.   STEP 001-036-0  identical.   STEP 001-036-1  identical.   STEP 001-037-0  identical.   STEP 001-037-1  identical.   STEP 001-038-0  identical.   STEP 001-038-1  identical.   STEP 001-039-0  identical.   STEP 001-039-1  identical.   STEP 001-040-0  identical.   STEP 001-040-1  identical.   STEP 001-041-0  identical.   STEP 001-041-1  identical.   STEP 001-042-0  identical.   STEP 001-042-1  identical.   STEP 001-043-0  identical.   STEP 001-043-1  identical.   STEP 001-044-0  identical.   STEP 001-044-1  identical.   STEP 001-045-0  identical.   STEP 001-045-1  identical.   STEP 001-046-0  rejected.STEP 001-046-1  identical.   STEP 001-047-0  identical.   STEP 001-047-1  identical.   STEP 001-048-0  identical.   STEP 001-048-1  identical.   STEP 001-049-0  identical.   STEP 001-049-1  identical.   STEP 001-050-0  identical.   STEP 001-050-1  identical.   STEP 001-051-0  identical.   STEP 001-051-1  identical.   STEP 001-052-0  identical.   STEP 001-052-1  identical.   STEP 001-053-0  identical.   STEP 001-053-1  identical.   STEP 001-054-0  identical.   STEP 001-054-1  identical.   STEP 001-055-0  identical.   STEP 001-055-1  rejected.STEP 001-056-0  identical.   STEP 001-056-1  identical.   STEP 001-057-0  identical.   STEP 001-057-1  identical.   STEP 001-058-0  identical.   STEP 001-058-1  identical.   STEP 001-059-0  identical.   STEP 001-059-1  identical.   STEP 001-060-0  identical.   STEP 001-060-1  identical.   STEP 001-061-0  identical.   STEP 001-061-1  identical.   STEP 001-062-0  identical.   STEP 001-062-1  identical.   STEP 001-063-0  identical.   STEP 001-063-1  identical.   STEP 001-064-0  identical.   STEP 001-064-1  identical.   STEP 001-065-0  identical.   STEP 001-065-1  identical.   STEP 001-066-0  identical.   STEP 001-066-1  identical.   STEP 001-067-0  identical.   STEP 001-067-1  identical.   STEP 001-068-0  identical.   STEP 001-068-1  identical.   STEP 001-069-0  rejected.STEP 001-069-1  identical.   STEP 001-070-0  identical.   STEP 001-070-1  identical.   STEP 001-071-0  identical.   STEP 001-071-1  identical.   STEP 001-072-0  identical.   STEP 001-072-1  identical.   STEP 001-073-0  identical.   STEP 001-073-1  identical.   STEP 001-074-0  identical.   STEP 001-074-1  identical.   STEP 001-075-0  identical.   STEP 001-075-1  identical.   STEP 001-076-0  identical.   STEP 001-076-1  identical.   STEP 001-077-0  identical.   STEP 001-077-1  identical.   STEP 001-078-0  identical.   STEP 001-078-1  identical.   STEP 001-079-0  identical.   STEP 001-079-1  identical.   STEP 001-080-0  identical.   STEP 001-080-1  identical.   STEP 001-081-0  identical.   STEP 001-081-1  identical.   STEP 001-082-0  identical.   STEP 001-082-1  identical.   STEP 001-083-0  identical.   STEP 001-083-1  identical.   STEP 001-084-0  identical.   STEP 001-084-1  identical.   STEP 001-085-0  identical.   STEP 001-085-1  identical.   STEP 001-086-0  identical.   STEP 001-086-1  identical.   STEP 001-087-0  identical.   STEP 001-087-1  identical.   STEP 001-088-0  identical.   STEP 001-088-1  identical.   STEP 001-089-0  identical.   STEP 001-089-1  identical.   STEP 001-090-0  identical.   STEP 001-090-1  identical.   STEP 001-091-0  identical.   STEP 001-091-1  identical.   STEP 001-092-0  identical.   STEP 001-092-1  identical.   STEP 001-093-0  identical.   STEP 001-093-1  identical.   STEP 001-094-0  identical.   STEP 001-094-1  identical.   STEP 001-095-0  identical.   STEP 001-095-1  identical.   STEP 001-096-0  identical.   STEP 001-096-1  identical.   STEP 001-097-0  identical.   STEP 001-097-1  identical.   STEP 001-098-0  identical.   STEP 001-098-1  identical.   STEP 001-099-0  identical.   STEP 001-099-1  identical.   STEP 001-100-0  identical.   STEP 001-100-1  identical.   STEP 001-101-0  identical.   STEP 001-101-1  identical.   STEP 001-102-0  identical.   STEP 001-102-1  identical.   STEP 001-103-0  identical.   STEP 001-103-1  identical.   STEP 001-104-0  identical.   STEP 001-104-1  identical.   STEP 001-105-0  identical.   STEP 001-105-1  identical.   STEP 001-106-0  identical.   STEP 001-106-1  identical.   STEP 001-107-0  identical.   STEP 001-107-1  accepted.STEP 001-108-0  identical.   STEP 001-108-1  identical.   STEP 001-109-0  identical.   STEP 001-109-1  identical.   STEP 001-110-0  identical.   STEP 001-110-1  identical.   STEP 001-111-0  identical.   STEP 001-111-1  identical.   STEP 001-112-0  identical.   STEP 001-112-1  identical.   STEP 001-113-0  identical.   STEP 001-113-1  identical.   STEP 001-114-0  identical.   STEP 001-114-1  identical.   STEP 001-115-0  identical.   STEP 001-115-1  identical.   STEP 001-116-0  identical.   STEP 001-116-1  identical.   STEP 001-117-0  identical.   STEP 001-117-1  identical.   STEP 001-118-0  identical.   STEP 001-118-1  identical.   STEP 001-119-0  identical.   STEP 001-119-1  identical.   STEP 001-120-0  identical.   STEP 001-120-1  identical.   STEP 001-121-0  identical.   STEP 001-121-1  identical.   STEP 001-122-0  identical.   STEP 001-122-1  identical.   STEP 001-123-0  rejected.STEP 001-123-1  identical.   STEP 001-124-0  identical.   STEP 001-124-1  identical.   STEP 001-125-0  identical.   STEP 001-125-1  identical.   STEP 001-126-0  identical.   STEP 001-126-1  identical.   STEP 001-127-0  identical.   STEP 001-127-1  identical.   STEP 001-128-0  identical.   STEP 001-128-1  identical.   STEP 001-129-0  identical.   STEP 001-129-1  identical.   STEP 001-130-0  rejected.STEP 001-130-1  identical.   STEP 001-131-0  identical.   STEP 001-131-1  identical.   STEP 001-132-0  identical.   STEP 001-132-1  identical.   STEP 001-133-0  identical.   STEP 001-133-1  identical.   STEP 001-134-0  identical.   STEP 001-134-1  identical.   STEP 001-135-0  identical.   STEP 001-135-1  identical.   STEP 001-136-0  identical.   STEP 001-136-1  identical.   STEP 001-137-0  identical.   STEP 001-137-1  identical.   STEP 001-138-0  identical.   STEP 001-138-1  identical.   STEP 001-139-0  identical.   STEP 001-139-1  identical.   STEP 001-140-0  identical.   STEP 001-140-1  identical.   STEP 001-141-0  identical.   STEP 001-141-1  identical.   STEP 001-142-0  identical.   STEP 001-142-1  identical.   STEP 001-143-0  identical.   STEP 001-143-1  identical.   STEP 001-144-0  identical.   STEP 001-144-1  identical.   STEP 001-145-0  identical.   STEP 001-145-1  identical.   STEP 001-146-0  identical.   STEP 001-146-1  identical.   STEP 001-147-0  identical.   STEP 001-147-1  identical.   STEP 001-148-0  identical.   STEP 001-148-1  identical.   STEP 001-149-0  identical.   STEP 001-149-1  identical.   STEP 001-150-0  identical.   STEP 001-150-1  accepted.STEP 001-151-0  identical.   STEP 001-151-1  identical.   STEP 001-152-0  identical.   STEP 001-152-1  identical.   STEP 001-153-0  identical.   STEP 001-153-1  identical.   STEP 001-154-0  identical.   STEP 001-154-1  identical.   STEP 001-155-0  rejected.STEP 001-155-1  identical.   STEP 001-156-0  identical.   STEP 001-156-1  identical.   STEP 001-157-0  identical.   STEP 001-157-1  identical.   STEP 001-158-0  identical.   STEP 001-158-1  identical.   STEP 001-159-0  identical.   STEP 001-159-1  identical.   STEP 001-160-0  identical.   STEP 001-160-1  identical.   STEP 001-161-0  identical.   STEP 001-161-1  identical.   STEP 001-162-0  identical.   STEP 001-162-1  identical.   STEP 001-163-0  identical.   STEP 001-163-1  identical.   STEP 001-164-0  identical.   STEP 001-164-1  identical.   STEP 001-165-0  identical.   STEP 001-165-1  identical.   STEP 001-166-0  identical.   STEP 001-166-1  identical.   STEP 001-167-0  identical.   STEP 001-167-1  identical.   STEP 001-168-0  identical.   STEP 001-168-1  identical.   STEP 001-169-0  identical.   STEP 001-169-1  identical.   STEP 001-170-0  identical.   STEP 001-170-1  identical.   STEP 001-171-0  identical.   STEP 001-171-1  identical.   STEP 001-172-0  identical.   STEP 001-172-1  rejected.STEP 001-173-0  identical.   STEP 001-173-1  accepted.STEP 001-174-0  identical.   STEP 001-174-1  identical.   STEP 001-175-0  identical.   STEP 001-175-1  identical.   STEP 001-176-0  identical.   STEP 001-176-1  identical.   STEP 001-177-0  identical.   STEP 001-177-1  identical.   STEP 001-178-0  identical.   STEP 001-178-1  identical.   STEP 001-179-0  identical.   STEP 001-179-1  identical.   STEP 001-180-0  accepted.STEP 001-180-1  identical.   STEP 001-181-0  identical.   STEP 001-181-1  identical.   STEP 001-182-0  identical.   STEP 001-182-1  identical.   STEP 001-183-0  accepted.STEP 001-183-1  identical.   STEP 001-184-0  identical.   STEP 001-184-1  identical.   STEP 001-185-0  identical.   STEP 001-185-1  identical.   STEP 001-186-0  identical.   STEP 001-186-1  identical.   STEP 001-187-0  identical.   STEP 001-187-1  identical.   STEP 001-188-0  identical.   STEP 001-188-1  accepted.STEP 001-189-0  identical.   STEP 001-189-1  identical.   STEP 001-190-0  identical.   STEP 001-190-1  identical.   STEP 001-191-0  identical.   STEP 001-191-1  identical.   STEP 001-192-0  identical.   STEP 001-192-1  identical.   STEP 001-193-0  identical.   STEP 001-193-1  identical.   STEP 001-194-0  identical.   STEP 001-194-1  identical.   STEP 001-195-0  identical.   STEP 001-195-1  identical.   STEP 001-196-0  identical.   STEP 001-196-1  identical.   STEP 001-197-0  identical.   STEP 001-197-1  identical.   STEP 001-198-0  identical.   STEP 001-198-1  rejected.STEP 001-199-0  identical.   STEP 001-199-1  rejected.STEP 001-200-0  rejected.STEP 001-200-1  identical.   STEP 001-201-0  identical.   STEP 001-201-1  identical.   STEP 001-202-0  identical.   STEP 001-202-1  rejected.STEP 001-203-0  identical.   STEP 001-203-1  identical.   STEP 001-204-0  identical.   STEP 001-204-1  identical.   STEP 001-205-0  identical.   STEP 001-205-1  identical.   STEP 001-206-0  identical.   STEP 001-206-1  identical.   STEP 001-207-0  identical.   STEP 001-207-1  identical.   STEP 001-208-0  identical.   STEP 001-208-1  identical.   STEP 001-209-0  identical.   STEP 001-209-1  identical.   STEP 001-210-0  identical.   STEP 001-210-1  identical.   STEP 001-211-0  identical.   STEP 001-211-1  identical.   STEP 001-212-0  identical.   STEP 001-212-1  identical.   STEP 001-213-0  identical.   STEP 001-213-1  identical.   STEP 001-214-0  rejected.STEP 001-214-1  identical.   STEP 001-215-0  identical.   STEP 001-215-1  identical.   STEP 001-216-0  identical.   STEP 001-216-1  rejected.STEP 001-217-0  identical.   STEP 001-217-1  identical.   STEP 001-218-0  identical.   STEP 001-218-1  identical.   STEP 001-219-0  identical.   STEP 001-219-1  identical.   STEP 001-220-0  identical.   STEP 001-220-1  identical.   STEP 001-221-0  identical.   STEP 001-221-1  identical.   STEP 001-222-0  identical.   STEP 001-222-1  identical.   STEP 001-223-0  accepted.STEP 001-223-1  identical.   STEP 001-224-0  identical.   STEP 001-224-1  identical.   STEP 001-225-0  identical.   STEP 001-225-1  identical.   STEP 001-226-0  identical.   STEP 001-226-1  identical.   STEP 001-227-0  identical.   STEP 001-227-1  identical.   STEP 001-228-0  rejected.STEP 001-228-1  identical.   STEP 001-229-0  identical.   STEP 001-229-1  identical.   STEP 001-230-0  identical.   STEP 001-230-1  identical.   STEP 001-231-0  identical.   STEP 001-231-1  identical.   STEP 001-232-0  identical.   STEP 001-232-1  identical.   STEP 001-233-0  identical.   STEP 001-233-1  identical.   STEP 001-234-0  rejected.STEP 001-234-1  identical.   STEP 001-235-0  identical.   STEP 001-235-1  identical.   STEP 001-236-0  identical.   STEP 001-236-1  identical.   STEP 001-237-0  identical.   STEP 001-237-1  identical.   STEP 001-238-0  identical.   STEP 001-238-1  identical.   STEP 001-239-0  identical.   STEP 001-239-1  identical.   STEP 001-240-0  identical.   STEP 001-240-1  identical.   STEP 001-241-0  identical.   STEP 001-241-1  rejected.STEP 001-242-0  identical.   STEP 001-242-1  identical.   STEP 001-243-0  rejected.STEP 001-243-1  identical.   STEP 001-244-0  identical.   STEP 001-244-1  identical.   STEP 001-245-0  identical.   STEP 001-245-1  identical.   STEP 001-246-0  identical.   STEP 001-246-1  identical.   STEP 001-247-0  identical.   STEP 001-247-1  identical.   STEP 001-248-0  accepted.STEP 001-248-1  identical.   STEP 001-249-0  identical.   STEP 001-249-1  rejected.STEP 001-250-0  identical.   STEP 001-250-1  rejected.STEP 001-251-0  rejected.STEP 001-251-1  identical.   STEP 001-252-0  identical.   STEP 001-252-1  identical.   STEP 001-253-0  identical.   STEP 001-253-1  identical.   STEP 001-254-0  identical.   STEP 001-254-1  identical.   STEP 001-255-0  identical.   STEP 001-255-1  identical.   STEP 001-256-0  rejected.STEP 001-256-1  identical.   STEP 001-257-0  identical.   STEP 001-257-1  identical.   STEP 001-258-0  identical.   STEP 001-258-1  identical.   STEP 001-259-0  identical.   STEP 001-259-1  identical.   STEP 001-260-0  identical.   STEP 001-260-1  identical.   STEP 001-261-0  identical.   STEP 001-261-1  identical.   STEP 001-262-0  identical.   STEP 001-262-1  identical.   STEP 001-263-0  identical.   STEP 001-263-1  identical.   STEP 001-264-0  identical.   STEP 001-264-1  identical.   STEP 001-265-0  identical.   STEP 001-265-1  identical.   STEP 001-266-0  identical.   STEP 001-266-1  identical.   STEP 001-267-0  identical.   STEP 001-267-1  identical.   STEP 001-268-0  identical.   STEP 001-268-1  identical.   STEP 001-269-0  identical.   STEP 001-269-1  rejected.STEP 001-270-0  identical.   STEP 001-270-1  identical.   STEP 001-271-0  rejected.STEP 001-271-1  identical.   STEP 001-272-0  identical.   STEP 001-272-1  accepted.STEP 001-273-0  identical.   STEP 001-273-1  rejected.STEP 001-274-0  identical.   STEP 001-274-1  identical.   STEP 001-275-0  identical.   STEP 001-275-1  identical.   STEP 001-276-0  rejected.STEP 001-276-1  identical.   STEP 001-277-0  identical.   STEP 001-277-1  identical.   STEP 001-278-0  identical.   STEP 001-278-1  identical.   STEP 001-279-0  identical.   STEP 001-279-1  identical.   STEP 001-280-0  identical.   STEP 001-280-1  identical.   STEP 001-281-0  rejected.STEP 001-281-1  identical.   STEP 001-282-0  identical.   STEP 001-282-1  rejected.STEP 001-283-0  identical.   STEP 001-283-1  identical.   STEP 001-284-0  identical.   STEP 001-284-1  identical.   STEP 001-285-0  identical.   STEP 001-285-1  rejected.STEP 001-286-0  identical.   STEP 001-286-1  identical.   STEP 001-287-0  identical.   STEP 001-287-1  identical.   STEP 001-288-0  identical.   STEP 001-288-1  identical.   STEP 001-289-0  identical.   STEP 001-289-1  rejected.STEP 001-290-0  rejected.STEP 001-290-1  identical.   STEP 001-291-0  identical.   STEP 001-291-1  rejected.STEP 001-292-0  identical.   STEP 001-292-1  identical.   STEP 001-293-0  identical.   STEP 001-293-1  identical.   STEP 001-294-0  rejected.STEP 001-294-1  rejected.STEP 001-295-0  identical.   STEP 001-295-1  identical.   STEP 001-296-0  identical.   STEP 001-296-1  identical.   STEP 001-297-0  identical.   STEP 001-297-1  identical.   STEP 001-298-0  identical.   STEP 001-298-1  accepted.STEP 001-299-0  identical.   STEP 001-299-1  identical.   STEP 001-300-0  identical.   STEP 001-300-1  rejected.STEP 001-301-0  identical.   STEP 001-301-1  identical.   STEP 001-302-0  identical.   STEP 001-302-1  identical.   STEP 001-303-0  identical.   STEP 001-303-1  identical.   STEP 001-304-0  identical.   STEP 001-304-1  rejected.STEP 001-305-0  identical.   STEP 001-305-1  identical.   STEP 001-306-0  identical.   STEP 001-306-1  identical.   STEP 001-307-0  rejected.STEP 001-307-1  accepted.STEP 001-308-0  rejected.STEP 001-308-1  identical.   STEP 001-309-0  rejected.STEP 001-309-1  rejected.STEP 001-310-0  identical.   STEP 001-310-1  identical.   STEP 001-311-0  identical.   STEP 001-311-1  rejected.STEP 001-312-0  identical.   STEP 001-312-1  accepted.STEP 001-313-0  identical.   STEP 001-313-1  identical.   STEP 001-314-0  rejected.STEP 001-314-1  rejected.STEP 001-315-0  identical.   STEP 001-315-1  identical.   STEP 001-316-0  identical.   STEP 001-316-1  identical.   STEP 001-317-0  identical.   STEP 001-317-1  accepted.STEP 001-318-0  accepted.STEP 001-318-1  accepted.STEP 001-319-0  identical.   STEP 001-319-1  accepted.STEP 001-320-0  rejected.STEP 001-320-1  identical.   STEP 001-321-0  identical.   STEP 001-321-1  rejected.STEP 001-322-0  identical.   STEP 001-322-1  identical.   STEP 001-323-0  rejected.STEP 001-323-1  rejected.STEP 001-324-0  identical.   STEP 001-324-1  identical.   STEP 001-325-0  identical.   STEP 001-325-1  identical.   STEP 001-326-0  identical.   STEP 001-326-1  rejected.STEP 001-327-0  identical.   STEP 001-327-1  accepted.STEP 001-328-0  identical.   STEP 001-328-1  identical.   STEP 001-329-0  rejected.STEP 001-329-1  identical.   STEP 001-330-0  accepted.STEP 001-330-1  accepted.STEP 001-331-0  identical.   STEP 001-331-1  identical.   STEP 001-332-0  identical.   STEP 001-332-1  rejected.STEP 001-333-0  identical.   STEP 001-333-1  rejected.STEP 001-334-0  identical.   STEP 001-334-1  accepted.STEP 001-335-0  identical.   STEP 001-335-1  rejected.STEP 001-336-0  rejected.STEP 001-336-1  identical.   STEP 001-337-0  identical.   STEP 001-337-1  accepted.STEP 001-338-0  identical.   STEP 001-338-1  identical.   STEP 001-339-0  rejected.STEP 001-339-1  accepted.STEP 001-340-0  rejected.STEP 001-340-1  rejected.STEP 001-341-0  rejected.STEP 001-341-1  rejected.STEP 001-342-0  rejected.STEP 001-342-1  rejected.STEP 001-343-0  identical.   STEP 001-343-1  accepted.STEP 001-344-0  rejected.STEP 001-344-1  rejected.STEP 001-345-0  identical.   STEP 001-345-1  identical.   STEP 001-346-0  rejected.STEP 001-346-1  accepted.STEP 001-347-0  rejected.STEP 001-347-1  accepted.STEP 001-348-0  rejected.STEP 001-348-1  rejected.STEP 001-349-0  rejected.STEP 001-349-1  rejected.STEP 001-350-0  rejected.STEP 001-350-1  rejected.STEP 001-351-0  rejected.STEP 001-351-1  rejected.STEP 001-352-0  rejected.STEP 001-352-1  rejected.STEP 001-353-0  identical.   STEP 001-353-1  accepted.STEP 001-354-0  rejected.STEP 001-354-1  rejected.STEP 001-355-0  rejected.STEP 001-355-1  rejected.STEP 001-356-0  rejected.STEP 001-356-1  rejected.STEP 001-357-0  rejected.STEP 001-357-1  accepted.STEP 001-358-0  rejected.STEP 001-358-1  rejected.STEP 001-359-0  accepted.STEP 001-359-1  rejected.STEP 001-360-0  identical.   STEP 001-360-1  rejected.STEP 001-361-0  rejected.STEP 001-361-1  accepted.STEP 001-362-0  accepted.STEP 001-362-1  rejected.STEP 001-363-0  accepted.STEP 001-363-1  rejected.STEP 001-364-0  accepted.STEP 001-364-1  rejected.STEP 001-365-0  rejected.STEP 001-365-1  rejected.STEP 001-366-1  identical.   STEP 002-366-1  identical.   STEP 002-365-0  rejected.STEP 002-365-1  rejected.STEP 002-364-0  identical.   STEP 002-364-1  rejected.STEP 002-363-0  identical.   STEP 002-363-1  rejected.STEP 002-362-0  identical.   STEP 002-362-1  rejected.STEP 002-361-0  identical.   STEP 002-361-1  rejected.STEP 002-360-0  accepted.STEP 002-360-1  accepted.STEP 002-359-0  accepted.STEP 002-359-1  rejected.STEP 002-358-0  rejected.STEP 002-358-1  rejected.STEP 002-357-0  identical.   STEP 002-357-1  identical.   STEP 002-356-0  identical.   STEP 002-356-1  rejected.STEP 002-355-0  identical.   STEP 002-355-1  accepted.STEP 002-354-0  identical.   STEP 002-354-1  rejected.STEP 002-353-0  identical.   STEP 002-353-1  rejected.STEP 002-352-0  rejected.STEP 002-352-1  rejected.STEP 002-351-0  rejected.STEP 002-351-1  rejected.STEP 002-350-0  rejected.STEP 002-350-1  rejected.STEP 002-349-0  accepted.STEP 002-349-1  rejected.STEP 002-348-0  identical.   STEP 002-348-1  rejected.STEP 002-347-0  accepted.STEP 002-347-1  accepted.STEP 002-346-0  accepted.STEP 002-346-1  accepted.STEP 002-345-0  identical.   STEP 002-345-1  identical.   STEP 002-344-0  rejected.STEP 002-344-1  accepted.STEP 002-343-0  identical.   STEP 002-343-1  accepted.STEP 002-342-0  rejected.STEP 002-342-1  rejected.STEP 002-341-0  rejected.STEP 002-341-1  rejected.STEP 002-340-0  rejected.STEP 002-340-1  identical.   STEP 002-339-0  rejected.STEP 002-339-1  rejected.STEP 002-338-0  identical.   STEP 002-338-1  identical.   STEP 002-337-0  identical.   STEP 002-337-1  identical.   STEP 002-336-0  accepted.STEP 002-336-1  accepted.STEP 002-335-0  identical.   STEP 002-335-1  rejected.STEP 002-334-0  identical.   STEP 002-334-1  identical.   STEP 002-333-0  identical.   STEP 002-333-1  rejected.STEP 002-332-0  identical.   STEP 002-332-1  identical.   STEP 002-331-0  identical.   STEP 002-331-1  identical.   STEP 002-330-0  accepted.STEP 002-330-1  accepted.STEP 002-329-0  rejected.STEP 002-329-1  identical.   STEP 002-328-0  identical.   STEP 002-328-1  identical.   STEP 002-327-0  identical.   STEP 002-327-1  identical.   STEP 002-326-0  identical.   STEP 002-326-1  rejected.STEP 002-325-0  identical.   STEP 002-325-1  identical.   STEP 002-324-0  identical.   STEP 002-324-1  identical.   STEP 002-323-0  identical.   STEP 002-323-1  rejected.STEP 002-322-0  identical.   STEP 002-322-1  identical.   STEP 002-321-0  identical.   STEP 002-321-1  rejected.STEP 002-320-0  rejected.STEP 002-320-1  identical.   STEP 002-319-0  identical.   STEP 002-319-1  rejected.STEP 002-318-0  identical.   STEP 002-318-1  identical.   STEP 002-317-0  identical.   STEP 002-317-1  identical.   STEP 002-316-0  identical.   STEP 002-316-1  identical.   STEP 002-315-0  identical.   STEP 002-315-1  identical.   STEP 002-314-0  identical.   STEP 002-314-1  accepted.STEP 002-313-0  identical.   STEP 002-313-1  identical.   STEP 002-312-0  identical.   STEP 002-312-1  identical.   STEP 002-311-0  identical.   STEP 002-311-1  rejected.STEP 002-310-0  identical.   STEP 002-310-1  identical.   STEP 002-309-0  identical.   STEP 002-309-1  identical.   STEP 002-308-0  identical.   STEP 002-308-1  identical.   STEP 002-307-0  rejected.STEP 002-307-1  identical.   STEP 002-306-0  identical.   STEP 002-306-1  identical.   STEP 002-305-0  identical.   STEP 002-305-1  identical.   STEP 002-304-0  identical.   STEP 002-304-1  identical.   STEP 002-303-0  identical.   STEP 002-303-1  identical.   STEP 002-302-0  identical.   STEP 002-302-1  identical.   STEP 002-301-0  identical.   STEP 002-301-1  identical.   STEP 002-300-0  identical.   STEP 002-300-1  rejected.STEP 002-299-0  identical.   STEP 002-299-1  identical.   STEP 002-298-0  identical.   STEP 002-298-1  identical.   STEP 002-297-0  identical.   STEP 002-297-1  identical.   STEP 002-296-0  identical.   STEP 002-296-1  identical.   STEP 002-295-0  identical.   STEP 002-295-1  identical.   STEP 002-294-0  identical.   STEP 002-294-1  rejected.STEP 002-293-0  identical.   STEP 002-293-1  identical.   STEP 002-292-0  identical.   STEP 002-292-1  identical.   STEP 002-291-0  identical.   STEP 002-291-1  rejected.STEP 002-290-0  identical.   STEP 002-290-1  identical.   STEP 002-289-0  identical.   STEP 002-289-1  rejected.STEP 002-288-0  identical.   STEP 002-288-1  identical.   STEP 002-287-0  identical.   STEP 002-287-1  identical.   STEP 002-286-0  identical.   STEP 002-286-1  identical.   STEP 002-285-0  identical.   STEP 002-285-1  rejected.STEP 002-284-0  identical.   STEP 002-284-1  identical.   STEP 002-283-0  identical.   STEP 002-283-1  identical.   STEP 002-282-0  identical.   STEP 002-282-1  rejected.STEP 002-281-0  identical.   STEP 002-281-1  identical.   STEP 002-280-0  identical.   STEP 002-280-1  identical.   STEP 002-279-0  identical.   STEP 002-279-1  identical.   STEP 002-278-0  identical.   STEP 002-278-1  identical.   STEP 002-277-0  identical.   STEP 002-277-1  identical.   STEP 002-276-0  identical.   STEP 002-276-1  rejected.STEP 002-275-0  identical.   STEP 002-275-1  identical.   STEP 002-274-0  identical.   STEP 002-274-1  identical.   STEP 002-273-0  identical.   STEP 002-273-1  rejected.STEP 002-272-0  identical.   STEP 002-272-1  identical.   STEP 002-271-0  rejected.STEP 002-271-1  identical.   STEP 002-270-0  identical.   STEP 002-270-1  identical.   STEP 002-269-0  identical.   STEP 002-269-1  rejected.STEP 002-268-0  identical.   STEP 002-268-1  identical.   STEP 002-267-0  identical.   STEP 002-267-1  identical.   STEP 002-266-0  identical.   STEP 002-266-1  identical.   STEP 002-265-0  identical.   STEP 002-265-1  identical.   STEP 002-264-0  identical.   STEP 002-264-1  identical.   STEP 002-263-0  identical.   STEP 002-263-1  identical.   STEP 002-262-0  identical.   STEP 002-262-1  identical.   STEP 002-261-0  identical.   STEP 002-261-1  identical.   STEP 002-260-0  identical.   STEP 002-260-1  identical.   STEP 002-259-0  identical.   STEP 002-259-1  identical.   STEP 002-258-0  accepted.STEP 002-258-1  identical.   STEP 002-257-0  identical.   STEP 002-257-1  identical.   STEP 002-256-0  identical.   STEP 002-256-1  identical.   STEP 002-255-0  identical.   STEP 002-255-1  identical.   STEP 002-254-0  identical.   STEP 002-254-1  identical.   STEP 002-253-0  identical.   STEP 002-253-1  identical.   STEP 002-252-0  identical.   STEP 002-252-1  identical.   STEP 002-251-0  identical.   STEP 002-251-1  identical.   STEP 002-250-0  identical.   STEP 002-250-1  identical.   STEP 002-249-0  identical.   STEP 002-249-1  rejected.STEP 002-248-0  identical.   STEP 002-248-1  identical.   STEP 002-247-0  identical.   STEP 002-247-1  identical.   STEP 002-246-0  identical.   STEP 002-246-1  rejected.STEP 002-245-0  identical.   STEP 002-245-1  identical.   STEP 002-244-0  identical.   STEP 002-244-1  identical.   STEP 002-243-0  identical.   STEP 002-243-1  identical.   STEP 002-242-0  identical.   STEP 002-242-1  identical.   STEP 002-241-0  identical.   STEP 002-241-1  rejected.STEP 002-240-0  identical.   STEP 002-240-1  identical.   STEP 002-239-0  identical.   STEP 002-239-1  identical.   STEP 002-238-0  identical.   STEP 002-238-1  identical.   STEP 002-237-0  identical.   STEP 002-237-1  identical.   STEP 002-236-0  identical.   STEP 002-236-1  identical.   STEP 002-235-0  identical.   STEP 002-235-1  identical.   STEP 002-234-0  identical.   STEP 002-234-1  identical.   STEP 002-233-0  identical.   STEP 002-233-1  identical.   STEP 002-232-0  identical.   STEP 002-232-1  identical.   STEP 002-231-0  identical.   STEP 002-231-1  identical.   STEP 002-230-0  identical.   STEP 002-230-1  identical.   STEP 002-229-0  identical.   STEP 002-229-1  identical.   STEP 002-228-0  rejected.STEP 002-228-1  identical.   STEP 002-227-0  identical.   STEP 002-227-1  identical.   STEP 002-226-0  identical.   STEP 002-226-1  identical.   STEP 002-225-0  identical.   STEP 002-225-1  identical.   STEP 002-224-0  identical.   STEP 002-224-1  identical.   STEP 002-223-0  identical.   STEP 002-223-1  identical.   STEP 002-222-0  identical.   STEP 002-222-1  identical.   STEP 002-221-0  identical.   STEP 002-221-1  identical.   STEP 002-220-0  identical.   STEP 002-220-1  identical.   STEP 002-219-0  identical.   STEP 002-219-1  identical.   STEP 002-218-0  identical.   STEP 002-218-1  identical.   STEP 002-217-0  identical.   STEP 002-217-1  identical.   STEP 002-216-0  accepted.STEP 002-216-1  rejected.STEP 002-215-0  identical.   STEP 002-215-1  identical.   STEP 002-214-0  rejected.STEP 002-214-1  identical.   STEP 002-213-0  identical.   STEP 002-213-1  identical.   STEP 002-212-0  identical.   STEP 002-212-1  identical.   STEP 002-211-0  identical.   STEP 002-211-1  identical.   STEP 002-210-0  identical.   STEP 002-210-1  identical.   STEP 002-209-0  identical.   STEP 002-209-1  identical.   STEP 002-208-0  identical.   STEP 002-208-1  identical.   STEP 002-207-0  identical.   STEP 002-207-1  identical.   STEP 002-206-0  identical.   STEP 002-206-1  identical.   STEP 002-205-0  identical.   STEP 002-205-1  identical.   STEP 002-204-0  identical.   STEP 002-204-1  identical.   STEP 002-203-0  identical.   STEP 002-203-1  identical.   STEP 002-202-0  identical.   STEP 002-202-1  rejected.STEP 002-201-0  identical.   STEP 002-201-1  identical.   STEP 002-200-0  rejected.STEP 002-200-1  identical.   STEP 002-199-0  identical.   STEP 002-199-1  rejected.STEP 002-198-0  identical.   STEP 002-198-1  identical.   STEP 002-197-0  identical.   STEP 002-197-1  identical.   STEP 002-196-0  identical.   STEP 002-196-1  identical.   STEP 002-195-0  identical.   STEP 002-195-1  identical.   STEP 002-194-0  identical.   STEP 002-194-1  identical.   STEP 002-193-0  identical.   STEP 002-193-1  identical.   STEP 002-192-0  identical.   STEP 002-192-1  identical.   STEP 002-191-0  identical.   STEP 002-191-1  identical.   STEP 002-190-0  identical.   STEP 002-190-1  identical.   STEP 002-189-0  identical.   STEP 002-189-1  identical.   STEP 002-188-0  identical.   STEP 002-188-1  identical.   STEP 002-187-0  identical.   STEP 002-187-1  identical.   STEP 002-186-0  identical.   STEP 002-186-1  identical.   STEP 002-185-0  identical.   STEP 002-185-1  identical.   STEP 002-184-0  identical.   STEP 002-184-1  identical.   STEP 002-183-0  identical.   STEP 002-183-1  identical.   STEP 002-182-0  identical.   STEP 002-182-1  identical.   STEP 002-181-0  identical.   STEP 002-181-1  identical.   STEP 002-180-0  identical.   STEP 002-180-1  identical.   STEP 002-179-0  identical.   STEP 002-179-1  identical.   STEP 002-178-0  identical.   STEP 002-178-1  identical.   STEP 002-177-0  identical.   STEP 002-177-1  identical.   STEP 002-176-0  identical.   STEP 002-176-1  identical.   STEP 002-175-0  identical.   STEP 002-175-1  identical.   STEP 002-174-0  identical.   STEP 002-174-1  identical.   STEP 002-173-0  identical.   STEP 002-173-1  identical.   STEP 002-172-0  identical.   STEP 002-172-1  rejected.STEP 002-171-0  identical.   STEP 002-171-1  identical.   STEP 002-170-0  identical.   STEP 002-170-1  identical.   STEP 002-169-0  identical.   STEP 002-169-1  identical.   STEP 002-168-0  identical.   STEP 002-168-1  identical.   STEP 002-167-0  identical.   STEP 002-167-1  identical.   STEP 002-166-0  identical.   STEP 002-166-1  identical.   STEP 002-165-0  identical.   STEP 002-165-1  identical.   STEP 002-164-0  identical.   STEP 002-164-1  identical.   STEP 002-163-0  identical.   STEP 002-163-1  identical.   STEP 002-162-0  identical.   STEP 002-162-1  identical.   STEP 002-161-0  identical.   STEP 002-161-1  identical.   STEP 002-160-0  identical.   STEP 002-160-1  identical.   STEP 002-159-0  identical.   STEP 002-159-1  identical.   STEP 002-158-0  identical.   STEP 002-158-1  identical.   STEP 002-157-0  identical.   STEP 002-157-1  identical.   STEP 002-156-0  identical.   STEP 002-156-1  identical.   STEP 002-155-0  rejected.STEP 002-155-1  identical.   STEP 002-154-0  identical.   STEP 002-154-1  identical.   STEP 002-153-0  identical.   STEP 002-153-1  identical.   STEP 002-152-0  identical.   STEP 002-152-1  identical.   STEP 002-151-0  identical.   STEP 002-151-1  identical.   STEP 002-150-0  identical.   STEP 002-150-1  rejected.STEP 002-149-0  identical.   STEP 002-149-1  identical.   STEP 002-148-0  identical.   STEP 002-148-1  identical.   STEP 002-147-0  identical.   STEP 002-147-1  identical.   STEP 002-146-0  identical.   STEP 002-146-1  identical.   STEP 002-145-0  identical.   STEP 002-145-1  identical.   STEP 002-144-0  identical.   STEP 002-144-1  identical.   STEP 002-143-0  identical.   STEP 002-143-1  identical.   STEP 002-142-0  identical.   STEP 002-142-1  identical.   STEP 002-141-0  identical.   STEP 002-141-1  identical.   STEP 002-140-0  identical.   STEP 002-140-1  identical.   STEP 002-139-0  identical.   STEP 002-139-1  identical.   STEP 002-138-0  identical.   STEP 002-138-1  identical.   STEP 002-137-0  identical.   STEP 002-137-1  identical.   STEP 002-136-0  identical.   STEP 002-136-1  identical.   STEP 002-135-0  identical.   STEP 002-135-1  identical.   STEP 002-134-0  identical.   STEP 002-134-1  identical.   STEP 002-133-0  identical.   STEP 002-133-1  identical.   STEP 002-132-0  identical.   STEP 002-132-1  identical.   STEP 002-131-0  identical.   STEP 002-131-1  identical.   STEP 002-130-0  rejected.STEP 002-130-1  identical.   STEP 002-129-0  identical.   STEP 002-129-1  identical.   STEP 002-128-0  identical.   STEP 002-128-1  identical.   STEP 002-127-0  identical.   STEP 002-127-1  identical.   STEP 002-126-0  identical.   STEP 002-126-1  identical.   STEP 002-125-0  identical.   STEP 002-125-1  identical.   STEP 002-124-0  identical.   STEP 002-124-1  identical.   STEP 002-123-0  identical.   STEP 002-123-1  identical.   STEP 002-122-0  identical.   STEP 002-122-1  identical.   STEP 002-121-0  identical.   STEP 002-121-1  identical.   STEP 002-120-0  identical.   STEP 002-120-1  identical.   STEP 002-119-0  identical.   STEP 002-119-1  identical.   STEP 002-118-0  identical.   STEP 002-118-1  identical.   STEP 002-117-0  identical.   STEP 002-117-1  identical.   STEP 002-116-0  identical.   STEP 002-116-1  identical.   STEP 002-115-0  identical.   STEP 002-115-1  identical.   STEP 002-114-0  identical.   STEP 002-114-1  identical.   STEP 002-113-0  identical.   STEP 002-113-1  identical.   STEP 002-112-0  identical.   STEP 002-112-1  identical.   STEP 002-111-0  identical.   STEP 002-111-1  identical.   STEP 002-110-0  identical.   STEP 002-110-1  identical.   STEP 002-109-0  identical.   STEP 002-109-1  identical.   STEP 002-108-0  identical.   STEP 002-108-1  identical.   STEP 002-107-0  identical.   STEP 002-107-1  identical.   STEP 002-106-0  identical.   STEP 002-106-1  identical.   STEP 002-105-0  identical.   STEP 002-105-1  identical.   STEP 002-104-0  identical.   STEP 002-104-1  identical.   STEP 002-103-0  identical.   STEP 002-103-1  identical.   STEP 002-102-0  identical.   STEP 002-102-1  identical.   STEP 002-101-0  identical.   STEP 002-101-1  identical.   STEP 002-100-0  identical.   STEP 002-100-1  identical.   STEP 002-099-0  identical.   STEP 002-099-1  identical.   STEP 002-098-0  identical.   STEP 002-098-1  identical.   STEP 002-097-0  identical.   STEP 002-097-1  identical.   STEP 002-096-0  identical.   STEP 002-096-1  identical.   STEP 002-095-0  identical.   STEP 002-095-1  identical.   STEP 002-094-0  identical.   STEP 002-094-1  identical.   STEP 002-093-0  identical.   STEP 002-093-1  identical.   STEP 002-092-0  identical.   STEP 002-092-1  rejected.STEP 002-091-0  identical.   STEP 002-091-1  identical.   STEP 002-090-0  identical.   STEP 002-090-1  identical.   STEP 002-089-0  identical.   STEP 002-089-1  identical.   STEP 002-088-0  identical.   STEP 002-088-1  identical.   STEP 002-087-0  identical.   STEP 002-087-1  identical.   STEP 002-086-0  identical.   STEP 002-086-1  identical.   STEP 002-085-0  identical.   STEP 002-085-1  identical.   STEP 002-084-0  identical.   STEP 002-084-1  identical.   STEP 002-083-0  identical.   STEP 002-083-1  identical.   STEP 002-082-0  identical.   STEP 002-082-1  identical.   STEP 002-081-0  identical.   STEP 002-081-1  identical.   STEP 002-080-0  identical.   STEP 002-080-1  identical.   STEP 002-079-0  identical.   STEP 002-079-1  identical.   STEP 002-078-0  identical.   STEP 002-078-1  identical.   STEP 002-077-0  identical.   STEP 002-077-1  identical.   STEP 002-076-0  identical.   STEP 002-076-1  identical.   STEP 002-075-0  identical.   STEP 002-075-1  identical.   STEP 002-074-0  identical.   STEP 002-074-1  identical.   STEP 002-073-0  identical.   STEP 002-073-1  identical.   STEP 002-072-0  identical.   STEP 002-072-1  identical.   STEP 002-071-0  identical.   STEP 002-071-1  identical.   STEP 002-070-0  identical.   STEP 002-070-1  identical.   STEP 002-069-0  rejected.STEP 002-069-1  identical.   STEP 002-068-0  identical.   STEP 002-068-1  identical.   STEP 002-067-0  identical.   STEP 002-067-1  identical.   STEP 002-066-0  identical.   STEP 002-066-1  identical.   STEP 002-065-0  identical.   STEP 002-065-1  identical.   STEP 002-064-0  identical.   STEP 002-064-1  identical.   STEP 002-063-0  identical.   STEP 002-063-1  identical.   STEP 002-062-0  identical.   STEP 002-062-1  identical.   STEP 002-061-0  identical.   STEP 002-061-1  identical.   STEP 002-060-0  identical.   STEP 002-060-1  identical.   STEP 002-059-0  identical.   STEP 002-059-1  identical.   STEP 002-058-0  identical.   STEP 002-058-1  identical.   STEP 002-057-0  identical.   STEP 002-057-1  identical.   STEP 002-056-0  identical.   STEP 002-056-1  identical.   STEP 002-055-0  identical.   STEP 002-055-1  identical.   STEP 002-054-0  identical.   STEP 002-054-1  identical.   STEP 002-053-0  identical.   STEP 002-053-1  identical.   STEP 002-052-0  identical.   STEP 002-052-1  identical.   STEP 002-051-0  identical.   STEP 002-051-1  identical.   STEP 002-050-0  identical.   STEP 002-050-1  identical.   STEP 002-049-0  identical.   STEP 002-049-1  identical.   STEP 002-048-0  identical.   STEP 002-048-1  identical.   STEP 002-047-0  identical.   STEP 002-047-1  identical.   STEP 002-046-0  rejected.STEP 002-046-1  identical.   STEP 002-045-0  identical.   STEP 002-045-1  identical.   STEP 002-044-0  identical.   STEP 002-044-1  identical.   STEP 002-043-0  identical.   STEP 002-043-1  identical.   STEP 002-042-0  identical.   STEP 002-042-1  identical.   STEP 002-041-0  identical.   STEP 002-041-1  identical.   STEP 002-040-0  identical.   STEP 002-040-1  identical.   STEP 002-039-0  identical.   STEP 002-039-1  identical.   STEP 002-038-0  identical.   STEP 002-038-1  identical.   STEP 002-037-0  identical.   STEP 002-037-1  identical.   STEP 002-036-0  identical.   STEP 002-036-1  identical.   STEP 002-035-0  identical.   STEP 002-035-1  identical.   STEP 002-034-0  identical.   STEP 002-034-1  identical.   STEP 002-033-0  identical.   STEP 002-033-1  identical.   STEP 002-032-0  identical.   STEP 002-032-1  identical.   STEP 002-031-0  identical.   STEP 002-031-1  identical.   STEP 002-030-0  identical.   STEP 002-030-1  identical.   STEP 002-029-0  identical.   STEP 002-029-1  identical.   STEP 002-028-0  identical.   STEP 002-028-1  identical.   STEP 002-027-0  identical.   STEP 002-027-1  identical.   STEP 002-026-0  identical.   STEP 002-026-1  identical.   STEP 002-025-0  identical.   STEP 002-025-1  identical.   STEP 002-024-0  identical.   STEP 002-024-1  identical.   STEP 002-023-0  identical.   STEP 002-023-1  identical.   STEP 002-022-0  identical.   STEP 002-022-1  identical.   STEP 002-021-0  identical.   STEP 002-021-1  identical.   STEP 002-020-0  identical.   STEP 002-020-1  identical.   STEP 002-019-0  identical.   STEP 002-019-1  identical.   STEP 002-018-0  identical.   STEP 002-018-1  identical.   STEP 002-017-0  identical.   STEP 002-017-1  identical.   STEP 002-016-0  identical.   STEP 002-016-1  rejected.STEP 002-015-0  identical.   STEP 002-015-1  identical.   STEP 002-014-0  identical.   STEP 002-014-1  identical.   STEP 002-013-0  identical.   STEP 002-013-1  identical.   STEP 002-012-0  identical.   STEP 002-012-1  identical.   STEP 002-011-0  identical.   STEP 002-011-1  identical.   STEP 002-010-0  identical.   STEP 002-010-1  identical.   STEP 002-009-0  identical.   STEP 002-009-1  identical.   STEP 002-008-0  identical.   STEP 002-008-1  identical.   STEP 002-007-0  identical.   STEP 002-007-1  identical.   STEP 002-006-0  identical.   STEP 002-006-1  identical.   STEP 002-005-0  identical.   STEP 002-005-1  identical.   STEP 002-004-0  identical.   STEP 002-004-1  identical.   STEP 002-003-0  identical.   STEP 002-003-1  identical.   STEP 002-002-0  identical.   STEP 002-002-1  identical.   STEP 002-001-0  identical.   STEP 002-001-1  identical.   STEP 003-001-0  identical.   STEP 003-001-1  identical.   STEP 003-002-0  identical.   STEP 003-002-1  identical.   STEP 003-003-0  identical.   STEP 003-003-1  identical.   STEP 003-004-0  identical.   STEP 003-004-1  identical.   STEP 003-005-0  identical.   STEP 003-005-1  identical.   STEP 003-006-0  identical.   STEP 003-006-1  identical.   STEP 003-007-0  identical.   STEP 003-007-1  identical.   STEP 003-008-0  identical.   STEP 003-008-1  identical.   STEP 003-009-0  identical.   STEP 003-009-1  identical.   STEP 003-010-0  identical.   STEP 003-010-1  identical.   STEP 003-011-0  identical.   STEP 003-011-1  identical.   STEP 003-012-0  identical.   STEP 003-012-1  identical.   STEP 003-013-0  identical.   STEP 003-013-1  identical.   STEP 003-014-0  identical.   STEP 003-014-1  identical.   STEP 003-015-0  identical.   STEP 003-015-1  identical.   STEP 003-016-0  identical.   STEP 003-016-1  rejected.STEP 003-017-0  identical.   STEP 003-017-1  identical.   STEP 003-018-0  identical.   STEP 003-018-1  identical.   STEP 003-019-0  identical.   STEP 003-019-1  identical.   STEP 003-020-0  identical.   STEP 003-020-1  identical.   STEP 003-021-0  identical.   STEP 003-021-1  identical.   STEP 003-022-0  identical.   STEP 003-022-1  identical.   STEP 003-023-0  identical.   STEP 003-023-1  identical.   STEP 003-024-0  identical.   STEP 003-024-1  identical.   STEP 003-025-0  identical.   STEP 003-025-1  identical.   STEP 003-026-0  identical.   STEP 003-026-1  identical.   STEP 003-027-0  identical.   STEP 003-027-1  identical.   STEP 003-028-0  identical.   STEP 003-028-1  identical.   STEP 003-029-0  identical.   STEP 003-029-1  identical.   STEP 003-030-0  identical.   STEP 003-030-1  identical.   STEP 003-031-0  identical.   STEP 003-031-1  identical.   STEP 003-032-0  identical.   STEP 003-032-1  identical.   STEP 003-033-0  identical.   STEP 003-033-1  identical.   STEP 003-034-0  identical.   STEP 003-034-1  identical.   STEP 003-035-0  identical.   STEP 003-035-1  identical.   STEP 003-036-0  identical.   STEP 003-036-1  identical.   STEP 003-037-0  identical.   STEP 003-037-1  identical.   STEP 003-038-0  identical.   STEP 003-038-1  identical.   STEP 003-039-0  identical.   STEP 003-039-1  identical.   STEP 003-040-0  identical.   STEP 003-040-1  identical.   STEP 003-041-0  identical.   STEP 003-041-1  identical.   STEP 003-042-0  identical.   STEP 003-042-1  identical.   STEP 003-043-0  identical.   STEP 003-043-1  identical.   STEP 003-044-0  identical.   STEP 003-044-1  identical.   STEP 003-045-0  identical.   STEP 003-045-1  identical.   STEP 003-046-0  rejected.STEP 003-046-1  identical.   STEP 003-047-0  identical.   STEP 003-047-1  identical.   STEP 003-048-0  identical.   STEP 003-048-1  identical.   STEP 003-049-0  identical.   STEP 003-049-1  identical.   STEP 003-050-0  identical.   STEP 003-050-1  identical.   STEP 003-051-0  identical.   STEP 003-051-1  identical.   STEP 003-052-0  identical.   STEP 003-052-1  identical.   STEP 003-053-0  identical.   STEP 003-053-1  identical.   STEP 003-054-0  identical.   STEP 003-054-1  identical.   STEP 003-055-0  identical.   STEP 003-055-1  identical.   STEP 003-056-0  identical.   STEP 003-056-1  identical.   STEP 003-057-0  identical.   STEP 003-057-1  identical.   STEP 003-058-0  identical.   STEP 003-058-1  identical.   STEP 003-059-0  identical.   STEP 003-059-1  identical.   STEP 003-060-0  identical.   STEP 003-060-1  identical.   STEP 003-061-0  identical.   STEP 003-061-1  identical.   STEP 003-062-0  identical.   STEP 003-062-1  identical.   STEP 003-063-0  identical.   STEP 003-063-1  identical.   STEP 003-064-0  identical.   STEP 003-064-1  identical.   STEP 003-065-0  identical.   STEP 003-065-1  identical.   STEP 003-066-0  identical.   STEP 003-066-1  identical.   STEP 003-067-0  identical.   STEP 003-067-1  identical.   STEP 003-068-0  identical.   STEP 003-068-1  identical.   STEP 003-069-0  rejected.STEP 003-069-1  identical.   STEP 003-070-0  identical.   STEP 003-070-1  identical.   STEP 003-071-0  identical.   STEP 003-071-1  identical.   STEP 003-072-0  identical.   STEP 003-072-1  identical.   STEP 003-073-0  identical.   STEP 003-073-1  identical.   STEP 003-074-0  identical.   STEP 003-074-1  identical.   STEP 003-075-0  identical.   STEP 003-075-1  identical.   STEP 003-076-0  identical.   STEP 003-076-1  identical.   STEP 003-077-0  identical.   STEP 003-077-1  identical.   STEP 003-078-0  identical.   STEP 003-078-1  identical.   STEP 003-079-0  identical.   STEP 003-079-1  identical.   STEP 003-080-0  identical.   STEP 003-080-1  identical.   STEP 003-081-0  identical.   STEP 003-081-1  identical.   STEP 003-082-0  identical.   STEP 003-082-1  identical.   STEP 003-083-0  identical.   STEP 003-083-1  identical.   STEP 003-084-0  identical.   STEP 003-084-1  identical.   STEP 003-085-0  identical.   STEP 003-085-1  identical.   STEP 003-086-0  identical.   STEP 003-086-1  identical.   STEP 003-087-0  identical.   STEP 003-087-1  identical.   STEP 003-088-0  identical.   STEP 003-088-1  identical.   STEP 003-089-0  identical.   STEP 003-089-1  identical.   STEP 003-090-0  identical.   STEP 003-090-1  identical.   STEP 003-091-0  identical.   STEP 003-091-1  identical.   STEP 003-092-0  identical.   STEP 003-092-1  rejected.STEP 003-093-0  identical.   STEP 003-093-1  identical.   STEP 003-094-0  identical.   STEP 003-094-1  identical.   STEP 003-095-0  identical.   STEP 003-095-1  identical.   STEP 003-096-0  identical.   STEP 003-096-1  identical.   STEP 003-097-0  identical.   STEP 003-097-1  identical.   STEP 003-098-0  identical.   STEP 003-098-1  identical.   STEP 003-099-0  identical.   STEP 003-099-1  identical.   STEP 003-100-0  identical.   STEP 003-100-1  identical.   STEP 003-101-0  identical.   STEP 003-101-1  identical.   STEP 003-102-0  identical.   STEP 003-102-1  identical.   STEP 003-103-0  identical.   STEP 003-103-1  identical.   STEP 003-104-0  identical.   STEP 003-104-1  identical.   STEP 003-105-0  identical.   STEP 003-105-1  identical.   STEP 003-106-0  identical.   STEP 003-106-1  identical.   STEP 003-107-0  identical.   STEP 003-107-1  identical.   STEP 003-108-0  identical.   STEP 003-108-1  identical.   STEP 003-109-0  identical.   STEP 003-109-1  identical.   STEP 003-110-0  identical.   STEP 003-110-1  identical.   STEP 003-111-0  identical.   STEP 003-111-1  identical.   STEP 003-112-0  identical.   STEP 003-112-1  identical.   STEP 003-113-0  identical.   STEP 003-113-1  identical.   STEP 003-114-0  identical.   STEP 003-114-1  identical.   STEP 003-115-0  identical.   STEP 003-115-1  identical.   STEP 003-116-0  identical.   STEP 003-116-1  identical.   STEP 003-117-0  identical.   STEP 003-117-1  identical.   STEP 003-118-0  identical.   STEP 003-118-1  identical.   STEP 003-119-0  identical.   STEP 003-119-1  identical.   STEP 003-120-0  identical.   STEP 003-120-1  identical.   STEP 003-121-0  identical.   STEP 003-121-1  identical.   STEP 003-122-0  identical.   STEP 003-122-1  identical.   STEP 003-123-0  identical.   STEP 003-123-1  identical.   STEP 003-124-0  identical.   STEP 003-124-1  identical.   STEP 003-125-0  identical.   STEP 003-125-1  identical.   STEP 003-126-0  identical.   STEP 003-126-1  identical.   STEP 003-127-0  identical.   STEP 003-127-1  identical.   STEP 003-128-0  identical.   STEP 003-128-1  identical.   STEP 003-129-0  identical.   STEP 003-129-1  identical.   STEP 003-130-0  rejected.STEP 003-130-1  identical.   STEP 003-131-0  identical.   STEP 003-131-1  identical.   STEP 003-132-0  identical.   STEP 003-132-1  identical.   STEP 003-133-0  identical.   STEP 003-133-1  identical.   STEP 003-134-0  identical.   STEP 003-134-1  identical.   STEP 003-135-0  identical.   STEP 003-135-1  identical.   STEP 003-136-0  identical.   STEP 003-136-1  identical.   STEP 003-137-0  identical.   STEP 003-137-1  identical.   STEP 003-138-0  identical.   STEP 003-138-1  identical.   STEP 003-139-0  identical.   STEP 003-139-1  identical.   STEP 003-140-0  identical.   STEP 003-140-1  identical.   STEP 003-141-0  identical.   STEP 003-141-1  identical.   STEP 003-142-0  identical.   STEP 003-142-1  identical.   STEP 003-143-0  identical.   STEP 003-143-1  identical.   STEP 003-144-0  identical.   STEP 003-144-1  identical.   STEP 003-145-0  identical.   STEP 003-145-1  identical.   STEP 003-146-0  identical.   STEP 003-146-1  identical.   STEP 003-147-0  identical.   STEP 003-147-1  identical.   STEP 003-148-0  identical.   STEP 003-148-1  identical.   STEP 003-149-0  identical.   STEP 003-149-1  identical.   STEP 003-150-0  identical.   STEP 003-150-1  rejected.STEP 003-151-0  identical.   STEP 003-151-1  identical.   STEP 003-152-0  identical.   
+Converged.
+
+done
+dvtditr (aa) Version 7.407
+alg=A, model=BLOSUM62, 1.53, -0.00, -0.00, noshift, amax=0.0
+0 thread(s)
+
+
+Strategy:
+ L-INS-i (Probably most accurate, very slow)
+ Iterative refinement method (<16) with LOCAL pairwise alignment information
+
+If unsure which option to use, try 'mafft --auto input > output'.
+For more information, see 'mafft --help', 'mafft --man' and the mafft page.
+
+The default gap scoring scheme has been changed in version 7.110 (2013 Oct).
+It tends to insert more gaps into gap-rich regions than previous versions.
+To disable this change, add the --leavegappyregion option.
+
+IQ-TREE version 1.5.3 for Linux 64-bit built Mar 12 2017
+Copyright (c) 2011-2016 Nguyen Lam Tung, Olga Chernomor, Arndt von Haeseler and Bui Quang Minh.
+
+Host:    r1236.uppmax.uu.se (AVX2, FMA3, 251 GB RAM)
+Command: iqtree -s /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test/component-1/component-1.mafft -m TEST -nt 1 -bb 1000 -pre /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test/component-1/TEST_component-1
+Seed:    673997 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 22 14:38:52 2022
+Kernel:  AVX+FMA
+
+NOTE: Consider using the multicore version because your CPU has 16 cores!
+
+Reading alignment file /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test/component-1/component-1.mafft ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 367 sequences with 422 columns and 422 patterns (388 informative sites, 16 constant sites)
+WARNING: Some sequence names are changed as follows:
+Dunn2008:Anoplodactylus_eroticus:488521:Tribe263 -> Dunn2008_Anoplodactylus_eroticus_488521_Tribe263
+Dunn2008:Asterina_pectinifera:7594:Tribe263 -> Dunn2008_Asterina_pectinifera_7594_Tribe263
+Dunn2008:Biomphalaria_glabrata:6526:Tribe263 -> Dunn2008_Biomphalaria_glabrata_6526_Tribe263
+Dunn2008:Boophilus_microplus:6941:Tribe263 -> Dunn2008_Boophilus_microplus_6941_Tribe263
+Dunn2008:Branchiostoma_floridae:7739:Tribe263 -> Dunn2008_Branchiostoma_floridae_7739_Tribe263
+Dunn2008:Capitella_teleta:283909:Tribe263 -> Dunn2008_Capitella_teleta_283909_Tribe263
+Dunn2008:Carcinus_maenas:6759:Tribe263 -> Dunn2008_Carcinus_maenas_6759_Tribe263
+Dunn2008:Cerebratulus_lacteus:6221:Tribe263 -> Dunn2008_Cerebratulus_lacteus_6221_Tribe263
+Dunn2008:Chaetopterus_variopedatus:34590:Tribe263 -> Dunn2008_Chaetopterus_variopedatus_34590_Tribe263
+Dunn2008:Crassostrea_virginica:6565:Tribe263 -> Dunn2008_Crassostrea_virginica_6565_Tribe263
+Dunn2008:Daphnia_magna:35525:Tribe263 -> Dunn2008_Daphnia_magna_35525_Tribe263
+Dunn2008:Drosophila_melanogaster:7227:Tribe263 -> Dunn2008_Drosophila_melanogaster_7227_Tribe263
+Dunn2008:Dugesia_japonica:6161:Tribe263 -> Dunn2008_Dugesia_japonica_6161_Tribe263
+Dunn2008:Echinococcus_granulosus:6210:Tribe263 -> Dunn2008_Echinococcus_granulosus_6210_Tribe263
+Dunn2008:Euperipatoides_kanangrensis:488523:Tribe263 -> Dunn2008_Euperipatoides_kanangrensis_488523_Tribe263
+Dunn2008:Euprymna_scolopes:6613:Tribe263 -> Dunn2008_Euprymna_scolopes_6613_Tribe263
+Dunn2008:Fenneropenaeus_chinensis:139456:Tribe263 -> Dunn2008_Fenneropenaeus_chinensis_139456_Tribe263
+Dunn2008:Gallus_gallus:9031:Tribe263 -> Dunn2008_Gallus_gallus_9031_Tribe263
+Dunn2008:Haementeria_depressa:279730:Tribe263 -> Dunn2008_Haementeria_depressa_279730_Tribe263
+Dunn2008:Homo_sapiens:9606:Tribe263 -> Dunn2008_Homo_sapiens_9606_Tribe263
+Dunn2008:Hydra_vulgaris_01:6087:Tribe263 -> Dunn2008_Hydra_vulgaris_01_6087_Tribe263
+Dunn2008:Hypsibius_dujardini:232323:Tribe263 -> Dunn2008_Hypsibius_dujardini_232323_Tribe263
+Dunn2008:Mytilus_galloprovincialis:29158:Tribe263 -> Dunn2008_Mytilus_galloprovincialis_29158_Tribe263
+Dunn2008:Nematostella_vectensis:45351:Tribe263 -> Dunn2008_Nematostella_vectensis_45351_Tribe263
+Dunn2008:Paraplanocera_oligoglena:1468194:Tribe263 -> Dunn2008_Paraplanocera_oligoglena_1468194_Tribe263
+Dunn2008:Phoronis_vancouverensis:672013:Tribe263 -> Dunn2008_Phoronis_vancouverensis_672013_Tribe263
+Dunn2008:Saccoglossus_kowalevskii:10224:Tribe263 -> Dunn2008_Saccoglossus_kowalevskii_10224_Tribe263
+Dunn2008:Schmidtea_mediterranea:79327:Tribe263 -> Dunn2008_Schmidtea_mediterranea_79327_Tribe263
+Dunn2008:Strongylocentrotus_purpuratus:7668:Tribe263 -> Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe263
+Dunn2008:Themiste_lageniformis:216211:Tribe263 -> Dunn2008_Themiste_lageniformis_216211_Tribe263
+Dunn2008:Trichinella_spiralis:6334:Tribe263 -> Dunn2008_Trichinella_spiralis_6334_Tribe263
+Dunn2008:Xenoturbella_bocki:242395:Tribe263 -> Dunn2008_Xenoturbella_bocki_242395_Tribe263
+Dunn2008:Aplysia_californica:6500:Tribe330 -> Dunn2008_Aplysia_californica_6500_Tribe330
+Dunn2008:Argopecten_irradians:31199:Tribe330 -> Dunn2008_Argopecten_irradians_31199_Tribe330
+Dunn2008:Asterina_pectinifera:7594:Tribe330 -> Dunn2008_Asterina_pectinifera_7594_Tribe330
+Dunn2008:Boophilus_microplus:6941:Tribe330 -> Dunn2008_Boophilus_microplus_6941_Tribe330
+Dunn2008:Branchiostoma_floridae:7739:Tribe330 -> Dunn2008_Branchiostoma_floridae_7739_Tribe330
+Dunn2008:Carcinoscorpius_rotundicauda:6848:Tribe330 -> Dunn2008_Carcinoscorpius_rotundicauda_6848_Tribe330
+Dunn2008:Carcinus_maenas:6759:Tribe330 -> Dunn2008_Carcinus_maenas_6759_Tribe330
+Dunn2008:Cerebratulus_lacteus:6221:Tribe330 -> Dunn2008_Cerebratulus_lacteus_6221_Tribe330
+Dunn2008:Chaetoderma_nitidulum:256131:Tribe330 -> Dunn2008_Chaetoderma_nitidulum_256131_Tribe330
+Dunn2008:Chaetopterus_variopedatus:34590:Tribe330 -> Dunn2008_Chaetopterus_variopedatus_34590_Tribe330
+Dunn2008:Crassostrea_virginica:6565:Tribe330 -> Dunn2008_Crassostrea_virginica_6565_Tribe330
+Dunn2008:Cyanea_capillata:27804:Tribe330 -> Dunn2008_Cyanea_capillata_27804_Tribe330
+Dunn2008:Daphnia_magna:35525:Tribe330 -> Dunn2008_Daphnia_magna_35525_Tribe330
+Dunn2008:Drosophila_melanogaster:7227:Tribe330 -> Dunn2008_Drosophila_melanogaster_7227_Tribe330
+Dunn2008:Dugesia_japonica:6161:Tribe330 -> Dunn2008_Dugesia_japonica_6161_Tribe330
+Dunn2008:Echinococcus_granulosus:6210:Tribe330 -> Dunn2008_Echinococcus_granulosus_6210_Tribe330
+Dunn2008:Echinoderes_horni:488522:Tribe330 -> Dunn2008_Echinoderes_horni_488522_Tribe330
+Dunn2008:Euperipatoides_kanangrensis:488523:Tribe330 -> Dunn2008_Euperipatoides_kanangrensis_488523_Tribe330
+Dunn2008:Euprymna_scolopes:6613:Tribe330 -> Dunn2008_Euprymna_scolopes_6613_Tribe330
+Dunn2008:Fenneropenaeus_chinensis:139456:Tribe330 -> Dunn2008_Fenneropenaeus_chinensis_139456_Tribe330
+Dunn2008:Gallus_gallus:9031:Tribe330 -> Dunn2008_Gallus_gallus_9031_Tribe330
+Dunn2008:Haementeria_depressa:279730:Tribe330 -> Dunn2008_Haementeria_depressa_279730_Tribe330
+Dunn2008:Homo_sapiens:9606:Tribe330 -> Dunn2008_Homo_sapiens_9606_Tribe330
+Dunn2008:Hypsibius_dujardini:232323:Tribe330 -> Dunn2008_Hypsibius_dujardini_232323_Tribe330
+Dunn2008:Lumbricus_rubellus:35632:Tribe330 -> Dunn2008_Lumbricus_rubellus_35632_Tribe330
+Dunn2008:Mytilus_galloprovincialis:29158:Tribe330 -> Dunn2008_Mytilus_galloprovincialis_29158_Tribe330
+Dunn2008:Nematostella_vectensis:45351:Tribe330 -> Dunn2008_Nematostella_vectensis_45351_Tribe330
+Dunn2008:Paraplanocera_oligoglena:1468194:Tribe330 -> Dunn2008_Paraplanocera_oligoglena_1468194_Tribe330
+Dunn2008:Phoronis_vancouverensis:672013:Tribe330 -> Dunn2008_Phoronis_vancouverensis_672013_Tribe330
+Dunn2008:Priapulus_caudatus:37621:Tribe330 -> Dunn2008_Priapulus_caudatus_37621_Tribe330
+Dunn2008:Ptychodera_flava:63121:Tribe330 -> Dunn2008_Ptychodera_flava_63121_Tribe330
+Dunn2008:Saccharomyces_cerevisiae:4932:Tribe330 -> Dunn2008_Saccharomyces_cerevisiae_4932_Tribe330
+Dunn2008:Saccoglossus_kowalevskii:10224:Tribe330 -> Dunn2008_Saccoglossus_kowalevskii_10224_Tribe330
+Dunn2008:Schmidtea_mediterranea:79327:Tribe330 -> Dunn2008_Schmidtea_mediterranea_79327_Tribe330
+Dunn2008:Scutigera_coleoptrata:29022:Tribe330 -> Dunn2008_Scutigera_coleoptrata_29022_Tribe330
+Dunn2008:Strongylocentrotus_purpuratus:7668:Tribe330 -> Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe330
+Dunn2008:Terebratalia_transversa:34513:Tribe330 -> Dunn2008_Terebratalia_transversa_34513_Tribe330
+Dunn2008:Themiste_lageniformis:216211:Tribe330 -> Dunn2008_Themiste_lageniformis_216211_Tribe330
+Dunn2008:Trichinella_spiralis:6334:Tribe330 -> Dunn2008_Trichinella_spiralis_6334_Tribe330
+Dunn2008:Xenoturbella_bocki:242395:Tribe330 -> Dunn2008_Xenoturbella_bocki_242395_Tribe330
+Dunn2008:Xiphinema_index:46003:Tribe330 -> Dunn2008_Xiphinema_index_46003_Tribe330
+Dunn2008:Acanthoscurria_gomesiana:115339:Tribe368 -> Dunn2008_Acanthoscurria_gomesiana_115339_Tribe368
+Dunn2008:Aplysia_californica:6500:Tribe368 -> Dunn2008_Aplysia_californica_6500_Tribe368
+Dunn2008:Argopecten_irradians:31199:Tribe368 -> Dunn2008_Argopecten_irradians_31199_Tribe368
+Dunn2008:Biomphalaria_glabrata:6526:Tribe368 -> Dunn2008_Biomphalaria_glabrata_6526_Tribe368
+Dunn2008:Boophilus_microplus:6941:Tribe368 -> Dunn2008_Boophilus_microplus_6941_Tribe368
+Dunn2008:Branchiostoma_floridae:7739:Tribe368 -> Dunn2008_Branchiostoma_floridae_7739_Tribe368
+Dunn2008:Carcinus_maenas:6759:Tribe368 -> Dunn2008_Carcinus_maenas_6759_Tribe368
+Dunn2008:Cerebratulus_lacteus:6221:Tribe368 -> Dunn2008_Cerebratulus_lacteus_6221_Tribe368
+Dunn2008:Chaetopterus_variopedatus:34590:Tribe368 -> Dunn2008_Chaetopterus_variopedatus_34590_Tribe368
+Dunn2008:Ciona_intestinalis:7719:Tribe368 -> Dunn2008_Ciona_intestinalis_7719_Tribe368
+Dunn2008:Crassostrea_virginica:6565:Tribe368 -> Dunn2008_Crassostrea_virginica_6565_Tribe368
+Dunn2008:Daphnia_magna:35525:Tribe368 -> Dunn2008_Daphnia_magna_35525_Tribe368
+Dunn2008:Drosophila_melanogaster:7227:Tribe368 -> Dunn2008_Drosophila_melanogaster_7227_Tribe368
+Dunn2008:Euperipatoides_kanangrensis:488523:Tribe368 -> Dunn2008_Euperipatoides_kanangrensis_488523_Tribe368
+Dunn2008:Euprymna_scolopes:6613:Tribe368 -> Dunn2008_Euprymna_scolopes_6613_Tribe368
+Dunn2008:Fenneropenaeus_chinensis:139456:Tribe368 -> Dunn2008_Fenneropenaeus_chinensis_139456_Tribe368
+Dunn2008:Gallus_gallus:9031:Tribe368 -> Dunn2008_Gallus_gallus_9031_Tribe368
+Dunn2008:Homo_sapiens:9606:Tribe368 -> Dunn2008_Homo_sapiens_9606_Tribe368
+Dunn2008:Hypsibius_dujardini:232323:Tribe368 -> Dunn2008_Hypsibius_dujardini_232323_Tribe368
+Dunn2008:Lumbricus_rubellus:35632:Tribe368 -> Dunn2008_Lumbricus_rubellus_35632_Tribe368
+Dunn2008:Mytilus_galloprovincialis:29158:Tribe368 -> Dunn2008_Mytilus_galloprovincialis_29158_Tribe368
+Dunn2008:Nematostella_vectensis:45351:Tribe368 -> Dunn2008_Nematostella_vectensis_45351_Tribe368
+Dunn2008:Phoronis_vancouverensis:672013:Tribe368 -> Dunn2008_Phoronis_vancouverensis_672013_Tribe368
+Dunn2008:Ptychodera_flava:63121:Tribe368 -> Dunn2008_Ptychodera_flava_63121_Tribe368
+Dunn2008:Saccoglossus_kowalevskii:10224:Tribe368 -> Dunn2008_Saccoglossus_kowalevskii_10224_Tribe368
+Dunn2008:Schmidtea_mediterranea:79327:Tribe368 -> Dunn2008_Schmidtea_mediterranea_79327_Tribe368
+Dunn2008:Strongylocentrotus_purpuratus:7668:Tribe368 -> Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe368
+Dunn2008:Xiphinema_index:46003:Tribe368 -> Dunn2008_Xiphinema_index_46003_Tribe368
+Dunn2008:Anoplodactylus_eroticus:488521:Tribe369 -> Dunn2008_Anoplodactylus_eroticus_488521_Tribe369
+Dunn2008:Argopecten_irradians:31199:Tribe369 -> Dunn2008_Argopecten_irradians_31199_Tribe369
+Dunn2008:Asterina_pectinifera:7594:Tribe369 -> Dunn2008_Asterina_pectinifera_7594_Tribe369
+Dunn2008:Biomphalaria_glabrata:6526:Tribe369 -> Dunn2008_Biomphalaria_glabrata_6526_Tribe369
+Dunn2008:Carcinoscorpius_rotundicauda:6848:Tribe369 -> Dunn2008_Carcinoscorpius_rotundicauda_6848_Tribe369
+Dunn2008:Carcinus_maenas:6759:Tribe369 -> Dunn2008_Carcinus_maenas_6759_Tribe369
+Dunn2008:Cerebratulus_lacteus:6221:Tribe369 -> Dunn2008_Cerebratulus_lacteus_6221_Tribe369
+Dunn2008:Chaetoderma_nitidulum:256131:Tribe369 -> Dunn2008_Chaetoderma_nitidulum_256131_Tribe369
+Dunn2008:Chaetopterus_variopedatus:34590:Tribe369 -> Dunn2008_Chaetopterus_variopedatus_34590_Tribe369
+Dunn2008:Drosophila_melanogaster:7227:Tribe369 -> Dunn2008_Drosophila_melanogaster_7227_Tribe369
+Dunn2008:Euperipatoides_kanangrensis:488523:Tribe369 -> Dunn2008_Euperipatoides_kanangrensis_488523_Tribe369
+Dunn2008:Euprymna_scolopes:6613:Tribe369 -> Dunn2008_Euprymna_scolopes_6613_Tribe369
+Dunn2008:Fenneropenaeus_chinensis:139456:Tribe369 -> Dunn2008_Fenneropenaeus_chinensis_139456_Tribe369
+Dunn2008:Gallus_gallus:9031:Tribe369 -> Dunn2008_Gallus_gallus_9031_Tribe369
+Dunn2008:Homo_sapiens:9606:Tribe369 -> Dunn2008_Homo_sapiens_9606_Tribe369
+Dunn2008:Hydra_vulgaris_01:6087:Tribe369 -> Dunn2008_Hydra_vulgaris_01_6087_Tribe369
+Dunn2008:Hypsibius_dujardini:232323:Tribe369 -> Dunn2008_Hypsibius_dujardini_232323_Tribe369
+Dunn2008:Mnemiopsis_leidyi:27923:Tribe369 -> Dunn2008_Mnemiopsis_leidyi_27923_Tribe369
+Dunn2008:Mytilus_galloprovincialis:29158:Tribe369 -> Dunn2008_Mytilus_galloprovincialis_29158_Tribe369
+Dunn2008:Paraplanocera_oligoglena:1468194:Tribe369 -> Dunn2008_Paraplanocera_oligoglena_1468194_Tribe369
+Dunn2008:Phoronis_vancouverensis:672013:Tribe369 -> Dunn2008_Phoronis_vancouverensis_672013_Tribe369
+Dunn2008:Richtersius_coronifer:245088:Tribe369 -> Dunn2008_Richtersius_coronifer_245088_Tribe369
+Dunn2008:Saccharomyces_cerevisiae:4932:Tribe369 -> Dunn2008_Saccharomyces_cerevisiae_4932_Tribe369
+Dunn2008:Saccoglossus_kowalevskii:10224:Tribe369 -> Dunn2008_Saccoglossus_kowalevskii_10224_Tribe369
+Dunn2008:Sphaeroforma_arctica:72019:Tribe369 -> Dunn2008_Sphaeroforma_arctica_72019_Tribe369
+Dunn2008:Strongylocentrotus_purpuratus:7668:Tribe369 -> Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe369
+Dunn2008:Terebratalia_transversa:34513:Tribe369 -> Dunn2008_Terebratalia_transversa_34513_Tribe369
+Dunn2008:Themiste_lageniformis:216211:Tribe369 -> Dunn2008_Themiste_lageniformis_216211_Tribe369
+Dunn2008:Urechis_caupo:6431:Tribe369 -> Dunn2008_Urechis_caupo_6431_Tribe369
+Dunn2008:Xenoturbella_bocki:242395:Tribe369 -> Dunn2008_Xenoturbella_bocki_242395_Tribe369
+Dunn2008:Xiphinema_index:46003:Tribe369 -> Dunn2008_Xiphinema_index_46003_Tribe369
+Dunn2008:Acanthoscurria_gomesiana:115339:Tribe380 -> Dunn2008_Acanthoscurria_gomesiana_115339_Tribe380
+Dunn2008:Argopecten_irradians:31199:Tribe380 -> Dunn2008_Argopecten_irradians_31199_Tribe380
+Dunn2008:Biomphalaria_glabrata:6526:Tribe380 -> Dunn2008_Biomphalaria_glabrata_6526_Tribe380
+Dunn2008:Boophilus_microplus:6941:Tribe380 -> Dunn2008_Boophilus_microplus_6941_Tribe380
+Dunn2008:Carcinus_maenas:6759:Tribe380 -> Dunn2008_Carcinus_maenas_6759_Tribe380
+Dunn2008:Cerebratulus_lacteus:6221:Tribe380 -> Dunn2008_Cerebratulus_lacteus_6221_Tribe380
+Dunn2008:Chaetoderma_nitidulum:256131:Tribe380 -> Dunn2008_Chaetoderma_nitidulum_256131_Tribe380
+Dunn2008:Chaetopterus_variopedatus:34590:Tribe380 -> Dunn2008_Chaetopterus_variopedatus_34590_Tribe380
+Dunn2008:Ciona_intestinalis:7719:Tribe380 -> Dunn2008_Ciona_intestinalis_7719_Tribe380
+Dunn2008:Crassostrea_virginica:6565:Tribe380 -> Dunn2008_Crassostrea_virginica_6565_Tribe380
+Dunn2008:Daphnia_magna:35525:Tribe380 -> Dunn2008_Daphnia_magna_35525_Tribe380
+Dunn2008:Drosophila_melanogaster:7227:Tribe380 -> Dunn2008_Drosophila_melanogaster_7227_Tribe380
+Dunn2008:Echinococcus_granulosus:6210:Tribe380 -> Dunn2008_Echinococcus_granulosus_6210_Tribe380
+Dunn2008:Euperipatoides_kanangrensis:488523:Tribe380 -> Dunn2008_Euperipatoides_kanangrensis_488523_Tribe380
+Dunn2008:Fenneropenaeus_chinensis:139456:Tribe380 -> Dunn2008_Fenneropenaeus_chinensis_139456_Tribe380
+Dunn2008:Gallus_gallus:9031:Tribe380 -> Dunn2008_Gallus_gallus_9031_Tribe380
+Dunn2008:Homo_sapiens:9606:Tribe380 -> Dunn2008_Homo_sapiens_9606_Tribe380
+Dunn2008:Lumbricus_rubellus:35632:Tribe380 -> Dunn2008_Lumbricus_rubellus_35632_Tribe380
+Dunn2008:Mytilus_galloprovincialis:29158:Tribe380 -> Dunn2008_Mytilus_galloprovincialis_29158_Tribe380
+Dunn2008:Nematostella_vectensis:45351:Tribe380 -> Dunn2008_Nematostella_vectensis_45351_Tribe380
+Dunn2008:Phoronis_vancouverensis:672013:Tribe380 -> Dunn2008_Phoronis_vancouverensis_672013_Tribe380
+Dunn2008:Saccoglossus_kowalevskii:10224:Tribe380 -> Dunn2008_Saccoglossus_kowalevskii_10224_Tribe380
+Dunn2008:Schmidtea_mediterranea:79327:Tribe380 -> Dunn2008_Schmidtea_mediterranea_79327_Tribe380
+Dunn2008:Strongylocentrotus_purpuratus:7668:Tribe380 -> Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe380
+Dunn2008:Trichinella_spiralis:6334:Tribe380 -> Dunn2008_Trichinella_spiralis_6334_Tribe380
+Dunn2008:Urechis_caupo:6431:Tribe380 -> Dunn2008_Urechis_caupo_6431_Tribe380
+Dunn2008:Xenoturbella_bocki:242395:Tribe380 -> Dunn2008_Xenoturbella_bocki_242395_Tribe380
+Dunn2008:Anoplodactylus_eroticus:488521:Tribe400 -> Dunn2008_Anoplodactylus_eroticus_488521_Tribe400
+Dunn2008:Aplysia_californica:6500:Tribe400 -> Dunn2008_Aplysia_californica_6500_Tribe400
+Dunn2008:Argopecten_irradians:31199:Tribe400 -> Dunn2008_Argopecten_irradians_31199_Tribe400
+Dunn2008:Asterina_pectinifera:7594:Tribe400 -> Dunn2008_Asterina_pectinifera_7594_Tribe400
+Dunn2008:Biomphalaria_glabrata:6526:Tribe400 -> Dunn2008_Biomphalaria_glabrata_6526_Tribe400
+Dunn2008:Boophilus_microplus:6941:Tribe400 -> Dunn2008_Boophilus_microplus_6941_Tribe400
+Dunn2008:Branchiostoma_floridae:7739:Tribe400 -> Dunn2008_Branchiostoma_floridae_7739_Tribe400
+Dunn2008:Carcinoscorpius_rotundicauda:6848:Tribe400 -> Dunn2008_Carcinoscorpius_rotundicauda_6848_Tribe400
+Dunn2008:Carcinus_maenas:6759:Tribe400 -> Dunn2008_Carcinus_maenas_6759_Tribe400
+Dunn2008:Crassostrea_virginica:6565:Tribe400 -> Dunn2008_Crassostrea_virginica_6565_Tribe400
+Dunn2008:Daphnia_magna:35525:Tribe400 -> Dunn2008_Daphnia_magna_35525_Tribe400
+Dunn2008:Drosophila_melanogaster:7227:Tribe400 -> Dunn2008_Drosophila_melanogaster_7227_Tribe400
+Dunn2008:Dugesia_japonica:6161:Tribe400 -> Dunn2008_Dugesia_japonica_6161_Tribe400
+Dunn2008:Echinococcus_granulosus:6210:Tribe400 -> Dunn2008_Echinococcus_granulosus_6210_Tribe400
+Dunn2008:Euperipatoides_kanangrensis:488523:Tribe400 -> Dunn2008_Euperipatoides_kanangrensis_488523_Tribe400
+Dunn2008:Euprymna_scolopes:6613:Tribe400 -> Dunn2008_Euprymna_scolopes_6613_Tribe400
+Dunn2008:Fenneropenaeus_chinensis:139456:Tribe400 -> Dunn2008_Fenneropenaeus_chinensis_139456_Tribe400
+Dunn2008:Gallus_gallus:9031:Tribe400 -> Dunn2008_Gallus_gallus_9031_Tribe400
+Dunn2008:Haementeria_depressa:279730:Tribe400 -> Dunn2008_Haementeria_depressa_279730_Tribe400
+Dunn2008:Homo_sapiens:9606:Tribe400 -> Dunn2008_Homo_sapiens_9606_Tribe400
+Dunn2008:Hypsibius_dujardini:232323:Tribe400 -> Dunn2008_Hypsibius_dujardini_232323_Tribe400
+Dunn2008:Lumbricus_rubellus:35632:Tribe400 -> Dunn2008_Lumbricus_rubellus_35632_Tribe400
+Dunn2008:Mytilus_galloprovincialis:29158:Tribe400 -> Dunn2008_Mytilus_galloprovincialis_29158_Tribe400
+Dunn2008:Phoronis_vancouverensis:672013:Tribe400 -> Dunn2008_Phoronis_vancouverensis_672013_Tribe400
+Dunn2008:Priapulus_caudatus:37621:Tribe400 -> Dunn2008_Priapulus_caudatus_37621_Tribe400
+Dunn2008:Ptychodera_flava:63121:Tribe400 -> Dunn2008_Ptychodera_flava_63121_Tribe400
+Dunn2008:Richtersius_coronifer:245088:Tribe400 -> Dunn2008_Richtersius_coronifer_245088_Tribe400
+Dunn2008:Saccharomyces_cerevisiae:4932:Tribe400 -> Dunn2008_Saccharomyces_cerevisiae_4932_Tribe400
+Dunn2008:Saccoglossus_kowalevskii:10224:Tribe400 -> Dunn2008_Saccoglossus_kowalevskii_10224_Tribe400
+Dunn2008:Schmidtea_mediterranea:79327:Tribe400 -> Dunn2008_Schmidtea_mediterranea_79327_Tribe400
+Dunn2008:Strongylocentrotus_purpuratus:7668:Tribe400 -> Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe400
+Dunn2008:Terebratalia_transversa:34513:Tribe400 -> Dunn2008_Terebratalia_transversa_34513_Tribe400
+Dunn2008:Themiste_lageniformis:216211:Tribe400 -> Dunn2008_Themiste_lageniformis_216211_Tribe400
+Dunn2008:Trichinella_spiralis:6334:Tribe400 -> Dunn2008_Trichinella_spiralis_6334_Tribe400
+Dunn2008:Urechis_caupo:6431:Tribe400 -> Dunn2008_Urechis_caupo_6431_Tribe400
+Dunn2008:Xenoturbella_bocki:242395:Tribe400 -> Dunn2008_Xenoturbella_bocki_242395_Tribe400
+Dunn2008:Xiphinema_index:46003:Tribe400 -> Dunn2008_Xiphinema_index_46003_Tribe400
+Dunn2008:Acanthoscurria_gomesiana:115339:Tribe622 -> Dunn2008_Acanthoscurria_gomesiana_115339_Tribe622
+Dunn2008:Acropora_millepora:45264:Tribe622 -> Dunn2008_Acropora_millepora_45264_Tribe622
+Dunn2008:Biomphalaria_glabrata:6526:Tribe622 -> Dunn2008_Biomphalaria_glabrata_6526_Tribe622
+Dunn2008:Boophilus_microplus:6941:Tribe622 -> Dunn2008_Boophilus_microplus_6941_Tribe622
+Dunn2008:Branchiostoma_floridae:7739:Tribe622 -> Dunn2008_Branchiostoma_floridae_7739_Tribe622
+Dunn2008:Capsaspora_owczarzaki:192875:Tribe622 -> Dunn2008_Capsaspora_owczarzaki_192875_Tribe622
+Dunn2008:Carcinus_maenas:6759:Tribe622 -> Dunn2008_Carcinus_maenas_6759_Tribe622
+Dunn2008:Cerebratulus_lacteus:6221:Tribe622 -> Dunn2008_Cerebratulus_lacteus_6221_Tribe622
+Dunn2008:Ciona_intestinalis:7719:Tribe622 -> Dunn2008_Ciona_intestinalis_7719_Tribe622
+Dunn2008:Crassostrea_virginica:6565:Tribe622 -> Dunn2008_Crassostrea_virginica_6565_Tribe622
+Dunn2008:Cryptococcus_neoformans:5207:Tribe622 -> Dunn2008_Cryptococcus_neoformans_5207_Tribe622
+Dunn2008:Drosophila_melanogaster:7227:Tribe622 -> Dunn2008_Drosophila_melanogaster_7227_Tribe622
+Dunn2008:Fenneropenaeus_chinensis:139456:Tribe622 -> Dunn2008_Fenneropenaeus_chinensis_139456_Tribe622
+Dunn2008:Gallus_gallus:9031:Tribe622 -> Dunn2008_Gallus_gallus_9031_Tribe622
+Dunn2008:Homo_sapiens:9606:Tribe622 -> Dunn2008_Homo_sapiens_9606_Tribe622
+Dunn2008:Macrostomum_lignano:282301:Tribe622 -> Dunn2008_Macrostomum_lignano_282301_Tribe622
+Dunn2008:Mnemiopsis_leidyi:27923:Tribe622 -> Dunn2008_Mnemiopsis_leidyi_27923_Tribe622
+Dunn2008:Monosiga_ovata:81526:Tribe622 -> Dunn2008_Monosiga_ovata_81526_Tribe622
+Dunn2008:Mytilus_galloprovincialis:29158:Tribe622 -> Dunn2008_Mytilus_galloprovincialis_29158_Tribe622
+Dunn2008:Nematostella_vectensis:45351:Tribe622 -> Dunn2008_Nematostella_vectensis_45351_Tribe622
+Dunn2008:Oscarella_carmela:386100:Tribe622 -> Dunn2008_Oscarella_carmela_386100_Tribe622
+Dunn2008:Ptychodera_flava:63121:Tribe622 -> Dunn2008_Ptychodera_flava_63121_Tribe622
+Dunn2008:Richtersius_coronifer:245088:Tribe622 -> Dunn2008_Richtersius_coronifer_245088_Tribe622
+Dunn2008:Saccharomyces_cerevisiae:4932:Tribe622 -> Dunn2008_Saccharomyces_cerevisiae_4932_Tribe622
+Dunn2008:Schmidtea_mediterranea:79327:Tribe622 -> Dunn2008_Schmidtea_mediterranea_79327_Tribe622
+Dunn2008:Sphaeroforma_arctica:72019:Tribe622 -> Dunn2008_Sphaeroforma_arctica_72019_Tribe622
+Dunn2008:Trichinella_spiralis:6334:Tribe622 -> Dunn2008_Trichinella_spiralis_6334_Tribe622
+Dunn2008:Asterina_pectinifera:7594:Tribe683 -> Dunn2008_Asterina_pectinifera_7594_Tribe683
+Dunn2008:Boophilus_microplus:6941:Tribe683 -> Dunn2008_Boophilus_microplus_6941_Tribe683
+Dunn2008:Branchiostoma_floridae:7739:Tribe683 -> Dunn2008_Branchiostoma_floridae_7739_Tribe683
+Dunn2008:Capitella_teleta:283909:Tribe683 -> Dunn2008_Capitella_teleta_283909_Tribe683
+Dunn2008:Capsaspora_owczarzaki:192875:Tribe683 -> Dunn2008_Capsaspora_owczarzaki_192875_Tribe683
+Dunn2008:Carcinus_maenas:6759:Tribe683 -> Dunn2008_Carcinus_maenas_6759_Tribe683
+Dunn2008:Ciona_intestinalis:7719:Tribe683 -> Dunn2008_Ciona_intestinalis_7719_Tribe683
+Dunn2008:Daphnia_magna:35525:Tribe683 -> Dunn2008_Daphnia_magna_35525_Tribe683
+Dunn2008:Drosophila_melanogaster:7227:Tribe683 -> Dunn2008_Drosophila_melanogaster_7227_Tribe683
+Dunn2008:Euprymna_scolopes:6613:Tribe683 -> Dunn2008_Euprymna_scolopes_6613_Tribe683
+Dunn2008:Gallus_gallus:9031:Tribe683 -> Dunn2008_Gallus_gallus_9031_Tribe683
+Dunn2008:Homo_sapiens:9606:Tribe683 -> Dunn2008_Homo_sapiens_9606_Tribe683
+Dunn2008:Hydra_vulgaris_01:6087:Tribe683 -> Dunn2008_Hydra_vulgaris_01_6087_Tribe683
+Dunn2008:Hypsibius_dujardini:232323:Tribe683 -> Dunn2008_Hypsibius_dujardini_232323_Tribe683
+Dunn2008:Mnemiopsis_leidyi:27923:Tribe683 -> Dunn2008_Mnemiopsis_leidyi_27923_Tribe683
+Dunn2008:Mytilus_galloprovincialis:29158:Tribe683 -> Dunn2008_Mytilus_galloprovincialis_29158_Tribe683
+Dunn2008:Nematostella_vectensis:45351:Tribe683 -> Dunn2008_Nematostella_vectensis_45351_Tribe683
+Dunn2008:Paraplanocera_oligoglena:1468194:Tribe683 -> Dunn2008_Paraplanocera_oligoglena_1468194_Tribe683
+Dunn2008:Ptychodera_flava:63121:Tribe683 -> Dunn2008_Ptychodera_flava_63121_Tribe683
+Dunn2008:Richtersius_coronifer:245088:Tribe683 -> Dunn2008_Richtersius_coronifer_245088_Tribe683
+Dunn2008:Saccharomyces_cerevisiae:4932:Tribe683 -> Dunn2008_Saccharomyces_cerevisiae_4932_Tribe683
+Dunn2008:Schmidtea_mediterranea:79327:Tribe683 -> Dunn2008_Schmidtea_mediterranea_79327_Tribe683
+Dunn2008:Strongylocentrotus_purpuratus:7668:Tribe683 -> Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe683
+Dunn2008:Trichinella_spiralis:6334:Tribe683 -> Dunn2008_Trichinella_spiralis_6334_Tribe683
+Dunn2008:Xenoturbella_bocki:242395:Tribe683 -> Dunn2008_Xenoturbella_bocki_242395_Tribe683
+Dunn2008:Xiphinema_index:46003:Tribe683 -> Dunn2008_Xiphinema_index_46003_Tribe683
+Dunn2008:Acropora_millepora:45264:Tribe742 -> Dunn2008_Acropora_millepora_45264_Tribe742
+Dunn2008:Anoplodactylus_eroticus:488521:Tribe742 -> Dunn2008_Anoplodactylus_eroticus_488521_Tribe742
+Dunn2008:Argopecten_irradians:31199:Tribe742 -> Dunn2008_Argopecten_irradians_31199_Tribe742
+Dunn2008:Asterina_pectinifera:7594:Tribe742 -> Dunn2008_Asterina_pectinifera_7594_Tribe742
+Dunn2008:Biomphalaria_glabrata:6526:Tribe742 -> Dunn2008_Biomphalaria_glabrata_6526_Tribe742
+Dunn2008:Boophilus_microplus:6941:Tribe742 -> Dunn2008_Boophilus_microplus_6941_Tribe742
+Dunn2008:Branchiostoma_floridae:7739:Tribe742 -> Dunn2008_Branchiostoma_floridae_7739_Tribe742
+Dunn2008:Capitella_teleta:283909:Tribe742 -> Dunn2008_Capitella_teleta_283909_Tribe742
+Dunn2008:Ciona_intestinalis:7719:Tribe742 -> Dunn2008_Ciona_intestinalis_7719_Tribe742
+Dunn2008:Crassostrea_virginica:6565:Tribe742 -> Dunn2008_Crassostrea_virginica_6565_Tribe742
+Dunn2008:Drosophila_melanogaster:7227:Tribe742 -> Dunn2008_Drosophila_melanogaster_7227_Tribe742
+Dunn2008:Echinococcus_granulosus:6210:Tribe742 -> Dunn2008_Echinococcus_granulosus_6210_Tribe742
+Dunn2008:Euprymna_scolopes:6613:Tribe742 -> Dunn2008_Euprymna_scolopes_6613_Tribe742
+Dunn2008:Hydra_vulgaris_01:6087:Tribe742 -> Dunn2008_Hydra_vulgaris_01_6087_Tribe742
+Dunn2008:Lumbricus_rubellus:35632:Tribe742 -> Dunn2008_Lumbricus_rubellus_35632_Tribe742
+Dunn2008:Nematostella_vectensis:45351:Tribe742 -> Dunn2008_Nematostella_vectensis_45351_Tribe742
+Dunn2008:Paraplanocera_oligoglena:1468194:Tribe742 -> Dunn2008_Paraplanocera_oligoglena_1468194_Tribe742
+Dunn2008:Platynereis_dumerilii:6359:Tribe742 -> Dunn2008_Platynereis_dumerilii_6359_Tribe742
+Dunn2008:Ptychodera_flava:63121:Tribe742 -> Dunn2008_Ptychodera_flava_63121_Tribe742
+Dunn2008:Strongylocentrotus_purpuratus:7668:Tribe742 -> Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe742
+Dunn2008:Themiste_lageniformis:216211:Tribe742 -> Dunn2008_Themiste_lageniformis_216211_Tribe742
+Dunn2008:Trichinella_spiralis:6334:Tribe742 -> Dunn2008_Trichinella_spiralis_6334_Tribe742
+Dunn2008:Urechis_caupo:6431:Tribe742 -> Dunn2008_Urechis_caupo_6431_Tribe742
+Dunn2008:Biomphalaria_glabrata:6526:Tribe756 -> Dunn2008_Biomphalaria_glabrata_6526_Tribe756
+Dunn2008:Branchiostoma_floridae:7739:Tribe756 -> Dunn2008_Branchiostoma_floridae_7739_Tribe756
+Dunn2008:Capitella_teleta:283909:Tribe756 -> Dunn2008_Capitella_teleta_283909_Tribe756
+Dunn2008:Capsaspora_owczarzaki:192875:Tribe756 -> Dunn2008_Capsaspora_owczarzaki_192875_Tribe756
+Dunn2008:Crassostrea_virginica:6565:Tribe756 -> Dunn2008_Crassostrea_virginica_6565_Tribe756
+Dunn2008:Cryptococcus_neoformans:5207:Tribe756 -> Dunn2008_Cryptococcus_neoformans_5207_Tribe756
+Dunn2008:Daphnia_magna:35525:Tribe756 -> Dunn2008_Daphnia_magna_35525_Tribe756
+Dunn2008:Dugesia_japonica:6161:Tribe756 -> Dunn2008_Dugesia_japonica_6161_Tribe756
+Dunn2008:Fenneropenaeus_chinensis:139456:Tribe756 -> Dunn2008_Fenneropenaeus_chinensis_139456_Tribe756
+Dunn2008:Gallus_gallus:9031:Tribe756 -> Dunn2008_Gallus_gallus_9031_Tribe756
+Dunn2008:Homo_sapiens:9606:Tribe756 -> Dunn2008_Homo_sapiens_9606_Tribe756
+Dunn2008:Hydra_vulgaris_01:6087:Tribe756 -> Dunn2008_Hydra_vulgaris_01_6087_Tribe756
+Dunn2008:Lumbricus_rubellus:35632:Tribe756 -> Dunn2008_Lumbricus_rubellus_35632_Tribe756
+Dunn2008:Macrostomum_lignano:282301:Tribe756 -> Dunn2008_Macrostomum_lignano_282301_Tribe756
+Dunn2008:Mnemiopsis_leidyi:27923:Tribe756 -> Dunn2008_Mnemiopsis_leidyi_27923_Tribe756
+Dunn2008:Monosiga_ovata:81526:Tribe756 -> Dunn2008_Monosiga_ovata_81526_Tribe756
+Dunn2008:Nematostella_vectensis:45351:Tribe756 -> Dunn2008_Nematostella_vectensis_45351_Tribe756
+Dunn2008:Platynereis_dumerilii:6359:Tribe756 -> Dunn2008_Platynereis_dumerilii_6359_Tribe756
+Dunn2008:Saccharomyces_cerevisiae:4932:Tribe756 -> Dunn2008_Saccharomyces_cerevisiae_4932_Tribe756
+Dunn2008:Schmidtea_mediterranea:79327:Tribe756 -> Dunn2008_Schmidtea_mediterranea_79327_Tribe756
+Dunn2008:Sphaeroforma_arctica:72019:Tribe756 -> Dunn2008_Sphaeroforma_arctica_72019_Tribe756
+Dunn2008:Terebratalia_transversa:34513:Tribe756 -> Dunn2008_Terebratalia_transversa_34513_Tribe756
+Dunn2008:Xenoturbella_bocki:242395:Tribe756 -> Dunn2008_Xenoturbella_bocki_242395_Tribe756
+Dunn2008:Acropora_millepora:45264:Tribe793 -> Dunn2008_Acropora_millepora_45264_Tribe793
+Dunn2008:Amoebidium_parasiticum:4881:Tribe793 -> Dunn2008_Amoebidium_parasiticum_4881_Tribe793
+Dunn2008:Asterina_pectinifera:7594:Tribe793 -> Dunn2008_Asterina_pectinifera_7594_Tribe793
+Dunn2008:Biomphalaria_glabrata:6526:Tribe793 -> Dunn2008_Biomphalaria_glabrata_6526_Tribe793
+Dunn2008:Boophilus_microplus:6941:Tribe793 -> Dunn2008_Boophilus_microplus_6941_Tribe793
+Dunn2008:Capitella_teleta:283909:Tribe793 -> Dunn2008_Capitella_teleta_283909_Tribe793
+Dunn2008:Crassostrea_virginica:6565:Tribe793 -> Dunn2008_Crassostrea_virginica_6565_Tribe793
+Dunn2008:Daphnia_magna:35525:Tribe793 -> Dunn2008_Daphnia_magna_35525_Tribe793
+Dunn2008:Drosophila_melanogaster:7227:Tribe793 -> Dunn2008_Drosophila_melanogaster_7227_Tribe793
+Dunn2008:Fenneropenaeus_chinensis:139456:Tribe793 -> Dunn2008_Fenneropenaeus_chinensis_139456_Tribe793
+Dunn2008:Homo_sapiens:9606:Tribe793 -> Dunn2008_Homo_sapiens_9606_Tribe793
+Dunn2008:Hydra_vulgaris_01:6087:Tribe793 -> Dunn2008_Hydra_vulgaris_01_6087_Tribe793
+Dunn2008:Lumbricus_rubellus:35632:Tribe793 -> Dunn2008_Lumbricus_rubellus_35632_Tribe793
+Dunn2008:Mnemiopsis_leidyi:27923:Tribe793 -> Dunn2008_Mnemiopsis_leidyi_27923_Tribe793
+Dunn2008:Nematostella_vectensis:45351:Tribe793 -> Dunn2008_Nematostella_vectensis_45351_Tribe793
+Dunn2008:Paraplanocera_oligoglena:1468194:Tribe793 -> Dunn2008_Paraplanocera_oligoglena_1468194_Tribe793
+Dunn2008:Ptychodera_flava:63121:Tribe793 -> Dunn2008_Ptychodera_flava_63121_Tribe793
+Dunn2008:Richtersius_coronifer:245088:Tribe793 -> Dunn2008_Richtersius_coronifer_245088_Tribe793
+Dunn2008:Saccoglossus_kowalevskii:10224:Tribe793 -> Dunn2008_Saccoglossus_kowalevskii_10224_Tribe793
+Dunn2008:Schmidtea_mediterranea:79327:Tribe793 -> Dunn2008_Schmidtea_mediterranea_79327_Tribe793
+Dunn2008:Strongylocentrotus_purpuratus:7668:Tribe793 -> Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe793
+Dunn2008:Terebratalia_transversa:34513:Tribe793 -> Dunn2008_Terebratalia_transversa_34513_Tribe793
+Dunn2008:Themiste_lageniformis:216211:Tribe793 -> Dunn2008_Themiste_lageniformis_216211_Tribe793
+Dunn2008:Trichinella_spiralis:6334:Tribe793 -> Dunn2008_Trichinella_spiralis_6334_Tribe793
+Dunn2008:Urechis_caupo:6431:Tribe793 -> Dunn2008_Urechis_caupo_6431_Tribe793
+Dunn2008:Xenoturbella_bocki:242395:Tribe793 -> Dunn2008_Xenoturbella_bocki_242395_Tribe793
+Philippe2009:Acropora_millepora:45264:Gene_0128 -> Philippe2009_Acropora_millepora_45264_Gene_0128
+Philippe2009:Allomyces_macrogynus:28583:Gene_0128 -> Philippe2009_Allomyces_macrogynus_28583_Gene_0128
+Philippe2009:Amoebidium_parasiticum:4881:Gene_0128 -> Philippe2009_Amoebidium_parasiticum_4881_Gene_0128
+Philippe2009:Anoplodactylus_eroticus:488521:Gene_0128 -> Philippe2009_Anoplodactylus_eroticus_488521_Gene_0128
+Philippe2009:Aplysia_californica:6500:Gene_0128 -> Philippe2009_Aplysia_californica_6500_Gene_0128
+Philippe2009:Batrachochytrium_dendrobatidis:109871:Gene_0128 -> Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0128
+Philippe2009:Branchiostoma_floridae:7739:Gene_0128 -> Philippe2009_Branchiostoma_floridae_7739_Gene_0128
+Philippe2009:Capitella_teleta:283909:Gene_0128 -> Philippe2009_Capitella_teleta_283909_Gene_0128
+Philippe2009:Capsaspora_owczarzaki:192875:Gene_0128 -> Philippe2009_Capsaspora_owczarzaki_192875_Gene_0128
+Philippe2009:Carteriospongia_foliascens:593584:Gene_0128 -> Philippe2009_Carteriospongia_foliascens_593584_Gene_0128
+Philippe2009:Ciona_savignyi:51511:Gene_0128 -> Philippe2009_Ciona_savignyi_51511_Gene_0128
+Philippe2009:Clytia_hemisphaerica:252671:Gene_0128 -> Philippe2009_Clytia_hemisphaerica_252671_Gene_0128
+Philippe2009:Crassostrea_gigas:29159:Gene_0128 -> Philippe2009_Crassostrea_gigas_29159_Gene_0128
+Philippe2009:Cyanea_capillata:27804:Gene_0128 -> Philippe2009_Cyanea_capillata_27804_Gene_0128
+Philippe2009:Danio_rerio:7955:Gene_0128 -> Philippe2009_Danio_rerio_7955_Gene_0128
+Philippe2009:Daphnia_pulex:6669:Gene_0128 -> Philippe2009_Daphnia_pulex_6669_Gene_0128
+Philippe2009:Euperipatoides_kanangrensis:488523:Gene_0128 -> Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0128
+Philippe2009:Euprymna_scolopes:6613:Gene_0128 -> Philippe2009_Euprymna_scolopes_6613_Gene_0128
+Philippe2009:Helobdella_robusta:6412:Gene_0128 -> Philippe2009_Helobdella_robusta_6412_Gene_0128
+Philippe2009:Hydra_magnipapillata:6087:Gene_0128 -> Philippe2009_Hydra_magnipapillata_6087_Gene_0128
+Philippe2009:Hydractinia_echinata:35630:Gene_0128 -> Philippe2009_Hydractinia_echinata_35630_Gene_0128
+Philippe2009:Ixodes_scapularis:6945:Gene_0128 -> Philippe2009_Ixodes_scapularis_6945_Gene_0128
+Philippe2009:Leucetta_chagosensis:185688:Gene_0128 -> Philippe2009_Leucetta_chagosensis_185688_Gene_0128
+Philippe2009:Metridium_senile:6116:Gene_0128 -> Philippe2009_Metridium_senile_6116_Gene_0128
+Philippe2009:Mnemiopsis_leidyi:27923:Gene_0128 -> Philippe2009_Mnemiopsis_leidyi_27923_Gene_0128
+Philippe2009:Molgula_tectiformis:30286:Gene_0128 -> Philippe2009_Molgula_tectiformis_30286_Gene_0128
+Philippe2009:Monosiga_brevicollis:81824:Gene_0128 -> Philippe2009_Monosiga_brevicollis_81824_Gene_0128
+Philippe2009:Monosiga_ovata:81526:Gene_0128 -> Philippe2009_Monosiga_ovata_81526_Gene_0128
+Philippe2009:Nasonia_vitripennis:7425:Gene_0128 -> Philippe2009_Nasonia_vitripennis_7425_Gene_0128
+Philippe2009:Nematostella_vectensis:45351:Gene_0128 -> Philippe2009_Nematostella_vectensis_45351_Gene_0128
+Philippe2009:Oscarella_carmela:386100:Gene_0128 -> Philippe2009_Oscarella_carmela_386100_Gene_0128
+Philippe2009:Pedicellina_cernua:43123:Gene_0128 -> Philippe2009_Pedicellina_cernua_43123_Gene_0128
+Philippe2009:Pediculus_humanus:121225:Gene_0128 -> Philippe2009_Pediculus_humanus_121225_Gene_0128
+Philippe2009:Petromyzon_marinus:7757:Gene_0128 -> Philippe2009_Petromyzon_marinus_7757_Gene_0128
+Philippe2009:Phycomyces_blakesleeanus:4837:Gene_0128 -> Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0128
+Philippe2009:Pleurobrachia_pileus:140457:Gene_0128 -> Philippe2009_Pleurobrachia_pileus_140457_Gene_0128
+Philippe2009:Podocoryne_carnea:6096:Gene_0128 -> Philippe2009_Podocoryne_carnea_6096_Gene_0128
+Philippe2009:Amphimedon_queenslandica:400682:Gene_0128 -> Philippe2009_Amphimedon_queenslandica_400682_Gene_0128
+Philippe2009:Rhizopus_oryzae:64495:Gene_0128 -> Philippe2009_Rhizopus_oryzae_64495_Gene_0128
+Philippe2009:Saccoglossus_kowalevskii:10224:Gene_0128 -> Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0128
+Philippe2009:Sphaeroforma_arctica:72019:Gene_0128 -> Philippe2009_Sphaeroforma_arctica_72019_Gene_0128
+Philippe2009:Spizellomyces_punctatus:109760:Gene_0128 -> Philippe2009_Spizellomyces_punctatus_109760_Gene_0128
+Philippe2009:Strongylocentrotus_purpuratus:7668:Gene_0128 -> Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0128
+Philippe2009:Trichoplax_adhaerens:10228:Gene_0128 -> Philippe2009_Trichoplax_adhaerens_10228_Gene_0128
+Philippe2009:Tubifex_tubifex:6386:Gene_0128 -> Philippe2009_Tubifex_tubifex_6386_Gene_0128
+Philippe2009:Xenoturbella_bocki:242395:Gene_0128 -> Philippe2009_Xenoturbella_bocki_242395_Gene_0128
+
+                                                              Gap/Ambiguity  Composition  p-value
+   1  Dunn2008_Anoplodactylus_eroticus_488521_Tribe263               71.33%    failed      1.72%
+   2  Dunn2008_Asterina_pectinifera_7594_Tribe263                    71.33%    passed      9.20%
+   3  Dunn2008_Biomphalaria_glabrata_6526_Tribe263                   71.33%    passed     15.04%
+   4  Dunn2008_Boophilus_microplus_6941_Tribe263                     71.33%    failed      0.00%
+   5  Dunn2008_Branchiostoma_floridae_7739_Tribe263                  71.33%    passed      5.45%
+   6  Dunn2008_Capitella_teleta_283909_Tribe263                      86.26%    failed      4.54%
+   7  Dunn2008_Carcinus_maenas_6759_Tribe263                         76.54%    failed      0.87%
+   8  Dunn2008_Cerebratulus_lacteus_6221_Tribe263                    76.78%    passed     40.35%
+   9  Dunn2008_Chaetopterus_variopedatus_34590_Tribe263              79.86%    passed      9.62%
+  10  Dunn2008_Crassostrea_virginica_6565_Tribe263                   72.51%    failed      1.76%
+  11  Dunn2008_Daphnia_magna_35525_Tribe263                          71.33%    failed      4.33%
+  12  Dunn2008_Drosophila_melanogaster_7227_Tribe263                 71.33%    passed     29.26%
+  13  Dunn2008_Dugesia_japonica_6161_Tribe263                        72.99%    failed      1.22%
+  14  Dunn2008_Echinococcus_granulosus_6210_Tribe263                 71.33%    failed      0.04%
+  15  Dunn2008_Euperipatoides_kanangrensis_488523_Tribe263           71.33%    failed      2.56%
+  16  Dunn2008_Euprymna_scolopes_6613_Tribe263                       71.33%    failed      4.17%
+  17  Dunn2008_Fenneropenaeus_chinensis_139456_Tribe263              71.09%    passed     17.68%
+  18  Dunn2008_Gallus_gallus_9031_Tribe263                           71.33%    passed     10.33%
+  19  Dunn2008_Haementeria_depressa_279730_Tribe263                  90.28%    passed     87.98%
+  20  Dunn2008_Homo_sapiens_9606_Tribe263                            71.33%    passed      7.17%
+  21  Dunn2008_Hydra_vulgaris_01_6087_Tribe263                       71.33%    passed      5.89%
+  22  Dunn2008_Hypsibius_dujardini_232323_Tribe263                   71.33%    passed      9.26%
+  23  Dunn2008_Mytilus_galloprovincialis_29158_Tribe263              85.07%    passed     12.60%
+  24  Dunn2008_Nematostella_vectensis_45351_Tribe263                 82.94%    passed     53.49%
+  25  Dunn2008_Paraplanocera_oligoglena_1468194_Tribe263             72.27%    failed      3.06%
+  26  Dunn2008_Phoronis_vancouverensis_672013_Tribe263               93.13%    failed      1.14%
+  27  Dunn2008_Saccoglossus_kowalevskii_10224_Tribe263               71.33%    passed     16.65%
+  28  Dunn2008_Schmidtea_mediterranea_79327_Tribe263                 71.33%    failed      3.51%
+  29  Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe263           71.33%    passed     24.02%
+  30  Dunn2008_Themiste_lageniformis_216211_Tribe263                 92.89%    failed      1.71%
+  31  Dunn2008_Trichinella_spiralis_6334_Tribe263                    71.33%    failed      0.05%
+  32  Dunn2008_Xenoturbella_bocki_242395_Tribe263                    71.33%    failed      0.84%
+  33  Dunn2008_Aplysia_californica_6500_Tribe330                     78.67%    passed     15.31%
+  34  Dunn2008_Argopecten_irradians_31199_Tribe330                   67.06%    failed      0.40%
+  35  Dunn2008_Asterina_pectinifera_7594_Tribe330                    90.76%    failed      0.17%
+  36  Dunn2008_Boophilus_microplus_6941_Tribe330                     66.82%    failed      0.00%
+  37  Dunn2008_Branchiostoma_floridae_7739_Tribe330                  66.82%    failed      0.01%
+  38  Dunn2008_Carcinoscorpius_rotundicauda_6848_Tribe330            71.56%    failed      0.04%
+  39  Dunn2008_Carcinus_maenas_6759_Tribe330                         66.82%    failed      0.08%
+  40  Dunn2008_Cerebratulus_lacteus_6221_Tribe330                    66.82%    failed      0.02%
+  41  Dunn2008_Chaetoderma_nitidulum_256131_Tribe330                 71.56%    failed      0.20%
+  42  Dunn2008_Chaetopterus_variopedatus_34590_Tribe330              70.38%    failed      0.23%
+  43  Dunn2008_Crassostrea_virginica_6565_Tribe330                   67.06%    failed      0.71%
+  44  Dunn2008_Cyanea_capillata_27804_Tribe330                       91.23%    failed      0.14%
+  45  Dunn2008_Daphnia_magna_35525_Tribe330                          66.82%    failed      0.42%
+  46  Dunn2008_Drosophila_melanogaster_7227_Tribe330                 66.82%    failed      0.09%
+  47  Dunn2008_Dugesia_japonica_6161_Tribe330                        66.82%    failed      1.36%
+  48  Dunn2008_Echinococcus_granulosus_6210_Tribe330                 74.64%    failed      0.01%
+  49  Dunn2008_Echinoderes_horni_488522_Tribe330                     70.38%    passed      7.23%
+  50  Dunn2008_Euperipatoides_kanangrensis_488523_Tribe330           69.43%    failed      2.24%
+  51  Dunn2008_Euprymna_scolopes_6613_Tribe330                       66.82%    failed      1.39%
+  52  Dunn2008_Fenneropenaeus_chinensis_139456_Tribe330              66.82%    failed      0.99%
+  53  Dunn2008_Gallus_gallus_9031_Tribe330                           66.82%    failed      1.11%
+  54  Dunn2008_Haementeria_depressa_279730_Tribe330                  83.18%    passed     23.35%
+  55  Dunn2008_Homo_sapiens_9606_Tribe330                            66.82%    failed      0.08%
+  56  Dunn2008_Hypsibius_dujardini_232323_Tribe330                   90.05%    passed     28.04%
+  57  Dunn2008_Lumbricus_rubellus_35632_Tribe330                     66.82%    failed      0.01%
+  58  Dunn2008_Mytilus_galloprovincialis_29158_Tribe330              80.33%    passed     54.11%
+  59  Dunn2008_Nematostella_vectensis_45351_Tribe330                 94.55%    passed     52.62%
+  60  Dunn2008_Paraplanocera_oligoglena_1468194_Tribe330             66.35%    failed      0.04%
+  61  Dunn2008_Phoronis_vancouverensis_672013_Tribe330               66.82%    failed      0.00%
+  62  Dunn2008_Priapulus_caudatus_37621_Tribe330                     71.80%    failed      0.03%
+  63  Dunn2008_Ptychodera_flava_63121_Tribe330                       66.82%    failed      0.15%
+  64  Dunn2008_Saccharomyces_cerevisiae_4932_Tribe330                66.82%    failed      0.55%
+  65  Dunn2008_Saccoglossus_kowalevskii_10224_Tribe330               66.82%    failed      0.42%
+  66  Dunn2008_Schmidtea_mediterranea_79327_Tribe330                 66.59%    failed      0.00%
+  67  Dunn2008_Scutigera_coleoptrata_29022_Tribe330                  66.82%    failed      0.21%
+  68  Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe330           66.82%    failed      0.04%
+  69  Dunn2008_Terebratalia_transversa_34513_Tribe330                85.31%    failed      0.01%
+  70  Dunn2008_Themiste_lageniformis_216211_Tribe330                 66.82%    failed      2.61%
+  71  Dunn2008_Trichinella_spiralis_6334_Tribe330                    67.54%    failed      0.00%
+  72  Dunn2008_Xenoturbella_bocki_242395_Tribe330                    66.82%    failed      0.36%
+  73  Dunn2008_Xiphinema_index_46003_Tribe330                        66.82%    failed      0.07%
+  74  Dunn2008_Acanthoscurria_gomesiana_115339_Tribe368              76.54%    failed      2.60%
+  75  Dunn2008_Aplysia_californica_6500_Tribe368                     86.49%    passed     49.78%
+  76  Dunn2008_Argopecten_irradians_31199_Tribe368                   82.70%    passed     75.44%
+  77  Dunn2008_Biomphalaria_glabrata_6526_Tribe368                   81.04%    passed     13.14%
+  78  Dunn2008_Boophilus_microplus_6941_Tribe368                     76.54%    passed     65.39%
+  79  Dunn2008_Branchiostoma_floridae_7739_Tribe368                  76.54%    passed     12.32%
+  80  Dunn2008_Carcinus_maenas_6759_Tribe368                         82.70%    failed      0.03%
+  81  Dunn2008_Cerebratulus_lacteus_6221_Tribe368                    84.36%    passed     37.49%
+  82  Dunn2008_Chaetopterus_variopedatus_34590_Tribe368              78.91%    failed      4.46%
+  83  Dunn2008_Ciona_intestinalis_7719_Tribe368                      76.78%    failed      0.61%
+  84  Dunn2008_Crassostrea_virginica_6565_Tribe368                   76.54%    failed      1.83%
+  85  Dunn2008_Daphnia_magna_35525_Tribe368                          76.54%    passed     33.78%
+  86  Dunn2008_Drosophila_melanogaster_7227_Tribe368                 76.54%    passed     28.93%
+  87  Dunn2008_Euperipatoides_kanangrensis_488523_Tribe368           76.54%    passed     55.30%
+  88  Dunn2008_Euprymna_scolopes_6613_Tribe368                       84.60%    failed      1.20%
+  89  Dunn2008_Fenneropenaeus_chinensis_139456_Tribe368              88.63%    passed     27.70%
+  90  Dunn2008_Gallus_gallus_9031_Tribe368                           76.54%    passed     33.65%
+  91  Dunn2008_Homo_sapiens_9606_Tribe368                            76.54%    passed     37.29%
+  92  Dunn2008_Hypsibius_dujardini_232323_Tribe368                   82.70%    passed      5.43%
+  93  Dunn2008_Lumbricus_rubellus_35632_Tribe368                     80.57%    passed      7.37%
+  94  Dunn2008_Mytilus_galloprovincialis_29158_Tribe368              94.31%    passed     11.46%
+  95  Dunn2008_Nematostella_vectensis_45351_Tribe368                 83.18%    passed     57.65%
+  96  Dunn2008_Phoronis_vancouverensis_672013_Tribe368               90.52%    passed     35.78%
+  97  Dunn2008_Ptychodera_flava_63121_Tribe368                       79.15%    failed      1.04%
+  98  Dunn2008_Saccoglossus_kowalevskii_10224_Tribe368               76.78%    passed     11.68%
+  99  Dunn2008_Schmidtea_mediterranea_79327_Tribe368                 93.60%    passed     46.10%
+ 100  Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe368           76.54%    passed     30.52%
+ 101  Dunn2008_Xiphinema_index_46003_Tribe368                        76.54%    failed      0.79%
+ 102  Dunn2008_Anoplodactylus_eroticus_488521_Tribe369               83.41%    failed      3.90%
+ 103  Dunn2008_Argopecten_irradians_31199_Tribe369                   77.49%    failed      0.25%
+ 104  Dunn2008_Asterina_pectinifera_7594_Tribe369                    77.25%    passed     10.17%
+ 105  Dunn2008_Biomphalaria_glabrata_6526_Tribe369                   77.25%    passed      8.23%
+ 106  Dunn2008_Carcinoscorpius_rotundicauda_6848_Tribe369            80.33%    passed     10.40%
+ 107  Dunn2008_Carcinus_maenas_6759_Tribe369                         82.70%    failed      3.66%
+ 108  Dunn2008_Cerebratulus_lacteus_6221_Tribe369                    77.25%    failed      2.62%
+ 109  Dunn2008_Chaetoderma_nitidulum_256131_Tribe369                 78.67%    passed      5.46%
+ 110  Dunn2008_Chaetopterus_variopedatus_34590_Tribe369              77.25%    passed     20.20%
+ 111  Dunn2008_Drosophila_melanogaster_7227_Tribe369                 77.25%    passed     20.24%
+ 112  Dunn2008_Euperipatoides_kanangrensis_488523_Tribe369           83.65%    passed     19.69%
+ 113  Dunn2008_Euprymna_scolopes_6613_Tribe369                       79.38%    failed      0.47%
+ 114  Dunn2008_Fenneropenaeus_chinensis_139456_Tribe369              77.25%    passed     16.48%
+ 115  Dunn2008_Gallus_gallus_9031_Tribe369                           77.25%    failed      0.01%
+ 116  Dunn2008_Homo_sapiens_9606_Tribe369                            77.25%    failed      0.07%
+ 117  Dunn2008_Hydra_vulgaris_01_6087_Tribe369                       82.70%    failed      4.33%
+ 118  Dunn2008_Hypsibius_dujardini_232323_Tribe369                   77.25%    failed      4.66%
+ 119  Dunn2008_Mnemiopsis_leidyi_27923_Tribe369                      77.25%    passed     21.80%
+ 120  Dunn2008_Mytilus_galloprovincialis_29158_Tribe369              77.25%    failed      4.97%
+ 121  Dunn2008_Paraplanocera_oligoglena_1468194_Tribe369             77.25%    passed     12.11%
+ 122  Dunn2008_Phoronis_vancouverensis_672013_Tribe369               77.25%    passed     37.36%
+ 123  Dunn2008_Richtersius_coronifer_245088_Tribe369                 83.65%    failed      3.62%
+ 124  Dunn2008_Saccharomyces_cerevisiae_4932_Tribe369                77.25%    failed      1.76%
+ 125  Dunn2008_Saccoglossus_kowalevskii_10224_Tribe369               77.25%    failed      0.24%
+ 126  Dunn2008_Sphaeroforma_arctica_72019_Tribe369                   80.57%    passed      8.02%
+ 127  Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe369           76.78%    failed      3.72%
+ 128  Dunn2008_Terebratalia_transversa_34513_Tribe369                86.02%    passed     50.46%
+ 129  Dunn2008_Themiste_lageniformis_216211_Tribe369                 88.63%    passed      8.34%
+ 130  Dunn2008_Urechis_caupo_6431_Tribe369                           77.25%    passed     14.98%
+ 131  Dunn2008_Xenoturbella_bocki_242395_Tribe369                    77.25%    failed      0.03%
+ 132  Dunn2008_Xiphinema_index_46003_Tribe369                        77.25%    failed      1.46%
+ 133  Dunn2008_Acanthoscurria_gomesiana_115339_Tribe380              70.38%    failed      0.11%
+ 134  Dunn2008_Argopecten_irradians_31199_Tribe380                   80.33%    failed      1.97%
+ 135  Dunn2008_Biomphalaria_glabrata_6526_Tribe380                   86.02%    passed     13.93%
+ 136  Dunn2008_Boophilus_microplus_6941_Tribe380                     70.38%    failed      1.59%
+ 137  Dunn2008_Carcinus_maenas_6759_Tribe380                         81.28%    failed      0.63%
+ 138  Dunn2008_Cerebratulus_lacteus_6221_Tribe380                    86.02%    passed     40.68%
+ 139  Dunn2008_Chaetoderma_nitidulum_256131_Tribe380                 89.81%    passed     58.31%
+ 140  Dunn2008_Chaetopterus_variopedatus_34590_Tribe380              70.38%    failed      3.47%
+ 141  Dunn2008_Ciona_intestinalis_7719_Tribe380                      78.20%    failed      0.00%
+ 142  Dunn2008_Crassostrea_virginica_6565_Tribe380                   70.38%    passed      9.69%
+ 143  Dunn2008_Daphnia_magna_35525_Tribe380                          70.38%    failed      3.48%
+ 144  Dunn2008_Drosophila_melanogaster_7227_Tribe380                 70.38%    failed      1.51%
+ 145  Dunn2008_Echinococcus_granulosus_6210_Tribe380                 79.38%    passed     46.44%
+ 146  Dunn2008_Euperipatoides_kanangrensis_488523_Tribe380           71.56%    failed      0.00%
+ 147  Dunn2008_Fenneropenaeus_chinensis_139456_Tribe380              78.20%    failed      3.12%
+ 148  Dunn2008_Gallus_gallus_9031_Tribe380                           70.38%    failed      0.17%
+ 149  Dunn2008_Homo_sapiens_9606_Tribe380                            70.38%    failed      0.29%
+ 150  Dunn2008_Lumbricus_rubellus_35632_Tribe380                     70.38%    failed      3.53%
+ 151  Dunn2008_Mytilus_galloprovincialis_29158_Tribe380              71.56%    failed      0.17%
+ 152  Dunn2008_Nematostella_vectensis_45351_Tribe380                 99.05%    passed     84.97%
+ 153  Dunn2008_Phoronis_vancouverensis_672013_Tribe380               70.38%    passed     15.44%
+ 154  Dunn2008_Saccoglossus_kowalevskii_10224_Tribe380               70.38%    passed      5.28%
+ 155  Dunn2008_Schmidtea_mediterranea_79327_Tribe380                 70.38%    failed      0.09%
+ 156  Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe380           70.38%    passed     10.56%
+ 157  Dunn2008_Trichinella_spiralis_6334_Tribe380                    89.57%    passed     45.35%
+ 158  Dunn2008_Urechis_caupo_6431_Tribe380                           91.47%    failed      1.52%
+ 159  Dunn2008_Xenoturbella_bocki_242395_Tribe380                    76.54%    failed      0.00%
+ 160  Dunn2008_Anoplodactylus_eroticus_488521_Tribe400               64.45%    failed      0.00%
+ 161  Dunn2008_Aplysia_californica_6500_Tribe400                     63.03%    passed     77.27%
+ 162  Dunn2008_Argopecten_irradians_31199_Tribe400                   61.37%    failed      0.07%
+ 163  Dunn2008_Asterina_pectinifera_7594_Tribe400                    65.17%    passed      7.10%
+ 164  Dunn2008_Biomphalaria_glabrata_6526_Tribe400                   65.17%    passed     60.38%
+ 165  Dunn2008_Boophilus_microplus_6941_Tribe400                     63.03%    failed      1.05%
+ 166  Dunn2008_Branchiostoma_floridae_7739_Tribe400                  63.03%    passed     26.07%
+ 167  Dunn2008_Carcinoscorpius_rotundicauda_6848_Tribe400            63.03%    failed      0.23%
+ 168  Dunn2008_Carcinus_maenas_6759_Tribe400                         63.03%    passed     43.26%
+ 169  Dunn2008_Crassostrea_virginica_6565_Tribe400                   63.03%    failed      0.47%
+ 170  Dunn2008_Daphnia_magna_35525_Tribe400                          63.03%    passed     22.64%
+ 171  Dunn2008_Drosophila_melanogaster_7227_Tribe400                 63.03%    passed     33.01%
+ 172  Dunn2008_Dugesia_japonica_6161_Tribe400                        66.82%    passed      8.70%
+ 173  Dunn2008_Echinococcus_granulosus_6210_Tribe400                 70.14%    failed      0.83%
+ 174  Dunn2008_Euperipatoides_kanangrensis_488523_Tribe400           82.23%    passed     89.89%
+ 175  Dunn2008_Euprymna_scolopes_6613_Tribe400                       63.03%    passed     27.75%
+ 176  Dunn2008_Fenneropenaeus_chinensis_139456_Tribe400              63.03%    passed     45.53%
+ 177  Dunn2008_Gallus_gallus_9031_Tribe400                           63.03%    passed      5.25%
+ 178  Dunn2008_Haementeria_depressa_279730_Tribe400                  63.03%    passed     12.17%
+ 179  Dunn2008_Homo_sapiens_9606_Tribe400                            63.51%    passed      7.15%
+ 180  Dunn2008_Hypsibius_dujardini_232323_Tribe400                   63.98%    passed     47.11%
+ 181  Dunn2008_Lumbricus_rubellus_35632_Tribe400                     63.03%    passed     37.66%
+ 182  Dunn2008_Mytilus_galloprovincialis_29158_Tribe400              67.30%    passed     29.19%
+ 183  Dunn2008_Phoronis_vancouverensis_672013_Tribe400               63.03%    passed     13.06%
+ 184  Dunn2008_Priapulus_caudatus_37621_Tribe400                     63.03%    passed     19.32%
+ 185  Dunn2008_Ptychodera_flava_63121_Tribe400                       63.03%    passed      7.57%
+ 186  Dunn2008_Richtersius_coronifer_245088_Tribe400                 81.04%    passed     90.02%
+ 187  Dunn2008_Saccharomyces_cerevisiae_4932_Tribe400                63.03%    passed     36.97%
+ 188  Dunn2008_Saccoglossus_kowalevskii_10224_Tribe400               63.03%    failed      4.33%
+ 189  Dunn2008_Schmidtea_mediterranea_79327_Tribe400                 67.30%    passed     32.28%
+ 190  Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe400           63.03%    passed     65.15%
+ 191  Dunn2008_Terebratalia_transversa_34513_Tribe400                69.67%    passed     13.36%
+ 192  Dunn2008_Themiste_lageniformis_216211_Tribe400                 64.45%    passed     14.64%
+ 193  Dunn2008_Trichinella_spiralis_6334_Tribe400                    63.51%    passed     14.30%
+ 194  Dunn2008_Urechis_caupo_6431_Tribe400                           63.03%    passed     49.27%
+ 195  Dunn2008_Xenoturbella_bocki_242395_Tribe400                    63.03%    passed     59.19%
+ 196  Dunn2008_Xiphinema_index_46003_Tribe400                        68.01%    passed      8.48%
+ 197  Dunn2008_Acanthoscurria_gomesiana_115339_Tribe622              60.90%    passed     13.37%
+ 198  Dunn2008_Acropora_millepora_45264_Tribe622                     57.58%    passed     22.46%
+ 199  Dunn2008_Biomphalaria_glabrata_6526_Tribe622                   74.41%    passed     31.47%
+ 200  Dunn2008_Boophilus_microplus_6941_Tribe622                     57.58%    passed     18.96%
+ 201  Dunn2008_Branchiostoma_floridae_7739_Tribe622                  63.03%    passed     19.82%
+ 202  Dunn2008_Capsaspora_owczarzaki_192875_Tribe622                 63.74%    failed      0.00%
+ 203  Dunn2008_Carcinus_maenas_6759_Tribe622                         57.58%    passed     13.76%
+ 204  Dunn2008_Cerebratulus_lacteus_6221_Tribe622                    60.66%    passed     57.09%
+ 205  Dunn2008_Ciona_intestinalis_7719_Tribe622                      59.00%    passed      8.50%
+ 206  Dunn2008_Crassostrea_virginica_6565_Tribe622                   65.64%    passed     42.36%
+ 207  Dunn2008_Cryptococcus_neoformans_5207_Tribe622                 56.40%    failed      0.19%
+ 208  Dunn2008_Drosophila_melanogaster_7227_Tribe622                 57.58%    failed      3.16%
+ 209  Dunn2008_Fenneropenaeus_chinensis_139456_Tribe622              63.51%    passed     31.74%
+ 210  Dunn2008_Gallus_gallus_9031_Tribe622                           57.58%    passed     11.33%
+ 211  Dunn2008_Homo_sapiens_9606_Tribe622                            57.58%    passed     13.46%
+ 212  Dunn2008_Macrostomum_lignano_282301_Tribe622                   60.66%    failed      0.05%
+ 213  Dunn2008_Mnemiopsis_leidyi_27923_Tribe622                      57.58%    failed      4.16%
+ 214  Dunn2008_Monosiga_ovata_81526_Tribe622                         81.28%    passed     21.89%
+ 215  Dunn2008_Mytilus_galloprovincialis_29158_Tribe622              68.72%    passed     14.57%
+ 216  Dunn2008_Nematostella_vectensis_45351_Tribe622                 57.58%    passed     38.59%
+ 217  Dunn2008_Oscarella_carmela_386100_Tribe622                     58.77%    passed      6.43%
+ 218  Dunn2008_Ptychodera_flava_63121_Tribe622                       57.58%    passed     23.74%
+ 219  Dunn2008_Richtersius_coronifer_245088_Tribe622                 63.03%    failed      2.82%
+ 220  Dunn2008_Saccharomyces_cerevisiae_4932_Tribe622                64.22%    passed     23.59%
+ 221  Dunn2008_Schmidtea_mediterranea_79327_Tribe622                 57.58%    passed     16.98%
+ 222  Dunn2008_Sphaeroforma_arctica_72019_Tribe622                   58.29%    failed      0.26%
+ 223  Dunn2008_Trichinella_spiralis_6334_Tribe622                    88.86%    passed     34.89%
+ 224  Dunn2008_Asterina_pectinifera_7594_Tribe683                    71.56%    failed      4.81%
+ 225  Dunn2008_Boophilus_microplus_6941_Tribe683                     71.33%    passed     56.36%
+ 226  Dunn2008_Branchiostoma_floridae_7739_Tribe683                  71.33%    failed      1.45%
+ 227  Dunn2008_Capitella_teleta_283909_Tribe683                      71.33%    passed     16.46%
+ 228  Dunn2008_Capsaspora_owczarzaki_192875_Tribe683                 71.80%    failed      4.34%
+ 229  Dunn2008_Carcinus_maenas_6759_Tribe683                         73.22%    passed     37.42%
+ 230  Dunn2008_Ciona_intestinalis_7719_Tribe683                      76.54%    passed     27.03%
+ 231  Dunn2008_Daphnia_magna_35525_Tribe683                          74.64%    passed     44.57%
+ 232  Dunn2008_Drosophila_melanogaster_7227_Tribe683                 71.33%    passed     10.27%
+ 233  Dunn2008_Euprymna_scolopes_6613_Tribe683                       71.33%    failed      0.80%
+ 234  Dunn2008_Gallus_gallus_9031_Tribe683                           71.33%    passed     25.24%
+ 235  Dunn2008_Homo_sapiens_9606_Tribe683                            71.33%    passed     15.05%
+ 236  Dunn2008_Hydra_vulgaris_01_6087_Tribe683                       71.33%    passed     11.46%
+ 237  Dunn2008_Hypsibius_dujardini_232323_Tribe683                   71.33%    failed      0.22%
+ 238  Dunn2008_Mnemiopsis_leidyi_27923_Tribe683                      71.33%    passed     51.02%
+ 239  Dunn2008_Mytilus_galloprovincialis_29158_Tribe683              71.09%    failed      3.15%
+ 240  Dunn2008_Nematostella_vectensis_45351_Tribe683                 71.33%    passed     16.45%
+ 241  Dunn2008_Paraplanocera_oligoglena_1468194_Tribe683             77.25%    passed     20.65%
+ 242  Dunn2008_Ptychodera_flava_63121_Tribe683                       71.56%    passed     22.92%
+ 243  Dunn2008_Richtersius_coronifer_245088_Tribe683                 71.33%    passed     13.80%
+ 244  Dunn2008_Saccharomyces_cerevisiae_4932_Tribe683                76.07%    passed     16.13%
+ 245  Dunn2008_Schmidtea_mediterranea_79327_Tribe683                 71.33%    passed     52.16%
+ 246  Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe683           73.93%    passed     16.65%
+ 247  Dunn2008_Trichinella_spiralis_6334_Tribe683                    71.09%    passed     64.35%
+ 248  Dunn2008_Xenoturbella_bocki_242395_Tribe683                    71.33%    passed     11.35%
+ 249  Dunn2008_Xiphinema_index_46003_Tribe683                        71.33%    passed     70.24%
+ 250  Dunn2008_Acropora_millepora_45264_Tribe742                     86.73%    passed     67.96%
+ 251  Dunn2008_Anoplodactylus_eroticus_488521_Tribe742               73.22%    failed      4.66%
+ 252  Dunn2008_Argopecten_irradians_31199_Tribe742                   73.22%    passed     18.91%
+ 253  Dunn2008_Asterina_pectinifera_7594_Tribe742                    73.22%    passed      9.79%
+ 254  Dunn2008_Biomphalaria_glabrata_6526_Tribe742                   73.22%    passed     20.16%
+ 255  Dunn2008_Boophilus_microplus_6941_Tribe742                     74.88%    passed     15.87%
+ 256  Dunn2008_Branchiostoma_floridae_7739_Tribe742                  73.22%    passed     15.01%
+ 257  Dunn2008_Capitella_teleta_283909_Tribe742                      73.22%    passed     44.61%
+ 258  Dunn2008_Ciona_intestinalis_7719_Tribe742                      73.22%    passed     39.16%
+ 259  Dunn2008_Crassostrea_virginica_6565_Tribe742                   73.22%    passed     17.73%
+ 260  Dunn2008_Drosophila_melanogaster_7227_Tribe742                 73.70%    passed     18.79%
+ 261  Dunn2008_Echinococcus_granulosus_6210_Tribe742                 77.49%    passed     30.18%
+ 262  Dunn2008_Euprymna_scolopes_6613_Tribe742                       73.22%    passed      7.81%
+ 263  Dunn2008_Hydra_vulgaris_01_6087_Tribe742                       73.22%    passed     25.43%
+ 264  Dunn2008_Lumbricus_rubellus_35632_Tribe742                     73.22%    passed     43.26%
+ 265  Dunn2008_Nematostella_vectensis_45351_Tribe742                 73.22%    passed     16.29%
+ 266  Dunn2008_Paraplanocera_oligoglena_1468194_Tribe742             73.22%    passed     68.11%
+ 267  Dunn2008_Platynereis_dumerilii_6359_Tribe742                   73.22%    passed     22.02%
+ 268  Dunn2008_Ptychodera_flava_63121_Tribe742                       73.22%    passed     23.71%
+ 269  Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe742           73.22%    passed     26.13%
+ 270  Dunn2008_Themiste_lageniformis_216211_Tribe742                 73.22%    passed     28.36%
+ 271  Dunn2008_Trichinella_spiralis_6334_Tribe742                    73.46%    failed      1.71%
+ 272  Dunn2008_Urechis_caupo_6431_Tribe742                           72.51%    passed     19.02%
+ 273  Dunn2008_Biomphalaria_glabrata_6526_Tribe756                   73.70%    passed     46.80%
+ 274  Dunn2008_Branchiostoma_floridae_7739_Tribe756                  71.56%    passed      7.93%
+ 275  Dunn2008_Capitella_teleta_283909_Tribe756                      45.26%    passed     30.82%
+ 276  Dunn2008_Capsaspora_owczarzaki_192875_Tribe756                 57.82%    failed      1.69%
+ 277  Dunn2008_Crassostrea_virginica_6565_Tribe756                   46.45%    failed      3.57%
+ 278  Dunn2008_Cryptococcus_neoformans_5207_Tribe756                 45.26%    failed      0.05%
+ 279  Dunn2008_Daphnia_magna_35525_Tribe756                          88.39%    passed     52.42%
+ 280  Dunn2008_Dugesia_japonica_6161_Tribe756                        91.94%    passed     24.60%
+ 281  Dunn2008_Fenneropenaeus_chinensis_139456_Tribe756              79.15%    passed     10.80%
+ 282  Dunn2008_Gallus_gallus_9031_Tribe756                           45.73%    failed      0.34%
+ 283  Dunn2008_Homo_sapiens_9606_Tribe756                            45.73%    passed      5.86%
+ 284  Dunn2008_Hydra_vulgaris_01_6087_Tribe756                       45.97%    failed      4.83%
+ 285  Dunn2008_Lumbricus_rubellus_35632_Tribe756                     92.18%    passed     89.84%
+ 286  Dunn2008_Macrostomum_lignano_282301_Tribe756                   86.97%    failed      0.79%
+ 287  Dunn2008_Mnemiopsis_leidyi_27923_Tribe756                      81.28%    passed     23.19%
+ 288  Dunn2008_Monosiga_ovata_81526_Tribe756                         52.13%    failed      3.01%
+ 289  Dunn2008_Nematostella_vectensis_45351_Tribe756                 45.97%    passed     33.71%
+ 290  Dunn2008_Platynereis_dumerilii_6359_Tribe756                   46.21%    passed     19.82%
+ 291  Dunn2008_Saccharomyces_cerevisiae_4932_Tribe756                45.97%    failed      1.80%
+ 292  Dunn2008_Schmidtea_mediterranea_79327_Tribe756                 45.73%    passed      9.08%
+ 293  Dunn2008_Sphaeroforma_arctica_72019_Tribe756                   82.46%    passed      5.50%
+ 294  Dunn2008_Terebratalia_transversa_34513_Tribe756                46.68%    failed      1.59%
+ 295  Dunn2008_Xenoturbella_bocki_242395_Tribe756                    45.73%    passed     37.48%
+ 296  Dunn2008_Acropora_millepora_45264_Tribe793                     73.22%    failed      0.00%
+ 297  Dunn2008_Amoebidium_parasiticum_4881_Tribe793                  74.41%    failed      4.94%
+ 298  Dunn2008_Asterina_pectinifera_7594_Tribe793                    73.93%    failed      1.69%
+ 299  Dunn2008_Biomphalaria_glabrata_6526_Tribe793                   77.01%    failed      0.12%
+ 300  Dunn2008_Boophilus_microplus_6941_Tribe793                     78.67%    failed      1.07%
+ 301  Dunn2008_Capitella_teleta_283909_Tribe793                      73.93%    failed      0.36%
+ 302  Dunn2008_Crassostrea_virginica_6565_Tribe793                   81.28%    failed      0.16%
+ 303  Dunn2008_Daphnia_magna_35525_Tribe793                          74.41%    passed     36.88%
+ 304  Dunn2008_Drosophila_melanogaster_7227_Tribe793                 73.46%    failed      0.78%
+ 305  Dunn2008_Fenneropenaeus_chinensis_139456_Tribe793              73.70%    passed      7.07%
+ 306  Dunn2008_Homo_sapiens_9606_Tribe793                            73.93%    failed      0.22%
+ 307  Dunn2008_Hydra_vulgaris_01_6087_Tribe793                       73.93%    failed      1.71%
+ 308  Dunn2008_Lumbricus_rubellus_35632_Tribe793                     73.93%    failed      3.32%
+ 309  Dunn2008_Mnemiopsis_leidyi_27923_Tribe793                      73.70%    failed      2.15%
+ 310  Dunn2008_Nematostella_vectensis_45351_Tribe793                 86.49%    failed      1.50%
+ 311  Dunn2008_Paraplanocera_oligoglena_1468194_Tribe793             73.93%    failed      1.18%
+ 312  Dunn2008_Ptychodera_flava_63121_Tribe793                       73.93%    failed      0.01%
+ 313  Dunn2008_Richtersius_coronifer_245088_Tribe793                 73.22%    failed      1.17%
+ 314  Dunn2008_Saccoglossus_kowalevskii_10224_Tribe793               73.93%    failed      0.04%
+ 315  Dunn2008_Schmidtea_mediterranea_79327_Tribe793                 73.93%    failed      4.65%
+ 316  Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe793           89.57%    failed      0.00%
+ 317  Dunn2008_Terebratalia_transversa_34513_Tribe793                73.93%    failed      0.62%
+ 318  Dunn2008_Themiste_lageniformis_216211_Tribe793                 73.93%    failed      1.15%
+ 319  Dunn2008_Trichinella_spiralis_6334_Tribe793                    73.93%    failed      0.09%
+ 320  Dunn2008_Urechis_caupo_6431_Tribe793                           73.93%    failed      0.68%
+ 321  Dunn2008_Xenoturbella_bocki_242395_Tribe793                    75.12%    failed      1.09%
+ 322  Philippe2009_Acropora_millepora_45264_Gene_0128                42.89%    failed      0.13%
+ 323  Philippe2009_Allomyces_macrogynus_28583_Gene_0128              43.36%    failed      0.00%
+ 324  Philippe2009_Amoebidium_parasiticum_4881_Gene_0128             43.13%    failed      0.31%
+ 325  Philippe2009_Anoplodactylus_eroticus_488521_Gene_0128          43.13%    failed      0.01%
+ 326  Philippe2009_Aplysia_californica_6500_Gene_0128                42.89%    failed      0.02%
+ 327  Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0128   78.91%    passed     61.18%
+ 328  Philippe2009_Branchiostoma_floridae_7739_Gene_0128             42.89%    failed      0.01%
+ 329  Philippe2009_Capitella_teleta_283909_Gene_0128                 42.89%    failed      0.02%
+ 330  Philippe2009_Capsaspora_owczarzaki_192875_Gene_0128            42.89%    failed      0.44%
+ 331  Philippe2009_Carteriospongia_foliascens_593584_Gene_0128       43.84%    passed      7.15%
+ 332  Philippe2009_Ciona_savignyi_51511_Gene_0128                    42.89%    failed      0.22%
+ 333  Philippe2009_Clytia_hemisphaerica_252671_Gene_0128             42.89%    failed      1.26%
+ 334  Philippe2009_Crassostrea_gigas_29159_Gene_0128                 43.36%    failed      0.00%
+ 335  Philippe2009_Cyanea_capillata_27804_Gene_0128                  88.63%    passed     32.89%
+ 336  Philippe2009_Danio_rerio_7955_Gene_0128                        42.89%    failed      0.06%
+ 337  Philippe2009_Daphnia_pulex_6669_Gene_0128                      42.89%    failed      0.70%
+ 338  Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0128      42.89%    failed      0.05%
+ 339  Philippe2009_Euprymna_scolopes_6613_Gene_0128                  42.89%    failed      0.02%
+ 340  Philippe2009_Helobdella_robusta_6412_Gene_0128                 42.89%    failed      0.04%
+ 341  Philippe2009_Hydra_magnipapillata_6087_Gene_0128               42.89%    failed      1.85%
+ 342  Philippe2009_Hydractinia_echinata_35630_Gene_0128              58.29%    failed      0.01%
+ 343  Philippe2009_Ixodes_scapularis_6945_Gene_0128                  42.89%    failed      1.45%
+ 344  Philippe2009_Leucetta_chagosensis_185688_Gene_0128             45.50%    failed      0.98%
+ 345  Philippe2009_Metridium_senile_6116_Gene_0128                   42.89%    failed      0.08%
+ 346  Philippe2009_Mnemiopsis_leidyi_27923_Gene_0128                 44.31%    failed      0.04%
+ 347  Philippe2009_Molgula_tectiformis_30286_Gene_0128               42.89%    passed      7.87%
+ 348  Philippe2009_Monosiga_brevicollis_81824_Gene_0128              43.60%    failed      0.09%
+ 349  Philippe2009_Monosiga_ovata_81526_Gene_0128                    43.60%    failed      0.00%
+ 350  Philippe2009_Nasonia_vitripennis_7425_Gene_0128                42.89%    failed      0.00%
+ 351  Philippe2009_Nematostella_vectensis_45351_Gene_0128            42.89%    failed      0.14%
+ 352  Philippe2009_Oscarella_carmela_386100_Gene_0128                42.89%    failed      2.10%
+ 353  Philippe2009_Pedicellina_cernua_43123_Gene_0128                43.60%    failed      0.13%
+ 354  Philippe2009_Pediculus_humanus_121225_Gene_0128                42.89%    passed     11.81%
+ 355  Philippe2009_Petromyzon_marinus_7757_Gene_0128                 42.89%    failed      0.01%
+ 356  Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0128           56.16%    failed      0.22%
+ 357  Philippe2009_Pleurobrachia_pileus_140457_Gene_0128             50.47%    failed      0.00%
+ 358  Philippe2009_Podocoryne_carnea_6096_Gene_0128                  43.60%    failed      0.04%
+ 359  Philippe2009_Amphimedon_queenslandica_400682_Gene_0128         42.89%    passed     26.33%
+ 360  Philippe2009_Rhizopus_oryzae_64495_Gene_0128                   43.36%    failed      0.05%
+ 361  Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0128          42.89%    failed      0.03%
+ 362  Philippe2009_Sphaeroforma_arctica_72019_Gene_0128              43.13%    failed      0.18%
+ 363  Philippe2009_Spizellomyces_punctatus_109760_Gene_0128          65.17%    passed      5.01%
+ 364  Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0128      42.89%    failed      0.08%
+ 365  Philippe2009_Trichoplax_adhaerens_10228_Gene_0128              43.36%    failed      1.13%
+ 366  Philippe2009_Tubifex_tubifex_6386_Gene_0128                    42.89%    failed      0.06%
+ 367  Philippe2009_Xenoturbella_bocki_242395_Gene_0128               42.89%    failed      0.02%
+WARNING: 315 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                                          68.97%  186 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.292 seconds
+NOTE: MODEL SELECTION REQUIRES 102 MB MEMORY!
+Testing 144 protein models (sample size: 422) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  Dayhoff       62490.981    731 126443.963   1196627.963  129400.862
+  2  Dayhoff+I     62482.460    732 126428.919   1199540.919  129389.863
+  3  Dayhoff+G4    61894.192    732 125252.385   1198364.385  128213.329
+  4  Dayhoff+I+G4  61892.571    733 125251.142   1201295.142  128216.131
+  5  Dayhoff+F     61767.571    750 125035.141   1251535.141  128068.895
+  6  Dayhoff+F+I   61760.452    751 125022.903   1254526.903  128060.702
+  7  Dayhoff+F+G4  61229.618    751 123961.235   1253465.235  126999.034
+  8  Dayhoff+F+I+G4 61228.295    752 123960.590   1256472.590  127002.434
+  9  mtMAM         66002.765    731 133467.530   1203651.530  136424.429
+ 10  mtMAM+I       65988.624    732 133441.247   1206553.247  136402.191
+ 11  mtMAM+G4      64953.700    732 131371.401   1204483.401  134332.344
+ 12  mtMAM+I+G4    64950.755    733 131367.510   1207411.510  134332.498
+ 13  mtMAM+F       64174.742    750 129849.485   1256349.485  132883.239
+ 14  mtMAM+F+I     64156.943    751 129815.886   1259319.886  132853.685
+ 15  mtMAM+F+G4    63303.681    751 128109.363   1257613.363  131147.162
+ 16  mtMAM+F+I+G4  63298.898    752 128101.795   1260613.795  131143.639
+ 17  JTT           61994.766    731 125451.531   1195635.531  128408.430
+ 18  JTT+I         61982.278    732 125428.555   1198540.555  128389.499
+ 19  JTT+G4        61479.066    732 124422.133   1197534.133  127383.077
+ 20  JTT+I+G4      61474.909    733 124415.817   1200459.817  127380.806
+ 21  JTT+F         61558.971    750 124617.941   1251117.941  127651.695
+ 22  JTT+F+I       61548.921    751 124599.842   1254103.842  127637.641
+ 23  JTT+F+G4      61047.474    751 123596.948   1253100.948  126634.747
+ 24  JTT+F+I+G4    61044.334    752 123592.667   1256104.667  126634.511
+ 25  WAG           61505.574    731 124473.148   1194657.148  127430.047
+ 26  WAG+I         61496.982    732 124457.965   1197569.965  127418.908
+ 27  WAG+G4        61030.189    732 123524.379   1196636.379  126485.323
+ 28  WAG+I+G4      61027.532    733 123521.063   1199565.063  126486.052
+ 29  WAG+F         61022.089    750 123544.177   1250044.177  126577.931
+ 30  WAG+F+I       61014.222    751 123530.443   1253034.443  126568.242
+ 31  WAG+F+G4      60564.541    751 122631.081   1252135.081  125668.880
+ 32  WAG+F+I+G4    60562.187    752 122628.374   1255140.374  125670.218
+ 33  cpREV         61979.748    731 125421.496   1195605.496  128378.395
+ 34  cpREV+I       61977.670    732 125419.340   1198531.340  128380.284
+ 35  cpREV+G4      61478.876    732 124421.752   1197533.752  127382.696
+ 36  cpREV+I+G4    61478.842    733 124423.684   1200467.684  127388.673
+ 37  cpREV+F       61510.570    750 124521.140   1251021.140  127554.894
+ 38  cpREV+F+I     61508.671    751 124519.342   1254023.342  127557.141
+ 39  cpREV+F+G4    61015.339    751 123532.678   1253036.678  126570.477
+ 40  cpREV+F+I+G4  61015.349    752 123534.697   1256046.697  126576.541
+ 41  mtREV         63607.860    731 128677.720   1198861.720  131634.619
+ 42  mtREV+I       63599.982    732 128663.963   1201775.963  131624.907
+ 43  mtREV+G4      62994.357    732 127452.713   1200564.713  130413.657
+ 44  mtREV+I+G4    62992.669    733 127451.337   1203495.337  130416.326
+ 45  mtREV+F       62138.043    750 125776.085   1252276.085  128809.839
+ 46  mtREV+F+I     62127.303    751 125756.606   1255260.606  128794.405
+ 47  mtREV+F+G4    61560.787    751 124623.574   1254127.574  127661.373
+ 48  mtREV+F+I+G4  61557.402    752 124618.803   1257130.803  127660.647
+ 49  rtREV         61956.176    731 125374.352   1195558.352  128331.251
+ 50  rtREV+I       61945.606    732 125355.211   1198467.211  128316.155
+ 51  rtREV+G4      61478.238    732 124420.475   1197532.475  127381.419
+ 52  rtREV+I+G4    61474.460    733 124414.919   1200458.919  127379.908
+ 53  rtREV+F       61118.441    750 123736.881   1250236.881  126770.635
+ 54  rtREV+F+I     61108.564    751 123719.129   1253223.129  126756.928
+ 55  rtREV+F+G4    60612.852    751 122727.704   1252231.704  125765.503
+ 56  rtREV+F+I+G4  60609.690    752 122723.380   1255235.380  125765.224
+ 57  mtART         63650.442    731 128762.883   1198946.883  131719.782
+ 58  mtART+I       63649.475    732 128762.950   1201874.950  131723.894
+ 59  mtART+G4      62787.249    732 127038.498   1200150.498  129999.442
+ 60  mtART+I+G4    62787.237    733 127040.474   1203084.474  130005.463
+ 61  mtART+F       62320.536    750 126141.072   1252641.072  129174.826
+ 62  mtART+F+I     62320.513    751 126143.026   1255647.026  129180.825
+ 63  mtART+F+G4    61618.791    751 124739.581   1254243.581  127777.380
+ 64  mtART+F+I+G4  61618.785    752 124741.571   1257253.571  127783.415
+ 65  mtZOA         62390.972    731 126243.944   1196427.944  129200.843
+ 66  mtZOA+I       62390.555    732 126245.109   1199357.109  129206.053
+ 67  mtZOA+G4      61672.027    732 124808.054   1197920.054  127768.997
+ 68  mtZOA+I+G4    61672.018    733 124810.037   1200854.037  127775.025
+ 69  mtZOA+F       61604.558    750 124709.116   1251209.116  127742.870
+ 70  mtZOA+F+I     61603.585    751 124709.169   1254213.169  127746.968
+ 71  mtZOA+F+G4    60992.550    751 123487.100   1252991.100  126524.899
+ 72  mtZOA+F+I+G4  60992.522    752 123489.044   1256001.044  126530.888
+ 73  VT            61549.825    731 124561.649   1194745.649  127518.548
+ 74  VT+I          61539.459    732 124542.918   1197654.918  127503.862
+ 75  VT+G4         61121.863    732 123707.726   1196819.726  126668.669
+ 76  VT+I+G4       61118.181    733 123702.363   1199746.363  126667.352
+ 77  VT+F          61138.473    750 123776.945   1250276.945  126810.699
+ 78  VT+F+I        61129.590    751 123761.180   1253265.180  126798.979
+ 79  VT+F+G4       60717.454    751 122936.907   1252440.907  125974.706
+ 80  VT+F+I+G4     60714.439    752 122932.877   1255444.877  125974.721
+ 81  LG            61176.494    731 123814.987   1193998.987  126771.886
+ 82  LG+I          61164.878    732 123793.756   1196905.756  126754.700
+ 83  LG+G4         60686.290    732 122836.580   1195948.580  125797.524
+ 84  LG+I+G4       60682.187    733 122830.373   1198874.373  125795.362
+ 85  LG+F          60808.877    750 123117.754   1249617.754  126151.508
+ 86  LG+F+I        60798.986    751 123099.971   1252603.971  126137.770
+ 87  LG+F+G4       60304.620    751 122111.239   1251615.239  125149.038
+ 88  LG+F+I+G4     60301.457    752 122106.914   1254618.914  125148.758
+ 89  DCMut         62487.511    731 126437.021   1196621.021  129393.920
+ 90  DCMut+I       62478.954    732 126421.908   1199533.908  129382.852
+ 91  DCMut+G4      61893.019    732 125250.038   1198362.038  128210.982
+ 92  DCMut+I+G4    61891.389    733 125248.778   1201292.778  128213.767
+ 93  DCMut+F       61764.550    750 125029.099   1251529.099  128062.853
+ 94  DCMut+F+I     61757.412    751 125016.825   1254520.825  128054.624
+ 95  DCMut+F+G4    61228.415    751 123958.831   1253462.831  126996.630
+ 96  DCMut+F+I+G4  61227.081    752 123958.161   1256470.161  127000.005
+ 97  PMB           61655.109    731 124772.218   1194956.218  127729.117
+ 98  PMB+I         61650.846    732 124765.691   1197877.691  127726.635
+slurmstepd: error: *** JOB 29335990 ON r1236 CANCELLED AT 2022-08-22T14:46:06 ***

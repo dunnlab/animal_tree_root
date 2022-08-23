@@ -13,7 +13,7 @@ do
         mkdir -p /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test/$line/
         mafft-linsi /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/fasta/$line.fasta > /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test/$line/$line.mafft
         iqtree -s /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test/$line/$line.mafft -m TEST -nt $thread -bb 1000 -pre  /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/mafft/test/$line/TEST_$line ;
-done < /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/name_list_test.txt
+done < /proj/metazoa_phylo/private/animal_tree_root_fork/files_mine/name_list_paralogs.txt
 
 
 
