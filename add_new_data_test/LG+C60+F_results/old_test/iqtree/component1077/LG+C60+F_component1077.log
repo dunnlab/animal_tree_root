@@ -1,0 +1,482 @@
+IQ-TREE version 1.5.3 for Linux 64-bit built Mar 12 2017
+Copyright (c) 2011-2016 Nguyen Lam Tung, Olga Chernomor, Arndt von Haeseler and Bui Quang Minh.
+
+Host:    r271.uppmax.uu.se (AVX2, FMA3, 125 GB RAM)
+Command: iqtree -s /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component1077.mafft -m LG+C60+F -nt 1 -bb 1000 -pre /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1077/LG+C60+F_component1077
+Seed:    227815 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 29 15:31:43 2022
+Kernel:  AVX+FMA
+
+NOTE: Consider using the multicore version because your CPU has 20 cores!
+
+Reading alignment file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component1077.mafft ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 109 sequences with 108 columns and 107 patterns (70 informative sites, 26 constant sites)
+WARNING: Some sequence names are changed as follows:
+Chang2015:Acanthoeca_sp:81532:tribe542 -> Chang2015_Acanthoeca_sp_81532_tribe542
+Chang2015:Acropora_cervicornis:6130:tribe542 -> Chang2015_Acropora_cervicornis_6130_tribe542
+Chang2015:Aiptasia_pallida:1720309:tribe542 -> Chang2015_Aiptasia_pallida_1720309_tribe542
+Chang2015:Amoebidium_parasiticum:4881:tribe542 -> Chang2015_Amoebidium_parasiticum_4881_tribe542
+Chang2015:Amphimedon_queenslandica:400682:tribe542 -> Chang2015_Amphimedon_queenslandica_400682_tribe542
+Chang2015:Aphrocallistes_vastus:83887:tribe542 -> Chang2015_Aphrocallistes_vastus_83887_tribe542
+Chang2015:Aurelia_aurita:6145:tribe542 -> Chang2015_Aurelia_aurita_6145_tribe542
+Chang2015:Beroe_abyssicola:320166:tribe542 -> Chang2015_Beroe_abyssicola_320166_tribe542
+Chang2015:Bolocera_tuediae:1163374:tribe542 -> Chang2015_Bolocera_tuediae_1163374_tribe542
+Chang2015:Botryllus_schlosseri:30301:tribe542 -> Chang2015_Botryllus_schlosseri_30301_tribe542
+Chang2015:Branchiostoma_floridae:7739:tribe542 -> Chang2015_Branchiostoma_floridae_7739_tribe542
+Chang2015:Capitella_teleta:283909:tribe542 -> Chang2015_Capitella_teleta_283909_tribe542
+Chang2015:Capsaspora_owczarzaki:192875:tribe542 -> Chang2015_Capsaspora_owczarzaki_192875_tribe542
+Chang2015:Chondrilla_nucula:220712:tribe542 -> Chang2015_Chondrilla_nucula_220712_tribe542
+Chang2015:Ciona_intestinalis:7719:tribe542 -> Chang2015_Ciona_intestinalis_7719_tribe542
+Chang2015:Clytia_hemisphaerica:252671:tribe542 -> Chang2015_Clytia_hemisphaerica_252671_tribe542
+Chang2015:Corticium_candelabrum:121492:tribe542 -> Chang2015_Corticium_candelabrum_121492_tribe542
+Chang2015:Craspedacusta_sowerbii:128124:tribe542 -> Chang2015_Craspedacusta_sowerbii_128124_tribe542
+Chang2015:Crassostrea_gigas:29159:tribe542 -> Chang2015_Crassostrea_gigas_29159_tribe542
+Chang2015:Cyanea_capillata:27804:tribe542 -> Chang2015_Cyanea_capillata_27804_tribe542
+Chang2015:Daphnia_pulex:6669:tribe542 -> Chang2015_Daphnia_pulex_6669_tribe542
+Chang2015:Ectopleura_larynx:264052:tribe542 -> Chang2015_Ectopleura_larynx_264052_tribe542
+Chang2015:Edwardsiella_lineata:132407:tribe542 -> Chang2015_Edwardsiella_lineata_132407_tribe542
+Chang2015:Enteromyxum_leei:188704:tribe542 -> Chang2015_Enteromyxum_leei_188704_tribe542
+Chang2015:Ephydatia_muelleri:6052:tribe542 -> Chang2015_Ephydatia_muelleri_6052_tribe542
+Chang2015:Eunicella_cavolinii:317547:tribe542 -> Chang2015_Eunicella_cavolinii_317547_tribe542
+Chang2015:Euplectella_aspergillum:936045:tribe542 -> Chang2015_Euplectella_aspergillum_936045_tribe542
+Chang2015:Euplokamis_dunlapae:1403701:tribe542 -> Chang2015_Euplokamis_dunlapae_1403701_tribe542
+Chang2015:Gorgonia_ventalina:204384:tribe542 -> Chang2015_Gorgonia_ventalina_204384_tribe542
+Chang2015:Helobdella_robusta:6412:tribe542 -> Chang2015_Helobdella_robusta_6412_tribe542
+Chang2015:Homo_sapiens:9606:tribe542 -> Chang2015_Homo_sapiens_9606_tribe542
+Chang2015:Hormathia_digitata:1163372:tribe542 -> Chang2015_Hormathia_digitata_1163372_tribe542
+Chang2015:Hydra_vulgaris_01:6087:tribe542 -> Chang2015_Hydra_vulgaris_01_6087_tribe542
+Chang2015:Hydractinia_polyclina:589945:tribe542 -> Chang2015_Hydractinia_polyclina_589945_tribe542
+Chang2015:Ilyanassa_obsoleta:1934733:tribe542 -> Chang2015_Ilyanassa_obsoleta_1934733_tribe542
+Chang2015:Ixodes_scapularis:6945:tribe542 -> Chang2015_Ixodes_scapularis_6945_tribe542
+Chang2015:Kudoa_iwatai:269814:tribe542 -> Chang2015_Kudoa_iwatai_269814_tribe542
+Chang2015:Latimeria_menadoensis:106881:tribe542 -> Chang2015_Latimeria_menadoensis_106881_tribe542
+Chang2015:Leucetta_chagosensis:185688:tribe542 -> Chang2015_Leucetta_chagosensis_185688_tribe542
+Chang2015:Ministeria_vibrans:134558:tribe542 -> Chang2015_Ministeria_vibrans_134558_tribe542
+Chang2015:Mnemiopsis_leidyi:27923:tribe542 -> Chang2015_Mnemiopsis_leidyi_27923_tribe542
+Chang2015:Monosiga_brevicollis:81824:tribe542 -> Chang2015_Monosiga_brevicollis_81824_tribe542
+Chang2015:Orbicella_faveolata:48498:tribe542 -> Chang2015_Orbicella_faveolata_48498_tribe542
+Chang2015:Myxobolus_cerebralis:59783:tribe542 -> Chang2015_Myxobolus_cerebralis_59783_tribe542
+Chang2015:Nanomia_bijuga:168759:tribe542 -> Chang2015_Nanomia_bijuga_168759_tribe542
+Chang2015:Nasonia_vitripennis:7425:tribe542 -> Chang2015_Nasonia_vitripennis_7425_tribe542
+Chang2015:Nematostella_vectensis:45351:tribe542 -> Chang2015_Nematostella_vectensis_45351_tribe542
+Chang2015:Octopus_vulgaris:6645:tribe542 -> Chang2015_Octopus_vulgaris_6645_tribe542
+Chang2015:Oscarella_carmela:386100:tribe542 -> Chang2015_Oscarella_carmela_386100_tribe542
+Chang2015:Oscarella_sp_SN-2011:386100:tribe542 -> Chang2015_Oscarella_sp_SN-2011_386100_tribe542
+Chang2015:Pediculus_humanus:121225:tribe542 -> Chang2015_Pediculus_humanus_121225_tribe542
+Chang2015:Petromyzon_marinus:7757:tribe542 -> Chang2015_Petromyzon_marinus_7757_tribe542
+Chang2015:Petrosia_ficiformis:68564:tribe542 -> Chang2015_Petrosia_ficiformis_68564_tribe542
+Chang2015:Pleurobrachia_pileus:140457:tribe542 -> Chang2015_Pleurobrachia_pileus_140457_tribe542
+Chang2015:Pocillopora_damicornis:46731:tribe542 -> Chang2015_Pocillopora_damicornis_46731_tribe542
+Chang2015:Polypodium_hydriforme:43186:tribe542 -> Chang2015_Polypodium_hydriforme_43186_tribe542
+Chang2015:Saccoglossus_kowalevskii:10224:tribe542 -> Chang2015_Saccoglossus_kowalevskii_10224_tribe542
+Chang2015:Sarcotragus_fasciculatus:1234657:tribe542 -> Chang2015_Sarcotragus_fasciculatus_1234657_tribe542
+Chang2015:Sphaeroforma_arctica:72019:tribe542 -> Chang2015_Sphaeroforma_arctica_72019_tribe542
+Chang2015:Stephanoeca_diplocostata:81535:tribe542 -> Chang2015_Stephanoeca_diplocostata_81535_tribe542
+Chang2015:Stomolophus_meleagris:168796:tribe542 -> Chang2015_Stomolophus_meleagris_168796_tribe542
+Chang2015:Strigamia_maritima:126957:tribe542 -> Chang2015_Strigamia_maritima_126957_tribe542
+Chang2015:Strongylocentrotus_purpuratus:7668:tribe542 -> Chang2015_Strongylocentrotus_purpuratus_7668_tribe542
+Chang2015:Sycon_ciliatum:27933:tribe542 -> Chang2015_Sycon_ciliatum_27933_tribe542
+Chang2015:Sycon_coactum:1009717:tribe542 -> Chang2015_Sycon_coactum_1009717_tribe542
+Chang2015:Trichoplax_adhaerens:10228:tribe542 -> Chang2015_Trichoplax_adhaerens_10228_tribe542
+Chang2015:Tripedalia_cystophora:6141:tribe542 -> Chang2015_Tripedalia_cystophora_6141_tribe542
+Chang2015:Urticina_eques:417072:tribe542 -> Chang2015_Urticina_eques_417072_tribe542
+Chang2015:Vallicula_multiformis:140489:tribe542 -> Chang2015_Vallicula_multiformis_140489_tribe542
+Dunn2008:Acanthoscurria_gomesiana:115339:Tribe542 -> Dunn2008_Acanthoscurria_gomesiana_115339_Tribe542
+Dunn2008:Acropora_millepora:45264:Tribe542 -> Dunn2008_Acropora_millepora_45264_Tribe542
+Dunn2008:Anoplodactylus_eroticus:488521:Tribe542 -> Dunn2008_Anoplodactylus_eroticus_488521_Tribe542
+Dunn2008:Argopecten_irradians:31199:Tribe542 -> Dunn2008_Argopecten_irradians_31199_Tribe542
+Dunn2008:Boophilus_microplus:6941:Tribe542 -> Dunn2008_Boophilus_microplus_6941_Tribe542
+Dunn2008:Branchiostoma_floridae:7739:Tribe542 -> Dunn2008_Branchiostoma_floridae_7739_Tribe542
+Dunn2008:Capitella_teleta:283909:Tribe542 -> Dunn2008_Capitella_teleta_283909_Tribe542
+Dunn2008:Capsaspora_owczarzaki:192875:Tribe542 -> Dunn2008_Capsaspora_owczarzaki_192875_Tribe542
+Dunn2008:Carinoma_mutabilis:187807:Tribe542 -> Dunn2008_Carinoma_mutabilis_187807_Tribe542
+Dunn2008:Cerebratulus_lacteus:6221:Tribe542 -> Dunn2008_Cerebratulus_lacteus_6221_Tribe542
+Dunn2008:Chaetoderma_nitidulum:256131:Tribe542 -> Dunn2008_Chaetoderma_nitidulum_256131_Tribe542
+Dunn2008:Chaetopterus_variopedatus:34590:Tribe542 -> Dunn2008_Chaetopterus_variopedatus_34590_Tribe542
+Dunn2008:Ciona_intestinalis:7719:Tribe542 -> Dunn2008_Ciona_intestinalis_7719_Tribe542
+Dunn2008:Cryptococcus_neoformans:5207:Tribe542 -> Dunn2008_Cryptococcus_neoformans_5207_Tribe542
+Dunn2008:Cyanea_capillata:27804:Tribe542 -> Dunn2008_Cyanea_capillata_27804_Tribe542
+Dunn2008:Daphnia_magna:35525:Tribe542 -> Dunn2008_Daphnia_magna_35525_Tribe542
+Dunn2008:Drosophila_melanogaster:7227:Tribe542 -> Dunn2008_Drosophila_melanogaster_7227_Tribe542
+Dunn2008:Echinococcus_granulosus:6210:Tribe542 -> Dunn2008_Echinococcus_granulosus_6210_Tribe542
+Dunn2008:Euperipatoides_kanangrensis:488523:Tribe542 -> Dunn2008_Euperipatoides_kanangrensis_488523_Tribe542
+Dunn2008:Euprymna_scolopes:6613:Tribe542 -> Dunn2008_Euprymna_scolopes_6613_Tribe542
+Dunn2008:Fenneropenaeus_chinensis:139456:Tribe542 -> Dunn2008_Fenneropenaeus_chinensis_139456_Tribe542
+Dunn2008:Gallus_gallus:9031:Tribe542 -> Dunn2008_Gallus_gallus_9031_Tribe542
+Dunn2008:Haementeria_depressa:279730:Tribe542 -> Dunn2008_Haementeria_depressa_279730_Tribe542
+Dunn2008:Homo_sapiens:9606:Tribe542 -> Dunn2008_Homo_sapiens_9606_Tribe542
+Dunn2008:Hydra_vulgaris_01:6087:Tribe542 -> Dunn2008_Hydra_vulgaris_01_6087_Tribe542
+Dunn2008:Hypsibius_dujardini:232323:Tribe542 -> Dunn2008_Hypsibius_dujardini_232323_Tribe542
+Dunn2008:Lumbricus_rubellus:35632:Tribe542 -> Dunn2008_Lumbricus_rubellus_35632_Tribe542
+Dunn2008:Mnemiopsis_leidyi:27923:Tribe542 -> Dunn2008_Mnemiopsis_leidyi_27923_Tribe542
+Dunn2008:Nematostella_vectensis:45351:Tribe542 -> Dunn2008_Nematostella_vectensis_45351_Tribe542
+Dunn2008:Paraplanocera_oligoglena:1468194:Tribe542 -> Dunn2008_Paraplanocera_oligoglena_1468194_Tribe542
+Dunn2008:Ptychodera_flava:63121:Tribe542 -> Dunn2008_Ptychodera_flava_63121_Tribe542
+Dunn2008:Richtersius_coronifer:245088:Tribe542 -> Dunn2008_Richtersius_coronifer_245088_Tribe542
+Dunn2008:Saccharomyces_cerevisiae:4932:Tribe542 -> Dunn2008_Saccharomyces_cerevisiae_4932_Tribe542
+Dunn2008:Schmidtea_mediterranea:79327:Tribe542 -> Dunn2008_Schmidtea_mediterranea_79327_Tribe542
+Dunn2008:Scutigera_coleoptrata:29022:Tribe542 -> Dunn2008_Scutigera_coleoptrata_29022_Tribe542
+Dunn2008:Sphaeroforma_arctica:72019:Tribe542 -> Dunn2008_Sphaeroforma_arctica_72019_Tribe542
+Dunn2008:Strongylocentrotus_purpuratus:7668:Tribe542 -> Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe542
+Dunn2008:Terebratalia_transversa:34513:Tribe542 -> Dunn2008_Terebratalia_transversa_34513_Tribe542
+Dunn2008:Trichinella_spiralis:6334:Tribe542 -> Dunn2008_Trichinella_spiralis_6334_Tribe542
+Dunn2008:Urechis_caupo:6431:Tribe542 -> Dunn2008_Urechis_caupo_6431_Tribe542
+
+                                                       Gap/Ambiguity  Composition  p-value
+   1  Chang2015_Acanthoeca_sp_81532_tribe542                  23.15%    passed     99.23%
+   2  Chang2015_Acropora_cervicornis_6130_tribe542            23.15%    passed     99.06%
+   3  Chang2015_Aiptasia_pallida_1720309_tribe542             23.15%    passed     99.97%
+   4  Chang2015_Amoebidium_parasiticum_4881_tribe542          23.15%    passed     99.74%
+   5  Chang2015_Amphimedon_queenslandica_400682_tribe542      23.15%    passed     99.96%
+   6  Chang2015_Aphrocallistes_vastus_83887_tribe542          23.15%    passed     68.64%
+   7  Chang2015_Aurelia_aurita_6145_tribe542                  23.15%    passed    100.00%
+   8  Chang2015_Beroe_abyssicola_320166_tribe542              23.15%    passed     99.89%
+   9  Chang2015_Bolocera_tuediae_1163374_tribe542             23.15%    passed     99.76%
+  10  Chang2015_Botryllus_schlosseri_30301_tribe542           23.15%    passed    100.00%
+  11  Chang2015_Branchiostoma_floridae_7739_tribe542          23.15%    passed     88.98%
+  12  Chang2015_Capitella_teleta_283909_tribe542              23.15%    passed     99.79%
+  13  Chang2015_Capsaspora_owczarzaki_192875_tribe542         23.15%    passed     99.74%
+  14  Chang2015_Chondrilla_nucula_220712_tribe542             23.15%    passed     99.20%
+  15  Chang2015_Ciona_intestinalis_7719_tribe542              23.15%    passed     99.99%
+  16  Chang2015_Clytia_hemisphaerica_252671_tribe542          23.15%    passed    100.00%
+  17  Chang2015_Corticium_candelabrum_121492_tribe542         23.15%    passed     99.46%
+  18  Chang2015_Craspedacusta_sowerbii_128124_tribe542        23.15%    passed     66.01%
+  19  Chang2015_Crassostrea_gigas_29159_tribe542              23.15%    passed     99.95%
+  20  Chang2015_Cyanea_capillata_27804_tribe542               23.15%    passed    100.00%
+  21  Chang2015_Daphnia_pulex_6669_tribe542                   23.15%    passed     57.79%
+  22  Chang2015_Ectopleura_larynx_264052_tribe542             23.15%    passed     99.95%
+  23  Chang2015_Edwardsiella_lineata_132407_tribe542          23.15%    passed     99.60%
+  24  Chang2015_Enteromyxum_leei_188704_tribe542              25.00%    passed     98.34%
+  25  Chang2015_Ephydatia_muelleri_6052_tribe542              23.15%    passed    100.00%
+  26  Chang2015_Eunicella_cavolinii_317547_tribe542           28.70%    passed     99.98%
+  27  Chang2015_Euplectella_aspergillum_936045_tribe542       23.15%    passed     99.33%
+  28  Chang2015_Euplokamis_dunlapae_1403701_tribe542          23.15%    passed     99.98%
+  29  Chang2015_Gorgonia_ventalina_204384_tribe542            23.15%    passed     99.95%
+  30  Chang2015_Helobdella_robusta_6412_tribe542              25.93%    passed     99.98%
+  31  Chang2015_Homo_sapiens_9606_tribe542                    23.15%    passed     99.99%
+  32  Chang2015_Hormathia_digitata_1163372_tribe542           23.15%    passed     98.81%
+  33  Chang2015_Hydra_vulgaris_01_6087_tribe542               23.15%    passed     99.93%
+  34  Chang2015_Hydractinia_polyclina_589945_tribe542         23.15%    passed     99.70%
+  35  Chang2015_Ilyanassa_obsoleta_1934733_tribe542           23.15%    passed     76.38%
+  36  Chang2015_Ixodes_scapularis_6945_tribe542               23.15%    passed     99.98%
+  37  Chang2015_Kudoa_iwatai_269814_tribe542                  23.15%    passed     94.59%
+  38  Chang2015_Latimeria_menadoensis_106881_tribe542         23.15%    passed     99.99%
+  39  Chang2015_Leucetta_chagosensis_185688_tribe542          23.15%    passed     99.99%
+  40  Chang2015_Ministeria_vibrans_134558_tribe542            23.15%    passed    100.00%
+  41  Chang2015_Mnemiopsis_leidyi_27923_tribe542              23.15%    passed     97.63%
+  42  Chang2015_Monosiga_brevicollis_81824_tribe542           23.15%    passed     88.26%
+  43  Chang2015_Orbicella_faveolata_48498_tribe542            23.15%    passed    100.00%
+  44  Chang2015_Myxobolus_cerebralis_59783_tribe542           23.15%    passed     89.00%
+  45  Chang2015_Nanomia_bijuga_168759_tribe542                41.67%    passed     87.26%
+  46  Chang2015_Nasonia_vitripennis_7425_tribe542             23.15%    passed     68.58%
+  47  Chang2015_Nematostella_vectensis_45351_tribe542         23.15%    passed     99.95%
+  48  Chang2015_Octopus_vulgaris_6645_tribe542                23.15%    passed    100.00%
+  49  Chang2015_Oscarella_carmela_386100_tribe542             23.15%    passed     48.04%
+  50  Chang2015_Oscarella_sp_SN-2011_386100_tribe542          23.15%    passed     57.89%
+  51  Chang2015_Pediculus_humanus_121225_tribe542             23.15%    passed     68.58%
+  52  Chang2015_Petromyzon_marinus_7757_tribe542              23.15%    passed     99.80%
+  53  Chang2015_Petrosia_ficiformis_68564_tribe542            23.15%    passed     99.87%
+  54  Chang2015_Pleurobrachia_pileus_140457_tribe542          23.15%    passed     99.89%
+  55  Chang2015_Pocillopora_damicornis_46731_tribe542         49.07%    passed     97.41%
+  56  Chang2015_Polypodium_hydriforme_43186_tribe542          23.15%    passed     99.40%
+  57  Chang2015_Saccoglossus_kowalevskii_10224_tribe542       23.15%    passed    100.00%
+  58  Chang2015_Sarcotragus_fasciculatus_1234657_tribe542     23.15%    passed     98.69%
+  59  Chang2015_Sphaeroforma_arctica_72019_tribe542           23.15%    passed     84.30%
+  60  Chang2015_Stephanoeca_diplocostata_81535_tribe542       55.56%    passed     12.98%
+  61  Chang2015_Stomolophus_meleagris_168796_tribe542         23.15%    passed     99.97%
+  62  Chang2015_Strigamia_maritima_126957_tribe542            23.15%    passed     99.97%
+  63  Chang2015_Strongylocentrotus_purpuratus_7668_tribe542   23.15%    passed     98.85%
+  64  Chang2015_Sycon_ciliatum_27933_tribe542                 23.15%    passed     99.90%
+  65  Chang2015_Sycon_coactum_1009717_tribe542                23.15%    passed     99.88%
+  66  Chang2015_Trichoplax_adhaerens_10228_tribe542           23.15%    passed     99.96%
+  67  Chang2015_Tripedalia_cystophora_6141_tribe542           33.33%    passed     99.47%
+  68  Chang2015_Urticina_eques_417072_tribe542                71.30%    passed     95.13%
+  69  Chang2015_Vallicula_multiformis_140489_tribe542         23.15%    passed     99.95%
+  70  Dunn2008_Acanthoscurria_gomesiana_115339_Tribe542       12.96%    passed    100.00%
+  71  Dunn2008_Acropora_millepora_45264_Tribe542              12.96%    passed     82.98%
+  72  Dunn2008_Anoplodactylus_eroticus_488521_Tribe542        64.81%    passed     29.87%
+  73  Dunn2008_Argopecten_irradians_31199_Tribe542            15.74%    passed     99.92%
+  74  Dunn2008_Boophilus_microplus_6941_Tribe542              12.96%    passed    100.00%
+  75  Dunn2008_Branchiostoma_floridae_7739_Tribe542           12.96%    passed     89.34%
+  76  Dunn2008_Capitella_teleta_283909_Tribe542               12.96%    passed     99.47%
+  77  Dunn2008_Capsaspora_owczarzaki_192875_Tribe542          11.11%    passed     99.64%
+  78  Dunn2008_Carinoma_mutabilis_187807_Tribe542             14.81%    passed     99.31%
+  79  Dunn2008_Cerebratulus_lacteus_6221_Tribe542             12.04%    failed      0.15%
+  80  Dunn2008_Chaetoderma_nitidulum_256131_Tribe542          12.04%    passed     99.52%
+  81  Dunn2008_Chaetopterus_variopedatus_34590_Tribe542       12.04%    passed     88.41%
+  82  Dunn2008_Ciona_intestinalis_7719_Tribe542               15.74%    passed     99.96%
+  83  Dunn2008_Cryptococcus_neoformans_5207_Tribe542           8.33%    passed     42.18%
+  84  Dunn2008_Cyanea_capillata_27804_Tribe542                12.96%    passed    100.00%
+  85  Dunn2008_Daphnia_magna_35525_Tribe542                   12.96%    passed     80.63%
+  86  Dunn2008_Drosophila_melanogaster_7227_Tribe542          12.96%    passed     88.97%
+  87  Dunn2008_Echinococcus_granulosus_6210_Tribe542          12.96%    passed     97.87%
+  88  Dunn2008_Euperipatoides_kanangrensis_488523_Tribe542    12.96%    passed     99.87%
+  89  Dunn2008_Euprymna_scolopes_6613_Tribe542                10.19%    passed     97.95%
+  90  Dunn2008_Fenneropenaeus_chinensis_139456_Tribe542       12.96%    passed     99.99%
+  91  Dunn2008_Gallus_gallus_9031_Tribe542                    12.96%    passed     99.31%
+  92  Dunn2008_Haementeria_depressa_279730_Tribe542           13.89%    passed     99.88%
+  93  Dunn2008_Homo_sapiens_9606_Tribe542                     12.96%    passed     99.93%
+  94  Dunn2008_Hydra_vulgaris_01_6087_Tribe542                13.89%    passed     99.85%
+  95  Dunn2008_Hypsibius_dujardini_232323_Tribe542            12.04%    passed     83.90%
+  96  Dunn2008_Lumbricus_rubellus_35632_Tribe542              12.96%    passed     99.70%
+  97  Dunn2008_Mnemiopsis_leidyi_27923_Tribe542               12.96%    passed     99.76%
+  98  Dunn2008_Nematostella_vectensis_45351_Tribe542          12.96%    passed     99.93%
+  99  Dunn2008_Paraplanocera_oligoglena_1468194_Tribe542      12.96%    passed     15.00%
+ 100  Dunn2008_Ptychodera_flava_63121_Tribe542                12.96%    passed     93.57%
+ 101  Dunn2008_Richtersius_coronifer_245088_Tribe542          12.04%    passed     56.40%
+ 102  Dunn2008_Saccharomyces_cerevisiae_4932_Tribe542         12.96%    passed     82.41%
+ 103  Dunn2008_Schmidtea_mediterranea_79327_Tribe542          12.96%    passed     99.98%
+ 104  Dunn2008_Scutigera_coleoptrata_29022_Tribe542           12.96%    passed    100.00%
+ 105  Dunn2008_Sphaeroforma_arctica_72019_Tribe542            12.96%    passed     81.81%
+ 106  Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe542    11.11%    passed     99.46%
+ 107  Dunn2008_Terebratalia_transversa_34513_Tribe542         12.96%    passed     99.58%
+ 108  Dunn2008_Trichinella_spiralis_6334_Tribe542             12.04%    passed     98.42%
+ 109  Dunn2008_Urechis_caupo_6431_Tribe542                    12.96%    passed     99.92%
+WARNING: 3 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                                   21.15%  1 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.026 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 227815)...
+Model LG+C60+F is alias for LG+POISSON+G+FMIX{C60pi1:1:0.0169698865,C60pi2:1:0.0211683374,C60pi3:1:0.0276589079,C60pi4:1:0.0065675964,C60pi5:1:0.0141221416,C60pi6:1:0.0068774834,C60pi7:1:0.0146909701,C60pi8:1:0.0067225777,C60pi9:1:0.0018396660,C60pi10:1:0.0102547197,C60pi11:1:0.0230896163,C60pi12:1:0.0057941033,C60pi13:1:0.0125394534,C60pi14:1:0.0204526478,C60pi15:1:0.0070629602,C60pi16:1:0.0117982741,C60pi17:1:0.0068334668,C60pi18:1:0.0433775839,C60pi19:1:0.0318278731,C60pi20:1:0.0222546108,C60pi21:1:0.0102264969,C60pi22:1:0.0150545891,C60pi23:1:0.0134159878,C60pi24:1:0.0148552065,C60pi25:1:0.0239111516,C60pi26:1:0.0128776278,C60pi27:1:0.0222318842,C60pi28:1:0.0247444742,C60pi29:1:0.0214274810,C60pi30:1:0.0115001882,C60pi31:1:0.0076017389,C60pi32:1:0.0130258568,C60pi33:1:0.0093701965,C60pi34:1:0.0467194264,C60pi35:1:0.0441940314,C60pi36:1:0.0322263154,C60pi37:1:0.0402999891,C60pi38:1:0.0150234227,C60pi39:1:0.0104589903,C60pi40:1:0.0214742395,C60pi41:1:0.0154957836,C60pi42:1:0.0101789953,C60pi43:1:0.0227980379,C60pi44:1:0.0123204539,C60pi45:1:0.0066777583,C60pi46:1:0.0004150083,C60pi47:1:0.0344385130,C60pi48:1:0.0113663379,C60pi49:1:0.0127143049,C60pi50:1:0.0124323741,C60pi51:1:0.0262124415,C60pi52:1:0.0064994957,C60pi53:1:0.0103203293,C60pi54:1:0.0142463512,C60pi55:1:0.0215600067,C60pi56:1:0.0199150700,C60pi57:1:0.0038964200,C60pi58:1:0.0113448855,C60pi59:1:0.0128595846,C60pi60:1:0.0117656776}+F
+
+NOTE: 527 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -5914.275
+2. Current log-likelihood: -5621.837
+3. Current log-likelihood: -5602.012
+4. Current log-likelihood: -5598.232
+5. Current log-likelihood: -5595.959
+6. Current log-likelihood: -5595.855
+Optimal log-likelihood: -5595.822
+Mixture weights: 0.166 0.023 0.000 0.047 0.000 0.048 0.000 0.018 0.000 0.000 0.069 0.015 0.000 0.000 0.052 0.000 0.018 0.000 0.025 0.049 0.017 0.000 0.069 0.000 0.000 0.016 0.042 0.000 0.041 0.000 0.000 0.013 0.005 0.033 0.013 0.022 0.000 0.000 0.021 0.000 0.043 0.000 0.000 0.021 0.001 0.022 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.038 0.000 0.000 0.000 0.000 0.053 0.000 0.000
+Gamma shape alpha: 0.444
+Parameters optimization took 6 rounds (63.791 sec)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+Computing ML distances based on estimated model parameters... 3.071 sec
+WARNING: Some pairwise ML distances are too long (saturated)
+Computing BIONJ tree...
+0.009 seconds
+Log-likelihood of BIONJ tree: -5539.354
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 2.157 second
+Computing log-likelihood of 98 initial trees ... 396.813 seconds
+Current best score: -5538.933
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 1: -5465.520
+Iteration 10 / LogL: -5491.314 / Time: 0h:23m:20s
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 18: -5463.433
+Iteration 20 / LogL: -5486.140 / Time: 0h:43m:8s
+Finish initializing candidate tree set (20)
+Current best tree score: -5463.433 / CPU time: 2503.074
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 21: -5456.656
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 23: -5452.906
+Iteration 30 / LogL: -5458.352 / Time: 0h:58m:35s (3h:7m:52s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 33: -5450.974
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 34: -5445.338
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 38: -5444.088
+Iteration 40 / LogL: -5444.897 / Time: 1h:12m:22s (3h:1m:52s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 46: -5443.859
+BETTER TREE FOUND at iteration 48: -5443.859
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 50: -5443.684
+Iteration 50 / LogL: -5443.684 / Time: 1h:25m:12s (2h:53m:54s left)
+Log-likelihood cutoff on original alignment: -5506.810
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 59: -5442.436
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 60: -5441.183
+Iteration 60 / LogL: -5441.183 / Time: 1h:37m:15s (2h:44m:51s left)
+Iteration 70 / LogL: -5448.620 / Time: 1h:49m:23s (2h:22m:41s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 77: -5439.995
+Iteration 80 / LogL: -5442.217 / Time: 2h:2m:1s (2h:29m:49s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 88: -5437.538
+Iteration 90 / LogL: -5437.538 / Time: 2h:13m:50s (2h:27m:22s left)
+Iteration 100 / LogL: -5445.798 / Time: 2h:26m:22s (2h:10m:6s left)
+Log-likelihood cutoff on original alignment: -5506.810
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.970
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 103: -5436.879
+Iteration 110 / LogL: -5440.701 / Time: 2h:39m:36s (2h:16m:10s left)
+BETTER TREE FOUND at iteration 115: -5436.875
+Iteration 120 / LogL: -5439.308 / Time: 2h:53m:1s (2h:18m:7s left)
+Iteration 130 / LogL: -5445.242 / Time: 3h:5m:58s (2h:2m:32s left)
+Iteration 140 / LogL: -5439.965 / Time: 3h:17m:48s (1h:46m:43s left)
+UPDATE BEST LOG-LIKELIHOOD: -5436.875
+Iteration 150 / LogL: -5436.875 / Time: 3h:30m:25s (1h:31m:47s left)
+Log-likelihood cutoff on original alignment: -5503.497
+Iteration 160 / LogL: -5439.062 / Time: 3h:42m:28s (1h:16m:57s left)
+Iteration 170 / LogL: -5440.969 / Time: 3h:55m:37s (1h:2m:44s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 172: -5436.244
+Iteration 180 / LogL: -5443.434 / Time: 4h:8m:15s (2h:7m:35s left)
+Iteration 190 / LogL: -5436.882 / Time: 4h:20m:41s (1h:53m:6s left)
+Iteration 200 / LogL: -5437.398 / Time: 4h:33m:42s (1h:39m:1s left)
+Log-likelihood cutoff on original alignment: -5503.497
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.990
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 210 / LogL: -5440.825 / Time: 4h:45m:39s (2h:3m:0s left)
+Iteration 220 / LogL: -5439.344 / Time: 4h:58m:11s (1h:48m:55s left)
+Iteration 230 / LogL: -5436.645 / Time: 5h:10m:15s (1h:34m:50s left)
+BETTER TREE FOUND at iteration 237: -5436.240
+Iteration 240 / LogL: -5440.648 / Time: 5h:23m:43s (2h:11m:23s left)
+Iteration 250 / LogL: -5438.176 / Time: 5h:35m:49s (1h:57m:20s left)
+Log-likelihood cutoff on original alignment: -5503.497
+Iteration 260 / LogL: -5443.016 / Time: 5h:48m:46s (1h:43m:41s left)
+Iteration 270 / LogL: -5437.453 / Time: 6h:2m:45s (1h:30m:21s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 271: -5436.221
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 272: -5436.086
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 276: -5435.619
+Iteration 280 / LogL: -5435.911 / Time: 6h:15m:19s (2h:9m:8s left)
+Iteration 290 / LogL: -5450.300 / Time: 6h:27m:21s (1h:55m:16s left)
+Iteration 300 / LogL: -5436.283 / Time: 6h:39m:39s (1h:41m:35s left)
+Log-likelihood cutoff on original alignment: -5503.497
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.990
+Iteration 310 / LogL: -5437.928 / Time: 6h:52m:13s (2h:0m:3s left)
+Iteration 320 / LogL: -5436.478 / Time: 7h:5m:29s (1h:46m:42s left)
+Iteration 330 / LogL: -5435.620 / Time: 7h:18m:7s (1h:33m:13s left)
+Iteration 340 / LogL: -5450.124 / Time: 7h:29m:55s (1h:19m:38s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 348: -5435.274
+Iteration 350 / LogL: -5435.979 / Time: 7h:42m:17s (2h:9m:48s left)
+Log-likelihood cutoff on original alignment: -5503.497
+Iteration 360 / LogL: -5441.680 / Time: 7h:54m:7s (1h:56m:13s left)
+Iteration 370 / LogL: -5435.274 / Time: 8h:6m:11s (1h:42m:46s left)
+Iteration 380 / LogL: -5435.408 / Time: 8h:18m:24s (1h:29m:25s left)
+Iteration 390 / LogL: -5436.859 / Time: 8h:30m:45s (1h:16m:9s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 391: -5433.092
+Iteration 400 / LogL: -5434.819 / Time: 8h:43m:46s (1h:59m:27s left)
+Log-likelihood cutoff on original alignment: -5500.885
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.986
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 403: -5432.932
+Iteration 410 / LogL: -5433.865 / Time: 8h:55m:13s (2h:1m:42s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 418: -5432.606
+Iteration 420 / LogL: -5433.780 / Time: 9h:9m:15s (2h:8m:27s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 427: -5432.172
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 429: -5431.997
+Iteration 430 / LogL: -5432.830 / Time: 9h:21m:49s (2h:9m:39s left)
+Iteration 440 / LogL: -5433.510 / Time: 9h:33m:48s (1h:56m:19s left)
+Iteration 450 / LogL: -5432.771 / Time: 9h:46m:28s (1h:43m:11s left)
+Log-likelihood cutoff on original alignment: -5500.885
+Iteration 460 / LogL: -5453.102 / Time: 9h:58m:3s (1h:29m:54s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 466: -5431.857
+BETTER TREE FOUND at iteration 467: -5431.848
+Iteration 470 / LogL: -5433.688 / Time: 10h:10m:23s (2h:6m:14s left)
+Iteration 480 / LogL: -5433.307 / Time: 10h:22m:45s (1h:53m:6s left)
+BETTER TREE FOUND at iteration 482: -5431.844
+Iteration 490 / LogL: -5436.204 / Time: 10h:35m:3s (1h:59m:28s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 494: -5431.752
+Iteration 500 / LogL: -5432.243 / Time: 10h:48m:9s (2h:2m:5s left)
+Log-likelihood cutoff on original alignment: -5490.570
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.968
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+UPDATE BEST LOG-LIKELIHOOD: -5431.752
+Iteration 510 / LogL: -5434.633 / Time: 10h:59m:32s (1h:56m:37s left)
+Iteration 520 / LogL: -5437.229 / Time: 11h:10m:54s (1h:43m:24s left)
+BETTER TREE FOUND at iteration 521: -5431.752
+Iteration 530 / LogL: -5432.709 / Time: 11h:22m:41s (1h:57m:26s left)
+Iteration 540 / LogL: -5432.715 / Time: 11h:35m:22s (1h:44m:30s left)
+Iteration 550 / LogL: -5442.143 / Time: 11h:47m:50s (1h:31m:32s left)
+Log-likelihood cutoff on original alignment: -5490.570
+Iteration 560 / LogL: -5432.243 / Time: 11h:59m:10s (1h:18m:28s left)
+Iteration 570 / LogL: -5440.029 / Time: 12h:11m:24s (1h:5m:33s left)
+Iteration 580 / LogL: -5431.752 / Time: 12h:23m:49s (0h:52m:40s left)
+Iteration 590 / LogL: -5432.445 / Time: 12h:36m:20s (0h:39m:48s left)
+Iteration 600 / LogL: -5444.964 / Time: 12h:48m:15s (0h:26m:56s left)
+Log-likelihood cutoff on original alignment: -5490.570
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.962
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 610 / LogL: -5435.671 / Time: 13h:0m:39s (1h:55m:22s left)
+Iteration 620 / LogL: -5432.183 / Time: 13h:12m:21s (1h:42m:24s left)
+Iteration 630 / LogL: -5432.304 / Time: 13h:23m:20s (1h:29m:24s left)
+Iteration 640 / LogL: -5451.817 / Time: 13h:35m:34s (1h:16m:34s left)
+Iteration 650 / LogL: -5433.198 / Time: 13h:47m:25s (1h:3m:44s left)
+Log-likelihood cutoff on original alignment: -5490.570
+Iteration 660 / LogL: -5456.062 / Time: 13h:59m:9s (0h:50m:56s left)
+Iteration 670 / LogL: -5442.861 / Time: 14h:11m:7s (0h:38m:10s left)
+Iteration 680 / LogL: -5434.038 / Time: 14h:24m:4s (0h:25m:27s left)
+UPDATE BEST LOG-LIKELIHOOD: -5431.751
+Iteration 690 / LogL: -5433.114 / Time: 14h:36m:1s (0h:12m:42s left)
+Iteration 700 / LogL: -5431.752 / Time: 14h:46m:45s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -5490.570
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.958
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 710 / LogL: -5435.389 / Time: 14h:58m:21s (1h:54m:2s left)
+Iteration 720 / LogL: -5432.265 / Time: 15h:10m:8s (1h:41m:16s left)
+Iteration 730 / LogL: -5432.743 / Time: 15h:22m:1s (1h:28m:32s left)
+Iteration 740 / LogL: -5433.480 / Time: 15h:33m:40s (1h:15m:48s left)
+Iteration 750 / LogL: -5435.158 / Time: 15h:46m:18s (1h:3m:10s left)
+Log-likelihood cutoff on original alignment: -5490.570
+Iteration 760 / LogL: -5431.752 / Time: 15h:59m:27s (0h:50m:33s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 767: -5431.370
+Iteration 770 / LogL: -5440.068 / Time: 16h:12m:13s (2h:2m:38s left)
+Iteration 780 / LogL: -5432.292 / Time: 16h:24m:17s (1h:49m:55s left)
+Iteration 790 / LogL: -5435.046 / Time: 16h:35m:59s (1h:37m:12s left)
+BETTER TREE FOUND at iteration 792: -5431.370
+Iteration 800 / LogL: -5433.117 / Time: 16h:47m:30s (1h:56m:0s left)
+Log-likelihood cutoff on original alignment: -5490.570
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.970
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 810 / LogL: -5433.837 / Time: 17h:0m:34s (1h:53m:32s left)
+Iteration 820 / LogL: -5439.117 / Time: 17h:11m:21s (1h:40m:44s left)
+BETTER TREE FOUND at iteration 825: -5431.370
+Iteration 830 / LogL: -5432.216 / Time: 17h:23m:14s (1h:59m:33s left)
+BETTER TREE FOUND at iteration 832: -5431.370
+Iteration 840 / LogL: -5432.297 / Time: 17h:33m:20s (1h:55m:30s left)

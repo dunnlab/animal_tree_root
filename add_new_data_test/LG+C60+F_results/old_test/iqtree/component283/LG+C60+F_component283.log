@@ -1,0 +1,730 @@
+IQ-TREE version 1.5.3 for Linux 64-bit built Mar 12 2017
+Copyright (c) 2011-2016 Nguyen Lam Tung, Olga Chernomor, Arndt von Haeseler and Bui Quang Minh.
+
+Host:    r381.uppmax.uu.se (AVX2, FMA3, 125 GB RAM)
+Command: iqtree -s /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component283.mafft -m LG+C60+F -nt 1 -bb 1000 -pre /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component283/LG+C60+F_component283
+Seed:    494334 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 29 15:31:19 2022
+Kernel:  AVX+FMA
+
+NOTE: Consider using the multicore version because your CPU has 20 cores!
+
+Reading alignment file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component283.mafft ... Fasta format detected
+Alignment most likely contains protein sequences
+WARNING: 156 sites contain only gaps or ambiguous characters.
+Alignment has 317 sequences with 393 columns and 237 patterns (223 informative sites, 168 constant sites)
+WARNING: Some sequence names are changed as follows:
+Dunn2008:Acanthoscurria_gomesiana:115339:Tribe766 -> Dunn2008_Acanthoscurria_gomesiana_115339_Tribe766
+Dunn2008:Acropora_millepora:45264:Tribe766 -> Dunn2008_Acropora_millepora_45264_Tribe766
+Dunn2008:Asterina_pectinifera:7594:Tribe766 -> Dunn2008_Asterina_pectinifera_7594_Tribe766
+Dunn2008:Boophilus_microplus:6941:Tribe766 -> Dunn2008_Boophilus_microplus_6941_Tribe766
+Dunn2008:Branchiostoma_floridae:7739:Tribe766 -> Dunn2008_Branchiostoma_floridae_7739_Tribe766
+Dunn2008:Carcinoscorpius_rotundicauda:6848:Tribe766 -> Dunn2008_Carcinoscorpius_rotundicauda_6848_Tribe766
+Dunn2008:Carcinus_maenas:6759:Tribe766 -> Dunn2008_Carcinus_maenas_6759_Tribe766
+Dunn2008:Cerebratulus_lacteus:6221:Tribe766 -> Dunn2008_Cerebratulus_lacteus_6221_Tribe766
+Dunn2008:Chaetopterus_variopedatus:34590:Tribe766 -> Dunn2008_Chaetopterus_variopedatus_34590_Tribe766
+Dunn2008:Ciona_intestinalis:7719:Tribe766 -> Dunn2008_Ciona_intestinalis_7719_Tribe766
+Dunn2008:Crassostrea_virginica:6565:Tribe766 -> Dunn2008_Crassostrea_virginica_6565_Tribe766
+Dunn2008:Cryptococcus_neoformans:5207:Tribe766 -> Dunn2008_Cryptococcus_neoformans_5207_Tribe766
+Dunn2008:Drosophila_melanogaster:7227:Tribe766 -> Dunn2008_Drosophila_melanogaster_7227_Tribe766
+Dunn2008:Dugesia_japonica:6161:Tribe766 -> Dunn2008_Dugesia_japonica_6161_Tribe766
+Dunn2008:Gallus_gallus:9031:Tribe766 -> Dunn2008_Gallus_gallus_9031_Tribe766
+Dunn2008:Hydra_vulgaris_01:6087:Tribe766 -> Dunn2008_Hydra_vulgaris_01_6087_Tribe766
+Dunn2008:Hydractinia_echinata:35630:Tribe766 -> Dunn2008_Hydractinia_echinata_35630_Tribe766
+Dunn2008:Hypsibius_dujardini:232323:Tribe766 -> Dunn2008_Hypsibius_dujardini_232323_Tribe766
+Dunn2008:Lumbricus_rubellus:35632:Tribe766 -> Dunn2008_Lumbricus_rubellus_35632_Tribe766
+Dunn2008:Nematostella_vectensis:45351:Tribe766 -> Dunn2008_Nematostella_vectensis_45351_Tribe766
+Dunn2008:Oscarella_carmela:386100:Tribe766 -> Dunn2008_Oscarella_carmela_386100_Tribe766
+Dunn2008:Richtersius_coronifer:245088:Tribe766 -> Dunn2008_Richtersius_coronifer_245088_Tribe766
+Dunn2008:Saccharomyces_cerevisiae:4932:Tribe766 -> Dunn2008_Saccharomyces_cerevisiae_4932_Tribe766
+Dunn2008:Saccoglossus_kowalevskii:10224:Tribe766 -> Dunn2008_Saccoglossus_kowalevskii_10224_Tribe766
+Dunn2008:Schmidtea_mediterranea:79327:Tribe766 -> Dunn2008_Schmidtea_mediterranea_79327_Tribe766
+Dunn2008:Sphaeroforma_arctica:72019:Tribe766 -> Dunn2008_Sphaeroforma_arctica_72019_Tribe766
+Dunn2008:Strongylocentrotus_purpuratus:7668:Tribe766 -> Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe766
+Dunn2008:Xiphinema_index:46003:Tribe766 -> Dunn2008_Xiphinema_index_46003_Tribe766
+Simion2017:Abeoforma_whisleri:749232:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Abeoforma_whisleri_749232_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Acanthoeca_spectabilis:81533:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Acanthoeca_spectabilis_81533_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Aiptasia_pallida:1720309:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Aiptasia_pallida_1720309_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Alatina_alata:1193083:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Alatina_alata_1193083_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Amphimedon_queenslandica:400682:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Amphimedon_queenslandica_400682_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Antipathes_caribbeana:934276:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Antipathes_caribbeana_934276_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Aplysia_californica:6500:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Aplysia_californica_6500_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Atolla_vanhoeffeni:86043:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Atolla_vanhoeffeni_86043_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Aurelia_aurita:6145:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Aurelia_aurita_6145_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Beroe_abyssicola:320166:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Beroe_abyssicola_320166_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Beroe_sp:10199:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Beroe_sp_10199_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Bolinopsis_infundibulum:140455:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Bolinopsis_infundibulum_140455_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Bolocera_tuediae:1163374:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Bolocera_tuediae_1163374_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Branchiostoma_floridae:7739:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Branchiostoma_floridae_7739_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Capitella_teleta:283909:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Capitella_teleta_283909_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Capsaspora_owczarzaki:192875:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Capsaspora_owczarzaki_192875_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Choanoeca_perplexa_11:81531:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Choanoeca_perplexa_11_81531_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Chondrilla_nucula:220712:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Chondrilla_nucula_220712_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Clytia_hemisphaerica:252671:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Clytia_hemisphaerica_252671_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Codosiga_hollandica_17:1742608:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Codosiga_hollandica_17_1742608_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Coeloplana_species:140473:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Coeloplana_species_140473_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Corticium_candelabrum:121492:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Corticium_candelabrum_121492_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Craspedacusta_sowerbii:128124:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Craspedacusta_sowerbii_128124_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Creolimax_fragrantissima:470921:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Creolimax_fragrantissima_470921_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Daphnia_pulex:6669:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Daphnia_pulex_6669_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Diaphanoeca_grandis:28014:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Diaphanoeca_grandis_28014_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Didymoeca_costata_10:459534:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Didymoeca_costata_10_459534_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Edwardsiella_lineata:132407:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Edwardsiella_lineata_132407_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Ephydatia_muelleri:6052:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Ephydatia_muelleri_6052_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Euplectella_aspergillum:936045:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Euplectella_aspergillum_936045_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Euplokamis_dunlapae:1403701:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Euplokamis_dunlapae_1403701_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Helobdella_robusta:6412:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Helobdella_robusta_6412_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Hormiphora_californensis:1403702:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Hormiphora_californensis_1403702_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Hydra_vulgaris_01:6087:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Hydra_vulgaris_01_6087_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Hydractinia_polyclina:589945:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Hydractinia_polyclina_589945_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Ircinia_fasciculata:1234657:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Ircinia_fasciculata_1234657_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Ixodes_scapularis:6945:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Ixodes_scapularis_6945_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Kirkpatrickia_variolosa:1631157:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Kirkpatrickia_variolosa_1631157_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Lampea_pancerina:1532213:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Lampea_pancerina_1532213_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Liriope_tetraphylla:37524:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Liriope_tetraphylla_37524_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Lucernariopsis_campanulata:1843190:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Lucernariopsis_campanulata_1843190_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Mnemiopsis_leidyi:27923:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Mnemiopsis_leidyi_27923_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Monosiga_brevicollis:81824:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Monosiga_brevicollis_81824_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Orbicella_faveolata:48498:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Orbicella_faveolata_48498_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Mylnosiga_fluctuans_19:1928486:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Mylnosiga_fluctuans_19_1928486_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Nanomia_bijuga:168759:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Nanomia_bijuga_168759_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Nematostella_vectensis:45351:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Nematostella_vectensis_45351_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Oscarella_species:121493:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Oscarella_species_121493_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Pelagia_noctiluca:400838:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Pelagia_noctiluca_400838_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Pennatula_rubra:1820127:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Pennatula_rubra_1820127_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Periphylla_periphylla:880221:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Periphylla_periphylla_880221_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Petrosia_ficiformis:68564:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Petrosia_ficiformis_68564_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Plakina_jani:450361:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Plakina_jani_450361_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Pleurobrachia_species:34498:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Pleurobrachia_species_34498_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Plumapathes_pennacea:1350358:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Plumapathes_pennacea_1350358_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Rossella_fibulata:1076269:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Rossella_fibulata_1076269_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Saccoglossus_kowalevskii:10224:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Saccoglossus_kowalevskii_10224_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Salpingoeca_dolichothecata_16:1742605:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Salpingoeca_dolichothecata_16_1742605_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Salpingoeca_helianthica_18:1928494:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Salpingoeca_helianthica_18_1928494_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Salpingoeca_infusionum_12:86018:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Salpingoeca_infusionum_12_86018_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Salpingoeca_macrocollata_06:1924736:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Salpingoeca_macrocollata_06_1924736_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Salpingoeca_punica_03:1924735:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Salpingoeca_punica_03_1924735_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Salpingoeca_kvevrii:1924737:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Salpingoeca_kvevrii_1924737_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Microstomoeca_roanoka:1923864:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Microstomoeca_roanoka_1923864_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Salpingoeca_rosetta:946362:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Salpingoeca_rosetta_946362_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Salpingoeca_urceolata_04:473813:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Salpingoeca_urceolata_04_473813_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Spongilla_lacustris:6055:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Spongilla_lacustris_6055_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Stephanoeca_diplocostata:81535:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Stephanoeca_diplocostata_81535_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Stomolophus_meleagris:168796:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Stomolophus_meleagris_168796_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Strongylocentrotus_purpuratus:7668:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Strongylocentrotus_purpuratus_7668_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Tribolium_castaneum:7070:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Tribolium_castaneum_7070_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Trichoplax_adhaerens:10228:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Trichoplax_adhaerens_10228_V2META12516-42-Calc_Hmm10-BMGE05
+Simion2017:Vallicula_multiformis:140489:V2META12516-42-Calc_Hmm10-BMGE05 -> Simion2017_Vallicula_multiformis_140489_V2META12516-42-Calc_Hmm10-BMGE05
+Whelan2015_D10:Aurelia_aurita:6145:Gene_0156 -> Whelan2015_D10_Aurelia_aurita_6145_Gene_0156
+Whelan2015_D10:Lottia_gigantea:225164:Gene_0156 -> Whelan2015_D10_Lottia_gigantea_225164_Gene_0156
+Whelan2015_D10:Sphaeroforma_arctica:72019:Gene_0156 -> Whelan2015_D10_Sphaeroforma_arctica_72019_Gene_0156
+Whelan2015_D10:Bolocera_tuediae:1163374:Gene_0156 -> Whelan2015_D10_Bolocera_tuediae_1163374_Gene_0156
+Whelan2015_D10:Drosophila_melanogaster:7227:Gene_0156 -> Whelan2015_D10_Drosophila_melanogaster_7227_Gene_0156
+Whelan2015_D10:Rossella_fibulata:1076269:Gene_0156 -> Whelan2015_D10_Rossella_fibulata_1076269_Gene_0156
+Whelan2015_D10:Tubulanus_polymorphus:672921:Gene_0156 -> Whelan2015_D10_Tubulanus_polymorphus_672921_Gene_0156
+Whelan2015_D10:Amoebidium_parasiticum:4881:Gene_0156 -> Whelan2015_D10_Amoebidium_parasiticum_4881_Gene_0156
+Whelan2015_D10:Abylopsis_tetragona:316209:Gene_0156 -> Whelan2015_D10_Abylopsis_tetragona_316209_Gene_0156
+Whelan2015_D10:Eunicella_verrucosa:396355:Gene_0156 -> Whelan2015_D10_Eunicella_verrucosa_396355_Gene_0156
+Whelan2015_D10:Dryodora_glandiformis:1566677:Gene_0156 -> Whelan2015_D10_Dryodora_glandiformis_1566677_Gene_0156
+Whelan2015_D10:Euplokamis_dunlapae:1403701:Gene_0156 -> Whelan2015_D10_Euplokamis_dunlapae_1403701_Gene_0156
+Whelan2015_D10:Lithobius_forficatus:7552:Gene_0156 -> Whelan2015_D10_Lithobius_forficatus_7552_Gene_0156
+Whelan2015_D10:Daphnia_pulex:6669:Gene_0156 -> Whelan2015_D10_Daphnia_pulex_6669_Gene_0156
+Whelan2015_D10:Pleurobrachia_pileus:140457:Gene_0156 -> Whelan2015_D10_Pleurobrachia_pileus_140457_Gene_0156
+Whelan2015_D10:Aiptasia_pallida:1720309:Gene_0156 -> Whelan2015_D10_Aiptasia_pallida_1720309_Gene_0156
+Whelan2015_D10:Mortierella_verticillata:78898:Gene_0156 -> Whelan2015_D10_Mortierella_verticillata_78898_Gene_0156
+Whelan2015_D10:Homo_sapiens:9606:Gene_0156 -> Whelan2015_D10_Homo_sapiens_9606_Gene_0156
+Whelan2015_D10:Amphimedon_queenslandica:400682:Gene_0156 -> Whelan2015_D10_Amphimedon_queenslandica_400682_Gene_0156
+Whelan2015_D10:Petrosia_ficiformis:68564:Gene_0156 -> Whelan2015_D10_Petrosia_ficiformis_68564_Gene_0156
+Whelan2015_D10:Strongylocentrotus_purpuratus:7668:Gene_0156 -> Whelan2015_D10_Strongylocentrotus_purpuratus_7668_Gene_0156
+Whelan2015_D10:Physalia_physalis:168775:Gene_0156 -> Whelan2015_D10_Physalia_physalis_168775_Gene_0156
+Whelan2015_D10:Hydra_vulgaris:6087:Gene_0156 -> Whelan2015_D10_Hydra_vulgaris_6087_Gene_0156
+Whelan2015_D10:Corticium_candelabrum:121492:Gene_0156 -> Whelan2015_D10_Corticium_candelabrum_121492_Gene_0156
+Whelan2015_D10:Nanomia_bijuga:168759:Gene_0156 -> Whelan2015_D10_Nanomia_bijuga_168759_Gene_0156
+Whelan2015_D10:Sympagella_nux:76350:Gene_0156 -> Whelan2015_D10_Sympagella_nux_76350_Gene_0156
+Whelan2015_D10:Spongilla_lacustris:6055:Gene_0156 -> Whelan2015_D10_Spongilla_lacustris_6055_Gene_0156
+Whelan2015_D10:Monosiga_ovata:81526:Gene_0156 -> Whelan2015_D10_Monosiga_ovata_81526_Gene_0156
+Whelan2015_D10:Crella_elegans:252961:Gene_0156 -> Whelan2015_D10_Crella_elegans_252961_Gene_0156
+Whelan2015_D10:Ministeria_vibrans:134558:Gene_0156 -> Whelan2015_D10_Ministeria_vibrans_134558_Gene_0156
+Whelan2015_D10:Mnemiopsis_leidyi:27923:Gene_0156 -> Whelan2015_D10_Mnemiopsis_leidyi_27923_Gene_0156
+Whelan2015_D10:Petromyzon_marinus:7757:Gene_0156 -> Whelan2015_D10_Petromyzon_marinus_7757_Gene_0156
+Whelan2015_D10:Allomyces_macrogynus:28583:Gene_0156 -> Whelan2015_D10_Allomyces_macrogynus_28583_Gene_0156
+Whelan2015_D10:Hemithiris_psittacea:763142:Gene_0156 -> Whelan2015_D10_Hemithiris_psittacea_763142_Gene_0156
+Whelan2015_D10:Agalma_elegans:316166:Gene_0156 -> Whelan2015_D10_Agalma_elegans_316166_Gene_0156
+Whelan2015_D10:Tethya_wilhelma:463344:Gene_0156 -> Whelan2015_D10_Tethya_wilhelma_463344_Gene_0156
+Whelan2015_D10:Bolinopsis_infundibulum:140455:Gene_0156 -> Whelan2015_D10_Bolinopsis_infundibulum_140455_Gene_0156
+Whelan2015_D10:Ephydatia_muelleri:6052:Gene_0156 -> Whelan2015_D10_Ephydatia_muelleri_6052_Gene_0156
+Whelan2015_D10:Capitella_teleta:283909:Gene_0156 -> Whelan2015_D10_Capitella_teleta_283909_Gene_0156
+Whelan2015_D10:Platygyra_carnosa:1136245:Gene_0156 -> Whelan2015_D10_Platygyra_carnosa_1136245_Gene_0156
+Whelan2015_D10:Salpingoeca_rosetta:946362:Gene_0156 -> Whelan2015_D10_Salpingoeca_rosetta_946362_Gene_0156
+Whelan2015_D10:Chondrilla_nucula:220712:Gene_0156 -> Whelan2015_D10_Chondrilla_nucula_220712_Gene_0156
+Whelan2015_D10:Trichoplax_adhaerens:10228:Gene_0156 -> Whelan2015_D10_Trichoplax_adhaerens_10228_Gene_0156
+Whelan2015_D10:Pleurobrachia_bachei:34499:Gene_0156 -> Whelan2015_D10_Pleurobrachia_bachei_34499_Gene_0156
+Whelan2015_D10:Beroe_abyssicola:320166:Gene_0156 -> Whelan2015_D10_Beroe_abyssicola_320166_Gene_0156
+Whelan2015_D10:Hydra_viridissima:6082:Gene_0156 -> Whelan2015_D10_Hydra_viridissima_6082_Gene_0156
+Whelan2015_D10:Acropora_digitifera:70779:Gene_0156 -> Whelan2015_D10_Acropora_digitifera_70779_Gene_0156
+Whelan2015_D10:Kirkpatrickia_variolosa:1631157:Gene_0156 -> Whelan2015_D10_Kirkpatrickia_variolosa_1631157_Gene_0156
+Whelan2015_D10:Latrunculia_apicalis:1325597:Gene_0156 -> Whelan2015_D10_Latrunculia_apicalis_1325597_Gene_0156
+Whelan2015_D10:Hyalonema_populiferum:1631155:Gene_0156 -> Whelan2015_D10_Hyalonema_populiferum_1631155_Gene_0156
+Whelan2015_D10:Rhizopus_oryzae:64495:Gene_0156 -> Whelan2015_D10_Rhizopus_oryzae_64495_Gene_0156
+Whelan2015_D10:Coeloplana_astericola:1912745:Gene_0156 -> Whelan2015_D10_Coeloplana_astericola_1912745_Gene_0156
+Whelan2015_D10:Periphylla_periphylla:880221:Gene_0156 -> Whelan2015_D10_Periphylla_periphylla_880221_Gene_0156
+Whelan2015_D10:Vallicula_sp:140488:Gene_0156 -> Whelan2015_D10_Vallicula_sp_140488_Gene_0156
+Whelan2015_D10:Hormathia_digitata:1163372:Gene_0156 -> Whelan2015_D10_Hormathia_digitata_1163372_Gene_0156
+Whelan2015_D10:Hydra_oligactis:6088:Gene_0156 -> Whelan2015_D10_Hydra_oligactis_6088_Gene_0156
+Whelan2015_D10:Mertensiidae_sp:140499:Gene_0156 -> Whelan2015_D10_Mertensiidae_sp_140499_Gene_0156
+Whelan2015_D10:Pseudospongosorites_suberitoides:396895:Gene_0156 -> Whelan2015_D10_Pseudospongosorites_suberitoides_396895_Gene_0156
+Whelan2015_D10:Sycon_ciliatum:27933:Gene_0156 -> Whelan2015_D10_Sycon_ciliatum_27933_Gene_0156
+Whelan2015_D10:Sycon_coactum:1009717:Gene_0156 -> Whelan2015_D10_Sycon_coactum_1009717_Gene_0156
+Whelan2015_D10:Ircinia_fasciculata:1234657:Gene_0156 -> Whelan2015_D10_Ircinia_fasciculata_1234657_Gene_0156
+Whelan2015_D10:Spizellomyces_punctatus:109760:Gene_0156 -> Whelan2015_D10_Spizellomyces_punctatus_109760_Gene_0156
+Whelan2015_D10:Capsaspora_owczarzaki:192875:Gene_0156 -> Whelan2015_D10_Capsaspora_owczarzaki_192875_Gene_0156
+Whelan2015_D10:Aphrocallistes_vastus:83887:Gene_0156 -> Whelan2015_D10_Aphrocallistes_vastus_83887_Gene_0156
+Whelan2015_D10:Oscarella_carmela:386100:Gene_0156 -> Whelan2015_D10_Oscarella_carmela_386100_Gene_0156
+Whelan2015_D10:Danio_rerio:7955:Gene_0156 -> Whelan2015_D10_Danio_rerio_7955_Gene_0156
+Whelan2015_D10:Craseoa_lathetica:316205:Gene_0156 -> Whelan2015_D10_Craseoa_lathetica_316205_Gene_0156
+Whelan2015_D10:Nematostella_vectensis:45351:Gene_0156 -> Whelan2015_D10_Nematostella_vectensis_45351_Gene_0156
+Whelan2015_D10:Saccoglossus_kowalevskii:10224:Gene_0156 -> Whelan2015_D10_Saccoglossus_kowalevskii_10224_Gene_0156
+Whelan2015_D10:Priapulus_caudatus:37621:Gene_0156 -> Whelan2015_D10_Priapulus_caudatus_37621_Gene_0156
+Whelan2015_D1:Aurelia_aurita:6145:Gene_0156 -> Whelan2015_D1_Aurelia_aurita_6145_Gene_0156
+Whelan2015_D1:Lottia_gigantea:225164:Gene_0156 -> Whelan2015_D1_Lottia_gigantea_225164_Gene_0156
+Whelan2015_D1:Acanthoeca_spectabilis:81533:Gene_0156 -> Whelan2015_D1_Acanthoeca_spectabilis_81533_Gene_0156
+Whelan2015_D1:Sphaeroforma_arctica:72019:Gene_0156 -> Whelan2015_D1_Sphaeroforma_arctica_72019_Gene_0156
+Whelan2015_D1:Aspergillus_fumigatus:746128:Gene_0156 -> Whelan2015_D1_Aspergillus_fumigatus_746128_Gene_0156
+Whelan2015_D1:Bolocera_tuediae:1163374:Gene_0156 -> Whelan2015_D1_Bolocera_tuediae_1163374_Gene_0156
+Whelan2015_D1:Drosophila_melanogaster:7227:Gene_0156 -> Whelan2015_D1_Drosophila_melanogaster_7227_Gene_0156
+Whelan2015_D1:Rossella_fibulata:1076269:Gene_0156 -> Whelan2015_D1_Rossella_fibulata_1076269_Gene_0156
+Whelan2015_D1:Tubulanus_polymorphus:672921:Gene_0156 -> Whelan2015_D1_Tubulanus_polymorphus_672921_Gene_0156
+Whelan2015_D1:Amoebidium_parasiticum:4881:Gene_0156 -> Whelan2015_D1_Amoebidium_parasiticum_4881_Gene_0156
+Whelan2015_D1:Abylopsis_tetragona:316209:Gene_0156 -> Whelan2015_D1_Abylopsis_tetragona_316209_Gene_0156
+Whelan2015_D1:Eunicella_verrucosa:396355:Gene_0156 -> Whelan2015_D1_Eunicella_verrucosa_396355_Gene_0156
+Whelan2015_D1:Dryodora_glandiformis:1566677:Gene_0156 -> Whelan2015_D1_Dryodora_glandiformis_1566677_Gene_0156
+Whelan2015_D1:Euplokamis_dunlapae:1403701:Gene_0156 -> Whelan2015_D1_Euplokamis_dunlapae_1403701_Gene_0156
+Whelan2015_D1:Lithobius_forficatus:7552:Gene_0156 -> Whelan2015_D1_Lithobius_forficatus_7552_Gene_0156
+Whelan2015_D1:Daphnia_pulex:6669:Gene_0156 -> Whelan2015_D1_Daphnia_pulex_6669_Gene_0156
+Whelan2015_D1:Pleurobrachia_pileus:140457:Gene_0156 -> Whelan2015_D1_Pleurobrachia_pileus_140457_Gene_0156
+Whelan2015_D1:Neurospora_crassa:5141:Gene_0156 -> Whelan2015_D1_Neurospora_crassa_5141_Gene_0156
+Whelan2015_D1:Aiptasia_pallida:1720309:Gene_0156 -> Whelan2015_D1_Aiptasia_pallida_1720309_Gene_0156
+Whelan2015_D1:Mortierella_verticillata:78898:Gene_0156 -> Whelan2015_D1_Mortierella_verticillata_78898_Gene_0156
+Whelan2015_D1:Homo_sapiens:9606:Gene_0156 -> Whelan2015_D1_Homo_sapiens_9606_Gene_0156
+Whelan2015_D1:Amphimedon_queenslandica:400682:Gene_0156 -> Whelan2015_D1_Amphimedon_queenslandica_400682_Gene_0156
+Whelan2015_D1:Petrosia_ficiformis:68564:Gene_0156 -> Whelan2015_D1_Petrosia_ficiformis_68564_Gene_0156
+Whelan2015_D1:Strongylocentrotus_purpuratus:7668:Gene_0156 -> Whelan2015_D1_Strongylocentrotus_purpuratus_7668_Gene_0156
+Whelan2015_D1:Physalia_physalis:168775:Gene_0156 -> Whelan2015_D1_Physalia_physalis_168775_Gene_0156
+Whelan2015_D1:Hydra_vulgaris:6087:Gene_0156 -> Whelan2015_D1_Hydra_vulgaris_6087_Gene_0156
+Whelan2015_D1:Corticium_candelabrum:121492:Gene_0156 -> Whelan2015_D1_Corticium_candelabrum_121492_Gene_0156
+Whelan2015_D1:Nanomia_bijuga:168759:Gene_0156 -> Whelan2015_D1_Nanomia_bijuga_168759_Gene_0156
+Whelan2015_D1:Sympagella_nux:76350:Gene_0156 -> Whelan2015_D1_Sympagella_nux_76350_Gene_0156
+Whelan2015_D1:Spongilla_lacustris:6055:Gene_0156 -> Whelan2015_D1_Spongilla_lacustris_6055_Gene_0156
+Whelan2015_D1:Monosiga_ovata:81526:Gene_0156 -> Whelan2015_D1_Monosiga_ovata_81526_Gene_0156
+Whelan2015_D1:Crella_elegans:252961:Gene_0156 -> Whelan2015_D1_Crella_elegans_252961_Gene_0156
+Whelan2015_D1:Ministeria_vibrans:134558:Gene_0156 -> Whelan2015_D1_Ministeria_vibrans_134558_Gene_0156
+Whelan2015_D1:Mnemiopsis_leidyi:27923:Gene_0156 -> Whelan2015_D1_Mnemiopsis_leidyi_27923_Gene_0156
+Whelan2015_D1:Petromyzon_marinus:7757:Gene_0156 -> Whelan2015_D1_Petromyzon_marinus_7757_Gene_0156
+Whelan2015_D1:Allomyces_macrogynus:28583:Gene_0156 -> Whelan2015_D1_Allomyces_macrogynus_28583_Gene_0156
+Whelan2015_D1:Hemithiris_psittacea:763142:Gene_0156 -> Whelan2015_D1_Hemithiris_psittacea_763142_Gene_0156
+Whelan2015_D1:Agalma_elegans:316166:Gene_0156 -> Whelan2015_D1_Agalma_elegans_316166_Gene_0156
+Whelan2015_D1:Tethya_wilhelma:463344:Gene_0156 -> Whelan2015_D1_Tethya_wilhelma_463344_Gene_0156
+Whelan2015_D1:Bolinopsis_infundibulum:140455:Gene_0156 -> Whelan2015_D1_Bolinopsis_infundibulum_140455_Gene_0156
+Whelan2015_D1:Ephydatia_muelleri:6052:Gene_0156 -> Whelan2015_D1_Ephydatia_muelleri_6052_Gene_0156
+Whelan2015_D1:Capitella_teleta:283909:Gene_0156 -> Whelan2015_D1_Capitella_teleta_283909_Gene_0156
+Whelan2015_D1:Platygyra_carnosa:1136245:Gene_0156 -> Whelan2015_D1_Platygyra_carnosa_1136245_Gene_0156
+Whelan2015_D1:Salpingoeca_pyxidium:473812:Gene_0156 -> Whelan2015_D1_Salpingoeca_pyxidium_473812_Gene_0156
+Whelan2015_D1:Salpingoeca_rosetta:946362:Gene_0156 -> Whelan2015_D1_Salpingoeca_rosetta_946362_Gene_0156
+Whelan2015_D1:Chondrilla_nucula:220712:Gene_0156 -> Whelan2015_D1_Chondrilla_nucula_220712_Gene_0156
+Whelan2015_D1:Trichoplax_adhaerens:10228:Gene_0156 -> Whelan2015_D1_Trichoplax_adhaerens_10228_Gene_0156
+Whelan2015_D1:Pleurobrachia_bachei:34499:Gene_0156 -> Whelan2015_D1_Pleurobrachia_bachei_34499_Gene_0156
+Whelan2015_D1:Monosiga_brevicollis:81824:Gene_0156 -> Whelan2015_D1_Monosiga_brevicollis_81824_Gene_0156
+Whelan2015_D1:Beroe_abyssicola:320166:Gene_0156 -> Whelan2015_D1_Beroe_abyssicola_320166_Gene_0156
+Whelan2015_D1:Hydra_viridissima:6082:Gene_0156 -> Whelan2015_D1_Hydra_viridissima_6082_Gene_0156
+Whelan2015_D1:Acropora_digitifera:70779:Gene_0156 -> Whelan2015_D1_Acropora_digitifera_70779_Gene_0156
+Whelan2015_D1:Kirkpatrickia_variolosa:1631157:Gene_0156 -> Whelan2015_D1_Kirkpatrickia_variolosa_1631157_Gene_0156
+Whelan2015_D1:Latrunculia_apicalis:1325597:Gene_0156 -> Whelan2015_D1_Latrunculia_apicalis_1325597_Gene_0156
+Whelan2015_D1:Hyalonema_populiferum:1631155:Gene_0156 -> Whelan2015_D1_Hyalonema_populiferum_1631155_Gene_0156
+Whelan2015_D1:Rhizopus_oryzae:64495:Gene_0156 -> Whelan2015_D1_Rhizopus_oryzae_64495_Gene_0156
+Whelan2015_D1:Coeloplana_astericola:1912745:Gene_0156 -> Whelan2015_D1_Coeloplana_astericola_1912745_Gene_0156
+Whelan2015_D1:Periphylla_periphylla:880221:Gene_0156 -> Whelan2015_D1_Periphylla_periphylla_880221_Gene_0156
+Whelan2015_D1:Vallicula_sp:140488:Gene_0156 -> Whelan2015_D1_Vallicula_sp_140488_Gene_0156
+Whelan2015_D1:Hormathia_digitata:1163372:Gene_0156 -> Whelan2015_D1_Hormathia_digitata_1163372_Gene_0156
+Whelan2015_D1:Hydra_oligactis:6088:Gene_0156 -> Whelan2015_D1_Hydra_oligactis_6088_Gene_0156
+Whelan2015_D1:Mertensiidae_sp:140499:Gene_0156 -> Whelan2015_D1_Mertensiidae_sp_140499_Gene_0156
+Whelan2015_D1:Pseudospongosorites_suberitoides:396895:Gene_0156 -> Whelan2015_D1_Pseudospongosorites_suberitoides_396895_Gene_0156
+Whelan2015_D1:Sycon_ciliatum:27933:Gene_0156 -> Whelan2015_D1_Sycon_ciliatum_27933_Gene_0156
+Whelan2015_D1:Sycon_coactum:1009717:Gene_0156 -> Whelan2015_D1_Sycon_coactum_1009717_Gene_0156
+Whelan2015_D1:Ircinia_fasciculata:1234657:Gene_0156 -> Whelan2015_D1_Ircinia_fasciculata_1234657_Gene_0156
+Whelan2015_D1:Saccharomyces_cerevisiae:4932:Gene_0156 -> Whelan2015_D1_Saccharomyces_cerevisiae_4932_Gene_0156
+Whelan2015_D1:Spizellomyces_punctatus:109760:Gene_0156 -> Whelan2015_D1_Spizellomyces_punctatus_109760_Gene_0156
+Whelan2015_D1:Capsaspora_owczarzaki:192875:Gene_0156 -> Whelan2015_D1_Capsaspora_owczarzaki_192875_Gene_0156
+Whelan2015_D1:Aphrocallistes_vastus:83887:Gene_0156 -> Whelan2015_D1_Aphrocallistes_vastus_83887_Gene_0156
+Whelan2015_D1:Oscarella_carmela:386100:Gene_0156 -> Whelan2015_D1_Oscarella_carmela_386100_Gene_0156
+Whelan2015_D1:Danio_rerio:7955:Gene_0156 -> Whelan2015_D1_Danio_rerio_7955_Gene_0156
+Whelan2015_D1:Craseoa_lathetica:316205:Gene_0156 -> Whelan2015_D1_Craseoa_lathetica_316205_Gene_0156
+Whelan2015_D1:Nematostella_vectensis:45351:Gene_0156 -> Whelan2015_D1_Nematostella_vectensis_45351_Gene_0156
+Whelan2015_D1:Saccoglossus_kowalevskii:10224:Gene_0156 -> Whelan2015_D1_Saccoglossus_kowalevskii_10224_Gene_0156
+Whelan2015_D1:Priapulus_caudatus:37621:Gene_0156 -> Whelan2015_D1_Priapulus_caudatus_37621_Gene_0156
+Whelan2015_D20:Aurelia_aurita:6145:Gene_0156 -> Whelan2015_D20_Aurelia_aurita_6145_Gene_0156
+Whelan2015_D20:Lottia_gigantea:225164:Gene_0156 -> Whelan2015_D20_Lottia_gigantea_225164_Gene_0156
+Whelan2015_D20:Sphaeroforma_arctica:72019:Gene_0156 -> Whelan2015_D20_Sphaeroforma_arctica_72019_Gene_0156
+Whelan2015_D20:Bolocera_tuediae:1163374:Gene_0156 -> Whelan2015_D20_Bolocera_tuediae_1163374_Gene_0156
+Whelan2015_D20:Drosophila_melanogaster:7227:Gene_0156 -> Whelan2015_D20_Drosophila_melanogaster_7227_Gene_0156
+Whelan2015_D20:Rossella_fibulata:1076269:Gene_0156 -> Whelan2015_D20_Rossella_fibulata_1076269_Gene_0156
+Whelan2015_D20:Tubulanus_polymorphus:672921:Gene_0156 -> Whelan2015_D20_Tubulanus_polymorphus_672921_Gene_0156
+Whelan2015_D20:Amoebidium_parasiticum:4881:Gene_0156 -> Whelan2015_D20_Amoebidium_parasiticum_4881_Gene_0156
+Whelan2015_D20:Abylopsis_tetragona:316209:Gene_0156 -> Whelan2015_D20_Abylopsis_tetragona_316209_Gene_0156
+Whelan2015_D20:Eunicella_verrucosa:396355:Gene_0156 -> Whelan2015_D20_Eunicella_verrucosa_396355_Gene_0156
+Whelan2015_D20:Dryodora_glandiformis:1566677:Gene_0156 -> Whelan2015_D20_Dryodora_glandiformis_1566677_Gene_0156
+Whelan2015_D20:Euplokamis_dunlapae:1403701:Gene_0156 -> Whelan2015_D20_Euplokamis_dunlapae_1403701_Gene_0156
+Whelan2015_D20:Lithobius_forficatus:7552:Gene_0156 -> Whelan2015_D20_Lithobius_forficatus_7552_Gene_0156
+Whelan2015_D20:Daphnia_pulex:6669:Gene_0156 -> Whelan2015_D20_Daphnia_pulex_6669_Gene_0156
+Whelan2015_D20:Pleurobrachia_pileus:140457:Gene_0156 -> Whelan2015_D20_Pleurobrachia_pileus_140457_Gene_0156
+Whelan2015_D20:Aiptasia_pallida:1720309:Gene_0156 -> Whelan2015_D20_Aiptasia_pallida_1720309_Gene_0156
+Whelan2015_D20:Mortierella_verticillata:78898:Gene_0156 -> Whelan2015_D20_Mortierella_verticillata_78898_Gene_0156
+Whelan2015_D20:Homo_sapiens:9606:Gene_0156 -> Whelan2015_D20_Homo_sapiens_9606_Gene_0156
+Whelan2015_D20:Amphimedon_queenslandica:400682:Gene_0156 -> Whelan2015_D20_Amphimedon_queenslandica_400682_Gene_0156
+Whelan2015_D20:Petrosia_ficiformis:68564:Gene_0156 -> Whelan2015_D20_Petrosia_ficiformis_68564_Gene_0156
+Whelan2015_D20:Strongylocentrotus_purpuratus:7668:Gene_0156 -> Whelan2015_D20_Strongylocentrotus_purpuratus_7668_Gene_0156
+Whelan2015_D20:Physalia_physalis:168775:Gene_0156 -> Whelan2015_D20_Physalia_physalis_168775_Gene_0156
+Whelan2015_D20:Hydra_vulgaris:6087:Gene_0156 -> Whelan2015_D20_Hydra_vulgaris_6087_Gene_0156
+Whelan2015_D20:Corticium_candelabrum:121492:Gene_0156 -> Whelan2015_D20_Corticium_candelabrum_121492_Gene_0156
+Whelan2015_D20:Nanomia_bijuga:168759:Gene_0156 -> Whelan2015_D20_Nanomia_bijuga_168759_Gene_0156
+Whelan2015_D20:Sympagella_nux:76350:Gene_0156 -> Whelan2015_D20_Sympagella_nux_76350_Gene_0156
+Whelan2015_D20:Spongilla_lacustris:6055:Gene_0156 -> Whelan2015_D20_Spongilla_lacustris_6055_Gene_0156
+Whelan2015_D20:Monosiga_ovata:81526:Gene_0156 -> Whelan2015_D20_Monosiga_ovata_81526_Gene_0156
+Whelan2015_D20:Crella_elegans:252961:Gene_0156 -> Whelan2015_D20_Crella_elegans_252961_Gene_0156
+Whelan2015_D20:Ministeria_vibrans:134558:Gene_0156 -> Whelan2015_D20_Ministeria_vibrans_134558_Gene_0156
+Whelan2015_D20:Mnemiopsis_leidyi:27923:Gene_0156 -> Whelan2015_D20_Mnemiopsis_leidyi_27923_Gene_0156
+Whelan2015_D20:Petromyzon_marinus:7757:Gene_0156 -> Whelan2015_D20_Petromyzon_marinus_7757_Gene_0156
+Whelan2015_D20:Allomyces_macrogynus:28583:Gene_0156 -> Whelan2015_D20_Allomyces_macrogynus_28583_Gene_0156
+Whelan2015_D20:Hemithiris_psittacea:763142:Gene_0156 -> Whelan2015_D20_Hemithiris_psittacea_763142_Gene_0156
+Whelan2015_D20:Agalma_elegans:316166:Gene_0156 -> Whelan2015_D20_Agalma_elegans_316166_Gene_0156
+Whelan2015_D20:Tethya_wilhelma:463344:Gene_0156 -> Whelan2015_D20_Tethya_wilhelma_463344_Gene_0156
+Whelan2015_D20:Bolinopsis_infundibulum:140455:Gene_0156 -> Whelan2015_D20_Bolinopsis_infundibulum_140455_Gene_0156
+Whelan2015_D20:Ephydatia_muelleri:6052:Gene_0156 -> Whelan2015_D20_Ephydatia_muelleri_6052_Gene_0156
+Whelan2015_D20:Capitella_teleta:283909:Gene_0156 -> Whelan2015_D20_Capitella_teleta_283909_Gene_0156
+Whelan2015_D20:Platygyra_carnosa:1136245:Gene_0156 -> Whelan2015_D20_Platygyra_carnosa_1136245_Gene_0156
+Whelan2015_D20:Salpingoeca_rosetta:946362:Gene_0156 -> Whelan2015_D20_Salpingoeca_rosetta_946362_Gene_0156
+Whelan2015_D20:Chondrilla_nucula:220712:Gene_0156 -> Whelan2015_D20_Chondrilla_nucula_220712_Gene_0156
+Whelan2015_D20:Trichoplax_adhaerens:10228:Gene_0156 -> Whelan2015_D20_Trichoplax_adhaerens_10228_Gene_0156
+Whelan2015_D20:Pleurobrachia_bachei:34499:Gene_0156 -> Whelan2015_D20_Pleurobrachia_bachei_34499_Gene_0156
+Whelan2015_D20:Beroe_abyssicola:320166:Gene_0156 -> Whelan2015_D20_Beroe_abyssicola_320166_Gene_0156
+Whelan2015_D20:Hydra_viridissima:6082:Gene_0156 -> Whelan2015_D20_Hydra_viridissima_6082_Gene_0156
+Whelan2015_D20:Acropora_digitifera:70779:Gene_0156 -> Whelan2015_D20_Acropora_digitifera_70779_Gene_0156
+Whelan2015_D20:Kirkpatrickia_variolosa:1631157:Gene_0156 -> Whelan2015_D20_Kirkpatrickia_variolosa_1631157_Gene_0156
+Whelan2015_D20:Latrunculia_apicalis:1325597:Gene_0156 -> Whelan2015_D20_Latrunculia_apicalis_1325597_Gene_0156
+Whelan2015_D20:Hyalonema_populiferum:1631155:Gene_0156 -> Whelan2015_D20_Hyalonema_populiferum_1631155_Gene_0156
+Whelan2015_D20:Rhizopus_oryzae:64495:Gene_0156 -> Whelan2015_D20_Rhizopus_oryzae_64495_Gene_0156
+Whelan2015_D20:Coeloplana_astericola:1912745:Gene_0156 -> Whelan2015_D20_Coeloplana_astericola_1912745_Gene_0156
+Whelan2015_D20:Periphylla_periphylla:880221:Gene_0156 -> Whelan2015_D20_Periphylla_periphylla_880221_Gene_0156
+Whelan2015_D20:Vallicula_sp:140488:Gene_0156 -> Whelan2015_D20_Vallicula_sp_140488_Gene_0156
+Whelan2015_D20:Hormathia_digitata:1163372:Gene_0156 -> Whelan2015_D20_Hormathia_digitata_1163372_Gene_0156
+Whelan2015_D20:Hydra_oligactis:6088:Gene_0156 -> Whelan2015_D20_Hydra_oligactis_6088_Gene_0156
+Whelan2015_D20:Mertensiidae_sp:140499:Gene_0156 -> Whelan2015_D20_Mertensiidae_sp_140499_Gene_0156
+Whelan2015_D20:Pseudospongosorites_suberitoides:396895:Gene_0156 -> Whelan2015_D20_Pseudospongosorites_suberitoides_396895_Gene_0156
+Whelan2015_D20:Sycon_ciliatum:27933:Gene_0156 -> Whelan2015_D20_Sycon_ciliatum_27933_Gene_0156
+Whelan2015_D20:Sycon_coactum:1009717:Gene_0156 -> Whelan2015_D20_Sycon_coactum_1009717_Gene_0156
+Whelan2015_D20:Ircinia_fasciculata:1234657:Gene_0156 -> Whelan2015_D20_Ircinia_fasciculata_1234657_Gene_0156
+Whelan2015_D20:Spizellomyces_punctatus:109760:Gene_0156 -> Whelan2015_D20_Spizellomyces_punctatus_109760_Gene_0156
+Whelan2015_D20:Capsaspora_owczarzaki:192875:Gene_0156 -> Whelan2015_D20_Capsaspora_owczarzaki_192875_Gene_0156
+Whelan2015_D20:Aphrocallistes_vastus:83887:Gene_0156 -> Whelan2015_D20_Aphrocallistes_vastus_83887_Gene_0156
+Whelan2015_D20:Oscarella_carmela:386100:Gene_0156 -> Whelan2015_D20_Oscarella_carmela_386100_Gene_0156
+Whelan2015_D20:Danio_rerio:7955:Gene_0156 -> Whelan2015_D20_Danio_rerio_7955_Gene_0156
+Whelan2015_D20:Craseoa_lathetica:316205:Gene_0156 -> Whelan2015_D20_Craseoa_lathetica_316205_Gene_0156
+Whelan2015_D20:Nematostella_vectensis:45351:Gene_0156 -> Whelan2015_D20_Nematostella_vectensis_45351_Gene_0156
+Whelan2015_D20:Saccoglossus_kowalevskii:10224:Gene_0156 -> Whelan2015_D20_Saccoglossus_kowalevskii_10224_Gene_0156
+Whelan2015_D20:Priapulus_caudatus:37621:Gene_0156 -> Whelan2015_D20_Priapulus_caudatus_37621_Gene_0156
+
+                                                                                   Gap/Ambiguity  Composition  p-value
+   1  Dunn2008_Acanthoscurria_gomesiana_115339_Tribe766                                   75.83%    passed     26.46%
+   2  Dunn2008_Acropora_millepora_45264_Tribe766                                          75.57%    passed     81.70%
+   3  Dunn2008_Asterina_pectinifera_7594_Tribe766                                         81.42%    passed     27.96%
+   4  Dunn2008_Boophilus_microplus_6941_Tribe766                                          79.90%    passed     29.31%
+   5  Dunn2008_Branchiostoma_floridae_7739_Tribe766                                       80.15%    passed     42.57%
+   6  Dunn2008_Carcinoscorpius_rotundicauda_6848_Tribe766                                 97.20%    passed     49.83%
+   7  Dunn2008_Carcinus_maenas_6759_Tribe766                                              97.20%    passed     89.33%
+   8  Dunn2008_Cerebratulus_lacteus_6221_Tribe766                                         81.17%    failed      3.88%
+   9  Dunn2008_Chaetopterus_variopedatus_34590_Tribe766                                   80.92%    passed     21.45%
+  10  Dunn2008_Ciona_intestinalis_7719_Tribe766                                           75.57%    passed     24.38%
+  11  Dunn2008_Crassostrea_virginica_6565_Tribe766                                        75.57%    passed     30.28%
+  12  Dunn2008_Cryptococcus_neoformans_5207_Tribe766                                      76.34%    passed     40.04%
+  13  Dunn2008_Drosophila_melanogaster_7227_Tribe766                                      75.83%    passed     62.18%
+  14  Dunn2008_Dugesia_japonica_6161_Tribe766                                             78.37%    passed     43.76%
+  15  Dunn2008_Gallus_gallus_9031_Tribe766                                                80.92%    passed     68.37%
+  16  Dunn2008_Hydra_vulgaris_01_6087_Tribe766                                            75.57%    passed     86.05%
+  17  Dunn2008_Hydractinia_echinata_35630_Tribe766                                        83.21%    passed     16.87%
+  18  Dunn2008_Hypsibius_dujardini_232323_Tribe766                                        80.66%    passed     19.11%
+  19  Dunn2008_Lumbricus_rubellus_35632_Tribe766                                          75.83%    passed     51.08%
+  20  Dunn2008_Nematostella_vectensis_45351_Tribe766                                      75.57%    passed     71.02%
+  21  Dunn2008_Oscarella_carmela_386100_Tribe766                                          80.92%    passed     50.75%
+  22  Dunn2008_Richtersius_coronifer_245088_Tribe766                                      75.57%    passed     60.63%
+  23  Dunn2008_Saccharomyces_cerevisiae_4932_Tribe766                                     76.34%    passed     85.35%
+  24  Dunn2008_Saccoglossus_kowalevskii_10224_Tribe766                                    80.66%    passed     79.57%
+  25  Dunn2008_Schmidtea_mediterranea_79327_Tribe766                                      75.83%    passed     36.30%
+  26  Dunn2008_Sphaeroforma_arctica_72019_Tribe766                                        76.08%    passed     94.51%
+  27  Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe766                                75.83%    passed     93.03%
+  28  Dunn2008_Xiphinema_index_46003_Tribe766                                             93.64%    passed     17.19%
+  29  Simion2017_Abeoforma_whisleri_749232_V2META12516-42-Calc_Hmm10-BMGE05               89.31%    passed     95.21%
+  30  Simion2017_Acanthoeca_spectabilis_81533_V2META12516-42-Calc_Hmm10-BMGE05            72.77%    passed     56.58%
+  31  Simion2017_Aiptasia_pallida_1720309_V2META12516-42-Calc_Hmm10-BMGE05                58.78%    passed     96.65%
+  32  Simion2017_Alatina_alata_1193083_V2META12516-42-Calc_Hmm10-BMGE05                   66.67%    passed     19.20%
+  33  Simion2017_Amphimedon_queenslandica_400682_V2META12516-42-Calc_Hmm10-BMGE05         60.31%    passed     99.21%
+  34  Simion2017_Antipathes_caribbeana_934276_V2META12516-42-Calc_Hmm10-BMGE05            58.78%    passed     99.86%
+  35  Simion2017_Aplysia_californica_6500_V2META12516-42-Calc_Hmm10-BMGE05                60.31%    passed     95.11%
+  36  Simion2017_Atolla_vanhoeffeni_86043_V2META12516-42-Calc_Hmm10-BMGE05                60.31%    passed     97.55%
+  37  Simion2017_Aurelia_aurita_6145_V2META12516-42-Calc_Hmm10-BMGE05                     60.81%    passed     93.21%
+  38  Simion2017_Beroe_abyssicola_320166_V2META12516-42-Calc_Hmm10-BMGE05                 89.57%    passed     43.70%
+  39  Simion2017_Beroe_sp_10199_V2META12516-42-Calc_Hmm10-BMGE05                          82.95%    passed      7.48%
+  40  Simion2017_Bolinopsis_infundibulum_140455_V2META12516-42-Calc_Hmm10-BMGE05          92.62%    passed     13.40%
+  41  Simion2017_Bolocera_tuediae_1163374_V2META12516-42-Calc_Hmm10-BMGE05                58.78%    passed     96.46%
+  42  Simion2017_Branchiostoma_floridae_7739_V2META12516-42-Calc_Hmm10-BMGE05             58.78%    passed     97.93%
+  43  Simion2017_Capitella_teleta_283909_V2META12516-42-Calc_Hmm10-BMGE05                 62.60%    passed     78.04%
+  44  Simion2017_Capsaspora_owczarzaki_192875_V2META12516-42-Calc_Hmm10-BMGE05            61.07%    passed      6.74%
+  45  Simion2017_Choanoeca_perplexa_11_81531_V2META12516-42-Calc_Hmm10-BMGE05             85.75%    passed     16.86%
+  46  Simion2017_Chondrilla_nucula_220712_V2META12516-42-Calc_Hmm10-BMGE05                83.21%    passed     45.93%
+  47  Simion2017_Clytia_hemisphaerica_252671_V2META12516-42-Calc_Hmm10-BMGE05             59.03%    passed     98.76%
+  48  Simion2017_Codosiga_hollandica_17_1742608_V2META12516-42-Calc_Hmm10-BMGE05          63.61%    passed     56.60%
+  49  Simion2017_Coeloplana_species_140473_V2META12516-42-Calc_Hmm10-BMGE05               59.54%    passed     81.74%
+  50  Simion2017_Corticium_candelabrum_121492_V2META12516-42-Calc_Hmm10-BMGE05            82.95%    passed     84.78%
+  51  Simion2017_Craspedacusta_sowerbii_128124_V2META12516-42-Calc_Hmm10-BMGE05           77.61%    passed     79.50%
+  52  Simion2017_Creolimax_fragrantissima_470921_V2META12516-42-Calc_Hmm10-BMGE05         64.63%    passed     82.07%
+  53  Simion2017_Daphnia_pulex_6669_V2META12516-42-Calc_Hmm10-BMGE05                      58.78%    passed     99.62%
+  54  Simion2017_Diaphanoeca_grandis_28014_V2META12516-42-Calc_Hmm10-BMGE05               83.21%    passed     25.76%
+  55  Simion2017_Didymoeca_costata_10_459534_V2META12516-42-Calc_Hmm10-BMGE05             64.12%    passed     74.22%
+  56  Simion2017_Edwardsiella_lineata_132407_V2META12516-42-Calc_Hmm10-BMGE05             58.78%    passed     65.79%
+  57  Simion2017_Ephydatia_muelleri_6052_V2META12516-42-Calc_Hmm10-BMGE05                 60.31%    passed     96.23%
+  58  Simion2017_Euplectella_aspergillum_936045_V2META12516-42-Calc_Hmm10-BMGE05          95.67%    passed     48.36%
+  59  Simion2017_Euplokamis_dunlapae_1403701_V2META12516-42-Calc_Hmm10-BMGE05             82.95%    passed     37.97%
+  60  Simion2017_Helobdella_robusta_6412_V2META12516-42-Calc_Hmm10-BMGE05                 59.80%    passed     99.10%
+  61  Simion2017_Hormiphora_californensis_1403702_V2META12516-42-Calc_Hmm10-BMGE05        62.09%    passed     54.63%
+  62  Simion2017_Hydra_vulgaris_01_6087_V2META12516-42-Calc_Hmm10-BMGE05                  58.78%    passed     72.41%
+  63  Simion2017_Hydractinia_polyclina_589945_V2META12516-42-Calc_Hmm10-BMGE05            58.78%    passed     94.89%
+  64  Simion2017_Ircinia_fasciculata_1234657_V2META12516-42-Calc_Hmm10-BMGE05             86.01%    passed     85.40%
+  65  Simion2017_Ixodes_scapularis_6945_V2META12516-42-Calc_Hmm10-BMGE05                  58.78%    passed     79.44%
+  66  Simion2017_Kirkpatrickia_variolosa_1631157_V2META12516-42-Calc_Hmm10-BMGE05         82.95%    passed     62.51%
+  67  Simion2017_Lampea_pancerina_1532213_V2META12516-42-Calc_Hmm10-BMGE05                58.78%    passed     86.12%
+  68  Simion2017_Liriope_tetraphylla_37524_V2META12516-42-Calc_Hmm10-BMGE05               83.72%    passed     68.44%
+  69  Simion2017_Lucernariopsis_campanulata_1843190_V2META12516-42-Calc_Hmm10-BMGE05      58.78%    passed     91.95%
+  70  Simion2017_Mnemiopsis_leidyi_27923_V2META12516-42-Calc_Hmm10-BMGE05                 58.78%    passed     93.21%
+  71  Simion2017_Monosiga_brevicollis_81824_V2META12516-42-Calc_Hmm10-BMGE05              63.61%    passed     70.65%
+  72  Simion2017_Orbicella_faveolata_48498_V2META12516-42-Calc_Hmm10-BMGE05               60.81%    passed     98.86%
+  73  Simion2017_Mylnosiga_fluctuans_19_1928486_V2META12516-42-Calc_Hmm10-BMGE05          84.22%    passed      5.99%
+  74  Simion2017_Nanomia_bijuga_168759_V2META12516-42-Calc_Hmm10-BMGE05                   60.56%    passed     81.42%
+  75  Simion2017_Nematostella_vectensis_45351_V2META12516-42-Calc_Hmm10-BMGE05            60.56%    passed     93.68%
+  76  Simion2017_Oscarella_species_121493_V2META12516-42-Calc_Hmm10-BMGE05                58.78%    passed     97.11%
+  77  Simion2017_Pelagia_noctiluca_400838_V2META12516-42-Calc_Hmm10-BMGE05                70.48%    passed     89.62%
+  78  Simion2017_Pennatula_rubra_1820127_V2META12516-42-Calc_Hmm10-BMGE05                 86.77%    passed     50.30%
+  79  Simion2017_Periphylla_periphylla_880221_V2META12516-42-Calc_Hmm10-BMGE05            60.31%    passed     98.62%
+  80  Simion2017_Petrosia_ficiformis_68564_V2META12516-42-Calc_Hmm10-BMGE05               83.46%    passed     76.68%
+  81  Simion2017_Plakina_jani_450361_V2META12516-42-Calc_Hmm10-BMGE05                     61.32%    passed     87.30%
+  82  Simion2017_Pleurobrachia_species_34498_V2META12516-42-Calc_Hmm10-BMGE05             58.78%    passed     97.14%
+  83  Simion2017_Plumapathes_pennacea_1350358_V2META12516-42-Calc_Hmm10-BMGE05            58.78%    passed     99.69%
+  84  Simion2017_Rossella_fibulata_1076269_V2META12516-42-Calc_Hmm10-BMGE05               70.48%    passed     96.32%
+  85  Simion2017_Saccoglossus_kowalevskii_10224_V2META12516-42-Calc_Hmm10-BMGE05          60.81%    passed     90.90%
+  86  Simion2017_Salpingoeca_dolichothecata_16_1742605_V2META12516-42-Calc_Hmm10-BMGE05   60.31%    passed     80.70%
+  87  Simion2017_Salpingoeca_helianthica_18_1928494_V2META12516-42-Calc_Hmm10-BMGE05      70.74%    passed     99.46%
+  88  Simion2017_Salpingoeca_infusionum_12_86018_V2META12516-42-Calc_Hmm10-BMGE05         94.15%    passed     38.70%
+  89  Simion2017_Salpingoeca_macrocollata_06_1924736_V2META12516-42-Calc_Hmm10-BMGE05     70.48%    passed     43.15%
+  90  Simion2017_Salpingoeca_punica_03_1924735_V2META12516-42-Calc_Hmm10-BMGE05           64.12%    passed     26.13%
+  91  Simion2017_Salpingoeca_kvevrii_1924737_V2META12516-42-Calc_Hmm10-BMGE05             65.65%    passed     53.48%
+  92  Simion2017_Microstomoeca_roanoka_1923864_V2META12516-42-Calc_Hmm10-BMGE05           70.99%    failed      4.46%
+  93  Simion2017_Salpingoeca_rosetta_946362_V2META12516-42-Calc_Hmm10-BMGE05              70.48%    passed      7.59%
+  94  Simion2017_Salpingoeca_urceolata_04_473813_V2META12516-42-Calc_Hmm10-BMGE05         59.03%    passed     69.64%
+  95  Simion2017_Spongilla_lacustris_6055_V2META12516-42-Calc_Hmm10-BMGE05                58.78%    passed     98.20%
+  96  Simion2017_Stephanoeca_diplocostata_81535_V2META12516-42-Calc_Hmm10-BMGE05          62.34%    passed     45.98%
+  97  Simion2017_Stomolophus_meleagris_168796_V2META12516-42-Calc_Hmm10-BMGE05            58.78%    passed     97.97%
+  98  Simion2017_Strongylocentrotus_purpuratus_7668_V2META12516-42-Calc_Hmm10-BMGE05      59.54%    passed     97.28%
+  99  Simion2017_Tribolium_castaneum_7070_V2META12516-42-Calc_Hmm10-BMGE05                60.81%    passed     71.09%
+ 100  Simion2017_Trichoplax_adhaerens_10228_V2META12516-42-Calc_Hmm10-BMGE05              63.61%    passed     43.65%
+ 101  Simion2017_Vallicula_multiformis_140489_V2META12516-42-Calc_Hmm10-BMGE05            59.29%    passed     32.27%
+ 102  Whelan2015_D10_Aurelia_aurita_6145_Gene_0156                                        70.48%    passed     19.22%
+ 103  Whelan2015_D10_Lottia_gigantea_225164_Gene_0156                                     45.04%    passed     99.69%
+ 104  Whelan2015_D10_Sphaeroforma_arctica_72019_Gene_0156                                100.00%    passed      -nan%
+ 105  Whelan2015_D10_Bolocera_tuediae_1163374_Gene_0156                                   43.26%    passed     99.96%
+ 106  Whelan2015_D10_Drosophila_melanogaster_7227_Gene_0156                               43.51%    passed     91.02%
+ 107  Whelan2015_D10_Rossella_fibulata_1076269_Gene_0156                                  46.31%    passed     84.79%
+ 108  Whelan2015_D10_Tubulanus_polymorphus_672921_Gene_0156                               43.51%    passed     98.82%
+ 109  Whelan2015_D10_Amoebidium_parasiticum_4881_Gene_0156                                46.06%    passed     68.31%
+ 110  Whelan2015_D10_Abylopsis_tetragona_316209_Gene_0156                                 63.36%    passed     73.35%
+ 111  Whelan2015_D10_Eunicella_verrucosa_396355_Gene_0156                                 44.02%    passed     84.94%
+ 112  Whelan2015_D10_Dryodora_glandiformis_1566677_Gene_0156                             100.00%    passed      -nan%
+ 113  Whelan2015_D10_Euplokamis_dunlapae_1403701_Gene_0156                                43.51%    passed     71.69%
+ 114  Whelan2015_D10_Lithobius_forficatus_7552_Gene_0156                                  43.51%    passed     96.82%
+ 115  Whelan2015_D10_Daphnia_pulex_6669_Gene_0156                                         43.51%    passed     98.85%
+ 116  Whelan2015_D10_Pleurobrachia_pileus_140457_Gene_0156                                43.51%    passed     27.89%
+ 117  Whelan2015_D10_Aiptasia_pallida_1720309_Gene_0156                                   43.51%    passed     95.18%
+ 118  Whelan2015_D10_Mortierella_verticillata_78898_Gene_0156                            100.00%    passed      -nan%
+ 119  Whelan2015_D10_Homo_sapiens_9606_Gene_0156                                          43.26%    passed     97.24%
+ 120  Whelan2015_D10_Amphimedon_queenslandica_400682_Gene_0156                            44.27%    passed     46.98%
+ 121  Whelan2015_D10_Petrosia_ficiformis_68564_Gene_0156                                 100.00%    passed      -nan%
+ 122  Whelan2015_D10_Strongylocentrotus_purpuratus_7668_Gene_0156                        100.00%    passed      -nan%
+ 123  Whelan2015_D10_Physalia_physalis_168775_Gene_0156                                   45.29%    passed     64.55%
+ 124  Whelan2015_D10_Hydra_vulgaris_6087_Gene_0156                                        44.53%    passed     87.40%
+ 125  Whelan2015_D10_Corticium_candelabrum_121492_Gene_0156                               43.51%    passed      7.99%
+ 126  Whelan2015_D10_Nanomia_bijuga_168759_Gene_0156                                      76.08%    passed     48.17%
+ 127  Whelan2015_D10_Sympagella_nux_76350_Gene_0156                                       47.07%    passed     93.29%
+ 128  Whelan2015_D10_Spongilla_lacustris_6055_Gene_0156                                   44.53%    passed     89.56%
+ 129  Whelan2015_D10_Monosiga_ovata_81526_Gene_0156                                       64.12%    failed      1.62%
+ 130  Whelan2015_D10_Crella_elegans_252961_Gene_0156                                      81.93%    passed     47.54%
+ 131  Whelan2015_D10_Ministeria_vibrans_134558_Gene_0156                                 100.00%    passed      -nan%
+ 132  Whelan2015_D10_Mnemiopsis_leidyi_27923_Gene_0156                                   100.00%    passed      -nan%
+ 133  Whelan2015_D10_Petromyzon_marinus_7757_Gene_0156                                   100.00%    passed      -nan%
+ 134  Whelan2015_D10_Allomyces_macrogynus_28583_Gene_0156                                 52.93%    passed      8.47%
+ 135  Whelan2015_D10_Hemithiris_psittacea_763142_Gene_0156                                84.73%    passed      7.43%
+ 136  Whelan2015_D10_Agalma_elegans_316166_Gene_0156                                      81.68%    passed     19.84%
+ 137  Whelan2015_D10_Tethya_wilhelma_463344_Gene_0156                                    100.00%    passed      -nan%
+ 138  Whelan2015_D10_Bolinopsis_infundibulum_140455_Gene_0156                            100.00%    passed      -nan%
+ 139  Whelan2015_D10_Ephydatia_muelleri_6052_Gene_0156                                    44.27%    passed     74.40%
+ 140  Whelan2015_D10_Capitella_teleta_283909_Gene_0156                                    50.38%    passed     82.71%
+ 141  Whelan2015_D10_Platygyra_carnosa_1136245_Gene_0156                                  44.02%    passed     99.42%
+ 142  Whelan2015_D10_Salpingoeca_rosetta_946362_Gene_0156                                 69.21%    passed     35.67%
+ 143  Whelan2015_D10_Chondrilla_nucula_220712_Gene_0156                                  100.00%    passed      -nan%
+ 144  Whelan2015_D10_Trichoplax_adhaerens_10228_Gene_0156                                 43.51%    passed     43.22%
+ 145  Whelan2015_D10_Pleurobrachia_bachei_34499_Gene_0156                                100.00%    passed      -nan%
+ 146  Whelan2015_D10_Beroe_abyssicola_320166_Gene_0156                                   100.00%    passed      -nan%
+ 147  Whelan2015_D10_Hydra_viridissima_6082_Gene_0156                                     44.53%    passed     82.52%
+ 148  Whelan2015_D10_Acropora_digitifera_70779_Gene_0156                                  43.26%    passed     99.24%
+ 149  Whelan2015_D10_Kirkpatrickia_variolosa_1631157_Gene_0156                            44.02%    passed     55.09%
+ 150  Whelan2015_D10_Latrunculia_apicalis_1325597_Gene_0156                               43.77%    passed     86.02%
+ 151  Whelan2015_D10_Hyalonema_populiferum_1631155_Gene_0156                              44.27%    passed     95.36%
+ 152  Whelan2015_D10_Rhizopus_oryzae_64495_Gene_0156                                     100.00%    passed      -nan%
+ 153  Whelan2015_D10_Coeloplana_astericola_1912745_Gene_0156                             100.00%    passed      -nan%
+ 154  Whelan2015_D10_Periphylla_periphylla_880221_Gene_0156                               80.15%    passed     29.59%
+ 155  Whelan2015_D10_Vallicula_sp_140488_Gene_0156                                       100.00%    passed      -nan%
+ 156  Whelan2015_D10_Hormathia_digitata_1163372_Gene_0156                                 43.77%    passed     97.45%
+ 157  Whelan2015_D10_Hydra_oligactis_6088_Gene_0156                                       44.53%    passed     84.48%
+ 158  Whelan2015_D10_Mertensiidae_sp_140499_Gene_0156                                    100.00%    passed      -nan%
+ 159  Whelan2015_D10_Pseudospongosorites_suberitoides_396895_Gene_0156                   100.00%    passed      -nan%
+ 160  Whelan2015_D10_Sycon_ciliatum_27933_Gene_0156                                       44.27%    passed     97.77%
+ 161  Whelan2015_D10_Sycon_coactum_1009717_Gene_0156                                     100.00%    passed      -nan%
+ 162  Whelan2015_D10_Ircinia_fasciculata_1234657_Gene_0156                                85.24%    passed     87.57%
+ 163  Whelan2015_D10_Spizellomyces_punctatus_109760_Gene_0156                            100.00%    passed      -nan%
+ 164  Whelan2015_D10_Capsaspora_owczarzaki_192875_Gene_0156                               44.27%    failed      0.14%
+ 165  Whelan2015_D10_Aphrocallistes_vastus_83887_Gene_0156                                46.31%    passed     38.08%
+ 166  Whelan2015_D10_Oscarella_carmela_386100_Gene_0156                                   44.27%    passed     87.21%
+ 167  Whelan2015_D10_Danio_rerio_7955_Gene_0156                                           44.02%    passed     97.91%
+ 168  Whelan2015_D10_Craseoa_lathetica_316205_Gene_0156                                   56.74%    passed     40.29%
+ 169  Whelan2015_D10_Nematostella_vectensis_45351_Gene_0156                               43.26%    passed     98.13%
+ 170  Whelan2015_D10_Saccoglossus_kowalevskii_10224_Gene_0156                             81.17%    passed     39.01%
+ 171  Whelan2015_D10_Priapulus_caudatus_37621_Gene_0156                                   54.96%    passed     18.25%
+ 172  Whelan2015_D1_Aurelia_aurita_6145_Gene_0156                                         70.48%    passed     19.22%
+ 173  Whelan2015_D1_Lottia_gigantea_225164_Gene_0156                                      45.04%    passed     99.69%
+ 174  Whelan2015_D1_Acanthoeca_spectabilis_81533_Gene_0156                               100.00%    passed      -nan%
+ 175  Whelan2015_D1_Sphaeroforma_arctica_72019_Gene_0156                                 100.00%    passed      -nan%
+ 176  Whelan2015_D1_Aspergillus_fumigatus_746128_Gene_0156                                45.04%    passed     96.89%
+ 177  Whelan2015_D1_Bolocera_tuediae_1163374_Gene_0156                                    43.26%    passed     99.96%
+ 178  Whelan2015_D1_Drosophila_melanogaster_7227_Gene_0156                                43.51%    passed     91.02%
+ 179  Whelan2015_D1_Rossella_fibulata_1076269_Gene_0156                                   46.31%    passed     84.79%
+ 180  Whelan2015_D1_Tubulanus_polymorphus_672921_Gene_0156                                43.51%    passed     98.82%
+ 181  Whelan2015_D1_Amoebidium_parasiticum_4881_Gene_0156                                 46.06%    passed     68.31%
+ 182  Whelan2015_D1_Abylopsis_tetragona_316209_Gene_0156                                  63.36%    passed     73.35%
+ 183  Whelan2015_D1_Eunicella_verrucosa_396355_Gene_0156                                  44.02%    passed     84.94%
+ 184  Whelan2015_D1_Dryodora_glandiformis_1566677_Gene_0156                              100.00%    passed      -nan%
+ 185  Whelan2015_D1_Euplokamis_dunlapae_1403701_Gene_0156                                 43.51%    passed     71.69%
+ 186  Whelan2015_D1_Lithobius_forficatus_7552_Gene_0156                                   43.51%    passed     96.82%
+ 187  Whelan2015_D1_Daphnia_pulex_6669_Gene_0156                                          43.51%    passed     98.85%
+ 188  Whelan2015_D1_Pleurobrachia_pileus_140457_Gene_0156                                 43.51%    passed     27.89%
+ 189  Whelan2015_D1_Neurospora_crassa_5141_Gene_0156                                      44.78%    passed     36.75%
+ 190  Whelan2015_D1_Aiptasia_pallida_1720309_Gene_0156                                    43.51%    passed     95.18%
+ 191  Whelan2015_D1_Mortierella_verticillata_78898_Gene_0156                             100.00%    passed      -nan%
+ 192  Whelan2015_D1_Homo_sapiens_9606_Gene_0156                                           43.26%    passed     97.24%
+ 193  Whelan2015_D1_Amphimedon_queenslandica_400682_Gene_0156                             44.27%    passed     46.98%
+ 194  Whelan2015_D1_Petrosia_ficiformis_68564_Gene_0156                                  100.00%    passed      -nan%
+ 195  Whelan2015_D1_Strongylocentrotus_purpuratus_7668_Gene_0156                         100.00%    passed      -nan%
+ 196  Whelan2015_D1_Physalia_physalis_168775_Gene_0156                                    45.29%    passed     64.55%
+ 197  Whelan2015_D1_Hydra_vulgaris_6087_Gene_0156                                         44.53%    passed     87.40%
+ 198  Whelan2015_D1_Corticium_candelabrum_121492_Gene_0156                                43.51%    passed      7.99%
+ 199  Whelan2015_D1_Nanomia_bijuga_168759_Gene_0156                                       76.08%    passed     48.17%
+ 200  Whelan2015_D1_Sympagella_nux_76350_Gene_0156                                        47.07%    passed     93.29%
+ 201  Whelan2015_D1_Spongilla_lacustris_6055_Gene_0156                                    44.53%    passed     89.56%
+ 202  Whelan2015_D1_Monosiga_ovata_81526_Gene_0156                                        64.12%    failed      1.62%
+ 203  Whelan2015_D1_Crella_elegans_252961_Gene_0156                                       81.93%    passed     47.54%
+ 204  Whelan2015_D1_Ministeria_vibrans_134558_Gene_0156                                  100.00%    passed      -nan%
+ 205  Whelan2015_D1_Mnemiopsis_leidyi_27923_Gene_0156                                    100.00%    passed      -nan%
+ 206  Whelan2015_D1_Petromyzon_marinus_7757_Gene_0156                                    100.00%    passed      -nan%
+ 207  Whelan2015_D1_Allomyces_macrogynus_28583_Gene_0156                                  52.93%    passed      8.47%
+ 208  Whelan2015_D1_Hemithiris_psittacea_763142_Gene_0156                                 84.73%    passed      7.43%
+ 209  Whelan2015_D1_Agalma_elegans_316166_Gene_0156                                       81.68%    passed     19.84%
+ 210  Whelan2015_D1_Tethya_wilhelma_463344_Gene_0156                                     100.00%    passed      -nan%
+ 211  Whelan2015_D1_Bolinopsis_infundibulum_140455_Gene_0156                             100.00%    passed      -nan%
+ 212  Whelan2015_D1_Ephydatia_muelleri_6052_Gene_0156                                     44.27%    passed     74.40%
+ 213  Whelan2015_D1_Capitella_teleta_283909_Gene_0156                                     50.38%    passed     82.71%
+ 214  Whelan2015_D1_Platygyra_carnosa_1136245_Gene_0156                                   44.02%    passed     99.42%
+ 215  Whelan2015_D1_Salpingoeca_pyxidium_473812_Gene_0156                                100.00%    passed      -nan%
+ 216  Whelan2015_D1_Salpingoeca_rosetta_946362_Gene_0156                                  69.21%    passed     35.67%
+ 217  Whelan2015_D1_Chondrilla_nucula_220712_Gene_0156                                   100.00%    passed      -nan%
+ 218  Whelan2015_D1_Trichoplax_adhaerens_10228_Gene_0156                                  43.51%    passed     43.22%
+ 219  Whelan2015_D1_Pleurobrachia_bachei_34499_Gene_0156                                 100.00%    passed      -nan%
+ 220  Whelan2015_D1_Monosiga_brevicollis_81824_Gene_0156                                  46.06%    passed     41.34%
+ 221  Whelan2015_D1_Beroe_abyssicola_320166_Gene_0156                                    100.00%    passed      -nan%
+ 222  Whelan2015_D1_Hydra_viridissima_6082_Gene_0156                                      44.53%    passed     82.52%
+ 223  Whelan2015_D1_Acropora_digitifera_70779_Gene_0156                                   43.26%    passed     99.24%
+ 224  Whelan2015_D1_Kirkpatrickia_variolosa_1631157_Gene_0156                             44.02%    passed     55.09%
+ 225  Whelan2015_D1_Latrunculia_apicalis_1325597_Gene_0156                                43.77%    passed     86.02%
+ 226  Whelan2015_D1_Hyalonema_populiferum_1631155_Gene_0156                               44.27%    passed     95.36%
+ 227  Whelan2015_D1_Rhizopus_oryzae_64495_Gene_0156                                      100.00%    passed      -nan%
+ 228  Whelan2015_D1_Coeloplana_astericola_1912745_Gene_0156                              100.00%    passed      -nan%
+ 229  Whelan2015_D1_Periphylla_periphylla_880221_Gene_0156                                80.15%    passed     29.59%
+ 230  Whelan2015_D1_Vallicula_sp_140488_Gene_0156                                        100.00%    passed      -nan%
+ 231  Whelan2015_D1_Hormathia_digitata_1163372_Gene_0156                                  43.77%    passed     97.45%
+ 232  Whelan2015_D1_Hydra_oligactis_6088_Gene_0156                                        44.53%    passed     84.48%
+ 233  Whelan2015_D1_Mertensiidae_sp_140499_Gene_0156                                     100.00%    passed      -nan%
+ 234  Whelan2015_D1_Pseudospongosorites_suberitoides_396895_Gene_0156                    100.00%    passed      -nan%
+ 235  Whelan2015_D1_Sycon_ciliatum_27933_Gene_0156                                        44.27%    passed     97.77%
+ 236  Whelan2015_D1_Sycon_coactum_1009717_Gene_0156                                      100.00%    passed      -nan%
+ 237  Whelan2015_D1_Ircinia_fasciculata_1234657_Gene_0156                                 85.24%    passed     87.57%
+ 238  Whelan2015_D1_Saccharomyces_cerevisiae_4932_Gene_0156                               44.02%    passed     59.10%
+ 239  Whelan2015_D1_Spizellomyces_punctatus_109760_Gene_0156                             100.00%    passed      -nan%
+ 240  Whelan2015_D1_Capsaspora_owczarzaki_192875_Gene_0156                                44.27%    failed      0.14%
+ 241  Whelan2015_D1_Aphrocallistes_vastus_83887_Gene_0156                                 46.31%    passed     38.08%
+ 242  Whelan2015_D1_Oscarella_carmela_386100_Gene_0156                                    44.27%    passed     87.21%
+ 243  Whelan2015_D1_Danio_rerio_7955_Gene_0156                                            44.02%    passed     97.91%
+ 244  Whelan2015_D1_Craseoa_lathetica_316205_Gene_0156                                    56.74%    passed     40.29%
+ 245  Whelan2015_D1_Nematostella_vectensis_45351_Gene_0156                                43.26%    passed     98.13%
+ 246  Whelan2015_D1_Saccoglossus_kowalevskii_10224_Gene_0156                              81.17%    passed     39.01%
+ 247  Whelan2015_D1_Priapulus_caudatus_37621_Gene_0156                                    54.96%    passed     18.25%
+ 248  Whelan2015_D20_Aurelia_aurita_6145_Gene_0156                                        70.48%    passed     19.22%
+ 249  Whelan2015_D20_Lottia_gigantea_225164_Gene_0156                                     45.04%    passed     99.69%
+ 250  Whelan2015_D20_Sphaeroforma_arctica_72019_Gene_0156                                100.00%    passed      -nan%
+ 251  Whelan2015_D20_Bolocera_tuediae_1163374_Gene_0156                                   43.26%    passed     99.96%
+ 252  Whelan2015_D20_Drosophila_melanogaster_7227_Gene_0156                               43.51%    passed     91.02%
+ 253  Whelan2015_D20_Rossella_fibulata_1076269_Gene_0156                                 100.00%    passed      -nan%
+ 254  Whelan2015_D20_Tubulanus_polymorphus_672921_Gene_0156                               43.51%    passed     98.82%
+ 255  Whelan2015_D20_Amoebidium_parasiticum_4881_Gene_0156                                46.06%    passed     68.31%
+ 256  Whelan2015_D20_Abylopsis_tetragona_316209_Gene_0156                                 63.36%    passed     73.35%
+ 257  Whelan2015_D20_Eunicella_verrucosa_396355_Gene_0156                                 44.02%    passed     84.94%
+ 258  Whelan2015_D20_Dryodora_glandiformis_1566677_Gene_0156                             100.00%    passed      -nan%
+ 259  Whelan2015_D20_Euplokamis_dunlapae_1403701_Gene_0156                               100.00%    passed      -nan%
+ 260  Whelan2015_D20_Lithobius_forficatus_7552_Gene_0156                                  43.51%    passed     96.82%
+ 261  Whelan2015_D20_Daphnia_pulex_6669_Gene_0156                                         43.51%    passed     98.85%
+ 262  Whelan2015_D20_Pleurobrachia_pileus_140457_Gene_0156                               100.00%    passed      -nan%
+ 263  Whelan2015_D20_Aiptasia_pallida_1720309_Gene_0156                                   43.51%    passed     95.18%
+ 264  Whelan2015_D20_Mortierella_verticillata_78898_Gene_0156                            100.00%    passed      -nan%
+ 265  Whelan2015_D20_Homo_sapiens_9606_Gene_0156                                          43.26%    passed     97.24%
+ 266  Whelan2015_D20_Amphimedon_queenslandica_400682_Gene_0156                            44.27%    passed     46.98%
+ 267  Whelan2015_D20_Petrosia_ficiformis_68564_Gene_0156                                 100.00%    passed      -nan%
+ 268  Whelan2015_D20_Strongylocentrotus_purpuratus_7668_Gene_0156                        100.00%    passed      -nan%
+ 269  Whelan2015_D20_Physalia_physalis_168775_Gene_0156                                   45.29%    passed     64.55%
+ 270  Whelan2015_D20_Hydra_vulgaris_6087_Gene_0156                                       100.00%    passed      -nan%
+ 271  Whelan2015_D20_Corticium_candelabrum_121492_Gene_0156                               43.51%    passed      7.99%
+ 272  Whelan2015_D20_Nanomia_bijuga_168759_Gene_0156                                      76.08%    passed     48.17%
+ 273  Whelan2015_D20_Sympagella_nux_76350_Gene_0156                                      100.00%    passed      -nan%
+ 274  Whelan2015_D20_Spongilla_lacustris_6055_Gene_0156                                  100.00%    passed      -nan%
+ 275  Whelan2015_D20_Monosiga_ovata_81526_Gene_0156                                       64.12%    failed      1.62%
+ 276  Whelan2015_D20_Crella_elegans_252961_Gene_0156                                      81.93%    passed     47.54%
+ 277  Whelan2015_D20_Ministeria_vibrans_134558_Gene_0156                                 100.00%    passed      -nan%
+ 278  Whelan2015_D20_Mnemiopsis_leidyi_27923_Gene_0156                                   100.00%    passed      -nan%
+ 279  Whelan2015_D20_Petromyzon_marinus_7757_Gene_0156                                   100.00%    passed      -nan%
+ 280  Whelan2015_D20_Allomyces_macrogynus_28583_Gene_0156                                 52.93%    passed      8.47%
+ 281  Whelan2015_D20_Hemithiris_psittacea_763142_Gene_0156                                84.73%    passed      7.43%
+ 282  Whelan2015_D20_Agalma_elegans_316166_Gene_0156                                      81.68%    passed     19.84%
+ 283  Whelan2015_D20_Tethya_wilhelma_463344_Gene_0156                                    100.00%    passed      -nan%
+ 284  Whelan2015_D20_Bolinopsis_infundibulum_140455_Gene_0156                            100.00%    passed      -nan%
+ 285  Whelan2015_D20_Ephydatia_muelleri_6052_Gene_0156                                   100.00%    passed      -nan%
+ 286  Whelan2015_D20_Capitella_teleta_283909_Gene_0156                                    50.38%    passed     82.71%
+ 287  Whelan2015_D20_Platygyra_carnosa_1136245_Gene_0156                                 100.00%    passed      -nan%
+ 288  Whelan2015_D20_Salpingoeca_rosetta_946362_Gene_0156                                 69.21%    passed     35.67%
+ 289  Whelan2015_D20_Chondrilla_nucula_220712_Gene_0156                                  100.00%    passed      -nan%
+ 290  Whelan2015_D20_Trichoplax_adhaerens_10228_Gene_0156                                 43.51%    passed     43.22%
+ 291  Whelan2015_D20_Pleurobrachia_bachei_34499_Gene_0156                                100.00%    passed      -nan%
+ 292  Whelan2015_D20_Beroe_abyssicola_320166_Gene_0156                                   100.00%    passed      -nan%
+ 293  Whelan2015_D20_Hydra_viridissima_6082_Gene_0156                                    100.00%    passed      -nan%
+ 294  Whelan2015_D20_Acropora_digitifera_70779_Gene_0156                                 100.00%    passed      -nan%
+ 295  Whelan2015_D20_Kirkpatrickia_variolosa_1631157_Gene_0156                            44.02%    passed     55.09%
+ 296  Whelan2015_D20_Latrunculia_apicalis_1325597_Gene_0156                               43.77%    passed     86.02%
+ 297  Whelan2015_D20_Hyalonema_populiferum_1631155_Gene_0156                             100.00%    passed      -nan%
+ 298  Whelan2015_D20_Rhizopus_oryzae_64495_Gene_0156                                     100.00%    passed      -nan%
+ 299  Whelan2015_D20_Coeloplana_astericola_1912745_Gene_0156                             100.00%    passed      -nan%
+ 300  Whelan2015_D20_Periphylla_periphylla_880221_Gene_0156                               80.15%    passed     29.59%
+ 301  Whelan2015_D20_Vallicula_sp_140488_Gene_0156                                       100.00%    passed      -nan%
+ 302  Whelan2015_D20_Hormathia_digitata_1163372_Gene_0156                                 43.77%    passed     97.45%
+ 303  Whelan2015_D20_Hydra_oligactis_6088_Gene_0156                                      100.00%    passed      -nan%
+ 304  Whelan2015_D20_Mertensiidae_sp_140499_Gene_0156                                    100.00%    passed      -nan%
+ 305  Whelan2015_D20_Pseudospongosorites_suberitoides_396895_Gene_0156                   100.00%    passed      -nan%
+ 306  Whelan2015_D20_Sycon_ciliatum_27933_Gene_0156                                       44.27%    passed     97.77%
+ 307  Whelan2015_D20_Sycon_coactum_1009717_Gene_0156                                     100.00%    passed      -nan%
+ 308  Whelan2015_D20_Ircinia_fasciculata_1234657_Gene_0156                                85.24%    passed     87.57%
+ 309  Whelan2015_D20_Spizellomyces_punctatus_109760_Gene_0156                            100.00%    passed      -nan%
+ 310  Whelan2015_D20_Capsaspora_owczarzaki_192875_Gene_0156                               44.27%    failed      0.14%
+ 311  Whelan2015_D20_Aphrocallistes_vastus_83887_Gene_0156                               100.00%    passed      -nan%
+ 312  Whelan2015_D20_Oscarella_carmela_386100_Gene_0156                                   44.27%    passed     87.21%
+ 313  Whelan2015_D20_Danio_rerio_7955_Gene_0156                                           44.02%    passed     97.91%
+ 314  Whelan2015_D20_Craseoa_lathetica_316205_Gene_0156                                   56.74%    passed     40.29%
+ 315  Whelan2015_D20_Nematostella_vectensis_45351_Gene_0156                               43.26%    passed     98.13%
+ 316  Whelan2015_D20_Saccoglossus_kowalevskii_10224_Gene_0156                             81.17%    passed     39.01%
+ 317  Whelan2015_D20_Priapulus_caudatus_37621_Gene_0156                                   54.96%    passed     18.25%
+WARNING: 221 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                                                               69.69%  8 sequences failed composition chi2 test (p-value<5%; df=19)
+WARNING: Sequence Whelan2015_D10_Sphaeroforma_arctica_72019_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D10_Dryodora_glandiformis_1566677_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D10_Mortierella_verticillata_78898_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D10_Petrosia_ficiformis_68564_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D10_Strongylocentrotus_purpuratus_7668_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D10_Ministeria_vibrans_134558_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D10_Mnemiopsis_leidyi_27923_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D10_Petromyzon_marinus_7757_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D10_Tethya_wilhelma_463344_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D10_Bolinopsis_infundibulum_140455_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D10_Chondrilla_nucula_220712_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D10_Pleurobrachia_bachei_34499_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D10_Beroe_abyssicola_320166_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D10_Rhizopus_oryzae_64495_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D10_Coeloplana_astericola_1912745_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D10_Vallicula_sp_140488_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D10_Mertensiidae_sp_140499_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D10_Pseudospongosorites_suberitoides_396895_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D10_Sycon_coactum_1009717_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D10_Spizellomyces_punctatus_109760_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D1_Acanthoeca_spectabilis_81533_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D1_Sphaeroforma_arctica_72019_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D1_Dryodora_glandiformis_1566677_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D1_Mortierella_verticillata_78898_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D1_Petrosia_ficiformis_68564_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D1_Strongylocentrotus_purpuratus_7668_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D1_Ministeria_vibrans_134558_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D1_Mnemiopsis_leidyi_27923_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D1_Petromyzon_marinus_7757_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D1_Tethya_wilhelma_463344_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D1_Bolinopsis_infundibulum_140455_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D1_Salpingoeca_pyxidium_473812_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D1_Chondrilla_nucula_220712_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D1_Pleurobrachia_bachei_34499_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D1_Beroe_abyssicola_320166_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D1_Rhizopus_oryzae_64495_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D1_Coeloplana_astericola_1912745_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D1_Vallicula_sp_140488_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D1_Mertensiidae_sp_140499_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D1_Pseudospongosorites_suberitoides_396895_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D1_Sycon_coactum_1009717_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D1_Spizellomyces_punctatus_109760_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Sphaeroforma_arctica_72019_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Rossella_fibulata_1076269_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Dryodora_glandiformis_1566677_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Euplokamis_dunlapae_1403701_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Pleurobrachia_pileus_140457_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Mortierella_verticillata_78898_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Petrosia_ficiformis_68564_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Strongylocentrotus_purpuratus_7668_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Hydra_vulgaris_6087_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Sympagella_nux_76350_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Spongilla_lacustris_6055_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Ministeria_vibrans_134558_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Mnemiopsis_leidyi_27923_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Petromyzon_marinus_7757_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Tethya_wilhelma_463344_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Bolinopsis_infundibulum_140455_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Ephydatia_muelleri_6052_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Platygyra_carnosa_1136245_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Chondrilla_nucula_220712_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Pleurobrachia_bachei_34499_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Beroe_abyssicola_320166_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Hydra_viridissima_6082_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Acropora_digitifera_70779_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Hyalonema_populiferum_1631155_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Rhizopus_oryzae_64495_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Coeloplana_astericola_1912745_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Vallicula_sp_140488_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Hydra_oligactis_6088_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Mertensiidae_sp_140499_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Pseudospongosorites_suberitoides_396895_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Sycon_coactum_1009717_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Spizellomyces_punctatus_109760_Gene_0156 contains only gaps or missing data
+WARNING: Sequence Whelan2015_D20_Aphrocallistes_vastus_83887_Gene_0156 contains only gaps or missing data
+ERROR: Some sequences (see above) are problematic, please check your alignment again

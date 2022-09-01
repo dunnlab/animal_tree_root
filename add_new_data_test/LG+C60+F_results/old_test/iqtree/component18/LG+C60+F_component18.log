@@ -1,0 +1,223 @@
+IQ-TREE version 1.5.3 for Linux 64-bit built Mar 12 2017
+Copyright (c) 2011-2016 Nguyen Lam Tung, Olga Chernomor, Arndt von Haeseler and Bui Quang Minh.
+
+Host:    r373.uppmax.uu.se (AVX2, FMA3, 125 GB RAM)
+Command: iqtree -s /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component18.mafft -m LG+C60+F -nt 1 -bb 1000 -pre /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component18/LG+C60+F_component18
+Seed:    760508 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 29 15:31:02 2022
+Kernel:  AVX+FMA
+
+NOTE: Consider using the multicore version because your CPU has 20 cores!
+
+Reading alignment file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component18.mafft ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 101 sequences with 414 columns and 386 patterns (251 informative sites, 131 constant sites)
+WARNING: Some sequence names are changed as follows:
+Nosenko2013_nonribo_9187:Acropora_hyacinthus:55974:KOG1370 -> Nosenko2013_nonribo_9187_Acropora_hyacinthus_55974_KOG1370
+Nosenko2013_nonribo_9187:Acropora_millepora:45264:KOG1370 -> Nosenko2013_nonribo_9187_Acropora_millepora_45264_KOG1370
+Nosenko2013_nonribo_9187:Allomyces_macrogynus:28583:KOG1370 -> Nosenko2013_nonribo_9187_Allomyces_macrogynus_28583_KOG1370
+Nosenko2013_nonribo_9187:Amoebidium_parasiticum:4881:KOG1370 -> Nosenko2013_nonribo_9187_Amoebidium_parasiticum_4881_KOG1370
+Nosenko2013_nonribo_9187:Amphimedon_queenslandica:400682:KOG1370 -> Nosenko2013_nonribo_9187_Amphimedon_queenslandica_400682_KOG1370
+Nosenko2013_nonribo_9187:Aplysia_californica:6500:KOG1370 -> Nosenko2013_nonribo_9187_Aplysia_californica_6500_KOG1370
+Nosenko2013_nonribo_9187:Asbestopluma_sp:68560:KOG1370 -> Nosenko2013_nonribo_9187_Asbestopluma_sp_68560_KOG1370
+Nosenko2013_nonribo_9187:Batrachochytrium_dendrobatidis:109871:KOG1370 -> Nosenko2013_nonribo_9187_Batrachochytrium_dendrobatidis_109871_KOG1370
+Nosenko2013_nonribo_9187:Beroe_sp:10199:KOG1370 -> Nosenko2013_nonribo_9187_Beroe_sp_10199_KOG1370
+Nosenko2013_nonribo_9187:Branchiostoma_floridae:7739:KOG1370 -> Nosenko2013_nonribo_9187_Branchiostoma_floridae_7739_KOG1370
+Nosenko2013_nonribo_9187:Capitella_teleta:283909:KOG1370 -> Nosenko2013_nonribo_9187_Capitella_teleta_283909_KOG1370
+Nosenko2013_nonribo_9187:Capsaspora_owczarzaki:192875:KOG1370 -> Nosenko2013_nonribo_9187_Capsaspora_owczarzaki_192875_KOG1370
+Nosenko2013_nonribo_9187:Ciona_intestinalis:7719:KOG1370 -> Nosenko2013_nonribo_9187_Ciona_intestinalis_7719_KOG1370
+Nosenko2013_nonribo_9187:Clytia_hemisphaerica:252671:KOG1370 -> Nosenko2013_nonribo_9187_Clytia_hemisphaerica_252671_KOG1370
+Nosenko2013_nonribo_9187:Crassostrea_gigas:29159:KOG1370 -> Nosenko2013_nonribo_9187_Crassostrea_gigas_29159_KOG1370
+Nosenko2013_nonribo_9187:Crateromorpha_meyeri:472232:KOG1370 -> Nosenko2013_nonribo_9187_Crateromorpha_meyeri_472232_KOG1370
+Nosenko2013_nonribo_9187:Danio_rerio:7955:KOG1370 -> Nosenko2013_nonribo_9187_Danio_rerio_7955_KOG1370
+Nosenko2013_nonribo_9187:Daphnia_pulex:6669:KOG1370 -> Nosenko2013_nonribo_9187_Daphnia_pulex_6669_KOG1370
+Nosenko2013_nonribo_9187:Ephydatia_muelleri:6052:KOG1370 -> Nosenko2013_nonribo_9187_Ephydatia_muelleri_6052_KOG1370
+Nosenko2013_nonribo_9187:Helobdella_robusta:6412:KOG1370 -> Nosenko2013_nonribo_9187_Helobdella_robusta_6412_KOG1370
+Nosenko2013_nonribo_9187:Heterochone_calyx:367901:KOG1370 -> Nosenko2013_nonribo_9187_Heterochone_calyx_367901_KOG1370
+Nosenko2013_nonribo_9187:Hydra_magnipapillata:6087:KOG1370 -> Nosenko2013_nonribo_9187_Hydra_magnipapillata_6087_KOG1370
+Nosenko2013_nonribo_9187:Hydra_vulgaris:6087:KOG1370 -> Nosenko2013_nonribo_9187_Hydra_vulgaris_6087_KOG1370
+Nosenko2013_nonribo_9187:Ixodes_scapularis:6945:KOG1370 -> Nosenko2013_nonribo_9187_Ixodes_scapularis_6945_KOG1370
+Nosenko2013_nonribo_9187:Mertensiid_sp:140499:KOG1370 -> Nosenko2013_nonribo_9187_Mertensiid_sp_140499_KOG1370
+Nosenko2013_nonribo_9187:Metridium_senile:6116:KOG1370 -> Nosenko2013_nonribo_9187_Metridium_senile_6116_KOG1370
+Nosenko2013_nonribo_9187:Mnemiopsis_leidyi:27923:KOG1370 -> Nosenko2013_nonribo_9187_Mnemiopsis_leidyi_27923_KOG1370
+Nosenko2013_nonribo_9187:Molgula_tectiformis:30286:KOG1370 -> Nosenko2013_nonribo_9187_Molgula_tectiformis_30286_KOG1370
+Nosenko2013_nonribo_9187:Monosiga_brevicollis:81824:KOG1370 -> Nosenko2013_nonribo_9187_Monosiga_brevicollis_81824_KOG1370
+Nosenko2013_nonribo_9187:Monosiga_ovata:81526:KOG1370 -> Nosenko2013_nonribo_9187_Monosiga_ovata_81526_KOG1370
+Nosenko2013_nonribo_9187:Nasonia_vitripennis:7425:KOG1370 -> Nosenko2013_nonribo_9187_Nasonia_vitripennis_7425_KOG1370
+Nosenko2013_nonribo_9187:Nematostella_vectensis:45351:KOG1370 -> Nosenko2013_nonribo_9187_Nematostella_vectensis_45351_KOG1370
+Nosenko2013_nonribo_9187:Oscarella_carmela:386100:KOG1370 -> Nosenko2013_nonribo_9187_Oscarella_carmela_386100_KOG1370
+Nosenko2013_nonribo_9187:Oscarella_lobularis:121494:KOG1370 -> Nosenko2013_nonribo_9187_Oscarella_lobularis_121494_KOG1370
+Nosenko2013_nonribo_9187:Oscarella_sp:121493:KOG1370 -> Nosenko2013_nonribo_9187_Oscarella_sp_121493_KOG1370
+Nosenko2013_nonribo_9187:Pedicellina_cernua:43123:KOG1370 -> Nosenko2013_nonribo_9187_Pedicellina_cernua_43123_KOG1370
+Nosenko2013_nonribo_9187:Pediculus_humanus_capitis:121226:KOG1370 -> Nosenko2013_nonribo_9187_Pediculus_humanus_capitis_121226_KOG1370
+Nosenko2013_nonribo_9187:Petromyzon_marinus:7757:KOG1370 -> Nosenko2013_nonribo_9187_Petromyzon_marinus_7757_KOG1370
+Nosenko2013_nonribo_9187:Phycomyces_blakesleeanus:4837:KOG1370 -> Nosenko2013_nonribo_9187_Phycomyces_blakesleeanus_4837_KOG1370
+Nosenko2013_nonribo_9187:Porites:46719:KOG1370 -> Nosenko2013_nonribo_9187_Porites_46719_KOG1370
+Nosenko2013_nonribo_9187:Proterospongia_sp:218847:KOG1370 -> Nosenko2013_nonribo_9187_Proterospongia_sp_218847_KOG1370
+Nosenko2013_nonribo_9187:Saccoglossus_kowalevskii:10224:KOG1370 -> Nosenko2013_nonribo_9187_Saccoglossus_kowalevskii_10224_KOG1370
+Nosenko2013_nonribo_9187:Scutigera_coleoptrata:29022:KOG1370 -> Nosenko2013_nonribo_9187_Scutigera_coleoptrata_29022_KOG1370
+Nosenko2013_nonribo_9187:Spizellomyces_punctatus:109760:KOG1370 -> Nosenko2013_nonribo_9187_Spizellomyces_punctatus_109760_KOG1370
+Nosenko2013_nonribo_9187:Sphaeroforma_arctica:72019:KOG1370 -> Nosenko2013_nonribo_9187_Sphaeroforma_arctica_72019_KOG1370
+Nosenko2013_nonribo_9187:Strongylocentrotus_purpuratus:7668:KOG1370 -> Nosenko2013_nonribo_9187_Strongylocentrotus_purpuratus_7668_KOG1370
+Nosenko2013_nonribo_9187:Suberites_domuncula:55567:KOG1370 -> Nosenko2013_nonribo_9187_Suberites_domuncula_55567_KOG1370
+Nosenko2013_nonribo_9187:Sycon_ciliatum:27933:KOG1370 -> Nosenko2013_nonribo_9187_Sycon_ciliatum_27933_KOG1370
+Nosenko2013_nonribo_9187:Sycon_raphanus:56443:KOG1370 -> Nosenko2013_nonribo_9187_Sycon_raphanus_56443_KOG1370
+Nosenko2013_nonribo_9187:Tethya_wilhelma:463344:KOG1370 -> Nosenko2013_nonribo_9187_Tethya_wilhelma_463344_KOG1370
+Nosenko2013_nonribo_9187:Trichoplax_adhaerens:10228:KOG1370 -> Nosenko2013_nonribo_9187_Trichoplax_adhaerens_10228_KOG1370
+Nosenko2013_nonribo_9187:Trichoplax_sp_H4:10227:KOG1370 -> Nosenko2013_nonribo_9187_Trichoplax_sp_H4_10227_KOG1370
+Nosenko2013_nonribo_9187:Tubifex_tubifex:6386:KOG1370 -> Nosenko2013_nonribo_9187_Tubifex_tubifex_6386_KOG1370
+Nosenko2013_nonribo_9187:Xenoturbella_bocki:242395:KOG1370 -> Nosenko2013_nonribo_9187_Xenoturbella_bocki_242395_KOG1370
+Philippe2009:Acropora_millepora:45264:Gene_0118 -> Philippe2009_Acropora_millepora_45264_Gene_0118
+Philippe2009:Allomyces_macrogynus:28583:Gene_0118 -> Philippe2009_Allomyces_macrogynus_28583_Gene_0118
+Philippe2009:Amoebidium_parasiticum:4881:Gene_0118 -> Philippe2009_Amoebidium_parasiticum_4881_Gene_0118
+Philippe2009:Aplysia_californica:6500:Gene_0118 -> Philippe2009_Aplysia_californica_6500_Gene_0118
+Philippe2009:Batrachochytrium_dendrobatidis:109871:Gene_0118 -> Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0118
+Philippe2009:Branchiostoma_floridae:7739:Gene_0118 -> Philippe2009_Branchiostoma_floridae_7739_Gene_0118
+Philippe2009:Capitella_teleta:283909:Gene_0118 -> Philippe2009_Capitella_teleta_283909_Gene_0118
+Philippe2009:Capsaspora_owczarzaki:192875:Gene_0118 -> Philippe2009_Capsaspora_owczarzaki_192875_Gene_0118
+Philippe2009:Ciona_savignyi:51511:Gene_0118 -> Philippe2009_Ciona_savignyi_51511_Gene_0118
+Philippe2009:Clytia_hemisphaerica:252671:Gene_0118 -> Philippe2009_Clytia_hemisphaerica_252671_Gene_0118
+Philippe2009:Crassostrea_gigas:29159:Gene_0118 -> Philippe2009_Crassostrea_gigas_29159_Gene_0118
+Philippe2009:Danio_rerio:7955:Gene_0118 -> Philippe2009_Danio_rerio_7955_Gene_0118
+Philippe2009:Daphnia_pulex:6669:Gene_0118 -> Philippe2009_Daphnia_pulex_6669_Gene_0118
+Philippe2009:Ephydatia_muelleri:6052:Gene_0118 -> Philippe2009_Ephydatia_muelleri_6052_Gene_0118
+Philippe2009:Euprymna_scolopes:6613:Gene_0118 -> Philippe2009_Euprymna_scolopes_6613_Gene_0118
+Philippe2009:Helobdella_robusta:6412:Gene_0118 -> Philippe2009_Helobdella_robusta_6412_Gene_0118
+Philippe2009:Heterochone_sp:367900:Gene_0118 -> Philippe2009_Heterochone_sp_367900_Gene_0118
+Philippe2009:Hydra_magnipapillata:6087:Gene_0118 -> Philippe2009_Hydra_magnipapillata_6087_Gene_0118
+Philippe2009:Ixodes_scapularis:6945:Gene_0118 -> Philippe2009_Ixodes_scapularis_6945_Gene_0118
+Philippe2009:Leucetta_chagosensis:185688:Gene_0118 -> Philippe2009_Leucetta_chagosensis_185688_Gene_0118
+Philippe2009:Metridium_senile:6116:Gene_0118 -> Philippe2009_Metridium_senile_6116_Gene_0118
+Philippe2009:Mnemiopsis_leidyi:27923:Gene_0118 -> Philippe2009_Mnemiopsis_leidyi_27923_Gene_0118
+Philippe2009:Molgula_tectiformis:30286:Gene_0118 -> Philippe2009_Molgula_tectiformis_30286_Gene_0118
+Philippe2009:Monosiga_brevicollis:81824:Gene_0118 -> Philippe2009_Monosiga_brevicollis_81824_Gene_0118
+Philippe2009:Monosiga_ovata:81526:Gene_0118 -> Philippe2009_Monosiga_ovata_81526_Gene_0118
+Philippe2009:Nasonia_vitripennis:7425:Gene_0118 -> Philippe2009_Nasonia_vitripennis_7425_Gene_0118
+Philippe2009:Nematostella_vectensis:45351:Gene_0118 -> Philippe2009_Nematostella_vectensis_45351_Gene_0118
+Philippe2009:Oscarella_carmela:386100:Gene_0118 -> Philippe2009_Oscarella_carmela_386100_Gene_0118
+Philippe2009:Pedicellina_cernua:43123:Gene_0118 -> Philippe2009_Pedicellina_cernua_43123_Gene_0118
+Philippe2009:Pediculus_humanus:121225:Gene_0118 -> Philippe2009_Pediculus_humanus_121225_Gene_0118
+Philippe2009:Petromyzon_marinus:7757:Gene_0118 -> Philippe2009_Petromyzon_marinus_7757_Gene_0118
+Philippe2009:Phycomyces_blakesleeanus:4837:Gene_0118 -> Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0118
+Philippe2009:Pleurobrachia_pileus:140457:Gene_0118 -> Philippe2009_Pleurobrachia_pileus_140457_Gene_0118
+Philippe2009:Podocoryne_carnea:6096:Gene_0118 -> Philippe2009_Podocoryne_carnea_6096_Gene_0118
+Philippe2009:Proterospongia_sp:218847:Gene_0118 -> Philippe2009_Proterospongia_sp_218847_Gene_0118
+Philippe2009:Amphimedon_queenslandica:400682:Gene_0118 -> Philippe2009_Amphimedon_queenslandica_400682_Gene_0118
+Philippe2009:Rhizopus_oryzae:64495:Gene_0118 -> Philippe2009_Rhizopus_oryzae_64495_Gene_0118
+Philippe2009:Saccoglossus_kowalevskii:10224:Gene_0118 -> Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0118
+Philippe2009:Scutigera_coleoptrata:29022:Gene_0118 -> Philippe2009_Scutigera_coleoptrata_29022_Gene_0118
+Philippe2009:Sphaeroforma_arctica:72019:Gene_0118 -> Philippe2009_Sphaeroforma_arctica_72019_Gene_0118
+Philippe2009:Spizellomyces_punctatus:109760:Gene_0118 -> Philippe2009_Spizellomyces_punctatus_109760_Gene_0118
+Philippe2009:Strongylocentrotus_purpuratus:7668:Gene_0118 -> Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0118
+Philippe2009:Sycon_raphanus:56443:Gene_0118 -> Philippe2009_Sycon_raphanus_56443_Gene_0118
+Philippe2009:Trichoplax_adhaerens:10228:Gene_0118 -> Philippe2009_Trichoplax_adhaerens_10228_Gene_0118
+Philippe2009:Tubifex_tubifex:6386:Gene_0118 -> Philippe2009_Tubifex_tubifex_6386_Gene_0118
+Philippe2009:Xenoturbella_bocki:242395:Gene_0118 -> Philippe2009_Xenoturbella_bocki_242395_Gene_0118
+Philippe2009:Mertensiid_sp:140499:Gene_0118 -> Philippe2009_Mertensiid_sp_140499_Gene_0118
+
+                                                                        Gap/Ambiguity  Composition  p-value
+   1  Nosenko2013_nonribo_9187_Acropora_hyacinthus_55974_KOG1370               40.58%    passed     81.08%
+   2  Nosenko2013_nonribo_9187_Acropora_millepora_45264_KOG1370                15.70%    passed     99.99%
+   3  Nosenko2013_nonribo_9187_Allomyces_macrogynus_28583_KOG1370              10.39%    passed     99.75%
+   4  Nosenko2013_nonribo_9187_Amoebidium_parasiticum_4881_KOG1370             50.48%    passed     98.90%
+   5  Nosenko2013_nonribo_9187_Amphimedon_queenslandica_400682_KOG1370         10.39%    passed    100.00%
+   6  Nosenko2013_nonribo_9187_Aplysia_californica_6500_KOG1370                39.13%    passed     99.94%
+   7  Nosenko2013_nonribo_9187_Asbestopluma_sp_68560_KOG1370                   55.80%    passed     88.21%
+   8  Nosenko2013_nonribo_9187_Batrachochytrium_dendrobatidis_109871_KOG1370   10.39%    passed     99.97%
+   9  Nosenko2013_nonribo_9187_Beroe_sp_10199_KOG1370                          20.53%    passed     99.96%
+  10  Nosenko2013_nonribo_9187_Branchiostoma_floridae_7739_KOG1370             10.39%    passed    100.00%
+  11  Nosenko2013_nonribo_9187_Capitella_teleta_283909_KOG1370                 10.39%    passed    100.00%
+  12  Nosenko2013_nonribo_9187_Capsaspora_owczarzaki_192875_KOG1370            10.39%    passed    100.00%
+  13  Nosenko2013_nonribo_9187_Ciona_intestinalis_7719_KOG1370                 11.11%    passed    100.00%
+  14  Nosenko2013_nonribo_9187_Clytia_hemisphaerica_252671_KOG1370             10.39%    passed     99.97%
+  15  Nosenko2013_nonribo_9187_Crassostrea_gigas_29159_KOG1370                 10.39%    passed    100.00%
+  16  Nosenko2013_nonribo_9187_Crateromorpha_meyeri_472232_KOG1370             52.66%    passed     99.94%
+  17  Nosenko2013_nonribo_9187_Danio_rerio_7955_KOG1370                        10.39%    passed    100.00%
+  18  Nosenko2013_nonribo_9187_Daphnia_pulex_6669_KOG1370                      10.39%    passed    100.00%
+  19  Nosenko2013_nonribo_9187_Ephydatia_muelleri_6052_KOG1370                 10.39%    passed     99.77%
+  20  Nosenko2013_nonribo_9187_Helobdella_robusta_6412_KOG1370                 10.39%    passed    100.00%
+  21  Nosenko2013_nonribo_9187_Heterochone_calyx_367901_KOG1370                22.95%    passed     99.76%
+  22  Nosenko2013_nonribo_9187_Hydra_magnipapillata_6087_KOG1370               10.39%    passed     99.96%
+  23  Nosenko2013_nonribo_9187_Hydra_vulgaris_6087_KOG1370                     30.43%    passed    100.00%
+  24  Nosenko2013_nonribo_9187_Ixodes_scapularis_6945_KOG1370                  10.39%    passed    100.00%
+  25  Nosenko2013_nonribo_9187_Mertensiid_sp_140499_KOG1370                    29.23%    passed     95.66%
+  26  Nosenko2013_nonribo_9187_Metridium_senile_6116_KOG1370                   10.39%    passed     99.85%
+  27  Nosenko2013_nonribo_9187_Mnemiopsis_leidyi_27923_KOG1370                 31.88%    passed     97.28%
+  28  Nosenko2013_nonribo_9187_Molgula_tectiformis_30286_KOG1370               10.39%    passed    100.00%
+  29  Nosenko2013_nonribo_9187_Monosiga_brevicollis_81824_KOG1370              10.39%    passed    100.00%
+  30  Nosenko2013_nonribo_9187_Monosiga_ovata_81526_KOG1370                    10.39%    passed     97.49%
+  31  Nosenko2013_nonribo_9187_Nasonia_vitripennis_7425_KOG1370                10.39%    passed    100.00%
+  32  Nosenko2013_nonribo_9187_Nematostella_vectensis_45351_KOG1370            10.39%    passed    100.00%
+  33  Nosenko2013_nonribo_9187_Oscarella_carmela_386100_KOG1370                34.30%    passed     99.93%
+  34  Nosenko2013_nonribo_9187_Oscarella_lobularis_121494_KOG1370             100.00%    passed      -nan%
+  35  Nosenko2013_nonribo_9187_Oscarella_sp_121493_KOG1370                     34.30%    passed     99.93%
+  36  Nosenko2013_nonribo_9187_Pedicellina_cernua_43123_KOG1370                10.39%    passed    100.00%
+  37  Nosenko2013_nonribo_9187_Pediculus_humanus_capitis_121226_KOG1370        44.69%    passed     99.38%
+  38  Nosenko2013_nonribo_9187_Petromyzon_marinus_7757_KOG1370                 10.39%    passed    100.00%
+  39  Nosenko2013_nonribo_9187_Phycomyces_blakesleeanus_4837_KOG1370           10.39%    passed     99.99%
+  40  Nosenko2013_nonribo_9187_Porites_46719_KOG1370                           10.39%    passed     99.99%
+  41  Nosenko2013_nonribo_9187_Proterospongia_sp_218847_KOG1370                10.39%    passed    100.00%
+  42  Nosenko2013_nonribo_9187_Saccoglossus_kowalevskii_10224_KOG1370          10.39%    passed    100.00%
+  43  Nosenko2013_nonribo_9187_Scutigera_coleoptrata_29022_KOG1370             34.54%    passed     99.72%
+  44  Nosenko2013_nonribo_9187_Spizellomyces_punctatus_109760_KOG1370          52.90%    passed     98.89%
+  45  Nosenko2013_nonribo_9187_Sphaeroforma_arctica_72019_KOG1370              45.17%    passed     99.73%
+  46  Nosenko2013_nonribo_9187_Strongylocentrotus_purpuratus_7668_KOG1370      30.92%    passed     99.68%
+  47  Nosenko2013_nonribo_9187_Suberites_domuncula_55567_KOG1370               47.10%    passed     99.06%
+  48  Nosenko2013_nonribo_9187_Sycon_ciliatum_27933_KOG1370                    77.54%    passed     60.60%
+  49  Nosenko2013_nonribo_9187_Sycon_raphanus_56443_KOG1370                    40.82%    passed     99.95%
+  50  Nosenko2013_nonribo_9187_Tethya_wilhelma_463344_KOG1370                  75.36%    passed     74.73%
+  51  Nosenko2013_nonribo_9187_Trichoplax_adhaerens_10228_KOG1370              10.39%    passed     99.76%
+  52  Nosenko2013_nonribo_9187_Trichoplax_sp_H4_10227_KOG1370                  51.45%    passed     99.76%
+  53  Nosenko2013_nonribo_9187_Tubifex_tubifex_6386_KOG1370                    41.55%    passed     98.73%
+  54  Nosenko2013_nonribo_9187_Xenoturbella_bocki_242395_KOG1370               10.39%    passed     99.96%
+  55  Philippe2009_Acropora_millepora_45264_Gene_0118                          18.36%    passed     99.95%
+  56  Philippe2009_Allomyces_macrogynus_28583_Gene_0118                         0.72%    passed     99.88%
+  57  Philippe2009_Amoebidium_parasiticum_4881_Gene_0118                       24.15%    passed     99.98%
+  58  Philippe2009_Aplysia_californica_6500_Gene_0118                           0.72%    passed     99.94%
+  59  Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0118              0.72%    passed     99.84%
+  60  Philippe2009_Branchiostoma_floridae_7739_Gene_0118                        0.72%    passed     99.99%
+  61  Philippe2009_Capitella_teleta_283909_Gene_0118                            0.97%    passed    100.00%
+  62  Philippe2009_Capsaspora_owczarzaki_192875_Gene_0118                       0.72%    passed     99.99%
+  63  Philippe2009_Ciona_savignyi_51511_Gene_0118                               0.72%    passed    100.00%
+  64  Philippe2009_Clytia_hemisphaerica_252671_Gene_0118                        0.72%    passed     99.39%
+  65  Philippe2009_Crassostrea_gigas_29159_Gene_0118                            0.72%    passed    100.00%
+  66  Philippe2009_Danio_rerio_7955_Gene_0118                                   0.72%    passed    100.00%
+  67  Philippe2009_Daphnia_pulex_6669_Gene_0118                                 0.72%    passed    100.00%
+  68  Philippe2009_Ephydatia_muelleri_6052_Gene_0118                           41.79%    passed     99.39%
+  69  Philippe2009_Euprymna_scolopes_6613_Gene_0118                            64.25%    passed     74.61%
+  70  Philippe2009_Helobdella_robusta_6412_Gene_0118                            0.72%    passed    100.00%
+  71  Philippe2009_Heterochone_sp_367900_Gene_0118                             15.70%    passed     99.11%
+  72  Philippe2009_Hydra_magnipapillata_6087_Gene_0118                          0.72%    passed     97.27%
+  73  Philippe2009_Ixodes_scapularis_6945_Gene_0118                             0.72%    passed    100.00%
+  74  Philippe2009_Leucetta_chagosensis_185688_Gene_0118                       64.98%    passed     61.42%
+  75  Philippe2009_Metridium_senile_6116_Gene_0118                              0.72%    passed     99.92%
+  76  Philippe2009_Mnemiopsis_leidyi_27923_Gene_0118                            0.72%    passed     99.98%
+  77  Philippe2009_Molgula_tectiformis_30286_Gene_0118                          0.72%    passed     99.69%
+  78  Philippe2009_Monosiga_brevicollis_81824_Gene_0118                         0.72%    passed     99.99%
+  79  Philippe2009_Monosiga_ovata_81526_Gene_0118                               0.72%    passed     93.13%
+  80  Philippe2009_Nasonia_vitripennis_7425_Gene_0118                           0.72%    passed    100.00%
+  81  Philippe2009_Nematostella_vectensis_45351_Gene_0118                       0.72%    passed    100.00%
+  82  Philippe2009_Oscarella_carmela_386100_Gene_0118                          16.91%    passed     99.99%
+  83  Philippe2009_Pedicellina_cernua_43123_Gene_0118                           7.73%    passed     99.93%
+  84  Philippe2009_Pediculus_humanus_121225_Gene_0118                           0.72%    passed     97.88%
+  85  Philippe2009_Petromyzon_marinus_7757_Gene_0118                            0.72%    passed     99.97%
+  86  Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0118                      1.93%    passed     99.98%
+  87  Philippe2009_Pleurobrachia_pileus_140457_Gene_0118                       28.50%    passed     99.99%
+  88  Philippe2009_Podocoryne_carnea_6096_Gene_0118                            43.96%    passed     38.63%
+  89  Philippe2009_Proterospongia_sp_218847_Gene_0118                          29.23%    passed     98.71%
+  90  Philippe2009_Amphimedon_queenslandica_400682_Gene_0118                    4.11%    passed    100.00%
+  91  Philippe2009_Rhizopus_oryzae_64495_Gene_0118                              0.72%    passed     99.95%
+  92  Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0118                     0.72%    passed     99.94%
+  93  Philippe2009_Scutigera_coleoptrata_29022_Gene_0118                       40.34%    passed     99.81%
+  94  Philippe2009_Sphaeroforma_arctica_72019_Gene_0118                         5.80%    passed     99.91%
+  95  Philippe2009_Spizellomyces_punctatus_109760_Gene_0118                    47.10%    passed     96.67%
+  96  Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0118                 0.72%    passed     99.97%
+  97  Philippe2009_Sycon_raphanus_56443_Gene_0118                               0.72%    passed     92.48%
+  98  Philippe2009_Trichoplax_adhaerens_10228_Gene_0118                         0.97%    passed     99.49%
+  99  Philippe2009_Tubifex_tubifex_6386_Gene_0118                               3.62%    passed     99.99%
+ 100  Philippe2009_Xenoturbella_bocki_242395_Gene_0118                          0.72%    passed     99.99%
+ 101  Philippe2009_Mertensiid_sp_140499_Gene_0118                              26.57%    passed     98.51%
+WARNING: 10 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                                                    18.90%  0 sequences failed composition chi2 test (p-value<5%; df=19)
+WARNING: Sequence Nosenko2013_nonribo_9187_Oscarella_lobularis_121494_KOG1370 contains only gaps or missing data
+ERROR: Some sequences (see above) are problematic, please check your alignment again

@@ -1,0 +1,559 @@
+IQ-TREE version 1.5.3 for Linux 64-bit built Mar 12 2017
+Copyright (c) 2011-2016 Nguyen Lam Tung, Olga Chernomor, Arndt von Haeseler and Bui Quang Minh.
+
+Host:    r267.uppmax.uu.se (AVX2, FMA3, 125 GB RAM)
+Command: iqtree -s /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component706.mafft -m LG+C60+F -nt 1 -bb 1000 -pre /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component706/LG+C60+F_component706
+Seed:    102116 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 29 15:31:41 2022
+Kernel:  AVX+FMA
+
+NOTE: Consider using the multicore version because your CPU has 20 cores!
+
+Reading alignment file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component706.mafft ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 164 sequences with 58 columns and 57 patterns (43 informative sites, 15 constant sites)
+WARNING: Some sequence names are changed as follows:
+Nosenko2013_ribo_11057:Amphimedon_queenslandica:400682:KOG0004 -> Nosenko2013_ribo_11057_Amphimedon_queenslandica_400682_KOG0004
+Nosenko2013_ribo_11057:Asbestopluma_sp:68560:KOG0004 -> Nosenko2013_ribo_11057_Asbestopluma_sp_68560_KOG0004
+Nosenko2013_ribo_11057:Carteriospongia_foliascens:593584:KOG0004 -> Nosenko2013_ribo_11057_Carteriospongia_foliascens_593584_KOG0004
+Nosenko2013_ribo_11057:Ephydatia_muelleri:6052:KOG0004 -> Nosenko2013_ribo_11057_Ephydatia_muelleri_6052_KOG0004
+Nosenko2013_ribo_11057:Lubomirskia_baicalensis:289074:KOG0004 -> Nosenko2013_ribo_11057_Lubomirskia_baicalensis_289074_KOG0004
+Nosenko2013_ribo_11057:Pachydictyum_globosum:348075:KOG0004 -> Nosenko2013_ribo_11057_Pachydictyum_globosum_348075_KOG0004
+Nosenko2013_ribo_11057:Suberites_domuncula:55567:KOG0004 -> Nosenko2013_ribo_11057_Suberites_domuncula_55567_KOG0004
+Nosenko2013_ribo_11057:Tethya_wilhelma:463344:KOG0004 -> Nosenko2013_ribo_11057_Tethya_wilhelma_463344_KOG0004
+Nosenko2013_ribo_11057:Crateromorpha_meyeri:472232:KOG0004 -> Nosenko2013_ribo_11057_Crateromorpha_meyeri_472232_KOG0004
+Nosenko2013_ribo_11057:Oopsacas_minuta:111878:KOG0004 -> Nosenko2013_ribo_11057_Oopsacas_minuta_111878_KOG0004
+Nosenko2013_ribo_11057:Oscarella_sp:121493:KOG0004 -> Nosenko2013_ribo_11057_Oscarella_sp_121493_KOG0004
+Nosenko2013_ribo_11057:Leucetta_chagosensis:185688:KOG0004 -> Nosenko2013_ribo_11057_Leucetta_chagosensis_185688_KOG0004
+Nosenko2013_ribo_11057:Sycon_ciliatum:27933:KOG0004 -> Nosenko2013_ribo_11057_Sycon_ciliatum_27933_KOG0004
+Nosenko2013_ribo_11057:Sycon_raphanus:56443:KOG0004 -> Nosenko2013_ribo_11057_Sycon_raphanus_56443_KOG0004
+Nosenko2013_ribo_11057:Clytia_hemisphaerica:252671:KOG0004 -> Nosenko2013_ribo_11057_Clytia_hemisphaerica_252671_KOG0004
+Nosenko2013_ribo_11057:Hydra_magnipapillata:6087:KOG0004 -> Nosenko2013_ribo_11057_Hydra_magnipapillata_6087_KOG0004
+Nosenko2013_ribo_11057:Hydra_vulgaris:6087:KOG0004 -> Nosenko2013_ribo_11057_Hydra_vulgaris_6087_KOG0004
+Nosenko2013_ribo_11057:Hydractinia_echinata:35630:KOG0004 -> Nosenko2013_ribo_11057_Hydractinia_echinata_35630_KOG0004
+Nosenko2013_ribo_11057:Podocoryna_carnea:6096:KOG0004 -> Nosenko2013_ribo_11057_Podocoryna_carnea_6096_KOG0004
+Nosenko2013_ribo_11057:Acropora_hyacinthus:55974:KOG0004 -> Nosenko2013_ribo_11057_Acropora_hyacinthus_55974_KOG0004
+Nosenko2013_ribo_11057:Acropora_millepora:45264:KOG0004 -> Nosenko2013_ribo_11057_Acropora_millepora_45264_KOG0004
+Nosenko2013_ribo_11057:Metridium_senile:6116:KOG0004 -> Nosenko2013_ribo_11057_Metridium_senile_6116_KOG0004
+Nosenko2013_ribo_11057:Nematostella_vectensis:45351:KOG0004 -> Nosenko2013_ribo_11057_Nematostella_vectensis_45351_KOG0004
+Nosenko2013_ribo_11057:Porites:46719:KOG0004 -> Nosenko2013_ribo_11057_Porites_46719_KOG0004
+Nosenko2013_ribo_11057:Pleurobrachia_pileus:140457:KOG0004 -> Nosenko2013_ribo_11057_Pleurobrachia_pileus_140457_KOG0004
+Nosenko2013_ribo_11057:Beroe_sp:10199:KOG0004 -> Nosenko2013_ribo_11057_Beroe_sp_10199_KOG0004
+Nosenko2013_ribo_11057:Mnemiopsis_leidyi:27923:KOG0004 -> Nosenko2013_ribo_11057_Mnemiopsis_leidyi_27923_KOG0004
+Nosenko2013_ribo_11057:Mertensiid_sp:140499:KOG0004 -> Nosenko2013_ribo_11057_Mertensiid_sp_140499_KOG0004
+Nosenko2013_ribo_11057:Branchiostoma_floridae:7739:KOG0004 -> Nosenko2013_ribo_11057_Branchiostoma_floridae_7739_KOG0004
+Nosenko2013_ribo_11057:Capitella_teleta:283909:KOG0004 -> Nosenko2013_ribo_11057_Capitella_teleta_283909_KOG0004
+Nosenko2013_ribo_11057:Ciona_intestinalis:7719:KOG0004 -> Nosenko2013_ribo_11057_Ciona_intestinalis_7719_KOG0004
+Nosenko2013_ribo_11057:Danio_rerio:7955:KOG0004 -> Nosenko2013_ribo_11057_Danio_rerio_7955_KOG0004
+Nosenko2013_ribo_11057:Molgula_tectiformis:30286:KOG0004 -> Nosenko2013_ribo_11057_Molgula_tectiformis_30286_KOG0004
+Nosenko2013_ribo_11057:Petromyzon_marinus:7757:KOG0004 -> Nosenko2013_ribo_11057_Petromyzon_marinus_7757_KOG0004
+Nosenko2013_ribo_11057:Saccoglossus_kowalevskii:10224:KOG0004 -> Nosenko2013_ribo_11057_Saccoglossus_kowalevskii_10224_KOG0004
+Nosenko2013_ribo_11057:Aplysia_californica:6500:KOG0004 -> Nosenko2013_ribo_11057_Aplysia_californica_6500_KOG0004
+Nosenko2013_ribo_11057:Crassostrea_gigas:29159:KOG0004 -> Nosenko2013_ribo_11057_Crassostrea_gigas_29159_KOG0004
+Nosenko2013_ribo_11057:Daphnia_pulex:6669:KOG0004 -> Nosenko2013_ribo_11057_Daphnia_pulex_6669_KOG0004
+Nosenko2013_ribo_11057:Helobdella_robusta:6412:KOG0004 -> Nosenko2013_ribo_11057_Helobdella_robusta_6412_KOG0004
+Nosenko2013_ribo_11057:Ixodes_scapularis:6945:KOG0004 -> Nosenko2013_ribo_11057_Ixodes_scapularis_6945_KOG0004
+Nosenko2013_ribo_11057:Nasonia_vitripennis:7425:KOG0004 -> Nosenko2013_ribo_11057_Nasonia_vitripennis_7425_KOG0004
+Nosenko2013_ribo_11057:Tubifex_tubifex:6386:KOG0004 -> Nosenko2013_ribo_11057_Tubifex_tubifex_6386_KOG0004
+Nosenko2013_ribo_11057:Trichoplax_sp_H4:10227:KOG0004 -> Nosenko2013_ribo_11057_Trichoplax_sp_H4_10227_KOG0004
+Nosenko2013_ribo_11057:Trichoplax_adhaerens:10228:KOG0004 -> Nosenko2013_ribo_11057_Trichoplax_adhaerens_10228_KOG0004
+Nosenko2013_ribo_11057:Monosiga_ovata:81526:KOG0004 -> Nosenko2013_ribo_11057_Monosiga_ovata_81526_KOG0004
+Nosenko2013_ribo_11057:Monosiga_brevicollis:81824:KOG0004 -> Nosenko2013_ribo_11057_Monosiga_brevicollis_81824_KOG0004
+Nosenko2013_ribo_11057:Proterospongia_sp:218847:KOG0004 -> Nosenko2013_ribo_11057_Proterospongia_sp_218847_KOG0004
+Nosenko2013_ribo_14615:Acropora_hyacinthus:55974:KOG0004 -> Nosenko2013_ribo_14615_Acropora_hyacinthus_55974_KOG0004
+Nosenko2013_ribo_14615:Acropora_millepora:45264:KOG0004 -> Nosenko2013_ribo_14615_Acropora_millepora_45264_KOG0004
+Nosenko2013_ribo_14615:Allomyces_macrogynus:28583:KOG0004 -> Nosenko2013_ribo_14615_Allomyces_macrogynus_28583_KOG0004
+Nosenko2013_ribo_14615:Amoebidium_parasiticum:4881:KOG0004 -> Nosenko2013_ribo_14615_Amoebidium_parasiticum_4881_KOG0004
+Nosenko2013_ribo_14615:Amphimedon_queenslandica:400682:KOG0004 -> Nosenko2013_ribo_14615_Amphimedon_queenslandica_400682_KOG0004
+Nosenko2013_ribo_14615:Anoplodactylus_eroticus:488521:KOG0004 -> Nosenko2013_ribo_14615_Anoplodactylus_eroticus_488521_KOG0004
+Nosenko2013_ribo_14615:Aplysia_californica:6500:KOG0004 -> Nosenko2013_ribo_14615_Aplysia_californica_6500_KOG0004
+Nosenko2013_ribo_14615:Asbestopluma_sp:68560:KOG0004 -> Nosenko2013_ribo_14615_Asbestopluma_sp_68560_KOG0004
+Nosenko2013_ribo_14615:Batrachochytrium_dendrobatidis:109871:KOG0004 -> Nosenko2013_ribo_14615_Batrachochytrium_dendrobatidis_109871_KOG0004
+Nosenko2013_ribo_14615:Beroe_sp:10199:KOG0004 -> Nosenko2013_ribo_14615_Beroe_sp_10199_KOG0004
+Nosenko2013_ribo_14615:Branchiostoma_floridae:7739:KOG0004 -> Nosenko2013_ribo_14615_Branchiostoma_floridae_7739_KOG0004
+Nosenko2013_ribo_14615:Capitella_teleta:283909:KOG0004 -> Nosenko2013_ribo_14615_Capitella_teleta_283909_KOG0004
+Nosenko2013_ribo_14615:Capsaspora_owczarzaki:192875:KOG0004 -> Nosenko2013_ribo_14615_Capsaspora_owczarzaki_192875_KOG0004
+Nosenko2013_ribo_14615:Carteriospongia_foliascens:593584:KOG0004 -> Nosenko2013_ribo_14615_Carteriospongia_foliascens_593584_KOG0004
+Nosenko2013_ribo_14615:Ciona_intestinalis:7719:KOG0004 -> Nosenko2013_ribo_14615_Ciona_intestinalis_7719_KOG0004
+Nosenko2013_ribo_14615:Clytia_hemisphaerica:252671:KOG0004 -> Nosenko2013_ribo_14615_Clytia_hemisphaerica_252671_KOG0004
+Nosenko2013_ribo_14615:Crassostrea_gigas:29159:KOG0004 -> Nosenko2013_ribo_14615_Crassostrea_gigas_29159_KOG0004
+Nosenko2013_ribo_14615:Crateromorpha_meyeri:472232:KOG0004 -> Nosenko2013_ribo_14615_Crateromorpha_meyeri_472232_KOG0004
+Nosenko2013_ribo_14615:Cyanea_capillata:27804:KOG0004 -> Nosenko2013_ribo_14615_Cyanea_capillata_27804_KOG0004
+Nosenko2013_ribo_14615:Danio_rerio:7955:KOG0004 -> Nosenko2013_ribo_14615_Danio_rerio_7955_KOG0004
+Nosenko2013_ribo_14615:Daphnia_pulex:6669:KOG0004 -> Nosenko2013_ribo_14615_Daphnia_pulex_6669_KOG0004
+Nosenko2013_ribo_14615:Ephydatia_muelleri:6052:KOG0004 -> Nosenko2013_ribo_14615_Ephydatia_muelleri_6052_KOG0004
+Nosenko2013_ribo_14615:Euprymna_scolopes:6613:KOG0004 -> Nosenko2013_ribo_14615_Euprymna_scolopes_6613_KOG0004
+Nosenko2013_ribo_14615:Helobdella_robusta:6412:KOG0004 -> Nosenko2013_ribo_14615_Helobdella_robusta_6412_KOG0004
+Nosenko2013_ribo_14615:Hydra_magnipapillata:6087:KOG0004 -> Nosenko2013_ribo_14615_Hydra_magnipapillata_6087_KOG0004
+Nosenko2013_ribo_14615:Hydra_vulgaris:6087:KOG0004 -> Nosenko2013_ribo_14615_Hydra_vulgaris_6087_KOG0004
+Nosenko2013_ribo_14615:Hydractinia_echinata:35630:KOG0004 -> Nosenko2013_ribo_14615_Hydractinia_echinata_35630_KOG0004
+Nosenko2013_ribo_14615:Ixodes_scapularis:6945:KOG0004 -> Nosenko2013_ribo_14615_Ixodes_scapularis_6945_KOG0004
+Nosenko2013_ribo_14615:Leucetta_chagosensis:185688:KOG0004 -> Nosenko2013_ribo_14615_Leucetta_chagosensis_185688_KOG0004
+Nosenko2013_ribo_14615:Lubomirskia_baicalensis:289074:KOG0004 -> Nosenko2013_ribo_14615_Lubomirskia_baicalensis_289074_KOG0004
+Nosenko2013_ribo_14615:Mertensiid_sp:140499:KOG0004 -> Nosenko2013_ribo_14615_Mertensiid_sp_140499_KOG0004
+Nosenko2013_ribo_14615:Metridium_senile:6116:KOG0004 -> Nosenko2013_ribo_14615_Metridium_senile_6116_KOG0004
+Nosenko2013_ribo_14615:Mnemiopsis_leidyi:27923:KOG0004 -> Nosenko2013_ribo_14615_Mnemiopsis_leidyi_27923_KOG0004
+Nosenko2013_ribo_14615:Molgula_tectiformis:30286:KOG0004 -> Nosenko2013_ribo_14615_Molgula_tectiformis_30286_KOG0004
+Nosenko2013_ribo_14615:Monosiga_brevicollis:81824:KOG0004 -> Nosenko2013_ribo_14615_Monosiga_brevicollis_81824_KOG0004
+Nosenko2013_ribo_14615:Monosiga_ovata:81526:KOG0004 -> Nosenko2013_ribo_14615_Monosiga_ovata_81526_KOG0004
+Nosenko2013_ribo_14615:Montastraea_faveolata:48498:KOG0004 -> Nosenko2013_ribo_14615_Montastraea_faveolata_48498_KOG0004
+Nosenko2013_ribo_14615:Nasonia_vitripennis:7425:KOG0004 -> Nosenko2013_ribo_14615_Nasonia_vitripennis_7425_KOG0004
+Nosenko2013_ribo_14615:Nematostella_vectensis:45351:KOG0004 -> Nosenko2013_ribo_14615_Nematostella_vectensis_45351_KOG0004
+Nosenko2013_ribo_14615:Oopsacas_minuta:111878:KOG0004 -> Nosenko2013_ribo_14615_Oopsacas_minuta_111878_KOG0004
+Nosenko2013_ribo_14615:Oscarella_carmela:386100:KOG0004 -> Nosenko2013_ribo_14615_Oscarella_carmela_386100_KOG0004
+Nosenko2013_ribo_14615:Oscarella_sp:121493:KOG0004 -> Nosenko2013_ribo_14615_Oscarella_sp_121493_KOG0004
+Nosenko2013_ribo_14615:Pachydictyum_globosum:348075:KOG0004 -> Nosenko2013_ribo_14615_Pachydictyum_globosum_348075_KOG0004
+Nosenko2013_ribo_14615:Pedicellina_cernua:43123:KOG0004 -> Nosenko2013_ribo_14615_Pedicellina_cernua_43123_KOG0004
+Nosenko2013_ribo_14615:Pediculus_humanus_capitis:121226:KOG0004 -> Nosenko2013_ribo_14615_Pediculus_humanus_capitis_121226_KOG0004
+Nosenko2013_ribo_14615:Petromyzon_marinus:7757:KOG0004 -> Nosenko2013_ribo_14615_Petromyzon_marinus_7757_KOG0004
+Nosenko2013_ribo_14615:Phycomyces_blakesleeanus:4837:KOG0004 -> Nosenko2013_ribo_14615_Phycomyces_blakesleeanus_4837_KOG0004
+Nosenko2013_ribo_14615:Pleurobrachia_pileus:140457:KOG0004 -> Nosenko2013_ribo_14615_Pleurobrachia_pileus_140457_KOG0004
+Nosenko2013_ribo_14615:Podocoryna_carnea:6096:KOG0004 -> Nosenko2013_ribo_14615_Podocoryna_carnea_6096_KOG0004
+Nosenko2013_ribo_14615:Porites:46719:KOG0004 -> Nosenko2013_ribo_14615_Porites_46719_KOG0004
+Nosenko2013_ribo_14615:Proterospongia_sp:218847:KOG0004 -> Nosenko2013_ribo_14615_Proterospongia_sp_218847_KOG0004
+Nosenko2013_ribo_14615:Saccoglossus_kowalevskii:10224:KOG0004 -> Nosenko2013_ribo_14615_Saccoglossus_kowalevskii_10224_KOG0004
+Nosenko2013_ribo_14615:Scutigera_coleoptrata:29022:KOG0004 -> Nosenko2013_ribo_14615_Scutigera_coleoptrata_29022_KOG0004
+Nosenko2013_ribo_14615:Spizellomyces_punctatus:109760:KOG0004 -> Nosenko2013_ribo_14615_Spizellomyces_punctatus_109760_KOG0004
+Nosenko2013_ribo_14615:Sphaeroforma_arctica:72019:KOG0004 -> Nosenko2013_ribo_14615_Sphaeroforma_arctica_72019_KOG0004
+Nosenko2013_ribo_14615:Strongylocentrotus_purpuratus:7668:KOG0004 -> Nosenko2013_ribo_14615_Strongylocentrotus_purpuratus_7668_KOG0004
+Nosenko2013_ribo_14615:Suberites_domuncula:55567:KOG0004 -> Nosenko2013_ribo_14615_Suberites_domuncula_55567_KOG0004
+Nosenko2013_ribo_14615:Sycon_raphanus:56443:KOG0004 -> Nosenko2013_ribo_14615_Sycon_raphanus_56443_KOG0004
+Nosenko2013_ribo_14615:Tethya_wilhelma:463344:KOG0004 -> Nosenko2013_ribo_14615_Tethya_wilhelma_463344_KOG0004
+Nosenko2013_ribo_14615:Trichoplax_adhaerens:10228:KOG0004 -> Nosenko2013_ribo_14615_Trichoplax_adhaerens_10228_KOG0004
+Nosenko2013_ribo_14615:Trichoplax_sp_H4:10227:KOG0004 -> Nosenko2013_ribo_14615_Trichoplax_sp_H4_10227_KOG0004
+Nosenko2013_ribo_14615:Tubifex_tubifex:6386:KOG0004 -> Nosenko2013_ribo_14615_Tubifex_tubifex_6386_KOG0004
+Nosenko2013_ribo_14615:Xenoturbella_bocki:242395:KOG0004 -> Nosenko2013_ribo_14615_Xenoturbella_bocki_242395_KOG0004
+Philippe2009:Acropora_millepora:45264:Gene_0108 -> Philippe2009_Acropora_millepora_45264_Gene_0108
+Philippe2009:Allomyces_macrogynus:28583:Gene_0108 -> Philippe2009_Allomyces_macrogynus_28583_Gene_0108
+Philippe2009:Amoebidium_parasiticum:4881:Gene_0108 -> Philippe2009_Amoebidium_parasiticum_4881_Gene_0108
+Philippe2009:Anoplodactylus_eroticus:488521:Gene_0108 -> Philippe2009_Anoplodactylus_eroticus_488521_Gene_0108
+Philippe2009:Aplysia_californica:6500:Gene_0108 -> Philippe2009_Aplysia_californica_6500_Gene_0108
+Philippe2009:Batrachochytrium_dendrobatidis:109871:Gene_0108 -> Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0108
+Philippe2009:Branchiostoma_floridae:7739:Gene_0108 -> Philippe2009_Branchiostoma_floridae_7739_Gene_0108
+Philippe2009:Capitella_teleta:283909:Gene_0108 -> Philippe2009_Capitella_teleta_283909_Gene_0108
+Philippe2009:Capsaspora_owczarzaki:192875:Gene_0108 -> Philippe2009_Capsaspora_owczarzaki_192875_Gene_0108
+Philippe2009:Carteriospongia_foliascens:593584:Gene_0108 -> Philippe2009_Carteriospongia_foliascens_593584_Gene_0108
+Philippe2009:Ciona_savignyi:51511:Gene_0108 -> Philippe2009_Ciona_savignyi_51511_Gene_0108
+Philippe2009:Clytia_hemisphaerica:252671:Gene_0108 -> Philippe2009_Clytia_hemisphaerica_252671_Gene_0108
+Philippe2009:Crassostrea_gigas:29159:Gene_0108 -> Philippe2009_Crassostrea_gigas_29159_Gene_0108
+Philippe2009:Cyanea_capillata:27804:Gene_0108 -> Philippe2009_Cyanea_capillata_27804_Gene_0108
+Philippe2009:Danio_rerio:7955:Gene_0108 -> Philippe2009_Danio_rerio_7955_Gene_0108
+Philippe2009:Daphnia_pulex:6669:Gene_0108 -> Philippe2009_Daphnia_pulex_6669_Gene_0108
+Philippe2009:Ephydatia_muelleri:6052:Gene_0108 -> Philippe2009_Ephydatia_muelleri_6052_Gene_0108
+Philippe2009:Euperipatoides_kanangrensis:488523:Gene_0108 -> Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0108
+Philippe2009:Euprymna_scolopes:6613:Gene_0108 -> Philippe2009_Euprymna_scolopes_6613_Gene_0108
+Philippe2009:Helobdella_robusta:6412:Gene_0108 -> Philippe2009_Helobdella_robusta_6412_Gene_0108
+Philippe2009:Hydra_magnipapillata:6087:Gene_0108 -> Philippe2009_Hydra_magnipapillata_6087_Gene_0108
+Philippe2009:Hydractinia_echinata:35630:Gene_0108 -> Philippe2009_Hydractinia_echinata_35630_Gene_0108
+Philippe2009:Ixodes_scapularis:6945:Gene_0108 -> Philippe2009_Ixodes_scapularis_6945_Gene_0108
+Philippe2009:Leucetta_chagosensis:185688:Gene_0108 -> Philippe2009_Leucetta_chagosensis_185688_Gene_0108
+Philippe2009:Metridium_senile:6116:Gene_0108 -> Philippe2009_Metridium_senile_6116_Gene_0108
+Philippe2009:Mnemiopsis_leidyi:27923:Gene_0108 -> Philippe2009_Mnemiopsis_leidyi_27923_Gene_0108
+Philippe2009:Molgula_tectiformis:30286:Gene_0108 -> Philippe2009_Molgula_tectiformis_30286_Gene_0108
+Philippe2009:Monosiga_brevicollis:81824:Gene_0108 -> Philippe2009_Monosiga_brevicollis_81824_Gene_0108
+Philippe2009:Monosiga_ovata:81526:Gene_0108 -> Philippe2009_Monosiga_ovata_81526_Gene_0108
+Philippe2009:Montastraea_faveolata:48498:Gene_0108 -> Philippe2009_Montastraea_faveolata_48498_Gene_0108
+Philippe2009:Nasonia_vitripennis:7425:Gene_0108 -> Philippe2009_Nasonia_vitripennis_7425_Gene_0108
+Philippe2009:Nematostella_vectensis:45351:Gene_0108 -> Philippe2009_Nematostella_vectensis_45351_Gene_0108
+Philippe2009:Oopsacas_minuta:111878:Gene_0108 -> Philippe2009_Oopsacas_minuta_111878_Gene_0108
+Philippe2009:Oscarella_carmela:386100:Gene_0108 -> Philippe2009_Oscarella_carmela_386100_Gene_0108
+Philippe2009:Pedicellina_cernua:43123:Gene_0108 -> Philippe2009_Pedicellina_cernua_43123_Gene_0108
+Philippe2009:Pediculus_humanus:121225:Gene_0108 -> Philippe2009_Pediculus_humanus_121225_Gene_0108
+Philippe2009:Petromyzon_marinus:7757:Gene_0108 -> Philippe2009_Petromyzon_marinus_7757_Gene_0108
+Philippe2009:Phycomyces_blakesleeanus:4837:Gene_0108 -> Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0108
+Philippe2009:Pleurobrachia_pileus:140457:Gene_0108 -> Philippe2009_Pleurobrachia_pileus_140457_Gene_0108
+Philippe2009:Podocoryne_carnea:6096:Gene_0108 -> Philippe2009_Podocoryne_carnea_6096_Gene_0108
+Philippe2009:Proterospongia_sp:218847:Gene_0108 -> Philippe2009_Proterospongia_sp_218847_Gene_0108
+Philippe2009:Amphimedon_queenslandica:400682:Gene_0108 -> Philippe2009_Amphimedon_queenslandica_400682_Gene_0108
+Philippe2009:Rhizopus_oryzae:64495:Gene_0108 -> Philippe2009_Rhizopus_oryzae_64495_Gene_0108
+Philippe2009:Saccoglossus_kowalevskii:10224:Gene_0108 -> Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0108
+Philippe2009:Scutigera_coleoptrata:29022:Gene_0108 -> Philippe2009_Scutigera_coleoptrata_29022_Gene_0108
+Philippe2009:Sphaeroforma_arctica:72019:Gene_0108 -> Philippe2009_Sphaeroforma_arctica_72019_Gene_0108
+Philippe2009:Spizellomyces_punctatus:109760:Gene_0108 -> Philippe2009_Spizellomyces_punctatus_109760_Gene_0108
+Philippe2009:Strongylocentrotus_purpuratus:7668:Gene_0108 -> Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0108
+Philippe2009:Suberites_domuncula:55567:Gene_0108 -> Philippe2009_Suberites_domuncula_55567_Gene_0108
+Philippe2009:Sycon_raphanus:56443:Gene_0108 -> Philippe2009_Sycon_raphanus_56443_Gene_0108
+Philippe2009:Trichoplax_adhaerens:10228:Gene_0108 -> Philippe2009_Trichoplax_adhaerens_10228_Gene_0108
+Philippe2009:Tubifex_tubifex:6386:Gene_0108 -> Philippe2009_Tubifex_tubifex_6386_Gene_0108
+Philippe2009:Xenoturbella_bocki:242395:Gene_0108 -> Philippe2009_Xenoturbella_bocki_242395_Gene_0108
+Philippe2009:Mertensiid_sp:140499:Gene_0108 -> Philippe2009_Mertensiid_sp_140499_Gene_0108
+
+                                                                      Gap/Ambiguity  Composition  p-value
+   1  Nosenko2013_ribo_11057_Amphimedon_queenslandica_400682_KOG0004         10.34%    passed     99.98%
+   2  Nosenko2013_ribo_11057_Asbestopluma_sp_68560_KOG0004                   10.34%    passed     99.91%
+   3  Nosenko2013_ribo_11057_Carteriospongia_foliascens_593584_KOG0004       10.34%    passed     90.14%
+   4  Nosenko2013_ribo_11057_Ephydatia_muelleri_6052_KOG0004                 10.34%    passed     99.37%
+   5  Nosenko2013_ribo_11057_Lubomirskia_baicalensis_289074_KOG0004          10.34%    passed     99.37%
+   6  Nosenko2013_ribo_11057_Pachydictyum_globosum_348075_KOG0004            10.34%    passed     99.92%
+   7  Nosenko2013_ribo_11057_Suberites_domuncula_55567_KOG0004               10.34%    passed     99.02%
+   8  Nosenko2013_ribo_11057_Tethya_wilhelma_463344_KOG0004                  10.34%    passed     99.97%
+   9  Nosenko2013_ribo_11057_Crateromorpha_meyeri_472232_KOG0004             10.34%    passed     99.04%
+  10  Nosenko2013_ribo_11057_Oopsacas_minuta_111878_KOG0004                  10.34%    passed     99.80%
+  11  Nosenko2013_ribo_11057_Oscarella_sp_121493_KOG0004                     10.34%    passed    100.00%
+  12  Nosenko2013_ribo_11057_Leucetta_chagosensis_185688_KOG0004             50.00%    passed     98.90%
+  13  Nosenko2013_ribo_11057_Sycon_ciliatum_27933_KOG0004                    32.76%    passed     98.59%
+  14  Nosenko2013_ribo_11057_Sycon_raphanus_56443_KOG0004                    10.34%    passed    100.00%
+  15  Nosenko2013_ribo_11057_Clytia_hemisphaerica_252671_KOG0004             10.34%    passed    100.00%
+  16  Nosenko2013_ribo_11057_Hydra_magnipapillata_6087_KOG0004               10.34%    passed     90.65%
+  17  Nosenko2013_ribo_11057_Hydra_vulgaris_6087_KOG0004                     31.03%    passed     99.91%
+  18  Nosenko2013_ribo_11057_Hydractinia_echinata_35630_KOG0004              10.34%    passed    100.00%
+  19  Nosenko2013_ribo_11057_Podocoryna_carnea_6096_KOG0004                  10.34%    passed    100.00%
+  20  Nosenko2013_ribo_11057_Acropora_hyacinthus_55974_KOG0004               10.34%    passed    100.00%
+  21  Nosenko2013_ribo_11057_Acropora_millepora_45264_KOG0004                10.34%    passed    100.00%
+  22  Nosenko2013_ribo_11057_Metridium_senile_6116_KOG0004                   10.34%    passed    100.00%
+  23  Nosenko2013_ribo_11057_Nematostella_vectensis_45351_KOG0004            10.34%    passed    100.00%
+  24  Nosenko2013_ribo_11057_Porites_46719_KOG0004                           10.34%    passed    100.00%
+  25  Nosenko2013_ribo_11057_Pleurobrachia_pileus_140457_KOG0004             10.34%    passed     99.95%
+  26  Nosenko2013_ribo_11057_Beroe_sp_10199_KOG0004                          10.34%    passed     98.19%
+  27  Nosenko2013_ribo_11057_Mnemiopsis_leidyi_27923_KOG0004                 10.34%    passed     96.86%
+  28  Nosenko2013_ribo_11057_Mertensiid_sp_140499_KOG0004                    10.34%    passed     98.38%
+  29  Nosenko2013_ribo_11057_Branchiostoma_floridae_7739_KOG0004             10.34%    passed    100.00%
+  30  Nosenko2013_ribo_11057_Capitella_teleta_283909_KOG0004                 10.34%    passed    100.00%
+  31  Nosenko2013_ribo_11057_Ciona_intestinalis_7719_KOG0004                 10.34%    passed    100.00%
+  32  Nosenko2013_ribo_11057_Danio_rerio_7955_KOG0004                        10.34%    passed     99.82%
+  33  Nosenko2013_ribo_11057_Molgula_tectiformis_30286_KOG0004               10.34%    passed    100.00%
+  34  Nosenko2013_ribo_11057_Petromyzon_marinus_7757_KOG0004                 10.34%    passed     99.99%
+  35  Nosenko2013_ribo_11057_Saccoglossus_kowalevskii_10224_KOG0004          10.34%    passed    100.00%
+  36  Nosenko2013_ribo_11057_Aplysia_californica_6500_KOG0004                10.34%    passed    100.00%
+  37  Nosenko2013_ribo_11057_Crassostrea_gigas_29159_KOG0004                 10.34%    passed    100.00%
+  38  Nosenko2013_ribo_11057_Daphnia_pulex_6669_KOG0004                      10.34%    passed     99.98%
+  39  Nosenko2013_ribo_11057_Helobdella_robusta_6412_KOG0004                 10.34%    passed     99.98%
+  40  Nosenko2013_ribo_11057_Ixodes_scapularis_6945_KOG0004                  10.34%    passed    100.00%
+  41  Nosenko2013_ribo_11057_Nasonia_vitripennis_7425_KOG0004                10.34%    passed    100.00%
+  42  Nosenko2013_ribo_11057_Tubifex_tubifex_6386_KOG0004                    10.34%    passed    100.00%
+  43  Nosenko2013_ribo_11057_Trichoplax_sp_H4_10227_KOG0004                  13.79%    passed    100.00%
+  44  Nosenko2013_ribo_11057_Trichoplax_adhaerens_10228_KOG0004              13.79%    passed     99.98%
+  45  Nosenko2013_ribo_11057_Monosiga_ovata_81526_KOG0004                    10.34%    passed    100.00%
+  46  Nosenko2013_ribo_11057_Monosiga_brevicollis_81824_KOG0004              10.34%    passed     98.80%
+  47  Nosenko2013_ribo_11057_Proterospongia_sp_218847_KOG0004                10.34%    passed     99.20%
+  48  Nosenko2013_ribo_14615_Acropora_hyacinthus_55974_KOG0004                1.72%    passed    100.00%
+  49  Nosenko2013_ribo_14615_Acropora_millepora_45264_KOG0004                 1.72%    passed    100.00%
+  50  Nosenko2013_ribo_14615_Allomyces_macrogynus_28583_KOG0004               1.72%    failed      0.05%
+  51  Nosenko2013_ribo_14615_Amoebidium_parasiticum_4881_KOG0004              5.17%    passed     99.99%
+  52  Nosenko2013_ribo_14615_Amphimedon_queenslandica_400682_KOG0004          1.72%    passed     99.19%
+  53  Nosenko2013_ribo_14615_Anoplodactylus_eroticus_488521_KOG0004           1.72%    passed    100.00%
+  54  Nosenko2013_ribo_14615_Aplysia_californica_6500_KOG0004                 1.72%    passed    100.00%
+  55  Nosenko2013_ribo_14615_Asbestopluma_sp_68560_KOG0004                    1.72%    passed     99.87%
+  56  Nosenko2013_ribo_14615_Batrachochytrium_dendrobatidis_109871_KOG0004    1.72%    passed     99.81%
+  57  Nosenko2013_ribo_14615_Beroe_sp_10199_KOG0004                           1.72%    passed     97.19%
+  58  Nosenko2013_ribo_14615_Branchiostoma_floridae_7739_KOG0004              1.72%    passed    100.00%
+  59  Nosenko2013_ribo_14615_Capitella_teleta_283909_KOG0004                  1.72%    passed    100.00%
+  60  Nosenko2013_ribo_14615_Capsaspora_owczarzaki_192875_KOG0004             1.72%    passed     99.90%
+  61  Nosenko2013_ribo_14615_Carteriospongia_foliascens_593584_KOG0004        1.72%    passed     97.27%
+  62  Nosenko2013_ribo_14615_Ciona_intestinalis_7719_KOG0004                  3.45%    passed    100.00%
+  63  Nosenko2013_ribo_14615_Clytia_hemisphaerica_252671_KOG0004              1.72%    passed     99.96%
+  64  Nosenko2013_ribo_14615_Crassostrea_gigas_29159_KOG0004                  1.72%    passed    100.00%
+  65  Nosenko2013_ribo_14615_Crateromorpha_meyeri_472232_KOG0004              1.72%    passed     98.95%
+  66  Nosenko2013_ribo_14615_Cyanea_capillata_27804_KOG0004                   1.72%    passed     99.90%
+  67  Nosenko2013_ribo_14615_Danio_rerio_7955_KOG0004                         1.72%    passed     99.93%
+  68  Nosenko2013_ribo_14615_Daphnia_pulex_6669_KOG0004                       1.72%    passed     99.73%
+  69  Nosenko2013_ribo_14615_Ephydatia_muelleri_6052_KOG0004                  1.72%    passed     99.59%
+  70  Nosenko2013_ribo_14615_Euprymna_scolopes_6613_KOG0004                   1.72%    passed     99.95%
+  71  Nosenko2013_ribo_14615_Helobdella_robusta_6412_KOG0004                  1.72%    passed     99.83%
+  72  Nosenko2013_ribo_14615_Hydra_magnipapillata_6087_KOG0004                1.72%    passed     60.05%
+  73  Nosenko2013_ribo_14615_Hydra_vulgaris_6087_KOG0004                     29.31%    passed     99.96%
+  74  Nosenko2013_ribo_14615_Hydractinia_echinata_35630_KOG0004               1.72%    passed    100.00%
+  75  Nosenko2013_ribo_14615_Ixodes_scapularis_6945_KOG0004                   1.72%    passed    100.00%
+  76  Nosenko2013_ribo_14615_Leucetta_chagosensis_185688_KOG0004             50.00%    passed     98.90%
+  77  Nosenko2013_ribo_14615_Lubomirskia_baicalensis_289074_KOG0004           1.72%    passed     99.59%
+  78  Nosenko2013_ribo_14615_Mertensiid_sp_140499_KOG0004                     1.72%    passed     96.62%
+  79  Nosenko2013_ribo_14615_Metridium_senile_6116_KOG0004                    1.72%    passed    100.00%
+  80  Nosenko2013_ribo_14615_Mnemiopsis_leidyi_27923_KOG0004                  1.72%    passed     94.45%
+  81  Nosenko2013_ribo_14615_Molgula_tectiformis_30286_KOG0004                1.72%    passed    100.00%
+  82  Nosenko2013_ribo_14615_Monosiga_brevicollis_81824_KOG0004               8.62%    passed     98.76%
+  83  Nosenko2013_ribo_14615_Monosiga_ovata_81526_KOG0004                     1.72%    passed     99.94%
+  84  Nosenko2013_ribo_14615_Montastraea_faveolata_48498_KOG0004              1.72%    passed     99.94%
+  85  Nosenko2013_ribo_14615_Nasonia_vitripennis_7425_KOG0004                 1.72%    passed    100.00%
+  86  Nosenko2013_ribo_14615_Nematostella_vectensis_45351_KOG0004             1.72%    passed     99.94%
+  87  Nosenko2013_ribo_14615_Oopsacas_minuta_111878_KOG0004                   1.72%    passed     99.77%
+  88  Nosenko2013_ribo_14615_Oscarella_carmela_386100_KOG0004                 1.72%    passed    100.00%
+  89  Nosenko2013_ribo_14615_Oscarella_sp_121493_KOG0004                      1.72%    passed    100.00%
+  90  Nosenko2013_ribo_14615_Pachydictyum_globosum_348075_KOG0004             1.72%    passed     99.99%
+  91  Nosenko2013_ribo_14615_Pedicellina_cernua_43123_KOG0004                 3.45%    passed    100.00%
+  92  Nosenko2013_ribo_14615_Pediculus_humanus_capitis_121226_KOG0004         1.72%    passed     99.99%
+  93  Nosenko2013_ribo_14615_Petromyzon_marinus_7757_KOG0004                  1.72%    passed     99.92%
+  94  Nosenko2013_ribo_14615_Phycomyces_blakesleeanus_4837_KOG0004            1.72%    failed      0.04%
+  95  Nosenko2013_ribo_14615_Pleurobrachia_pileus_140457_KOG0004              1.72%    passed     99.82%
+  96  Nosenko2013_ribo_14615_Podocoryna_carnea_6096_KOG0004                   1.72%    passed    100.00%
+  97  Nosenko2013_ribo_14615_Porites_46719_KOG0004                            1.72%    passed    100.00%
+  98  Nosenko2013_ribo_14615_Proterospongia_sp_218847_KOG0004                 1.72%    passed     99.16%
+  99  Nosenko2013_ribo_14615_Saccoglossus_kowalevskii_10224_KOG0004           1.72%    passed    100.00%
+ 100  Nosenko2013_ribo_14615_Scutigera_coleoptrata_29022_KOG0004              3.45%    passed    100.00%
+ 101  Nosenko2013_ribo_14615_Spizellomyces_punctatus_109760_KOG0004           1.72%    passed     99.99%
+ 102  Nosenko2013_ribo_14615_Sphaeroforma_arctica_72019_KOG0004               1.72%    passed     99.99%
+ 103  Nosenko2013_ribo_14615_Strongylocentrotus_purpuratus_7668_KOG0004       1.72%    passed    100.00%
+ 104  Nosenko2013_ribo_14615_Suberites_domuncula_55567_KOG0004                1.72%    passed     98.86%
+ 105  Nosenko2013_ribo_14615_Sycon_raphanus_56443_KOG0004                     1.72%    passed    100.00%
+ 106  Nosenko2013_ribo_14615_Tethya_wilhelma_463344_KOG0004                   1.72%    passed     99.96%
+ 107  Nosenko2013_ribo_14615_Trichoplax_adhaerens_10228_KOG0004               6.90%    passed     99.97%
+ 108  Nosenko2013_ribo_14615_Trichoplax_sp_H4_10227_KOG0004                   6.90%    passed     99.96%
+ 109  Nosenko2013_ribo_14615_Tubifex_tubifex_6386_KOG0004                     1.72%    passed    100.00%
+ 110  Nosenko2013_ribo_14615_Xenoturbella_bocki_242395_KOG0004                1.72%    passed     99.97%
+ 111  Philippe2009_Acropora_millepora_45264_Gene_0108                         0.00%    passed    100.00%
+ 112  Philippe2009_Allomyces_macrogynus_28583_Gene_0108                       0.00%    failed      0.07%
+ 113  Philippe2009_Amoebidium_parasiticum_4881_Gene_0108                      3.45%    passed    100.00%
+ 114  Philippe2009_Anoplodactylus_eroticus_488521_Gene_0108                   0.00%    passed    100.00%
+ 115  Philippe2009_Aplysia_californica_6500_Gene_0108                         0.00%    passed    100.00%
+ 116  Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0108            0.00%    passed     99.69%
+ 117  Philippe2009_Branchiostoma_floridae_7739_Gene_0108                      0.00%    passed    100.00%
+ 118  Philippe2009_Capitella_teleta_283909_Gene_0108                          0.00%    passed    100.00%
+ 119  Philippe2009_Capsaspora_owczarzaki_192875_Gene_0108                     0.00%    passed     99.90%
+ 120  Philippe2009_Carteriospongia_foliascens_593584_Gene_0108                0.00%    passed     97.40%
+ 121  Philippe2009_Ciona_savignyi_51511_Gene_0108                             1.72%    passed    100.00%
+ 122  Philippe2009_Clytia_hemisphaerica_252671_Gene_0108                      0.00%    passed     99.98%
+ 123  Philippe2009_Crassostrea_gigas_29159_Gene_0108                          0.00%    passed    100.00%
+ 124  Philippe2009_Cyanea_capillata_27804_Gene_0108                           0.00%    passed     99.90%
+ 125  Philippe2009_Danio_rerio_7955_Gene_0108                                 0.00%    passed     99.93%
+ 126  Philippe2009_Daphnia_pulex_6669_Gene_0108                               0.00%    passed     99.68%
+ 127  Philippe2009_Ephydatia_muelleri_6052_Gene_0108                          0.00%    passed     99.50%
+ 128  Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0108               0.00%    passed     99.89%
+ 129  Philippe2009_Euprymna_scolopes_6613_Gene_0108                           0.00%    passed     99.95%
+ 130  Philippe2009_Helobdella_robusta_6412_Gene_0108                          0.00%    passed     99.83%
+ 131  Philippe2009_Hydra_magnipapillata_6087_Gene_0108                        0.00%    passed     59.82%
+ 132  Philippe2009_Hydractinia_echinata_35630_Gene_0108                       0.00%    passed    100.00%
+ 133  Philippe2009_Ixodes_scapularis_6945_Gene_0108                           0.00%    passed    100.00%
+ 134  Philippe2009_Leucetta_chagosensis_185688_Gene_0108                     48.28%    passed     97.99%
+ 135  Philippe2009_Metridium_senile_6116_Gene_0108                            0.00%    passed    100.00%
+ 136  Philippe2009_Mnemiopsis_leidyi_27923_Gene_0108                          0.00%    passed     94.71%
+ 137  Philippe2009_Molgula_tectiformis_30286_Gene_0108                        0.00%    passed    100.00%
+ 138  Philippe2009_Monosiga_brevicollis_81824_Gene_0108                       6.90%    passed     98.49%
+ 139  Philippe2009_Monosiga_ovata_81526_Gene_0108                             0.00%    passed     99.59%
+ 140  Philippe2009_Montastraea_faveolata_48498_Gene_0108                      0.00%    passed     99.94%
+ 141  Philippe2009_Nasonia_vitripennis_7425_Gene_0108                         0.00%    passed    100.00%
+ 142  Philippe2009_Nematostella_vectensis_45351_Gene_0108                     0.00%    passed     99.94%
+ 143  Philippe2009_Oopsacas_minuta_111878_Gene_0108                           0.00%    passed     99.78%
+ 144  Philippe2009_Oscarella_carmela_386100_Gene_0108                         0.00%    passed    100.00%
+ 145  Philippe2009_Pedicellina_cernua_43123_Gene_0108                         1.72%    passed    100.00%
+ 146  Philippe2009_Pediculus_humanus_121225_Gene_0108                         0.00%    passed     99.99%
+ 147  Philippe2009_Petromyzon_marinus_7757_Gene_0108                          0.00%    passed     99.92%
+ 148  Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0108                    0.00%    failed      0.05%
+ 149  Philippe2009_Pleurobrachia_pileus_140457_Gene_0108                      0.00%    passed     99.82%
+ 150  Philippe2009_Podocoryne_carnea_6096_Gene_0108                           0.00%    passed    100.00%
+ 151  Philippe2009_Proterospongia_sp_218847_Gene_0108                         0.00%    passed     99.07%
+ 152  Philippe2009_Amphimedon_queenslandica_400682_Gene_0108                  0.00%    passed     99.37%
+ 153  Philippe2009_Rhizopus_oryzae_64495_Gene_0108                            0.00%    passed     99.79%
+ 154  Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0108                   0.00%    passed    100.00%
+ 155  Philippe2009_Scutigera_coleoptrata_29022_Gene_0108                      1.72%    passed    100.00%
+ 156  Philippe2009_Sphaeroforma_arctica_72019_Gene_0108                       0.00%    passed     99.99%
+ 157  Philippe2009_Spizellomyces_punctatus_109760_Gene_0108                   0.00%    passed     99.98%
+ 158  Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0108               0.00%    passed    100.00%
+ 159  Philippe2009_Suberites_domuncula_55567_Gene_0108                        0.00%    passed     98.68%
+ 160  Philippe2009_Sycon_raphanus_56443_Gene_0108                             0.00%    passed    100.00%
+ 161  Philippe2009_Trichoplax_adhaerens_10228_Gene_0108                       5.17%    passed     99.98%
+ 162  Philippe2009_Tubifex_tubifex_6386_Gene_0108                             0.00%    passed    100.00%
+ 163  Philippe2009_Xenoturbella_bocki_242395_Gene_0108                        0.00%    passed     99.98%
+ 164  Philippe2009_Mertensiid_sp_140499_Gene_0108                             0.00%    passed     96.77%
+****  TOTAL                                                                   5.21%  4 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.060 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 102116)...
+Model LG+C60+F is alias for LG+POISSON+G+FMIX{C60pi1:1:0.0169698865,C60pi2:1:0.0211683374,C60pi3:1:0.0276589079,C60pi4:1:0.0065675964,C60pi5:1:0.0141221416,C60pi6:1:0.0068774834,C60pi7:1:0.0146909701,C60pi8:1:0.0067225777,C60pi9:1:0.0018396660,C60pi10:1:0.0102547197,C60pi11:1:0.0230896163,C60pi12:1:0.0057941033,C60pi13:1:0.0125394534,C60pi14:1:0.0204526478,C60pi15:1:0.0070629602,C60pi16:1:0.0117982741,C60pi17:1:0.0068334668,C60pi18:1:0.0433775839,C60pi19:1:0.0318278731,C60pi20:1:0.0222546108,C60pi21:1:0.0102264969,C60pi22:1:0.0150545891,C60pi23:1:0.0134159878,C60pi24:1:0.0148552065,C60pi25:1:0.0239111516,C60pi26:1:0.0128776278,C60pi27:1:0.0222318842,C60pi28:1:0.0247444742,C60pi29:1:0.0214274810,C60pi30:1:0.0115001882,C60pi31:1:0.0076017389,C60pi32:1:0.0130258568,C60pi33:1:0.0093701965,C60pi34:1:0.0467194264,C60pi35:1:0.0441940314,C60pi36:1:0.0322263154,C60pi37:1:0.0402999891,C60pi38:1:0.0150234227,C60pi39:1:0.0104589903,C60pi40:1:0.0214742395,C60pi41:1:0.0154957836,C60pi42:1:0.0101789953,C60pi43:1:0.0227980379,C60pi44:1:0.0123204539,C60pi45:1:0.0066777583,C60pi46:1:0.0004150083,C60pi47:1:0.0344385130,C60pi48:1:0.0113663379,C60pi49:1:0.0127143049,C60pi50:1:0.0124323741,C60pi51:1:0.0262124415,C60pi52:1:0.0064994957,C60pi53:1:0.0103203293,C60pi54:1:0.0142463512,C60pi55:1:0.0215600067,C60pi56:1:0.0199150700,C60pi57:1:0.0038964200,C60pi58:1:0.0113448855,C60pi59:1:0.0128595846,C60pi60:1:0.0117656776}+F
+
+NOTE: 495 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -1816.551
+2. Current log-likelihood: -1587.867
+3. Current log-likelihood: -1586.105
+4. Current log-likelihood: -1585.611
+Optimal log-likelihood: -1585.470
+Mixture weights: 0.112 0.040 0.000 0.000 0.000 0.060 0.000 0.014 0.037 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.005 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.067 0.021 0.059 0.042 0.000 0.007 0.000 0.000 0.018 0.000 0.000 0.049 0.143 0.016 0.020 0.007 0.000 0.108 0.000 0.019 0.000 0.000 0.000 0.000 0.000 0.027 0.042 0.000 0.000 0.000 0.000 0.000 0.086 0.000 0.000
+Gamma shape alpha: 0.458
+Parameters optimization took 4 rounds (43.653 sec)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+Computing ML distances based on estimated model parameters... 5.380 sec
+Computing BIONJ tree...
+0.018 seconds
+Log-likelihood of BIONJ tree: -1599.817
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 2.954 second
+Computing log-likelihood of 98 initial trees ... 359.978 seconds
+Current best score: -1579.592
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 1: -1558.278
+Iteration 10 / LogL: -1567.947 / Time: 0h:21m:12s
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 17: -1555.157
+Iteration 20 / LogL: -1577.707 / Time: 0h:38m:41s
+Finish initializing candidate tree set (20)
+Current best tree score: -1555.157 / CPU time: 2253.997
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -1560.898 / Time: 0h:53m:28s (2h:40m:26s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 34: -1554.933
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 35: -1553.894
+Iteration 40 / LogL: -1558.992 / Time: 1h:8m:5s (2h:45m:51s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 42: -1553.680
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 47: -1552.973
+Iteration 50 / LogL: -1555.647 / Time: 1h:22m:50s (2h:43m:59s left)
+Log-likelihood cutoff on original alignment: -1597.996
+Iteration 60 / LogL: -1578.931 / Time: 1h:36m:58s (2h:22m:59s left)
+Iteration 70 / LogL: -1585.421 / Time: 1h:49m:41s (2h:2m:24s left)
+Iteration 80 / LogL: -1556.816 / Time: 2h:2m:31s (1h:43m:54s left)
+Iteration 90 / LogL: -1553.329 / Time: 2h:15m:28s (1h:26m:45s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 92: -1552.853
+Iteration 100 / LogL: -1560.641 / Time: 2h:28m:36s (2h:18m:6s left)
+Log-likelihood cutoff on original alignment: -1594.691
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.996
+Iteration 110 / LogL: -1553.887 / Time: 2h:42m:45s (2h:14m:23s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 118: -1552.726
+Iteration 120 / LogL: -1566.288 / Time: 2h:56m:26s (2h:25m:17s left)
+Iteration 130 / LogL: -1565.351 / Time: 3h:9m:15s (2h:9m:6s left)
+Iteration 140 / LogL: -1553.159 / Time: 3h:22m:48s (1h:53m:48s left)
+Iteration 150 / LogL: -1553.379 / Time: 3h:35m:50s (1h:38m:30s left)
+Log-likelihood cutoff on original alignment: -1593.641
+Iteration 160 / LogL: -1554.622 / Time: 3h:49m:45s (1h:23m:48s left)
+Iteration 170 / LogL: -1558.147 / Time: 4h:3m:3s (1h:9m:2s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 179: -1552.636
+Iteration 180 / LogL: -1552.988 / Time: 4h:16m:7s (2h:21m:39s left)
+Iteration 190 / LogL: -1584.379 / Time: 4h:28m:48s (2h:6m:34s left)
+Iteration 200 / LogL: -1552.768 / Time: 4h:41m:40s (1h:51m:49s left)
+Log-likelihood cutoff on original alignment: -1593.641
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.998
+Iteration 210 / LogL: -1552.879 / Time: 4h:54m:40s (2h:6m:53s left)
+BETTER TREE FOUND at iteration 212: -1552.635
+Iteration 220 / LogL: -1553.109 / Time: 5h:6m:49s (2h:8m:53s left)
+Iteration 230 / LogL: -1555.232 / Time: 5h:19m:4s (1h:54m:15s left)
+Iteration 240 / LogL: -1554.911 / Time: 5h:31m:6s (1h:39m:44s left)
+Iteration 250 / LogL: -1552.636 / Time: 5h:44m:6s (1h:25m:40s left)
+Log-likelihood cutoff on original alignment: -1593.641
+Iteration 260 / LogL: -1557.901 / Time: 5h:56m:29s (1h:11m:34s left)
+Iteration 270 / LogL: -1558.155 / Time: 6h:8m:31s (0h:57m:32s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 272: -1552.570
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 280: -1552.482
+Iteration 280 / LogL: -1552.482 / Time: 6h:20m:9s (2h:16m:15s left)
+Iteration 290 / LogL: -1553.734 / Time: 6h:31m:47s (2h:2m:0s left)
+Iteration 300 / LogL: -1555.247 / Time: 6h:44m:5s (1h:48m:6s left)
+Log-likelihood cutoff on original alignment: -1593.641
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.997
+Iteration 310 / LogL: -1584.586 / Time: 6h:55m:51s (2h:1m:7s left)
+Iteration 320 / LogL: -1554.829 / Time: 7h:8m:39s (1h:47m:30s left)
+Iteration 330 / LogL: -1553.120 / Time: 7h:20m:37s (1h:33m:44s left)
+Iteration 340 / LogL: -1554.768 / Time: 7h:35m:15s (1h:20m:34s left)
+BETTER TREE FOUND at iteration 346: -1552.481
+Iteration 350 / LogL: -1553.592 / Time: 7h:48m:56s (2h:8m:59s left)
+Log-likelihood cutoff on original alignment: -1593.641
+Iteration 360 / LogL: -1553.634 / Time: 8h:2m:3s (1h:55m:28s left)
+Iteration 370 / LogL: -1582.248 / Time: 8h:14m:12s (1h:41m:47s left)
+Iteration 380 / LogL: -1554.546 / Time: 8h:28m:12s (1h:28m:30s left)
+Iteration 390 / LogL: -1552.652 / Time: 8h:41m:15s (1h:15m:2s left)
+Iteration 400 / LogL: -1558.845 / Time: 8h:53m:55s (1h:1m:33s left)
+Log-likelihood cutoff on original alignment: -1593.641
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.996
+Iteration 410 / LogL: -1558.647 / Time: 9h:5m:48s (2h:0m:6s left)
+Iteration 420 / LogL: -1552.482 / Time: 9h:18m:44s (1h:46m:40s left)
+Iteration 430 / LogL: -1570.286 / Time: 9h:32m:56s (1h:33m:29s left)
+Iteration 440 / LogL: -1552.596 / Time: 9h:44m:25s (1h:19m:52s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 442: -1551.954
+Iteration 450 / LogL: -1552.851 / Time: 9h:56m:46s (2h:2m:16s left)
+Log-likelihood cutoff on original alignment: -1593.641
+Iteration 460 / LogL: -1552.509 / Time: 10h:10m:2s (1h:48m:59s left)
+Iteration 470 / LogL: -1552.508 / Time: 10h:23m:36s (1h:35m:44s left)
+Iteration 480 / LogL: -1551.996 / Time: 10h:35m:8s (1h:22m:12s left)
+Iteration 490 / LogL: -1558.200 / Time: 10h:47m:14s (1h:8m:49s left)
+Iteration 500 / LogL: -1551.981 / Time: 11h:0m:1s (0h:55m:33s left)
+Log-likelihood cutoff on original alignment: -1593.641
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.996
+Iteration 510 / LogL: -1553.987 / Time: 11h:11m:52s (1h:58m:47s left)
+Iteration 520 / LogL: -1571.964 / Time: 11h:23m:30s (1h:45m:21s left)
+Iteration 530 / LogL: -1558.921 / Time: 11h:35m:42s (1h:32m:3s left)
+BETTER TREE FOUND at iteration 540: -1551.954
+Iteration 540 / LogL: -1551.954 / Time: 11h:47m:25s (2h:11m:14s left)
+BETTER TREE FOUND at iteration 541: -1551.954
+Iteration 550 / LogL: -1552.151 / Time: 11h:59m:52s (1h:59m:19s left)
+Log-likelihood cutoff on original alignment: -1593.641
+Iteration 560 / LogL: -1552.361 / Time: 12h:11m:44s (1h:46m:1s left)
+Iteration 570 / LogL: -1554.607 / Time: 12h:23m:37s (1h:32m:47s left)
+Iteration 580 / LogL: -1552.470 / Time: 12h:36m:42s (1h:19m:43s left)
+Iteration 590 / LogL: -1551.954 / Time: 12h:47m:38s (1h:6m:28s left)
+Iteration 600 / LogL: -1552.607 / Time: 13h:1m:12s (0h:53m:28s left)
+Log-likelihood cutoff on original alignment: -1593.641
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.996
+Iteration 610 / LogL: -1554.089 / Time: 13h:13m:16s (1h:57m:13s left)
+Iteration 620 / LogL: -1551.954 / Time: 13h:25m:34s (1h:44m:6s left)
+BETTER TREE FOUND at iteration 629: -1551.954
+Iteration 630 / LogL: -1564.400 / Time: 13h:37m:16s (2h:8m:37s left)
+BETTER TREE FOUND at iteration 640: -1551.954
+Iteration 640 / LogL: -1551.954 / Time: 13h:48m:23s (2h:9m:38s left)
+Iteration 650 / LogL: -1552.389 / Time: 13h:59m:45s (1h:56m:27s left)
+Log-likelihood cutoff on original alignment: -1593.641
+Iteration 660 / LogL: -1551.954 / Time: 14h:10m:1s (1h:43m:11s left)
+Iteration 670 / LogL: -1552.752 / Time: 14h:21m:1s (1h:30m:5s left)
+Iteration 680 / LogL: -1552.158 / Time: 14h:34m:4s (1h:17m:14s left)
+Iteration 690 / LogL: -1570.711 / Time: 14h:46m:23s (1h:4m:19s left)
+Iteration 700 / LogL: -1554.187 / Time: 14h:59m:16s (0h:51m:27s left)
+Log-likelihood cutoff on original alignment: -1593.641
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.998
+Iteration 710 / LogL: -1553.340 / Time: 15h:11m:58s (1h:55m:45s left)
+Iteration 720 / LogL: -1569.571 / Time: 15h:24m:55s (1h:42m:54s left)
+Iteration 730 / LogL: -1559.211 / Time: 15h:37m:42s (1h:30m:2s left)
+Iteration 740 / LogL: -1561.805 / Time: 15h:50m:32s (1h:17m:10s left)
+TREE SEARCH COMPLETED AFTER 741 ITERATIONS / Time: 15h:51m:41s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -1551.954
+Optimal log-likelihood: -1551.953
+Mixture weights: 0.249 0.062 0.000 0.000 0.000 0.042 0.000 0.000 0.012 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.029 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.067 0.000 0.000 0.057 0.000 0.000 0.000 0.000 0.006 0.036 0.000 0.013 0.149 0.015 0.014 0.006 0.000 0.101 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.047 0.096 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000
+Gamma shape alpha: 0.412
+Parameters optimization took 1 rounds (6.252 sec)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BEST SCORE FOUND : -1551.953
+Creating bootstrap support values...
+Split supports printed to NEXUS file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component706/LG+C60+F_component706.splits.nex
+Total tree length: 6.306
+
+Total number of iterations: 741
+CPU time used for tree search: 56898.075 sec (15h:48m:18s)
+Wall-clock time used for tree search: 57033.809 sec (15h:50m:33s)
+Total CPU time used: 56970.833 sec (15h:49m:30s)
+Total wall-clock time used: 57108.790 sec (15h:51m:48s)
+
+Computing bootstrap consensus tree...
+Reading input file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component706/LG+C60+F_component706.splits.nex...
+164 taxa and 2613 splits.
+Consensus tree written to /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component706/LG+C60+F_component706.contree
+Reading input trees file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component706/LG+C60+F_component706.contree
+Log-likelihood of consensus tree: -1553.611
+
+Analysis results written to: 
+  IQ-TREE report:                /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component706/LG+C60+F_component706.iqtree
+  Maximum-likelihood tree:       /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component706/LG+C60+F_component706.treefile
+  Likelihood distances:          /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component706/LG+C60+F_component706.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component706/LG+C60+F_component706.splits.nex
+  Consensus tree:                /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component706/LG+C60+F_component706.contree
+  Screen log file:               /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component706/LG+C60+F_component706.log
+
+Date and Time: Tue Aug 30 07:23:42 2022

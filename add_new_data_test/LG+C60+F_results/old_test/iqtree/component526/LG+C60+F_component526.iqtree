@@ -1,0 +1,605 @@
+IQ-TREE 1.5.3 built Mar 12 2017
+
+Input file name: /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component526.mafft
+Type of analysis: tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 289588
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh (2015)
+IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol. Biol. Evol., 32:268-274.
+http://dx.doi.org/10.1093/molbev/msu300
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Bui Quang Minh, Minh Anh Thi Nguyen, and Arndt von Haeseler (2013) Ultrafast
+approximation for phylogenetic bootstrap. Mol. Biol. Evol., 30:1188-1195.
+http://dx.doi.org/10.1093/molbev/mst024
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 105 sequences with 129 amino-acid sites
+Number of constant sites: 11 (= 8.52713% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 11 (= 8.52713% of all sites)
+Number of distinct site patterns: 127
+
+SUBSTITUTION PROCESS
+--------------------
+
+Mixture model of substitution: MIX{LG+F+F,LG+FC60pi1,LG+FC60pi2,LG+FC60pi3,LG+FC60pi4,LG+FC60pi5,LG+FC60pi6,LG+FC60pi7,LG+FC60pi8,LG+FC60pi9,LG+FC60pi10,LG+FC60pi11,LG+FC60pi12,LG+FC60pi13,LG+FC60pi14,LG+FC60pi15,LG+FC60pi16,LG+FC60pi17,LG+FC60pi18,LG+FC60pi19,LG+FC60pi20,LG+FC60pi21,LG+FC60pi22,LG+FC60pi23,LG+FC60pi24,LG+FC60pi25,LG+FC60pi26,LG+FC60pi27,LG+FC60pi28,LG+FC60pi29,LG+FC60pi30,LG+FC60pi31,LG+FC60pi32,LG+FC60pi33,LG+FC60pi34,LG+FC60pi35,LG+FC60pi36,LG+FC60pi37,LG+FC60pi38,LG+FC60pi39,LG+FC60pi40,LG+FC60pi41,LG+FC60pi42,LG+FC60pi43,LG+FC60pi44,LG+FC60pi45,LG+FC60pi46,LG+FC60pi47,LG+FC60pi48,LG+FC60pi49,LG+FC60pi50,LG+FC60pi51,LG+FC60pi52,LG+FC60pi53,LG+FC60pi54,LG+FC60pi55,LG+FC60pi56,LG+FC60pi57,LG+FC60pi58,LG+FC60pi59,LG+FC60pi60}+G4
+
+  No  Component      Rate    Weight   Parameters
+   1  LG+F          1.0000   0.3538   LG+F
+   2  LG+FC60pi1    1.0000   0.0000   LG+FC60pi1
+   3  LG+FC60pi2    1.0000   0.0000   LG+FC60pi2
+   4  LG+FC60pi3    1.0000   0.0000   LG+FC60pi3
+   5  LG+FC60pi4    1.0000   0.0000   LG+FC60pi4
+   6  LG+FC60pi5    1.0000   0.0824   LG+FC60pi5
+   7  LG+FC60pi6    1.0000   0.0179   LG+FC60pi6
+   8  LG+FC60pi7    1.0000   0.0000   LG+FC60pi7
+   9  LG+FC60pi8    1.0000   0.0000   LG+FC60pi8
+  10  LG+FC60pi9    1.0000   0.0000   LG+FC60pi9
+  11  LG+FC60pi10   1.0000   0.0000   LG+FC60pi10
+  12  LG+FC60pi11   1.0000   0.0000   LG+FC60pi11
+  13  LG+FC60pi12   1.0000   0.0000   LG+FC60pi12
+  14  LG+FC60pi13   1.0000   0.0000   LG+FC60pi13
+  15  LG+FC60pi14   1.0000   0.0000   LG+FC60pi14
+  16  LG+FC60pi15   1.0000   0.0000   LG+FC60pi15
+  17  LG+FC60pi16   1.0000   0.0000   LG+FC60pi16
+  18  LG+FC60pi17   1.0000   0.0426   LG+FC60pi17
+  19  LG+FC60pi18   1.0000   0.0000   LG+FC60pi18
+  20  LG+FC60pi19   1.0000   0.0000   LG+FC60pi19
+  21  LG+FC60pi20   1.0000   0.0000   LG+FC60pi20
+  22  LG+FC60pi21   1.0000   0.0000   LG+FC60pi21
+  23  LG+FC60pi22   1.0000   0.0000   LG+FC60pi22
+  24  LG+FC60pi23   1.0000   0.0090   LG+FC60pi23
+  25  LG+FC60pi24   1.0000   0.0169   LG+FC60pi24
+  26  LG+FC60pi25   1.0000   0.0000   LG+FC60pi25
+  27  LG+FC60pi26   1.0000   0.0004   LG+FC60pi26
+  28  LG+FC60pi27   1.0000   0.0194   LG+FC60pi27
+  29  LG+FC60pi28   1.0000   0.0583   LG+FC60pi28
+  30  LG+FC60pi29   1.0000   0.0668   LG+FC60pi29
+  31  LG+FC60pi30   1.0000   0.1217   LG+FC60pi30
+  32  LG+FC60pi31   1.0000   0.0000   LG+FC60pi31
+  33  LG+FC60pi32   1.0000   0.0000   LG+FC60pi32
+  34  LG+FC60pi33   1.0000   0.0299   LG+FC60pi33
+  35  LG+FC60pi34   1.0000   0.0000   LG+FC60pi34
+  36  LG+FC60pi35   1.0000   0.0106   LG+FC60pi35
+  37  LG+FC60pi36   1.0000   0.0081   LG+FC60pi36
+  38  LG+FC60pi37   1.0000   0.0000   LG+FC60pi37
+  39  LG+FC60pi38   1.0000   0.0000   LG+FC60pi38
+  40  LG+FC60pi39   1.0000   0.0000   LG+FC60pi39
+  41  LG+FC60pi40   1.0000   0.0000   LG+FC60pi40
+  42  LG+FC60pi41   1.0000   0.0000   LG+FC60pi41
+  43  LG+FC60pi42   1.0000   0.0000   LG+FC60pi42
+  44  LG+FC60pi43   1.0000   0.0000   LG+FC60pi43
+  45  LG+FC60pi44   1.0000   0.0000   LG+FC60pi44
+  46  LG+FC60pi45   1.0000   0.0000   LG+FC60pi45
+  47  LG+FC60pi46   1.0000   0.0000   LG+FC60pi46
+  48  LG+FC60pi47   1.0000   0.0000   LG+FC60pi47
+  49  LG+FC60pi48   1.0000   0.0000   LG+FC60pi48
+  50  LG+FC60pi49   1.0000   0.0000   LG+FC60pi49
+  51  LG+FC60pi50   1.0000   0.0000   LG+FC60pi50
+  52  LG+FC60pi51   1.0000   0.0000   LG+FC60pi51
+  53  LG+FC60pi52   1.0000   0.0460   LG+FC60pi52
+  54  LG+FC60pi53   1.0000   0.0091   LG+FC60pi53
+  55  LG+FC60pi54   1.0000   0.0514   LG+FC60pi54
+  56  LG+FC60pi55   1.0000   0.0120   LG+FC60pi55
+  57  LG+FC60pi56   1.0000   0.0000   LG+FC60pi56
+  58  LG+FC60pi57   1.0000   0.0167   LG+FC60pi57
+  59  LG+FC60pi58   1.0000   0.0000   LG+FC60pi58
+  60  LG+FC60pi59   1.0000   0.0270   LG+FC60pi59
+  61  LG+FC60pi60   1.0000   0.0000   LG+FC60pi60
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.1897
+
+ Category  Relative_rate  Proportion
+  1         0.1732         0.2500
+  2         0.5272         0.2500
+  3         1.0255         0.2500
+  4         2.2742         0.2500
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -9769.0223 (s.e. 440.5707)
+Unconstrained log-likelihood (without tree): -623.6200
+Number of free parameters (#branches + #model parameters): 287
+Akaike information criterion (AIC) score: 20112.0446
+Corrected Akaike information criterion (AICc) score: 185424.0446
+Bayesian information criterion (BIC) score: 20932.8108
+
+**************************** WARNING ****************************
+Number of parameters (K, model parameters and branch lengths): 287
+Sample size (n, alignment length): 129
+
+Given that K>=n, the parameter estimates might be inaccurate.
+Thus, phylogenetic estimates should be interpreted with caution.
+
+Ideally, it is desirable that n >> K. When selecting optimal models,
+1. use AIC or BIC if n > 40K;
+2. use AICc or BIC if 40K >= n > K;
+3. be extremely cautious if n <= K
+
+To improve the situation (3), consider the following options:
+  1. Increase the sample size (n)
+  2. Decrease the number of parameters (K) to be estimated. If
+     possible:
+     a. Remove the least important sequences from the alignment
+     b. Specify some of the parameter values for the substitution
+        model (e.g., the nucleotide or amino acid frequencies)
+     c. Specify some of the parameter values for the rates-across-
+        sites model (e.g., the shape parameter for the discrete
+        Gamma distribution, the proportion of invariable sites, or
+        the rates of change for different rate categories under
+        the FreeRate model)
+
+Reference:
+Burnham KR, Anderson DR (2002). Model Selection and Multimodel
+Inference: A Practical Information-Theoretic Approach. Springer,
+New York.
+************************ END OF WARNING ***********************
+
+Total tree length (sum of branch lengths): 70.7959
+Sum of internal branch lengths: 24.5886 (34.7317% of tree length)
+
+WARNING: 9 near-zero internal branches (<0.0078) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Borowiec2015_Total1080_Salpingoeca_rosetta_946362_OG397.fasta.aln_gene453' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++-------Borowiec2015_Total1080_Salpingoeca_rosetta_946362_OG397.fasta.aln_gene453
+|
+|     +**Borowiec2015_Total1080_Monosiga_brevicollis_81824_OG397.fasta.aln_gene453
++-----| (100)
+|     +**Hejnol2009_Monosiga_brevicollis_81824_Tribe1286_0
+|
+|                             +--Borowiec2015_Total1080_Amphimedon_queenslandica_400682_OG397.fasta.aln_gene453
+|                 +-----------| (100)
+|                 |           +**Hejnol2009_Amphimedon_queenslandica_400682_Tribe1286_0
+|              +--| (93)
+|              |  |          +**Borowiec2015_Total1080_Trichoplax_adhaerens_10228_OG397.fasta.aln_gene453
+|              |  +----------| (100)
+|              |             +**Hejnol2009_Trichoplax_adhaerens_10228_Tribe1286_0
+|           +--| (58)
+|           |  |  +-------------------------------------Borowiec2015_Total1080_Ciona_savignyi_51511_OG397.fasta.aln_gene453
+|           |  +--| (63)
+|           |     |         +--Borowiec2015_Total1080_Nematostella_vectensis_45351_OG397.fasta.aln_gene453
+|           |     |      +--| (96)
+|           |     |      |  |  +**Dunn2008_Nematostella_vectensis_45351_Tribe1006
+|           |     |      |  +**| (60)
+|           |     |      |     +**Hejnol2009_Nematostella_vectensis_45351_Tribe1286_0
+|           |     |  +---| (92)
+|           |     |  |   |                      +**Borowiec2015_Total1080_Hydra_magnipapillata_6087_OG397.fasta.aln_gene453
+|           |     |  |   |                   +**| (93)
+|           |     |  |   |                   |  +**Dunn2008_Hydra_vulgaris_01_6087_Tribe1006
+|           |     |  |   |      +------------| (100)
+|           |     |  |   |      |            +**Hejnol2009_Hydra_vulgaris_01_6087_Tribe1286_0
+|           |     |  |   +------| (96)
+|           |     |  |          |            +**Dunn2008_Cyanea_capillata_27804_Tribe1006
+|           |     |  |          +------------| (100)
+|           |     |  |                       +**Hejnol2009_Cyanea_capillata_27804_Tribe1286_0
+|           |     +--| (98)
+|           |        |   +--Borowiec2015_Total1080_Acropora_digitifera_70779_OG397.fasta.aln_gene453
+|           |        +---| (100)
+|           |            |  +**Dunn2008_Acropora_millepora_45264_Tribe1006
+|           |            +--| (100)
+|           |               +**Hejnol2009_Acropora_millepora_45264_Tribe1286_0
+|        +--| (62)
+|        |  |                    +**Borowiec2015_Total1080_Branchiostoma_floridae_7739_OG397.fasta.aln_gene453
+|        |  |           +--------| (100)
+|        |  |           |        |  +--Dunn2008_Branchiostoma_floridae_7739_Tribe1006
+|        |  |           |        +**| (50)
+|        |  |           |           +**Hejnol2009_Branchiostoma_floridae_7739_Tribe1286_0
+|        |  |        +--| (95)
+|        |  |        |  +----Borowiec2015_Total1080_Saccoglossus_kowalevskii_10224_OG397.fasta.aln_gene453
+|        |  |     +--| (98)
+|        |  |     |  |       +--Borowiec2015_Total1080_Strongylocentrotus_purpuratus_7668_OG397.fasta.aln_gene453
+|        |  |     |  |    +**| (52)
+|        |  |     |  |    |  +**Hejnol2009_Strongylocentrotus_purpuratus_7668_Tribe1286_0
+|        |  |     |  +----| (100)
+|        |  |     |       +**Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe1006
+|        |  |  +--| (68)
+|        |  |  |  |               +--Borowiec2015_Total1080_Homo_sapiens_9606_OG397.fasta.aln_gene453
+|        |  |  |  |            +--| (99)
+|        |  |  |  |            |  |  +**Dunn2008_Homo_sapiens_9606_Tribe1006
+|        |  |  |  |            |  +**| (67)
+|        |  |  |  |            |     +**Hejnol2009_Homo_sapiens_9606_Tribe1286_0
+|        |  |  |  |         +--| (51)
+|        |  |  |  |         |  |  +---Borowiec2015_Total1080_Fugu_31032_OG397.fasta.aln_gene453
+|        |  |  |  |         |  +--| (90)
+|        |  |  |  |         |     +--Borowiec2015_Total1080_Xenopus_tropicalis_8364_OG397.fasta.aln_gene453
+|        |  |  |  |      +--| (48)
+|        |  |  |  |      |  +--Borowiec2015_Total1080_Latimeria_chalumnae_7897_OG397.fasta.aln_gene453
+|        |  |  |  |   +--| (52)
+|        |  |  |  |   |  |  +**Borowiec2015_Total1080_Gallus_gallus_9031_OG397.fasta.aln_gene453
+|        |  |  |  |   |  +--| (100)
+|        |  |  |  |   |     |  +--Dunn2008_Gallus_gallus_9031_Tribe1006
+|        |  |  |  |   |     +**| (73)
+|        |  |  |  |   |        +**Hejnol2009_Gallus_gallus_9031_Tribe1286_0
+|        |  |  |  +---| (100)
+|        |  |  |      +--Borowiec2015_Total1080_Anolis_carolinensis_28377_OG397.fasta.aln_gene453
+|        |  +--| (66)
+|        |     |                           +------------------Borowiec2015_Total1080_Danaus_plexippus_13037_OG397.fasta.aln_gene453
+|        |     |                       +---| (94)
+|        |     |                       |   +-------Borowiec2015_Total1080_Rhodnius_prolixus_13249_OG397.fasta.aln_gene453
+|        |     |                    +--| (90)
+|        |     |                    |  +------Borowiec2015_Total1080_Tribolium_castaneum_7070_OG397.fasta.aln_gene453
+|        |     |                 +--| (53)
+|        |     |                 |  |       +**Borowiec2015_Total1080_Drosophila_melanogaster_7227_OG397.fasta.aln_gene453
+|        |     |                 |  |   +---| (98)
+|        |     |                 |  |   |   |  +--Dunn2008_Drosophila_melanogaster_7227_Tribe1006
+|        |     |                 |  |   |   +**| (44)
+|        |     |                 |  |   |      +**Hejnol2009_Drosophila_melanogaster_7227_Tribe1286_0
+|        |     |                 |  +---| (97)
+|        |     |                 |      |           +-----Borowiec2015_Total1080_Apis_mellifera_7460_OG397.fasta.aln_gene453
+|        |     |                 |      +-----------| (100)
+|        |     |                 |                  +--Borowiec2015_Total1080_Bombus_terrestris_30195_OG397.fasta.aln_gene453
+|        |     |              +--| (63)
+|        |     |              |  |  +-------Borowiec2015_Total1080_Strigamia_maritima_126957_OG397.fasta.aln_gene453
+|        |     |              |  +--| (62)
+|        |     |              |     |               +**Dunn2008_Anoplodactylus_eroticus_488521_Tribe1006
+|        |     |              |     +---------------| (100)
+|        |     |              |                     +**Hejnol2009_Anoplodactylus_eroticus_488521_Tribe1286_0
+|        |     |           +--| (45)
+|        |     |           |  |        +**Borowiec2015_Total1080_Daphnia_magna_35525_OG397.fasta.aln_gene453
+|        |     |           |  +--------| (100)
+|        |     |           |           +**Hejnol2009_Daphnia_pulex_6669_Tribe1286_0
+|        |     |        +--| (49)
+|        |     |        |  |     +----------Borowiec2015_Total1080_Tetranychus_urticae_32264_OG397.fasta.aln_gene453
+|        |     |        |  |  +--| (83)
+|        |     |        |  |  |  |    +**Dunn2008_Acanthoscurria_gomesiana_115339_Tribe1006
+|        |     |        |  |  |  +----| (100)
+|        |     |        |  |  |       +**Hejnol2009_Acanthoscurria_gomesiana_115339_Tribe1286_0
+|        |     |        |  +--| (49)
+|        |     |        |     |    +--Borowiec2015_Total1080_Ixodes_scapularis_6945_OG397.fasta.aln_gene453
+|        |     |        |     +----| (99)
+|        |     |        |          |  +**Dunn2008_Boophilus_microplus_6941_Tribe1006
+|        |     |        |          +--| (100)
+|        |     |        |             +**Hejnol2009_Boophilus_microplus_6941_Tribe1286_0
+|        |     |     +--| (67)
+|        |     |     |  |     +------------------------Borowiec2015_Total1080_Acyrthosiphon_pisum_7029_OG397.fasta.aln_gene453
+|        |     |     |  |  +--| (61)
+|        |     |     |  |  |  |  +**Dunn2008_Carcinus_maenas_6759_Tribe1006
+|        |     |     |  |  |  +--| (99)
+|        |     |     |  |  |     +**Hejnol2009_Carcinus_maenas_6759_Tribe1286_0
+|        |     |     |  +**| (23)
+|        |     |     |     +------------------Hejnol2009_Flaccisagitta_enflata_366393_Tribe1286_0
+|        |     |  +--| (42)
+|        |     |  |  |              +------Borowiec2015_Total1080_Brugia_malayi_6279_OG397.fasta.aln_gene453
+|        |     |  |  |           +--| (100)
+|        |     |  |  |           |  +--------Borowiec2015_Total1080_Caenorhabditis_elegans_6239_OG397.fasta.aln_gene453
+|        |     |  |  +-----------| (100)
+|        |     |  |              |      +**Dunn2008_Trichinella_spiralis_6334_Tribe1006
+|        |     |  |              |  +---| (100)
+|        |     |  |              |  |   +**Hejnol2009_Trichinella_spiralis_6334_Tribe1286_0
+|        |     |  |              +--| (52)
+|        |     |  |                 |      +**Dunn2008_Xiphinema_index_46003_Tribe1006
+|        |     |  |                 +------| (100)
+|        |     |  |                        +**Hejnol2009_Xiphinema_index_46003_Tribe1286_0
+|        |     +--| (56)
+|        |        |                     +**Borowiec2015_Total1080_Lottia_gigantea_225164_OG397.fasta.aln_gene453
+|        |        |               +-----| (100)
+|        |        |               |     +**Hejnol2009_Lottia_gigantea_225164_Tribe1286_0
+|        |        |         +-----| (98)
+|        |        |         |     |     +--Borowiec2015_Total1080_Pinctada_fucata_50426_OG397.fasta.aln_gene453
+|        |        |         |     +-----| (100)
+|        |        |         |           |  +**Dunn2008_Crassostrea_virginica_6565_Tribe1006
+|        |        |         |           +--| (100)
+|        |        |         |              +**Hejnol2009_Crassostrea_virginica_6565_Tribe1286_0
+|        |        |     +---| (47)
+|        |        |     |   |                        +**Dunn2008_Echinococcus_granulosus_6210_Tribe1006
+|        |        |     |   |                     +--| (100)
+|        |        |     |   |                     |  +**Hejnol2009_Echinococcus_granulosus_6210_Tribe1286_0
+|        |        |     |   |            +--------| (100)
+|        |        |     |   |            |        +--Hejnol2009_Taenia_solium_6204_Tribe1286_0
+|        |        |     |   |  +---------| (97)
+|        |        |     |   |  |         |           +**Dunn2008_Macrostomum_lignano_282301_Tribe1006
+|        |        |     |   |  |         |  +--------| (100)
+|        |        |     |   |  |         |  |        +**Hejnol2009_Macrostomum_lignano_282301_Tribe1286_0
+|        |        |     |   |  |         +--| (30)
+|        |        |     |   |  |            |      +**Dunn2008_Schmidtea_mediterranea_79327_Tribe1006
+|        |        |     |   |  |            +------| (100)
+|        |        |     |   |  |                   +**Hejnol2009_Schmidtea_mediterranea_79327_Tribe1286_0
+|        |        |     |   +--| (46)
+|        |        |     |      +-----------------------------Hejnol2009_Nemertoderma_westbladi_172109_Tribe1286_0
+|        |        |  +--| (40)
+|        |        |  |  |              +--Borowiec2015_Total1080_Capitella_teleta_283909_OG397.fasta.aln_gene453
+|        |        |  |  |           +--| (100)
+|        |        |  |  |           |  +**Dunn2008_Capitella_teleta_283909_Tribe1006
+|        |        |  |  |  +--------| (100)
+|        |        |  |  |  |        |            +**Dunn2008_Haementeria_depressa_279730_Tribe1006
+|        |        |  |  |  |        |         +**| (84)
+|        |        |  |  |  |        |         |  +**Hejnol2009_Haementeria_depressa_279730_Tribe1286_0
+|        |        |  |  |  |        |      +--| (66)
+|        |        |  |  |  |        |      |  +--Hejnol2009_Helobdella_robusta_6412_Tribe1286_0
+|        |        |  |  |  |        |  +---| (99)
+|        |        |  |  |  |        |  |   |  +**Dunn2008_Lumbricus_rubellus_35632_Tribe1006
+|        |        |  |  |  |        |  |   +--| (97)
+|        |        |  |  |  |        |  |      +**Hejnol2009_Lumbricus_rubellus_35632_Tribe1286_0
+|        |        |  |  |  |        +--| (86)
+|        |        |  |  |  |           |  +**Dunn2008_Urechis_caupo_6431_Tribe1006
+|        |        |  |  |  |           +--| (100)
+|        |        |  |  |  |              +**Hejnol2009_Urechis_caupo_6431_Tribe1286_0
+|        |        |  |  +--| (96)
+|        |        |  |     |         +**Dunn2008_Terebratalia_transversa_34513_Tribe1006
+|        |        |  |     +---------| (100)
+|        |        |  |               +**Hejnol2009_Terebratalia_transversa_34513_Tribe1286_0
+|        |        +--| (38)
+|        |           |                     +**Dunn2008_Carinoma_mutabilis_187807_Tribe1006
+|        |           |  +------------------| (100)
+|        |           |  |                  +**Hejnol2009_Carinoma_mutabilis_187807_Tribe1286_0
+|        |           +--| (44)
+|        |              |  +-----------Hejnol2009_Brachionus_plicatilis_10195_Tribe1286_0
+|        |              +--| (69)
+|        |                 +--------Hejnol2009_Philodina_roseola_96448_Tribe1286_0
+|     +--| (59)
+|     |  |                       +**Borowiec2015_Total1080_Mnemiopsis_leidyi_27923_OG397.fasta.aln_gene453
+|     |  |             +---------| (100)
+|     |  |             |         |      +**Dunn2008_Mertensiid_sp_140499_Tribe1006
+|     |  |             |         +------| (100)
+|     |  |             |                +**Hejnol2009_Mertensiid_sp_140499_Tribe1286_0
+|     |  |       +-----| (66)
+|     |  |       |     |                                     +**Dunn2008_Cryptococcus_neoformans_5207_Tribe1006
+|     |  |       |     +-------------------------------------| (100)
+|     |  |       |                                           +**Hejnol2009_Cryptococcus_neoformans_5207_Tribe1286_0
+|     |  |  +----| (65)
+|     |  |  |    |       +**Dunn2008_Capsaspora_owczarzaki_192875_Tribe1006
+|     |  |  |    +-------| (100)
+|     |  |  |            +**Hejnol2009_Capsaspora_owczarzaki_192875_Tribe1286_0
+|     |  +--| (54)
+|     |     +-----Hejnol2009_Suberites_domuncula_55567_Tribe1286_0
+|  +--| (89)
+|  |  |            +-----------------Hejnol2009_Convoluta_pulchra_52062_Tribe1286_0
+|  |  +------------| (88)
+|  |               +--------Hejnol2009_Symsagittifera_roscoffensis_84072_Tribe1286_0
++--| (100)
+   |          +**Dunn2008_Monosiga_ovata_81526_Tribe1006
+   +----------| (100)
+              +**Hejnol2009_Monosiga_ovata_81526_Tribe1286_0
+
+Tree in newick format:
+
+(Borowiec2015_Total1080_Salpingoeca_rosetta_946362_OG397.fasta.aln_gene453:0.7850769160,(Borowiec2015_Total1080_Monosiga_brevicollis_81824_OG397.fasta.aln_gene453:0.0000029938,Hejnol2009_Monosiga_brevicollis_81824_Tribe1286_0:0.0000029001)100:0.560093,(((((((Borowiec2015_Total1080_Amphimedon_queenslandica_400682_OG397.fasta.aln_gene453:0.0262972428,Hejnol2009_Amphimedon_queenslandica_400682_Tribe1286_0:0.0000021225)100:1.120560,(Borowiec2015_Total1080_Trichoplax_adhaerens_10228_OG397.fasta.aln_gene453:0.0000023676,Hejnol2009_Trichoplax_adhaerens_10228_Tribe1286_0:0.0000024703)100:1.001520)93:0.169666,(Borowiec2015_Total1080_Ciona_savignyi_51511_OG397.fasta.aln_gene453:3.4981147677,(((Borowiec2015_Total1080_Nematostella_vectensis_45351_OG397.fasta.aln_gene453:0.0289982783,(Dunn2008_Nematostella_vectensis_45351_Tribe1006:0.0000029464,Hejnol2009_Nematostella_vectensis_45351_Tribe1286_0:0.0000020124)60:0.003394)96:0.319784,(((Borowiec2015_Total1080_Hydra_magnipapillata_6087_OG397.fasta.aln_gene453:0.0000023633,Dunn2008_Hydra_vulgaris_01_6087_Tribe1006:0.0000029001)93:0.000002,Hejnol2009_Hydra_vulgaris_01_6087_Tribe1286_0:0.0000020708)100:1.234010,(Dunn2008_Cyanea_capillata_27804_Tribe1006:0.0000028824,Hejnol2009_Cyanea_capillata_27804_Tribe1286_0:0.0000020301)100:1.208620)96:0.667571)92:0.421001,(Borowiec2015_Total1080_Acropora_digitifera_70779_OG397.fasta.aln_gene453:0.0118648047,(Dunn2008_Acropora_millepora_45264_Tribe1006:0.0000025566,Hejnol2009_Acropora_millepora_45264_Tribe1286_0:0.0000027357)100:0.330015)100:0.415542)98:0.347985)63:0.190727)58:0.097284,(((((Borowiec2015_Total1080_Branchiostoma_floridae_7739_OG397.fasta.aln_gene453:0.0000021465,(Dunn2008_Branchiostoma_floridae_7739_Tribe1006:0.0918937581,Hejnol2009_Branchiostoma_floridae_7739_Tribe1286_0:0.0000029001)50:0.000003)100:0.819904,Borowiec2015_Total1080_Saccoglossus_kowalevskii_10224_OG397.fasta.aln_gene453:0.5030155988)95:0.234826,((Borowiec2015_Total1080_Strongylocentrotus_purpuratus_7668_OG397.fasta.aln_gene453:0.0579542804,Hejnol2009_Strongylocentrotus_purpuratus_7668_Tribe1286_0:0.0000029001)52:0.000002,Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe1006:0.0000023475)100:0.472692)98:0.266436,(((((Borowiec2015_Total1080_Homo_sapiens_9606_OG397.fasta.aln_gene453:0.2084583504,(Dunn2008_Homo_sapiens_9606_Tribe1006:0.0000027068,Hejnol2009_Homo_sapiens_9606_Tribe1286_0:0.0000029001)67:0.000002)99:0.179101,(Borowiec2015_Total1080_Fugu_31032_OG397.fasta.aln_gene453:0.3989187055,Borowiec2015_Total1080_Xenopus_tropicalis_8364_OG397.fasta.aln_gene453:0.1273684315)90:0.037380)51:0.044057,Borowiec2015_Total1080_Latimeria_chalumnae_7897_OG397.fasta.aln_gene453:0.2932452138)48:0.074522,(Borowiec2015_Total1080_Gallus_gallus_9031_OG397.fasta.aln_gene453:0.0000020839,(Dunn2008_Gallus_gallus_9031_Tribe1006:0.0635102657,Hejnol2009_Gallus_gallus_9031_Tribe1286_0:0.0000029001)73:0.000002)100:0.306937)52:0.042650,Borowiec2015_Total1080_Anolis_carolinensis_28377_OG397.fasta.aln_gene453:0.0949382792)100:0.432246)68:0.086215,(((((((((Borowiec2015_Total1080_Danaus_plexippus_13037_OG397.fasta.aln_gene453:1.7886039674,Borowiec2015_Total1080_Rhodnius_prolixus_13249_OG397.fasta.aln_gene453:0.8043877850)94:0.434326,Borowiec2015_Total1080_Tribolium_castaneum_7070_OG397.fasta.aln_gene453:0.7105404978)90:0.326356,((Borowiec2015_Total1080_Drosophila_melanogaster_7227_OG397.fasta.aln_gene453:0.0000029063,(Dunn2008_Drosophila_melanogaster_7227_Tribe1006:0.0441760692,Hejnol2009_Drosophila_melanogaster_7227_Tribe1286_0:0.0000029001)44:0.000002)98:0.430798,(Borowiec2015_Total1080_Apis_mellifera_7460_OG397.fasta.aln_gene453:0.5636664916,Borowiec2015_Total1080_Bombus_terrestris_30195_OG397.fasta.aln_gene453:0.1808000433)100:1.161560)97:0.391879)53:0.287066,(Borowiec2015_Total1080_Strigamia_maritima_126957_OG397.fasta.aln_gene453:0.8058633907,(Dunn2008_Anoplodactylus_eroticus_488521_Tribe1006:0.0000028733,Hejnol2009_Anoplodactylus_eroticus_488521_Tribe1286_0:0.0000029001)100:1.497650)62:0.266826)63:0.354262,(Borowiec2015_Total1080_Daphnia_magna_35525_OG397.fasta.aln_gene453:0.0000022136,Hejnol2009_Daphnia_pulex_6669_Tribe1286_0:0.0000024901)100:0.862179)45:0.201842,((Borowiec2015_Total1080_Tetranychus_urticae_32264_OG397.fasta.aln_gene453:0.9943682933,(Dunn2008_Acanthoscurria_gomesiana_115339_Tribe1006:0.0000024553,Hejnol2009_Acanthoscurria_gomesiana_115339_Tribe1286_0:0.0000029001)100:0.499268)83:0.137901,(Borowiec2015_Total1080_Ixodes_scapularis_6945_OG397.fasta.aln_gene453:0.3114574318,(Dunn2008_Boophilus_microplus_6941_Tribe1006:0.0000024553,Hejnol2009_Boophilus_microplus_6941_Tribe1286_0:0.0000029001)100:0.161429)99:0.517037)49:0.017457)49:0.068952,((Borowiec2015_Total1080_Acyrthosiphon_pisum_7029_OG397.fasta.aln_gene453:2.2992995835,(Dunn2008_Carcinus_maenas_6759_Tribe1006:0.0000025954,Hejnol2009_Carcinus_maenas_6759_Tribe1286_0:0.0000029001)99:0.266055)61:0.128011,Hejnol2009_Flaccisagitta_enflata_366393_Tribe1286_0:1.7108730974)23:0.007595)67:0.110313,((Borowiec2015_Total1080_Brugia_malayi_6279_OG397.fasta.aln_gene453:0.6400287455,Borowiec2015_Total1080_Caenorhabditis_elegans_6239_OG397.fasta.aln_gene453:0.8843525663)100:0.272018,((Dunn2008_Trichinella_spiralis_6334_Tribe1006:0.0000022955,Hejnol2009_Trichinella_spiralis_6334_Tribe1286_0:0.0000023248)100:0.409347,(Dunn2008_Xiphinema_index_46003_Tribe1006:0.0000022870,Hejnol2009_Xiphinema_index_46003_Tribe1286_0:0.0000021046)100:0.628485)52:0.167962)100:1.080470)42:0.257474,(((((Borowiec2015_Total1080_Lottia_gigantea_225164_OG397.fasta.aln_gene453:0.0000024553,Hejnol2009_Lottia_gigantea_225164_Tribe1286_0:0.0000024659)100:0.550705,(Borowiec2015_Total1080_Pinctada_fucata_50426_OG397.fasta.aln_gene453:0.1450353665,(Dunn2008_Crassostrea_virginica_6565_Tribe1006:0.0000029241,Hejnol2009_Crassostrea_virginica_6565_Tribe1286_0:0.0000029001)100:0.322189)100:0.611839)98:0.550972,((((Dunn2008_Echinococcus_granulosus_6210_Tribe1006:0.0000023633,Hejnol2009_Echinococcus_granulosus_6210_Tribe1286_0:0.0000029001)100:0.237605,Hejnol2009_Taenia_solium_6204_Tribe1286_0:0.0231163339)100:0.820647,((Dunn2008_Macrostomum_lignano_282301_Tribe1006:0.0000022076,Hejnol2009_Macrostomum_lignano_282301_Tribe1286_0:0.0000029001)100:0.857477,(Dunn2008_Schmidtea_mediterranea_79327_Tribe1006:0.0000026672,Hejnol2009_Schmidtea_mediterranea_79327_Tribe1286_0:0.0000029001)100:0.710554)30:0.051839)97:0.982061,Hejnol2009_Nemertoderma_westbladi_172109_Tribe1286_0:2.7044579569)46:0.317515)47:0.434280,(((Borowiec2015_Total1080_Capitella_teleta_283909_OG397.fasta.aln_gene453:0.0533540949,Dunn2008_Capitella_teleta_283909_Tribe1006:0.0000021310)100:0.341818,((((Dunn2008_Haementeria_depressa_279730_Tribe1006:0.0000025168,Hejnol2009_Haementeria_depressa_279730_Tribe1286_0:0.0000029001)84:0.001158,Hejnol2009_Helobdella_robusta_6412_Tribe1286_0:0.0908841384)66:0.133335,(Dunn2008_Lumbricus_rubellus_35632_Tribe1006:0.0000021710,Hejnol2009_Lumbricus_rubellus_35632_Tribe1286_0:0.0000027605)97:0.130428)99:0.366791,(Dunn2008_Urechis_caupo_6431_Tribe1006:0.0000020188,Hejnol2009_Urechis_caupo_6431_Tribe1286_0:0.0000026286)100:0.169449)86:0.112176)100:0.853980,(Dunn2008_Terebratalia_transversa_34513_Tribe1006:0.0000024553,Hejnol2009_Terebratalia_transversa_34513_Tribe1286_0:0.0000029001)100:0.940714)96:0.191223)40:0.202567,((Dunn2008_Carinoma_mutabilis_187807_Tribe1006:0.0000023282,Hejnol2009_Carinoma_mutabilis_187807_Tribe1286_0:0.0000029001)100:1.782260,(Hejnol2009_Brachionus_plicatilis_10195_Tribe1286_0:1.1401536627,Hejnol2009_Philodina_roseola_96448_Tribe1286_0:0.8556725622)69:0.146548)44:0.331412)38:0.194501)56:0.168715)66:0.197798)62:0.143822,((((Borowiec2015_Total1080_Mnemiopsis_leidyi_27923_OG397.fasta.aln_gene453:0.0000020155,(Dunn2008_Mertensiid_sp_140499_Tribe1006:0.0000021882,Hejnol2009_Mertensiid_sp_140499_Tribe1286_0:0.0000022582)100:0.688722)100:0.918907,(Dunn2008_Cryptococcus_neoformans_5207_Tribe1006:0.0000026886,Hejnol2009_Cryptococcus_neoformans_5207_Tribe1286_0:0.0000027291)100:3.412740)66:0.567801,(Dunn2008_Capsaspora_owczarzaki_192875_Tribe1006:0.0000022339,Hejnol2009_Capsaspora_owczarzaki_192875_Tribe1286_0:0.0000029001)100:0.762652)65:0.478989,Hejnol2009_Suberites_domuncula_55567_Tribe1286_0:0.5398789668)54:0.106735)59:0.139498,(Hejnol2009_Convoluta_pulchra_52062_Tribe1286_0:1.6207640162,Hejnol2009_Symsagittifera_roscoffensis_84072_Tribe1286_0:0.8205254754)88:1.176090)89:0.347714,(Dunn2008_Monosiga_ovata_81526_Tribe1006:0.0000020349,Hejnol2009_Monosiga_ovata_81526_Tribe1286_0:0.0000029001)100:1.056480)100:0.331818);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -9769.876733
+Robinson-Foulds distance between ML tree and consensus tree: 6
+
+Branches with bootstrap support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++-------Borowiec2015_Total1080_Salpingoeca_rosetta_946362_OG397.fasta.aln_gene453
+|
+|     +--Borowiec2015_Total1080_Monosiga_brevicollis_81824_OG397.fasta.aln_gene453
++-----| (100)
+|     +--Hejnol2009_Monosiga_brevicollis_81824_Tribe1286_0
+|
+|                             +--Borowiec2015_Total1080_Amphimedon_queenslandica_400682_OG397.fasta.aln_gene453
+|                 +-----------| (100)
+|                 |           +--Hejnol2009_Amphimedon_queenslandica_400682_Tribe1286_0
+|              +--| (93)
+|              |  |          +--Borowiec2015_Total1080_Trichoplax_adhaerens_10228_OG397.fasta.aln_gene453
+|              |  +----------| (100)
+|              |             +--Hejnol2009_Trichoplax_adhaerens_10228_Tribe1286_0
+|           +--| (58)
+|           |  |  +-------------------------------------Borowiec2015_Total1080_Ciona_savignyi_51511_OG397.fasta.aln_gene453
+|           |  +--| (63)
+|           |     |         +--Borowiec2015_Total1080_Nematostella_vectensis_45351_OG397.fasta.aln_gene453
+|           |     |      +--| (96)
+|           |     |      |  |  +--Dunn2008_Nematostella_vectensis_45351_Tribe1006
+|           |     |      |  +--| (60)
+|           |     |      |     +--Hejnol2009_Nematostella_vectensis_45351_Tribe1286_0
+|           |     |  +---| (92)
+|           |     |  |   |                      +--Borowiec2015_Total1080_Hydra_magnipapillata_6087_OG397.fasta.aln_gene453
+|           |     |  |   |                   +--| (93)
+|           |     |  |   |                   |  +--Dunn2008_Hydra_vulgaris_01_6087_Tribe1006
+|           |     |  |   |      +------------| (100)
+|           |     |  |   |      |            +--Hejnol2009_Hydra_vulgaris_01_6087_Tribe1286_0
+|           |     |  |   +------| (96)
+|           |     |  |          |            +--Dunn2008_Cyanea_capillata_27804_Tribe1006
+|           |     |  |          +------------| (100)
+|           |     |  |                       +--Hejnol2009_Cyanea_capillata_27804_Tribe1286_0
+|           |     +--| (98)
+|           |        |   +--Borowiec2015_Total1080_Acropora_digitifera_70779_OG397.fasta.aln_gene453
+|           |        +---| (100)
+|           |            |  +--Dunn2008_Acropora_millepora_45264_Tribe1006
+|           |            +--| (100)
+|           |               +--Hejnol2009_Acropora_millepora_45264_Tribe1286_0
+|        +--| (62)
+|        |  |                    +--Borowiec2015_Total1080_Branchiostoma_floridae_7739_OG397.fasta.aln_gene453
+|        |  |           +--------| (100)
+|        |  |           |        |  +--Dunn2008_Branchiostoma_floridae_7739_Tribe1006
+|        |  |           |        +--| (50)
+|        |  |           |           +--Hejnol2009_Branchiostoma_floridae_7739_Tribe1286_0
+|        |  |        +--| (95)
+|        |  |        |  +----Borowiec2015_Total1080_Saccoglossus_kowalevskii_10224_OG397.fasta.aln_gene453
+|        |  |     +--| (98)
+|        |  |     |  |       +--Borowiec2015_Total1080_Strongylocentrotus_purpuratus_7668_OG397.fasta.aln_gene453
+|        |  |     |  |    +--| (52)
+|        |  |     |  |    |  +--Hejnol2009_Strongylocentrotus_purpuratus_7668_Tribe1286_0
+|        |  |     |  +----| (100)
+|        |  |     |       +--Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe1006
+|        |  |  +--| (68)
+|        |  |  |  |               +--Borowiec2015_Total1080_Homo_sapiens_9606_OG397.fasta.aln_gene453
+|        |  |  |  |            +--| (99)
+|        |  |  |  |            |  |  +--Dunn2008_Homo_sapiens_9606_Tribe1006
+|        |  |  |  |            |  +**| (67)
+|        |  |  |  |            |     +--Hejnol2009_Homo_sapiens_9606_Tribe1286_0
+|        |  |  |  |         +--| (51)
+|        |  |  |  |         |  |  +---Borowiec2015_Total1080_Fugu_31032_OG397.fasta.aln_gene453
+|        |  |  |  |         |  +--| (90)
+|        |  |  |  |         |     +--Borowiec2015_Total1080_Xenopus_tropicalis_8364_OG397.fasta.aln_gene453
+|        |  |  |  |      +--| (48)
+|        |  |  |  |      |  +--Borowiec2015_Total1080_Latimeria_chalumnae_7897_OG397.fasta.aln_gene453
+|        |  |  |  |   +--| (52)
+|        |  |  |  |   |  |  +--Borowiec2015_Total1080_Gallus_gallus_9031_OG397.fasta.aln_gene453
+|        |  |  |  |   |  +--| (100)
+|        |  |  |  |   |     |  +--Dunn2008_Gallus_gallus_9031_Tribe1006
+|        |  |  |  |   |     +--| (73)
+|        |  |  |  |   |        +--Hejnol2009_Gallus_gallus_9031_Tribe1286_0
+|        |  |  |  +---| (100)
+|        |  |  |      +--Borowiec2015_Total1080_Anolis_carolinensis_28377_OG397.fasta.aln_gene453
+|        |  +--| (66)
+|        |     |                           +------------------Borowiec2015_Total1080_Danaus_plexippus_13037_OG397.fasta.aln_gene453
+|        |     |                       +---| (94)
+|        |     |                       |   +-------Borowiec2015_Total1080_Rhodnius_prolixus_13249_OG397.fasta.aln_gene453
+|        |     |                    +--| (90)
+|        |     |                    |  +------Borowiec2015_Total1080_Tribolium_castaneum_7070_OG397.fasta.aln_gene453
+|        |     |                 +--| (53)
+|        |     |                 |  |          +--Borowiec2015_Total1080_Drosophila_melanogaster_7227_OG397.fasta.aln_gene453
+|        |     |                 |  |       +**| (44)
+|        |     |                 |  |       |  +--Hejnol2009_Drosophila_melanogaster_7227_Tribe1286_0
+|        |     |                 |  |   +---| (98)
+|        |     |                 |  |   |   +--Dunn2008_Drosophila_melanogaster_7227_Tribe1006
+|        |     |                 |  +---| (97)
+|        |     |                 |      |           +-----Borowiec2015_Total1080_Apis_mellifera_7460_OG397.fasta.aln_gene453
+|        |     |                 |      +-----------| (100)
+|        |     |                 |                  +--Borowiec2015_Total1080_Bombus_terrestris_30195_OG397.fasta.aln_gene453
+|        |     |              +--| (63)
+|        |     |              |  |  +-------Borowiec2015_Total1080_Strigamia_maritima_126957_OG397.fasta.aln_gene453
+|        |     |              |  +--| (62)
+|        |     |              |     |               +--Dunn2008_Anoplodactylus_eroticus_488521_Tribe1006
+|        |     |              |     +---------------| (100)
+|        |     |              |                     +--Hejnol2009_Anoplodactylus_eroticus_488521_Tribe1286_0
+|        |     |           +--| (45)
+|        |     |           |  |        +--Borowiec2015_Total1080_Daphnia_magna_35525_OG397.fasta.aln_gene453
+|        |     |           |  +--------| (100)
+|        |     |           |           +--Hejnol2009_Daphnia_pulex_6669_Tribe1286_0
+|        |     |        +--| (49)
+|        |     |        |  |     +----------Borowiec2015_Total1080_Tetranychus_urticae_32264_OG397.fasta.aln_gene453
+|        |     |        |  |  +--| (83)
+|        |     |        |  |  |  |    +--Dunn2008_Acanthoscurria_gomesiana_115339_Tribe1006
+|        |     |        |  |  |  +----| (100)
+|        |     |        |  |  |       +--Hejnol2009_Acanthoscurria_gomesiana_115339_Tribe1286_0
+|        |     |        |  +--| (49)
+|        |     |        |     |    +--Borowiec2015_Total1080_Ixodes_scapularis_6945_OG397.fasta.aln_gene453
+|        |     |        |     +----| (99)
+|        |     |        |          |  +--Dunn2008_Boophilus_microplus_6941_Tribe1006
+|        |     |        |          +--| (100)
+|        |     |        |             +--Hejnol2009_Boophilus_microplus_6941_Tribe1286_0
+|        |     |     +--| (67)
+|        |     |     |  |     +------------------------Borowiec2015_Total1080_Acyrthosiphon_pisum_7029_OG397.fasta.aln_gene453
+|        |     |     |  |  +--| (61)
+|        |     |     |  |  |  |  +--Dunn2008_Carcinus_maenas_6759_Tribe1006
+|        |     |     |  |  |  +--| (99)
+|        |     |     |  |  |     +--Hejnol2009_Carcinus_maenas_6759_Tribe1286_0
+|        |     |     |  +--| (23)
+|        |     |     |     +------------------Hejnol2009_Flaccisagitta_enflata_366393_Tribe1286_0
+|        |     |  +--| (42)
+|        |     |  |  |              +------Borowiec2015_Total1080_Brugia_malayi_6279_OG397.fasta.aln_gene453
+|        |     |  |  |           +--| (100)
+|        |     |  |  |           |  +--------Borowiec2015_Total1080_Caenorhabditis_elegans_6239_OG397.fasta.aln_gene453
+|        |     |  |  +-----------| (100)
+|        |     |  |              |      +--Dunn2008_Trichinella_spiralis_6334_Tribe1006
+|        |     |  |              |  +---| (100)
+|        |     |  |              |  |   +--Hejnol2009_Trichinella_spiralis_6334_Tribe1286_0
+|        |     |  |              +--| (52)
+|        |     |  |                 |      +--Dunn2008_Xiphinema_index_46003_Tribe1006
+|        |     |  |                 +------| (100)
+|        |     |  |                        +--Hejnol2009_Xiphinema_index_46003_Tribe1286_0
+|        |     +--| (56)
+|        |        |                        +--Borowiec2015_Total1080_Lottia_gigantea_225164_OG397.fasta.aln_gene453
+|        |        |                  +-----| (100)
+|        |        |                  |     +--Hejnol2009_Lottia_gigantea_225164_Tribe1286_0
+|        |        |            +-----| (98)
+|        |        |            |     |     +--Borowiec2015_Total1080_Pinctada_fucata_50426_OG397.fasta.aln_gene453
+|        |        |            |     +-----| (100)
+|        |        |            |           |  +--Dunn2008_Crassostrea_virginica_6565_Tribe1006
+|        |        |            |           +--| (100)
+|        |        |            |              +--Hejnol2009_Crassostrea_virginica_6565_Tribe1286_0
+|        |        |         +**| (50)
+|        |        |         |  |                           +--Dunn2008_Echinococcus_granulosus_6210_Tribe1006
+|        |        |         |  |                        +--| (100)
+|        |        |         |  |                        |  +--Hejnol2009_Echinococcus_granulosus_6210_Tribe1286_0
+|        |        |         |  |               +--------| (100)
+|        |        |         |  |               |        +--Hejnol2009_Taenia_solium_6204_Tribe1286_0
+|        |        |         |  |            +--| (46)
+|        |        |         |  |            |  |      +--Dunn2008_Schmidtea_mediterranea_79327_Tribe1006
+|        |        |         |  |            |  +------| (100)
+|        |        |         |  |            |         +--Hejnol2009_Schmidtea_mediterranea_79327_Tribe1286_0
+|        |        |         |  +------------| (97)
+|        |        |         |               |        +--Dunn2008_Macrostomum_lignano_282301_Tribe1006
+|        |        |         |               +--------| (100)
+|        |        |         |                        +--Hejnol2009_Macrostomum_lignano_282301_Tribe1286_0
+|        |        |     +---| (47)
+|        |        |     |   +--------------------------------Hejnol2009_Nemertoderma_westbladi_172109_Tribe1286_0
+|        |        |  +--| (40)
+|        |        |  |  |              +--Borowiec2015_Total1080_Capitella_teleta_283909_OG397.fasta.aln_gene453
+|        |        |  |  |           +--| (100)
+|        |        |  |  |           |  +--Dunn2008_Capitella_teleta_283909_Tribe1006
+|        |        |  |  |  +--------| (100)
+|        |        |  |  |  |        |            +--Dunn2008_Haementeria_depressa_279730_Tribe1006
+|        |        |  |  |  |        |         +--| (84)
+|        |        |  |  |  |        |         |  +--Hejnol2009_Haementeria_depressa_279730_Tribe1286_0
+|        |        |  |  |  |        |      +--| (66)
+|        |        |  |  |  |        |      |  +--Hejnol2009_Helobdella_robusta_6412_Tribe1286_0
+|        |        |  |  |  |        |  +---| (99)
+|        |        |  |  |  |        |  |   |  +--Dunn2008_Lumbricus_rubellus_35632_Tribe1006
+|        |        |  |  |  |        |  |   +--| (97)
+|        |        |  |  |  |        |  |      +--Hejnol2009_Lumbricus_rubellus_35632_Tribe1286_0
+|        |        |  |  |  |        +--| (86)
+|        |        |  |  |  |           |  +--Dunn2008_Urechis_caupo_6431_Tribe1006
+|        |        |  |  |  |           +--| (100)
+|        |        |  |  |  |              +--Hejnol2009_Urechis_caupo_6431_Tribe1286_0
+|        |        |  |  +--| (96)
+|        |        |  |     |         +--Dunn2008_Terebratalia_transversa_34513_Tribe1006
+|        |        |  |     +---------| (100)
+|        |        |  |               +--Hejnol2009_Terebratalia_transversa_34513_Tribe1286_0
+|        |        +--| (38)
+|        |           |                     +--Dunn2008_Carinoma_mutabilis_187807_Tribe1006
+|        |           |  +------------------| (100)
+|        |           |  |                  +--Hejnol2009_Carinoma_mutabilis_187807_Tribe1286_0
+|        |           +--| (44)
+|        |              |  +-----------Hejnol2009_Brachionus_plicatilis_10195_Tribe1286_0
+|        |              +--| (69)
+|        |                 +--------Hejnol2009_Philodina_roseola_96448_Tribe1286_0
+|     +--| (59)
+|     |  |                       +--Borowiec2015_Total1080_Mnemiopsis_leidyi_27923_OG397.fasta.aln_gene453
+|     |  |             +---------| (100)
+|     |  |             |         |      +--Dunn2008_Mertensiid_sp_140499_Tribe1006
+|     |  |             |         +------| (100)
+|     |  |             |                +--Hejnol2009_Mertensiid_sp_140499_Tribe1286_0
+|     |  |       +-----| (66)
+|     |  |       |     |                                     +--Dunn2008_Cryptococcus_neoformans_5207_Tribe1006
+|     |  |       |     +-------------------------------------| (100)
+|     |  |       |                                           +--Hejnol2009_Cryptococcus_neoformans_5207_Tribe1286_0
+|     |  |  +----| (65)
+|     |  |  |    |       +--Dunn2008_Capsaspora_owczarzaki_192875_Tribe1006
+|     |  |  |    +-------| (100)
+|     |  |  |            +--Hejnol2009_Capsaspora_owczarzaki_192875_Tribe1286_0
+|     |  +--| (54)
+|     |     +-----Hejnol2009_Suberites_domuncula_55567_Tribe1286_0
+|  +--| (89)
+|  |  |            +-----------------Hejnol2009_Convoluta_pulchra_52062_Tribe1286_0
+|  |  +------------| (88)
+|  |               +--------Hejnol2009_Symsagittifera_roscoffensis_84072_Tribe1286_0
++--| (100)
+   |          +--Dunn2008_Monosiga_ovata_81526_Tribe1006
+   +----------| (100)
+              +--Hejnol2009_Monosiga_ovata_81526_Tribe1286_0
+
+
+Consensus tree in newick format: 
+
+(Borowiec2015_Total1080_Salpingoeca_rosetta_946362_OG397.fasta.aln_gene453:0.7861063512,(Borowiec2015_Total1080_Monosiga_brevicollis_81824_OG397.fasta.aln_gene453:0.0000021514,Hejnol2009_Monosiga_brevicollis_81824_Tribe1286_0:0.0000029001)100:0.5600520000,(((((((Borowiec2015_Total1080_Amphimedon_queenslandica_400682_OG397.fasta.aln_gene453:0.0263134915,Hejnol2009_Amphimedon_queenslandica_400682_Tribe1286_0:0.0000027863)100:1.1212130000,(Borowiec2015_Total1080_Trichoplax_adhaerens_10228_OG397.fasta.aln_gene453:0.0000023624,Hejnol2009_Trichoplax_adhaerens_10228_Tribe1286_0:0.0000029001)100:1.0022150000)93:0.1696550000,(Borowiec2015_Total1080_Ciona_savignyi_51511_OG397.fasta.aln_gene453:3.5022686173,(((Borowiec2015_Total1080_Nematostella_vectensis_45351_OG397.fasta.aln_gene453:0.0296788705,(Dunn2008_Nematostella_vectensis_45351_Tribe1006:0.0001600091,Hejnol2009_Nematostella_vectensis_45351_Tribe1286_0:0.0000029001)60:0.0026190000)96:0.3194770000,(((Borowiec2015_Total1080_Hydra_magnipapillata_6087_OG397.fasta.aln_gene453:0.0000028926,Dunn2008_Hydra_vulgaris_01_6087_Tribe1006:0.0000029001)93:0.0000030000,Hejnol2009_Hydra_vulgaris_01_6087_Tribe1286_0:0.0000029001)100:1.2352320000,(Dunn2008_Cyanea_capillata_27804_Tribe1006:0.0000023633,Hejnol2009_Cyanea_capillata_27804_Tribe1286_0:0.0000029001)100:1.2079450000)96:0.6666410000)92:0.4220170000,(Borowiec2015_Total1080_Acropora_digitifera_70779_OG397.fasta.aln_gene453:0.0118861832,(Dunn2008_Acropora_millepora_45264_Tribe1006:0.0000029241,Hejnol2009_Acropora_millepora_45264_Tribe1286_0:0.0000020833)100:0.3300060000)100:0.4161790000)98:0.3475870000)63:0.1911580000)58:0.0971470000,(((((Borowiec2015_Total1080_Branchiostoma_floridae_7739_OG397.fasta.aln_gene453:0.0000028926,(Dunn2008_Branchiostoma_floridae_7739_Tribe1006:0.0920381356,Hejnol2009_Branchiostoma_floridae_7739_Tribe1286_0:0.0000029001)50:0.0000030000)100:0.8210620000,Borowiec2015_Total1080_Saccoglossus_kowalevskii_10224_OG397.fasta.aln_gene453:0.5034588938)95:0.2351080000,((Borowiec2015_Total1080_Strongylocentrotus_purpuratus_7668_OG397.fasta.aln_gene453:0.0547433238,Hejnol2009_Strongylocentrotus_purpuratus_7668_Tribe1286_0:0.0000029001)52:0.0032450000,Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe1006:0.0000029081)100:0.4736870000)98:0.2667640000,(((((Borowiec2015_Total1080_Homo_sapiens_9606_OG397.fasta.aln_gene453:0.2086862499,(Dunn2008_Homo_sapiens_9606_Tribe1006:0.0000024553,Hejnol2009_Homo_sapiens_9606_Tribe1286_0:0.0000029001)67:0.0000020000)99:0.1792240000,(Borowiec2015_Total1080_Fugu_31032_OG397.fasta.aln_gene453:0.3993068273,Borowiec2015_Total1080_Xenopus_tropicalis_8364_OG397.fasta.aln_gene453:0.1274141288)90:0.0374400000)51:0.0441070000,Borowiec2015_Total1080_Latimeria_chalumnae_7897_OG397.fasta.aln_gene453:0.2934142221)48:0.0746490000,(Borowiec2015_Total1080_Gallus_gallus_9031_OG397.fasta.aln_gene453:0.0000022339,(Dunn2008_Gallus_gallus_9031_Tribe1006:0.0218230997,Hejnol2009_Gallus_gallus_9031_Tribe1286_0:0.0000029001)73:0.0413720000)100:0.3071890000)52:0.0426590000,Borowiec2015_Total1080_Anolis_carolinensis_28377_OG397.fasta.aln_gene453:0.0950461652)100:0.4319170000)68:0.0864530000,(((((((((Borowiec2015_Total1080_Danaus_plexippus_13037_OG397.fasta.aln_gene453:1.7903634956,Borowiec2015_Total1080_Rhodnius_prolixus_13249_OG397.fasta.aln_gene453:0.8060924034)94:0.4344920000,Borowiec2015_Total1080_Tribolium_castaneum_7070_OG397.fasta.aln_gene453:0.7112292887)90:0.3265240000,(((Borowiec2015_Total1080_Drosophila_melanogaster_7227_OG397.fasta.aln_gene453:0.0000023949,Hejnol2009_Drosophila_melanogaster_7227_Tribe1286_0:0.0000029001)44:0.0000020000,Dunn2008_Drosophila_melanogaster_7227_Tribe1006:0.0442258829)98:0.4314880000,(Borowiec2015_Total1080_Apis_mellifera_7460_OG397.fasta.aln_gene453:0.5649388369,Borowiec2015_Total1080_Bombus_terrestris_30195_OG397.fasta.aln_gene453:0.1805730618)100:1.1628350000)97:0.3921320000)53:0.2873450000,(Borowiec2015_Total1080_Strigamia_maritima_126957_OG397.fasta.aln_gene453:0.8075719529,(Dunn2008_Anoplodactylus_eroticus_488521_Tribe1006:0.0000028926,Hejnol2009_Anoplodactylus_eroticus_488521_Tribe1286_0:0.0000029001)100:1.4984280000)62:0.2666850000)63:0.3559190000,(Borowiec2015_Total1080_Daphnia_magna_35525_OG397.fasta.aln_gene453:0.0000027283,Hejnol2009_Daphnia_pulex_6669_Tribe1286_0:0.0000029001)100:0.8634900000)45:0.2020080000,((Borowiec2015_Total1080_Tetranychus_urticae_32264_OG397.fasta.aln_gene453:0.9961252339,(Dunn2008_Acanthoscurria_gomesiana_115339_Tribe1006:0.0000023633,Hejnol2009_Acanthoscurria_gomesiana_115339_Tribe1286_0:0.0000029001)100:0.4992750000)83:0.1381670000,(Borowiec2015_Total1080_Ixodes_scapularis_6945_OG397.fasta.aln_gene453:0.3114626920,(Dunn2008_Boophilus_microplus_6941_Tribe1006:0.0000024553,Hejnol2009_Boophilus_microplus_6941_Tribe1286_0:0.0000029001)100:0.1620750000)99:0.5179160000)49:0.0178250000)49:0.0686930000,((Borowiec2015_Total1080_Acyrthosiphon_pisum_7029_OG397.fasta.aln_gene453:2.3018784139,(Dunn2008_Carcinus_maenas_6759_Tribe1006:0.0000027051,Hejnol2009_Carcinus_maenas_6759_Tribe1286_0:0.0000029001)99:0.2658520000)61:0.1277700000,Hejnol2009_Flaccisagitta_enflata_366393_Tribe1286_0:1.7140953300)23:0.0087240000)67:0.1101530000,((Borowiec2015_Total1080_Brugia_malayi_6279_OG397.fasta.aln_gene453:0.6404960605,Borowiec2015_Total1080_Caenorhabditis_elegans_6239_OG397.fasta.aln_gene453:0.8857802876)100:0.2720880000,((Dunn2008_Trichinella_spiralis_6334_Tribe1006:0.0000027051,Hejnol2009_Trichinella_spiralis_6334_Tribe1286_0:0.0000029001)100:0.4095250000,(Dunn2008_Xiphinema_index_46003_Tribe1006:0.0000023633,Hejnol2009_Xiphinema_index_46003_Tribe1286_0:0.0000029001)100:0.6299870000)52:0.1687960000)100:1.0815370000)42:0.2534870000,((((((Borowiec2015_Total1080_Lottia_gigantea_225164_OG397.fasta.aln_gene453:0.0000022076,Hejnol2009_Lottia_gigantea_225164_Tribe1286_0:0.0000029001)100:0.5519300000,(Borowiec2015_Total1080_Pinctada_fucata_50426_OG397.fasta.aln_gene453:0.1431291121,(Dunn2008_Crassostrea_virginica_6565_Tribe1006:0.0000029241,Hejnol2009_Crassostrea_virginica_6565_Tribe1286_0:0.0000029001)100:0.3244270000)100:0.6084910000)98:0.5747470000,((((Dunn2008_Echinococcus_granulosus_6210_Tribe1006:0.0000026255,Hejnol2009_Echinococcus_granulosus_6210_Tribe1286_0:0.0000029001)100:0.2323500000,Hejnol2009_Taenia_solium_6204_Tribe1286_0:0.0280634624)100:0.8660160000,(Dunn2008_Schmidtea_mediterranea_79327_Tribe1006:0.0000021057,Hejnol2009_Schmidtea_mediterranea_79327_Tribe1286_0:0.0000029001)100:0.6992240000)46:0.0137250000,(Dunn2008_Macrostomum_lignano_282301_Tribe1006:0.0000027051,Hejnol2009_Macrostomum_lignano_282301_Tribe1286_0:0.0000029001)100:0.8626970000)97:1.2564910000)50:0.0000020000,Hejnol2009_Nemertoderma_westbladi_172109_Tribe1286_0:2.9700097289)47:0.4371970000,(((Borowiec2015_Total1080_Capitella_teleta_283909_OG397.fasta.aln_gene453:0.0534583172,Dunn2008_Capitella_teleta_283909_Tribe1006:0.0000029081)100:0.3403910000,((((Dunn2008_Haementeria_depressa_279730_Tribe1006:0.0000024370,Hejnol2009_Haementeria_depressa_279730_Tribe1286_0:0.0000029001)84:0.0024420000,Hejnol2009_Helobdella_robusta_6412_Tribe1286_0:0.0900509260)66:0.1332890000,(Dunn2008_Lumbricus_rubellus_35632_Tribe1006:0.0000029241,Hejnol2009_Lumbricus_rubellus_35632_Tribe1286_0:0.0000029001)97:0.1301770000)99:0.3675510000,(Dunn2008_Urechis_caupo_6431_Tribe1006:0.0000029241,Hejnol2009_Urechis_caupo_6431_Tribe1286_0:0.0000029001)100:0.1697250000)86:0.1139350000)100:0.8537430000,(Dunn2008_Terebratalia_transversa_34513_Tribe1006:0.0000029571,Hejnol2009_Terebratalia_transversa_34513_Tribe1286_0:0.0000029001)100:0.9404750000)96:0.1822470000)40:0.2130330000,((Dunn2008_Carinoma_mutabilis_187807_Tribe1006:0.0000023633,Hejnol2009_Carinoma_mutabilis_187807_Tribe1286_0:0.0000029001)100:1.7798950000,(Hejnol2009_Brachionus_plicatilis_10195_Tribe1286_0:1.1438418413,Hejnol2009_Philodina_roseola_96448_Tribe1286_0:0.8569681031)69:0.1501850000)44:0.3294640000)38:0.1886130000)56:0.1733220000)66:0.1976880000)62:0.1438970000,((((Borowiec2015_Total1080_Mnemiopsis_leidyi_27923_OG397.fasta.aln_gene453:0.0000020574,(Dunn2008_Mertensiid_sp_140499_Tribe1006:0.0000027051,Hejnol2009_Mertensiid_sp_140499_Tribe1286_0:0.0000029001)100:0.6897160000)100:0.9186360000,(Dunn2008_Cryptococcus_neoformans_5207_Tribe1006:0.0000029571,Hejnol2009_Cryptococcus_neoformans_5207_Tribe1286_0:0.0000029001)100:3.4214710000)66:0.5713050000,(Dunn2008_Capsaspora_owczarzaki_192875_Tribe1006:0.0000022339,Hejnol2009_Capsaspora_owczarzaki_192875_Tribe1286_0:0.0000029001)100:0.7632750000)65:0.4780680000,Hejnol2009_Suberites_domuncula_55567_Tribe1286_0:0.5406573074)54:0.1068290000)59:0.1395440000,(Hejnol2009_Convoluta_pulchra_52062_Tribe1286_0:1.6231657443,Hejnol2009_Symsagittifera_roscoffensis_84072_Tribe1286_0:0.8180337219)88:1.1786610000)89:0.3481800000,(Dunn2008_Monosiga_ovata_81526_Tribe1006:0.0000027051,Hejnol2009_Monosiga_ovata_81526_Tribe1286_0:0.0000029001)100:1.0569580000)100:0.3324050000);
+
+TIME STAMP
+----------
+
+Date and time: Mon Aug 29 19:51:49 2022
+Total CPU time used: 15562.58171 seconds (4h:19m:22s)
+Total wall-clock time used: 15635.5173 seconds (4h:20m:35s)
+

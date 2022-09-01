@@ -1,0 +1,929 @@
+IQ-TREE 1.5.3 built Mar 12 2017
+
+Input file name: /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component636.mafft
+Type of analysis: tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 668235
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh (2015)
+IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol. Biol. Evol., 32:268-274.
+http://dx.doi.org/10.1093/molbev/msu300
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Bui Quang Minh, Minh Anh Thi Nguyen, and Arndt von Haeseler (2013) Ultrafast
+approximation for phylogenetic bootstrap. Mol. Biol. Evol., 30:1188-1195.
+http://dx.doi.org/10.1093/molbev/mst024
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 186 sequences with 448 amino-acid sites
+Number of constant sites: 63 (= 14.0625% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 63 (= 14.0625% of all sites)
+Number of distinct site patterns: 445
+
+SUBSTITUTION PROCESS
+--------------------
+
+Mixture model of substitution: MIX{LG+F+F,LG+FC60pi1,LG+FC60pi2,LG+FC60pi3,LG+FC60pi4,LG+FC60pi5,LG+FC60pi6,LG+FC60pi7,LG+FC60pi8,LG+FC60pi9,LG+FC60pi10,LG+FC60pi11,LG+FC60pi12,LG+FC60pi13,LG+FC60pi14,LG+FC60pi15,LG+FC60pi16,LG+FC60pi17,LG+FC60pi18,LG+FC60pi19,LG+FC60pi20,LG+FC60pi21,LG+FC60pi22,LG+FC60pi23,LG+FC60pi24,LG+FC60pi25,LG+FC60pi26,LG+FC60pi27,LG+FC60pi28,LG+FC60pi29,LG+FC60pi30,LG+FC60pi31,LG+FC60pi32,LG+FC60pi33,LG+FC60pi34,LG+FC60pi35,LG+FC60pi36,LG+FC60pi37,LG+FC60pi38,LG+FC60pi39,LG+FC60pi40,LG+FC60pi41,LG+FC60pi42,LG+FC60pi43,LG+FC60pi44,LG+FC60pi45,LG+FC60pi46,LG+FC60pi47,LG+FC60pi48,LG+FC60pi49,LG+FC60pi50,LG+FC60pi51,LG+FC60pi52,LG+FC60pi53,LG+FC60pi54,LG+FC60pi55,LG+FC60pi56,LG+FC60pi57,LG+FC60pi58,LG+FC60pi59,LG+FC60pi60}+G4
+
+  No  Component      Rate    Weight   Parameters
+   1  LG+F          1.0000   0.1205   LG+F
+   2  LG+FC60pi1    1.0000   0.0070   LG+FC60pi1
+   3  LG+FC60pi2    1.0000   0.0100   LG+FC60pi2
+   4  LG+FC60pi3    1.0000   0.0118   LG+FC60pi3
+   5  LG+FC60pi4    1.0000   0.0029   LG+FC60pi4
+   6  LG+FC60pi5    1.0000   0.0091   LG+FC60pi5
+   7  LG+FC60pi6    1.0000   0.0151   LG+FC60pi6
+   8  LG+FC60pi7    1.0000   0.0120   LG+FC60pi7
+   9  LG+FC60pi8    1.0000   0.0274   LG+FC60pi8
+  10  LG+FC60pi9    1.0000   0.0064   LG+FC60pi9
+  11  LG+FC60pi10   1.0000   0.0167   LG+FC60pi10
+  12  LG+FC60pi11   1.0000   0.0341   LG+FC60pi11
+  13  LG+FC60pi12   1.0000   0.0081   LG+FC60pi12
+  14  LG+FC60pi13   1.0000   0.0035   LG+FC60pi13
+  15  LG+FC60pi14   1.0000   0.0218   LG+FC60pi14
+  16  LG+FC60pi15   1.0000   0.0107   LG+FC60pi15
+  17  LG+FC60pi16   1.0000   0.0000   LG+FC60pi16
+  18  LG+FC60pi17   1.0000   0.0208   LG+FC60pi17
+  19  LG+FC60pi18   1.0000   0.0136   LG+FC60pi18
+  20  LG+FC60pi19   1.0000   0.0137   LG+FC60pi19
+  21  LG+FC60pi20   1.0000   0.0000   LG+FC60pi20
+  22  LG+FC60pi21   1.0000   0.0000   LG+FC60pi21
+  23  LG+FC60pi22   1.0000   0.0925   LG+FC60pi22
+  24  LG+FC60pi23   1.0000   0.0238   LG+FC60pi23
+  25  LG+FC60pi24   1.0000   0.0000   LG+FC60pi24
+  26  LG+FC60pi25   1.0000   0.0038   LG+FC60pi25
+  27  LG+FC60pi26   1.0000   0.0248   LG+FC60pi26
+  28  LG+FC60pi27   1.0000   0.0223   LG+FC60pi27
+  29  LG+FC60pi28   1.0000   0.0178   LG+FC60pi28
+  30  LG+FC60pi29   1.0000   0.0119   LG+FC60pi29
+  31  LG+FC60pi30   1.0000   0.0463   LG+FC60pi30
+  32  LG+FC60pi31   1.0000   0.0094   LG+FC60pi31
+  33  LG+FC60pi32   1.0000   0.0156   LG+FC60pi32
+  34  LG+FC60pi33   1.0000   0.0327   LG+FC60pi33
+  35  LG+FC60pi34   1.0000   0.0185   LG+FC60pi34
+  36  LG+FC60pi35   1.0000   0.0155   LG+FC60pi35
+  37  LG+FC60pi36   1.0000   0.0226   LG+FC60pi36
+  38  LG+FC60pi37   1.0000   0.0131   LG+FC60pi37
+  39  LG+FC60pi38   1.0000   0.0176   LG+FC60pi38
+  40  LG+FC60pi39   1.0000   0.0000   LG+FC60pi39
+  41  LG+FC60pi40   1.0000   0.0217   LG+FC60pi40
+  42  LG+FC60pi41   1.0000   0.0034   LG+FC60pi41
+  43  LG+FC60pi42   1.0000   0.0030   LG+FC60pi42
+  44  LG+FC60pi43   1.0000   0.0114   LG+FC60pi43
+  45  LG+FC60pi44   1.0000   0.0045   LG+FC60pi44
+  46  LG+FC60pi45   1.0000   0.0096   LG+FC60pi45
+  47  LG+FC60pi46   1.0000   0.0084   LG+FC60pi46
+  48  LG+FC60pi47   1.0000   0.0282   LG+FC60pi47
+  49  LG+FC60pi48   1.0000   0.0272   LG+FC60pi48
+  50  LG+FC60pi49   1.0000   0.0000   LG+FC60pi49
+  51  LG+FC60pi50   1.0000   0.0137   LG+FC60pi50
+  52  LG+FC60pi51   1.0000   0.0042   LG+FC60pi51
+  53  LG+FC60pi52   1.0000   0.0053   LG+FC60pi52
+  54  LG+FC60pi53   1.0000   0.0000   LG+FC60pi53
+  55  LG+FC60pi54   1.0000   0.0154   LG+FC60pi54
+  56  LG+FC60pi55   1.0000   0.0420   LG+FC60pi55
+  57  LG+FC60pi56   1.0000   0.0064   LG+FC60pi56
+  58  LG+FC60pi57   1.0000   0.0000   LG+FC60pi57
+  59  LG+FC60pi58   1.0000   0.0238   LG+FC60pi58
+  60  LG+FC60pi59   1.0000   0.0131   LG+FC60pi59
+  61  LG+FC60pi60   1.0000   0.0052   LG+FC60pi60
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 0.5460
+
+ Category  Relative_rate  Proportion
+  1         0.0422         0.2500
+  2         0.2809         0.2500
+  3         0.8510         0.2500
+  4         2.8259         0.2500
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -33005.6445 (s.e. 1345.2926)
+Unconstrained log-likelihood (without tree): -2730.7885
+Number of free parameters (#branches + #model parameters): 449
+Akaike information criterion (AIC) score: 66909.2891
+Corrected Akaike information criterion (AICc) score: 471009.2891
+Bayesian information criterion (BIC) score: 68752.3412
+
+**************************** WARNING ****************************
+Number of parameters (K, model parameters and branch lengths): 449
+Sample size (n, alignment length): 448
+
+Given that K>=n, the parameter estimates might be inaccurate.
+Thus, phylogenetic estimates should be interpreted with caution.
+
+Ideally, it is desirable that n >> K. When selecting optimal models,
+1. use AIC or BIC if n > 40K;
+2. use AICc or BIC if 40K >= n > K;
+3. be extremely cautious if n <= K
+
+To improve the situation (3), consider the following options:
+  1. Increase the sample size (n)
+  2. Decrease the number of parameters (K) to be estimated. If
+     possible:
+     a. Remove the least important sequences from the alignment
+     b. Specify some of the parameter values for the substitution
+        model (e.g., the nucleotide or amino acid frequencies)
+     c. Specify some of the parameter values for the rates-across-
+        sites model (e.g., the shape parameter for the discrete
+        Gamma distribution, the proportion of invariable sites, or
+        the rates of change for different rate categories under
+        the FreeRate model)
+
+Reference:
+Burnham KR, Anderson DR (2002). Model Selection and Multimodel
+Inference: A Practical Information-Theoretic Approach. Springer,
+New York.
+************************ END OF WARNING ***********************
+
+Total tree length (sum of branch lengths): 39.8004
+Sum of internal branch lengths: 23.2543 (58.4274% of tree length)
+
+WARNING: 11 near-zero internal branches (<0.0022) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Chang2015_Acanthoeca_sp_81532_srs' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++--Chang2015_Acanthoeca_sp_81532_srs
+|
+|                                                          +--Chang2015_Acropora_cervicornis_6130_srs
+|                                                       +--| (100)
+|                                                       |  +--Philippe2009_Acropora_millepora_45264_Gene_0120
+|                                                    +--| (100)
+|                                                    |  |     +--Chang2015_Orbicella_faveolata_48498_srs
+|                                                    |  |  +--| (94)
+|                                                    |  |  |  +--Chang2015_Pocillopora_damicornis_46731_srs
+|                                                    |  +--| (100)
+|                                                    |     +--Chang2015_Porites_australiensis_51061_srs
+|                                                 +--| (82)
+|                                                 |  |        +--Chang2015_Aiptasia_pallida_1720309_srs
+|                                                 |  |     +--| (100)
+|                                                 |  |     |  +--Chang2015_Hormathia_digitata_1163372_srs
+|                                                 |  |  +--| (100)
+|                                                 |  |  |  |  +--Chang2015_Bolocera_tuediae_1163374_srs
+|                                                 |  |  |  +--| (99)
+|                                                 |  |  |     +--Chang2015_Urticina_eques_417072_srs
+|                                                 |  +--| (100)
+|                                                 |     |  +--Chang2015_Edwardsiella_lineata_132407_srs
+|                                                 |     +--| (100)
+|                                                 |        |  +**Chang2015_Nematostella_vectensis_45351_srs
+|                                                 |        +--| (100)
+|                                                 |           +**Philippe2009_Nematostella_vectensis_45351_Gene_0120
+|                                              +--| (98)
+|                                              |  |      +--Chang2015_Eunicella_cavolinii_317547_srs
+|                                              |  |   +--| (98)
+|                                              |  |   |  |  +**Chang2015_Gorgonia_ventalina_204384_srs
+|                                              |  |   |  +--| (100)
+|                                              |  |   |     +--Simion2017_Gorgonia_ventalina_204384_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                              |  +---| (100)
+|                                              |      +--Simion2017_Pennatula_rubra_1820127_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           +--| (77)
+|                                           |  |              +**Chang2015_Aurelia_aurita_6145_srs
+|                                           |  |           +--| (100)
+|                                           |  |           |  +--Simion2017_Aurelia_aurita_6145_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  |        +--| (100)
+|                                           |  |        |  |  +**Chang2015_Stomolophus_meleagris_168796_srs
+|                                           |  |        |  +--| (100)
+|                                           |  |        |     +--Simion2017_Stomolophus_meleagris_168796_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  |     +--| (98)
+|                                           |  |     |  +----Simion2017_Pelagia_noctiluca_400838_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  |  +--| (100)
+|                                           |  |  |  |                          +**Chang2015_Clytia_hemisphaerica_252671_srs
+|                                           |  |  |  |                       +**| (72)
+|                                           |  |  |  |                       |  +**Philippe2009_Clytia_hemisphaerica_252671_Gene_0120
+|                                           |  |  |  |                    +--| (100)
+|                                           |  |  |  |                    |  +--Simion2017_Clytia_hemisphaerica_252671_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  |  |  |                 +--| (97)
+|                                           |  |  |  |                 |  |  +--Chang2015_Ectopleura_larynx_264052_srs
+|                                           |  |  |  |                 |  +--| (99)
+|                                           |  |  |  |                 |     |     +**Chang2015_Hydra_vulgaris_01_6087_srs
+|                                           |  |  |  |                 |     |  +**| (74)
+|                                           |  |  |  |                 |     |  |  +**Philippe2009_Hydra_magnipapillata_6087_Gene_0120
+|                                           |  |  |  |                 |     +--| (100)
+|                                           |  |  |  |                 |        +--Simion2017_Hydra_vulgaris_01_6087_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  |  |  |              +--| (97)
+|                                           |  |  |  |              |  |  +**Chang2015_Hydractinia_polyclina_589945_srs
+|                                           |  |  |  |              |  +--| (97)
+|                                           |  |  |  |              |     +--Simion2017_Hydractinia_polyclina_589945_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  |  |  |           +--| (96)
+|                                           |  |  |  |           |  |  +**Chang2015_Nanomia_bijuga_168759_srs
+|                                           |  |  |  |           |  +--| (100)
+|                                           |  |  |  |           |     +--Simion2017_Nanomia_bijuga_168759_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  |  |  |        +--| (99)
+|                                           |  |  |  |        |  +--Simion2017_Liriope_tetraphylla_37524_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  |  |  |     +--| (99)
+|                                           |  |  |  |     |  |  +--Chang2015_Craspedacusta_sowerbii_128124_srs
+|                                           |  |  |  |     |  +--| (100)
+|                                           |  |  |  |     |     +--Simion2017_Craspedacusta_sowerbii_128124_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  |  |  |  +--| (77)
+|                                           |  |  |  |  |  |    +--Simion2017_Atolla_vanhoeffeni_86043_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  |  |  |  |  +----| (100)
+|                                           |  |  |  |  |       +--Simion2017_Periphylla_periphylla_880221_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  |  |  +--| (87)
+|                                           |  |  |     |     +--Chang2015_Tripedalia_cystophora_6141_srs
+|                                           |  |  |     |  +--| (100)
+|                                           |  |  |     |  |  +--Simion2017_Alatina_alata_1193083_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  |  |     +--| (89)
+|                                           |  |  |        +--Simion2017_Lucernariopsis_campanulata_1843190_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  +--| (89)
+|                                           |     |           +----Chang2015_Enteromyxum_leei_188704_srs
+|                                           |     |     +-----| (100)
+|                                           |     |     |     +----Chang2015_Kudoa_iwatai_269814_srs
+|                                           |     |  +--| (97)
+|                                           |     |  |  |       +----Chang2015_Myxobolus_cerebralis_59783_srs
+|                                           |     |  |  |  +----| (100)
+|                                           |     |  |  |  |    +--------Chang2015_Thelohanellus_kitauei_669202_srs
+|                                           |     |  |  +--| (81)
+|                                           |     |  |     +--------Chang2015_Sphaeromyxa_zaharoni_275449_srs
+|                                           |     +--| (94)
+|                                           |        +------Chang2015_Polypodium_hydriforme_43186_srs
+|                                        +**| (45)
+|                                        |  |          +**Chang2015_Trichoplax_adhaerens_10228_srs
+|                                        |  |       +**| (68)
+|                                        |  |       |  +**Philippe2009_Trichoplax_adhaerens_10228_Gene_0120
+|                                        |  +-------| (100)
+|                                        |          +--Simion2017_Trichoplax_adhaerens_10228_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                     +--| (59)
+|                                     |  +-----Philippe2009_Xenoturbella_bocki_242395_Gene_0120
+|                                  +--| (81)
+|                                  |  |                 +--Chang2015_Botryllus_schlosseri_30301_srs
+|                                  |  |              +--| (100)
+|                                  |  |              |  +--Philippe2009_Molgula_tectiformis_30286_Gene_0120
+|                                  |  |           +--| (100)
+|                                  |  |           |  |  +--Chang2015_Ciona_intestinalis_7719_srs
+|                                  |  |           |  +--| (100)
+|                                  |  |           |     +--Philippe2009_Ciona_savignyi_51511_Gene_0120
+|                                  |  |        +--| (100)
+|                                  |  |        |  |           +**Chang2015_Homo_sapiens_9606_srs
+|                                  |  |        |  |        +--| (100)
+|                                  |  |        |  |        |  +--Simion2017_Homo_sapiens_9606_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |        |  |     +--| (99)
+|                                  |  |        |  |     |  +--Philippe2009_Danio_rerio_7955_Gene_0120
+|                                  |  |        |  |  +--| (99)
+|                                  |  |        |  |  |  +--Chang2015_Latimeria_menadoensis_106881_srs
+|                                  |  |        |  +--| (100)
+|                                  |  |        |     |   +**Chang2015_Petromyzon_marinus_7757_srs
+|                                  |  |        |     +---| (100)
+|                                  |  |        |         +**Philippe2009_Petromyzon_marinus_7757_Gene_0120
+|                                  |  |     +--| (87)
+|                                  |  |     |  |      +**Chang2015_Saccoglossus_kowalevskii_10224_srs
+|                                  |  |     |  |   +--| (100)
+|                                  |  |     |  |   |  +--Simion2017_Saccoglossus_kowalevskii_10224_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |     |  +---| (100)
+|                                  |  |     |      +--Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0120
+|                                  |  |  +--| (50)
+|                                  |  |  |  |              +**Chang2015_Branchiostoma_floridae_7739_srs
+|                                  |  |  |  |           +**| (72)
+|                                  |  |  |  |           |  +**Philippe2009_Branchiostoma_floridae_7739_Gene_0120
+|                                  |  |  |  |     +-----| (100)
+|                                  |  |  |  |     |     +--Simion2017_Branchiostoma_floridae_7739_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |  |  |  +--| (70)
+|                                  |  |  |  |  |  |                 +--Chang2015_Capitella_teleta_283909_srs
+|                                  |  |  |  |  |  |              +**| (75)
+|                                  |  |  |  |  |  |              |  +**Philippe2009_Capitella_teleta_283909_Gene_0120
+|                                  |  |  |  |  |  |        +-----| (100)
+|                                  |  |  |  |  |  |        |     +--Simion2017_Capitella_teleta_283909_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |  |  |  |  |     +--| (99)
+|                                  |  |  |  |  |  |     |  |       +**Chang2015_Helobdella_robusta_6412_srs
+|                                  |  |  |  |  |  |     |  |    +--| (100)
+|                                  |  |  |  |  |  |     |  |    |  +**Philippe2009_Helobdella_robusta_6412_Gene_0120
+|                                  |  |  |  |  |  |     |  +----| (100)
+|                                  |  |  |  |  |  |     |       +--Simion2017_Helobdella_robusta_6412_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |  |  |  |  |  +--| (97)
+|                                  |  |  |  |  |  |  |  |        +**Chang2015_Crassostrea_gigas_29159_srs
+|                                  |  |  |  |  |  |  |  |     +--| (100)
+|                                  |  |  |  |  |  |  |  |     |  +--Simion2017_Crassostrea_gigas_29159_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |  |  |  |  |  |  |  +--| (65)
+|                                  |  |  |  |  |  |  |  |  |  |  +--Chang2015_Ilyanassa_obsoleta_1934733_srs
+|                                  |  |  |  |  |  |  |  |  |  +--| (100)
+|                                  |  |  |  |  |  |  |  |  |     |  +--Philippe2009_Aplysia_californica_6500_Gene_0120
+|                                  |  |  |  |  |  |  |  |  |     +--| (100)
+|                                  |  |  |  |  |  |  |  |  |        +--Simion2017_Aplysia_californica_6500_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |  |  |  |  |  |  +--| (100)
+|                                  |  |  |  |  |  |  |     |  +--Chang2015_Octopus_vulgaris_6645_srs
+|                                  |  |  |  |  |  |  |     +--| (68)
+|                                  |  |  |  |  |  |  |        +---Philippe2009_Euprymna_scolopes_6613_Gene_0120
+|                                  |  |  |  |  |  +--| (76)
+|                                  |  |  |  |  |     |             +**Chang2015_Daphnia_pulex_6669_srs
+|                                  |  |  |  |  |     |          +**| (73)
+|                                  |  |  |  |  |     |          |  +**Philippe2009_Daphnia_pulex_6669_Gene_0120
+|                                  |  |  |  |  |     |     +----| (100)
+|                                  |  |  |  |  |     |     |    +--Simion2017_Daphnia_pulex_6669_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |  |  |  |     |  +--| (80)
+|                                  |  |  |  |  |     |  |  |        +**Chang2015_Nasonia_vitripennis_7425_srs
+|                                  |  |  |  |  |     |  |  |     +--| (100)
+|                                  |  |  |  |  |     |  |  |     |  +**Philippe2009_Nasonia_vitripennis_7425_Gene_0120
+|                                  |  |  |  |  |     |  |  |  +--| (100)
+|                                  |  |  |  |  |     |  |  |  |  |   +**Chang2015_Pediculus_humanus_121225_srs
+|                                  |  |  |  |  |     |  |  |  |  +---| (100)
+|                                  |  |  |  |  |     |  |  |  |      +**Philippe2009_Pediculus_humanus_121225_Gene_0120
+|                                  |  |  |  |  |     |  |  +--| (99)
+|                                  |  |  |  |  |     |  |     +--Simion2017_Tribolium_castaneum_7070_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |  |  |  |     +--| (93)
+|                                  |  |  |  |  |        |           +**Chang2015_Ixodes_scapularis_6945_srs
+|                                  |  |  |  |  |        |        +--| (100)
+|                                  |  |  |  |  |        |        |  +**Philippe2009_Ixodes_scapularis_6945_Gene_0120
+|                                  |  |  |  |  |        |     +--| (100)
+|                                  |  |  |  |  |        |     |  +--Simion2017_Ixodes_scapularis_6945_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |  |  |  |        |  +--| (100)
+|                                  |  |  |  |  |        |  |  +--Philippe2009_Anoplodactylus_eroticus_488521_Gene_0120
+|                                  |  |  |  |  |        +--| (99)
+|                                  |  |  |  |  |           +---Chang2015_Strigamia_maritima_126957_srs
+|                                  |  |  |  +--| (49)
+|                                  |  |  |     |        +**Chang2015_Corticium_candelabrum_121492_srs
+|                                  |  |  |     |     +--| (100)
+|                                  |  |  |     |     |  +**Simion2017_Corticium_candelabrum_121492_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |  |     |  +--| (100)
+|                                  |  |  |     |  |  +--Simion2017_Plakina_jani_450361_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |  |     +--| (100)
+|                                  |  |  |        |        +**Chang2015_Oscarella_carmela_386100_srs
+|                                  |  |  |        |     +**| (76)
+|                                  |  |  |        |     |  +--Simion2017_Oscarella_carmela_386100_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |  |        |  +--| (100)
+|                                  |  |  |        |  |  +--Philippe2009_Oscarella_carmela_386100_Gene_0120
+|                                  |  |  |        +--| (100)
+|                                  |  |  |           |  +**Chang2015_Oscarella_sp_SN-2011_386100_srs
+|                                  |  |  |           +--| (100)
+|                                  |  |  |              +--Simion2017_Oscarella_species_121493_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  +--| (74)
+|                                  |     |  +---Chang2015_Patiria_miniata_46514_srs
+|                                  |     +--| (100)
+|                                  |        |      +**Chang2015_Strongylocentrotus_purpuratus_7668_srs
+|                                  |        |   +**| (92)
+|                                  |        |   |  +**Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0120
+|                                  |        +---| (100)
+|                                  |            +--Simion2017_Strongylocentrotus_purpuratus_7668_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               +--| (96)
+|                               |  |                 +**Chang2015_Amphimedon_queenslandica_400682_srs
+|                               |  |              +--| (100)
+|                               |  |              |  |  +**Philippe2009_Amphimedon_queenslandica_400682_Gene_0120
+|                               |  |              |  +--| (100)
+|                               |  |              |     +--Simion2017_Amphimedon_queenslandica_400682_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               |  |           +--| (100)
+|                               |  |           |  |  +--Chang2015_Petrosia_ficiformis_68564_srs
+|                               |  |           |  +--| (100)
+|                               |  |           |     +--Simion2017_Petrosia_ficiformis_68564_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               |  |        +--| (98)
+|                               |  |        |  |     +--Chang2015_Ephydatia_muelleri_6052_srs
+|                               |  |        |  |  +--| (100)
+|                               |  |        |  |  |  +--Simion2017_Spongilla_lacustris_6055_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               |  |        |  +--| (99)
+|                               |  |        |     |     +--Simion2017_Kirkpatrickia_variolosa_1631157_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               |  |        |     |  +--| (99)
+|                               |  |        |     |  |  +--Simion2017_Latrunculia_apicalis_1325597_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               |  |        |     +--| (100)
+|                               |  |        |        +--Simion2017_Mycale_phyllophila_1325607_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               |  |     +--| (87)
+|                               |  |     |  |       +**Chang2015_Chondrilla_nucula_220712_srs
+|                               |  |     |  |  +----| (100)
+|                               |  |     |  |  |    +--Simion2017_Chondrilla_nucula_220712_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               |  |     |  +--| (70)
+|                               |  |     |     |   +--Chang2015_Sarcotragus_fasciculatus_1234657_srs
+|                               |  |     |     +---| (100)
+|                               |  |     |         +--Simion2017_Pleraplysilla_spinifera_119433_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               |  |  +--| (81)
+|                               |  |  |  |                 +**Chang2015_Aphrocallistes_vastus_83887_srs
+|                               |  |  |  |              +--| (98)
+|                               |  |  |  |              |  +--Philippe2009_Heterochone_sp_367900_Gene_0120
+|                               |  |  |  |           +**| (51)
+|                               |  |  |  |           |  +-----Simion2017_Hyalonema_populiferum_1631155_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               |  |  |  +-----------| (96)
+|                               |  |  |              |          +**Chang2015_Euplectella_aspergillum_936045_srs
+|                               |  |  |              |     +----| (100)
+|                               |  |  |              |     |    +--Simion2017_Euplectella_aspergillum_936045_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               |  |  |              |  +--| (95)
+|                               |  |  |              |  |  +--Simion2017_Sympagella_nux_76350_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               |  |  |              +--| (98)
+|                               |  |  |                 +--Simion2017_Rossella_fibulata_1076269_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               |  +--| (59)
+|                               |     |   +---Chang2015_Leucetta_chagosensis_185688_srs
+|                               |     +---| (99)
+|                               |         |  +--Chang2015_Sycon_ciliatum_27933_srs
+|                               |         +--| (98)
+|                               |            +--Chang2015_Sycon_coactum_1009717_srs
+|                            +--| (85)
+|                            |  |             +**Chang2015_Amoebidium_parasiticum_4881_srs
+|                            |  |         +---| (100)
+|                            |  |         |   +--Philippe2009_Amoebidium_parasiticum_4881_Gene_0120
+|                            |  |  +------| (100)
+|                            |  |  |      |             +--Chang2015_Sphaeroforma_arctica_72019_srs
+|                            |  |  |      +-------------| (100)
+|                            |  |  |                    +--Simion2017_Sphaeroforma_arctica_72019_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                            |  +--| (87)
+|                            |     |                +**Chang2015_Capsaspora_owczarzaki_192875_srs
+|                            |     |             +--| (95)
+|                            |     |             |  +--Simion2017_Capsaspora_owczarzaki_192875_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                            |     |  +----------| (100)
+|                            |     |  |          +**Philippe2009_Capsaspora_owczarzaki_192875_Gene_0120
+|                            |     +--| (68)
+|                            |        |             +--Chang2015_Ministeria_vibrans_134558_srs
+|                            |        |  +----------| (100)
+|                            |        |  |          +--Simion2017_Ministeria_vibrans_134558_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                            |        +--| (84)
+|                            |           |                     +------Philippe2009_Allomyces_macrogynus_28583_Gene_0120
+|                            |           |                  +--| (97)
+|                            |           |                  |  |     +--Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0120
+|                            |           |                  |  +-----| (100)
+|                            |           |                  |        +--Philippe2009_Rhizopus_oryzae_64495_Gene_0120
+|                            |           +------------------| (100)
+|                            |                              |   +-----Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0120
+|                            |                              +---| (100)
+|                            |                                  +--Philippe2009_Spizellomyces_punctatus_109760_Gene_0120
+|                         +--| (100)
+|                         |  |                     +--Chang2015_Beroe_abyssicola_320166_srs
+|                         |  |                  +--| (100)
+|                         |  |                  |  +--Simion2017_Beroe_abyssicola_320166_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                         |  |               +--| (100)
+|                         |  |               |  +--Simion2017_Beroe_sp_10199_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                         |  |            +--| (99)
+|                         |  |            |  |              +--Chang2015_Mnemiopsis_leidyi_27923_srs
+|                         |  |            |  |           +**| (94)
+|                         |  |            |  |           |  +**Philippe2009_Mnemiopsis_leidyi_27923_Gene_0120
+|                         |  |            |  |        +--| (100)
+|                         |  |            |  |        |  +**Simion2017_Mnemiopsis_leidyi_27923_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                         |  |            |  |     +--| (100)
+|                         |  |            |  |     |  |  +--Simion2017_Bolinopsis_infundibulum_140455_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                         |  |            |  |     |  +--| (87)
+|                         |  |            |  |     |     +--Simion2017_Cestum_veneris_12997_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                         |  |            |  |  +--| (77)
+|                         |  |            |  |  |  +--Simion2017_Dryodora_glandiformis_1566677_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                         |  |            |  +--| (79)
+|                         |  |            |     |     +--Chang2015_Pleurobrachia_pileus_140457_srs
+|                         |  |            |     |  +--| (100)
+|                         |  |            |     |  |  |  +**Philippe2009_Pleurobrachia_pileus_140457_Gene_0120
+|                         |  |            |     |  |  +--| (100)
+|                         |  |            |     |  |     +**Simion2017_Pleurobrachia_species_34498_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                         |  |            |     +--| (100)
+|                         |  |            |        +--Simion2017_Hormiphora_californensis_1403702_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                         |  |         +--| (73)
+|                         |  |         |  +---Simion2017_Lampea_pancerina_1532213_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                         |  |      +--| (98)
+|                         |  |      |  |     +--Chang2015_Vallicula_multiformis_140489_srs
+|                         |  |      |  |  +--| (100)
+|                         |  |      |  |  |  +**Simion2017_Vallicula_multiformis_140489_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                         |  |      |  +--| (99)
+|                         |  |      |     +--Simion2017_Coeloplana_species_140473_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                         |  +------| (100)
+|                         |         |   +--Chang2015_Euplokamis_dunlapae_1403701_srs
+|                         |         +---| (100)
+|                         |             +**Simion2017_Euplokamis_dunlapae_1403701_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                      +--| (59)
+|                      |  |           +**Chang2015_Monosiga_ovata_81526_srs
+|                      |  |        +--| (100)
+|                      |  |        |  +**Philippe2009_Monosiga_ovata_81526_Gene_0120
+|                      |  |  +-----| (100)
+|                      |  |  |     +**Simion2017_Mylnosiga_fluctuans_19_1928486_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                      |  +--| (100)
+|                      |     +--Simion2017_Salpingoeca_helianthica_18_1928494_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                   +--| (71)
+|                   |  |  +------Simion2017_Codosiga_hollandica_17_1742608_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                   |  +--| (94)
+|                   |     |  +---Simion2017_Salpingoeca_macrocollata_06_1924736_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                   |     +--| (100)
+|                   |        +----Simion2017_Salpingoeca_punica_03_1924735_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                +--| (86)
+|                |  |                  +**Chang2015_Monosiga_brevicollis_81824_srs
+|                |  |               +--| (100)
+|                |  |               |  +**Philippe2009_Monosiga_brevicollis_81824_Gene_0120
+|                |  |           +---| (100)
+|                |  |           |   +--Simion2017_Monosiga_brevicollis_81824_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                |  |        +--| (100)
+|                |  |        |  +--Simion2017_Choanoeca_perplexa_11_81531_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                |  |     +--| (62)
+|                |  |     |  |     +--Chang2015_Salpingoeca_sp_86017_srs
+|                |  |     |  |  +--| (100)
+|                |  |     |  |  |  +**Simion2017_Salpingoeca_rosetta_946362_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                |  |     |  +--| (100)
+|                |  |     |     +--Simion2017_Microstomoeca_roanoka_1923864_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                |  |  +--| (91)
+|                |  |  |  +----Simion2017_Salpingoeca_infusionum_12_86018_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                |  +--| (82)
+|                |     |  +---------Simion2017_Salpingoeca_dolichothecata_16_1742605_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                |     +--| (87)
+|                |        +--------Simion2017_Salpingoeca_urceolata_04_473813_V2META11037-1-42-Calc_Hmm10-BMGE05
+|            +---| (100)
+|            |   +----Simion2017_Salpingoeca_kvevrii_1924737_V2META11037-1-42-Calc_Hmm10-BMGE05
+|         +--| (99)
+|         |  +-------Simion2017_Didymoeca_costata_10_459534_V2META11037-1-42-Calc_Hmm10-BMGE05
+|      +--| (100)
+|      |  +-------Simion2017_Diaphanoeca_grandis_28014_V2META11037-1-42-Calc_Hmm10-BMGE05
+|  +---| (100)
+|  |   |     +--Chang2015_Stephanoeca_diplocostata_81535_srs
+|  |   +-----| (100)
+|  |         +**Simion2017_Stephanoeca_diplocostata_81535_V2META11037-1-42-Calc_Hmm10-BMGE05
++--| (100)
+|  +--Simion2017_Acanthoeca_spectabilis_81533_V2META11037-1-42-Calc_Hmm10-BMGE05
+|
++**Simion2017_Acanthoeca_sp_81532_V2META11037-1-42-Calc_Hmm10-BMGE05
+
+Tree in newick format:
+
+(Chang2015_Acanthoeca_sp_81532_srs:0.0070075851,(((((((((((((((((((Chang2015_Acropora_cervicornis_6130_srs:0.0147965979,Philippe2009_Acropora_millepora_45264_Gene_0120:0.0222610133)100:0.109026,((Chang2015_Orbicella_faveolata_48498_srs:0.0260370395,Chang2015_Pocillopora_damicornis_46731_srs:0.0317472943)94:0.024774,Chang2015_Porites_australiensis_51061_srs:0.0558384066)100:0.036701)100:0.120878,(((Chang2015_Aiptasia_pallida_1720309_srs:0.0437089435,Chang2015_Hormathia_digitata_1163372_srs:0.0582002682)100:0.016514,(Chang2015_Bolocera_tuediae_1163374_srs:0.0812045534,Chang2015_Urticina_eques_417072_srs:0.0889156331)99:0.028456)100:0.063827,(Chang2015_Edwardsiella_lineata_132407_srs:0.0713592234,(Chang2015_Nematostella_vectensis_45351_srs:0.0000026404,Philippe2009_Nematostella_vectensis_45351_Gene_0120:0.0000023703)100:0.069046)100:0.064559)100:0.103964)82:0.062382,((Chang2015_Eunicella_cavolinii_317547_srs:0.0240508233,(Chang2015_Gorgonia_ventalina_204384_srs:0.0000020907,Simion2017_Gorgonia_ventalina_204384_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0272563517)100:0.018758)98:0.060283,Simion2017_Pennatula_rubra_1820127_V2META11037-1-42-Calc_Hmm10-BMGE05:0.1174829917)100:0.251718)98:0.081940,(((((Chang2015_Aurelia_aurita_6145_srs:0.0003001834,Simion2017_Aurelia_aurita_6145_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0284016965)100:0.084054,(Chang2015_Stomolophus_meleagris_168796_srs:0.0000025914,Simion2017_Stomolophus_meleagris_168796_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0367649280)100:0.086878)100:0.111528,Simion2017_Pelagia_noctiluca_400838_V2META11037-1-42-Calc_Hmm10-BMGE05:0.2933993765)98:0.104871,(((((((((Chang2015_Clytia_hemisphaerica_252671_srs:0.0000020922,Philippe2009_Clytia_hemisphaerica_252671_Gene_0120:0.0000020922)72:0.000003,Simion2017_Clytia_hemisphaerica_252671_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0600568363)100:0.176994,(Chang2015_Ectopleura_larynx_264052_srs:0.0597869437,((Chang2015_Hydra_vulgaris_01_6087_srs:0.0000029231,Philippe2009_Hydra_magnipapillata_6087_Gene_0120:0.0000020907)74:0.000002,Simion2017_Hydra_vulgaris_01_6087_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0152056943)100:0.128409)99:0.020469)97:0.034779,(Chang2015_Hydractinia_polyclina_589945_srs:0.0000026583,Simion2017_Hydractinia_polyclina_589945_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0341263515)97:0.055101)97:0.026928,(Chang2015_Nanomia_bijuga_168759_srs:0.0000029231,Simion2017_Nanomia_bijuga_168759_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0261493080)100:0.168889)96:0.038906,Simion2017_Liriope_tetraphylla_37524_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0654942518)99:0.026368,(Chang2015_Craspedacusta_sowerbii_128124_srs:0.0140468167,Simion2017_Craspedacusta_sowerbii_128124_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0101510531)100:0.138277)99:0.055795,(Simion2017_Atolla_vanhoeffeni_86043_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0428981564,Simion2017_Periphylla_periphylla_880221_V2META11037-1-42-Calc_Hmm10-BMGE05:0.1237041708)100:0.341450)77:0.022110,((Chang2015_Tripedalia_cystophora_6141_srs:0.1900929857,Simion2017_Alatina_alata_1193083_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0967091117)100:0.187009,Simion2017_Lucernariopsis_campanulata_1843190_V2META11037-1-42-Calc_Hmm10-BMGE05:0.1844838453)89:0.046247)87:0.044549)100:0.094179,(((Chang2015_Enteromyxum_leei_188704_srs:0.3031450329,Chang2015_Kudoa_iwatai_269814_srs:0.3091590196)100:0.381370,((Chang2015_Myxobolus_cerebralis_59783_srs:0.3124812333,Chang2015_Thelohanellus_kitauei_669202_srs:0.5713059839)100:0.306276,Chang2015_Sphaeromyxa_zaharoni_275449_srs:0.5175630645)81:0.149053)97:0.169984,Chang2015_Polypodium_hydriforme_43186_srs:0.4090937605)94:0.138086)89:0.050714)77:0.016266,((Chang2015_Trichoplax_adhaerens_10228_srs:0.0000029231,Philippe2009_Trichoplax_adhaerens_10228_Gene_0120:0.0000026404)68:0.000003,Simion2017_Trichoplax_adhaerens_10228_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0303250888)100:0.511259)45:0.002012,Philippe2009_Xenoturbella_bocki_242395_Gene_0120:0.3492468544)59:0.018906,((((((Chang2015_Botryllus_schlosseri_30301_srs:0.1869241867,Philippe2009_Molgula_tectiformis_30286_Gene_0120:0.1507947805)100:0.059674,(Chang2015_Ciona_intestinalis_7719_srs:0.0399074717,Philippe2009_Ciona_savignyi_51511_Gene_0120:0.0944512513)100:0.185616)100:0.110117,((((Chang2015_Homo_sapiens_9606_srs:0.0000026011,Simion2017_Homo_sapiens_9606_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0290925255)100:0.145948,Philippe2009_Danio_rerio_7955_Gene_0120:0.1431265416)99:0.018367,Chang2015_Latimeria_menadoensis_106881_srs:0.0625523368)99:0.028964,(Chang2015_Petromyzon_marinus_7757_srs:0.0000023786,Philippe2009_Petromyzon_marinus_7757_Gene_0120:0.0000020949)100:0.251357)100:0.074270)100:0.103643,((Chang2015_Saccoglossus_kowalevskii_10224_srs:0.0000020720,Simion2017_Saccoglossus_kowalevskii_10224_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0303907726)100:0.016462,Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0120:0.0355246516)100:0.236897)87:0.032840,((((Chang2015_Branchiostoma_floridae_7739_srs:0.0000023703,Philippe2009_Branchiostoma_floridae_7739_Gene_0120:0.0000020949)72:0.000003,Simion2017_Branchiostoma_floridae_7739_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0225513571)100:0.363630,(((((Chang2015_Capitella_teleta_283909_srs:0.0044233652,Philippe2009_Capitella_teleta_283909_Gene_0120:0.0000020907)75:0.000003,Simion2017_Capitella_teleta_283909_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0313073426)100:0.387080,((Chang2015_Helobdella_robusta_6412_srs:0.0000020922,Philippe2009_Helobdella_robusta_6412_Gene_0120:0.0000020922)100:0.003100,Simion2017_Helobdella_robusta_6412_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0218552025)100:0.302633)99:0.087108,(((Chang2015_Crassostrea_gigas_29159_srs:0.0000021002,Simion2017_Crassostrea_gigas_29159_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0264335313)100:0.192299,(Chang2015_Ilyanassa_obsoleta_1934733_srs:0.1503933557,(Philippe2009_Aplysia_californica_6500_Gene_0120:0.0221832543,Simion2017_Aplysia_californica_6500_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0170673340)100:0.091653)100:0.100554)65:0.031589,(Chang2015_Octopus_vulgaris_6645_srs:0.1146209578,Philippe2009_Euprymna_scolopes_6613_Gene_0120:0.2416170210)68:0.116572)100:0.091807)97:0.039297,((((Chang2015_Daphnia_pulex_6669_srs:0.0000020949,Philippe2009_Daphnia_pulex_6669_Gene_0120:0.0000020907)73:0.000003,Simion2017_Daphnia_pulex_6669_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0294393553)100:0.327496,(((Chang2015_Nasonia_vitripennis_7425_srs:0.0000023703,Philippe2009_Nasonia_vitripennis_7425_Gene_0120:0.0000020949)100:0.195093,(Chang2015_Pediculus_humanus_121225_srs:0.0000022392,Philippe2009_Pediculus_humanus_121225_Gene_0120:0.0000023703)100:0.253637)100:0.062123,Simion2017_Tribolium_castaneum_7070_V2META11037-1-42-Calc_Hmm10-BMGE05:0.1816023987)99:0.076992)80:0.029661,((((Chang2015_Ixodes_scapularis_6945_srs:0.0000023703,Philippe2009_Ixodes_scapularis_6945_Gene_0120:0.0000020907)100:0.006740,Simion2017_Ixodes_scapularis_6945_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0293960760)100:0.205363,Philippe2009_Anoplodactylus_eroticus_488521_Gene_0120:0.2135943541)100:0.035145,Chang2015_Strigamia_maritima_126957_srs:0.2791457521)99:0.078953)93:0.081608)76:0.018626)70:0.007954,(((Chang2015_Corticium_candelabrum_121492_srs:0.0000022946,Simion2017_Corticium_candelabrum_121492_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0000020922)100:0.055302,Simion2017_Plakina_jani_450361_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0771570241)100:0.129224,(((Chang2015_Oscarella_carmela_386100_srs:0.0000026404,Simion2017_Oscarella_carmela_386100_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0262849040)76:0.000002,Philippe2009_Oscarella_carmela_386100_Gene_0120:0.0362427747)100:0.129299,(Chang2015_Oscarella_sp_SN-2011_386100_srs:0.0020839425,Simion2017_Oscarella_species_121493_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0116895669)100:0.205274)100:0.076188)100:0.202879)49:0.025182)50:0.007850,(Chang2015_Patiria_miniata_46514_srs:0.2522868831,((Chang2015_Strongylocentrotus_purpuratus_7668_srs:0.0000020949,Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0120:0.0000020907)92:0.001254,Simion2017_Strongylocentrotus_purpuratus_7668_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0113589383)100:0.284387)100:0.128410)74:0.032007)81:0.084924,((((((Chang2015_Amphimedon_queenslandica_400682_srs:0.0000023703,(Philippe2009_Amphimedon_queenslandica_400682_Gene_0120:0.0000026464,Simion2017_Amphimedon_queenslandica_400682_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0367721874)100:0.029456)100:0.188463,(Chang2015_Petrosia_ficiformis_68564_srs:0.0064832985,Simion2017_Petrosia_ficiformis_68564_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0159835947)100:0.128006)100:0.212434,((Chang2015_Ephydatia_muelleri_6052_srs:0.0459767537,Simion2017_Spongilla_lacustris_6055_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0597216698)100:0.196973,((Simion2017_Kirkpatrickia_variolosa_1631157_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0701024769,Simion2017_Latrunculia_apicalis_1325597_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0435384010)99:0.051266,Simion2017_Mycale_phyllophila_1325607_V2META11037-1-42-Calc_Hmm10-BMGE05:0.1051040401)100:0.204048)99:0.074794)98:0.056554,((Chang2015_Chondrilla_nucula_220712_srs:0.0000025985,Simion2017_Chondrilla_nucula_220712_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0159389868)100:0.342764,(Chang2015_Sarcotragus_fasciculatus_1234657_srs:0.0928514862,Simion2017_Pleraplysilla_spinifera_119433_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0605460251)100:0.252608)70:0.045338)87:0.056926,(((Chang2015_Aphrocallistes_vastus_83887_srs:0.0000023161,Philippe2009_Heterochone_sp_367900_Gene_0120:0.0674198524)98:0.092978,Simion2017_Hyalonema_populiferum_1631155_V2META11037-1-42-Calc_Hmm10-BMGE05:0.3618293477)51:0.000003,(((Chang2015_Euplectella_aspergillum_936045_srs:0.0000029717,Simion2017_Euplectella_aspergillum_936045_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0063731820)100:0.292240,Simion2017_Sympagella_nux_76350_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0743499358)95:0.016405,Simion2017_Rossella_fibulata_1076269_V2META11037-1-42-Calc_Hmm10-BMGE05:0.1112921693)98:0.089701)96:0.717941)81:0.035962,(Chang2015_Leucetta_chagosensis_185688_srs:0.2825475003,(Chang2015_Sycon_ciliatum_27933_srs:0.1112488088,Chang2015_Sycon_coactum_1009717_srs:0.1045959370)98:0.134117)99:0.281132)59:0.022542)96:0.080417,(((Chang2015_Amoebidium_parasiticum_4881_srs:0.0000021014,Philippe2009_Amoebidium_parasiticum_4881_Gene_0120:0.0175698028)100:0.244724,(Chang2015_Sphaeroforma_arctica_72019_srs:0.0182187040,Simion2017_Sphaeroforma_arctica_72019_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0333334789)100:0.848112)100:0.414052,(((Chang2015_Capsaspora_owczarzaki_192875_srs:0.0000023703,Simion2017_Capsaspora_owczarzaki_192875_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0251108295)95:0.004659,Philippe2009_Capsaspora_owczarzaki_192875_Gene_0120:0.0000024313)100:0.628898,((Chang2015_Ministeria_vibrans_134558_srs:0.0063069321,Simion2017_Ministeria_vibrans_134558_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0057776419)100:0.670673,((Philippe2009_Allomyces_macrogynus_28583_Gene_0120:0.4144390344,(Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0120:0.0984840411,Philippe2009_Rhizopus_oryzae_64495_Gene_0120:0.1952358495)100:0.345551)97:0.210446,(Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0120:0.3637607354,Philippe2009_Spizellomyces_punctatus_109760_Gene_0120:0.1075491322)100:0.270894)100:1.116230)84:0.042244)68:0.052386)87:0.133406)85:0.076086,((((((Chang2015_Beroe_abyssicola_320166_srs:0.0052002753,Simion2017_Beroe_abyssicola_320166_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0039386138)100:0.045090,Simion2017_Beroe_sp_10199_V2META11037-1-42-Calc_Hmm10-BMGE05:0.1326934582)100:0.059011,(((((Chang2015_Mnemiopsis_leidyi_27923_srs:0.0037101355,Philippe2009_Mnemiopsis_leidyi_27923_Gene_0120:0.0000020922)94:0.000002,Simion2017_Mnemiopsis_leidyi_27923_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0000020692)100:0.025246,(Simion2017_Bolinopsis_infundibulum_140455_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0941423731,Simion2017_Cestum_veneris_12997_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0562127945)87:0.023363)100:0.045303,Simion2017_Dryodora_glandiformis_1566677_V2META11037-1-42-Calc_Hmm10-BMGE05:0.2021951900)77:0.017380,((Chang2015_Pleurobrachia_pileus_140457_srs:0.0155718492,(Philippe2009_Pleurobrachia_pileus_140457_Gene_0120:0.0000020907,Simion2017_Pleurobrachia_species_34498_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0000023786)100:0.014483)100:0.073877,Simion2017_Hormiphora_californensis_1403702_V2META11037-1-42-Calc_Hmm10-BMGE05:0.1417234469)100:0.101476)79:0.014764)99:0.044491,Simion2017_Lampea_pancerina_1532213_V2META11037-1-42-Calc_Hmm10-BMGE05:0.2287487849)73:0.040345,((Chang2015_Vallicula_multiformis_140489_srs:0.0043907400,Simion2017_Vallicula_multiformis_140489_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0000021002)100:0.112857,Simion2017_Coeloplana_species_140473_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0302655281)99:0.072665)98:0.097382,(Chang2015_Euplokamis_dunlapae_1403701_srs:0.0080786771,Simion2017_Euplokamis_dunlapae_1403701_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0000026479)100:0.255958)100:0.428342)100:0.213371,(((Chang2015_Monosiga_ovata_81526_srs:0.0000021508,Philippe2009_Monosiga_ovata_81526_Gene_0120:0.0000020907)100:0.004854,Simion2017_Mylnosiga_fluctuans_19_1928486_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0000020922)100:0.381233,Simion2017_Salpingoeca_helianthica_18_1928494_V2META11037-1-42-Calc_Hmm10-BMGE05:0.1500281630)100:0.221835)59:0.062962,(Simion2017_Codosiga_hollandica_17_1742608_V2META11037-1-42-Calc_Hmm10-BMGE05:0.4250621122,(Simion2017_Salpingoeca_macrocollata_06_1924736_V2META11037-1-42-Calc_Hmm10-BMGE05:0.2717649887,Simion2017_Salpingoeca_punica_03_1924735_V2META11037-1-42-Calc_Hmm10-BMGE05:0.2888239060)100:0.112814)94:0.055776)71:0.034811,((((((Chang2015_Monosiga_brevicollis_81824_srs:0.0000020949,Philippe2009_Monosiga_brevicollis_81824_Gene_0120:0.0000020907)100:0.029288,Simion2017_Monosiga_brevicollis_81824_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0028424945)100:0.254793,Simion2017_Choanoeca_perplexa_11_81531_V2META11037-1-42-Calc_Hmm10-BMGE05:0.1991239910)100:0.075539,((Chang2015_Salpingoeca_sp_86017_srs:0.0088327721,Simion2017_Salpingoeca_rosetta_946362_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0000024653)100:0.224719,Simion2017_Microstomoeca_roanoka_1923864_V2META11037-1-42-Calc_Hmm10-BMGE05:0.2026641416)100:0.155931)62:0.025108,Simion2017_Salpingoeca_infusionum_12_86018_V2META11037-1-42-Calc_Hmm10-BMGE05:0.3133651348)91:0.087059,(Simion2017_Salpingoeca_dolichothecata_16_1742605_V2META11037-1-42-Calc_Hmm10-BMGE05:0.5725734122,Simion2017_Salpingoeca_urceolata_04_473813_V2META11037-1-42-Calc_Hmm10-BMGE05:0.5633941659)87:0.051760)82:0.055243)86:0.063599,Simion2017_Salpingoeca_kvevrii_1924737_V2META11037-1-42-Calc_Hmm10-BMGE05:0.3427541889)100:0.272211,Simion2017_Didymoeca_costata_10_459534_V2META11037-1-42-Calc_Hmm10-BMGE05:0.4583468507)99:0.149260,Simion2017_Diaphanoeca_grandis_28014_V2META11037-1-42-Calc_Hmm10-BMGE05:0.4894543991)100:0.042798,(Chang2015_Stephanoeca_diplocostata_81535_srs:0.0104906312,Simion2017_Stephanoeca_diplocostata_81535_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0000020972)100:0.347734)100:0.274801,Simion2017_Acanthoeca_spectabilis_81533_V2META11037-1-42-Calc_Hmm10-BMGE05:0.1474386335)100:0.143938,Simion2017_Acanthoeca_sp_81532_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0000023703);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -33005.644629
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with bootstrap support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--Chang2015_Acanthoeca_sp_81532_srs
+|
+|                                                          +--Chang2015_Acropora_cervicornis_6130_srs
+|                                                       +--| (100)
+|                                                       |  +--Philippe2009_Acropora_millepora_45264_Gene_0120
+|                                                    +--| (100)
+|                                                    |  |     +--Chang2015_Orbicella_faveolata_48498_srs
+|                                                    |  |  +--| (94)
+|                                                    |  |  |  +--Chang2015_Pocillopora_damicornis_46731_srs
+|                                                    |  +--| (100)
+|                                                    |     +--Chang2015_Porites_australiensis_51061_srs
+|                                                 +--| (82)
+|                                                 |  |        +--Chang2015_Aiptasia_pallida_1720309_srs
+|                                                 |  |     +--| (100)
+|                                                 |  |     |  +--Chang2015_Hormathia_digitata_1163372_srs
+|                                                 |  |  +--| (100)
+|                                                 |  |  |  |  +--Chang2015_Bolocera_tuediae_1163374_srs
+|                                                 |  |  |  +--| (99)
+|                                                 |  |  |     +--Chang2015_Urticina_eques_417072_srs
+|                                                 |  +--| (100)
+|                                                 |     |  +--Chang2015_Edwardsiella_lineata_132407_srs
+|                                                 |     +--| (100)
+|                                                 |        |  +--Chang2015_Nematostella_vectensis_45351_srs
+|                                                 |        +--| (100)
+|                                                 |           +--Philippe2009_Nematostella_vectensis_45351_Gene_0120
+|                                              +--| (98)
+|                                              |  |      +--Chang2015_Eunicella_cavolinii_317547_srs
+|                                              |  |   +--| (98)
+|                                              |  |   |  |  +--Chang2015_Gorgonia_ventalina_204384_srs
+|                                              |  |   |  +--| (100)
+|                                              |  |   |     +--Simion2017_Gorgonia_ventalina_204384_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                              |  +---| (100)
+|                                              |      +--Simion2017_Pennatula_rubra_1820127_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           +--| (77)
+|                                           |  |              +--Chang2015_Aurelia_aurita_6145_srs
+|                                           |  |           +--| (100)
+|                                           |  |           |  +--Simion2017_Aurelia_aurita_6145_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  |        +--| (100)
+|                                           |  |        |  |  +--Chang2015_Stomolophus_meleagris_168796_srs
+|                                           |  |        |  +--| (100)
+|                                           |  |        |     +--Simion2017_Stomolophus_meleagris_168796_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  |     +--| (98)
+|                                           |  |     |  +----Simion2017_Pelagia_noctiluca_400838_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  |  +--| (100)
+|                                           |  |  |  |                          +--Chang2015_Clytia_hemisphaerica_252671_srs
+|                                           |  |  |  |                       +--| (72)
+|                                           |  |  |  |                       |  +--Philippe2009_Clytia_hemisphaerica_252671_Gene_0120
+|                                           |  |  |  |                    +--| (100)
+|                                           |  |  |  |                    |  +--Simion2017_Clytia_hemisphaerica_252671_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  |  |  |                 +--| (97)
+|                                           |  |  |  |                 |  |  +--Chang2015_Ectopleura_larynx_264052_srs
+|                                           |  |  |  |                 |  +--| (99)
+|                                           |  |  |  |                 |     |     +--Chang2015_Hydra_vulgaris_01_6087_srs
+|                                           |  |  |  |                 |     |  +**| (74)
+|                                           |  |  |  |                 |     |  |  +--Philippe2009_Hydra_magnipapillata_6087_Gene_0120
+|                                           |  |  |  |                 |     +--| (100)
+|                                           |  |  |  |                 |        +--Simion2017_Hydra_vulgaris_01_6087_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  |  |  |              +--| (97)
+|                                           |  |  |  |              |  |  +--Chang2015_Hydractinia_polyclina_589945_srs
+|                                           |  |  |  |              |  +--| (97)
+|                                           |  |  |  |              |     +--Simion2017_Hydractinia_polyclina_589945_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  |  |  |           +--| (96)
+|                                           |  |  |  |           |  |  +--Chang2015_Nanomia_bijuga_168759_srs
+|                                           |  |  |  |           |  +--| (100)
+|                                           |  |  |  |           |     +--Simion2017_Nanomia_bijuga_168759_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  |  |  |        +--| (99)
+|                                           |  |  |  |        |  +--Simion2017_Liriope_tetraphylla_37524_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  |  |  |     +--| (99)
+|                                           |  |  |  |     |  |  +--Chang2015_Craspedacusta_sowerbii_128124_srs
+|                                           |  |  |  |     |  +--| (100)
+|                                           |  |  |  |     |     +--Simion2017_Craspedacusta_sowerbii_128124_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  |  |  |  +--| (77)
+|                                           |  |  |  |  |  |    +--Simion2017_Atolla_vanhoeffeni_86043_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  |  |  |  |  +----| (100)
+|                                           |  |  |  |  |       +--Simion2017_Periphylla_periphylla_880221_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  |  |  +--| (87)
+|                                           |  |  |     |     +--Chang2015_Tripedalia_cystophora_6141_srs
+|                                           |  |  |     |  +--| (100)
+|                                           |  |  |     |  |  +--Simion2017_Alatina_alata_1193083_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  |  |     +--| (89)
+|                                           |  |  |        +--Simion2017_Lucernariopsis_campanulata_1843190_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                           |  +--| (89)
+|                                           |     |           +----Chang2015_Enteromyxum_leei_188704_srs
+|                                           |     |     +-----| (100)
+|                                           |     |     |     +----Chang2015_Kudoa_iwatai_269814_srs
+|                                           |     |  +--| (97)
+|                                           |     |  |  |       +----Chang2015_Myxobolus_cerebralis_59783_srs
+|                                           |     |  |  |  +----| (100)
+|                                           |     |  |  |  |    +--------Chang2015_Thelohanellus_kitauei_669202_srs
+|                                           |     |  |  +--| (81)
+|                                           |     |  |     +--------Chang2015_Sphaeromyxa_zaharoni_275449_srs
+|                                           |     +--| (94)
+|                                           |        +------Chang2015_Polypodium_hydriforme_43186_srs
+|                                        +--| (45)
+|                                        |  |          +--Chang2015_Trichoplax_adhaerens_10228_srs
+|                                        |  |       +**| (68)
+|                                        |  |       |  +--Philippe2009_Trichoplax_adhaerens_10228_Gene_0120
+|                                        |  +-------| (100)
+|                                        |          +--Simion2017_Trichoplax_adhaerens_10228_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                     +--| (59)
+|                                     |  +-----Philippe2009_Xenoturbella_bocki_242395_Gene_0120
+|                                  +--| (81)
+|                                  |  |                 +--Chang2015_Botryllus_schlosseri_30301_srs
+|                                  |  |              +--| (100)
+|                                  |  |              |  +--Philippe2009_Molgula_tectiformis_30286_Gene_0120
+|                                  |  |           +--| (100)
+|                                  |  |           |  |  +--Chang2015_Ciona_intestinalis_7719_srs
+|                                  |  |           |  +--| (100)
+|                                  |  |           |     +--Philippe2009_Ciona_savignyi_51511_Gene_0120
+|                                  |  |        +--| (100)
+|                                  |  |        |  |           +--Chang2015_Homo_sapiens_9606_srs
+|                                  |  |        |  |        +--| (100)
+|                                  |  |        |  |        |  +--Simion2017_Homo_sapiens_9606_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |        |  |     +--| (99)
+|                                  |  |        |  |     |  +--Philippe2009_Danio_rerio_7955_Gene_0120
+|                                  |  |        |  |  +--| (99)
+|                                  |  |        |  |  |  +--Chang2015_Latimeria_menadoensis_106881_srs
+|                                  |  |        |  +--| (100)
+|                                  |  |        |     |   +--Chang2015_Petromyzon_marinus_7757_srs
+|                                  |  |        |     +---| (100)
+|                                  |  |        |         +--Philippe2009_Petromyzon_marinus_7757_Gene_0120
+|                                  |  |     +--| (87)
+|                                  |  |     |  |      +--Chang2015_Saccoglossus_kowalevskii_10224_srs
+|                                  |  |     |  |   +--| (100)
+|                                  |  |     |  |   |  +--Simion2017_Saccoglossus_kowalevskii_10224_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |     |  +---| (100)
+|                                  |  |     |      +--Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0120
+|                                  |  |  +--| (50)
+|                                  |  |  |  |              +--Chang2015_Branchiostoma_floridae_7739_srs
+|                                  |  |  |  |           +**| (72)
+|                                  |  |  |  |           |  +--Philippe2009_Branchiostoma_floridae_7739_Gene_0120
+|                                  |  |  |  |     +-----| (100)
+|                                  |  |  |  |     |     +--Simion2017_Branchiostoma_floridae_7739_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |  |  |  +--| (70)
+|                                  |  |  |  |  |  |                 +--Chang2015_Capitella_teleta_283909_srs
+|                                  |  |  |  |  |  |              +--| (75)
+|                                  |  |  |  |  |  |              |  +--Philippe2009_Capitella_teleta_283909_Gene_0120
+|                                  |  |  |  |  |  |        +-----| (100)
+|                                  |  |  |  |  |  |        |     +--Simion2017_Capitella_teleta_283909_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |  |  |  |  |     +--| (99)
+|                                  |  |  |  |  |  |     |  |       +--Chang2015_Helobdella_robusta_6412_srs
+|                                  |  |  |  |  |  |     |  |    +--| (100)
+|                                  |  |  |  |  |  |     |  |    |  +--Philippe2009_Helobdella_robusta_6412_Gene_0120
+|                                  |  |  |  |  |  |     |  +----| (100)
+|                                  |  |  |  |  |  |     |       +--Simion2017_Helobdella_robusta_6412_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |  |  |  |  |  +--| (97)
+|                                  |  |  |  |  |  |  |  |        +--Chang2015_Crassostrea_gigas_29159_srs
+|                                  |  |  |  |  |  |  |  |     +--| (100)
+|                                  |  |  |  |  |  |  |  |     |  +--Simion2017_Crassostrea_gigas_29159_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |  |  |  |  |  |  |  +--| (65)
+|                                  |  |  |  |  |  |  |  |  |  |  +--Chang2015_Ilyanassa_obsoleta_1934733_srs
+|                                  |  |  |  |  |  |  |  |  |  +--| (100)
+|                                  |  |  |  |  |  |  |  |  |     |  +--Philippe2009_Aplysia_californica_6500_Gene_0120
+|                                  |  |  |  |  |  |  |  |  |     +--| (100)
+|                                  |  |  |  |  |  |  |  |  |        +--Simion2017_Aplysia_californica_6500_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |  |  |  |  |  |  +--| (100)
+|                                  |  |  |  |  |  |  |     |  +--Chang2015_Octopus_vulgaris_6645_srs
+|                                  |  |  |  |  |  |  |     +--| (68)
+|                                  |  |  |  |  |  |  |        +---Philippe2009_Euprymna_scolopes_6613_Gene_0120
+|                                  |  |  |  |  |  +--| (76)
+|                                  |  |  |  |  |     |             +--Chang2015_Daphnia_pulex_6669_srs
+|                                  |  |  |  |  |     |          +**| (73)
+|                                  |  |  |  |  |     |          |  +--Philippe2009_Daphnia_pulex_6669_Gene_0120
+|                                  |  |  |  |  |     |     +----| (100)
+|                                  |  |  |  |  |     |     |    +--Simion2017_Daphnia_pulex_6669_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |  |  |  |     |  +--| (80)
+|                                  |  |  |  |  |     |  |  |        +--Chang2015_Nasonia_vitripennis_7425_srs
+|                                  |  |  |  |  |     |  |  |     +--| (100)
+|                                  |  |  |  |  |     |  |  |     |  +--Philippe2009_Nasonia_vitripennis_7425_Gene_0120
+|                                  |  |  |  |  |     |  |  |  +--| (100)
+|                                  |  |  |  |  |     |  |  |  |  |   +--Chang2015_Pediculus_humanus_121225_srs
+|                                  |  |  |  |  |     |  |  |  |  +---| (100)
+|                                  |  |  |  |  |     |  |  |  |      +--Philippe2009_Pediculus_humanus_121225_Gene_0120
+|                                  |  |  |  |  |     |  |  +--| (99)
+|                                  |  |  |  |  |     |  |     +--Simion2017_Tribolium_castaneum_7070_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |  |  |  |     +--| (93)
+|                                  |  |  |  |  |        |           +--Chang2015_Ixodes_scapularis_6945_srs
+|                                  |  |  |  |  |        |        +--| (100)
+|                                  |  |  |  |  |        |        |  +--Philippe2009_Ixodes_scapularis_6945_Gene_0120
+|                                  |  |  |  |  |        |     +--| (100)
+|                                  |  |  |  |  |        |     |  +--Simion2017_Ixodes_scapularis_6945_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |  |  |  |        |  +--| (100)
+|                                  |  |  |  |  |        |  |  +--Philippe2009_Anoplodactylus_eroticus_488521_Gene_0120
+|                                  |  |  |  |  |        +--| (99)
+|                                  |  |  |  |  |           +---Chang2015_Strigamia_maritima_126957_srs
+|                                  |  |  |  +--| (49)
+|                                  |  |  |     |        +--Chang2015_Corticium_candelabrum_121492_srs
+|                                  |  |  |     |     +--| (100)
+|                                  |  |  |     |     |  +--Simion2017_Corticium_candelabrum_121492_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |  |     |  +--| (100)
+|                                  |  |  |     |  |  +--Simion2017_Plakina_jani_450361_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |  |     +--| (100)
+|                                  |  |  |        |        +--Chang2015_Oscarella_carmela_386100_srs
+|                                  |  |  |        |     +**| (76)
+|                                  |  |  |        |     |  +--Simion2017_Oscarella_carmela_386100_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  |  |        |  +--| (100)
+|                                  |  |  |        |  |  +--Philippe2009_Oscarella_carmela_386100_Gene_0120
+|                                  |  |  |        +--| (100)
+|                                  |  |  |           |  +--Chang2015_Oscarella_sp_SN-2011_386100_srs
+|                                  |  |  |           +--| (100)
+|                                  |  |  |              +--Simion2017_Oscarella_species_121493_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                                  |  +--| (74)
+|                                  |     |  +---Chang2015_Patiria_miniata_46514_srs
+|                                  |     +--| (100)
+|                                  |        |      +--Chang2015_Strongylocentrotus_purpuratus_7668_srs
+|                                  |        |   +--| (92)
+|                                  |        |   |  +--Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0120
+|                                  |        +---| (100)
+|                                  |            +--Simion2017_Strongylocentrotus_purpuratus_7668_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               +--| (96)
+|                               |  |                 +--Chang2015_Amphimedon_queenslandica_400682_srs
+|                               |  |              +--| (100)
+|                               |  |              |  |  +--Philippe2009_Amphimedon_queenslandica_400682_Gene_0120
+|                               |  |              |  +--| (100)
+|                               |  |              |     +--Simion2017_Amphimedon_queenslandica_400682_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               |  |           +--| (100)
+|                               |  |           |  |  +--Chang2015_Petrosia_ficiformis_68564_srs
+|                               |  |           |  +--| (100)
+|                               |  |           |     +--Simion2017_Petrosia_ficiformis_68564_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               |  |        +--| (98)
+|                               |  |        |  |     +--Chang2015_Ephydatia_muelleri_6052_srs
+|                               |  |        |  |  +--| (100)
+|                               |  |        |  |  |  +--Simion2017_Spongilla_lacustris_6055_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               |  |        |  +--| (99)
+|                               |  |        |     |     +--Simion2017_Kirkpatrickia_variolosa_1631157_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               |  |        |     |  +--| (99)
+|                               |  |        |     |  |  +--Simion2017_Latrunculia_apicalis_1325597_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               |  |        |     +--| (100)
+|                               |  |        |        +--Simion2017_Mycale_phyllophila_1325607_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               |  |     +--| (87)
+|                               |  |     |  |       +--Chang2015_Chondrilla_nucula_220712_srs
+|                               |  |     |  |  +----| (100)
+|                               |  |     |  |  |    +--Simion2017_Chondrilla_nucula_220712_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               |  |     |  +--| (70)
+|                               |  |     |     |   +--Chang2015_Sarcotragus_fasciculatus_1234657_srs
+|                               |  |     |     +---| (100)
+|                               |  |     |         +--Simion2017_Pleraplysilla_spinifera_119433_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               |  |  +--| (81)
+|                               |  |  |  |                 +--Chang2015_Aphrocallistes_vastus_83887_srs
+|                               |  |  |  |              +--| (98)
+|                               |  |  |  |              |  +--Philippe2009_Heterochone_sp_367900_Gene_0120
+|                               |  |  |  |           +**| (51)
+|                               |  |  |  |           |  +-----Simion2017_Hyalonema_populiferum_1631155_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               |  |  |  +-----------| (96)
+|                               |  |  |              |          +--Chang2015_Euplectella_aspergillum_936045_srs
+|                               |  |  |              |     +----| (100)
+|                               |  |  |              |     |    +--Simion2017_Euplectella_aspergillum_936045_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               |  |  |              |  +--| (95)
+|                               |  |  |              |  |  +--Simion2017_Sympagella_nux_76350_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               |  |  |              +--| (98)
+|                               |  |  |                 +--Simion2017_Rossella_fibulata_1076269_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                               |  +--| (59)
+|                               |     |   +---Chang2015_Leucetta_chagosensis_185688_srs
+|                               |     +---| (99)
+|                               |         |  +--Chang2015_Sycon_ciliatum_27933_srs
+|                               |         +--| (98)
+|                               |            +--Chang2015_Sycon_coactum_1009717_srs
+|                            +--| (85)
+|                            |  |             +--Chang2015_Amoebidium_parasiticum_4881_srs
+|                            |  |         +---| (100)
+|                            |  |         |   +--Philippe2009_Amoebidium_parasiticum_4881_Gene_0120
+|                            |  |  +------| (100)
+|                            |  |  |      |             +--Chang2015_Sphaeroforma_arctica_72019_srs
+|                            |  |  |      +-------------| (100)
+|                            |  |  |                    +--Simion2017_Sphaeroforma_arctica_72019_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                            |  +--| (87)
+|                            |     |                +--Chang2015_Capsaspora_owczarzaki_192875_srs
+|                            |     |             +--| (95)
+|                            |     |             |  +--Simion2017_Capsaspora_owczarzaki_192875_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                            |     |  +----------| (100)
+|                            |     |  |          +--Philippe2009_Capsaspora_owczarzaki_192875_Gene_0120
+|                            |     +--| (68)
+|                            |        |             +--Chang2015_Ministeria_vibrans_134558_srs
+|                            |        |  +----------| (100)
+|                            |        |  |          +--Simion2017_Ministeria_vibrans_134558_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                            |        +--| (84)
+|                            |           |                     +------Philippe2009_Allomyces_macrogynus_28583_Gene_0120
+|                            |           |                  +--| (97)
+|                            |           |                  |  |     +--Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0120
+|                            |           |                  |  +-----| (100)
+|                            |           |                  |        +--Philippe2009_Rhizopus_oryzae_64495_Gene_0120
+|                            |           +------------------| (100)
+|                            |                              |   +-----Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0120
+|                            |                              +---| (100)
+|                            |                                  +--Philippe2009_Spizellomyces_punctatus_109760_Gene_0120
+|                         +--| (100)
+|                         |  |                     +--Chang2015_Beroe_abyssicola_320166_srs
+|                         |  |                  +--| (100)
+|                         |  |                  |  +--Simion2017_Beroe_abyssicola_320166_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                         |  |               +--| (100)
+|                         |  |               |  +--Simion2017_Beroe_sp_10199_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                         |  |            +--| (99)
+|                         |  |            |  |              +--Chang2015_Mnemiopsis_leidyi_27923_srs
+|                         |  |            |  |           +**| (94)
+|                         |  |            |  |           |  +--Philippe2009_Mnemiopsis_leidyi_27923_Gene_0120
+|                         |  |            |  |        +--| (100)
+|                         |  |            |  |        |  +--Simion2017_Mnemiopsis_leidyi_27923_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                         |  |            |  |     +--| (100)
+|                         |  |            |  |     |  |  +--Simion2017_Bolinopsis_infundibulum_140455_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                         |  |            |  |     |  +--| (87)
+|                         |  |            |  |     |     +--Simion2017_Cestum_veneris_12997_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                         |  |            |  |  +--| (77)
+|                         |  |            |  |  |  +--Simion2017_Dryodora_glandiformis_1566677_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                         |  |            |  +--| (79)
+|                         |  |            |     |     +--Chang2015_Pleurobrachia_pileus_140457_srs
+|                         |  |            |     |  +--| (100)
+|                         |  |            |     |  |  |  +--Philippe2009_Pleurobrachia_pileus_140457_Gene_0120
+|                         |  |            |     |  |  +--| (100)
+|                         |  |            |     |  |     +--Simion2017_Pleurobrachia_species_34498_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                         |  |            |     +--| (100)
+|                         |  |            |        +--Simion2017_Hormiphora_californensis_1403702_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                         |  |         +--| (73)
+|                         |  |         |  +---Simion2017_Lampea_pancerina_1532213_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                         |  |      +--| (98)
+|                         |  |      |  |     +--Chang2015_Vallicula_multiformis_140489_srs
+|                         |  |      |  |  +--| (100)
+|                         |  |      |  |  |  +--Simion2017_Vallicula_multiformis_140489_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                         |  |      |  +--| (99)
+|                         |  |      |     +--Simion2017_Coeloplana_species_140473_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                         |  +------| (100)
+|                         |         |   +--Chang2015_Euplokamis_dunlapae_1403701_srs
+|                         |         +---| (100)
+|                         |             +--Simion2017_Euplokamis_dunlapae_1403701_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                      +--| (59)
+|                      |  |           +--Chang2015_Monosiga_ovata_81526_srs
+|                      |  |        +--| (100)
+|                      |  |        |  +--Philippe2009_Monosiga_ovata_81526_Gene_0120
+|                      |  |  +-----| (100)
+|                      |  |  |     +--Simion2017_Mylnosiga_fluctuans_19_1928486_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                      |  +--| (100)
+|                      |     +--Simion2017_Salpingoeca_helianthica_18_1928494_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                   +--| (71)
+|                   |  |  +------Simion2017_Codosiga_hollandica_17_1742608_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                   |  +--| (94)
+|                   |     |  +---Simion2017_Salpingoeca_macrocollata_06_1924736_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                   |     +--| (100)
+|                   |        +----Simion2017_Salpingoeca_punica_03_1924735_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                +--| (86)
+|                |  |                  +--Chang2015_Monosiga_brevicollis_81824_srs
+|                |  |               +--| (100)
+|                |  |               |  +--Philippe2009_Monosiga_brevicollis_81824_Gene_0120
+|                |  |           +---| (100)
+|                |  |           |   +--Simion2017_Monosiga_brevicollis_81824_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                |  |        +--| (100)
+|                |  |        |  +--Simion2017_Choanoeca_perplexa_11_81531_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                |  |     +--| (62)
+|                |  |     |  |     +--Chang2015_Salpingoeca_sp_86017_srs
+|                |  |     |  |  +--| (100)
+|                |  |     |  |  |  +--Simion2017_Salpingoeca_rosetta_946362_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                |  |     |  +--| (100)
+|                |  |     |     +--Simion2017_Microstomoeca_roanoka_1923864_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                |  |  +--| (91)
+|                |  |  |  +----Simion2017_Salpingoeca_infusionum_12_86018_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                |  +--| (82)
+|                |     |  +---------Simion2017_Salpingoeca_dolichothecata_16_1742605_V2META11037-1-42-Calc_Hmm10-BMGE05
+|                |     +--| (87)
+|                |        +--------Simion2017_Salpingoeca_urceolata_04_473813_V2META11037-1-42-Calc_Hmm10-BMGE05
+|            +---| (100)
+|            |   +----Simion2017_Salpingoeca_kvevrii_1924737_V2META11037-1-42-Calc_Hmm10-BMGE05
+|         +--| (99)
+|         |  +-------Simion2017_Didymoeca_costata_10_459534_V2META11037-1-42-Calc_Hmm10-BMGE05
+|      +--| (100)
+|      |  +-------Simion2017_Diaphanoeca_grandis_28014_V2META11037-1-42-Calc_Hmm10-BMGE05
+|  +---| (100)
+|  |   |     +--Chang2015_Stephanoeca_diplocostata_81535_srs
+|  |   +-----| (100)
+|  |         +--Simion2017_Stephanoeca_diplocostata_81535_V2META11037-1-42-Calc_Hmm10-BMGE05
++--| (100)
+|  +--Simion2017_Acanthoeca_spectabilis_81533_V2META11037-1-42-Calc_Hmm10-BMGE05
+|
++--Simion2017_Acanthoeca_sp_81532_V2META11037-1-42-Calc_Hmm10-BMGE05
+
+
+Consensus tree in newick format: 
+
+(Chang2015_Acanthoeca_sp_81532_srs:0.0070065757,(((((((((((((((((((Chang2015_Acropora_cervicornis_6130_srs:0.0147966640,Philippe2009_Acropora_millepora_45264_Gene_0120:0.0222608239)100:0.1090270000,((Chang2015_Orbicella_faveolata_48498_srs:0.0260370491,Chang2015_Pocillopora_damicornis_46731_srs:0.0317447596)94:0.0247710000,Chang2015_Porites_australiensis_51061_srs:0.0558392316)100:0.0366990000)100:0.1208900000,(((Chang2015_Aiptasia_pallida_1720309_srs:0.0437079787,Chang2015_Hormathia_digitata_1163372_srs:0.0581974951)100:0.0165140000,(Chang2015_Bolocera_tuediae_1163374_srs:0.0812023993,Chang2015_Urticina_eques_417072_srs:0.0889155583)99:0.0284560000)100:0.0638240000,(Chang2015_Edwardsiella_lineata_132407_srs:0.0713575759,(Chang2015_Nematostella_vectensis_45351_srs:0.0000026404,Philippe2009_Nematostella_vectensis_45351_Gene_0120:0.0000026464)100:0.0690450000)100:0.0645600000)100:0.1039480000)82:0.0623790000,((Chang2015_Eunicella_cavolinii_317547_srs:0.0240484168,(Chang2015_Gorgonia_ventalina_204384_srs:0.0000020907,Simion2017_Gorgonia_ventalina_204384_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0272544637)100:0.0187590000)98:0.0602890000,Simion2017_Pennatula_rubra_1820127_V2META11037-1-42-Calc_Hmm10-BMGE05:0.1174691101)100:0.2517170000)98:0.0819430000,(((((Chang2015_Aurelia_aurita_6145_srs:0.0003063770,Simion2017_Aurelia_aurita_6145_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0283972601)100:0.0840070000,(Chang2015_Stomolophus_meleagris_168796_srs:0.0000023724,Simion2017_Stomolophus_meleagris_168796_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0367630977)100:0.0868880000)100:0.1111930000,Simion2017_Pelagia_noctiluca_400838_V2META11037-1-42-Calc_Hmm10-BMGE05:0.2935150186)98:0.1053170000,(((((((((Chang2015_Clytia_hemisphaerica_252671_srs:0.0000020922,Philippe2009_Clytia_hemisphaerica_252671_Gene_0120:0.0000020922)72:0.0000030000,Simion2017_Clytia_hemisphaerica_252671_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0600547527)100:0.1769890000,(Chang2015_Ectopleura_larynx_264052_srs:0.0597850862,((Chang2015_Hydra_vulgaris_01_6087_srs:0.0000029231,Philippe2009_Hydra_magnipapillata_6087_Gene_0120:0.0000020907)74:0.0000020000,Simion2017_Hydra_vulgaris_01_6087_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0152043253)100:0.1284090000)99:0.0204690000)97:0.0347800000,(Chang2015_Hydractinia_polyclina_589945_srs:0.0000026583,Simion2017_Hydractinia_polyclina_589945_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0341238258)97:0.0550990000)97:0.0269300000,(Chang2015_Nanomia_bijuga_168759_srs:0.0000021002,Simion2017_Nanomia_bijuga_168759_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0261472947)100:0.1688800000)96:0.0389220000,Simion2017_Liriope_tetraphylla_37524_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0654946225)99:0.0263500000,(Chang2015_Craspedacusta_sowerbii_128124_srs:0.0140479974,Simion2017_Craspedacusta_sowerbii_128124_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0101499873)100:0.1382820000)99:0.0558040000,(Simion2017_Atolla_vanhoeffeni_86043_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0428952189,Simion2017_Periphylla_periphylla_880221_V2META11037-1-42-Calc_Hmm10-BMGE05:0.1236977223)100:0.3414210000)77:0.0221150000,((Chang2015_Tripedalia_cystophora_6141_srs:0.1900877145,Simion2017_Alatina_alata_1193083_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0967102707)100:0.1869940000,Simion2017_Lucernariopsis_campanulata_1843190_V2META11037-1-42-Calc_Hmm10-BMGE05:0.1844809943)89:0.0462430000)87:0.0445240000)100:0.0941870000,(((Chang2015_Enteromyxum_leei_188704_srs:0.3031608827,Chang2015_Kudoa_iwatai_269814_srs:0.3091375914)100:0.3813750000,((Chang2015_Myxobolus_cerebralis_59783_srs:0.3124746480,Chang2015_Thelohanellus_kitauei_669202_srs:0.5712871767)100:0.3062790000,Chang2015_Sphaeromyxa_zaharoni_275449_srs:0.5175516091)81:0.1490490000)97:0.1699890000,Chang2015_Polypodium_hydriforme_43186_srs:0.4090781544)94:0.1380800000)89:0.0507110000)77:0.0162640000,((Chang2015_Trichoplax_adhaerens_10228_srs:0.0000026464,Philippe2009_Trichoplax_adhaerens_10228_Gene_0120:0.0000020949)68:0.0000020000,Simion2017_Trichoplax_adhaerens_10228_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0303242086)100:0.5112360000)45:0.0019900000,Philippe2009_Xenoturbella_bocki_242395_Gene_0120:0.3492302528)59:0.0189290000,((((((Chang2015_Botryllus_schlosseri_30301_srs:0.1869171048,Philippe2009_Molgula_tectiformis_30286_Gene_0120:0.1507930099)100:0.0596630000,(Chang2015_Ciona_intestinalis_7719_srs:0.0399053259,Philippe2009_Ciona_savignyi_51511_Gene_0120:0.0944515571)100:0.1856260000)100:0.1101180000,((((Chang2015_Homo_sapiens_9606_srs:0.0000020949,Simion2017_Homo_sapiens_9606_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0290908561)100:0.1459440000,Philippe2009_Danio_rerio_7955_Gene_0120:0.1431268878)99:0.0183730000,Chang2015_Latimeria_menadoensis_106881_srs:0.0625433691)99:0.0289660000,(Chang2015_Petromyzon_marinus_7757_srs:0.0000025183,Philippe2009_Petromyzon_marinus_7757_Gene_0120:0.0000020949)100:0.2513430000)100:0.0742690000)100:0.1036380000,((Chang2015_Saccoglossus_kowalevskii_10224_srs:0.0000029231,Simion2017_Saccoglossus_kowalevskii_10224_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0303896717)100:0.0164600000,Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0120:0.0355235135)100:0.2369090000)87:0.0328370000,((((Chang2015_Branchiostoma_floridae_7739_srs:0.0000022392,Philippe2009_Branchiostoma_floridae_7739_Gene_0120:0.0000020949)72:0.0000020000,Simion2017_Branchiostoma_floridae_7739_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0225503368)100:0.3636230000,(((((Chang2015_Capitella_teleta_283909_srs:0.0044224873,Philippe2009_Capitella_teleta_283909_Gene_0120:0.0000020907)75:0.0000030000,Simion2017_Capitella_teleta_283909_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0313056170)100:0.3870680000,((Chang2015_Helobdella_robusta_6412_srs:0.0000020907,Philippe2009_Helobdella_robusta_6412_Gene_0120:0.0000020922)100:0.0031010000,Simion2017_Helobdella_robusta_6412_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0218533621)100:0.3026310000)99:0.0871130000,(((Chang2015_Crassostrea_gigas_29159_srs:0.0000022392,Simion2017_Crassostrea_gigas_29159_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0264324643)100:0.1922960000,(Chang2015_Ilyanassa_obsoleta_1934733_srs:0.1503921319,(Philippe2009_Aplysia_californica_6500_Gene_0120:0.0221815773,Simion2017_Aplysia_californica_6500_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0170680436)100:0.0916500000)100:0.1005530000)65:0.0315820000,(Chang2015_Octopus_vulgaris_6645_srs:0.1144581912,Philippe2009_Euprymna_scolopes_6613_Gene_0120:0.2416373282)68:0.1167900000)100:0.0917970000)97:0.0392970000,((((Chang2015_Daphnia_pulex_6669_srs:0.0000026464,Philippe2009_Daphnia_pulex_6669_Gene_0120:0.0000020907)73:0.0000020000,Simion2017_Daphnia_pulex_6669_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0294384742)100:0.3274910000,(((Chang2015_Nasonia_vitripennis_7425_srs:0.0000026464,Philippe2009_Nasonia_vitripennis_7425_Gene_0120:0.0000020949)100:0.1950890000,(Chang2015_Pediculus_humanus_121225_srs:0.0000022392,Philippe2009_Pediculus_humanus_121225_Gene_0120:0.0000023703)100:0.2536340000)100:0.0621240000,Simion2017_Tribolium_castaneum_7070_V2META11037-1-42-Calc_Hmm10-BMGE05:0.1816010073)99:0.0769940000)80:0.0296620000,((((Chang2015_Ixodes_scapularis_6945_srs:0.0000020949,Philippe2009_Ixodes_scapularis_6945_Gene_0120:0.0000020907)100:0.0067420000,Simion2017_Ixodes_scapularis_6945_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0293933770)100:0.2053470000,Philippe2009_Anoplodactylus_eroticus_488521_Gene_0120:0.2135898613)100:0.0351520000,Chang2015_Strigamia_maritima_126957_srs:0.2791445863)99:0.0789540000)93:0.0816110000)76:0.0186260000)70:0.0079540000,(((Chang2015_Corticium_candelabrum_121492_srs:0.0000022402,Simion2017_Corticium_candelabrum_121492_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0000020922)100:0.0552990000,Simion2017_Plakina_jani_450361_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0771573526)100:0.1292160000,(((Chang2015_Oscarella_carmela_386100_srs:0.0000020949,Simion2017_Oscarella_carmela_386100_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0262842088)76:0.0000020000,Philippe2009_Oscarella_carmela_386100_Gene_0120:0.0362409640)100:0.1292900000,(Chang2015_Oscarella_sp_SN-2011_386100_srs:0.0020817820,Simion2017_Oscarella_species_121493_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0116909193)100:0.2052790000)100:0.0761960000)100:0.2028830000)49:0.0251790000)50:0.0078490000,(Chang2015_Patiria_miniata_46514_srs:0.2522837745,((Chang2015_Strongylocentrotus_purpuratus_7668_srs:0.0000023703,Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0120:0.0000020907)92:0.0012920000,Simion2017_Strongylocentrotus_purpuratus_7668_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0113098835)100:0.2843550000)100:0.1284210000)74:0.0320090000)81:0.0849220000,((((((Chang2015_Amphimedon_queenslandica_400682_srs:0.0000029231,(Philippe2009_Amphimedon_queenslandica_400682_Gene_0120:0.0000029231,Simion2017_Amphimedon_queenslandica_400682_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0367706467)100:0.0294560000)100:0.1884530000,(Chang2015_Petrosia_ficiformis_68564_srs:0.0064840680,Simion2017_Petrosia_ficiformis_68564_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0159829401)100:0.1280160000)100:0.2124250000,((Chang2015_Ephydatia_muelleri_6052_srs:0.0459904259,Simion2017_Spongilla_lacustris_6055_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0597125606)100:0.1969580000,((Simion2017_Kirkpatrickia_variolosa_1631157_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0701022043,Simion2017_Latrunculia_apicalis_1325597_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0435372551)99:0.0512610000,Simion2017_Mycale_phyllophila_1325607_V2META11037-1-42-Calc_Hmm10-BMGE05:0.1051121048)100:0.2040460000)99:0.0747980000)98:0.0565530000,((Chang2015_Chondrilla_nucula_220712_srs:0.0000027987,Simion2017_Chondrilla_nucula_220712_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0159378697)100:0.3427510000,(Chang2015_Sarcotragus_fasciculatus_1234657_srs:0.0928545544,Simion2017_Pleraplysilla_spinifera_119433_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0605418304)100:0.2525990000)70:0.0453380000)87:0.0569330000,(((Chang2015_Aphrocallistes_vastus_83887_srs:0.0000026081,Philippe2009_Heterochone_sp_367900_Gene_0120:0.0674187389)98:0.0929740000,Simion2017_Hyalonema_populiferum_1631155_V2META11037-1-42-Calc_Hmm10-BMGE05:0.3618227370)51:0.0000020000,(((Chang2015_Euplectella_aspergillum_936045_srs:0.0000020402,Simion2017_Euplectella_aspergillum_936045_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0063725210)100:0.2922390000,Simion2017_Sympagella_nux_76350_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0743484130)95:0.0164060000,Simion2017_Rossella_fibulata_1076269_V2META11037-1-42-Calc_Hmm10-BMGE05:0.1112900655)98:0.0897000000)96:0.7179420000)81:0.0359510000,(Chang2015_Leucetta_chagosensis_185688_srs:0.2825489076,(Chang2015_Sycon_ciliatum_27933_srs:0.1112463132,Chang2015_Sycon_coactum_1009717_srs:0.1045954285)98:0.1341080000)99:0.2811630000)59:0.0225420000)96:0.0804220000,(((Chang2015_Amoebidium_parasiticum_4881_srs:0.0000020225,Philippe2009_Amoebidium_parasiticum_4881_Gene_0120:0.0175705283)100:0.2447260000,(Chang2015_Sphaeroforma_arctica_72019_srs:0.0182195789,Simion2017_Sphaeroforma_arctica_72019_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0333316510)100:0.8480960000)100:0.4140480000,(((Chang2015_Capsaspora_owczarzaki_192875_srs:0.0000023703,Simion2017_Capsaspora_owczarzaki_192875_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0251101058)95:0.0046580000,Philippe2009_Capsaspora_owczarzaki_192875_Gene_0120:0.0000022117)100:0.6288850000,((Chang2015_Ministeria_vibrans_134558_srs:0.0063066663,Simion2017_Ministeria_vibrans_134558_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0057764742)100:0.6706580000,((Philippe2009_Allomyces_macrogynus_28583_Gene_0120:0.4144354338,(Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0120:0.0984814244,Philippe2009_Rhizopus_oryzae_64495_Gene_0120:0.1952349692)100:0.3455450000)97:0.2104420000,(Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0120:0.3637537236,Philippe2009_Spizellomyces_punctatus_109760_Gene_0120:0.1075481695)100:0.2708900000)100:1.1162020000)84:0.0422450000)68:0.0523920000)87:0.1334050000)85:0.0760880000,((((((Chang2015_Beroe_abyssicola_320166_srs:0.0051990163,Simion2017_Beroe_abyssicola_320166_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0039380511)100:0.0450890000,Simion2017_Beroe_sp_10199_V2META11037-1-42-Calc_Hmm10-BMGE05:0.1326917938)100:0.0590110000,(((((Chang2015_Mnemiopsis_leidyi_27923_srs:0.0037100207,Philippe2009_Mnemiopsis_leidyi_27923_Gene_0120:0.0000020922)94:0.0000020000,Simion2017_Mnemiopsis_leidyi_27923_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0000029231)100:0.0252440000,(Simion2017_Bolinopsis_infundibulum_140455_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0941408725,Simion2017_Cestum_veneris_12997_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0562111085)87:0.0233630000)100:0.0453030000,Simion2017_Dryodora_glandiformis_1566677_V2META11037-1-42-Calc_Hmm10-BMGE05:0.2021923320)77:0.0173810000,((Chang2015_Pleurobrachia_pileus_140457_srs:0.0155718631,(Philippe2009_Pleurobrachia_pileus_140457_Gene_0120:0.0000020907,Simion2017_Pleurobrachia_species_34498_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0000025183)100:0.0144810000)100:0.0738750000,Simion2017_Hormiphora_californensis_1403702_V2META11037-1-42-Calc_Hmm10-BMGE05:0.1417215883)100:0.1014790000)79:0.0147630000)99:0.0444910000,Simion2017_Lampea_pancerina_1532213_V2META11037-1-42-Calc_Hmm10-BMGE05:0.2287442623)73:0.0403470000,((Chang2015_Vallicula_multiformis_140489_srs:0.0043904154,Simion2017_Vallicula_multiformis_140489_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0000021002)100:0.1128550000,Simion2017_Coeloplana_species_140473_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0302668151)99:0.0726610000)98:0.0973840000,(Chang2015_Euplokamis_dunlapae_1403701_srs:0.0080773377,Simion2017_Euplokamis_dunlapae_1403701_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0000029231)100:0.2559520000)100:0.4283360000)100:0.2133690000,(((Chang2015_Monosiga_ovata_81526_srs:0.0000024356,Philippe2009_Monosiga_ovata_81526_Gene_0120:0.0000020907)100:0.0048520000,Simion2017_Mylnosiga_fluctuans_19_1928486_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0000020922)100:0.3812290000,Simion2017_Salpingoeca_helianthica_18_1928494_V2META11037-1-42-Calc_Hmm10-BMGE05:0.1500269124)100:0.2218380000)59:0.0629640000,(Simion2017_Codosiga_hollandica_17_1742608_V2META11037-1-42-Calc_Hmm10-BMGE05:0.4250556307,(Simion2017_Salpingoeca_macrocollata_06_1924736_V2META11037-1-42-Calc_Hmm10-BMGE05:0.2717614965,Simion2017_Salpingoeca_punica_03_1924735_V2META11037-1-42-Calc_Hmm10-BMGE05:0.2888231036)100:0.1128170000)94:0.0557790000)71:0.0348080000,((((((Chang2015_Monosiga_brevicollis_81824_srs:0.0000020949,Philippe2009_Monosiga_brevicollis_81824_Gene_0120:0.0000020907)100:0.0292880000,Simion2017_Monosiga_brevicollis_81824_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0028402026)100:0.2547910000,Simion2017_Choanoeca_perplexa_11_81531_V2META11037-1-42-Calc_Hmm10-BMGE05:0.1991196572)100:0.0755400000,((Chang2015_Salpingoeca_sp_86017_srs:0.0088312985,Simion2017_Salpingoeca_rosetta_946362_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0000026464)100:0.2247170000,Simion2017_Microstomoeca_roanoka_1923864_V2META11037-1-42-Calc_Hmm10-BMGE05:0.2026613698)100:0.1559340000)62:0.0251070000,Simion2017_Salpingoeca_infusionum_12_86018_V2META11037-1-42-Calc_Hmm10-BMGE05:0.3133621413)91:0.0870600000,(Simion2017_Salpingoeca_dolichothecata_16_1742605_V2META11037-1-42-Calc_Hmm10-BMGE05:0.5725584376,Simion2017_Salpingoeca_urceolata_04_473813_V2META11037-1-42-Calc_Hmm10-BMGE05:0.5633773328)87:0.0517700000)82:0.0552420000)86:0.0636010000,Simion2017_Salpingoeca_kvevrii_1924737_V2META11037-1-42-Calc_Hmm10-BMGE05:0.3427524648)100:0.2722120000,Simion2017_Didymoeca_costata_10_459534_V2META11037-1-42-Calc_Hmm10-BMGE05:0.4583399910)99:0.1492580000,Simion2017_Diaphanoeca_grandis_28014_V2META11037-1-42-Calc_Hmm10-BMGE05:0.4894504103)100:0.0427980000,(Chang2015_Stephanoeca_diplocostata_81535_srs:0.0104897332,Simion2017_Stephanoeca_diplocostata_81535_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0000021002)100:0.3477300000)100:0.2748020000,Simion2017_Acanthoeca_spectabilis_81533_V2META11037-1-42-Calc_Hmm10-BMGE05:0.1474389063)100:0.1439380000,Simion2017_Acanthoeca_sp_81532_V2META11037-1-42-Calc_Hmm10-BMGE05:0.0000023703);
+
+TIME STAMP
+----------
+
+Date and time: Tue Aug 30 07:06:50 2022
+Total CPU time used: 55494.78036 seconds (15h:24m:54s)
+Total wall-clock time used: 56105.85531 seconds (15h:35m:5s)
+

@@ -1,0 +1,309 @@
+IQ-TREE version 1.5.3 for Linux 64-bit built Mar 12 2017
+Copyright (c) 2011-2016 Nguyen Lam Tung, Olga Chernomor, Arndt von Haeseler and Bui Quang Minh.
+
+Host:    r416.uppmax.uu.se (AVX2, FMA3, 125 GB RAM)
+Command: iqtree -s /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component1291.mafft -m LG+C60+F -nt 1 -bb 1000 -pre /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1291/LG+C60+F_component1291
+Seed:    38392 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 29 15:31:41 2022
+Kernel:  AVX+FMA
+
+NOTE: Consider using the multicore version because your CPU has 20 cores!
+
+Reading alignment file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component1291.mafft ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 82 sequences with 414 columns and 365 patterns (196 informative sites, 177 constant sites)
+WARNING: Some sequence names are changed as follows:
+Philippe2009:Acropora_millepora:45264:Gene_0034 -> Philippe2009_Acropora_millepora_45264_Gene_0034
+Philippe2009:Allomyces_macrogynus:28583:Gene_0034 -> Philippe2009_Allomyces_macrogynus_28583_Gene_0034
+Philippe2009:Aplysia_californica:6500:Gene_0034 -> Philippe2009_Aplysia_californica_6500_Gene_0034
+Philippe2009:Batrachochytrium_dendrobatidis:109871:Gene_0034 -> Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0034
+Philippe2009:Branchiostoma_floridae:7739:Gene_0034 -> Philippe2009_Branchiostoma_floridae_7739_Gene_0034
+Philippe2009:Capitella_teleta:283909:Gene_0034 -> Philippe2009_Capitella_teleta_283909_Gene_0034
+Philippe2009:Capsaspora_owczarzaki:192875:Gene_0034 -> Philippe2009_Capsaspora_owczarzaki_192875_Gene_0034
+Philippe2009:Carteriospongia_foliascens:593584:Gene_0034 -> Philippe2009_Carteriospongia_foliascens_593584_Gene_0034
+Philippe2009:Ciona_savignyi:51511:Gene_0034 -> Philippe2009_Ciona_savignyi_51511_Gene_0034
+Philippe2009:Clytia_hemisphaerica:252671:Gene_0034 -> Philippe2009_Clytia_hemisphaerica_252671_Gene_0034
+Philippe2009:Crassostrea_gigas:29159:Gene_0034 -> Philippe2009_Crassostrea_gigas_29159_Gene_0034
+Philippe2009:Danio_rerio:7955:Gene_0034 -> Philippe2009_Danio_rerio_7955_Gene_0034
+Philippe2009:Daphnia_pulex:6669:Gene_0034 -> Philippe2009_Daphnia_pulex_6669_Gene_0034
+Philippe2009:Euprymna_scolopes:6613:Gene_0034 -> Philippe2009_Euprymna_scolopes_6613_Gene_0034
+Philippe2009:Helobdella_robusta:6412:Gene_0034 -> Philippe2009_Helobdella_robusta_6412_Gene_0034
+Philippe2009:Heterochone_sp:367900:Gene_0034 -> Philippe2009_Heterochone_sp_367900_Gene_0034
+Philippe2009:Hydra_magnipapillata:6087:Gene_0034 -> Philippe2009_Hydra_magnipapillata_6087_Gene_0034
+Philippe2009:Hydractinia_echinata:35630:Gene_0034 -> Philippe2009_Hydractinia_echinata_35630_Gene_0034
+Philippe2009:Ixodes_scapularis:6945:Gene_0034 -> Philippe2009_Ixodes_scapularis_6945_Gene_0034
+Philippe2009:Molgula_tectiformis:30286:Gene_0034 -> Philippe2009_Molgula_tectiformis_30286_Gene_0034
+Philippe2009:Monosiga_brevicollis:81824:Gene_0034 -> Philippe2009_Monosiga_brevicollis_81824_Gene_0034
+Philippe2009:Monosiga_ovata:81526:Gene_0034 -> Philippe2009_Monosiga_ovata_81526_Gene_0034
+Philippe2009:Nasonia_vitripennis:7425:Gene_0034 -> Philippe2009_Nasonia_vitripennis_7425_Gene_0034
+Philippe2009:Nematostella_vectensis:45351:Gene_0034 -> Philippe2009_Nematostella_vectensis_45351_Gene_0034
+Philippe2009:Oscarella_carmela:386100:Gene_0034 -> Philippe2009_Oscarella_carmela_386100_Gene_0034
+Philippe2009:Pedicellina_cernua:43123:Gene_0034 -> Philippe2009_Pedicellina_cernua_43123_Gene_0034
+Philippe2009:Pediculus_humanus:121225:Gene_0034 -> Philippe2009_Pediculus_humanus_121225_Gene_0034
+Philippe2009:Petromyzon_marinus:7757:Gene_0034 -> Philippe2009_Petromyzon_marinus_7757_Gene_0034
+Philippe2009:Phycomyces_blakesleeanus:4837:Gene_0034 -> Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0034
+Philippe2009:Pleurobrachia_pileus:140457:Gene_0034 -> Philippe2009_Pleurobrachia_pileus_140457_Gene_0034
+Philippe2009:Proterospongia_sp:218847:Gene_0034 -> Philippe2009_Proterospongia_sp_218847_Gene_0034
+Philippe2009:Amphimedon_queenslandica:400682:Gene_0034 -> Philippe2009_Amphimedon_queenslandica_400682_Gene_0034
+Philippe2009:Rhizopus_oryzae:64495:Gene_0034 -> Philippe2009_Rhizopus_oryzae_64495_Gene_0034
+Philippe2009:Saccoglossus_kowalevskii:10224:Gene_0034 -> Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0034
+Philippe2009:Spizellomyces_punctatus:109760:Gene_0034 -> Philippe2009_Spizellomyces_punctatus_109760_Gene_0034
+Philippe2009:Strongylocentrotus_purpuratus:7668:Gene_0034 -> Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0034
+Philippe2009:Trichoplax_adhaerens:10228:Gene_0034 -> Philippe2009_Trichoplax_adhaerens_10228_Gene_0034
+Philippe2009:Tubifex_tubifex:6386:Gene_0034 -> Philippe2009_Tubifex_tubifex_6386_Gene_0034
+Whelan2017_full:Sphaeroforma_arctica:72019:Subset25_01 -> Whelan2017_full_Sphaeroforma_arctica_72019_Subset25_01
+Whelan2017_full:Drosophila_melanogaster:7227:Subset25_01 -> Whelan2017_full_Drosophila_melanogaster_7227_Subset25_01
+Whelan2017_full:Rossella_fibulata:1076269:Subset25_01 -> Whelan2017_full_Rossella_fibulata_1076269_Subset25_01
+Whelan2017_full:Amoebidium_parasiticum:4881:Subset25_01 -> Whelan2017_full_Amoebidium_parasiticum_4881_Subset25_01
+Whelan2017_full:Abylopsis_tetragona:316209:Subset25_01 -> Whelan2017_full_Abylopsis_tetragona_316209_Subset25_01
+Whelan2017_full:Eunicella_verrucosa:396355:Subset25_01 -> Whelan2017_full_Eunicella_verrucosa_396355_Subset25_01
+Whelan2017_full:Daphnia_pulex:6669:Subset25_01 -> Whelan2017_full_Daphnia_pulex_6669_Subset25_01
+Whelan2017_full:Aiptasia_pallida:1720309:Subset25_01 -> Whelan2017_full_Aiptasia_pallida_1720309_Subset25_01
+Whelan2017_full:Homo_sapiens:9606:Subset25_01 -> Whelan2017_full_Homo_sapiens_9606_Subset25_01
+Whelan2017_full:Strongylocentrotus_purpuratus:7668:Subset25_01 -> Whelan2017_full_Strongylocentrotus_purpuratus_7668_Subset25_01
+Whelan2017_full:Physalia_physalis:168775:Subset25_01 -> Whelan2017_full_Physalia_physalis_168775_Subset25_01
+Whelan2017_full:Hydra_vulgaris:6087:Subset25_01 -> Whelan2017_full_Hydra_vulgaris_6087_Subset25_01
+Whelan2017_full:Corticium_candelabrum:121492:Subset25_01 -> Whelan2017_full_Corticium_candelabrum_121492_Subset25_01
+Whelan2017_full:Nanomia_bijuga:168759:Subset25_01 -> Whelan2017_full_Nanomia_bijuga_168759_Subset25_01
+Whelan2017_full:Acanthoeca_sp:81532:Subset25_01 -> Whelan2017_full_Acanthoeca_sp_81532_Subset25_01
+Whelan2017_full:Sycon_ciliatum:27933:Subset25_01 -> Whelan2017_full_Sycon_ciliatum_27933_Subset25_01
+Whelan2017_full:Sympagella_nux:76350:Subset25_01 -> Whelan2017_full_Sympagella_nux_76350_Subset25_01
+Whelan2017_full:Spongilla_lacustris:6055:Subset25_01 -> Whelan2017_full_Spongilla_lacustris_6055_Subset25_01
+Whelan2017_full:Monosiga_ovata:81526:Subset25_01 -> Whelan2017_full_Monosiga_ovata_81526_Subset25_01
+Whelan2017_full:Ministeria_vibrans:134558:Subset25_01 -> Whelan2017_full_Ministeria_vibrans_134558_Subset25_01
+Whelan2017_full:Mycale_phyllophila:1325607:Subset25_01 -> Whelan2017_full_Mycale_phyllophila_1325607_Subset25_01
+Whelan2017_full:Hemithiris_psittacea:763142:Subset25_01 -> Whelan2017_full_Hemithiris_psittacea_763142_Subset25_01
+Whelan2017_full:Agalma_elegans:316166:Subset25_01 -> Whelan2017_full_Agalma_elegans_316166_Subset25_01
+Whelan2017_full:Capitella_teleta:283909:Subset25_01 -> Whelan2017_full_Capitella_teleta_283909_Subset25_01
+Whelan2017_full:Salpingoeca_rosetta:946362:Subset25_01 -> Whelan2017_full_Salpingoeca_rosetta_946362_Subset25_01
+Whelan2017_full:Chondrilla_nucula:220712:Subset25_01 -> Whelan2017_full_Chondrilla_nucula_220712_Subset25_01
+Whelan2017_full:Trichoplax_adhaerens:10228:Subset25_01 -> Whelan2017_full_Trichoplax_adhaerens_10228_Subset25_01
+Whelan2017_full:Monosiga_brevicollis:81824:Subset25_01 -> Whelan2017_full_Monosiga_brevicollis_81824_Subset25_01
+Whelan2017_full:Capsaspora_owczarzaki:192875:Subset25_01 -> Whelan2017_full_Capsaspora_owczarzaki_192875_Subset25_01
+Whelan2017_full:Hydra_viridissima:6082:Subset25_01 -> Whelan2017_full_Hydra_viridissima_6082_Subset25_01
+Whelan2017_full:Acropora_digitifera:70779:Subset25_01 -> Whelan2017_full_Acropora_digitifera_70779_Subset25_01
+Whelan2017_full:Cliona_varians:297654:Subset25_01 -> Whelan2017_full_Cliona_varians_297654_Subset25_01
+Whelan2017_full:Kirkpatrickia_variolosa:1631157:Subset25_01 -> Whelan2017_full_Kirkpatrickia_variolosa_1631157_Subset25_01
+Whelan2017_full:Latrunculia_apicalis:1325597:Subset25_01 -> Whelan2017_full_Latrunculia_apicalis_1325597_Subset25_01
+Whelan2017_full:Hyalonema_populiferum:1631155:Subset25_01 -> Whelan2017_full_Hyalonema_populiferum_1631155_Subset25_01
+Whelan2017_full:Periphylla_periphylla:880221:Subset25_01 -> Whelan2017_full_Periphylla_periphylla_880221_Subset25_01
+Whelan2017_full:Hormathia_digitata:1163372:Subset25_01 -> Whelan2017_full_Hormathia_digitata_1163372_Subset25_01
+Whelan2017_full:Hydra_oligactis:6088:Subset25_01 -> Whelan2017_full_Hydra_oligactis_6088_Subset25_01
+Whelan2017_full:Pseudospongosorites_suberitoides:396895:Subset25_01 -> Whelan2017_full_Pseudospongosorites_suberitoides_396895_Subset25_01
+Whelan2017_full:Sycon_coactum:1009717:Subset25_01 -> Whelan2017_full_Sycon_coactum_1009717_Subset25_01
+Whelan2017_full:Ircinia_fasciculata:1234657:Subset25_01 -> Whelan2017_full_Ircinia_fasciculata_1234657_Subset25_01
+Whelan2017_full:Aphrocallistes_vastus:83887:Subset25_01 -> Whelan2017_full_Aphrocallistes_vastus_83887_Subset25_01
+Whelan2017_full:Oscarella_carmela:386100:Subset25_01 -> Whelan2017_full_Oscarella_carmela_386100_Subset25_01
+Whelan2017_full:Craseoa_lathetica:316205:Subset25_01 -> Whelan2017_full_Craseoa_lathetica_316205_Subset25_01
+
+                                                                     Gap/Ambiguity  Composition  p-value
+   1  Philippe2009_Acropora_millepora_45264_Gene_0034                        8.21%    passed    100.00%
+   2  Philippe2009_Allomyces_macrogynus_28583_Gene_0034                      0.72%    passed     50.98%
+   3  Philippe2009_Aplysia_californica_6500_Gene_0034                        7.25%    passed    100.00%
+   4  Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0034           8.70%    passed     49.44%
+   5  Philippe2009_Branchiostoma_floridae_7739_Gene_0034                     0.72%    passed    100.00%
+   6  Philippe2009_Capitella_teleta_283909_Gene_0034                         0.72%    passed    100.00%
+   7  Philippe2009_Capsaspora_owczarzaki_192875_Gene_0034                    0.97%    passed    100.00%
+   8  Philippe2009_Carteriospongia_foliascens_593584_Gene_0034              45.17%    passed     96.29%
+   9  Philippe2009_Ciona_savignyi_51511_Gene_0034                            8.21%    passed    100.00%
+  10  Philippe2009_Clytia_hemisphaerica_252671_Gene_0034                     0.97%    passed    100.00%
+  11  Philippe2009_Crassostrea_gigas_29159_Gene_0034                         2.42%    passed    100.00%
+  12  Philippe2009_Danio_rerio_7955_Gene_0034                                0.72%    passed    100.00%
+  13  Philippe2009_Daphnia_pulex_6669_Gene_0034                              0.72%    passed    100.00%
+  14  Philippe2009_Euprymna_scolopes_6613_Gene_0034                         45.41%    passed     95.86%
+  15  Philippe2009_Helobdella_robusta_6412_Gene_0034                         0.72%    passed    100.00%
+  16  Philippe2009_Heterochone_sp_367900_Gene_0034                          50.24%    passed     90.52%
+  17  Philippe2009_Hydra_magnipapillata_6087_Gene_0034                       0.72%    passed    100.00%
+  18  Philippe2009_Hydractinia_echinata_35630_Gene_0034                     59.66%    passed     88.52%
+  19  Philippe2009_Ixodes_scapularis_6945_Gene_0034                          0.72%    passed     99.96%
+  20  Philippe2009_Molgula_tectiformis_30286_Gene_0034                       0.72%    passed    100.00%
+  21  Philippe2009_Monosiga_brevicollis_81824_Gene_0034                      0.97%    passed     98.66%
+  22  Philippe2009_Monosiga_ovata_81526_Gene_0034                            0.97%    passed     99.99%
+  23  Philippe2009_Nasonia_vitripennis_7425_Gene_0034                        0.72%    passed    100.00%
+  24  Philippe2009_Nematostella_vectensis_45351_Gene_0034                    0.72%    passed    100.00%
+  25  Philippe2009_Oscarella_carmela_386100_Gene_0034                       20.53%    passed     99.95%
+  26  Philippe2009_Pedicellina_cernua_43123_Gene_0034                       31.40%    passed     99.92%
+  27  Philippe2009_Pediculus_humanus_121225_Gene_0034                        0.72%    passed    100.00%
+  28  Philippe2009_Petromyzon_marinus_7757_Gene_0034                         0.72%    passed    100.00%
+  29  Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0034                   1.21%    passed     67.31%
+  30  Philippe2009_Pleurobrachia_pileus_140457_Gene_0034                    42.75%    passed     65.16%
+  31  Philippe2009_Proterospongia_sp_218847_Gene_0034                       44.20%    passed     97.58%
+  32  Philippe2009_Amphimedon_queenslandica_400682_Gene_0034                 6.04%    passed    100.00%
+  33  Philippe2009_Rhizopus_oryzae_64495_Gene_0034                           0.72%    passed     50.17%
+  34  Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0034                  0.72%    passed    100.00%
+  35  Philippe2009_Spizellomyces_punctatus_109760_Gene_0034                  0.97%    passed     61.31%
+  36  Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0034              0.72%    passed    100.00%
+  37  Philippe2009_Trichoplax_adhaerens_10228_Gene_0034                      0.72%    passed    100.00%
+  38  Philippe2009_Tubifex_tubifex_6386_Gene_0034                           19.08%    passed     99.98%
+  39  Whelan2017_full_Sphaeroforma_arctica_72019_Subset25_01                 3.62%    passed    100.00%
+  40  Whelan2017_full_Drosophila_melanogaster_7227_Subset25_01               3.38%    passed    100.00%
+  41  Whelan2017_full_Rossella_fibulata_1076269_Subset25_01                  5.31%    passed    100.00%
+  42  Whelan2017_full_Amoebidium_parasiticum_4881_Subset25_01                3.86%    passed    100.00%
+  43  Whelan2017_full_Abylopsis_tetragona_316209_Subset25_01                11.35%    passed     99.96%
+  44  Whelan2017_full_Eunicella_verrucosa_396355_Subset25_01                 3.38%    passed    100.00%
+  45  Whelan2017_full_Daphnia_pulex_6669_Subset25_01                         3.38%    passed    100.00%
+  46  Whelan2017_full_Aiptasia_pallida_1720309_Subset25_01                   3.38%    passed    100.00%
+  47  Whelan2017_full_Homo_sapiens_9606_Subset25_01                          3.38%    passed    100.00%
+  48  Whelan2017_full_Strongylocentrotus_purpuratus_7668_Subset25_01         3.38%    passed    100.00%
+  49  Whelan2017_full_Physalia_physalis_168775_Subset25_01                   3.38%    passed    100.00%
+  50  Whelan2017_full_Hydra_vulgaris_6087_Subset25_01                        3.38%    passed    100.00%
+  51  Whelan2017_full_Corticium_candelabrum_121492_Subset25_01              46.86%    failed      4.09%
+  52  Whelan2017_full_Nanomia_bijuga_168759_Subset25_01                      3.38%    passed    100.00%
+  53  Whelan2017_full_Acanthoeca_sp_81532_Subset25_01                        3.38%    passed    100.00%
+  54  Whelan2017_full_Sycon_ciliatum_27933_Subset25_01                       3.38%    passed    100.00%
+  55  Whelan2017_full_Sympagella_nux_76350_Subset25_01                       3.38%    passed     99.97%
+  56  Whelan2017_full_Spongilla_lacustris_6055_Subset25_01                   4.11%    passed    100.00%
+  57  Whelan2017_full_Monosiga_ovata_81526_Subset25_01                       3.38%    passed     99.97%
+  58  Whelan2017_full_Ministeria_vibrans_134558_Subset25_01                  3.38%    passed     99.94%
+  59  Whelan2017_full_Mycale_phyllophila_1325607_Subset25_01                 3.38%    passed    100.00%
+  60  Whelan2017_full_Hemithiris_psittacea_763142_Subset25_01               15.46%    passed     99.99%
+  61  Whelan2017_full_Agalma_elegans_316166_Subset25_01                      3.38%    passed    100.00%
+  62  Whelan2017_full_Capitella_teleta_283909_Subset25_01                    3.38%    passed    100.00%
+  63  Whelan2017_full_Salpingoeca_rosetta_946362_Subset25_01                33.57%    passed     40.92%
+  64  Whelan2017_full_Chondrilla_nucula_220712_Subset25_01                   3.38%    passed    100.00%
+  65  Whelan2017_full_Trichoplax_adhaerens_10228_Subset25_01                 3.38%    passed    100.00%
+  66  Whelan2017_full_Monosiga_brevicollis_81824_Subset25_01                 6.76%    passed     99.01%
+  67  Whelan2017_full_Capsaspora_owczarzaki_192875_Subset25_01               3.38%    passed    100.00%
+  68  Whelan2017_full_Hydra_viridissima_6082_Subset25_01                     3.38%    passed    100.00%
+  69  Whelan2017_full_Acropora_digitifera_70779_Subset25_01                  3.38%    passed    100.00%
+  70  Whelan2017_full_Cliona_varians_297654_Subset25_01                      3.38%    passed    100.00%
+  71  Whelan2017_full_Kirkpatrickia_variolosa_1631157_Subset25_01            3.38%    passed    100.00%
+  72  Whelan2017_full_Latrunculia_apicalis_1325597_Subset25_01               3.38%    passed    100.00%
+  73  Whelan2017_full_Hyalonema_populiferum_1631155_Subset25_01              3.38%    passed     99.89%
+  74  Whelan2017_full_Periphylla_periphylla_880221_Subset25_01              15.94%    passed     99.98%
+  75  Whelan2017_full_Hormathia_digitata_1163372_Subset25_01                 3.38%    passed    100.00%
+  76  Whelan2017_full_Hydra_oligactis_6088_Subset25_01                       3.38%    passed    100.00%
+  77  Whelan2017_full_Pseudospongosorites_suberitoides_396895_Subset25_01   28.99%    passed    100.00%
+  78  Whelan2017_full_Sycon_coactum_1009717_Subset25_01                     12.08%    passed     99.42%
+  79  Whelan2017_full_Ircinia_fasciculata_1234657_Subset25_01                3.38%    passed     99.99%
+  80  Whelan2017_full_Aphrocallistes_vastus_83887_Subset25_01                3.38%    passed     99.99%
+  81  Whelan2017_full_Oscarella_carmela_386100_Subset25_01                   3.38%    passed    100.00%
+  82  Whelan2017_full_Craseoa_lathetica_316205_Subset25_01                   3.38%    passed    100.00%
+WARNING: 2 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                                                  8.70%  1 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.027 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 38392)...
+Model LG+C60+F is alias for LG+POISSON+G+FMIX{C60pi1:1:0.0169698865,C60pi2:1:0.0211683374,C60pi3:1:0.0276589079,C60pi4:1:0.0065675964,C60pi5:1:0.0141221416,C60pi6:1:0.0068774834,C60pi7:1:0.0146909701,C60pi8:1:0.0067225777,C60pi9:1:0.0018396660,C60pi10:1:0.0102547197,C60pi11:1:0.0230896163,C60pi12:1:0.0057941033,C60pi13:1:0.0125394534,C60pi14:1:0.0204526478,C60pi15:1:0.0070629602,C60pi16:1:0.0117982741,C60pi17:1:0.0068334668,C60pi18:1:0.0433775839,C60pi19:1:0.0318278731,C60pi20:1:0.0222546108,C60pi21:1:0.0102264969,C60pi22:1:0.0150545891,C60pi23:1:0.0134159878,C60pi24:1:0.0148552065,C60pi25:1:0.0239111516,C60pi26:1:0.0128776278,C60pi27:1:0.0222318842,C60pi28:1:0.0247444742,C60pi29:1:0.0214274810,C60pi30:1:0.0115001882,C60pi31:1:0.0076017389,C60pi32:1:0.0130258568,C60pi33:1:0.0093701965,C60pi34:1:0.0467194264,C60pi35:1:0.0441940314,C60pi36:1:0.0322263154,C60pi37:1:0.0402999891,C60pi38:1:0.0150234227,C60pi39:1:0.0104589903,C60pi40:1:0.0214742395,C60pi41:1:0.0154957836,C60pi42:1:0.0101789953,C60pi43:1:0.0227980379,C60pi44:1:0.0123204539,C60pi45:1:0.0066777583,C60pi46:1:0.0004150083,C60pi47:1:0.0344385130,C60pi48:1:0.0113663379,C60pi49:1:0.0127143049,C60pi50:1:0.0124323741,C60pi51:1:0.0262124415,C60pi52:1:0.0064994957,C60pi53:1:0.0103203293,C60pi54:1:0.0142463512,C60pi55:1:0.0215600067,C60pi56:1:0.0199150700,C60pi57:1:0.0038964200,C60pi58:1:0.0113448855,C60pi59:1:0.0128595846,C60pi60:1:0.0117656776}+F
+
+NOTE: 1201 MB RAM (1 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -8549.386
+2. Current log-likelihood: -8263.438
+3. Current log-likelihood: -8249.616
+4. Current log-likelihood: -8248.143
+Optimal log-likelihood: -8248.048
+Mixture weights: 0.019 0.000 0.033 0.000 0.000 0.000 0.000 0.000 0.004 0.000 0.060 0.120 0.017 0.016 0.006 0.000 0.000 0.061 0.000 0.000 0.000 0.000 0.012 0.016 0.001 0.021 0.000 0.048 0.000 0.014 0.056 0.029 0.002 0.026 0.089 0.027 0.024 0.015 0.000 0.000 0.065 0.015 0.000 0.083 0.000 0.022 0.000 0.000 0.025 0.000 0.000 0.006 0.027 0.005 0.003 0.000 0.014 0.000 0.014 0.000 0.001
+Gamma shape alpha: 0.351
+Parameters optimization took 4 rounds (100.865 sec)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+Computing ML distances based on estimated model parameters... 1.237 sec
+WARNING: Some pairwise ML distances are too long (saturated)
+Computing BIONJ tree...
+0.006 seconds
+Log-likelihood of BIONJ tree: -8314.837
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 1.955 second
+Computing log-likelihood of 98 initial trees ... 931.999 seconds
+Current best score: -8226.530
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 1: -8204.578
+Iteration 10 / LogL: -8220.698 / Time: 0h:33m:14s
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 14: -8203.357
+Iteration 20 / LogL: -8209.927 / Time: 0h:50m:59s
+Finish initializing candidate tree set (20)
+Current best tree score: -8203.357 / CPU time: 2909.810
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 22: -8197.602
+Iteration 30 / LogL: -8200.752 / Time: 1h:16m:56s (4h:4m:5s left)
+Iteration 40 / LogL: -8198.202 / Time: 1h:44m:11s (3h:39m:4s left)
+Iteration 50 / LogL: -8206.137 / Time: 2h:10m:23s (3h:11m:35s left)
+Log-likelihood cutoff on original alignment: -8256.502
+Iteration 60 / LogL: -8198.202 / Time: 2h:36m:25s (2h:44m:22s left)
+Iteration 70 / LogL: -8201.165 / Time: 3h:1m:37s (2h:16m:52s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 74: -8197.350
+Iteration 80 / LogL: -8197.601 / Time: 3h:28m:11s (4h:7m:42s left)
+Iteration 90 / LogL: -8201.552 / Time: 3h:52m:9s (3h:39m:6s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 97: -8196.590
+Iteration 100 / LogL: -8197.689 / Time: 4h:18m:17s (4h:13m:4s left)
+Log-likelihood cutoff on original alignment: -8256.502
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.997
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 109: -8196.450
+Iteration 110 / LogL: -8198.253 / Time: 4h:42m:39s (4h:16m:43s left)
+Iteration 120 / LogL: -8197.171 / Time: 5h:7m:55s (3h:50m:17s left)
+UPDATE BEST LOG-LIKELIHOOD: -8196.450
+Iteration 130 / LogL: -8196.450 / Time: 5h:31m:40s (3h:23m:7s left)
+Iteration 140 / LogL: -8201.366 / Time: 5h:57m:55s (2h:57m:40s left)
+UPDATE BEST LOG-LIKELIHOOD: -8196.450
+Iteration 150 / LogL: -8210.394 / Time: 6h:24m:56s (2h:32m:25s left)
+Log-likelihood cutoff on original alignment: -8241.869
+Iteration 160 / LogL: -8201.420 / Time: 6h:51m:10s (2h:6m:42s left)
+Iteration 170 / LogL: -8198.693 / Time: 7h:15m:17s (1h:40m:27s left)
+Iteration 180 / LogL: -8196.451 / Time: 7h:39m:15s (1h:14m:24s left)
+UPDATE BEST LOG-LIKELIHOOD: -8196.450
+UPDATE BEST LOG-LIKELIHOOD: -8196.450
+Iteration 190 / LogL: -8196.450 / Time: 8h:3m:12s (0h:48m:34s left)
+Iteration 200 / LogL: -8199.175 / Time: 8h:27m:16s (0h:22m:56s left)
+Log-likelihood cutoff on original alignment: -8241.869
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.997
+Iteration 210 / LogL: -8202.720 / Time: 8h:52m:49s (3h:49m:26s left)
+TREE SEARCH COMPLETED AFTER 210 ITERATIONS / Time: 8h:52m:49s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -8196.450
+Optimal log-likelihood: -8196.449
+Mixture weights: 0.014 0.000 0.011 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.060 0.109 0.023 0.022 0.003 0.000 0.000 0.063 0.000 0.000 0.014 0.000 0.012 0.015 0.000 0.021 0.000 0.045 0.000 0.018 0.049 0.025 0.002 0.027 0.089 0.028 0.027 0.008 0.000 0.000 0.070 0.010 0.000 0.100 0.000 0.026 0.000 0.000 0.028 0.000 0.000 0.006 0.028 0.010 0.006 0.000 0.016 0.000 0.014 0.000 0.000
+Gamma shape alpha: 0.341
+Parameters optimization took 1 rounds (14.614 sec)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BEST SCORE FOUND : -8196.449
+Creating bootstrap support values...
+Split supports printed to NEXUS file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1291/LG+C60+F_component1291.splits.nex
+Total tree length: 8.200
+
+Total number of iterations: 210
+CPU time used for tree search: 31706.085 sec (8h:48m:26s)
+Wall-clock time used for tree search: 31819.716 sec (8h:50m:19s)
+Total CPU time used: 31868.755 sec (8h:51m:8s)
+Total wall-clock time used: 31984.499 sec (8h:53m:4s)
+
+Computing bootstrap consensus tree...
+Reading input file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1291/LG+C60+F_component1291.splits.nex...
+82 taxa and 613 splits.
+Consensus tree written to /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1291/LG+C60+F_component1291.contree
+Reading input trees file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1291/LG+C60+F_component1291.contree
+Log-likelihood of consensus tree: -8196.449
+
+Analysis results written to: 
+  IQ-TREE report:                /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1291/LG+C60+F_component1291.iqtree
+  Maximum-likelihood tree:       /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1291/LG+C60+F_component1291.treefile
+  Likelihood distances:          /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1291/LG+C60+F_component1291.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1291/LG+C60+F_component1291.splits.nex
+  Consensus tree:                /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1291/LG+C60+F_component1291.contree
+  Screen log file:               /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1291/LG+C60+F_component1291.log
+
+Date and Time: Tue Aug 30 00:25:22 2022

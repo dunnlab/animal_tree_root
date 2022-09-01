@@ -1,0 +1,493 @@
+IQ-TREE version 1.5.3 for Linux 64-bit built Mar 12 2017
+Copyright (c) 2011-2016 Nguyen Lam Tung, Olga Chernomor, Arndt von Haeseler and Bui Quang Minh.
+
+Host:    r217.uppmax.uu.se (AVX2, FMA3, 125 GB RAM)
+Command: iqtree -s /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component637.mafft -m LG+C60+F -nt 1 -bb 1000 -pre /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component637/LG+C60+F_component637
+Seed:    14819 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 29 15:31:31 2022
+Kernel:  AVX+FMA
+
+NOTE: Consider using the multicore version because your CPU has 20 cores!
+
+Reading alignment file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component637.mafft ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 196 sequences with 297 columns and 281 patterns (202 informative sites, 79 constant sites)
+WARNING: Some sequence names are changed as follows:
+Chang2015:Acanthoeca_sp:81532:suca -> Chang2015_Acanthoeca_sp_81532_suca
+Chang2015:Acropora_cervicornis:6130:suca -> Chang2015_Acropora_cervicornis_6130_suca
+Chang2015:Aiptasia_pallida:1720309:suca -> Chang2015_Aiptasia_pallida_1720309_suca
+Chang2015:Amoebidium_parasiticum:4881:suca -> Chang2015_Amoebidium_parasiticum_4881_suca
+Chang2015:Amphimedon_queenslandica:400682:suca -> Chang2015_Amphimedon_queenslandica_400682_suca
+Chang2015:Aphrocallistes_vastus:83887:suca -> Chang2015_Aphrocallistes_vastus_83887_suca
+Chang2015:Aurelia_aurita:6145:suca -> Chang2015_Aurelia_aurita_6145_suca
+Chang2015:Beroe_abyssicola:320166:suca -> Chang2015_Beroe_abyssicola_320166_suca
+Chang2015:Bolocera_tuediae:1163374:suca -> Chang2015_Bolocera_tuediae_1163374_suca
+Chang2015:Botryllus_schlosseri:30301:suca -> Chang2015_Botryllus_schlosseri_30301_suca
+Chang2015:Branchiostoma_floridae:7739:suca -> Chang2015_Branchiostoma_floridae_7739_suca
+Chang2015:Buddenbrockia_plumatellae:185687:suca -> Chang2015_Buddenbrockia_plumatellae_185687_suca
+Chang2015:Capitella_teleta:283909:suca -> Chang2015_Capitella_teleta_283909_suca
+Chang2015:Capsaspora_owczarzaki:192875:suca -> Chang2015_Capsaspora_owczarzaki_192875_suca
+Chang2015:Chondrilla_nucula:220712:suca -> Chang2015_Chondrilla_nucula_220712_suca
+Chang2015:Ciona_intestinalis:7719:suca -> Chang2015_Ciona_intestinalis_7719_suca
+Chang2015:Clytia_hemisphaerica:252671:suca -> Chang2015_Clytia_hemisphaerica_252671_suca
+Chang2015:Corticium_candelabrum:121492:suca -> Chang2015_Corticium_candelabrum_121492_suca
+Chang2015:Craspedacusta_sowerbii:128124:suca -> Chang2015_Craspedacusta_sowerbii_128124_suca
+Chang2015:Crassostrea_gigas:29159:suca -> Chang2015_Crassostrea_gigas_29159_suca
+Chang2015:Daphnia_pulex:6669:suca -> Chang2015_Daphnia_pulex_6669_suca
+Chang2015:Ectopleura_larynx:264052:suca -> Chang2015_Ectopleura_larynx_264052_suca
+Chang2015:Edwardsiella_lineata:132407:suca -> Chang2015_Edwardsiella_lineata_132407_suca
+Chang2015:Enteromyxum_leei:188704:suca -> Chang2015_Enteromyxum_leei_188704_suca
+Chang2015:Ephydatia_muelleri:6052:suca -> Chang2015_Ephydatia_muelleri_6052_suca
+Chang2015:Eunicella_cavolinii:317547:suca -> Chang2015_Eunicella_cavolinii_317547_suca
+Chang2015:Euplectella_aspergillum:936045:suca -> Chang2015_Euplectella_aspergillum_936045_suca
+Chang2015:Euplokamis_dunlapae:1403701:suca -> Chang2015_Euplokamis_dunlapae_1403701_suca
+Chang2015:Gorgonia_ventalina:204384:suca -> Chang2015_Gorgonia_ventalina_204384_suca
+Chang2015:Helobdella_robusta:6412:suca -> Chang2015_Helobdella_robusta_6412_suca
+Chang2015:Homo_sapiens:9606:suca -> Chang2015_Homo_sapiens_9606_suca
+Chang2015:Hormathia_digitata:1163372:suca -> Chang2015_Hormathia_digitata_1163372_suca
+Chang2015:Hydra_vulgaris_01:6087:suca -> Chang2015_Hydra_vulgaris_01_6087_suca
+Chang2015:Hydractinia_polyclina:589945:suca -> Chang2015_Hydractinia_polyclina_589945_suca
+Chang2015:Ilyanassa_obsoleta:1934733:suca -> Chang2015_Ilyanassa_obsoleta_1934733_suca
+Chang2015:Ixodes_scapularis:6945:suca -> Chang2015_Ixodes_scapularis_6945_suca
+Chang2015:Kudoa_iwatai:269814:suca -> Chang2015_Kudoa_iwatai_269814_suca
+Chang2015:Latimeria_menadoensis:106881:suca -> Chang2015_Latimeria_menadoensis_106881_suca
+Chang2015:Leucetta_chagosensis:185688:suca -> Chang2015_Leucetta_chagosensis_185688_suca
+Chang2015:Ministeria_vibrans:134558:suca -> Chang2015_Ministeria_vibrans_134558_suca
+Chang2015:Mnemiopsis_leidyi:27923:suca -> Chang2015_Mnemiopsis_leidyi_27923_suca
+Chang2015:Monosiga_brevicollis:81824:suca -> Chang2015_Monosiga_brevicollis_81824_suca
+Chang2015:Monosiga_ovata:81526:suca -> Chang2015_Monosiga_ovata_81526_suca
+Chang2015:Orbicella_faveolata:48498:suca -> Chang2015_Orbicella_faveolata_48498_suca
+Chang2015:Myxobolus_cerebralis:59783:suca -> Chang2015_Myxobolus_cerebralis_59783_suca
+Chang2015:Nanomia_bijuga:168759:suca -> Chang2015_Nanomia_bijuga_168759_suca
+Chang2015:Nasonia_vitripennis:7425:suca -> Chang2015_Nasonia_vitripennis_7425_suca
+Chang2015:Nematostella_vectensis:45351:suca -> Chang2015_Nematostella_vectensis_45351_suca
+Chang2015:Octopus_vulgaris:6645:suca -> Chang2015_Octopus_vulgaris_6645_suca
+Chang2015:Oscarella_carmela:386100:suca -> Chang2015_Oscarella_carmela_386100_suca
+Chang2015:Oscarella_sp_SN-2011:386100:suca -> Chang2015_Oscarella_sp_SN-2011_386100_suca
+Chang2015:Patiria_miniata:46514:suca -> Chang2015_Patiria_miniata_46514_suca
+Chang2015:Pediculus_humanus:121225:suca -> Chang2015_Pediculus_humanus_121225_suca
+Chang2015:Petromyzon_marinus:7757:suca -> Chang2015_Petromyzon_marinus_7757_suca
+Chang2015:Petrosia_ficiformis:68564:suca -> Chang2015_Petrosia_ficiformis_68564_suca
+Chang2015:Pleurobrachia_pileus:140457:suca -> Chang2015_Pleurobrachia_pileus_140457_suca
+Chang2015:Pocillopora_damicornis:46731:suca -> Chang2015_Pocillopora_damicornis_46731_suca
+Chang2015:Polypodium_hydriforme:43186:suca -> Chang2015_Polypodium_hydriforme_43186_suca
+Chang2015:Porites_australiensis:51061:suca -> Chang2015_Porites_australiensis_51061_suca
+Chang2015:Saccoglossus_kowalevskii:10224:suca -> Chang2015_Saccoglossus_kowalevskii_10224_suca
+Chang2015:Salpingoeca_sp:86017:suca -> Chang2015_Salpingoeca_sp_86017_suca
+Chang2015:Sarcotragus_fasciculatus:1234657:suca -> Chang2015_Sarcotragus_fasciculatus_1234657_suca
+Chang2015:Sphaeroforma_arctica:72019:suca -> Chang2015_Sphaeroforma_arctica_72019_suca
+Chang2015:Sphaeromyxa_zaharoni:275449:suca -> Chang2015_Sphaeromyxa_zaharoni_275449_suca
+Chang2015:Stephanoeca_diplocostata:81535:suca -> Chang2015_Stephanoeca_diplocostata_81535_suca
+Chang2015:Stomolophus_meleagris:168796:suca -> Chang2015_Stomolophus_meleagris_168796_suca
+Chang2015:Strigamia_maritima:126957:suca -> Chang2015_Strigamia_maritima_126957_suca
+Chang2015:Strongylocentrotus_purpuratus:7668:suca -> Chang2015_Strongylocentrotus_purpuratus_7668_suca
+Chang2015:Sycon_ciliatum:27933:suca -> Chang2015_Sycon_ciliatum_27933_suca
+Chang2015:Sycon_coactum:1009717:suca -> Chang2015_Sycon_coactum_1009717_suca
+Chang2015:Thelohanellus_kitauei:669202:suca -> Chang2015_Thelohanellus_kitauei_669202_suca
+Chang2015:Trichoplax_adhaerens:10228:suca -> Chang2015_Trichoplax_adhaerens_10228_suca
+Chang2015:Tripedalia_cystophora:6141:suca -> Chang2015_Tripedalia_cystophora_6141_suca
+Chang2015:Urticina_eques:417072:suca -> Chang2015_Urticina_eques_417072_suca
+Chang2015:Vallicula_multiformis:140489:suca -> Chang2015_Vallicula_multiformis_140489_suca
+Philippe2009:Acropora_millepora:45264:Gene_0122 -> Philippe2009_Acropora_millepora_45264_Gene_0122
+Philippe2009:Allomyces_macrogynus:28583:Gene_0122 -> Philippe2009_Allomyces_macrogynus_28583_Gene_0122
+Philippe2009:Aplysia_californica:6500:Gene_0122 -> Philippe2009_Aplysia_californica_6500_Gene_0122
+Philippe2009:Batrachochytrium_dendrobatidis:109871:Gene_0122 -> Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0122
+Philippe2009:Branchiostoma_floridae:7739:Gene_0122 -> Philippe2009_Branchiostoma_floridae_7739_Gene_0122
+Philippe2009:Capitella_teleta:283909:Gene_0122 -> Philippe2009_Capitella_teleta_283909_Gene_0122
+Philippe2009:Capsaspora_owczarzaki:192875:Gene_0122 -> Philippe2009_Capsaspora_owczarzaki_192875_Gene_0122
+Philippe2009:Ciona_savignyi:51511:Gene_0122 -> Philippe2009_Ciona_savignyi_51511_Gene_0122
+Philippe2009:Clytia_hemisphaerica:252671:Gene_0122 -> Philippe2009_Clytia_hemisphaerica_252671_Gene_0122
+Philippe2009:Crassostrea_gigas:29159:Gene_0122 -> Philippe2009_Crassostrea_gigas_29159_Gene_0122
+Philippe2009:Danio_rerio:7955:Gene_0122 -> Philippe2009_Danio_rerio_7955_Gene_0122
+Philippe2009:Daphnia_pulex:6669:Gene_0122 -> Philippe2009_Daphnia_pulex_6669_Gene_0122
+Philippe2009:Euperipatoides_kanangrensis:488523:Gene_0122 -> Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0122
+Philippe2009:Euprymna_scolopes:6613:Gene_0122 -> Philippe2009_Euprymna_scolopes_6613_Gene_0122
+Philippe2009:Helobdella_robusta:6412:Gene_0122 -> Philippe2009_Helobdella_robusta_6412_Gene_0122
+Philippe2009:Hydra_magnipapillata:6087:Gene_0122 -> Philippe2009_Hydra_magnipapillata_6087_Gene_0122
+Philippe2009:Ixodes_scapularis:6945:Gene_0122 -> Philippe2009_Ixodes_scapularis_6945_Gene_0122
+Philippe2009:Leucetta_chagosensis:185688:Gene_0122 -> Philippe2009_Leucetta_chagosensis_185688_Gene_0122
+Philippe2009:Metridium_senile:6116:Gene_0122 -> Philippe2009_Metridium_senile_6116_Gene_0122
+Philippe2009:Molgula_tectiformis:30286:Gene_0122 -> Philippe2009_Molgula_tectiformis_30286_Gene_0122
+Philippe2009:Monosiga_brevicollis:81824:Gene_0122 -> Philippe2009_Monosiga_brevicollis_81824_Gene_0122
+Philippe2009:Monosiga_ovata:81526:Gene_0122 -> Philippe2009_Monosiga_ovata_81526_Gene_0122
+Philippe2009:Nasonia_vitripennis:7425:Gene_0122 -> Philippe2009_Nasonia_vitripennis_7425_Gene_0122
+Philippe2009:Nematostella_vectensis:45351:Gene_0122 -> Philippe2009_Nematostella_vectensis_45351_Gene_0122
+Philippe2009:Oopsacas_minuta:111878:Gene_0122 -> Philippe2009_Oopsacas_minuta_111878_Gene_0122
+Philippe2009:Oscarella_carmela:386100:Gene_0122 -> Philippe2009_Oscarella_carmela_386100_Gene_0122
+Philippe2009:Pediculus_humanus:121225:Gene_0122 -> Philippe2009_Pediculus_humanus_121225_Gene_0122
+Philippe2009:Petromyzon_marinus:7757:Gene_0122 -> Philippe2009_Petromyzon_marinus_7757_Gene_0122
+Philippe2009:Phycomyces_blakesleeanus:4837:Gene_0122 -> Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0122
+Philippe2009:Pleurobrachia_pileus:140457:Gene_0122 -> Philippe2009_Pleurobrachia_pileus_140457_Gene_0122
+Philippe2009:Amphimedon_queenslandica:400682:Gene_0122 -> Philippe2009_Amphimedon_queenslandica_400682_Gene_0122
+Philippe2009:Rhizopus_oryzae:64495:Gene_0122 -> Philippe2009_Rhizopus_oryzae_64495_Gene_0122
+Philippe2009:Saccoglossus_kowalevskii:10224:Gene_0122 -> Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0122
+Philippe2009:Sphaeroforma_arctica:72019:Gene_0122 -> Philippe2009_Sphaeroforma_arctica_72019_Gene_0122
+Philippe2009:Spizellomyces_punctatus:109760:Gene_0122 -> Philippe2009_Spizellomyces_punctatus_109760_Gene_0122
+Philippe2009:Strongylocentrotus_purpuratus:7668:Gene_0122 -> Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0122
+Philippe2009:Trichoplax_adhaerens:10228:Gene_0122 -> Philippe2009_Trichoplax_adhaerens_10228_Gene_0122
+Philippe2009:Tubifex_tubifex:6386:Gene_0122 -> Philippe2009_Tubifex_tubifex_6386_Gene_0122
+Philippe2009:Xenoturbella_bocki:242395:Gene_0122 -> Philippe2009_Xenoturbella_bocki_242395_Gene_0122
+Simion2017:Abeoforma_whisleri:749232:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Abeoforma_whisleri_749232_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Acanthoeca_sp:81532:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Acanthoeca_sp_81532_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Acanthoeca_spectabilis:81533:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Acanthoeca_spectabilis_81533_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Aiptasia_pallida:1720309:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Aiptasia_pallida_1720309_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Alatina_alata:1193083:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Alatina_alata_1193083_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Amoebidium_parasiticum:4881:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Amoebidium_parasiticum_4881_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Amphimedon_queenslandica:400682:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Amphimedon_queenslandica_400682_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Aphrocallistes_vastus:83887:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Aphrocallistes_vastus_83887_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Aplysia_californica:6500:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Aplysia_californica_6500_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Atolla_vanhoeffeni:86043:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Atolla_vanhoeffeni_86043_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Aurelia_aurita:6145:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Aurelia_aurita_6145_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Beroe_abyssicola:320166:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Beroe_abyssicola_320166_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Beroe_sp:10199:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Beroe_sp_10199_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Bolinopsis_infundibulum:140455:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Bolinopsis_infundibulum_140455_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Bolocera_tuediae:1163374:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Bolocera_tuediae_1163374_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Branchiostoma_floridae:7739:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Branchiostoma_floridae_7739_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Capitella_teleta:283909:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Capitella_teleta_283909_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Capsaspora_owczarzaki:192875:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Capsaspora_owczarzaki_192875_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Cestum_veneris:12997:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Cestum_veneris_12997_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Choanoeca_perplexa_11:81531:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Choanoeca_perplexa_11_81531_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Clytia_hemisphaerica:252671:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Clytia_hemisphaerica_252671_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Codosiga_hollandica_17:1742608:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Codosiga_hollandica_17_1742608_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Coeloplana_species:140473:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Coeloplana_species_140473_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Corticium_candelabrum:121492:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Corticium_candelabrum_121492_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Craspedacusta_sowerbii:128124:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Craspedacusta_sowerbii_128124_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Crassostrea_gigas:29159:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Crassostrea_gigas_29159_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Daphnia_pulex:6669:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Daphnia_pulex_6669_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Diaphanoeca_grandis:28014:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Diaphanoeca_grandis_28014_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Didymoeca_costata_10:459534:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Didymoeca_costata_10_459534_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Dryodora_glandiformis:1566677:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Dryodora_glandiformis_1566677_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Edwardsiella_lineata:132407:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Edwardsiella_lineata_132407_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Euplectella_aspergillum:936045:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Euplectella_aspergillum_936045_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Euplokamis_dunlapae:1403701:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Euplokamis_dunlapae_1403701_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Grantia_compressa:196260:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Grantia_compressa_196260_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Helobdella_robusta:6412:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Helobdella_robusta_6412_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Homo_sapiens:9606:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Homo_sapiens_9606_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Hormiphora_californensis:1403702:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Hormiphora_californensis_1403702_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Hyalonema_populiferum:1631155:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Hyalonema_populiferum_1631155_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Hydra_vulgaris_01:6087:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Hydra_vulgaris_01_6087_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Hydractinia_polyclina:589945:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Hydractinia_polyclina_589945_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Ircinia_fasciculata:1234657:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Ircinia_fasciculata_1234657_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Ixodes_scapularis:6945:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Ixodes_scapularis_6945_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Kirkpatrickia_variolosa:1631157:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Kirkpatrickia_variolosa_1631157_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Lampea_pancerina:1532213:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Lampea_pancerina_1532213_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Latrunculia_apicalis:1325597:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Latrunculia_apicalis_1325597_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Leuconia_nivea:283886:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Leuconia_nivea_283886_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Liriope_tetraphylla:37524:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Liriope_tetraphylla_37524_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Lucernariopsis_campanulata:1843190:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Lucernariopsis_campanulata_1843190_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Ministeria_vibrans:134558:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Ministeria_vibrans_134558_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Mnemiopsis_leidyi:27923:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Mnemiopsis_leidyi_27923_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Monosiga_brevicollis:81824:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Monosiga_brevicollis_81824_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Mycale_phyllophila:1325607:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Mycale_phyllophila_1325607_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Mylnosiga_fluctuans_19:1928486:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Mylnosiga_fluctuans_19_1928486_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Nanomia_bijuga:168759:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Nanomia_bijuga_168759_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Nematostella_vectensis:45351:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Nematostella_vectensis_45351_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Oscarella_carmela:386100:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Oscarella_carmela_386100_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Oscarella_species:121493:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Oscarella_species_121493_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Pelagia_noctiluca:400838:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Pelagia_noctiluca_400838_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Periphylla_periphylla:880221:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Periphylla_periphylla_880221_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Petrosia_ficiformis:68564:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Petrosia_ficiformis_68564_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Pirum_gemmata:749231:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Pirum_gemmata_749231_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Plakina_jani:450361:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Plakina_jani_450361_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Pleurobrachia_species:34498:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Pleurobrachia_species_34498_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Rossella_fibulata:1076269:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Rossella_fibulata_1076269_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Saccoglossus_kowalevskii:10224:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Saccoglossus_kowalevskii_10224_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Salpingoeca_dolichothecata_16:1742605:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Salpingoeca_dolichothecata_16_1742605_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Salpingoeca_helianthica_18:1928494:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Salpingoeca_helianthica_18_1928494_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Salpingoeca_infusionum_12:86018:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Salpingoeca_infusionum_12_86018_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Salpingoeca_macrocollata_06:1924736:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Salpingoeca_macrocollata_06_1924736_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Salpingoeca_punica_03:1924735:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Salpingoeca_punica_03_1924735_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Salpingoeca_kvevrii:1924737:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Salpingoeca_kvevrii_1924737_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Microstomoeca_roanoka:1923864:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Microstomoeca_roanoka_1923864_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Salpingoeca_rosetta:946362:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Salpingoeca_rosetta_946362_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Salpingoeca_urceolata_04:473813:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Salpingoeca_urceolata_04_473813_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Stephanoeca_diplocostata:81535:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Stephanoeca_diplocostata_81535_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Stomolophus_meleagris:168796:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Stomolophus_meleagris_168796_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Strongylocentrotus_purpuratus:7668:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Strongylocentrotus_purpuratus_7668_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Sycon_ciliatum:27933:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Sycon_ciliatum_27933_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Sympagella_nux:76350:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Sympagella_nux_76350_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Tribolium_castaneum:7070:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Tribolium_castaneum_7070_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Trichoplax_adhaerens:10228:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Trichoplax_adhaerens_10228_V2META12120-2-42-Calc_Hmm10-BMGE05
+Simion2017:Vallicula_multiformis:140489:V2META12120-2-42-Calc_Hmm10-BMGE05 -> Simion2017_Vallicula_multiformis_140489_V2META12120-2-42-Calc_Hmm10-BMGE05
+
+                                                                                     Gap/Ambiguity  Composition  p-value
+   1  Chang2015_Acanthoeca_sp_81532_suca                                                     3.37%    passed     99.94%
+   2  Chang2015_Acropora_cervicornis_6130_suca                                               3.37%    passed    100.00%
+   3  Chang2015_Aiptasia_pallida_1720309_suca                                                3.37%    passed     99.90%
+   4  Chang2015_Amoebidium_parasiticum_4881_suca                                             3.37%    passed     99.38%
+   5  Chang2015_Amphimedon_queenslandica_400682_suca                                         3.37%    passed     94.04%
+   6  Chang2015_Aphrocallistes_vastus_83887_suca                                             3.37%    failed      3.58%
+   7  Chang2015_Aurelia_aurita_6145_suca                                                     3.37%    passed    100.00%
+   8  Chang2015_Beroe_abyssicola_320166_suca                                                 3.37%    passed     98.11%
+   9  Chang2015_Bolocera_tuediae_1163374_suca                                                3.37%    passed     98.03%
+  10  Chang2015_Botryllus_schlosseri_30301_suca                                              3.37%    passed    100.00%
+  11  Chang2015_Branchiostoma_floridae_7739_suca                                             3.37%    passed     99.99%
+  12  Chang2015_Buddenbrockia_plumatellae_185687_suca                                       25.25%    passed     77.14%
+  13  Chang2015_Capitella_teleta_283909_suca                                                 3.37%    passed     99.98%
+  14  Chang2015_Capsaspora_owczarzaki_192875_suca                                            3.70%    passed     99.99%
+  15  Chang2015_Chondrilla_nucula_220712_suca                                                3.37%    passed     98.75%
+  16  Chang2015_Ciona_intestinalis_7719_suca                                                 3.37%    passed    100.00%
+  17  Chang2015_Clytia_hemisphaerica_252671_suca                                             3.37%    passed     99.99%
+  18  Chang2015_Corticium_candelabrum_121492_suca                                            3.37%    passed     99.94%
+  19  Chang2015_Craspedacusta_sowerbii_128124_suca                                           3.37%    passed     99.92%
+  20  Chang2015_Crassostrea_gigas_29159_suca                                                 3.37%    passed    100.00%
+  21  Chang2015_Daphnia_pulex_6669_suca                                                      3.37%    passed     99.41%
+  22  Chang2015_Ectopleura_larynx_264052_suca                                                3.37%    passed     99.95%
+  23  Chang2015_Edwardsiella_lineata_132407_suca                                             3.37%    passed     99.99%
+  24  Chang2015_Enteromyxum_leei_188704_suca                                                 3.37%    passed     97.82%
+  25  Chang2015_Ephydatia_muelleri_6052_suca                                                 3.37%    passed     99.10%
+  26  Chang2015_Eunicella_cavolinii_317547_suca                                             16.50%    passed     97.91%
+  27  Chang2015_Euplectella_aspergillum_936045_suca                                          3.37%    failed      1.64%
+  28  Chang2015_Euplokamis_dunlapae_1403701_suca                                             3.37%    passed     99.98%
+  29  Chang2015_Gorgonia_ventalina_204384_suca                                               3.37%    passed     99.90%
+  30  Chang2015_Helobdella_robusta_6412_suca                                                 3.37%    passed     99.98%
+  31  Chang2015_Homo_sapiens_9606_suca                                                       3.37%    passed     99.90%
+  32  Chang2015_Hormathia_digitata_1163372_suca                                              3.37%    passed     98.42%
+  33  Chang2015_Hydra_vulgaris_01_6087_suca                                                  3.37%    passed     99.86%
+  34  Chang2015_Hydractinia_polyclina_589945_suca                                            3.37%    passed     99.91%
+  35  Chang2015_Ilyanassa_obsoleta_1934733_suca                                              9.76%    passed     99.84%
+  36  Chang2015_Ixodes_scapularis_6945_suca                                                  3.37%    passed     99.99%
+  37  Chang2015_Kudoa_iwatai_269814_suca                                                     3.37%    passed     98.87%
+  38  Chang2015_Latimeria_menadoensis_106881_suca                                            3.37%    passed     99.73%
+  39  Chang2015_Leucetta_chagosensis_185688_suca                                            36.70%    passed     36.50%
+  40  Chang2015_Ministeria_vibrans_134558_suca                                               8.08%    passed     99.34%
+  41  Chang2015_Mnemiopsis_leidyi_27923_suca                                                 3.37%    passed     99.94%
+  42  Chang2015_Monosiga_brevicollis_81824_suca                                              3.37%    passed     99.97%
+  43  Chang2015_Monosiga_ovata_81526_suca                                                    3.37%    passed     99.91%
+  44  Chang2015_Orbicella_faveolata_48498_suca                                               3.37%    passed     99.98%
+  45  Chang2015_Myxobolus_cerebralis_59783_suca                                              3.37%    passed     80.76%
+  46  Chang2015_Nanomia_bijuga_168759_suca                                                   3.37%    passed     99.61%
+  47  Chang2015_Nasonia_vitripennis_7425_suca                                                3.37%    passed    100.00%
+  48  Chang2015_Nematostella_vectensis_45351_suca                                            3.37%    passed     99.64%
+  49  Chang2015_Octopus_vulgaris_6645_suca                                                   3.37%    passed    100.00%
+  50  Chang2015_Oscarella_carmela_386100_suca                                                3.37%    passed     99.48%
+  51  Chang2015_Oscarella_sp_SN-2011_386100_suca                                             3.37%    passed     88.96%
+  52  Chang2015_Patiria_miniata_46514_suca                                                   3.37%    passed     99.73%
+  53  Chang2015_Pediculus_humanus_121225_suca                                                3.37%    passed     99.68%
+  54  Chang2015_Petromyzon_marinus_7757_suca                                                 3.37%    passed     99.90%
+  55  Chang2015_Petrosia_ficiformis_68564_suca                                               3.37%    passed     95.27%
+  56  Chang2015_Pleurobrachia_pileus_140457_suca                                             3.37%    passed     99.99%
+  57  Chang2015_Pocillopora_damicornis_46731_suca                                           10.77%    passed    100.00%
+  58  Chang2015_Polypodium_hydriforme_43186_suca                                             3.37%    passed     99.97%
+  59  Chang2015_Porites_australiensis_51061_suca                                             3.70%    passed    100.00%
+  60  Chang2015_Saccoglossus_kowalevskii_10224_suca                                          3.37%    passed    100.00%
+  61  Chang2015_Salpingoeca_sp_86017_suca                                                    3.37%    passed    100.00%
+  62  Chang2015_Sarcotragus_fasciculatus_1234657_suca                                        3.37%    passed     91.08%
+  63  Chang2015_Sphaeroforma_arctica_72019_suca                                              3.37%    passed     99.93%
+  64  Chang2015_Sphaeromyxa_zaharoni_275449_suca                                             3.37%    passed     99.32%
+  65  Chang2015_Stephanoeca_diplocostata_81535_suca                                          3.37%    passed     99.99%
+  66  Chang2015_Stomolophus_meleagris_168796_suca                                            3.37%    passed     99.98%
+  67  Chang2015_Strigamia_maritima_126957_suca                                              10.77%    passed     99.76%
+  68  Chang2015_Strongylocentrotus_purpuratus_7668_suca                                      3.37%    passed     99.97%
+  69  Chang2015_Sycon_ciliatum_27933_suca                                                    3.37%    passed     99.99%
+  70  Chang2015_Sycon_coactum_1009717_suca                                                   3.37%    passed     99.81%
+  71  Chang2015_Thelohanellus_kitauei_669202_suca                                            5.72%    passed     94.59%
+  72  Chang2015_Trichoplax_adhaerens_10228_suca                                              3.37%    passed     99.75%
+  73  Chang2015_Tripedalia_cystophora_6141_suca                                             42.42%    passed     93.76%
+  74  Chang2015_Urticina_eques_417072_suca                                                  18.18%    passed     99.99%
+  75  Chang2015_Vallicula_multiformis_140489_suca                                            3.37%    passed     99.30%
+  76  Philippe2009_Acropora_millepora_45264_Gene_0122                                       25.25%    passed     98.81%
+  77  Philippe2009_Allomyces_macrogynus_28583_Gene_0122                                      2.36%    passed     99.69%
+  78  Philippe2009_Aplysia_californica_6500_Gene_0122                                        2.36%    passed     99.97%
+  79  Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0122                           2.36%    passed     99.93%
+  80  Philippe2009_Branchiostoma_floridae_7739_Gene_0122                                     2.36%    passed     99.99%
+  81  Philippe2009_Capitella_teleta_283909_Gene_0122                                         2.36%    passed     99.99%
+  82  Philippe2009_Capsaspora_owczarzaki_192875_Gene_0122                                    3.03%    passed     99.98%
+  83  Philippe2009_Ciona_savignyi_51511_Gene_0122                                            2.36%    passed    100.00%
+  84  Philippe2009_Clytia_hemisphaerica_252671_Gene_0122                                     2.36%    passed     99.99%
+  85  Philippe2009_Crassostrea_gigas_29159_Gene_0122                                        27.27%    passed     89.85%
+  86  Philippe2009_Danio_rerio_7955_Gene_0122                                                2.36%    passed     99.73%
+  87  Philippe2009_Daphnia_pulex_6669_Gene_0122                                              2.36%    passed     99.68%
+  88  Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0122                             41.08%    passed     94.90%
+  89  Philippe2009_Euprymna_scolopes_6613_Gene_0122                                         38.38%    passed    100.00%
+  90  Philippe2009_Helobdella_robusta_6412_Gene_0122                                         2.36%    passed     99.99%
+  91  Philippe2009_Hydra_magnipapillata_6087_Gene_0122                                       2.36%    passed     99.76%
+  92  Philippe2009_Ixodes_scapularis_6945_Gene_0122                                          2.36%    passed     99.99%
+  93  Philippe2009_Leucetta_chagosensis_185688_Gene_0122                                    36.70%    passed     36.50%
+  94  Philippe2009_Metridium_senile_6116_Gene_0122                                           2.36%    passed     99.99%
+  95  Philippe2009_Molgula_tectiformis_30286_Gene_0122                                       2.36%    passed     98.96%
+  96  Philippe2009_Monosiga_brevicollis_81824_Gene_0122                                      2.36%    passed     99.99%
+  97  Philippe2009_Monosiga_ovata_81526_Gene_0122                                            2.36%    passed     99.94%
+  98  Philippe2009_Nasonia_vitripennis_7425_Gene_0122                                        2.36%    passed     99.99%
+  99  Philippe2009_Nematostella_vectensis_45351_Gene_0122                                    2.36%    passed     98.90%
+ 100  Philippe2009_Oopsacas_minuta_111878_Gene_0122                                         26.60%    failed      0.03%
+ 101  Philippe2009_Oscarella_carmela_386100_Gene_0122                                        2.36%    passed     99.41%
+ 102  Philippe2009_Pediculus_humanus_121225_Gene_0122                                        2.36%    passed     99.74%
+ 103  Philippe2009_Petromyzon_marinus_7757_Gene_0122                                         2.36%    passed     99.91%
+ 104  Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0122                                   4.38%    passed     99.95%
+ 105  Philippe2009_Pleurobrachia_pileus_140457_Gene_0122                                     8.08%    passed     99.81%
+ 106  Philippe2009_Amphimedon_queenslandica_400682_Gene_0122                                15.82%    passed     42.46%
+ 107  Philippe2009_Rhizopus_oryzae_64495_Gene_0122                                           2.69%    passed     98.65%
+ 108  Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0122                                  2.36%    passed    100.00%
+ 109  Philippe2009_Sphaeroforma_arctica_72019_Gene_0122                                     33.00%    passed     68.25%
+ 110  Philippe2009_Spizellomyces_punctatus_109760_Gene_0122                                  2.36%    passed     99.67%
+ 111  Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0122                              2.36%    passed     99.99%
+ 112  Philippe2009_Trichoplax_adhaerens_10228_Gene_0122                                      2.36%    passed     99.88%
+ 113  Philippe2009_Tubifex_tubifex_6386_Gene_0122                                           52.53%    passed     87.89%
+ 114  Philippe2009_Xenoturbella_bocki_242395_Gene_0122                                       3.70%    passed     99.96%
+ 115  Simion2017_Abeoforma_whisleri_749232_V2META12120-2-42-Calc_Hmm10-BMGE05                2.02%    passed     99.99%
+ 116  Simion2017_Acanthoeca_sp_81532_V2META12120-2-42-Calc_Hmm10-BMGE05                      1.01%    passed     99.87%
+ 117  Simion2017_Acanthoeca_spectabilis_81533_V2META12120-2-42-Calc_Hmm10-BMGE05             2.02%    passed     99.95%
+ 118  Simion2017_Aiptasia_pallida_1720309_V2META12120-2-42-Calc_Hmm10-BMGE05                 3.03%    passed     99.65%
+ 119  Simion2017_Alatina_alata_1193083_V2META12120-2-42-Calc_Hmm10-BMGE05                    0.00%    passed     99.96%
+ 120  Simion2017_Amoebidium_parasiticum_4881_V2META12120-2-42-Calc_Hmm10-BMGE05              4.71%    passed     98.60%
+ 121  Simion2017_Amphimedon_queenslandica_400682_V2META12120-2-42-Calc_Hmm10-BMGE05          2.69%    passed     95.97%
+ 122  Simion2017_Aphrocallistes_vastus_83887_V2META12120-2-42-Calc_Hmm10-BMGE05              3.70%    failed      2.95%
+ 123  Simion2017_Aplysia_californica_6500_V2META12120-2-42-Calc_Hmm10-BMGE05                 1.35%    passed     99.97%
+ 124  Simion2017_Atolla_vanhoeffeni_86043_V2META12120-2-42-Calc_Hmm10-BMGE05                 1.68%    passed     99.94%
+ 125  Simion2017_Aurelia_aurita_6145_V2META12120-2-42-Calc_Hmm10-BMGE05                      1.35%    passed    100.00%
+ 126  Simion2017_Beroe_abyssicola_320166_V2META12120-2-42-Calc_Hmm10-BMGE05                  1.01%    passed     97.95%
+ 127  Simion2017_Beroe_sp_10199_V2META12120-2-42-Calc_Hmm10-BMGE05                           1.35%    passed     99.38%
+ 128  Simion2017_Bolinopsis_infundibulum_140455_V2META12120-2-42-Calc_Hmm10-BMGE05           0.00%    passed     99.86%
+ 129  Simion2017_Bolocera_tuediae_1163374_V2META12120-2-42-Calc_Hmm10-BMGE05                 3.03%    passed     99.51%
+ 130  Simion2017_Branchiostoma_floridae_7739_V2META12120-2-42-Calc_Hmm10-BMGE05              1.35%    passed     99.99%
+ 131  Simion2017_Capitella_teleta_283909_V2META12120-2-42-Calc_Hmm10-BMGE05                  1.35%    passed     99.99%
+ 132  Simion2017_Capsaspora_owczarzaki_192875_V2META12120-2-42-Calc_Hmm10-BMGE05             4.04%    passed     99.98%
+ 133  Simion2017_Cestum_veneris_12997_V2META12120-2-42-Calc_Hmm10-BMGE05                     0.34%    passed     99.75%
+ 134  Simion2017_Choanoeca_perplexa_11_81531_V2META12120-2-42-Calc_Hmm10-BMGE05              0.00%    passed     99.99%
+ 135  Simion2017_Clytia_hemisphaerica_252671_V2META12120-2-42-Calc_Hmm10-BMGE05              1.01%    passed    100.00%
+ 136  Simion2017_Codosiga_hollandica_17_1742608_V2META12120-2-42-Calc_Hmm10-BMGE05           0.00%    passed     99.95%
+ 137  Simion2017_Coeloplana_species_140473_V2META12120-2-42-Calc_Hmm10-BMGE05                0.00%    passed     99.92%
+ 138  Simion2017_Corticium_candelabrum_121492_V2META12120-2-42-Calc_Hmm10-BMGE05             0.00%    passed     99.97%
+ 139  Simion2017_Craspedacusta_sowerbii_128124_V2META12120-2-42-Calc_Hmm10-BMGE05            0.34%    passed     99.87%
+ 140  Simion2017_Crassostrea_gigas_29159_V2META12120-2-42-Calc_Hmm10-BMGE05                 22.90%    passed     99.95%
+ 141  Simion2017_Daphnia_pulex_6669_V2META12120-2-42-Calc_Hmm10-BMGE05                       1.35%    passed     99.10%
+ 142  Simion2017_Diaphanoeca_grandis_28014_V2META12120-2-42-Calc_Hmm10-BMGE05                3.03%    passed    100.00%
+ 143  Simion2017_Didymoeca_costata_10_459534_V2META12120-2-42-Calc_Hmm10-BMGE05              0.00%    passed     99.98%
+ 144  Simion2017_Dryodora_glandiformis_1566677_V2META12120-2-42-Calc_Hmm10-BMGE05            0.00%    passed     99.93%
+ 145  Simion2017_Edwardsiella_lineata_132407_V2META12120-2-42-Calc_Hmm10-BMGE05              0.34%    passed     99.99%
+ 146  Simion2017_Euplectella_aspergillum_936045_V2META12120-2-42-Calc_Hmm10-BMGE05           4.04%    failed      2.05%
+ 147  Simion2017_Euplokamis_dunlapae_1403701_V2META12120-2-42-Calc_Hmm10-BMGE05              0.00%    passed     99.98%
+ 148  Simion2017_Grantia_compressa_196260_V2META12120-2-42-Calc_Hmm10-BMGE05                 1.01%    passed     99.98%
+ 149  Simion2017_Helobdella_robusta_6412_V2META12120-2-42-Calc_Hmm10-BMGE05                  0.00%    passed     99.96%
+ 150  Simion2017_Homo_sapiens_9606_V2META12120-2-42-Calc_Hmm10-BMGE05                        0.00%    passed     99.49%
+ 151  Simion2017_Hormiphora_californensis_1403702_V2META12120-2-42-Calc_Hmm10-BMGE05        29.97%    passed     87.39%
+ 152  Simion2017_Hyalonema_populiferum_1631155_V2META12120-2-42-Calc_Hmm10-BMGE05           14.48%    passed     73.79%
+ 153  Simion2017_Hydra_vulgaris_01_6087_V2META12120-2-42-Calc_Hmm10-BMGE05                   1.01%    passed     99.83%
+ 154  Simion2017_Hydractinia_polyclina_589945_V2META12120-2-42-Calc_Hmm10-BMGE05             0.34%    passed     99.92%
+ 155  Simion2017_Ircinia_fasciculata_1234657_V2META12120-2-42-Calc_Hmm10-BMGE05              1.01%    passed     96.83%
+ 156  Simion2017_Ixodes_scapularis_6945_V2META12120-2-42-Calc_Hmm10-BMGE05                  31.31%    passed     99.96%
+ 157  Simion2017_Kirkpatrickia_variolosa_1631157_V2META12120-2-42-Calc_Hmm10-BMGE05          1.35%    passed     99.98%
+ 158  Simion2017_Lampea_pancerina_1532213_V2META12120-2-42-Calc_Hmm10-BMGE05                 1.01%    passed     99.63%
+ 159  Simion2017_Latrunculia_apicalis_1325597_V2META12120-2-42-Calc_Hmm10-BMGE05             1.01%    passed     99.96%
+ 160  Simion2017_Leuconia_nivea_283886_V2META12120-2-42-Calc_Hmm10-BMGE05                    0.00%    passed     99.83%
+ 161  Simion2017_Liriope_tetraphylla_37524_V2META12120-2-42-Calc_Hmm10-BMGE05               37.37%    passed     72.00%
+ 162  Simion2017_Lucernariopsis_campanulata_1843190_V2META12120-2-42-Calc_Hmm10-BMGE05       1.35%    passed     99.89%
+ 163  Simion2017_Ministeria_vibrans_134558_V2META12120-2-42-Calc_Hmm10-BMGE05               15.15%    passed     99.98%
+ 164  Simion2017_Mnemiopsis_leidyi_27923_V2META12120-2-42-Calc_Hmm10-BMGE05                  1.01%    passed     99.86%
+ 165  Simion2017_Monosiga_brevicollis_81824_V2META12120-2-42-Calc_Hmm10-BMGE05               1.01%    passed     99.99%
+ 166  Simion2017_Mycale_phyllophila_1325607_V2META12120-2-42-Calc_Hmm10-BMGE05               1.35%    passed     96.14%
+ 167  Simion2017_Mylnosiga_fluctuans_19_1928486_V2META12120-2-42-Calc_Hmm10-BMGE05           0.00%    passed     99.84%
+ 168  Simion2017_Nanomia_bijuga_168759_V2META12120-2-42-Calc_Hmm10-BMGE05                   58.59%    passed     85.86%
+ 169  Simion2017_Nematostella_vectensis_45351_V2META12120-2-42-Calc_Hmm10-BMGE05             3.03%    passed     99.92%
+ 170  Simion2017_Oscarella_carmela_386100_V2META12120-2-42-Calc_Hmm10-BMGE05                 0.00%    passed     98.60%
+ 171  Simion2017_Oscarella_species_121493_V2META12120-2-42-Calc_Hmm10-BMGE05                 1.01%    passed     83.35%
+ 172  Simion2017_Pelagia_noctiluca_400838_V2META12120-2-42-Calc_Hmm10-BMGE05                 9.09%    passed     99.73%
+ 173  Simion2017_Periphylla_periphylla_880221_V2META12120-2-42-Calc_Hmm10-BMGE05             3.70%    passed    100.00%
+ 174  Simion2017_Petrosia_ficiformis_68564_V2META12120-2-42-Calc_Hmm10-BMGE05               44.78%    passed     29.56%
+ 175  Simion2017_Pirum_gemmata_749231_V2META12120-2-42-Calc_Hmm10-BMGE05                     2.02%    passed     99.94%
+ 176  Simion2017_Plakina_jani_450361_V2META12120-2-42-Calc_Hmm10-BMGE05                      0.00%    passed     99.88%
+ 177  Simion2017_Pleurobrachia_species_34498_V2META12120-2-42-Calc_Hmm10-BMGE05              8.08%    passed     99.65%
+ 178  Simion2017_Rossella_fibulata_1076269_V2META12120-2-42-Calc_Hmm10-BMGE05               22.22%    failed      1.29%
+ 179  Simion2017_Saccoglossus_kowalevskii_10224_V2META12120-2-42-Calc_Hmm10-BMGE05           3.70%    passed    100.00%
+ 180  Simion2017_Salpingoeca_dolichothecata_16_1742605_V2META12120-2-42-Calc_Hmm10-BMGE05    0.00%    passed    100.00%
+ 181  Simion2017_Salpingoeca_helianthica_18_1928494_V2META12120-2-42-Calc_Hmm10-BMGE05       1.01%    passed     99.95%
+ 182  Simion2017_Salpingoeca_infusionum_12_86018_V2META12120-2-42-Calc_Hmm10-BMGE05          0.00%    passed     99.89%
+ 183  Simion2017_Salpingoeca_macrocollata_06_1924736_V2META12120-2-42-Calc_Hmm10-BMGE05      0.00%    passed    100.00%
+ 184  Simion2017_Salpingoeca_punica_03_1924735_V2META12120-2-42-Calc_Hmm10-BMGE05            0.00%    passed     95.99%
+ 185  Simion2017_Salpingoeca_kvevrii_1924737_V2META12120-2-42-Calc_Hmm10-BMGE05              0.34%    passed     99.85%
+ 186  Simion2017_Microstomoeca_roanoka_1923864_V2META12120-2-42-Calc_Hmm10-BMGE05            1.01%    passed     99.38%
+ 187  Simion2017_Salpingoeca_rosetta_946362_V2META12120-2-42-Calc_Hmm10-BMGE05               0.00%    passed    100.00%
+ 188  Simion2017_Salpingoeca_urceolata_04_473813_V2META12120-2-42-Calc_Hmm10-BMGE05          1.01%    passed     99.98%
+ 189  Simion2017_Stephanoeca_diplocostata_81535_V2META12120-2-42-Calc_Hmm10-BMGE05           4.38%    passed    100.00%
+ 190  Simion2017_Stomolophus_meleagris_168796_V2META12120-2-42-Calc_Hmm10-BMGE05             2.36%    passed     99.98%
+ 191  Simion2017_Strongylocentrotus_purpuratus_7668_V2META12120-2-42-Calc_Hmm10-BMGE05      10.44%    passed     99.98%
+ 192  Simion2017_Sycon_ciliatum_27933_V2META12120-2-42-Calc_Hmm10-BMGE05                     0.00%    passed     99.99%
+ 193  Simion2017_Sympagella_nux_76350_V2META12120-2-42-Calc_Hmm10-BMGE05                     2.69%    failed      4.08%
+ 194  Simion2017_Tribolium_castaneum_7070_V2META12120-2-42-Calc_Hmm10-BMGE05                 2.02%    passed    100.00%
+ 195  Simion2017_Trichoplax_adhaerens_10228_V2META12120-2-42-Calc_Hmm10-BMGE05               0.00%    passed     99.91%
+ 196  Simion2017_Vallicula_multiformis_140489_V2META12120-2-42-Calc_Hmm10-BMGE05             0.00%    passed     97.69%
+WARNING: 2 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                                                                  5.98%  7 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.123 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 14819)...
+Model LG+C60+F is alias for LG+POISSON+G+FMIX{C60pi1:1:0.0169698865,C60pi2:1:0.0211683374,C60pi3:1:0.0276589079,C60pi4:1:0.0065675964,C60pi5:1:0.0141221416,C60pi6:1:0.0068774834,C60pi7:1:0.0146909701,C60pi8:1:0.0067225777,C60pi9:1:0.0018396660,C60pi10:1:0.0102547197,C60pi11:1:0.0230896163,C60pi12:1:0.0057941033,C60pi13:1:0.0125394534,C60pi14:1:0.0204526478,C60pi15:1:0.0070629602,C60pi16:1:0.0117982741,C60pi17:1:0.0068334668,C60pi18:1:0.0433775839,C60pi19:1:0.0318278731,C60pi20:1:0.0222546108,C60pi21:1:0.0102264969,C60pi22:1:0.0150545891,C60pi23:1:0.0134159878,C60pi24:1:0.0148552065,C60pi25:1:0.0239111516,C60pi26:1:0.0128776278,C60pi27:1:0.0222318842,C60pi28:1:0.0247444742,C60pi29:1:0.0214274810,C60pi30:1:0.0115001882,C60pi31:1:0.0076017389,C60pi32:1:0.0130258568,C60pi33:1:0.0093701965,C60pi34:1:0.0467194264,C60pi35:1:0.0441940314,C60pi36:1:0.0322263154,C60pi37:1:0.0402999891,C60pi38:1:0.0150234227,C60pi39:1:0.0104589903,C60pi40:1:0.0214742395,C60pi41:1:0.0154957836,C60pi42:1:0.0101789953,C60pi43:1:0.0227980379,C60pi44:1:0.0123204539,C60pi45:1:0.0066777583,C60pi46:1:0.0004150083,C60pi47:1:0.0344385130,C60pi48:1:0.0113663379,C60pi49:1:0.0127143049,C60pi50:1:0.0124323741,C60pi51:1:0.0262124415,C60pi52:1:0.0064994957,C60pi53:1:0.0103203293,C60pi54:1:0.0142463512,C60pi55:1:0.0215600067,C60pi56:1:0.0199150700,C60pi57:1:0.0038964200,C60pi58:1:0.0113448855,C60pi59:1:0.0128595846,C60pi60:1:0.0117656776}+F
+
+NOTE: 2248 MB RAM (2 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -19550.386
+2. Current log-likelihood: -18890.818
+3. Current log-likelihood: -18876.270
+4. Current log-likelihood: -18874.784
+Optimal log-likelihood: -18874.770
+Mixture weights: 0.070 0.002 0.030 0.028 0.022 0.005 0.007 0.000 0.018 0.000 0.032 0.017 0.025 0.000 0.018 0.010 0.014 0.000 0.007 0.017 0.000 0.000 0.032 0.000 0.025 0.045 0.000 0.008 0.029 0.014 0.018 0.010 0.004 0.030 0.035 0.033 0.028 0.049 0.016 0.005 0.000 0.014 0.000 0.000 0.000 0.010 0.000 0.038 0.030 0.000 0.024 0.012 0.023 0.000 0.031 0.024 0.002 0.008 0.021 0.019 0.040
+Gamma shape alpha: 0.447
+Parameters optimization took 4 rounds (149.571 sec)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+Computing ML distances based on estimated model parameters... 8.281 sec
+Computing BIONJ tree...
+0.027 seconds
+Log-likelihood of BIONJ tree: -18859.125
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 7.726 second
+Computing log-likelihood of 98 initial trees ... 1835.447 seconds
+Current best score: -18824.907
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 1: -18778.853
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 3: -18762.062
+Iteration 10 / LogL: -18769.795 / Time: 1h:14m:56s
+Iteration 20 / LogL: -18795.562 / Time: 1h:56m:32s
+Finish initializing candidate tree set (20)
+Current best tree score: -18762.062 / CPU time: 6765.907
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 29: -18760.757
+Iteration 30 / LogL: -18771.917 / Time: 2h:55m:21s (9h:58m:38s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 37: -18748.998
+Iteration 40 / LogL: -18755.054 / Time: 3h:54m:12s (9h:42m:31s left)
+Iteration 50 / LogL: -18770.519 / Time: 4h:46m:16s (8h:28m:16s left)
+Log-likelihood cutoff on original alignment: -18838.535
+Iteration 60 / LogL: -18751.956 / Time: 5h:40m:53s (7h:24m:53s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 64: -18745.026
+Iteration 70 / LogL: -18746.084 / Time: 6h:37m:14s (9h:1m:9s left)
+Iteration 80 / LogL: -18753.903 / Time: 7h:26m:13s (7h:54m:28s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 86: -18743.969
+Iteration 90 / LogL: -18748.125 / Time: 8h:20m:24s (8h:59m:45s left)
+Iteration 100 / LogL: -18749.604 / Time: 9h:15m:25s (8h:2m:29s left)
+Log-likelihood cutoff on original alignment: -18817.252
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.986
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 106: -18743.522
+Iteration 110 / LogL: -18743.522 / Time: 10h:11m:44s (8h:58m:46s left)
+UPDATE BEST LOG-LIKELIHOOD: -18743.522
+Iteration 120 / LogL: -18744.598 / Time: 11h:7m:24s (8h:2m:19s left)
+Iteration 130 / LogL: -18755.739 / Time: 12h:2m:14s (7h:5m:30s left)
+UPDATE BEST LOG-LIKELIHOOD: -18743.521
+Iteration 140 / LogL: -18755.932 / Time: 12h:56m:30s (6h:8m:42s left)
+Iteration 150 / LogL: -18744.923 / Time: 13h:48m:44s (5h:11m:28s left)
+Log-likelihood cutoff on original alignment: -18817.252
+BETTER TREE FOUND at iteration 158: -18743.521
+Iteration 160 / LogL: -18746.894 / Time: 14h:45m:26s (9h:5m:44s left)
+Iteration 170 / LogL: -18749.414 / Time: 15h:41m:16s (8h:10m:7s left)
+Iteration 180 / LogL: -18749.080 / Time: 16h:32m:29s (7h:12m:28s left)
+Iteration 190 / LogL: -18746.565 / Time: 17h:22m:21s (6h:15m:1s left)

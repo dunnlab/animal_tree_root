@@ -1,0 +1,381 @@
+IQ-TREE version 1.5.3 for Linux 64-bit built Mar 12 2017
+Copyright (c) 2011-2016 Nguyen Lam Tung, Olga Chernomor, Arndt von Haeseler and Bui Quang Minh.
+
+Host:    r416.uppmax.uu.se (AVX2, FMA3, 125 GB RAM)
+Command: iqtree -s /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component1289.mafft -m LG+C60+F -nt 1 -bb 1000 -pre /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1289/LG+C60+F_component1289
+Seed:    598050 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 29 15:31:43 2022
+Kernel:  AVX+FMA
+
+NOTE: Consider using the multicore version because your CPU has 20 cores!
+
+Reading alignment file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component1289.mafft ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 118 sequences with 337 columns and 335 patterns (248 informative sites, 62 constant sites)
+WARNING: Some sequence names are changed as follows:
+Nosenko2013_nonribo_9187:Acropora_hyacinthus:55974:KOG1557 -> Nosenko2013_nonribo_9187_Acropora_hyacinthus_55974_KOG1557
+Nosenko2013_nonribo_9187:Acropora_millepora:45264:KOG1557 -> Nosenko2013_nonribo_9187_Acropora_millepora_45264_KOG1557
+Nosenko2013_nonribo_9187:Acropora_palmata:6131:KOG1557 -> Nosenko2013_nonribo_9187_Acropora_palmata_6131_KOG1557
+Nosenko2013_nonribo_9187:Allomyces_macrogynus:28583:KOG1557 -> Nosenko2013_nonribo_9187_Allomyces_macrogynus_28583_KOG1557
+Nosenko2013_nonribo_9187:Amphimedon_queenslandica:400682:KOG1557 -> Nosenko2013_nonribo_9187_Amphimedon_queenslandica_400682_KOG1557
+Nosenko2013_nonribo_9187:Aplysia_californica:6500:KOG1557 -> Nosenko2013_nonribo_9187_Aplysia_californica_6500_KOG1557
+Nosenko2013_nonribo_9187:Asbestopluma_sp:68560:KOG1557 -> Nosenko2013_nonribo_9187_Asbestopluma_sp_68560_KOG1557
+Nosenko2013_nonribo_9187:Batrachochytrium_dendrobatidis:109871:KOG1557 -> Nosenko2013_nonribo_9187_Batrachochytrium_dendrobatidis_109871_KOG1557
+Nosenko2013_nonribo_9187:Beroe_sp:10199:KOG1557 -> Nosenko2013_nonribo_9187_Beroe_sp_10199_KOG1557
+Nosenko2013_nonribo_9187:Branchiostoma_floridae:7739:KOG1557 -> Nosenko2013_nonribo_9187_Branchiostoma_floridae_7739_KOG1557
+Nosenko2013_nonribo_9187:Capitella_teleta:283909:KOG1557 -> Nosenko2013_nonribo_9187_Capitella_teleta_283909_KOG1557
+Nosenko2013_nonribo_9187:Capsaspora_owczarzaki:192875:KOG1557 -> Nosenko2013_nonribo_9187_Capsaspora_owczarzaki_192875_KOG1557
+Nosenko2013_nonribo_9187:Carteriospongia_foliascens:593584:KOG1557 -> Nosenko2013_nonribo_9187_Carteriospongia_foliascens_593584_KOG1557
+Nosenko2013_nonribo_9187:Ciona_intestinalis:7719:KOG1557 -> Nosenko2013_nonribo_9187_Ciona_intestinalis_7719_KOG1557
+Nosenko2013_nonribo_9187:Clytia_hemisphaerica:252671:KOG1557 -> Nosenko2013_nonribo_9187_Clytia_hemisphaerica_252671_KOG1557
+Nosenko2013_nonribo_9187:Corticium:39180:KOG1557 -> Nosenko2013_nonribo_9187_Corticium_39180_KOG1557
+Nosenko2013_nonribo_9187:Crassostrea_gigas:29159:KOG1557 -> Nosenko2013_nonribo_9187_Crassostrea_gigas_29159_KOG1557
+Nosenko2013_nonribo_9187:Cyanea_capillata:27804:KOG1557 -> Nosenko2013_nonribo_9187_Cyanea_capillata_27804_KOG1557
+Nosenko2013_nonribo_9187:Danio_rerio:7955:KOG1557 -> Nosenko2013_nonribo_9187_Danio_rerio_7955_KOG1557
+Nosenko2013_nonribo_9187:Daphnia_pulex:6669:KOG1557 -> Nosenko2013_nonribo_9187_Daphnia_pulex_6669_KOG1557
+Nosenko2013_nonribo_9187:Ephydatia_muelleri:6052:KOG1557 -> Nosenko2013_nonribo_9187_Ephydatia_muelleri_6052_KOG1557
+Nosenko2013_nonribo_9187:Helobdella_robusta:6412:KOG1557 -> Nosenko2013_nonribo_9187_Helobdella_robusta_6412_KOG1557
+Nosenko2013_nonribo_9187:Heterochone_calyx:367901:KOG1557 -> Nosenko2013_nonribo_9187_Heterochone_calyx_367901_KOG1557
+Nosenko2013_nonribo_9187:Hydra_magnipapillata:6087:KOG1557 -> Nosenko2013_nonribo_9187_Hydra_magnipapillata_6087_KOG1557
+Nosenko2013_nonribo_9187:Hydractinia_echinata:35630:KOG1557 -> Nosenko2013_nonribo_9187_Hydractinia_echinata_35630_KOG1557
+Nosenko2013_nonribo_9187:Ixodes_scapularis:6945:KOG1557 -> Nosenko2013_nonribo_9187_Ixodes_scapularis_6945_KOG1557
+Nosenko2013_nonribo_9187:Leucetta_chagosensis:185688:KOG1557 -> Nosenko2013_nonribo_9187_Leucetta_chagosensis_185688_KOG1557
+Nosenko2013_nonribo_9187:Leucosolenia_sp:86012:KOG1557 -> Nosenko2013_nonribo_9187_Leucosolenia_sp_86012_KOG1557
+Nosenko2013_nonribo_9187:Metridium_senile:6116:KOG1557 -> Nosenko2013_nonribo_9187_Metridium_senile_6116_KOG1557
+Nosenko2013_nonribo_9187:Mnemiopsis_leidyi:27923:KOG1557 -> Nosenko2013_nonribo_9187_Mnemiopsis_leidyi_27923_KOG1557
+Nosenko2013_nonribo_9187:Molgula_tectiformis:30286:KOG1557 -> Nosenko2013_nonribo_9187_Molgula_tectiformis_30286_KOG1557
+Nosenko2013_nonribo_9187:Monosiga_ovata:81526:KOG1557 -> Nosenko2013_nonribo_9187_Monosiga_ovata_81526_KOG1557
+Nosenko2013_nonribo_9187:Nasonia_vitripennis:7425:KOG1557 -> Nosenko2013_nonribo_9187_Nasonia_vitripennis_7425_KOG1557
+Nosenko2013_nonribo_9187:Nematostella_vectensis:45351:KOG1557 -> Nosenko2013_nonribo_9187_Nematostella_vectensis_45351_KOG1557
+Nosenko2013_nonribo_9187:Oscarella_carmela:386100:KOG1557 -> Nosenko2013_nonribo_9187_Oscarella_carmela_386100_KOG1557
+Nosenko2013_nonribo_9187:Oscarella_lobularis:121494:KOG1557 -> Nosenko2013_nonribo_9187_Oscarella_lobularis_121494_KOG1557
+Nosenko2013_nonribo_9187:Oscarella_sp:121493:KOG1557 -> Nosenko2013_nonribo_9187_Oscarella_sp_121493_KOG1557
+Nosenko2013_nonribo_9187:Pachydictyum_globosum:348075:KOG1557 -> Nosenko2013_nonribo_9187_Pachydictyum_globosum_348075_KOG1557
+Nosenko2013_nonribo_9187:Petromyzon_marinus:7757:KOG1557 -> Nosenko2013_nonribo_9187_Petromyzon_marinus_7757_KOG1557
+Nosenko2013_nonribo_9187:Pleurobrachia_pileus:140457:KOG1557 -> Nosenko2013_nonribo_9187_Pleurobrachia_pileus_140457_KOG1557
+Nosenko2013_nonribo_9187:Porites:46719:KOG1557 -> Nosenko2013_nonribo_9187_Porites_46719_KOG1557
+Nosenko2013_nonribo_9187:Saccoglossus_kowalevskii:10224:KOG1557 -> Nosenko2013_nonribo_9187_Saccoglossus_kowalevskii_10224_KOG1557
+Nosenko2013_nonribo_9187:Spizellomyces_punctatus:109760:KOG1557 -> Nosenko2013_nonribo_9187_Spizellomyces_punctatus_109760_KOG1557
+Nosenko2013_nonribo_9187:Strongylocentrotus_purpuratus:7668:KOG1557 -> Nosenko2013_nonribo_9187_Strongylocentrotus_purpuratus_7668_KOG1557
+Nosenko2013_nonribo_9187:Suberites_domuncula:55567:KOG1557 -> Nosenko2013_nonribo_9187_Suberites_domuncula_55567_KOG1557
+Nosenko2013_nonribo_9187:Tethya_wilhelma:463344:KOG1557 -> Nosenko2013_nonribo_9187_Tethya_wilhelma_463344_KOG1557
+Nosenko2013_nonribo_9187:Trichoplax_adhaerens:10228:KOG1557 -> Nosenko2013_nonribo_9187_Trichoplax_adhaerens_10228_KOG1557
+Nosenko2013_nonribo_9187:Trichoplax_sp_H4:10227:KOG1557 -> Nosenko2013_nonribo_9187_Trichoplax_sp_H4_10227_KOG1557
+Nosenko2013_nonribo_9187:Tubifex_tubifex:6386:KOG1557 -> Nosenko2013_nonribo_9187_Tubifex_tubifex_6386_KOG1557
+Simion2017:Aiptasia_pallida:1720309:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Aiptasia_pallida_1720309_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Alatina_alata:1193083:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Alatina_alata_1193083_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Amoebidium_parasiticum:4881:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Amoebidium_parasiticum_4881_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Amphimedon_queenslandica:400682:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Amphimedon_queenslandica_400682_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Antipathes_caribbeana:934276:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Antipathes_caribbeana_934276_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Aphrocallistes_vastus:83887:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Aphrocallistes_vastus_83887_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Aplysia_californica:6500:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Aplysia_californica_6500_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Atolla_vanhoeffeni:86043:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Atolla_vanhoeffeni_86043_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Aurelia_aurita:6145:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Aurelia_aurita_6145_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Beroe_abyssicola:320166:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Beroe_abyssicola_320166_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Beroe_sp:10199:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Beroe_sp_10199_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Bolinopsis_infundibulum:140455:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Bolinopsis_infundibulum_140455_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Bolocera_tuediae:1163374:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Bolocera_tuediae_1163374_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Branchiostoma_floridae:7739:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Branchiostoma_floridae_7739_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Capitella_teleta:283909:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Capitella_teleta_283909_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Capsaspora_owczarzaki:192875:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Capsaspora_owczarzaki_192875_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Cestum_veneris:12997:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Cestum_veneris_12997_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Chondrilla_nucula:220712:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Chondrilla_nucula_220712_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Clathrina_coriacea:1031551:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Clathrina_coriacea_1031551_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Codosiga_hollandica_17:1742608:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Codosiga_hollandica_17_1742608_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Coeloplana_species:140473:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Coeloplana_species_140473_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Corticium_candelabrum:121492:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Corticium_candelabrum_121492_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Craspedacusta_sowerbii:128124:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Craspedacusta_sowerbii_128124_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Daphnia_pulex:6669:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Daphnia_pulex_6669_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Dryodora_glandiformis:1566677:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Dryodora_glandiformis_1566677_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Edwardsiella_lineata:132407:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Edwardsiella_lineata_132407_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Euplectella_aspergillum:936045:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Euplectella_aspergillum_936045_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Euplokamis_dunlapae:1403701:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Euplokamis_dunlapae_1403701_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Gorgonia_ventalina:204384:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Gorgonia_ventalina_204384_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Grantia_compressa:196260:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Grantia_compressa_196260_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Hormiphora_californensis:1403702:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Hormiphora_californensis_1403702_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Hyalonema_populiferum:1631155:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Hyalonema_populiferum_1631155_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Hydra_vulgaris_01:6087:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Hydra_vulgaris_01_6087_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Hydractinia_polyclina:589945:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Hydractinia_polyclina_589945_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Ircinia_fasciculata:1234657:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Ircinia_fasciculata_1234657_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Ixodes_scapularis:6945:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Ixodes_scapularis_6945_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Kirkpatrickia_variolosa:1631157:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Kirkpatrickia_variolosa_1631157_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Lampea_pancerina:1532213:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Lampea_pancerina_1532213_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Latrunculia_apicalis:1325597:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Latrunculia_apicalis_1325597_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Leuconia_nivea:283886:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Leuconia_nivea_283886_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Leucosolenia_complicata:433461:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Leucosolenia_complicata_433461_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Liriope_tetraphylla:37524:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Liriope_tetraphylla_37524_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Lucernariopsis_campanulata:1843190:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Lucernariopsis_campanulata_1843190_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Mnemiopsis_leidyi:27923:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Mnemiopsis_leidyi_27923_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Orbicella_faveolata:48498:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Orbicella_faveolata_48498_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Mycale_phyllophila:1325607:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Mycale_phyllophila_1325607_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Mylnosiga_fluctuans_19:1928486:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Mylnosiga_fluctuans_19_1928486_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Nematostella_vectensis:45351:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Nematostella_vectensis_45351_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Oscarella_species:121493:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Oscarella_species_121493_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Pelagia_noctiluca:400838:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Pelagia_noctiluca_400838_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Pennatula_rubra:1820127:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Pennatula_rubra_1820127_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Periphylla_periphylla:880221:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Periphylla_periphylla_880221_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Petrosia_ficiformis:68564:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Petrosia_ficiformis_68564_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Plakina_jani:450361:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Plakina_jani_450361_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Pleraplysilla_spinifera:119433:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Pleraplysilla_spinifera_119433_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Pleurobrachia_species:34498:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Pleurobrachia_species_34498_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Plumapathes_pennacea:1350358:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Plumapathes_pennacea_1350358_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Rossella_fibulata:1076269:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Rossella_fibulata_1076269_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Saccoglossus_kowalevskii:10224:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Saccoglossus_kowalevskii_10224_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Salpingoeca_helianthica_18:1928494:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Salpingoeca_helianthica_18_1928494_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Spongilla_lacustris:6055:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Spongilla_lacustris_6055_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Stomolophus_meleagris:168796:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Stomolophus_meleagris_168796_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Strongylocentrotus_purpuratus:7668:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Strongylocentrotus_purpuratus_7668_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Sycon_ciliatum:27933:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Sycon_ciliatum_27933_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Sycon_coactum:1009717:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Sycon_coactum_1009717_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Sympagella_nux:76350:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Sympagella_nux_76350_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Tribolium_castaneum:7070:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Tribolium_castaneum_7070_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Trichoplax_adhaerens:10228:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Trichoplax_adhaerens_10228_V2META12446-42-Calc_Hmm10-BMGE05
+Simion2017:Vallicula_multiformis:140489:V2META12446-42-Calc_Hmm10-BMGE05 -> Simion2017_Vallicula_multiformis_140489_V2META12446-42-Calc_Hmm10-BMGE05
+
+                                                                                Gap/Ambiguity  Composition  p-value
+   1  Nosenko2013_nonribo_9187_Acropora_hyacinthus_55974_KOG1557                        4.75%    passed    100.00%
+   2  Nosenko2013_nonribo_9187_Acropora_millepora_45264_KOG1557                         4.75%    passed    100.00%
+   3  Nosenko2013_nonribo_9187_Acropora_palmata_6131_KOG1557                            4.75%    passed    100.00%
+   4  Nosenko2013_nonribo_9187_Allomyces_macrogynus_28583_KOG1557                       4.75%    passed     87.14%
+   5  Nosenko2013_nonribo_9187_Amphimedon_queenslandica_400682_KOG1557                  4.75%    passed     99.72%
+   6  Nosenko2013_nonribo_9187_Aplysia_californica_6500_KOG1557                        35.61%    passed     92.66%
+   7  Nosenko2013_nonribo_9187_Asbestopluma_sp_68560_KOG1557                            4.75%    passed     99.92%
+   8  Nosenko2013_nonribo_9187_Batrachochytrium_dendrobatidis_109871_KOG1557            4.75%    passed     95.21%
+   9  Nosenko2013_nonribo_9187_Beroe_sp_10199_KOG1557                                   4.75%    passed     99.64%
+  10  Nosenko2013_nonribo_9187_Branchiostoma_floridae_7739_KOG1557                     12.76%    passed     99.86%
+  11  Nosenko2013_nonribo_9187_Capitella_teleta_283909_KOG1557                          4.75%    passed     99.98%
+  12  Nosenko2013_nonribo_9187_Capsaspora_owczarzaki_192875_KOG1557                    15.73%    passed     98.69%
+  13  Nosenko2013_nonribo_9187_Carteriospongia_foliascens_593584_KOG1557               29.97%    passed     94.42%
+  14  Nosenko2013_nonribo_9187_Ciona_intestinalis_7719_KOG1557                          4.75%    passed     57.07%
+  15  Nosenko2013_nonribo_9187_Clytia_hemisphaerica_252671_KOG1557                      5.04%    passed     84.40%
+  16  Nosenko2013_nonribo_9187_Corticium_39180_KOG1557                                 74.48%    passed     96.98%
+  17  Nosenko2013_nonribo_9187_Crassostrea_gigas_29159_KOG1557                          4.75%    passed     99.99%
+  18  Nosenko2013_nonribo_9187_Cyanea_capillata_27804_KOG1557                          47.77%    passed     98.14%
+  19  Nosenko2013_nonribo_9187_Danio_rerio_7955_KOG1557                                 4.75%    passed     98.64%
+  20  Nosenko2013_nonribo_9187_Daphnia_pulex_6669_KOG1557                               4.75%    passed     99.33%
+  21  Nosenko2013_nonribo_9187_Ephydatia_muelleri_6052_KOG1557                         18.69%    passed     97.84%
+  22  Nosenko2013_nonribo_9187_Helobdella_robusta_6412_KOG1557                          4.75%    passed     96.11%
+  23  Nosenko2013_nonribo_9187_Heterochone_calyx_367901_KOG1557                        54.60%    passed     92.10%
+  24  Nosenko2013_nonribo_9187_Hydra_magnipapillata_6087_KOG1557                        4.75%    passed     98.90%
+  25  Nosenko2013_nonribo_9187_Hydractinia_echinata_35630_KOG1557                      37.69%    passed     93.04%
+  26  Nosenko2013_nonribo_9187_Ixodes_scapularis_6945_KOG1557                           8.01%    passed    100.00%
+  27  Nosenko2013_nonribo_9187_Leucetta_chagosensis_185688_KOG1557                     38.87%    passed     98.60%
+  28  Nosenko2013_nonribo_9187_Leucosolenia_sp_86012_KOG1557                           47.18%    passed     62.10%
+  29  Nosenko2013_nonribo_9187_Metridium_senile_6116_KOG1557                            4.75%    passed     99.96%
+  30  Nosenko2013_nonribo_9187_Mnemiopsis_leidyi_27923_KOG1557                          4.75%    passed     99.98%
+  31  Nosenko2013_nonribo_9187_Molgula_tectiformis_30286_KOG1557                        4.75%    passed     98.80%
+  32  Nosenko2013_nonribo_9187_Monosiga_ovata_81526_KOG1557                            10.98%    passed     79.56%
+  33  Nosenko2013_nonribo_9187_Nasonia_vitripennis_7425_KOG1557                         4.75%    passed     94.84%
+  34  Nosenko2013_nonribo_9187_Nematostella_vectensis_45351_KOG1557                     4.75%    passed    100.00%
+  35  Nosenko2013_nonribo_9187_Oscarella_carmela_386100_KOG1557                         4.75%    passed     99.98%
+  36  Nosenko2013_nonribo_9187_Oscarella_lobularis_121494_KOG1557                      25.52%    passed     97.68%
+  37  Nosenko2013_nonribo_9187_Oscarella_sp_121493_KOG1557                              4.75%    passed     99.98%
+  38  Nosenko2013_nonribo_9187_Pachydictyum_globosum_348075_KOG1557                    48.66%    passed     89.60%
+  39  Nosenko2013_nonribo_9187_Petromyzon_marinus_7757_KOG1557                          4.75%    passed     99.71%
+  40  Nosenko2013_nonribo_9187_Pleurobrachia_pileus_140457_KOG1557                     17.21%    passed     99.97%
+  41  Nosenko2013_nonribo_9187_Porites_46719_KOG1557                                    8.31%    passed     99.99%
+  42  Nosenko2013_nonribo_9187_Saccoglossus_kowalevskii_10224_KOG1557                   4.75%    passed     99.96%
+  43  Nosenko2013_nonribo_9187_Spizellomyces_punctatus_109760_KOG1557                  37.09%    passed     96.08%
+  44  Nosenko2013_nonribo_9187_Strongylocentrotus_purpuratus_7668_KOG1557               4.75%    passed     99.81%
+  45  Nosenko2013_nonribo_9187_Suberites_domuncula_55567_KOG1557                        4.75%    passed     99.97%
+  46  Nosenko2013_nonribo_9187_Tethya_wilhelma_463344_KOG1557                           4.75%    passed     99.87%
+  47  Nosenko2013_nonribo_9187_Trichoplax_adhaerens_10228_KOG1557                       4.75%    passed     97.74%
+  48  Nosenko2013_nonribo_9187_Trichoplax_sp_H4_10227_KOG1557                          40.36%    passed     94.74%
+  49  Nosenko2013_nonribo_9187_Tubifex_tubifex_6386_KOG1557                            35.91%    passed     85.50%
+  50  Simion2017_Aiptasia_pallida_1720309_V2META12446-42-Calc_Hmm10-BMGE05              9.50%    passed     99.92%
+  51  Simion2017_Alatina_alata_1193083_V2META12446-42-Calc_Hmm10-BMGE05                13.35%    passed     96.03%
+  52  Simion2017_Amoebidium_parasiticum_4881_V2META12446-42-Calc_Hmm10-BMGE05          10.39%    passed     99.79%
+  53  Simion2017_Amphimedon_queenslandica_400682_V2META12446-42-Calc_Hmm10-BMGE05       8.31%    passed     99.05%
+  54  Simion2017_Antipathes_caribbeana_934276_V2META12446-42-Calc_Hmm10-BMGE05          8.31%    passed     98.54%
+  55  Simion2017_Aphrocallistes_vastus_83887_V2META12446-42-Calc_Hmm10-BMGE05          10.68%    passed     98.69%
+  56  Simion2017_Aplysia_californica_6500_V2META12446-42-Calc_Hmm10-BMGE05              8.31%    passed     99.66%
+  57  Simion2017_Atolla_vanhoeffeni_86043_V2META12446-42-Calc_Hmm10-BMGE05             61.42%    passed     99.92%
+  58  Simion2017_Aurelia_aurita_6145_V2META12446-42-Calc_Hmm10-BMGE05                   9.79%    passed    100.00%
+  59  Simion2017_Beroe_abyssicola_320166_V2META12446-42-Calc_Hmm10-BMGE05               8.90%    passed     99.92%
+  60  Simion2017_Beroe_sp_10199_V2META12446-42-Calc_Hmm10-BMGE05                        8.61%    passed     99.77%
+  61  Simion2017_Bolinopsis_infundibulum_140455_V2META12446-42-Calc_Hmm10-BMGE05       12.46%    passed     88.13%
+  62  Simion2017_Bolocera_tuediae_1163374_V2META12446-42-Calc_Hmm10-BMGE05              8.31%    passed     98.77%
+  63  Simion2017_Branchiostoma_floridae_7739_V2META12446-42-Calc_Hmm10-BMGE05          16.32%    passed     99.78%
+  64  Simion2017_Capitella_teleta_283909_V2META12446-42-Calc_Hmm10-BMGE05               8.31%    passed    100.00%
+  65  Simion2017_Capsaspora_owczarzaki_192875_V2META12446-42-Calc_Hmm10-BMGE05         20.18%    passed     99.98%
+  66  Simion2017_Cestum_veneris_12997_V2META12446-42-Calc_Hmm10-BMGE05                  9.20%    passed     99.68%
+  67  Simion2017_Chondrilla_nucula_220712_V2META12446-42-Calc_Hmm10-BMGE05              8.31%    passed     99.99%
+  68  Simion2017_Clathrina_coriacea_1031551_V2META12446-42-Calc_Hmm10-BMGE05           10.39%    passed     99.92%
+  69  Simion2017_Codosiga_hollandica_17_1742608_V2META12446-42-Calc_Hmm10-BMGE05       16.91%    passed     78.79%
+  70  Simion2017_Coeloplana_species_140473_V2META12446-42-Calc_Hmm10-BMGE05             8.31%    passed     98.58%
+  71  Simion2017_Corticium_candelabrum_121492_V2META12446-42-Calc_Hmm10-BMGE05          9.79%    passed     99.95%
+  72  Simion2017_Craspedacusta_sowerbii_128124_V2META12446-42-Calc_Hmm10-BMGE05        12.76%    passed     99.71%
+  73  Simion2017_Daphnia_pulex_6669_V2META12446-42-Calc_Hmm10-BMGE05                    8.61%    passed     99.98%
+  74  Simion2017_Dryodora_glandiformis_1566677_V2META12446-42-Calc_Hmm10-BMGE05         8.31%    passed     92.47%
+  75  Simion2017_Edwardsiella_lineata_132407_V2META12446-42-Calc_Hmm10-BMGE05           8.31%    passed     99.71%
+  76  Simion2017_Euplectella_aspergillum_936045_V2META12446-42-Calc_Hmm10-BMGE05       17.21%    passed     90.31%
+  77  Simion2017_Euplokamis_dunlapae_1403701_V2META12446-42-Calc_Hmm10-BMGE05          15.43%    passed     99.29%
+  78  Simion2017_Gorgonia_ventalina_204384_V2META12446-42-Calc_Hmm10-BMGE05             9.79%    passed     98.42%
+  79  Simion2017_Grantia_compressa_196260_V2META12446-42-Calc_Hmm10-BMGE05              8.90%    passed     99.76%
+  80  Simion2017_Hormiphora_californensis_1403702_V2META12446-42-Calc_Hmm10-BMGE05     25.22%    passed     99.72%
+  81  Simion2017_Hyalonema_populiferum_1631155_V2META12446-42-Calc_Hmm10-BMGE05         8.31%    passed     96.25%
+  82  Simion2017_Hydra_vulgaris_01_6087_V2META12446-42-Calc_Hmm10-BMGE05                9.20%    passed     97.81%
+  83  Simion2017_Hydractinia_polyclina_589945_V2META12446-42-Calc_Hmm10-BMGE05         71.51%    passed     65.09%
+  84  Simion2017_Ircinia_fasciculata_1234657_V2META12446-42-Calc_Hmm10-BMGE05           8.31%    passed     99.60%
+  85  Simion2017_Ixodes_scapularis_6945_V2META12446-42-Calc_Hmm10-BMGE05                9.50%    passed     99.99%
+  86  Simion2017_Kirkpatrickia_variolosa_1631157_V2META12446-42-Calc_Hmm10-BMGE05       8.31%    passed     98.63%
+  87  Simion2017_Lampea_pancerina_1532213_V2META12446-42-Calc_Hmm10-BMGE05             23.44%    passed     97.65%
+  88  Simion2017_Latrunculia_apicalis_1325597_V2META12446-42-Calc_Hmm10-BMGE05          8.31%    passed     99.97%
+  89  Simion2017_Leuconia_nivea_283886_V2META12446-42-Calc_Hmm10-BMGE05                 9.50%    passed     99.71%
+  90  Simion2017_Leucosolenia_complicata_433461_V2META12446-42-Calc_Hmm10-BMGE05        8.90%    passed     99.89%
+  91  Simion2017_Liriope_tetraphylla_37524_V2META12446-42-Calc_Hmm10-BMGE05            56.68%    passed     66.16%
+  92  Simion2017_Lucernariopsis_campanulata_1843190_V2META12446-42-Calc_Hmm10-BMGE05   11.28%    passed     99.28%
+  93  Simion2017_Mnemiopsis_leidyi_27923_V2META12446-42-Calc_Hmm10-BMGE05              25.22%    passed     91.74%
+  94  Simion2017_Orbicella_faveolata_48498_V2META12446-42-Calc_Hmm10-BMGE05             8.31%    passed     98.53%
+  95  Simion2017_Mycale_phyllophila_1325607_V2META12446-42-Calc_Hmm10-BMGE05            8.31%    passed     99.48%
+  96  Simion2017_Mylnosiga_fluctuans_19_1928486_V2META12446-42-Calc_Hmm10-BMGE05       17.80%    passed     98.52%
+  97  Simion2017_Nematostella_vectensis_45351_V2META12446-42-Calc_Hmm10-BMGE05          8.31%    passed     99.86%
+  98  Simion2017_Oscarella_species_121493_V2META12446-42-Calc_Hmm10-BMGE05             10.68%    passed     99.92%
+  99  Simion2017_Pelagia_noctiluca_400838_V2META12446-42-Calc_Hmm10-BMGE05             23.44%    passed     94.00%
+ 100  Simion2017_Pennatula_rubra_1820127_V2META12446-42-Calc_Hmm10-BMGE05               8.31%    passed     99.54%
+ 101  Simion2017_Periphylla_periphylla_880221_V2META12446-42-Calc_Hmm10-BMGE05         34.42%    passed     98.05%
+ 102  Simion2017_Petrosia_ficiformis_68564_V2META12446-42-Calc_Hmm10-BMGE05            16.02%    passed     88.43%
+ 103  Simion2017_Plakina_jani_450361_V2META12446-42-Calc_Hmm10-BMGE05                  10.39%    passed     99.84%
+ 104  Simion2017_Pleraplysilla_spinifera_119433_V2META12446-42-Calc_Hmm10-BMGE05       34.42%    passed     99.81%
+ 105  Simion2017_Pleurobrachia_species_34498_V2META12446-42-Calc_Hmm10-BMGE05           9.50%    passed     99.99%
+ 106  Simion2017_Plumapathes_pennacea_1350358_V2META12446-42-Calc_Hmm10-BMGE05          8.31%    passed     98.97%
+ 107  Simion2017_Rossella_fibulata_1076269_V2META12446-42-Calc_Hmm10-BMGE05             8.31%    passed     99.99%
+ 108  Simion2017_Saccoglossus_kowalevskii_10224_V2META12446-42-Calc_Hmm10-BMGE05        8.31%    passed     99.99%
+ 109  Simion2017_Salpingoeca_helianthica_18_1928494_V2META12446-42-Calc_Hmm10-BMGE05    8.61%    passed     96.27%
+ 110  Simion2017_Spongilla_lacustris_6055_V2META12446-42-Calc_Hmm10-BMGE05              8.31%    passed     99.97%
+ 111  Simion2017_Stomolophus_meleagris_168796_V2META12446-42-Calc_Hmm10-BMGE05          9.20%    passed    100.00%
+ 112  Simion2017_Strongylocentrotus_purpuratus_7668_V2META12446-42-Calc_Hmm10-BMGE05    8.61%    passed     92.38%
+ 113  Simion2017_Sycon_ciliatum_27933_V2META12446-42-Calc_Hmm10-BMGE05                 57.27%    passed     96.14%
+ 114  Simion2017_Sycon_coactum_1009717_V2META12446-42-Calc_Hmm10-BMGE05                 8.90%    passed     99.33%
+ 115  Simion2017_Sympagella_nux_76350_V2META12446-42-Calc_Hmm10-BMGE05                  8.61%    passed     93.48%
+ 116  Simion2017_Tribolium_castaneum_7070_V2META12446-42-Calc_Hmm10-BMGE05              8.61%    passed     99.91%
+ 117  Simion2017_Trichoplax_adhaerens_10228_V2META12446-42-Calc_Hmm10-BMGE05            8.31%    passed     98.41%
+ 118  Simion2017_Vallicula_multiformis_140489_V2META12446-42-Calc_Hmm10-BMGE05          8.31%    passed     99.94%
+WARNING: 6 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                                                            15.19%  0 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.046 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 598050)...
+Model LG+C60+F is alias for LG+POISSON+G+FMIX{C60pi1:1:0.0169698865,C60pi2:1:0.0211683374,C60pi3:1:0.0276589079,C60pi4:1:0.0065675964,C60pi5:1:0.0141221416,C60pi6:1:0.0068774834,C60pi7:1:0.0146909701,C60pi8:1:0.0067225777,C60pi9:1:0.0018396660,C60pi10:1:0.0102547197,C60pi11:1:0.0230896163,C60pi12:1:0.0057941033,C60pi13:1:0.0125394534,C60pi14:1:0.0204526478,C60pi15:1:0.0070629602,C60pi16:1:0.0117982741,C60pi17:1:0.0068334668,C60pi18:1:0.0433775839,C60pi19:1:0.0318278731,C60pi20:1:0.0222546108,C60pi21:1:0.0102264969,C60pi22:1:0.0150545891,C60pi23:1:0.0134159878,C60pi24:1:0.0148552065,C60pi25:1:0.0239111516,C60pi26:1:0.0128776278,C60pi27:1:0.0222318842,C60pi28:1:0.0247444742,C60pi29:1:0.0214274810,C60pi30:1:0.0115001882,C60pi31:1:0.0076017389,C60pi32:1:0.0130258568,C60pi33:1:0.0093701965,C60pi34:1:0.0467194264,C60pi35:1:0.0441940314,C60pi36:1:0.0322263154,C60pi37:1:0.0402999891,C60pi38:1:0.0150234227,C60pi39:1:0.0104589903,C60pi40:1:0.0214742395,C60pi41:1:0.0154957836,C60pi42:1:0.0101789953,C60pi43:1:0.0227980379,C60pi44:1:0.0123204539,C60pi45:1:0.0066777583,C60pi46:1:0.0004150083,C60pi47:1:0.0344385130,C60pi48:1:0.0113663379,C60pi49:1:0.0127143049,C60pi50:1:0.0124323741,C60pi51:1:0.0262124415,C60pi52:1:0.0064994957,C60pi53:1:0.0103203293,C60pi54:1:0.0142463512,C60pi55:1:0.0215600067,C60pi56:1:0.0199150700,C60pi57:1:0.0038964200,C60pi58:1:0.0113448855,C60pi59:1:0.0128595846,C60pi60:1:0.0117656776}+F
+
+NOTE: 1585 MB RAM (1 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -20314.667
+2. Current log-likelihood: -19807.199
+3. Current log-likelihood: -19794.976
+4. Current log-likelihood: -19790.670
+5. Current log-likelihood: -19786.314
+6. Current log-likelihood: -19783.478
+7. Current log-likelihood: -19782.768
+Optimal log-likelihood: -19782.727
+Mixture weights: 0.050 0.010 0.008 0.000 0.030 0.004 0.000 0.000 0.021 0.000 0.041 0.006 0.017 0.000 0.013 0.005 0.023 0.044 0.033 0.015 0.000 0.006 0.066 0.017 0.001 0.040 0.011 0.004 0.011 0.000 0.031 0.009 0.026 0.020 0.014 0.022 0.003 0.003 0.000 0.013 0.014 0.000 0.007 0.003 0.013 0.043 0.000 0.026 0.023 0.012 0.045 0.011 0.035 0.008 0.045 0.029 0.022 0.000 0.028 0.013 0.005
+Gamma shape alpha: 0.537
+Parameters optimization took 7 rounds (179.059 sec)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+Computing ML distances based on estimated model parameters... 3.442 sec
+WARNING: Some pairwise ML distances are too long (saturated)
+Computing BIONJ tree...
+0.011 seconds
+Log-likelihood of BIONJ tree: -19845.518
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 5.633 second
+Computing log-likelihood of 98 initial trees ... 1228.593 seconds
+Current best score: -19765.877
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 1: -19701.319
+Iteration 10 / LogL: -19722.291 / Time: 0h:42m:30s
+Iteration 20 / LogL: -19716.407 / Time: 0h:59m:52s
+Finish initializing candidate tree set (20)
+Current best tree score: -19701.319 / CPU time: 3262.238
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 22: -19693.390
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 28: -19691.377
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 29: -19688.668
+Iteration 30 / LogL: -19712.512 / Time: 1h:27m:24s (4h:58m:23s left)
+BETTER TREE FOUND at iteration 40: -19688.665
+Iteration 40 / LogL: -19688.665 / Time: 1h:51m:27s (4h:45m:46s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 49: -19688.220
+Iteration 50 / LogL: -19700.313 / Time: 2h:15m:34s (4h:33m:54s left)
+Log-likelihood cutoff on original alignment: -19777.256
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 52: -19687.356
+BETTER TREE FOUND at iteration 59: -19687.347
+Iteration 60 / LogL: -19690.883 / Time: 2h:39m:50s (4h:28m:12s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 68: -19687.221
+Iteration 70 / LogL: -19692.267 / Time: 3h:5m:22s (4h:23m:17s left)
+Iteration 80 / LogL: -19705.869 / Time: 3h:28m:53s (3h:52m:41s left)
+Iteration 90 / LogL: -19688.452 / Time: 3h:54m:26s (3h:25m:27s left)
+Iteration 100 / LogL: -19689.693 / Time: 4h:20m:10s (2h:58m:42s left)
+Log-likelihood cutoff on original alignment: -19777.256
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.997
+Iteration 110 / LogL: -19687.248 / Time: 4h:44m:1s (3h:54m:31s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+UPDATE BEST LOG-LIKELIHOOD: -19686.959
+Iteration 120 / LogL: -19707.731 / Time: 5h:8m:59s (3h:27m:43s left)
+Iteration 130 / LogL: -19687.506 / Time: 5h:32m:32s (3h:0m:26s left)
+Iteration 140 / LogL: -19979.682 / Time: 5h:56m:9s (2h:33m:44s left)
+Iteration 150 / LogL: -19689.391 / Time: 6h:20m:54s (2h:7m:49s left)
+Log-likelihood cutoff on original alignment: -19777.256
+Iteration 160 / LogL: -19687.399 / Time: 6h:43m:54s (1h:41m:36s left)
+TREE SEARCH COMPLETED AFTER 169 ITERATIONS / Time: 7h:5m:21s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -19686.959
+Optimal log-likelihood: -19686.958
+Mixture weights: 0.048 0.009 0.008 0.000 0.010 0.002 0.000 0.000 0.029 0.000 0.034 0.006 0.021 0.013 0.016 0.008 0.021 0.048 0.032 0.020 0.000 0.005 0.051 0.022 0.000 0.039 0.013 0.015 0.000 0.024 0.038 0.010 0.025 0.022 0.019 0.021 0.000 0.021 0.000 0.012 0.011 0.000 0.003 0.001 0.000 0.038 0.000 0.022 0.016 0.012 0.051 0.011 0.035 0.007 0.033 0.039 0.023 0.000 0.029 0.009 0.000
+Gamma shape alpha: 0.547
+Parameters optimization took 1 rounds (21.764 sec)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BEST SCORE FOUND : -19686.958
+Creating bootstrap support values...
+Split supports printed to NEXUS file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1289/LG+C60+F_component1289.splits.nex
+Total tree length: 33.406
+
+Total number of iterations: 169
+CPU time used for tree search: 25071.433 sec (6h:57m:51s)
+Wall-clock time used for tree search: 25191.363 sec (6h:59m:51s)
+Total CPU time used: 25420.572 sec (7h:3m:40s)
+Total wall-clock time used: 25543.732 sec (7h:5m:43s)
+
+Computing bootstrap consensus tree...
+Reading input file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1289/LG+C60+F_component1289.splits.nex...
+118 taxa and 665 splits.
+Consensus tree written to /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1289/LG+C60+F_component1289.contree
+Reading input trees file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1289/LG+C60+F_component1289.contree
+Log-likelihood of consensus tree: -19688.381
+
+Analysis results written to: 
+  IQ-TREE report:                /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1289/LG+C60+F_component1289.iqtree
+  Maximum-likelihood tree:       /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1289/LG+C60+F_component1289.treefile
+  Likelihood distances:          /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1289/LG+C60+F_component1289.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1289/LG+C60+F_component1289.splits.nex
+  Consensus tree:                /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1289/LG+C60+F_component1289.contree
+  Screen log file:               /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1289/LG+C60+F_component1289.log
+
+Date and Time: Mon Aug 29 22:38:46 2022

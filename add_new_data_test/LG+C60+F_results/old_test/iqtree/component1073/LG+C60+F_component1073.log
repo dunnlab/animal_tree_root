@@ -1,0 +1,402 @@
+IQ-TREE version 1.5.3 for Linux 64-bit built Mar 12 2017
+Copyright (c) 2011-2016 Nguyen Lam Tung, Olga Chernomor, Arndt von Haeseler and Bui Quang Minh.
+
+Host:    r270.uppmax.uu.se (AVX2, FMA3, 125 GB RAM)
+Command: iqtree -s /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component1073.mafft -m LG+C60+F -nt 1 -bb 1000 -pre /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1073/LG+C60+F_component1073
+Seed:    395782 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 29 15:31:45 2022
+Kernel:  AVX+FMA
+
+NOTE: Consider using the multicore version because your CPU has 20 cores!
+
+Reading alignment file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component1073.mafft ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 112 sequences with 300 columns and 283 patterns (153 informative sites, 106 constant sites)
+WARNING: Some sequence names are changed as follows:
+Chang2015:Acanthoeca_sp:81532:stbproptase2a -> Chang2015_Acanthoeca_sp_81532_stbproptase2a
+Chang2015:Acropora_cervicornis:6130:stbproptase2a -> Chang2015_Acropora_cervicornis_6130_stbproptase2a
+Chang2015:Aiptasia_pallida:1720309:stbproptase2a -> Chang2015_Aiptasia_pallida_1720309_stbproptase2a
+Chang2015:Amoebidium_parasiticum:4881:stbproptase2a -> Chang2015_Amoebidium_parasiticum_4881_stbproptase2a
+Chang2015:Amphimedon_queenslandica:400682:stbproptase2a -> Chang2015_Amphimedon_queenslandica_400682_stbproptase2a
+Chang2015:Aphrocallistes_vastus:83887:stbproptase2a -> Chang2015_Aphrocallistes_vastus_83887_stbproptase2a
+Chang2015:Aurelia_aurita:6145:stbproptase2a -> Chang2015_Aurelia_aurita_6145_stbproptase2a
+Chang2015:Beroe_abyssicola:320166:stbproptase2a -> Chang2015_Beroe_abyssicola_320166_stbproptase2a
+Chang2015:Bolocera_tuediae:1163374:stbproptase2a -> Chang2015_Bolocera_tuediae_1163374_stbproptase2a
+Chang2015:Botryllus_schlosseri:30301:stbproptase2a -> Chang2015_Botryllus_schlosseri_30301_stbproptase2a
+Chang2015:Branchiostoma_floridae:7739:stbproptase2a -> Chang2015_Branchiostoma_floridae_7739_stbproptase2a
+Chang2015:Buddenbrockia_plumatellae:185687:stbproptase2a -> Chang2015_Buddenbrockia_plumatellae_185687_stbproptase2a
+Chang2015:Capitella_teleta:283909:stbproptase2a -> Chang2015_Capitella_teleta_283909_stbproptase2a
+Chang2015:Capsaspora_owczarzaki:192875:stbproptase2a -> Chang2015_Capsaspora_owczarzaki_192875_stbproptase2a
+Chang2015:Chondrilla_nucula:220712:stbproptase2a -> Chang2015_Chondrilla_nucula_220712_stbproptase2a
+Chang2015:Ciona_intestinalis:7719:stbproptase2a -> Chang2015_Ciona_intestinalis_7719_stbproptase2a
+Chang2015:Clytia_hemisphaerica:252671:stbproptase2a -> Chang2015_Clytia_hemisphaerica_252671_stbproptase2a
+Chang2015:Corticium_candelabrum:121492:stbproptase2a -> Chang2015_Corticium_candelabrum_121492_stbproptase2a
+Chang2015:Craspedacusta_sowerbii:128124:stbproptase2a -> Chang2015_Craspedacusta_sowerbii_128124_stbproptase2a
+Chang2015:Crassostrea_gigas:29159:stbproptase2a -> Chang2015_Crassostrea_gigas_29159_stbproptase2a
+Chang2015:Daphnia_pulex:6669:stbproptase2a -> Chang2015_Daphnia_pulex_6669_stbproptase2a
+Chang2015:Ectopleura_larynx:264052:stbproptase2a -> Chang2015_Ectopleura_larynx_264052_stbproptase2a
+Chang2015:Edwardsiella_lineata:132407:stbproptase2a -> Chang2015_Edwardsiella_lineata_132407_stbproptase2a
+Chang2015:Enteromyxum_leei:188704:stbproptase2a -> Chang2015_Enteromyxum_leei_188704_stbproptase2a
+Chang2015:Ephydatia_muelleri:6052:stbproptase2a -> Chang2015_Ephydatia_muelleri_6052_stbproptase2a
+Chang2015:Eunicella_cavolinii:317547:stbproptase2a -> Chang2015_Eunicella_cavolinii_317547_stbproptase2a
+Chang2015:Euplectella_aspergillum:936045:stbproptase2a -> Chang2015_Euplectella_aspergillum_936045_stbproptase2a
+Chang2015:Euplokamis_dunlapae:1403701:stbproptase2a -> Chang2015_Euplokamis_dunlapae_1403701_stbproptase2a
+Chang2015:Gorgonia_ventalina:204384:stbproptase2a -> Chang2015_Gorgonia_ventalina_204384_stbproptase2a
+Chang2015:Helobdella_robusta:6412:stbproptase2a -> Chang2015_Helobdella_robusta_6412_stbproptase2a
+Chang2015:Homo_sapiens:9606:stbproptase2a -> Chang2015_Homo_sapiens_9606_stbproptase2a
+Chang2015:Hormathia_digitata:1163372:stbproptase2a -> Chang2015_Hormathia_digitata_1163372_stbproptase2a
+Chang2015:Hydra_vulgaris_01:6087:stbproptase2a -> Chang2015_Hydra_vulgaris_01_6087_stbproptase2a
+Chang2015:Hydractinia_polyclina:589945:stbproptase2a -> Chang2015_Hydractinia_polyclina_589945_stbproptase2a
+Chang2015:Ilyanassa_obsoleta:1934733:stbproptase2a -> Chang2015_Ilyanassa_obsoleta_1934733_stbproptase2a
+Chang2015:Ixodes_scapularis:6945:stbproptase2a -> Chang2015_Ixodes_scapularis_6945_stbproptase2a
+Chang2015:Kudoa_iwatai:269814:stbproptase2a -> Chang2015_Kudoa_iwatai_269814_stbproptase2a
+Chang2015:Latimeria_menadoensis:106881:stbproptase2a -> Chang2015_Latimeria_menadoensis_106881_stbproptase2a
+Chang2015:Leucetta_chagosensis:185688:stbproptase2a -> Chang2015_Leucetta_chagosensis_185688_stbproptase2a
+Chang2015:Ministeria_vibrans:134558:stbproptase2a -> Chang2015_Ministeria_vibrans_134558_stbproptase2a
+Chang2015:Mnemiopsis_leidyi:27923:stbproptase2a -> Chang2015_Mnemiopsis_leidyi_27923_stbproptase2a
+Chang2015:Monosiga_brevicollis:81824:stbproptase2a -> Chang2015_Monosiga_brevicollis_81824_stbproptase2a
+Chang2015:Monosiga_ovata:81526:stbproptase2a -> Chang2015_Monosiga_ovata_81526_stbproptase2a
+Chang2015:Orbicella_faveolata:48498:stbproptase2a -> Chang2015_Orbicella_faveolata_48498_stbproptase2a
+Chang2015:Myxobolus_cerebralis:59783:stbproptase2a -> Chang2015_Myxobolus_cerebralis_59783_stbproptase2a
+Chang2015:Nanomia_bijuga:168759:stbproptase2a -> Chang2015_Nanomia_bijuga_168759_stbproptase2a
+Chang2015:Nasonia_vitripennis:7425:stbproptase2a -> Chang2015_Nasonia_vitripennis_7425_stbproptase2a
+Chang2015:Nematostella_vectensis:45351:stbproptase2a -> Chang2015_Nematostella_vectensis_45351_stbproptase2a
+Chang2015:Octopus_vulgaris:6645:stbproptase2a -> Chang2015_Octopus_vulgaris_6645_stbproptase2a
+Chang2015:Oscarella_carmela:386100:stbproptase2a -> Chang2015_Oscarella_carmela_386100_stbproptase2a
+Chang2015:Oscarella_sp_SN-2011:386100:stbproptase2a -> Chang2015_Oscarella_sp_SN-2011_386100_stbproptase2a
+Chang2015:Patiria_miniata:46514:stbproptase2a -> Chang2015_Patiria_miniata_46514_stbproptase2a
+Chang2015:Pediculus_humanus:121225:stbproptase2a -> Chang2015_Pediculus_humanus_121225_stbproptase2a
+Chang2015:Petromyzon_marinus:7757:stbproptase2a -> Chang2015_Petromyzon_marinus_7757_stbproptase2a
+Chang2015:Petrosia_ficiformis:68564:stbproptase2a -> Chang2015_Petrosia_ficiformis_68564_stbproptase2a
+Chang2015:Pleurobrachia_pileus:140457:stbproptase2a -> Chang2015_Pleurobrachia_pileus_140457_stbproptase2a
+Chang2015:Pocillopora_damicornis:46731:stbproptase2a -> Chang2015_Pocillopora_damicornis_46731_stbproptase2a
+Chang2015:Polypodium_hydriforme:43186:stbproptase2a -> Chang2015_Polypodium_hydriforme_43186_stbproptase2a
+Chang2015:Porites_australiensis:51061:stbproptase2a -> Chang2015_Porites_australiensis_51061_stbproptase2a
+Chang2015:Saccoglossus_kowalevskii:10224:stbproptase2a -> Chang2015_Saccoglossus_kowalevskii_10224_stbproptase2a
+Chang2015:Salpingoeca_sp:86017:stbproptase2a -> Chang2015_Salpingoeca_sp_86017_stbproptase2a
+Chang2015:Sarcotragus_fasciculatus:1234657:stbproptase2a -> Chang2015_Sarcotragus_fasciculatus_1234657_stbproptase2a
+Chang2015:Sphaeroforma_arctica:72019:stbproptase2a -> Chang2015_Sphaeroforma_arctica_72019_stbproptase2a
+Chang2015:Sphaeromyxa_zaharoni:275449:stbproptase2a -> Chang2015_Sphaeromyxa_zaharoni_275449_stbproptase2a
+Chang2015:Stephanoeca_diplocostata:81535:stbproptase2a -> Chang2015_Stephanoeca_diplocostata_81535_stbproptase2a
+Chang2015:Stomolophus_meleagris:168796:stbproptase2a -> Chang2015_Stomolophus_meleagris_168796_stbproptase2a
+Chang2015:Strigamia_maritima:126957:stbproptase2a -> Chang2015_Strigamia_maritima_126957_stbproptase2a
+Chang2015:Strongylocentrotus_purpuratus:7668:stbproptase2a -> Chang2015_Strongylocentrotus_purpuratus_7668_stbproptase2a
+Chang2015:Sycon_ciliatum:27933:stbproptase2a -> Chang2015_Sycon_ciliatum_27933_stbproptase2a
+Chang2015:Sycon_coactum:1009717:stbproptase2a -> Chang2015_Sycon_coactum_1009717_stbproptase2a
+Chang2015:Thelohanellus_kitauei:669202:stbproptase2a -> Chang2015_Thelohanellus_kitauei_669202_stbproptase2a
+Chang2015:Trichoplax_adhaerens:10228:stbproptase2a -> Chang2015_Trichoplax_adhaerens_10228_stbproptase2a
+Chang2015:Urticina_eques:417072:stbproptase2a -> Chang2015_Urticina_eques_417072_stbproptase2a
+Chang2015:Vallicula_multiformis:140489:stbproptase2a -> Chang2015_Vallicula_multiformis_140489_stbproptase2a
+Philippe2009:Acropora_millepora:45264:Gene_0121 -> Philippe2009_Acropora_millepora_45264_Gene_0121
+Philippe2009:Allomyces_macrogynus:28583:Gene_0121 -> Philippe2009_Allomyces_macrogynus_28583_Gene_0121
+Philippe2009:Aplysia_californica:6500:Gene_0121 -> Philippe2009_Aplysia_californica_6500_Gene_0121
+Philippe2009:Batrachochytrium_dendrobatidis:109871:Gene_0121 -> Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0121
+Philippe2009:Branchiostoma_floridae:7739:Gene_0121 -> Philippe2009_Branchiostoma_floridae_7739_Gene_0121
+Philippe2009:Capitella_teleta:283909:Gene_0121 -> Philippe2009_Capitella_teleta_283909_Gene_0121
+Philippe2009:Capsaspora_owczarzaki:192875:Gene_0121 -> Philippe2009_Capsaspora_owczarzaki_192875_Gene_0121
+Philippe2009:Ciona_savignyi:51511:Gene_0121 -> Philippe2009_Ciona_savignyi_51511_Gene_0121
+Philippe2009:Clytia_hemisphaerica:252671:Gene_0121 -> Philippe2009_Clytia_hemisphaerica_252671_Gene_0121
+Philippe2009:Crassostrea_gigas:29159:Gene_0121 -> Philippe2009_Crassostrea_gigas_29159_Gene_0121
+Philippe2009:Danio_rerio:7955:Gene_0121 -> Philippe2009_Danio_rerio_7955_Gene_0121
+Philippe2009:Daphnia_pulex:6669:Gene_0121 -> Philippe2009_Daphnia_pulex_6669_Gene_0121
+Philippe2009:Euprymna_scolopes:6613:Gene_0121 -> Philippe2009_Euprymna_scolopes_6613_Gene_0121
+Philippe2009:Helobdella_robusta:6412:Gene_0121 -> Philippe2009_Helobdella_robusta_6412_Gene_0121
+Philippe2009:Heterochone_sp:367900:Gene_0121 -> Philippe2009_Heterochone_sp_367900_Gene_0121
+Philippe2009:Hydra_magnipapillata:6087:Gene_0121 -> Philippe2009_Hydra_magnipapillata_6087_Gene_0121
+Philippe2009:Ixodes_scapularis:6945:Gene_0121 -> Philippe2009_Ixodes_scapularis_6945_Gene_0121
+Philippe2009:Leucetta_chagosensis:185688:Gene_0121 -> Philippe2009_Leucetta_chagosensis_185688_Gene_0121
+Philippe2009:Mnemiopsis_leidyi:27923:Gene_0121 -> Philippe2009_Mnemiopsis_leidyi_27923_Gene_0121
+Philippe2009:Molgula_tectiformis:30286:Gene_0121 -> Philippe2009_Molgula_tectiformis_30286_Gene_0121
+Philippe2009:Monosiga_brevicollis:81824:Gene_0121 -> Philippe2009_Monosiga_brevicollis_81824_Gene_0121
+Philippe2009:Monosiga_ovata:81526:Gene_0121 -> Philippe2009_Monosiga_ovata_81526_Gene_0121
+Philippe2009:Nasonia_vitripennis:7425:Gene_0121 -> Philippe2009_Nasonia_vitripennis_7425_Gene_0121
+Philippe2009:Nematostella_vectensis:45351:Gene_0121 -> Philippe2009_Nematostella_vectensis_45351_Gene_0121
+Philippe2009:Pediculus_humanus:121225:Gene_0121 -> Philippe2009_Pediculus_humanus_121225_Gene_0121
+Philippe2009:Petromyzon_marinus:7757:Gene_0121 -> Philippe2009_Petromyzon_marinus_7757_Gene_0121
+Philippe2009:Phycomyces_blakesleeanus:4837:Gene_0121 -> Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0121
+Philippe2009:Pleurobrachia_pileus:140457:Gene_0121 -> Philippe2009_Pleurobrachia_pileus_140457_Gene_0121
+Philippe2009:Proterospongia_sp:218847:Gene_0121 -> Philippe2009_Proterospongia_sp_218847_Gene_0121
+Philippe2009:Amphimedon_queenslandica:400682:Gene_0121 -> Philippe2009_Amphimedon_queenslandica_400682_Gene_0121
+Philippe2009:Rhizopus_oryzae:64495:Gene_0121 -> Philippe2009_Rhizopus_oryzae_64495_Gene_0121
+Philippe2009:Saccoglossus_kowalevskii:10224:Gene_0121 -> Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0121
+Philippe2009:Sphaeroforma_arctica:72019:Gene_0121 -> Philippe2009_Sphaeroforma_arctica_72019_Gene_0121
+Philippe2009:Spizellomyces_punctatus:109760:Gene_0121 -> Philippe2009_Spizellomyces_punctatus_109760_Gene_0121
+Philippe2009:Strongylocentrotus_purpuratus:7668:Gene_0121 -> Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0121
+Philippe2009:Sycon_raphanus:56443:Gene_0121 -> Philippe2009_Sycon_raphanus_56443_Gene_0121
+Philippe2009:Trichoplax_adhaerens:10228:Gene_0121 -> Philippe2009_Trichoplax_adhaerens_10228_Gene_0121
+Philippe2009:Tubifex_tubifex:6386:Gene_0121 -> Philippe2009_Tubifex_tubifex_6386_Gene_0121
+
+                                                              Gap/Ambiguity  Composition  p-value
+   1  Chang2015_Acanthoeca_sp_81532_stbproptase2a                     0.67%    passed     98.82%
+   2  Chang2015_Acropora_cervicornis_6130_stbproptase2a               0.67%    passed    100.00%
+   3  Chang2015_Aiptasia_pallida_1720309_stbproptase2a                0.67%    passed    100.00%
+   4  Chang2015_Amoebidium_parasiticum_4881_stbproptase2a             0.67%    passed    100.00%
+   5  Chang2015_Amphimedon_queenslandica_400682_stbproptase2a         0.67%    passed    100.00%
+   6  Chang2015_Aphrocallistes_vastus_83887_stbproptase2a             0.67%    passed     99.97%
+   7  Chang2015_Aurelia_aurita_6145_stbproptase2a                     0.67%    passed    100.00%
+   8  Chang2015_Beroe_abyssicola_320166_stbproptase2a                 1.00%    passed    100.00%
+   9  Chang2015_Bolocera_tuediae_1163374_stbproptase2a                0.67%    passed    100.00%
+  10  Chang2015_Botryllus_schlosseri_30301_stbproptase2a             31.33%    passed     99.88%
+  11  Chang2015_Branchiostoma_floridae_7739_stbproptase2a             0.67%    passed    100.00%
+  12  Chang2015_Buddenbrockia_plumatellae_185687_stbproptase2a       29.00%    passed     99.62%
+  13  Chang2015_Capitella_teleta_283909_stbproptase2a                 0.67%    passed    100.00%
+  14  Chang2015_Capsaspora_owczarzaki_192875_stbproptase2a            0.67%    passed    100.00%
+  15  Chang2015_Chondrilla_nucula_220712_stbproptase2a                0.67%    passed    100.00%
+  16  Chang2015_Ciona_intestinalis_7719_stbproptase2a                 0.67%    passed    100.00%
+  17  Chang2015_Clytia_hemisphaerica_252671_stbproptase2a             1.00%    passed    100.00%
+  18  Chang2015_Corticium_candelabrum_121492_stbproptase2a            0.67%    passed    100.00%
+  19  Chang2015_Craspedacusta_sowerbii_128124_stbproptase2a           0.67%    passed    100.00%
+  20  Chang2015_Crassostrea_gigas_29159_stbproptase2a                 0.67%    passed    100.00%
+  21  Chang2015_Daphnia_pulex_6669_stbproptase2a                      1.00%    passed    100.00%
+  22  Chang2015_Ectopleura_larynx_264052_stbproptase2a                0.67%    passed    100.00%
+  23  Chang2015_Edwardsiella_lineata_132407_stbproptase2a             0.67%    passed    100.00%
+  24  Chang2015_Enteromyxum_leei_188704_stbproptase2a                43.00%    passed     99.43%
+  25  Chang2015_Ephydatia_muelleri_6052_stbproptase2a                 0.67%    passed    100.00%
+  26  Chang2015_Eunicella_cavolinii_317547_stbproptase2a             17.67%    passed     99.82%
+  27  Chang2015_Euplectella_aspergillum_936045_stbproptase2a          0.67%    passed     99.98%
+  28  Chang2015_Euplokamis_dunlapae_1403701_stbproptase2a             1.00%    passed    100.00%
+  29  Chang2015_Gorgonia_ventalina_204384_stbproptase2a               0.67%    passed    100.00%
+  30  Chang2015_Helobdella_robusta_6412_stbproptase2a                 0.67%    passed    100.00%
+  31  Chang2015_Homo_sapiens_9606_stbproptase2a                       0.67%    passed    100.00%
+  32  Chang2015_Hormathia_digitata_1163372_stbproptase2a              1.33%    passed    100.00%
+  33  Chang2015_Hydra_vulgaris_01_6087_stbproptase2a                  0.67%    passed    100.00%
+  34  Chang2015_Hydractinia_polyclina_589945_stbproptase2a            0.67%    passed    100.00%
+  35  Chang2015_Ilyanassa_obsoleta_1934733_stbproptase2a              0.67%    passed    100.00%
+  36  Chang2015_Ixodes_scapularis_6945_stbproptase2a                  0.67%    passed    100.00%
+  37  Chang2015_Kudoa_iwatai_269814_stbproptase2a                     0.67%    passed     72.17%
+  38  Chang2015_Latimeria_menadoensis_106881_stbproptase2a            0.67%    passed    100.00%
+  39  Chang2015_Leucetta_chagosensis_185688_stbproptase2a            48.33%    passed     94.60%
+  40  Chang2015_Ministeria_vibrans_134558_stbproptase2a               0.67%    passed    100.00%
+  41  Chang2015_Mnemiopsis_leidyi_27923_stbproptase2a                 1.00%    passed     99.99%
+  42  Chang2015_Monosiga_brevicollis_81824_stbproptase2a              0.67%    passed     91.74%
+  43  Chang2015_Monosiga_ovata_81526_stbproptase2a                    0.67%    passed     99.98%
+  44  Chang2015_Orbicella_faveolata_48498_stbproptase2a               0.67%    passed    100.00%
+  45  Chang2015_Myxobolus_cerebralis_59783_stbproptase2a              4.33%    passed     18.57%
+  46  Chang2015_Nanomia_bijuga_168759_stbproptase2a                   0.67%    passed    100.00%
+  47  Chang2015_Nasonia_vitripennis_7425_stbproptase2a                0.67%    passed    100.00%
+  48  Chang2015_Nematostella_vectensis_45351_stbproptase2a            0.67%    passed    100.00%
+  49  Chang2015_Octopus_vulgaris_6645_stbproptase2a                   0.67%    passed    100.00%
+  50  Chang2015_Oscarella_carmela_386100_stbproptase2a                0.67%    passed    100.00%
+  51  Chang2015_Oscarella_sp_SN-2011_386100_stbproptase2a             0.67%    passed    100.00%
+  52  Chang2015_Patiria_miniata_46514_stbproptase2a                   0.67%    passed    100.00%
+  53  Chang2015_Pediculus_humanus_121225_stbproptase2a                0.67%    passed    100.00%
+  54  Chang2015_Petromyzon_marinus_7757_stbproptase2a                 8.67%    passed    100.00%
+  55  Chang2015_Petrosia_ficiformis_68564_stbproptase2a               7.67%    passed    100.00%
+  56  Chang2015_Pleurobrachia_pileus_140457_stbproptase2a             1.00%    passed    100.00%
+  57  Chang2015_Pocillopora_damicornis_46731_stbproptase2a            0.67%    passed    100.00%
+  58  Chang2015_Polypodium_hydriforme_43186_stbproptase2a             0.67%    passed    100.00%
+  59  Chang2015_Porites_australiensis_51061_stbproptase2a            31.67%    passed     97.56%
+  60  Chang2015_Saccoglossus_kowalevskii_10224_stbproptase2a          0.67%    passed    100.00%
+  61  Chang2015_Salpingoeca_sp_86017_stbproptase2a                    0.67%    passed     99.98%
+  62  Chang2015_Sarcotragus_fasciculatus_1234657_stbproptase2a        0.67%    passed     99.99%
+  63  Chang2015_Sphaeroforma_arctica_72019_stbproptase2a              0.67%    passed     99.99%
+  64  Chang2015_Sphaeromyxa_zaharoni_275449_stbproptase2a            24.00%    passed     99.18%
+  65  Chang2015_Stephanoeca_diplocostata_81535_stbproptase2a         10.33%    passed     58.87%
+  66  Chang2015_Stomolophus_meleagris_168796_stbproptase2a            0.67%    passed    100.00%
+  67  Chang2015_Strigamia_maritima_126957_stbproptase2a               0.67%    passed    100.00%
+  68  Chang2015_Strongylocentrotus_purpuratus_7668_stbproptase2a      0.67%    passed    100.00%
+  69  Chang2015_Sycon_ciliatum_27933_stbproptase2a                    0.67%    passed     99.99%
+  70  Chang2015_Sycon_coactum_1009717_stbproptase2a                   3.67%    passed     99.98%
+  71  Chang2015_Thelohanellus_kitauei_669202_stbproptase2a            9.33%    passed     98.95%
+  72  Chang2015_Trichoplax_adhaerens_10228_stbproptase2a              0.67%    passed    100.00%
+  73  Chang2015_Urticina_eques_417072_stbproptase2a                  84.67%    passed     86.40%
+  74  Chang2015_Vallicula_multiformis_140489_stbproptase2a            1.00%    passed    100.00%
+  75  Philippe2009_Acropora_millepora_45264_Gene_0121                 0.33%    passed    100.00%
+  76  Philippe2009_Allomyces_macrogynus_28583_Gene_0121               0.33%    passed     98.90%
+  77  Philippe2009_Aplysia_californica_6500_Gene_0121                18.33%    passed     99.92%
+  78  Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0121    8.67%    passed     99.42%
+  79  Philippe2009_Branchiostoma_floridae_7739_Gene_0121              0.33%    passed    100.00%
+  80  Philippe2009_Capitella_teleta_283909_Gene_0121                  0.33%    passed    100.00%
+  81  Philippe2009_Capsaspora_owczarzaki_192875_Gene_0121             7.67%    passed    100.00%
+  82  Philippe2009_Ciona_savignyi_51511_Gene_0121                     0.33%    passed    100.00%
+  83  Philippe2009_Clytia_hemisphaerica_252671_Gene_0121              0.33%    passed    100.00%
+  84  Philippe2009_Crassostrea_gigas_29159_Gene_0121                 51.67%    passed     51.05%
+  85  Philippe2009_Danio_rerio_7955_Gene_0121                         0.33%    passed    100.00%
+  86  Philippe2009_Daphnia_pulex_6669_Gene_0121                       0.33%    passed    100.00%
+  87  Philippe2009_Euprymna_scolopes_6613_Gene_0121                   0.33%    passed    100.00%
+  88  Philippe2009_Helobdella_robusta_6412_Gene_0121                  0.33%    passed    100.00%
+  89  Philippe2009_Heterochone_sp_367900_Gene_0121                   42.67%    passed     62.85%
+  90  Philippe2009_Hydra_magnipapillata_6087_Gene_0121                0.33%    passed    100.00%
+  91  Philippe2009_Ixodes_scapularis_6945_Gene_0121                   0.33%    passed    100.00%
+  92  Philippe2009_Leucetta_chagosensis_185688_Gene_0121             49.33%    passed     95.10%
+  93  Philippe2009_Mnemiopsis_leidyi_27923_Gene_0121                  6.00%    passed     99.59%
+  94  Philippe2009_Molgula_tectiformis_30286_Gene_0121                0.33%    passed    100.00%
+  95  Philippe2009_Monosiga_brevicollis_81824_Gene_0121               0.33%    passed     87.55%
+  96  Philippe2009_Monosiga_ovata_81526_Gene_0121                     0.33%    passed    100.00%
+  97  Philippe2009_Nasonia_vitripennis_7425_Gene_0121                 8.00%    passed    100.00%
+  98  Philippe2009_Nematostella_vectensis_45351_Gene_0121             0.33%    passed    100.00%
+  99  Philippe2009_Pediculus_humanus_121225_Gene_0121                67.33%    passed     31.81%
+ 100  Philippe2009_Petromyzon_marinus_7757_Gene_0121                  8.00%    passed    100.00%
+ 101  Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0121            0.33%    passed    100.00%
+ 102  Philippe2009_Pleurobrachia_pileus_140457_Gene_0121              0.33%    passed    100.00%
+ 103  Philippe2009_Proterospongia_sp_218847_Gene_0121                66.00%    passed     76.87%
+ 104  Philippe2009_Amphimedon_queenslandica_400682_Gene_0121          0.33%    passed    100.00%
+ 105  Philippe2009_Rhizopus_oryzae_64495_Gene_0121                    0.33%    passed    100.00%
+ 106  Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0121           8.00%    passed    100.00%
+ 107  Philippe2009_Sphaeroforma_arctica_72019_Gene_0121              21.33%    passed     99.46%
+ 108  Philippe2009_Spizellomyces_punctatus_109760_Gene_0121           8.67%    passed     99.90%
+ 109  Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0121       0.33%    passed    100.00%
+ 110  Philippe2009_Sycon_raphanus_56443_Gene_0121                    13.00%    passed    100.00%
+ 111  Philippe2009_Trichoplax_adhaerens_10228_Gene_0121               0.33%    passed    100.00%
+ 112  Philippe2009_Tubifex_tubifex_6386_Gene_0121                     0.33%    passed    100.00%
+WARNING: 4 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                                           7.04%  0 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.035 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 395782)...
+Model LG+C60+F is alias for LG+POISSON+G+FMIX{C60pi1:1:0.0169698865,C60pi2:1:0.0211683374,C60pi3:1:0.0276589079,C60pi4:1:0.0065675964,C60pi5:1:0.0141221416,C60pi6:1:0.0068774834,C60pi7:1:0.0146909701,C60pi8:1:0.0067225777,C60pi9:1:0.0018396660,C60pi10:1:0.0102547197,C60pi11:1:0.0230896163,C60pi12:1:0.0057941033,C60pi13:1:0.0125394534,C60pi14:1:0.0204526478,C60pi15:1:0.0070629602,C60pi16:1:0.0117982741,C60pi17:1:0.0068334668,C60pi18:1:0.0433775839,C60pi19:1:0.0318278731,C60pi20:1:0.0222546108,C60pi21:1:0.0102264969,C60pi22:1:0.0150545891,C60pi23:1:0.0134159878,C60pi24:1:0.0148552065,C60pi25:1:0.0239111516,C60pi26:1:0.0128776278,C60pi27:1:0.0222318842,C60pi28:1:0.0247444742,C60pi29:1:0.0214274810,C60pi30:1:0.0115001882,C60pi31:1:0.0076017389,C60pi32:1:0.0130258568,C60pi33:1:0.0093701965,C60pi34:1:0.0467194264,C60pi35:1:0.0441940314,C60pi36:1:0.0322263154,C60pi37:1:0.0402999891,C60pi38:1:0.0150234227,C60pi39:1:0.0104589903,C60pi40:1:0.0214742395,C60pi41:1:0.0154957836,C60pi42:1:0.0101789953,C60pi43:1:0.0227980379,C60pi44:1:0.0123204539,C60pi45:1:0.0066777583,C60pi46:1:0.0004150083,C60pi47:1:0.0344385130,C60pi48:1:0.0113663379,C60pi49:1:0.0127143049,C60pi50:1:0.0124323741,C60pi51:1:0.0262124415,C60pi52:1:0.0064994957,C60pi53:1:0.0103203293,C60pi54:1:0.0142463512,C60pi55:1:0.0215600067,C60pi56:1:0.0199150700,C60pi57:1:0.0038964200,C60pi58:1:0.0113448855,C60pi59:1:0.0128595846,C60pi60:1:0.0117656776}+F
+
+NOTE: 1285 MB RAM (1 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -7217.019
+2. Current log-likelihood: -6837.639
+3. Current log-likelihood: -6804.773
+4. Current log-likelihood: -6802.583
+5. Current log-likelihood: -6802.206
+Optimal log-likelihood: -6802.164
+Mixture weights: 0.166 0.025 0.000 0.000 0.000 0.031 0.048 0.000 0.030 0.000 0.103 0.039 0.000 0.000 0.000 0.000 0.000 0.011 0.031 0.023 0.000 0.003 0.000 0.000 0.000 0.010 0.000 0.047 0.000 0.001 0.037 0.000 0.020 0.015 0.051 0.051 0.011 0.025 0.000 0.006 0.000 0.007 0.001 0.040 0.000 0.000 0.000 0.000 0.002 0.000 0.014 0.031 0.013 0.000 0.044 0.000 0.000 0.026 0.032 0.000 0.002
+Gamma shape alpha: 0.280
+Parameters optimization took 5 rounds (148.515 sec)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+Computing ML distances based on estimated model parameters... 2.653 sec
+WARNING: Some pairwise ML distances are too long (saturated)
+Computing BIONJ tree...
+0.009 seconds
+Log-likelihood of BIONJ tree: -6829.980
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 3.148 second
+Computing log-likelihood of 98 initial trees ... 1034.942 seconds
+Current best score: -6767.037
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 1: -6734.575
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 2: -6720.034
+Iteration 10 / LogL: -6728.706 / Time: 0h:48m:25s
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 16: -6719.707
+Iteration 20 / LogL: -6733.037 / Time: 1h:18m:36s
+Finish initializing candidate tree set (20)
+Current best tree score: -6719.707 / CPU time: 4499.407
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 21: -6713.768
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 29: -6713.052
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 30: -6711.566
+Iteration 30 / LogL: -6711.566 / Time: 1h:51m:29s (6h:24m:28s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 33: -6711.287
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 40: -6710.894
+Iteration 40 / LogL: -6710.894 / Time: 2h:23m:58s (6h:9m:10s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 41: -6708.845
+Iteration 50 / LogL: -6718.135 / Time: 2h:52m:45s (5h:20m:50s left)
+Log-likelihood cutoff on original alignment: -6781.316
+Iteration 60 / LogL: -6716.791 / Time: 3h:25m:8s (4h:41m:38s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 63: -6707.063
+Iteration 70 / LogL: -6708.623 / Time: 3h:54m:36s (5h:16m:12s left)
+BETTER TREE FOUND at iteration 75: -6707.062
+Iteration 80 / LogL: -6710.515 / Time: 4h:24m:33s (5h:18m:8s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 83: -6706.445
+Iteration 90 / LogL: -6712.873 / Time: 4h:57m:20s (5h:10m:41s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 91: -6706.075
+Iteration 100 / LogL: -6728.357 / Time: 5h:28m:27s (5h:1m:55s left)
+Log-likelihood cutoff on original alignment: -6781.316
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.980
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 110 / LogL: -6708.110 / Time: 6h:1m:1s (4h:58m:5s left)
+Iteration 120 / LogL: -6713.221 / Time: 6h:31m:2s (4h:22m:53s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 123: -6705.902
+Iteration 130 / LogL: -6706.312 / Time: 7h:2m:10s (5h:4m:21s left)
+Iteration 140 / LogL: -6730.273 / Time: 7h:33m:35s (4h:30m:51s left)
+Iteration 150 / LogL: -6708.636 / Time: 8h:7m:6s (3h:58m:38s left)
+Log-likelihood cutoff on original alignment: -6781.316
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 153: -6705.842
+Iteration 160 / LogL: -6706.062 / Time: 8h:42m:51s (5h:5m:49s left)
+Iteration 170 / LogL: -6713.910 / Time: 9h:13m:36s (4h:31m:53s left)
+Iteration 180 / LogL: -6731.489 / Time: 9h:47m:25s (3h:59m:33s left)
+Iteration 190 / LogL: -6705.978 / Time: 10h:21m:39s (3h:27m:13s left)
+BETTER TREE FOUND at iteration 194: -6705.842
+Iteration 200 / LogL: -6706.082 / Time: 10h:52m:26s (5h:8m:11s left)
+Log-likelihood cutoff on original alignment: -6781.316
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.998
+Iteration 210 / LogL: -6710.741 / Time: 11h:24m:24s (4h:54m:43s left)
+Iteration 220 / LogL: -6707.912 / Time: 11h:55m:14s (4h:21m:16s left)
+Iteration 230 / LogL: -6706.062 / Time: 12h:26m:21s (3h:48m:8s left)
+Iteration 240 / LogL: -6706.218 / Time: 12h:57m:42s (3h:15m:14s left)
+Iteration 250 / LogL: -6706.141 / Time: 13h:28m:30s (2h:42m:21s left)
+Log-likelihood cutoff on original alignment: -6781.316
+Iteration 260 / LogL: -6706.087 / Time: 13h:59m:45s (2h:9m:41s left)
+Iteration 270 / LogL: -6725.843 / Time: 14h:30m:51s (1h:37m:7s left)
+Iteration 280 / LogL: -6716.413 / Time: 15h:5m:33s (1h:4m:54s left)
+Iteration 290 / LogL: -6709.040 / Time: 15h:39m:47s (0h:32m:31s left)
+TREE SEARCH COMPLETED AFTER 295 ITERATIONS / Time: 15h:54m:52s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -6705.842
+Optimal log-likelihood: -6705.841
+Mixture weights: 0.223 0.023 0.029 0.000 0.000 0.020 0.037 0.000 0.024 0.000 0.077 0.040 0.000 0.000 0.000 0.000 0.000 0.018 0.025 0.000 0.000 0.003 0.000 0.000 0.000 0.010 0.021 0.039 0.000 0.000 0.041 0.000 0.021 0.007 0.050 0.045 0.013 0.000 0.013 0.004 0.000 0.007 0.000 0.022 0.000 0.000 0.000 0.000 0.041 0.000 0.013 0.031 0.022 0.000 0.045 0.000 0.000 0.000 0.031 0.000 0.004
+Gamma shape alpha: 0.292
+Parameters optimization took 1 rounds (17.325 sec)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BEST SCORE FOUND : -6705.841
+Creating bootstrap support values...
+Split supports printed to NEXUS file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1073/LG+C60+F_component1073.splits.nex
+Total tree length: 15.954
+
+Total number of iterations: 295
+CPU time used for tree search: 56888.130 sec (15h:48m:8s)
+Wall-clock time used for tree search: 57074.820 sec (15h:51m:14s)
+Total CPU time used: 57120.905 sec (15h:52m:0s)
+Total wall-clock time used: 57310.044 sec (15h:55m:10s)
+
+Computing bootstrap consensus tree...
+Reading input file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1073/LG+C60+F_component1073.splits.nex...
+112 taxa and 1401 splits.
+Consensus tree written to /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1073/LG+C60+F_component1073.contree
+Reading input trees file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1073/LG+C60+F_component1073.contree
+Log-likelihood of consensus tree: -6706.097
+
+Analysis results written to: 
+  IQ-TREE report:                /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1073/LG+C60+F_component1073.iqtree
+  Maximum-likelihood tree:       /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1073/LG+C60+F_component1073.treefile
+  Likelihood distances:          /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1073/LG+C60+F_component1073.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1073/LG+C60+F_component1073.splits.nex
+  Consensus tree:                /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1073/LG+C60+F_component1073.contree
+  Screen log file:               /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1073/LG+C60+F_component1073.log
+
+Date and Time: Tue Aug 30 07:27:57 2022

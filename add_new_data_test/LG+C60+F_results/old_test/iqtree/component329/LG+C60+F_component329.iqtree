@@ -1,0 +1,829 @@
+IQ-TREE 1.5.3 built Mar 12 2017
+
+Input file name: /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component329.mafft
+Type of analysis: tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 861347
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh (2015)
+IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol. Biol. Evol., 32:268-274.
+http://dx.doi.org/10.1093/molbev/msu300
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Bui Quang Minh, Minh Anh Thi Nguyen, and Arndt von Haeseler (2013) Ultrafast
+approximation for phylogenetic bootstrap. Mol. Biol. Evol., 30:1188-1195.
+http://dx.doi.org/10.1093/molbev/mst024
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 161 sequences with 242 amino-acid sites
+Number of constant sites: 13 (= 5.3719% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 13 (= 5.3719% of all sites)
+Number of distinct site patterns: 242
+
+SUBSTITUTION PROCESS
+--------------------
+
+Mixture model of substitution: MIX{LG+F+F,LG+FC60pi1,LG+FC60pi2,LG+FC60pi3,LG+FC60pi4,LG+FC60pi5,LG+FC60pi6,LG+FC60pi7,LG+FC60pi8,LG+FC60pi9,LG+FC60pi10,LG+FC60pi11,LG+FC60pi12,LG+FC60pi13,LG+FC60pi14,LG+FC60pi15,LG+FC60pi16,LG+FC60pi17,LG+FC60pi18,LG+FC60pi19,LG+FC60pi20,LG+FC60pi21,LG+FC60pi22,LG+FC60pi23,LG+FC60pi24,LG+FC60pi25,LG+FC60pi26,LG+FC60pi27,LG+FC60pi28,LG+FC60pi29,LG+FC60pi30,LG+FC60pi31,LG+FC60pi32,LG+FC60pi33,LG+FC60pi34,LG+FC60pi35,LG+FC60pi36,LG+FC60pi37,LG+FC60pi38,LG+FC60pi39,LG+FC60pi40,LG+FC60pi41,LG+FC60pi42,LG+FC60pi43,LG+FC60pi44,LG+FC60pi45,LG+FC60pi46,LG+FC60pi47,LG+FC60pi48,LG+FC60pi49,LG+FC60pi50,LG+FC60pi51,LG+FC60pi52,LG+FC60pi53,LG+FC60pi54,LG+FC60pi55,LG+FC60pi56,LG+FC60pi57,LG+FC60pi58,LG+FC60pi59,LG+FC60pi60}+G4
+
+  No  Component      Rate    Weight   Parameters
+   1  LG+F          1.0000   0.2690   LG+F
+   2  LG+FC60pi1    1.0000   0.0000   LG+FC60pi1
+   3  LG+FC60pi2    1.0000   0.0000   LG+FC60pi2
+   4  LG+FC60pi3    1.0000   0.0252   LG+FC60pi3
+   5  LG+FC60pi4    1.0000   0.0117   LG+FC60pi4
+   6  LG+FC60pi5    1.0000   0.0608   LG+FC60pi5
+   7  LG+FC60pi6    1.0000   0.0023   LG+FC60pi6
+   8  LG+FC60pi7    1.0000   0.0000   LG+FC60pi7
+   9  LG+FC60pi8    1.0000   0.0132   LG+FC60pi8
+  10  LG+FC60pi9    1.0000   0.0112   LG+FC60pi9
+  11  LG+FC60pi10   1.0000   0.0342   LG+FC60pi10
+  12  LG+FC60pi11   1.0000   0.0000   LG+FC60pi11
+  13  LG+FC60pi12   1.0000   0.0186   LG+FC60pi12
+  14  LG+FC60pi13   1.0000   0.0212   LG+FC60pi13
+  15  LG+FC60pi14   1.0000   0.0243   LG+FC60pi14
+  16  LG+FC60pi15   1.0000   0.0000   LG+FC60pi15
+  17  LG+FC60pi16   1.0000   0.0233   LG+FC60pi16
+  18  LG+FC60pi17   1.0000   0.0000   LG+FC60pi17
+  19  LG+FC60pi18   1.0000   0.0360   LG+FC60pi18
+  20  LG+FC60pi19   1.0000   0.0347   LG+FC60pi19
+  21  LG+FC60pi20   1.0000   0.0000   LG+FC60pi20
+  22  LG+FC60pi21   1.0000   0.0000   LG+FC60pi21
+  23  LG+FC60pi22   1.0000   0.0078   LG+FC60pi22
+  24  LG+FC60pi23   1.0000   0.0120   LG+FC60pi23
+  25  LG+FC60pi24   1.0000   0.0000   LG+FC60pi24
+  26  LG+FC60pi25   1.0000   0.0070   LG+FC60pi25
+  27  LG+FC60pi26   1.0000   0.0000   LG+FC60pi26
+  28  LG+FC60pi27   1.0000   0.0038   LG+FC60pi27
+  29  LG+FC60pi28   1.0000   0.0067   LG+FC60pi28
+  30  LG+FC60pi29   1.0000   0.0407   LG+FC60pi29
+  31  LG+FC60pi30   1.0000   0.0374   LG+FC60pi30
+  32  LG+FC60pi31   1.0000   0.0053   LG+FC60pi31
+  33  LG+FC60pi32   1.0000   0.0153   LG+FC60pi32
+  34  LG+FC60pi33   1.0000   0.0107   LG+FC60pi33
+  35  LG+FC60pi34   1.0000   0.0073   LG+FC60pi34
+  36  LG+FC60pi35   1.0000   0.0191   LG+FC60pi35
+  37  LG+FC60pi36   1.0000   0.0052   LG+FC60pi36
+  38  LG+FC60pi37   1.0000   0.0000   LG+FC60pi37
+  39  LG+FC60pi38   1.0000   0.0336   LG+FC60pi38
+  40  LG+FC60pi39   1.0000   0.0000   LG+FC60pi39
+  41  LG+FC60pi40   1.0000   0.0198   LG+FC60pi40
+  42  LG+FC60pi41   1.0000   0.0051   LG+FC60pi41
+  43  LG+FC60pi42   1.0000   0.0050   LG+FC60pi42
+  44  LG+FC60pi43   1.0000   0.0148   LG+FC60pi43
+  45  LG+FC60pi44   1.0000   0.0000   LG+FC60pi44
+  46  LG+FC60pi45   1.0000   0.0000   LG+FC60pi45
+  47  LG+FC60pi46   1.0000   0.0000   LG+FC60pi46
+  48  LG+FC60pi47   1.0000   0.0000   LG+FC60pi47
+  49  LG+FC60pi48   1.0000   0.0000   LG+FC60pi48
+  50  LG+FC60pi49   1.0000   0.0024   LG+FC60pi49
+  51  LG+FC60pi50   1.0000   0.0000   LG+FC60pi50
+  52  LG+FC60pi51   1.0000   0.0000   LG+FC60pi51
+  53  LG+FC60pi52   1.0000   0.0685   LG+FC60pi52
+  54  LG+FC60pi53   1.0000   0.0098   LG+FC60pi53
+  55  LG+FC60pi54   1.0000   0.0276   LG+FC60pi54
+  56  LG+FC60pi55   1.0000   0.0087   LG+FC60pi55
+  57  LG+FC60pi56   1.0000   0.0054   LG+FC60pi56
+  58  LG+FC60pi57   1.0000   0.0000   LG+FC60pi57
+  59  LG+FC60pi58   1.0000   0.0000   LG+FC60pi58
+  60  LG+FC60pi59   1.0000   0.0354   LG+FC60pi59
+  61  LG+FC60pi60   1.0000   0.0000   LG+FC60pi60
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 0.9747
+
+ Category  Relative_rate  Proportion
+  1         0.1319         0.2500
+  2         0.4690         0.2500
+  3         0.9957         0.2500
+  4         2.4034         0.2500
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -20899.6874 (s.e. 838.4319)
+Unconstrained log-likelihood (without tree): -1328.3229
+Number of free parameters (#branches + #model parameters): 399
+Akaike information criterion (AIC) score: 42597.3748
+Corrected Akaike information criterion (AICc) score: 361797.3748
+Bayesian information criterion (BIC) score: 43989.4609
+
+**************************** WARNING ****************************
+Number of parameters (K, model parameters and branch lengths): 399
+Sample size (n, alignment length): 242
+
+Given that K>=n, the parameter estimates might be inaccurate.
+Thus, phylogenetic estimates should be interpreted with caution.
+
+Ideally, it is desirable that n >> K. When selecting optimal models,
+1. use AIC or BIC if n > 40K;
+2. use AICc or BIC if 40K >= n > K;
+3. be extremely cautious if n <= K
+
+To improve the situation (3), consider the following options:
+  1. Increase the sample size (n)
+  2. Decrease the number of parameters (K) to be estimated. If
+     possible:
+     a. Remove the least important sequences from the alignment
+     b. Specify some of the parameter values for the substitution
+        model (e.g., the nucleotide or amino acid frequencies)
+     c. Specify some of the parameter values for the rates-across-
+        sites model (e.g., the shape parameter for the discrete
+        Gamma distribution, the proportion of invariable sites, or
+        the rates of change for different rate categories under
+        the FreeRate model)
+
+Reference:
+Burnham KR, Anderson DR (2002). Model Selection and Multimodel
+Inference: A Practical Information-Theoretic Approach. Springer,
+New York.
+************************ END OF WARNING ***********************
+
+Total tree length (sum of branch lengths): 61.1421
+Sum of internal branch lengths: 22.9223 (37.4903% of tree length)
+
+WARNING: 15 near-zero internal branches (<0.0041) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Borowiec2015_Total1080_Salpingoeca_rosetta_946362_OG173.fasta.aln_gene213' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++**Borowiec2015_Total1080_Salpingoeca_rosetta_946362_OG173.fasta.aln_gene213
+|
+|                                 +--Borowiec2015_Total1080_Amphimedon_queenslandica_400682_OG173.fasta.aln_gene213
+|                              +--| (100)
+|                              |  +**Simion2017_Amphimedon_queenslandica_400682_V2META13950-42-Calc_Hmm10-BMGE05
+|                           +--| (81)
+|                           |  +-----Simion2017_Chondrilla_nucula_220712_V2META13950-42-Calc_Hmm10-BMGE05
+|                        +--| (81)
+|                        |  +--Simion2017_Spongilla_lacustris_6055_V2META13950-42-Calc_Hmm10-BMGE05
+|                     +--| (85)
+|                     |  +---------Hejnol2009_Symsagittifera_roscoffensis_84072_Tribe1340_0
+|                  +--| (89)
+|                  |  |                                      +**Borowiec2015_Total1080_Mnemiopsis_leidyi_27923_OG173.fasta.aln_gene213
+|                  |  |                                   +--| (100)
+|                  |  |                                   |  +**Simion2017_Mnemiopsis_leidyi_27923_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |                                +--| (100)
+|                  |  |                                |  +--Simion2017_Bolinopsis_infundibulum_140455_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |                             +--| (100)
+|                  |  |                             |  +--Simion2017_Cestum_veneris_12997_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |                          +--| (98)
+|                  |  |                          |  |     +--Simion2017_Beroe_abyssicola_320166_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |                          |  |  +--| (99)
+|                  |  |                          |  |  |  +--Simion2017_Beroe_sp_10199_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |                          |  +--| (97)
+|                  |  |                          |     +--Simion2017_Dryodora_glandiformis_1566677_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |                       +--| (94)
+|                  |  |                       |  +--Simion2017_Lampea_pancerina_1532213_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |                    +--| (79)
+|                  |  |                    |  |  +--Simion2017_Coeloplana_species_140473_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |                    |  +--| (100)
+|                  |  |                    |     +--Simion2017_Vallicula_multiformis_140489_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |           +--------| (100)
+|                  |  |           |        +--Simion2017_Euplokamis_dunlapae_1403701_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        +**| (19)
+|                  |  |        |  |                    +**Borowiec2015_Total1080_Branchiostoma_floridae_7739_OG173.fasta.aln_gene213
+|                  |  |        |  |                 +**| (57)
+|                  |  |        |  |                 |  +**Dunn2008_Branchiostoma_floridae_7739_Tribe1047
+|                  |  |        |  |              +--| (100)
+|                  |  |        |  |              |  +**Hejnol2009_Branchiostoma_floridae_7739_Tribe1340_0
+|                  |  |        |  |           +--| (92)
+|                  |  |        |  |           |  |  +**Dunn2008_Terebratalia_transversa_34513_Tribe1047
+|                  |  |        |  |           |  +--| (100)
+|                  |  |        |  |           |     +**Hejnol2009_Terebratalia_transversa_34513_Tribe1340_0
+|                  |  |        |  |        +--| (84)
+|                  |  |        |  |        |  |             +**Borowiec2015_Total1080_Capitella_teleta_283909_OG173.fasta.aln_gene213
+|                  |  |        |  |        |  |          +**| (77)
+|                  |  |        |  |        |  |          |  +**Dunn2008_Capitella_teleta_283909_Tribe1047
+|                  |  |        |  |        |  |       +**| (75)
+|                  |  |        |  |        |  |       |  +**Hejnol2009_Capitella_teleta_283909_Tribe1340_0
+|                  |  |        |  |        |  |  +----| (100)
+|                  |  |        |  |        |  |  |    +**Simion2017_Capitella_teleta_283909_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        |  |        |  +--| (96)
+|                  |  |        |  |        |     |  +**Dunn2008_Urechis_caupo_6431_Tribe1047
+|                  |  |        |  |        |     +--| (100)
+|                  |  |        |  |        |        +**Hejnol2009_Urechis_caupo_6431_Tribe1340_0
+|                  |  |        |  |     +--| (42)
+|                  |  |        |  |     |  |            +**Dunn2008_Lumbricus_rubellus_35632_Tribe1047
+|                  |  |        |  |     |  |     +------| (100)
+|                  |  |        |  |     |  |     |      +**Hejnol2009_Lumbricus_rubellus_35632_Tribe1340_0
+|                  |  |        |  |     |  |  +--| (87)
+|                  |  |        |  |     |  |  |  |               +**Dunn2008_Richtersius_coronifer_245088_Tribe1047
+|                  |  |        |  |     |  |  |  |  +------------| (100)
+|                  |  |        |  |     |  |  |  |  |            +**Hejnol2009_Richtersius_coronifer_245088_Tribe1340_0
+|                  |  |        |  |     |  |  |  +--| (96)
+|                  |  |        |  |     |  |  |     |  +**Hejnol2009_Helobdella_robusta_6412_Tribe1340_0
+|                  |  |        |  |     |  |  |     +--| (100)
+|                  |  |        |  |     |  |  |        +**Simion2017_Helobdella_robusta_6412_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        |  |     |  +--| (69)
+|                  |  |        |  |     |     |  +-----Hejnol2009_Pedicellina_cernua_43123_Tribe1340_0
+|                  |  |        |  |     |     +--| (32)
+|                  |  |        |  |     |        +------Hejnol2009_Symbion_pandora_69817_Tribe1340_0
+|                  |  |        |  |  +--| (72)
+|                  |  |        |  |  |  |              +--Borowiec2015_Total1080_Lottia_gigantea_225164_OG173.fasta.aln_gene213
+|                  |  |        |  |  |  |           +--| (75)
+|                  |  |        |  |  |  |           |  |               +**Dunn2008_Echinococcus_granulosus_6210_Tribe1047
+|                  |  |        |  |  |  |           |  |            +--| (100)
+|                  |  |        |  |  |  |           |  |            |  +**Hejnol2009_Echinococcus_granulosus_6210_Tribe1340_0
+|                  |  |        |  |  |  |           |  +------------| (100)
+|                  |  |        |  |  |  |           |               +**Hejnol2009_Taenia_solium_6204_Tribe1340_0
+|                  |  |        |  |  |  |        +--| (78)
+|                  |  |        |  |  |  |        |  +----Simion2017_Aplysia_californica_6500_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        |  |  |  |     +--| (98)
+|                  |  |        |  |  |  |     |  |    +**Dunn2008_Dugesia_japonica_6161_Tribe1047
+|                  |  |        |  |  |  |     |  +----| (100)
+|                  |  |        |  |  |  |     |       +--Hejnol2009_Dugesia_japonica_6161_Tribe1340_0
+|                  |  |        |  |  |  |  +--| (65)
+|                  |  |        |  |  |  |  |  |  +**Dunn2008_Themiste_lageniformis_216211_Tribe1047
+|                  |  |        |  |  |  |  |  +--| (100)
+|                  |  |        |  |  |  |  |     +**Hejnol2009_Themiste_lageniformis_216211_Tribe1340_0
+|                  |  |        |  |  |  +--| (41)
+|                  |  |        |  |  |     +----Hejnol2009_Cristatella_mucedo_67896_Tribe1340_0
+|                  |  |        |  +--| (68)
+|                  |  |        |     |                          +---Borowiec2015_Total1080_Danaus_plexippus_13037_OG173.fasta.aln_gene213
+|                  |  |        |     |                       +--| (96)
+|                  |  |        |     |                       |  |                 +**Borowiec2015_Total1080_Drosophila_melanogaster_7227_OG173.fasta.aln_gene213
+|                  |  |        |     |                       |  |              +**| (87)
+|                  |  |        |     |                       |  |              |  +**Dunn2008_Drosophila_melanogaster_7227_Tribe1047
+|                  |  |        |     |                       |  +--------------| (100)
+|                  |  |        |     |                       |                 +**Hejnol2009_Drosophila_melanogaster_7227_Tribe1340_0
+|                  |  |        |     |                    +--| (99)
+|                  |  |        |     |                    |  |  +--Borowiec2015_Total1080_Apis_mellifera_7460_OG173.fasta.aln_gene213
+|                  |  |        |     |                    |  +--| (100)
+|                  |  |        |     |                    |     +--Borowiec2015_Total1080_Bombus_terrestris_30195_OG173.fasta.aln_gene213
+|                  |  |        |     |                 +--| (99)
+|                  |  |        |     |                 |  |  +**Borowiec2015_Total1080_Tribolium_castaneum_7070_OG173.fasta.aln_gene213
+|                  |  |        |     |                 |  +--| (100)
+|                  |  |        |     |                 |     +**Simion2017_Tribolium_castaneum_7070_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        |     |              +--| (97)
+|                  |  |        |     |              |  |  +--Borowiec2015_Total1080_Acyrthosiphon_pisum_7029_OG173.fasta.aln_gene213
+|                  |  |        |     |              |  +--| (99)
+|                  |  |        |     |              |     +----Borowiec2015_Total1080_Rhodnius_prolixus_13249_OG173.fasta.aln_gene213
+|                  |  |        |     |           +**| (30)
+|                  |  |        |     |           |  |                           +--Simion2017_Acanthoeca_sp_81532_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        |     |           |  |                       +---| (97)
+|                  |  |        |     |           |  |                       |   +--Simion2017_Acanthoeca_spectabilis_81533_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        |     |           |  |                    +--| (83)
+|                  |  |        |     |           |  |                    |  +--Simion2017_Stephanoeca_diplocostata_81535_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        |     |           |  |                 +--| (94)
+|                  |  |        |     |           |  |                 |  +------Simion2017_Diaphanoeca_grandis_28014_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        |     |           |  +-----------------| (100)
+|                  |  |        |     |           |                    +------Simion2017_Didymoeca_costata_10_459534_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        |     |        +--| (61)
+|                  |  |        |     |        |  |          +**Dunn2008_Carcinus_maenas_6759_Tribe1047
+|                  |  |        |     |        |  |  +-------| (100)
+|                  |  |        |     |        |  |  |       +**Hejnol2009_Carcinus_maenas_6759_Tribe1340_0
+|                  |  |        |     |        |  +--| (75)
+|                  |  |        |     |        |     +--Simion2017_Pleraplysilla_spinifera_119433_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        |     |     +--| (65)
+|                  |  |        |     |     |  |            +**Borowiec2015_Total1080_Daphnia_magna_35525_OG173.fasta.aln_gene213
+|                  |  |        |     |     |  |         +**| (83)
+|                  |  |        |     |     |  |         |  +**Hejnol2009_Daphnia_pulex_6669_Tribe1340_0
+|                  |  |        |     |     |  |      +--| (95)
+|                  |  |        |     |     |  |      |  +**Simion2017_Daphnia_pulex_6669_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        |     |     |  |  +---| (100)
+|                  |  |        |     |     |  |  |   +--Dunn2008_Daphnia_magna_35525_Tribe1047
+|                  |  |        |     |     |  +--| (94)
+|                  |  |        |     |     |     +--------------Hejnol2009_Onychiurus_arcticus_1071257_Tribe1340_0
+|                  |  |        |     |  +--| (61)
+|                  |  |        |     |  |  |      +------------Borowiec2015_Total1080_Brugia_malayi_6279_OG173.fasta.aln_gene213
+|                  |  |        |     |  |  |   +--| (68)
+|                  |  |        |     |  |  |   |  |         +**Dunn2008_Trichinella_spiralis_6334_Tribe1047
+|                  |  |        |     |  |  |   |  +---------| (100)
+|                  |  |        |     |  |  |   |            +**Hejnol2009_Trichinella_spiralis_6334_Tribe1340_0
+|                  |  |        |     |  |  +---| (86)
+|                  |  |        |     |  |      |  +**Dunn2008_Xiphinema_index_46003_Tribe1047
+|                  |  |        |     |  |      +--| (99)
+|                  |  |        |     |  |         +**Hejnol2009_Xiphinema_index_46003_Tribe1340_0
+|                  |  |        |     +--| (65)
+|                  |  |        |        |              +**Borowiec2015_Total1080_Ixodes_scapularis_6945_OG173.fasta.aln_gene213
+|                  |  |        |        |           +--| (100)
+|                  |  |        |        |           |  |  +--Dunn2008_Boophilus_microplus_6941_Tribe1047
+|                  |  |        |        |           |  +--| (100)
+|                  |  |        |        |           |     +--Hejnol2009_Boophilus_microplus_6941_Tribe1340_0
+|                  |  |        |        |        +--| (100)
+|                  |  |        |        |        |  +**Simion2017_Ixodes_scapularis_6945_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        |        |     +--| (77)
+|                  |  |        |        |     |  |   +**Dunn2008_Euperipatoides_kanangrensis_488523_Tribe1047
+|                  |  |        |        |     |  +---| (100)
+|                  |  |        |        |     |      +**Hejnol2009_Euperipatoides_kanangrensis_488523_Tribe1340_0
+|                  |  |        |        |  +--| (73)
+|                  |  |        |        |  |  +-----Borowiec2015_Total1080_Strigamia_maritima_126957_OG173.fasta.aln_gene213
+|                  |  |        |        +--| (86)
+|                  |  |        |           |    +**Dunn2008_Acanthoscurria_gomesiana_115339_Tribe1047
+|                  |  |        |           +----| (100)
+|                  |  |        |                +--Hejnol2009_Acanthoscurria_gomesiana_115339_Tribe1340_0
+|                  |  |     +--| (48)
+|                  |  |     |  |                 +--Borowiec2015_Total1080_Ciona_savignyi_51511_OG173.fasta.aln_gene213
+|                  |  |     |  |              +--| (99)
+|                  |  |     |  |              |  |  +**Dunn2008_Ciona_intestinalis_7719_Tribe1047
+|                  |  |     |  |              |  +--| (100)
+|                  |  |     |  |              |     +**Hejnol2009_Ciona_intestinalis_7719_Tribe1340_0
+|                  |  |     |  |           +--| (100)
+|                  |  |     |  |           |  +--Hejnol2009_Diplosoma_listerianum_168635_Tribe1340_0
+|                  |  |     |  |        +--| (69)
+|                  |  |     |  |        |  |                 +**Borowiec2015_Total1080_Homo_sapiens_9606_OG173.fasta.aln_gene213
+|                  |  |     |  |        |  |              +--| (100)
+|                  |  |     |  |        |  |              |  |  +**Dunn2008_Homo_sapiens_9606_Tribe1047
+|                  |  |     |  |        |  |              |  +**| (97)
+|                  |  |     |  |        |  |              |     +**Hejnol2009_Homo_sapiens_9606_Tribe1340_0
+|                  |  |     |  |        |  |           +--| (100)
+|                  |  |     |  |        |  |           |  +**Simion2017_Homo_sapiens_9606_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |  |        |  |        +--| (99)
+|                  |  |     |  |        |  |        |  +--Borowiec2015_Total1080_Anolis_carolinensis_28377_OG173.fasta.aln_gene213
+|                  |  |     |  |        |  |     +--| (99)
+|                  |  |     |  |        |  |     |  +--Borowiec2015_Total1080_Xenopus_tropicalis_8364_OG173.fasta.aln_gene213
+|                  |  |     |  |        |  |  +--| (98)
+|                  |  |     |  |        |  |  |  +--Borowiec2015_Total1080_Latimeria_chalumnae_7897_OG173.fasta.aln_gene213
+|                  |  |     |  |        |  +--| (100)
+|                  |  |     |  |        |     |  +--Borowiec2015_Total1080_Fugu_31032_OG173.fasta.aln_gene213
+|                  |  |     |  |        |     +--| (100)
+|                  |  |     |  |        |        +--Borowiec2015_Total1080_Gasterosteus_aculeatus_69293_OG173.fasta.aln_gene213
+|                  |  |     |  |     +--| (56)
+|                  |  |     |  |     |  +---Borowiec2015_Total1080_Saccoglossus_kowalevskii_10224_OG173.fasta.aln_gene213
+|                  |  |     |  |  +--| (51)
+|                  |  |     |  |  |  |               +**Borowiec2015_Total1080_Strongylocentrotus_purpuratus_7668_OG173.fasta.aln_gene213
+|                  |  |     |  |  |  |            +**| (70)
+|                  |  |     |  |  |  |            |  |  +**Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe1047
+|                  |  |     |  |  |  |            |  +**| (82)
+|                  |  |     |  |  |  |            |     +**Hejnol2009_Strongylocentrotus_purpuratus_7668_Tribe1340_0
+|                  |  |     |  |  |  |        +---| (99)
+|                  |  |     |  |  |  |        |   +**Simion2017_Strongylocentrotus_purpuratus_7668_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |  |  |  |     +--| (89)
+|                  |  |     |  |  |  |     |  +---------Hejnol2009_Halocynthia_roretzi_7729_Tribe1340_0
+|                  |  |     |  |  |  |  +--| (67)
+|                  |  |     |  |  |  |  |  |           +**Simion2017_Grantia_compressa_196260_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |  |  |  |  |  |        +--| (100)
+|                  |  |     |  |  |  |  |  |        |  +--Simion2017_Sycon_ciliatum_27933_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |  |  |  |  |  |     +--| (72)
+|                  |  |     |  |  |  |  |  |     |  +--Simion2017_Sycon_coactum_1009717_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |  |  |  |  |  |  +--| (99)
+|                  |  |     |  |  |  |  |  |  |  +--Simion2017_Leuconia_nivea_283886_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |  |  |  |  |  +--| (99)
+|                  |  |     |  |  |  |  |     +--Simion2017_Leucosolenia_complicata_433461_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |  |  |  +--| (75)
+|                  |  |     |  |  |     |                       +**Dunn2008_Capsaspora_owczarzaki_192875_Tribe1047
+|                  |  |     |  |  |     |                    +**| (71)
+|                  |  |     |  |  |     |                    |  +**Hejnol2009_Capsaspora_owczarzaki_192875_Tribe1340_0
+|                  |  |     |  |  |     +--------------------| (100)
+|                  |  |     |  |  |                          +**Simion2017_Capsaspora_owczarzaki_192875_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |  +--| (39)
+|                  |  |     |     |                   +**Borowiec2015_Total1080_Trichoplax_adhaerens_10228_OG173.fasta.aln_gene213
+|                  |  |     |     |                +**| (75)
+|                  |  |     |     |                |  +**Hejnol2009_Trichoplax_adhaerens_10228_Tribe1340_0
+|                  |  |     |     |           +----| (100)
+|                  |  |     |     |           |    +--Simion2017_Trichoplax_adhaerens_10228_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        +--| (82)
+|                  |  |     |     |        |  |                       +**Borowiec2015_Total1080_Nematostella_vectensis_45351_OG173.fasta.aln_gene213
+|                  |  |     |     |        |  |                    +**| (98)
+|                  |  |     |     |        |  |                    |  +**Dunn2008_Nematostella_vectensis_45351_Tribe1047
+|                  |  |     |     |        |  |                 +**| (86)
+|                  |  |     |     |        |  |                 |  +**Hejnol2009_Nematostella_vectensis_45351_Tribe1340_0
+|                  |  |     |     |        |  |              +--| (100)
+|                  |  |     |     |        |  |              |  +**Simion2017_Nematostella_vectensis_45351_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |  |           +--| (99)
+|                  |  |     |     |        |  |           |  +--Simion2017_Edwardsiella_lineata_132407_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |  |        +--| (100)
+|                  |  |     |     |        |  |        |  |  +--Simion2017_Aiptasia_pallida_1720309_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |  |        |  +--| (100)
+|                  |  |     |     |        |  |        |     +--Simion2017_Bolocera_tuediae_1163374_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |  |     +--| (94)
+|                  |  |     |     |        |  |     |  |  +--Simion2017_Antipathes_caribbeana_934276_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |  |     |  +--| (100)
+|                  |  |     |     |        |  |     |     +--Simion2017_Plumapathes_pennacea_1350358_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |  |  +--| (99)
+|                  |  |     |     |        |  |  |  |     +--Borowiec2015_Total1080_Acropora_digitifera_70779_OG173.fasta.aln_gene213
+|                  |  |     |     |        |  |  |  |  +--| (99)
+|                  |  |     |     |        |  |  |  |  |  +--Simion2017_Orbicella_faveolata_48498_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |  |  |  +--| (99)
+|                  |  |     |     |        |  |  |     +--Simion2017_Porites_australiensis_51061_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |  +--| (84)
+|                  |  |     |     |        |     |                          +**Borowiec2015_Total1080_Hydra_magnipapillata_6087_OG173.fasta.aln_gene213
+|                  |  |     |     |        |     |                       +**| (90)
+|                  |  |     |     |        |     |                       |  +**Dunn2008_Hydra_vulgaris_01_6087_Tribe1047
+|                  |  |     |     |        |     |                    +--| (100)
+|                  |  |     |     |        |     |                    |  +**Hejnol2009_Hydra_vulgaris_01_6087_Tribe1340_0
+|                  |  |     |     |        |     |                 +--| (100)
+|                  |  |     |     |        |     |                 |  +**Simion2017_Hydra_vulgaris_01_6087_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |     |              +--| (99)
+|                  |  |     |     |        |     |              |  |  +--Simion2017_Craspedacusta_sowerbii_128124_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |     |              |  +--| (99)
+|                  |  |     |     |        |     |              |     +--Simion2017_Liriope_tetraphylla_37524_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |     |           +--| (98)
+|                  |  |     |     |        |     |           |  +--Simion2017_Hydractinia_polyclina_589945_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |     |        +--| (59)
+|                  |  |     |     |        |     |        |  +--Simion2017_Nanomia_bijuga_168759_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |     |     +--| (95)
+|                  |  |     |     |        |     |     |  +--Simion2017_Clytia_hemisphaerica_252671_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |     |  +--| (96)
+|                  |  |     |     |        |     |  |  |  +---Simion2017_Gorgonia_ventalina_204384_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |     |  |  +--| (100)
+|                  |  |     |     |        |     |  |     +--Simion2017_Pennatula_rubra_1820127_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |     +--| (86)
+|                  |  |     |     |        |        |     +--Simion2017_Alatina_alata_1193083_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |        |  +--| (99)
+|                  |  |     |     |        |        |  |  |     +--Simion2017_Aurelia_aurita_6145_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |        |  |  |  +--| (100)
+|                  |  |     |     |        |        |  |  |  |  +--Simion2017_Stomolophus_meleagris_168796_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |        |  |  +--| (100)
+|                  |  |     |     |        |        |  |     +--Simion2017_Pelagia_noctiluca_400838_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |        +--| (93)
+|                  |  |     |     |        |           |  +--Simion2017_Atolla_vanhoeffeni_86043_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |           +--| (96)
+|                  |  |     |     |        |              +--Simion2017_Periphylla_periphylla_880221_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |     +--| (88)
+|                  |  |     |     |     |  +--Simion2017_Lucernariopsis_campanulata_1843190_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |  +--| (59)
+|                  |  |     |     |  |  +------Simion2017_Salpingoeca_dolichothecata_16_1742605_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     +--| (50)
+|                  |  |     |        |     +--Simion2017_Corticium_candelabrum_121492_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |        |  +--| (100)
+|                  |  |     |        |  |  +**Simion2017_Plakina_jani_450361_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |        +--| (89)
+|                  |  |     |           +--Simion2017_Oscarella_species_121493_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |  +--| (48)
+|                  |  |  |  |  +--Simion2017_Kirkpatrickia_variolosa_1631157_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |  |  +--| (100)
+|                  |  |  |     |  +--Simion2017_Latrunculia_apicalis_1325597_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |  |     +--| (80)
+|                  |  |  |        +--Simion2017_Mycale_phyllophila_1325607_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  +--| (79)
+|                  |     |  +-----------------Borowiec2015_Total1080_Oikopleura_dioica_34765_OG173.fasta.aln_gene213
+|                  |     +--| (46)
+|                  |        |              +--Simion2017_Aphrocallistes_vastus_83887_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |        |           +--| (100)
+|                  |        |           |  +--Simion2017_Euplectella_aspergillum_936045_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |        |        +--| (100)
+|                  |        |        |  |  +--Simion2017_Rossella_fibulata_1076269_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |        |        |  +--| (100)
+|                  |        |        |     +--Simion2017_Sympagella_nux_76350_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |        +--------| (100)
+|                  |                 +--Simion2017_Hyalonema_populiferum_1631155_V2META13950-42-Calc_Hmm10-BMGE05
+|               +--| (79)
+|               |  +--Simion2017_Salpingoeca_macrocollata_06_1924736_V2META13950-42-Calc_Hmm10-BMGE05
+|            +--| (91)
+|            |  +-----Simion2017_Salpingoeca_punica_03_1924735_V2META13950-42-Calc_Hmm10-BMGE05
+|  +---------| (100)
+|  |         +----Simion2017_Codosiga_hollandica_17_1742608_V2META13950-42-Calc_Hmm10-BMGE05
++--| (100)
+|  +---Simion2017_Microstomoeca_roanoka_1923864_V2META13950-42-Calc_Hmm10-BMGE05
+|
++**Simion2017_Salpingoeca_rosetta_946362_V2META13950-42-Calc_Hmm10-BMGE05
+
+Tree in newick format:
+
+(Borowiec2015_Total1080_Salpingoeca_rosetta_946362_OG173.fasta.aln_gene213:0.0000028994,(((((((((Borowiec2015_Total1080_Amphimedon_queenslandica_400682_OG173.fasta.aln_gene213:0.0093966761,Simion2017_Amphimedon_queenslandica_400682_V2META13950-42-Calc_Hmm10-BMGE05:0.0000020108)100:0.364279,Simion2017_Chondrilla_nucula_220712_V2META13950-42-Calc_Hmm10-BMGE05:0.6339749659)81:0.104667,Simion2017_Spongilla_lacustris_6055_V2META13950-42-Calc_Hmm10-BMGE05:0.2843053081)81:0.084370,Hejnol2009_Symsagittifera_roscoffensis_84072_Tribe1340_0:1.1095053785)85:0.054000,(((((((((((Borowiec2015_Total1080_Mnemiopsis_leidyi_27923_OG173.fasta.aln_gene213:0.0000026576,Simion2017_Mnemiopsis_leidyi_27923_V2META13950-42-Calc_Hmm10-BMGE05:0.0000020108)100:0.061335,Simion2017_Bolinopsis_infundibulum_140455_V2META13950-42-Calc_Hmm10-BMGE05:0.0304737368)100:0.037089,Simion2017_Cestum_veneris_12997_V2META13950-42-Calc_Hmm10-BMGE05:0.0144199391)100:0.033986,((Simion2017_Beroe_abyssicola_320166_V2META13950-42-Calc_Hmm10-BMGE05:0.1480595300,Simion2017_Beroe_sp_10199_V2META13950-42-Calc_Hmm10-BMGE05:0.0442119295)99:0.043910,Simion2017_Dryodora_glandiformis_1566677_V2META13950-42-Calc_Hmm10-BMGE05:0.1149000165)97:0.024906)98:0.084509,Simion2017_Lampea_pancerina_1532213_V2META13950-42-Calc_Hmm10-BMGE05:0.0548931463)94:0.062371,(Simion2017_Coeloplana_species_140473_V2META13950-42-Calc_Hmm10-BMGE05:0.0398776570,Simion2017_Vallicula_multiformis_140489_V2META13950-42-Calc_Hmm10-BMGE05:0.0780455167)100:0.240791)79:0.090763,Simion2017_Euplokamis_dunlapae_1403701_V2META13950-42-Calc_Hmm10-BMGE05:0.2336142661)100:1.001890,(((((((Borowiec2015_Total1080_Branchiostoma_floridae_7739_OG173.fasta.aln_gene213:0.0000026392,Dunn2008_Branchiostoma_floridae_7739_Tribe1047:0.0000022100)57:0.000002,Hejnol2009_Branchiostoma_floridae_7739_Tribe1340_0:0.0000025243)100:0.401798,(Dunn2008_Terebratalia_transversa_34513_Tribe1047:0.0000021138,Hejnol2009_Terebratalia_transversa_34513_Tribe1340_0:0.0000021154)100:0.274303)92:0.048151,((((Borowiec2015_Total1080_Capitella_teleta_283909_OG173.fasta.aln_gene213:0.0000020268,Dunn2008_Capitella_teleta_283909_Tribe1047:0.0000020108)77:0.000002,Hejnol2009_Capitella_teleta_283909_Tribe1340_0:0.0000020108)75:0.000003,Simion2017_Capitella_teleta_283909_V2META13950-42-Calc_Hmm10-BMGE05:0.0000020108)100:0.509194,(Dunn2008_Urechis_caupo_6431_Tribe1047:0.0000022203,Hejnol2009_Urechis_caupo_6431_Tribe1340_0:0.0000022806)100:0.152025)96:0.182436)84:0.070162,(((Dunn2008_Lumbricus_rubellus_35632_Tribe1047:0.0000025333,Hejnol2009_Lumbricus_rubellus_35632_Tribe1340_0:0.0000027836)100:0.784280,((Dunn2008_Richtersius_coronifer_245088_Tribe1047:0.0000024106,Hejnol2009_Richtersius_coronifer_245088_Tribe1340_0:0.0000024789)100:1.372100,(Hejnol2009_Helobdella_robusta_6412_Tribe1340_0:0.0000021030,Simion2017_Helobdella_robusta_6412_V2META13950-42-Calc_Hmm10-BMGE05:0.0000026577)100:0.401605)96:0.237362)87:0.203283,(Hejnol2009_Pedicellina_cernua_43123_Tribe1340_0:0.6626740234,Hejnol2009_Symbion_pandora_69817_Tribe1340_0:0.7480221515)32:0.045920)69:0.138612)42:0.038895,(((((Borowiec2015_Total1080_Lottia_gigantea_225164_OG173.fasta.aln_gene213:0.3489058399,((Dunn2008_Echinococcus_granulosus_6210_Tribe1047:0.0000020500,Hejnol2009_Echinococcus_granulosus_6210_Tribe1340_0:0.0000025411)100:0.171403,Hejnol2009_Taenia_solium_6204_Tribe1340_0:0.0000022213)100:1.373220)75:0.058847,Simion2017_Aplysia_californica_6500_V2META13950-42-Calc_Hmm10-BMGE05:0.5568301184)78:0.092223,(Dunn2008_Dugesia_japonica_6161_Tribe1047:0.0000024233,Hejnol2009_Dugesia_japonica_6161_Tribe1340_0:0.1703816016)100:0.562755)98:0.117140,(Dunn2008_Themiste_lageniformis_216211_Tribe1047:0.0000025937,Hejnol2009_Themiste_lageniformis_216211_Tribe1340_0:0.0000020272)100:0.383765)65:0.093201,Hejnol2009_Cristatella_mucedo_67896_Tribe1340_0:0.5898353516)41:0.039766)72:0.070315,(((((((((Borowiec2015_Total1080_Danaus_plexippus_13037_OG173.fasta.aln_gene213:0.4266023483,((Borowiec2015_Total1080_Drosophila_melanogaster_7227_OG173.fasta.aln_gene213:0.0000021577,Dunn2008_Drosophila_melanogaster_7227_Tribe1047:0.0000020108)87:0.000002,Hejnol2009_Drosophila_melanogaster_7227_Tribe1340_0:0.0000024620)100:1.547420)96:0.129915,(Borowiec2015_Total1080_Apis_mellifera_7460_OG173.fasta.aln_gene213:0.0154686107,Borowiec2015_Total1080_Bombus_terrestris_30195_OG173.fasta.aln_gene213:0.1072284490)100:0.348719)99:0.067132,(Borowiec2015_Total1080_Tribolium_castaneum_7070_OG173.fasta.aln_gene213:0.0000023684,Simion2017_Tribolium_castaneum_7070_V2META13950-42-Calc_Hmm10-BMGE05:0.0000020108)100:0.367678)99:0.231306,(Borowiec2015_Total1080_Acyrthosiphon_pisum_7029_OG173.fasta.aln_gene213:0.2358456725,Borowiec2015_Total1080_Rhodnius_prolixus_13249_OG173.fasta.aln_gene213:0.5989354249)99:0.115611)97:0.104811,((((Simion2017_Acanthoeca_sp_81532_V2META13950-42-Calc_Hmm10-BMGE05:0.3252283862,Simion2017_Acanthoeca_spectabilis_81533_V2META13950-42-Calc_Hmm10-BMGE05:0.2272197469)97:0.466128,Simion2017_Stephanoeca_diplocostata_81535_V2META13950-42-Calc_Hmm10-BMGE05:0.1505984491)83:0.263563,Simion2017_Diaphanoeca_grandis_28014_V2META13950-42-Calc_Hmm10-BMGE05:0.7954693047)94:0.368595,Simion2017_Didymoeca_costata_10_459534_V2META13950-42-Calc_Hmm10-BMGE05:0.7497101168)100:1.896280)30:0.000003,((Dunn2008_Carcinus_maenas_6759_Tribe1047:0.0000029561,Hejnol2009_Carcinus_maenas_6759_Tribe1340_0:0.0000020108)100:0.900213,Simion2017_Pleraplysilla_spinifera_119433_V2META13950-42-Calc_Hmm10-BMGE05:0.1868234425)75:0.187497)61:0.062689,((((Borowiec2015_Total1080_Daphnia_magna_35525_OG173.fasta.aln_gene213:0.0000028215,Hejnol2009_Daphnia_pulex_6669_Tribe1340_0:0.0000020108)83:0.000002,Simion2017_Daphnia_pulex_6669_V2META13950-42-Calc_Hmm10-BMGE05:0.0000020108)95:0.018984,Dunn2008_Daphnia_magna_35525_Tribe1047:0.0315349279)100:0.496663,Hejnol2009_Onychiurus_arcticus_1071257_Tribe1340_0:1.5860205491)94:0.084036)65:0.046418,((Borowiec2015_Total1080_Brugia_malayi_6279_OG173.fasta.aln_gene213:1.3979578510,(Dunn2008_Trichinella_spiralis_6334_Tribe1047:0.0000022409,Hejnol2009_Trichinella_spiralis_6334_Tribe1340_0:0.0000021762)100:1.028400)68:0.024747,(Dunn2008_Xiphinema_index_46003_Tribe1047:0.0000023325,Hejnol2009_Xiphinema_index_46003_Tribe1340_0:0.0000020108)99:0.247792)86:0.434034)61:0.017637,(((((Borowiec2015_Total1080_Ixodes_scapularis_6945_OG173.fasta.aln_gene213:0.0000021408,(Dunn2008_Boophilus_microplus_6941_Tribe1047:0.0143156928,Hejnol2009_Boophilus_microplus_6941_Tribe1340_0:0.0286333928)100:0.232438)100:0.010062,Simion2017_Ixodes_scapularis_6945_V2META13950-42-Calc_Hmm10-BMGE05:0.0000027065)100:0.351143,(Dunn2008_Euperipatoides_kanangrensis_488523_Tribe1047:0.0000020253,Hejnol2009_Euperipatoides_kanangrensis_488523_Tribe1340_0:0.0000028689)100:0.488183)77:0.069821,Borowiec2015_Total1080_Strigamia_maritima_126957_OG173.fasta.aln_gene213:0.6311076110)73:0.036688,(Dunn2008_Acanthoscurria_gomesiana_115339_Tribe1047:0.0000028298,Hejnol2009_Acanthoscurria_gomesiana_115339_Tribe1340_0:0.0059765513)100:0.561889)86:0.029566)65:0.203363)68:0.143364)19:0.000003,((((((Borowiec2015_Total1080_Ciona_savignyi_51511_OG173.fasta.aln_gene213:0.1541027967,(Dunn2008_Ciona_intestinalis_7719_Tribe1047:0.0000028970,Hejnol2009_Ciona_intestinalis_7719_Tribe1340_0:0.0000020108)100:0.115792)99:0.130387,Hejnol2009_Diplosoma_listerianum_168635_Tribe1340_0:0.1678741748)100:0.331719,((((((Borowiec2015_Total1080_Homo_sapiens_9606_OG173.fasta.aln_gene213:0.0000020108,(Dunn2008_Homo_sapiens_9606_Tribe1047:0.0000020108,Hejnol2009_Homo_sapiens_9606_Tribe1340_0:0.0000020108)97:0.000002)100:0.009614,Simion2017_Homo_sapiens_9606_V2META13950-42-Calc_Hmm10-BMGE05:0.0000021525)100:0.169479,Borowiec2015_Total1080_Anolis_carolinensis_28377_OG173.fasta.aln_gene213:0.2368881204)99:0.054166,Borowiec2015_Total1080_Xenopus_tropicalis_8364_OG173.fasta.aln_gene213:0.2025706489)99:0.087562,Borowiec2015_Total1080_Latimeria_chalumnae_7897_OG173.fasta.aln_gene213:0.1122759203)98:0.038492,(Borowiec2015_Total1080_Fugu_31032_OG173.fasta.aln_gene213:0.1384863507,Borowiec2015_Total1080_Gasterosteus_aculeatus_69293_OG173.fasta.aln_gene213:0.0564030877)100:0.038470)100:0.382392)69:0.107283,Borowiec2015_Total1080_Saccoglossus_kowalevskii_10224_OG173.fasta.aln_gene213:0.4102479921)56:0.022342,(((((Borowiec2015_Total1080_Strongylocentrotus_purpuratus_7668_OG173.fasta.aln_gene213:0.0000022930,(Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe1047:0.0000020108,Hejnol2009_Strongylocentrotus_purpuratus_7668_Tribe1340_0:0.0000020108)82:0.000002)70:0.000002,Simion2017_Strongylocentrotus_purpuratus_7668_V2META13950-42-Calc_Hmm10-BMGE05:0.0000022167)99:0.482386,Hejnol2009_Halocynthia_roretzi_7729_Tribe1340_0:1.0473378160)89:0.364791,((((Simion2017_Grantia_compressa_196260_V2META13950-42-Calc_Hmm10-BMGE05:0.0000020390,Simion2017_Sycon_ciliatum_27933_V2META13950-42-Calc_Hmm10-BMGE05:0.0234784513)100:0.328079,Simion2017_Sycon_coactum_1009717_V2META13950-42-Calc_Hmm10-BMGE05:0.2247246573)72:0.023846,Simion2017_Leuconia_nivea_283886_V2META13950-42-Calc_Hmm10-BMGE05:0.1810289168)99:0.174028,Simion2017_Leucosolenia_complicata_433461_V2META13950-42-Calc_Hmm10-BMGE05:0.2667710717)99:0.313297)67:0.033595,((Dunn2008_Capsaspora_owczarzaki_192875_Tribe1047:0.0000022893,Hejnol2009_Capsaspora_owczarzaki_192875_Tribe1340_0:0.0000020108)71:0.000003,Simion2017_Capsaspora_owczarzaki_192875_V2META13950-42-Calc_Hmm10-BMGE05:0.0000022332)100:2.176460)75:0.148316)51:0.069851,((((((Borowiec2015_Total1080_Trichoplax_adhaerens_10228_OG173.fasta.aln_gene213:0.0000023319,Hejnol2009_Trichoplax_adhaerens_10228_Tribe1340_0:0.0000020108)75:0.000002,Simion2017_Trichoplax_adhaerens_10228_V2META13950-42-Calc_Hmm10-BMGE05:0.0093051393)100:0.585594,((((((((Borowiec2015_Total1080_Nematostella_vectensis_45351_OG173.fasta.aln_gene213:0.0000025231,Dunn2008_Nematostella_vectensis_45351_Tribe1047:0.0000020108)98:0.000003,Hejnol2009_Nematostella_vectensis_45351_Tribe1340_0:0.0000020108)86:0.000003,Simion2017_Nematostella_vectensis_45351_V2META13950-42-Calc_Hmm10-BMGE05:0.0000020108)100:0.048478,Simion2017_Edwardsiella_lineata_132407_V2META13950-42-Calc_Hmm10-BMGE05:0.0102646568)99:0.067685,(Simion2017_Aiptasia_pallida_1720309_V2META13950-42-Calc_Hmm10-BMGE05:0.1088228942,Simion2017_Bolocera_tuediae_1163374_V2META13950-42-Calc_Hmm10-BMGE05:0.1611260449)100:0.134298)100:0.070301,(Simion2017_Antipathes_caribbeana_934276_V2META13950-42-Calc_Hmm10-BMGE05:0.0941399437,Simion2017_Plumapathes_pennacea_1350358_V2META13950-42-Calc_Hmm10-BMGE05:0.0310512521)100:0.090431)94:0.065505,((Borowiec2015_Total1080_Acropora_digitifera_70779_OG173.fasta.aln_gene213:0.1174601325,Simion2017_Orbicella_faveolata_48498_V2META13950-42-Calc_Hmm10-BMGE05:0.1700852498)99:0.008037,Simion2017_Porites_australiensis_51061_V2META13950-42-Calc_Hmm10-BMGE05:0.0836392723)99:0.085874)99:0.162955,(((((((((Borowiec2015_Total1080_Hydra_magnipapillata_6087_OG173.fasta.aln_gene213:0.0000025231,Dunn2008_Hydra_vulgaris_01_6087_Tribe1047:0.0000020108)90:0.000002,Hejnol2009_Hydra_vulgaris_01_6087_Tribe1340_0:0.0000024192)100:0.008928,Simion2017_Hydra_vulgaris_01_6087_V2META13950-42-Calc_Hmm10-BMGE05:0.0000021900)100:0.329898,(Simion2017_Craspedacusta_sowerbii_128124_V2META13950-42-Calc_Hmm10-BMGE05:0.1554956088,Simion2017_Liriope_tetraphylla_37524_V2META13950-42-Calc_Hmm10-BMGE05:0.2612046145)99:0.083433)99:0.083275,Simion2017_Hydractinia_polyclina_589945_V2META13950-42-Calc_Hmm10-BMGE05:0.1364628402)98:0.047979,Simion2017_Nanomia_bijuga_168759_V2META13950-42-Calc_Hmm10-BMGE05:0.2282604808)59:0.059756,Simion2017_Clytia_hemisphaerica_252671_V2META13950-42-Calc_Hmm10-BMGE05:0.2940507613)95:0.014285,(Simion2017_Gorgonia_ventalina_204384_V2META13950-42-Calc_Hmm10-BMGE05:0.4226863044,Simion2017_Pennatula_rubra_1820127_V2META13950-42-Calc_Hmm10-BMGE05:0.1764031707)100:0.310180)96:0.059597,((Simion2017_Alatina_alata_1193083_V2META13950-42-Calc_Hmm10-BMGE05:0.2564058311,((Simion2017_Aurelia_aurita_6145_V2META13950-42-Calc_Hmm10-BMGE05:0.0678259538,Simion2017_Stomolophus_meleagris_168796_V2META13950-42-Calc_Hmm10-BMGE05:0.1277104363)100:0.072615,Simion2017_Pelagia_noctiluca_400838_V2META13950-42-Calc_Hmm10-BMGE05:0.1385184644)100:0.045069)99:0.045944,(Simion2017_Atolla_vanhoeffeni_86043_V2META13950-42-Calc_Hmm10-BMGE05:0.0377634025,Simion2017_Periphylla_periphylla_880221_V2META13950-42-Calc_Hmm10-BMGE05:0.0245642822)96:0.156226)93:0.078754)86:0.036358)84:0.024894)82:0.033298,Simion2017_Lucernariopsis_campanulata_1843190_V2META13950-42-Calc_Hmm10-BMGE05:0.2380925963)88:0.055125,Simion2017_Salpingoeca_dolichothecata_16_1742605_V2META13950-42-Calc_Hmm10-BMGE05:0.7863679780)59:0.044219,((Simion2017_Corticium_candelabrum_121492_V2META13950-42-Calc_Hmm10-BMGE05:0.0797537124,Simion2017_Plakina_jani_450361_V2META13950-42-Calc_Hmm10-BMGE05:0.0000020298)100:0.377245,Simion2017_Oscarella_species_121493_V2META13950-42-Calc_Hmm10-BMGE05:0.2969190147)89:0.104264)50:0.037009)39:0.028337)48:0.214239,(Simion2017_Kirkpatrickia_variolosa_1631157_V2META13950-42-Calc_Hmm10-BMGE05:0.0500229567,(Simion2017_Latrunculia_apicalis_1325597_V2META13950-42-Calc_Hmm10-BMGE05:0.0885165975,Simion2017_Mycale_phyllophila_1325607_V2META13950-42-Calc_Hmm10-BMGE05:0.2175946511)80:0.047877)100:0.204264)48:0.082595,(Borowiec2015_Total1080_Oikopleura_dioica_34765_OG173.fasta.aln_gene213:1.9023075447,(((Simion2017_Aphrocallistes_vastus_83887_V2META13950-42-Calc_Hmm10-BMGE05:0.2335308572,Simion2017_Euplectella_aspergillum_936045_V2META13950-42-Calc_Hmm10-BMGE05:0.0955230692)100:0.049259,(Simion2017_Rossella_fibulata_1076269_V2META13950-42-Calc_Hmm10-BMGE05:0.0756058169,Simion2017_Sympagella_nux_76350_V2META13950-42-Calc_Hmm10-BMGE05:0.0454012661)100:0.108815)100:0.305724,Simion2017_Hyalonema_populiferum_1631155_V2META13950-42-Calc_Hmm10-BMGE05:0.3948846128)100:0.995010)46:0.101137)79:0.031719)89:0.360910,Simion2017_Salpingoeca_macrocollata_06_1924736_V2META13950-42-Calc_Hmm10-BMGE05:0.3996096078)79:0.084157,Simion2017_Salpingoeca_punica_03_1924735_V2META13950-42-Calc_Hmm10-BMGE05:0.6196242031)91:0.370664,Simion2017_Codosiga_hollandica_17_1742608_V2META13950-42-Calc_Hmm10-BMGE05:0.5652908553)100:1.052350,Simion2017_Microstomoeca_roanoka_1923864_V2META13950-42-Calc_Hmm10-BMGE05:0.4559254836)100:0.113140,Simion2017_Salpingoeca_rosetta_946362_V2META13950-42-Calc_Hmm10-BMGE05:0.0000020108);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -20899.812549
+Robinson-Foulds distance between ML tree and consensus tree: 2
+
+Branches with bootstrap support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--Borowiec2015_Total1080_Salpingoeca_rosetta_946362_OG173.fasta.aln_gene213
+|
+|                                 +--Borowiec2015_Total1080_Amphimedon_queenslandica_400682_OG173.fasta.aln_gene213
+|                              +--| (100)
+|                              |  +--Simion2017_Amphimedon_queenslandica_400682_V2META13950-42-Calc_Hmm10-BMGE05
+|                           +--| (81)
+|                           |  +-----Simion2017_Chondrilla_nucula_220712_V2META13950-42-Calc_Hmm10-BMGE05
+|                        +--| (81)
+|                        |  +--Simion2017_Spongilla_lacustris_6055_V2META13950-42-Calc_Hmm10-BMGE05
+|                     +--| (85)
+|                     |  +---------Hejnol2009_Symsagittifera_roscoffensis_84072_Tribe1340_0
+|                  +--| (89)
+|                  |  |                                      +--Borowiec2015_Total1080_Mnemiopsis_leidyi_27923_OG173.fasta.aln_gene213
+|                  |  |                                   +--| (100)
+|                  |  |                                   |  +--Simion2017_Mnemiopsis_leidyi_27923_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |                                +--| (100)
+|                  |  |                                |  +--Simion2017_Bolinopsis_infundibulum_140455_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |                             +--| (100)
+|                  |  |                             |  +--Simion2017_Cestum_veneris_12997_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |                          +--| (98)
+|                  |  |                          |  |     +--Simion2017_Beroe_abyssicola_320166_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |                          |  |  +--| (99)
+|                  |  |                          |  |  |  +--Simion2017_Beroe_sp_10199_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |                          |  +--| (97)
+|                  |  |                          |     +--Simion2017_Dryodora_glandiformis_1566677_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |                       +--| (94)
+|                  |  |                       |  +--Simion2017_Lampea_pancerina_1532213_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |                    +--| (79)
+|                  |  |                    |  |  +--Simion2017_Coeloplana_species_140473_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |                    |  +--| (100)
+|                  |  |                    |     +--Simion2017_Vallicula_multiformis_140489_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |           +--------| (100)
+|                  |  |           |        +--Simion2017_Euplokamis_dunlapae_1403701_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        +**| (19)
+|                  |  |        |  |                    +--Borowiec2015_Total1080_Branchiostoma_floridae_7739_OG173.fasta.aln_gene213
+|                  |  |        |  |                 +--| (57)
+|                  |  |        |  |                 |  +--Dunn2008_Branchiostoma_floridae_7739_Tribe1047
+|                  |  |        |  |              +--| (100)
+|                  |  |        |  |              |  +--Hejnol2009_Branchiostoma_floridae_7739_Tribe1340_0
+|                  |  |        |  |           +--| (92)
+|                  |  |        |  |           |  |  +--Dunn2008_Terebratalia_transversa_34513_Tribe1047
+|                  |  |        |  |           |  +--| (100)
+|                  |  |        |  |           |     +--Hejnol2009_Terebratalia_transversa_34513_Tribe1340_0
+|                  |  |        |  |        +--| (84)
+|                  |  |        |  |        |  |             +--Borowiec2015_Total1080_Capitella_teleta_283909_OG173.fasta.aln_gene213
+|                  |  |        |  |        |  |          +**| (77)
+|                  |  |        |  |        |  |          |  +--Dunn2008_Capitella_teleta_283909_Tribe1047
+|                  |  |        |  |        |  |       +**| (75)
+|                  |  |        |  |        |  |       |  +--Hejnol2009_Capitella_teleta_283909_Tribe1340_0
+|                  |  |        |  |        |  |  +----| (100)
+|                  |  |        |  |        |  |  |    +--Simion2017_Capitella_teleta_283909_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        |  |        |  +--| (96)
+|                  |  |        |  |        |     |  +--Dunn2008_Urechis_caupo_6431_Tribe1047
+|                  |  |        |  |        |     +--| (100)
+|                  |  |        |  |        |        +--Hejnol2009_Urechis_caupo_6431_Tribe1340_0
+|                  |  |        |  |     +--| (42)
+|                  |  |        |  |     |  |               +--Dunn2008_Lumbricus_rubellus_35632_Tribe1047
+|                  |  |        |  |     |  |        +------| (100)
+|                  |  |        |  |     |  |        |      +--Hejnol2009_Lumbricus_rubellus_35632_Tribe1340_0
+|                  |  |        |  |     |  |     +--| (87)
+|                  |  |        |  |     |  |     |  |               +--Dunn2008_Richtersius_coronifer_245088_Tribe1047
+|                  |  |        |  |     |  |     |  |  +------------| (100)
+|                  |  |        |  |     |  |     |  |  |            +--Hejnol2009_Richtersius_coronifer_245088_Tribe1340_0
+|                  |  |        |  |     |  |     |  +--| (96)
+|                  |  |        |  |     |  |     |     |  +--Hejnol2009_Helobdella_robusta_6412_Tribe1340_0
+|                  |  |        |  |     |  |     |     +--| (100)
+|                  |  |        |  |     |  |     |        +--Simion2017_Helobdella_robusta_6412_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        |  |     |  |  +--| (44)
+|                  |  |        |  |     |  |  |  +-----Hejnol2009_Pedicellina_cernua_43123_Tribe1340_0
+|                  |  |        |  |     |  +--| (69)
+|                  |  |        |  |     |     +------Hejnol2009_Symbion_pandora_69817_Tribe1340_0
+|                  |  |        |  |  +--| (72)
+|                  |  |        |  |  |  |              +--Borowiec2015_Total1080_Lottia_gigantea_225164_OG173.fasta.aln_gene213
+|                  |  |        |  |  |  |           +--| (75)
+|                  |  |        |  |  |  |           |  |               +--Dunn2008_Echinococcus_granulosus_6210_Tribe1047
+|                  |  |        |  |  |  |           |  |            +--| (100)
+|                  |  |        |  |  |  |           |  |            |  +--Hejnol2009_Echinococcus_granulosus_6210_Tribe1340_0
+|                  |  |        |  |  |  |           |  +------------| (100)
+|                  |  |        |  |  |  |           |               +--Hejnol2009_Taenia_solium_6204_Tribe1340_0
+|                  |  |        |  |  |  |        +--| (78)
+|                  |  |        |  |  |  |        |  +----Simion2017_Aplysia_californica_6500_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        |  |  |  |     +--| (98)
+|                  |  |        |  |  |  |     |  |    +--Dunn2008_Dugesia_japonica_6161_Tribe1047
+|                  |  |        |  |  |  |     |  +----| (100)
+|                  |  |        |  |  |  |     |       +--Hejnol2009_Dugesia_japonica_6161_Tribe1340_0
+|                  |  |        |  |  |  |  +--| (65)
+|                  |  |        |  |  |  |  |  |  +--Dunn2008_Themiste_lageniformis_216211_Tribe1047
+|                  |  |        |  |  |  |  |  +--| (100)
+|                  |  |        |  |  |  |  |     +--Hejnol2009_Themiste_lageniformis_216211_Tribe1340_0
+|                  |  |        |  |  |  +--| (41)
+|                  |  |        |  |  |     +----Hejnol2009_Cristatella_mucedo_67896_Tribe1340_0
+|                  |  |        |  +--| (68)
+|                  |  |        |     |                          +---Borowiec2015_Total1080_Danaus_plexippus_13037_OG173.fasta.aln_gene213
+|                  |  |        |     |                       +--| (96)
+|                  |  |        |     |                       |  |                 +--Borowiec2015_Total1080_Drosophila_melanogaster_7227_OG173.fasta.aln_gene213
+|                  |  |        |     |                       |  |              +**| (87)
+|                  |  |        |     |                       |  |              |  +--Dunn2008_Drosophila_melanogaster_7227_Tribe1047
+|                  |  |        |     |                       |  +--------------| (100)
+|                  |  |        |     |                       |                 +--Hejnol2009_Drosophila_melanogaster_7227_Tribe1340_0
+|                  |  |        |     |                    +--| (99)
+|                  |  |        |     |                    |  |  +--Borowiec2015_Total1080_Apis_mellifera_7460_OG173.fasta.aln_gene213
+|                  |  |        |     |                    |  +--| (100)
+|                  |  |        |     |                    |     +--Borowiec2015_Total1080_Bombus_terrestris_30195_OG173.fasta.aln_gene213
+|                  |  |        |     |                 +--| (99)
+|                  |  |        |     |                 |  |  +--Borowiec2015_Total1080_Tribolium_castaneum_7070_OG173.fasta.aln_gene213
+|                  |  |        |     |                 |  +--| (100)
+|                  |  |        |     |                 |     +--Simion2017_Tribolium_castaneum_7070_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        |     |              +--| (97)
+|                  |  |        |     |              |  |  +--Borowiec2015_Total1080_Acyrthosiphon_pisum_7029_OG173.fasta.aln_gene213
+|                  |  |        |     |              |  +--| (99)
+|                  |  |        |     |              |     +----Borowiec2015_Total1080_Rhodnius_prolixus_13249_OG173.fasta.aln_gene213
+|                  |  |        |     |           +**| (30)
+|                  |  |        |     |           |  |                           +--Simion2017_Acanthoeca_sp_81532_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        |     |           |  |                       +---| (97)
+|                  |  |        |     |           |  |                       |   +--Simion2017_Acanthoeca_spectabilis_81533_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        |     |           |  |                    +--| (83)
+|                  |  |        |     |           |  |                    |  +--Simion2017_Stephanoeca_diplocostata_81535_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        |     |           |  |                 +--| (94)
+|                  |  |        |     |           |  |                 |  +------Simion2017_Diaphanoeca_grandis_28014_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        |     |           |  +-----------------| (100)
+|                  |  |        |     |           |                    +------Simion2017_Didymoeca_costata_10_459534_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        |     |        +--| (61)
+|                  |  |        |     |        |  |          +--Dunn2008_Carcinus_maenas_6759_Tribe1047
+|                  |  |        |     |        |  |  +-------| (100)
+|                  |  |        |     |        |  |  |       +--Hejnol2009_Carcinus_maenas_6759_Tribe1340_0
+|                  |  |        |     |        |  +--| (75)
+|                  |  |        |     |        |     +--Simion2017_Pleraplysilla_spinifera_119433_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        |     |     +--| (65)
+|                  |  |        |     |     |  |            +--Borowiec2015_Total1080_Daphnia_magna_35525_OG173.fasta.aln_gene213
+|                  |  |        |     |     |  |         +--| (83)
+|                  |  |        |     |     |  |         |  +--Hejnol2009_Daphnia_pulex_6669_Tribe1340_0
+|                  |  |        |     |     |  |      +--| (95)
+|                  |  |        |     |     |  |      |  +--Simion2017_Daphnia_pulex_6669_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        |     |     |  |  +---| (100)
+|                  |  |        |     |     |  |  |   +--Dunn2008_Daphnia_magna_35525_Tribe1047
+|                  |  |        |     |     |  +--| (94)
+|                  |  |        |     |     |     +--------------Hejnol2009_Onychiurus_arcticus_1071257_Tribe1340_0
+|                  |  |        |     |  +--| (61)
+|                  |  |        |     |  |  |      +------------Borowiec2015_Total1080_Brugia_malayi_6279_OG173.fasta.aln_gene213
+|                  |  |        |     |  |  |   +--| (68)
+|                  |  |        |     |  |  |   |  |         +--Dunn2008_Trichinella_spiralis_6334_Tribe1047
+|                  |  |        |     |  |  |   |  +---------| (100)
+|                  |  |        |     |  |  |   |            +--Hejnol2009_Trichinella_spiralis_6334_Tribe1340_0
+|                  |  |        |     |  |  +---| (86)
+|                  |  |        |     |  |      |  +--Dunn2008_Xiphinema_index_46003_Tribe1047
+|                  |  |        |     |  |      +--| (99)
+|                  |  |        |     |  |         +--Hejnol2009_Xiphinema_index_46003_Tribe1340_0
+|                  |  |        |     +--| (65)
+|                  |  |        |        |              +--Borowiec2015_Total1080_Ixodes_scapularis_6945_OG173.fasta.aln_gene213
+|                  |  |        |        |           +--| (100)
+|                  |  |        |        |           |  |  +--Dunn2008_Boophilus_microplus_6941_Tribe1047
+|                  |  |        |        |           |  +--| (100)
+|                  |  |        |        |           |     +--Hejnol2009_Boophilus_microplus_6941_Tribe1340_0
+|                  |  |        |        |        +--| (100)
+|                  |  |        |        |        |  +--Simion2017_Ixodes_scapularis_6945_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |        |        |     +--| (77)
+|                  |  |        |        |     |  |   +--Dunn2008_Euperipatoides_kanangrensis_488523_Tribe1047
+|                  |  |        |        |     |  +---| (100)
+|                  |  |        |        |     |      +--Hejnol2009_Euperipatoides_kanangrensis_488523_Tribe1340_0
+|                  |  |        |        |  +--| (73)
+|                  |  |        |        |  |  +-----Borowiec2015_Total1080_Strigamia_maritima_126957_OG173.fasta.aln_gene213
+|                  |  |        |        +--| (86)
+|                  |  |        |           |    +--Dunn2008_Acanthoscurria_gomesiana_115339_Tribe1047
+|                  |  |        |           +----| (100)
+|                  |  |        |                +--Hejnol2009_Acanthoscurria_gomesiana_115339_Tribe1340_0
+|                  |  |     +--| (48)
+|                  |  |     |  |                 +--Borowiec2015_Total1080_Ciona_savignyi_51511_OG173.fasta.aln_gene213
+|                  |  |     |  |              +--| (99)
+|                  |  |     |  |              |  |  +--Dunn2008_Ciona_intestinalis_7719_Tribe1047
+|                  |  |     |  |              |  +--| (100)
+|                  |  |     |  |              |     +--Hejnol2009_Ciona_intestinalis_7719_Tribe1340_0
+|                  |  |     |  |           +--| (100)
+|                  |  |     |  |           |  +--Hejnol2009_Diplosoma_listerianum_168635_Tribe1340_0
+|                  |  |     |  |        +--| (69)
+|                  |  |     |  |        |  |                 +--Borowiec2015_Total1080_Homo_sapiens_9606_OG173.fasta.aln_gene213
+|                  |  |     |  |        |  |              +--| (100)
+|                  |  |     |  |        |  |              |  |  +--Dunn2008_Homo_sapiens_9606_Tribe1047
+|                  |  |     |  |        |  |              |  +**| (97)
+|                  |  |     |  |        |  |              |     +--Hejnol2009_Homo_sapiens_9606_Tribe1340_0
+|                  |  |     |  |        |  |           +--| (100)
+|                  |  |     |  |        |  |           |  +--Simion2017_Homo_sapiens_9606_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |  |        |  |        +--| (99)
+|                  |  |     |  |        |  |        |  +--Borowiec2015_Total1080_Anolis_carolinensis_28377_OG173.fasta.aln_gene213
+|                  |  |     |  |        |  |     +--| (99)
+|                  |  |     |  |        |  |     |  +--Borowiec2015_Total1080_Xenopus_tropicalis_8364_OG173.fasta.aln_gene213
+|                  |  |     |  |        |  |  +--| (98)
+|                  |  |     |  |        |  |  |  +--Borowiec2015_Total1080_Latimeria_chalumnae_7897_OG173.fasta.aln_gene213
+|                  |  |     |  |        |  +--| (100)
+|                  |  |     |  |        |     |  +--Borowiec2015_Total1080_Fugu_31032_OG173.fasta.aln_gene213
+|                  |  |     |  |        |     +--| (100)
+|                  |  |     |  |        |        +--Borowiec2015_Total1080_Gasterosteus_aculeatus_69293_OG173.fasta.aln_gene213
+|                  |  |     |  |     +--| (56)
+|                  |  |     |  |     |  +---Borowiec2015_Total1080_Saccoglossus_kowalevskii_10224_OG173.fasta.aln_gene213
+|                  |  |     |  |  +--| (51)
+|                  |  |     |  |  |  |               +--Borowiec2015_Total1080_Strongylocentrotus_purpuratus_7668_OG173.fasta.aln_gene213
+|                  |  |     |  |  |  |            +--| (70)
+|                  |  |     |  |  |  |            |  |  +--Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe1047
+|                  |  |     |  |  |  |            |  +--| (82)
+|                  |  |     |  |  |  |            |     +--Hejnol2009_Strongylocentrotus_purpuratus_7668_Tribe1340_0
+|                  |  |     |  |  |  |        +---| (99)
+|                  |  |     |  |  |  |        |   +--Simion2017_Strongylocentrotus_purpuratus_7668_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |  |  |  |     +--| (89)
+|                  |  |     |  |  |  |     |  +---------Hejnol2009_Halocynthia_roretzi_7729_Tribe1340_0
+|                  |  |     |  |  |  |  +--| (67)
+|                  |  |     |  |  |  |  |  |           +--Simion2017_Grantia_compressa_196260_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |  |  |  |  |  |        +--| (100)
+|                  |  |     |  |  |  |  |  |        |  +--Simion2017_Sycon_ciliatum_27933_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |  |  |  |  |  |     +--| (72)
+|                  |  |     |  |  |  |  |  |     |  +--Simion2017_Sycon_coactum_1009717_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |  |  |  |  |  |  +--| (99)
+|                  |  |     |  |  |  |  |  |  |  +--Simion2017_Leuconia_nivea_283886_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |  |  |  |  |  +--| (99)
+|                  |  |     |  |  |  |  |     +--Simion2017_Leucosolenia_complicata_433461_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |  |  |  +--| (75)
+|                  |  |     |  |  |     |                       +--Dunn2008_Capsaspora_owczarzaki_192875_Tribe1047
+|                  |  |     |  |  |     |                    +--| (71)
+|                  |  |     |  |  |     |                    |  +--Hejnol2009_Capsaspora_owczarzaki_192875_Tribe1340_0
+|                  |  |     |  |  |     +--------------------| (100)
+|                  |  |     |  |  |                          +--Simion2017_Capsaspora_owczarzaki_192875_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |  +--| (39)
+|                  |  |     |     |                   +--Borowiec2015_Total1080_Trichoplax_adhaerens_10228_OG173.fasta.aln_gene213
+|                  |  |     |     |                +**| (75)
+|                  |  |     |     |                |  +--Hejnol2009_Trichoplax_adhaerens_10228_Tribe1340_0
+|                  |  |     |     |           +----| (100)
+|                  |  |     |     |           |    +--Simion2017_Trichoplax_adhaerens_10228_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        +--| (82)
+|                  |  |     |     |        |  |                       +--Borowiec2015_Total1080_Nematostella_vectensis_45351_OG173.fasta.aln_gene213
+|                  |  |     |     |        |  |                    +--| (98)
+|                  |  |     |     |        |  |                    |  +--Dunn2008_Nematostella_vectensis_45351_Tribe1047
+|                  |  |     |     |        |  |                 +**| (86)
+|                  |  |     |     |        |  |                 |  +--Hejnol2009_Nematostella_vectensis_45351_Tribe1340_0
+|                  |  |     |     |        |  |              +--| (100)
+|                  |  |     |     |        |  |              |  +--Simion2017_Nematostella_vectensis_45351_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |  |           +--| (99)
+|                  |  |     |     |        |  |           |  +--Simion2017_Edwardsiella_lineata_132407_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |  |        +--| (100)
+|                  |  |     |     |        |  |        |  |  +--Simion2017_Aiptasia_pallida_1720309_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |  |        |  +--| (100)
+|                  |  |     |     |        |  |        |     +--Simion2017_Bolocera_tuediae_1163374_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |  |     +--| (94)
+|                  |  |     |     |        |  |     |  |  +--Simion2017_Antipathes_caribbeana_934276_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |  |     |  +--| (100)
+|                  |  |     |     |        |  |     |     +--Simion2017_Plumapathes_pennacea_1350358_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |  |  +--| (99)
+|                  |  |     |     |        |  |  |  |     +--Borowiec2015_Total1080_Acropora_digitifera_70779_OG173.fasta.aln_gene213
+|                  |  |     |     |        |  |  |  |  +--| (99)
+|                  |  |     |     |        |  |  |  |  |  +--Simion2017_Orbicella_faveolata_48498_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |  |  |  +--| (99)
+|                  |  |     |     |        |  |  |     +--Simion2017_Porites_australiensis_51061_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |  +--| (84)
+|                  |  |     |     |        |     |                          +--Borowiec2015_Total1080_Hydra_magnipapillata_6087_OG173.fasta.aln_gene213
+|                  |  |     |     |        |     |                       +**| (90)
+|                  |  |     |     |        |     |                       |  +--Dunn2008_Hydra_vulgaris_01_6087_Tribe1047
+|                  |  |     |     |        |     |                    +--| (100)
+|                  |  |     |     |        |     |                    |  +--Hejnol2009_Hydra_vulgaris_01_6087_Tribe1340_0
+|                  |  |     |     |        |     |                 +--| (100)
+|                  |  |     |     |        |     |                 |  +--Simion2017_Hydra_vulgaris_01_6087_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |     |              +--| (99)
+|                  |  |     |     |        |     |              |  |  +--Simion2017_Craspedacusta_sowerbii_128124_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |     |              |  +--| (99)
+|                  |  |     |     |        |     |              |     +--Simion2017_Liriope_tetraphylla_37524_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |     |           +--| (98)
+|                  |  |     |     |        |     |           |  +--Simion2017_Hydractinia_polyclina_589945_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |     |        +--| (59)
+|                  |  |     |     |        |     |        |  +--Simion2017_Nanomia_bijuga_168759_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |     |     +--| (95)
+|                  |  |     |     |        |     |     |  +--Simion2017_Clytia_hemisphaerica_252671_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |     |  +--| (96)
+|                  |  |     |     |        |     |  |  |  +---Simion2017_Gorgonia_ventalina_204384_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |     |  |  +--| (100)
+|                  |  |     |     |        |     |  |     +--Simion2017_Pennatula_rubra_1820127_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |     +--| (86)
+|                  |  |     |     |        |        |     +--Simion2017_Alatina_alata_1193083_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |        |  +--| (99)
+|                  |  |     |     |        |        |  |  |     +--Simion2017_Aurelia_aurita_6145_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |        |  |  |  +--| (100)
+|                  |  |     |     |        |        |  |  |  |  +--Simion2017_Stomolophus_meleagris_168796_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |        |  |  +--| (100)
+|                  |  |     |     |        |        |  |     +--Simion2017_Pelagia_noctiluca_400838_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |        +--| (93)
+|                  |  |     |     |        |           |  +--Simion2017_Atolla_vanhoeffeni_86043_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |        |           +--| (96)
+|                  |  |     |     |        |              +--Simion2017_Periphylla_periphylla_880221_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |     +--| (88)
+|                  |  |     |     |     |  +--Simion2017_Lucernariopsis_campanulata_1843190_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     |  +--| (59)
+|                  |  |     |     |  |  +------Simion2017_Salpingoeca_dolichothecata_16_1742605_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |     +--| (50)
+|                  |  |     |        |     +--Simion2017_Corticium_candelabrum_121492_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |        |  +--| (100)
+|                  |  |     |        |  |  +--Simion2017_Plakina_jani_450361_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |     |        +--| (89)
+|                  |  |     |           +--Simion2017_Oscarella_species_121493_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |  +--| (48)
+|                  |  |  |  |  +--Simion2017_Kirkpatrickia_variolosa_1631157_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |  |  +--| (100)
+|                  |  |  |     |  +--Simion2017_Latrunculia_apicalis_1325597_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  |  |     +--| (80)
+|                  |  |  |        +--Simion2017_Mycale_phyllophila_1325607_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |  +--| (79)
+|                  |     |  +-----------------Borowiec2015_Total1080_Oikopleura_dioica_34765_OG173.fasta.aln_gene213
+|                  |     +--| (46)
+|                  |        |              +--Simion2017_Aphrocallistes_vastus_83887_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |        |           +--| (100)
+|                  |        |           |  +--Simion2017_Euplectella_aspergillum_936045_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |        |        +--| (100)
+|                  |        |        |  |  +--Simion2017_Rossella_fibulata_1076269_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |        |        |  +--| (100)
+|                  |        |        |     +--Simion2017_Sympagella_nux_76350_V2META13950-42-Calc_Hmm10-BMGE05
+|                  |        +--------| (100)
+|                  |                 +--Simion2017_Hyalonema_populiferum_1631155_V2META13950-42-Calc_Hmm10-BMGE05
+|               +--| (79)
+|               |  +--Simion2017_Salpingoeca_macrocollata_06_1924736_V2META13950-42-Calc_Hmm10-BMGE05
+|            +--| (91)
+|            |  +-----Simion2017_Salpingoeca_punica_03_1924735_V2META13950-42-Calc_Hmm10-BMGE05
+|  +---------| (100)
+|  |         +----Simion2017_Codosiga_hollandica_17_1742608_V2META13950-42-Calc_Hmm10-BMGE05
++--| (100)
+|  +---Simion2017_Microstomoeca_roanoka_1923864_V2META13950-42-Calc_Hmm10-BMGE05
+|
++--Simion2017_Salpingoeca_rosetta_946362_V2META13950-42-Calc_Hmm10-BMGE05
+
+
+Consensus tree in newick format: 
+
+(Borowiec2015_Total1080_Salpingoeca_rosetta_946362_OG173.fasta.aln_gene213:0.0000027373,(((((((((Borowiec2015_Total1080_Amphimedon_queenslandica_400682_OG173.fasta.aln_gene213:0.0093981162,Simion2017_Amphimedon_queenslandica_400682_V2META13950-42-Calc_Hmm10-BMGE05:0.0000020108)100:0.3644510000,Simion2017_Chondrilla_nucula_220712_V2META13950-42-Calc_Hmm10-BMGE05:0.6345478488)81:0.1047560000,Simion2017_Spongilla_lacustris_6055_V2META13950-42-Calc_Hmm10-BMGE05:0.2843971947)81:0.0844940000,Hejnol2009_Symsagittifera_roscoffensis_84072_Tribe1340_0:1.1098190991)85:0.0540180000,(((((((((((Borowiec2015_Total1080_Mnemiopsis_leidyi_27923_OG173.fasta.aln_gene213:0.0000028585,Simion2017_Mnemiopsis_leidyi_27923_V2META13950-42-Calc_Hmm10-BMGE05:0.0000020108)100:0.0613500000,Simion2017_Bolinopsis_infundibulum_140455_V2META13950-42-Calc_Hmm10-BMGE05:0.0304873546)100:0.0371010000,Simion2017_Cestum_veneris_12997_V2META13950-42-Calc_Hmm10-BMGE05:0.0144218599)100:0.0339970000,((Simion2017_Beroe_abyssicola_320166_V2META13950-42-Calc_Hmm10-BMGE05:0.1481252916,Simion2017_Beroe_sp_10199_V2META13950-42-Calc_Hmm10-BMGE05:0.0442255440)99:0.0439290000,Simion2017_Dryodora_glandiformis_1566677_V2META13950-42-Calc_Hmm10-BMGE05:0.1149486837)97:0.0249120000)98:0.0845200000,Simion2017_Lampea_pancerina_1532213_V2META13950-42-Calc_Hmm10-BMGE05:0.0549341595)94:0.0624110000,(Simion2017_Coeloplana_species_140473_V2META13950-42-Calc_Hmm10-BMGE05:0.0398948028,Simion2017_Vallicula_multiformis_140489_V2META13950-42-Calc_Hmm10-BMGE05:0.0780827895)100:0.2408770000)79:0.0907800000,Simion2017_Euplokamis_dunlapae_1403701_V2META13950-42-Calc_Hmm10-BMGE05:0.2337054872)100:1.0023900000,(((((((Borowiec2015_Total1080_Branchiostoma_floridae_7739_OG173.fasta.aln_gene213:0.0000027929,Dunn2008_Branchiostoma_floridae_7739_Tribe1047:0.0000022749)57:0.0000030000,Hejnol2009_Branchiostoma_floridae_7739_Tribe1340_0:0.0000020108)100:0.4021880000,(Dunn2008_Terebratalia_transversa_34513_Tribe1047:0.0000025231,Hejnol2009_Terebratalia_transversa_34513_Tribe1340_0:0.0000020108)100:0.2742980000)92:0.0483830000,((((Borowiec2015_Total1080_Capitella_teleta_283909_OG173.fasta.aln_gene213:0.0000020268,Dunn2008_Capitella_teleta_283909_Tribe1047:0.0000020108)77:0.0000020000,Hejnol2009_Capitella_teleta_283909_Tribe1340_0:0.0000020108)75:0.0000020000,Simion2017_Capitella_teleta_283909_V2META13950-42-Calc_Hmm10-BMGE05:0.0000020108)100:0.5093070000,(Dunn2008_Urechis_caupo_6431_Tribe1047:0.0000025231,Hejnol2009_Urechis_caupo_6431_Tribe1340_0:0.0000020108)100:0.1522950000)96:0.1825430000)84:0.0709200000,((((Dunn2008_Lumbricus_rubellus_35632_Tribe1047:0.0000027929,Hejnol2009_Lumbricus_rubellus_35632_Tribe1340_0:0.0000020108)100:0.7833590000,((Dunn2008_Richtersius_coronifer_245088_Tribe1047:0.0000020268,Hejnol2009_Richtersius_coronifer_245088_Tribe1340_0:0.0000020108)100:1.3700400000,(Hejnol2009_Helobdella_robusta_6412_Tribe1340_0:0.0000025280,Simion2017_Helobdella_robusta_6412_V2META13950-42-Calc_Hmm10-BMGE05:0.0000020108)100:0.4036340000)96:0.2334140000)87:0.1992010000,Hejnol2009_Pedicellina_cernua_43123_Tribe1340_0:0.6876929470)44:0.0055840000,Hejnol2009_Symbion_pandora_69817_Tribe1340_0:0.7772469461)69:0.1486940000)42:0.0382290000,(((((Borowiec2015_Total1080_Lottia_gigantea_225164_OG173.fasta.aln_gene213:0.3491146400,((Dunn2008_Echinococcus_granulosus_6210_Tribe1047:0.0000022893,Hejnol2009_Echinococcus_granulosus_6210_Tribe1340_0:0.0000020108)100:0.1715300000,Hejnol2009_Taenia_solium_6204_Tribe1340_0:0.0000027929)100:1.3743100000)75:0.0591390000,Simion2017_Aplysia_californica_6500_V2META13950-42-Calc_Hmm10-BMGE05:0.5573117017)78:0.0920050000,(Dunn2008_Dugesia_japonica_6161_Tribe1047:0.0000021818,Hejnol2009_Dugesia_japonica_6161_Tribe1340_0:0.1704229635)100:0.5633200000)98:0.1172260000,(Dunn2008_Themiste_lageniformis_216211_Tribe1047:0.0000022749,Hejnol2009_Themiste_lageniformis_216211_Tribe1340_0:0.0000020108)100:0.3839310000)65:0.0934240000,Hejnol2009_Cristatella_mucedo_67896_Tribe1340_0:0.5899355937)41:0.0398370000)72:0.0702440000,(((((((((Borowiec2015_Total1080_Danaus_plexippus_13037_OG173.fasta.aln_gene213:0.4268119901,((Borowiec2015_Total1080_Drosophila_melanogaster_7227_OG173.fasta.aln_gene213:0.0000024214,Dunn2008_Drosophila_melanogaster_7227_Tribe1047:0.0000020108)87:0.0000020000,Hejnol2009_Drosophila_melanogaster_7227_Tribe1340_0:0.0000020108)100:1.5483400000)96:0.1300870000,(Borowiec2015_Total1080_Apis_mellifera_7460_OG173.fasta.aln_gene213:0.0155343168,Borowiec2015_Total1080_Bombus_terrestris_30195_OG173.fasta.aln_gene213:0.1072431131)100:0.3489110000)99:0.0671610000,(Borowiec2015_Total1080_Tribolium_castaneum_7070_OG173.fasta.aln_gene213:0.0000021230,Simion2017_Tribolium_castaneum_7070_V2META13950-42-Calc_Hmm10-BMGE05:0.0000020108)100:0.3678940000)99:0.2314210000,(Borowiec2015_Total1080_Acyrthosiphon_pisum_7029_OG173.fasta.aln_gene213:0.2359702640,Borowiec2015_Total1080_Rhodnius_prolixus_13249_OG173.fasta.aln_gene213:0.5993742191)99:0.1156920000)97:0.1046990000,((((Simion2017_Acanthoeca_sp_81532_V2META13950-42-Calc_Hmm10-BMGE05:0.3254766807,Simion2017_Acanthoeca_spectabilis_81533_V2META13950-42-Calc_Hmm10-BMGE05:0.2273015054)97:0.4662800000,Simion2017_Stephanoeca_diplocostata_81535_V2META13950-42-Calc_Hmm10-BMGE05:0.1507213030)83:0.2637000000,Simion2017_Diaphanoeca_grandis_28014_V2META13950-42-Calc_Hmm10-BMGE05:0.7969752523)94:0.3689310000,Simion2017_Didymoeca_costata_10_459534_V2META13950-42-Calc_Hmm10-BMGE05:0.7504995967)100:1.8981430000)30:0.0000020000,((Dunn2008_Carcinus_maenas_6759_Tribe1047:0.0000020457,Hejnol2009_Carcinus_maenas_6759_Tribe1340_0:0.0000020108)100:0.9004310000,Simion2017_Pleraplysilla_spinifera_119433_V2META13950-42-Calc_Hmm10-BMGE05:0.1873982969)75:0.1875960000)61:0.0627760000,((((Borowiec2015_Total1080_Daphnia_magna_35525_OG173.fasta.aln_gene213:0.0000025542,Hejnol2009_Daphnia_pulex_6669_Tribe1340_0:0.0000020108)83:0.0000030000,Simion2017_Daphnia_pulex_6669_V2META13950-42-Calc_Hmm10-BMGE05:0.0000020108)95:0.0190420000,Dunn2008_Daphnia_magna_35525_Tribe1047:0.0314989554)100:0.4969530000,Hejnol2009_Onychiurus_arcticus_1071257_Tribe1340_0:1.5868088792)94:0.0840990000)65:0.0463640000,((Borowiec2015_Total1080_Brugia_malayi_6279_OG173.fasta.aln_gene213:1.3975851538,(Dunn2008_Trichinella_spiralis_6334_Tribe1047:0.0000025333,Hejnol2009_Trichinella_spiralis_6334_Tribe1340_0:0.0000020108)100:1.0283810000)68:0.0253280000,(Dunn2008_Xiphinema_index_46003_Tribe1047:0.0000027929,Hejnol2009_Xiphinema_index_46003_Tribe1340_0:0.0000020108)99:0.2478490000)86:0.4343970000)61:0.0176320000,(((((Borowiec2015_Total1080_Ixodes_scapularis_6945_OG173.fasta.aln_gene213:0.0000024581,(Dunn2008_Boophilus_microplus_6941_Tribe1047:0.0143312043,Hejnol2009_Boophilus_microplus_6941_Tribe1340_0:0.0286483897)100:0.2326090000)100:0.0100690000,Simion2017_Ixodes_scapularis_6945_V2META13950-42-Calc_Hmm10-BMGE05:0.0000025231)100:0.3512300000,(Dunn2008_Euperipatoides_kanangrensis_488523_Tribe1047:0.0000020131,Hejnol2009_Euperipatoides_kanangrensis_488523_Tribe1340_0:0.0000020108)100:0.4887440000)77:0.0697500000,Borowiec2015_Total1080_Strigamia_maritima_126957_OG173.fasta.aln_gene213:0.6315916265)73:0.0366990000,(Dunn2008_Acanthoscurria_gomesiana_115339_Tribe1047:0.0000027929,Hejnol2009_Acanthoscurria_gomesiana_115339_Tribe1340_0:0.0059797202)100:0.5619850000)86:0.0297820000)65:0.2034800000)68:0.1433490000)19:0.0000020000,((((((Borowiec2015_Total1080_Ciona_savignyi_51511_OG173.fasta.aln_gene213:0.1542709115,(Dunn2008_Ciona_intestinalis_7719_Tribe1047:0.0000022749,Hejnol2009_Ciona_intestinalis_7719_Tribe1340_0:0.0000020108)100:0.1157540000)99:0.1303410000,Hejnol2009_Diplosoma_listerianum_168635_Tribe1340_0:0.1681267560)100:0.3320960000,((((((Borowiec2015_Total1080_Homo_sapiens_9606_OG173.fasta.aln_gene213:0.0000020108,(Dunn2008_Homo_sapiens_9606_Tribe1047:0.0000020108,Hejnol2009_Homo_sapiens_9606_Tribe1340_0:0.0000020108)97:0.0000020000)100:0.0096160000,Simion2017_Homo_sapiens_9606_V2META13950-42-Calc_Hmm10-BMGE05:0.0000020108)100:0.1695490000,Borowiec2015_Total1080_Anolis_carolinensis_28377_OG173.fasta.aln_gene213:0.2369953462)99:0.0541850000,Borowiec2015_Total1080_Xenopus_tropicalis_8364_OG173.fasta.aln_gene213:0.2026866310)99:0.0876100000,Borowiec2015_Total1080_Latimeria_chalumnae_7897_OG173.fasta.aln_gene213:0.1123416397)98:0.0384830000,(Borowiec2015_Total1080_Fugu_31032_OG173.fasta.aln_gene213:0.1385416777,Borowiec2015_Total1080_Gasterosteus_aculeatus_69293_OG173.fasta.aln_gene213:0.0564572751)100:0.0385420000)100:0.3824530000)69:0.1072080000,Borowiec2015_Total1080_Saccoglossus_kowalevskii_10224_OG173.fasta.aln_gene213:0.4104057874)56:0.0223250000,(((((Borowiec2015_Total1080_Strongylocentrotus_purpuratus_7668_OG173.fasta.aln_gene213:0.0000020108,(Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe1047:0.0000020108,Hejnol2009_Strongylocentrotus_purpuratus_7668_Tribe1340_0:0.0000020108)82:0.0000030000)70:0.0000030000,Simion2017_Strongylocentrotus_purpuratus_7668_V2META13950-42-Calc_Hmm10-BMGE05:0.0000020108)99:0.4826720000,Hejnol2009_Halocynthia_roretzi_7729_Tribe1340_0:1.0484536129)89:0.3654060000,((((Simion2017_Grantia_compressa_196260_V2META13950-42-Calc_Hmm10-BMGE05:0.0000025542,Simion2017_Sycon_ciliatum_27933_V2META13950-42-Calc_Hmm10-BMGE05:0.0234864705)100:0.3282350000,Simion2017_Sycon_coactum_1009717_V2META13950-42-Calc_Hmm10-BMGE05:0.2248774332)72:0.0238390000,Simion2017_Leuconia_nivea_283886_V2META13950-42-Calc_Hmm10-BMGE05:0.1811846363)99:0.1740510000,Simion2017_Leucosolenia_complicata_433461_V2META13950-42-Calc_Hmm10-BMGE05:0.2670175599)99:0.3137370000)67:0.0345980000,((Dunn2008_Capsaspora_owczarzaki_192875_Tribe1047:0.0000022893,Hejnol2009_Capsaspora_owczarzaki_192875_Tribe1340_0:0.0000020108)71:0.0000030000,Simion2017_Capsaspora_owczarzaki_192875_V2META13950-42-Calc_Hmm10-BMGE05:0.0000020177)100:2.1783760000)75:0.1466740000)51:0.0700680000,((((((Borowiec2015_Total1080_Trichoplax_adhaerens_10228_OG173.fasta.aln_gene213:0.0000024214,Hejnol2009_Trichoplax_adhaerens_10228_Tribe1340_0:0.0000020108)75:0.0000020000,Simion2017_Trichoplax_adhaerens_10228_V2META13950-42-Calc_Hmm10-BMGE05:0.0093086466)100:0.5858630000,((((((((Borowiec2015_Total1080_Nematostella_vectensis_45351_OG173.fasta.aln_gene213:0.0000020177,Dunn2008_Nematostella_vectensis_45351_Tribe1047:0.0000020108)98:0.0000030000,Hejnol2009_Nematostella_vectensis_45351_Tribe1340_0:0.0000020108)86:0.0000020000,Simion2017_Nematostella_vectensis_45351_V2META13950-42-Calc_Hmm10-BMGE05:0.0000020108)100:0.0485040000,Simion2017_Edwardsiella_lineata_132407_V2META13950-42-Calc_Hmm10-BMGE05:0.0102648787)99:0.0677480000,(Simion2017_Aiptasia_pallida_1720309_V2META13950-42-Calc_Hmm10-BMGE05:0.1088963867,Simion2017_Bolocera_tuediae_1163374_V2META13950-42-Calc_Hmm10-BMGE05:0.1611843258)100:0.1343360000)100:0.0703420000,(Simion2017_Antipathes_caribbeana_934276_V2META13950-42-Calc_Hmm10-BMGE05:0.0941815905,Simion2017_Plumapathes_pennacea_1350358_V2META13950-42-Calc_Hmm10-BMGE05:0.0310739753)100:0.0904710000)94:0.0655420000,((Borowiec2015_Total1080_Acropora_digitifera_70779_OG173.fasta.aln_gene213:0.1175015354,Simion2017_Orbicella_faveolata_48498_V2META13950-42-Calc_Hmm10-BMGE05:0.1701666223)99:0.0080430000,Simion2017_Porites_australiensis_51061_V2META13950-42-Calc_Hmm10-BMGE05:0.0836697578)99:0.0858830000)99:0.1632240000,(((((((((Borowiec2015_Total1080_Hydra_magnipapillata_6087_OG173.fasta.aln_gene213:0.0000025231,Dunn2008_Hydra_vulgaris_01_6087_Tribe1047:0.0000020108)90:0.0000020000,Hejnol2009_Hydra_vulgaris_01_6087_Tribe1340_0:0.0000020108)100:0.0089310000,Simion2017_Hydra_vulgaris_01_6087_V2META13950-42-Calc_Hmm10-BMGE05:0.0000020108)100:0.3299700000,(Simion2017_Craspedacusta_sowerbii_128124_V2META13950-42-Calc_Hmm10-BMGE05:0.1555155567,Simion2017_Liriope_tetraphylla_37524_V2META13950-42-Calc_Hmm10-BMGE05:0.2613299049)99:0.0834770000)99:0.0833020000,Simion2017_Hydractinia_polyclina_589945_V2META13950-42-Calc_Hmm10-BMGE05:0.1365419892)98:0.0479760000,Simion2017_Nanomia_bijuga_168759_V2META13950-42-Calc_Hmm10-BMGE05:0.2283516909)59:0.0597600000,Simion2017_Clytia_hemisphaerica_252671_V2META13950-42-Calc_Hmm10-BMGE05:0.2941669724)95:0.0143030000,(Simion2017_Gorgonia_ventalina_204384_V2META13950-42-Calc_Hmm10-BMGE05:0.4228812783,Simion2017_Pennatula_rubra_1820127_V2META13950-42-Calc_Hmm10-BMGE05:0.1765528647)100:0.3103740000)96:0.0597060000,((Simion2017_Alatina_alata_1193083_V2META13950-42-Calc_Hmm10-BMGE05:0.2564992046,((Simion2017_Aurelia_aurita_6145_V2META13950-42-Calc_Hmm10-BMGE05:0.0678645099,Simion2017_Stomolophus_meleagris_168796_V2META13950-42-Calc_Hmm10-BMGE05:0.1277584880)100:0.0726460000,Simion2017_Pelagia_noctiluca_400838_V2META13950-42-Calc_Hmm10-BMGE05:0.1385843377)100:0.0450890000)99:0.0460040000,(Simion2017_Atolla_vanhoeffeni_86043_V2META13950-42-Calc_Hmm10-BMGE05:0.0377607317,Simion2017_Periphylla_periphylla_880221_V2META13950-42-Calc_Hmm10-BMGE05:0.0246028050)96:0.1563260000)93:0.0786130000)86:0.0363830000)84:0.0249170000)82:0.0333040000,Simion2017_Lucernariopsis_campanulata_1843190_V2META13950-42-Calc_Hmm10-BMGE05:0.2383710562)88:0.0552120000,Simion2017_Salpingoeca_dolichothecata_16_1742605_V2META13950-42-Calc_Hmm10-BMGE05:0.7868093291)59:0.0442490000,((Simion2017_Corticium_candelabrum_121492_V2META13950-42-Calc_Hmm10-BMGE05:0.0797797545,Simion2017_Plakina_jani_450361_V2META13950-42-Calc_Hmm10-BMGE05:0.0000027604)100:0.3776950000,Simion2017_Oscarella_species_121493_V2META13950-42-Calc_Hmm10-BMGE05:0.2968468536)89:0.1042850000)50:0.0370340000)39:0.0283510000)48:0.2144800000,(Simion2017_Kirkpatrickia_variolosa_1631157_V2META13950-42-Calc_Hmm10-BMGE05:0.0500233628,(Simion2017_Latrunculia_apicalis_1325597_V2META13950-42-Calc_Hmm10-BMGE05:0.0885552265,Simion2017_Mycale_phyllophila_1325607_V2META13950-42-Calc_Hmm10-BMGE05:0.2176821410)80:0.0479260000)100:0.2045820000)48:0.0824410000,(Borowiec2015_Total1080_Oikopleura_dioica_34765_OG173.fasta.aln_gene213:1.9010718535,(((Simion2017_Aphrocallistes_vastus_83887_V2META13950-42-Calc_Hmm10-BMGE05:0.2336799466,Simion2017_Euplectella_aspergillum_936045_V2META13950-42-Calc_Hmm10-BMGE05:0.0955804040)100:0.0492810000,(Simion2017_Rossella_fibulata_1076269_V2META13950-42-Calc_Hmm10-BMGE05:0.0756354497,Simion2017_Sympagella_nux_76350_V2META13950-42-Calc_Hmm10-BMGE05:0.0454445959)100:0.1089110000)100:0.3058110000,Simion2017_Hyalonema_populiferum_1631155_V2META13950-42-Calc_Hmm10-BMGE05:0.3953097652)100:0.9936960000)46:0.1037090000)79:0.0317130000)89:0.3611950000,Simion2017_Salpingoeca_macrocollata_06_1924736_V2META13950-42-Calc_Hmm10-BMGE05:0.3997814235)79:0.0841600000,Simion2017_Salpingoeca_punica_03_1924735_V2META13950-42-Calc_Hmm10-BMGE05:0.6199480898)91:0.3708070000,Simion2017_Codosiga_hollandica_17_1742608_V2META13950-42-Calc_Hmm10-BMGE05:0.5655150069)100:1.0528390000,Simion2017_Microstomoeca_roanoka_1923864_V2META13950-42-Calc_Hmm10-BMGE05:0.4563147865)100:0.1131290000,Simion2017_Salpingoeca_rosetta_946362_V2META13950-42-Calc_Hmm10-BMGE05:0.0000020108);
+
+TIME STAMP
+----------
+
+Date and time: Tue Aug 30 06:28:31 2022
+Total CPU time used: 53586.81215 seconds (14h:53m:6s)
+Total wall-clock time used: 53848.35774 seconds (14h:57m:28s)
+
