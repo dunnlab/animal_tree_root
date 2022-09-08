@@ -1,0 +1,1655 @@
+IQ-TREE version 1.5.3 for Linux 64-bit built Mar 12 2017
+Copyright (c) 2011-2016 Nguyen Lam Tung, Olga Chernomor, Arndt von Haeseler and Bui Quang Minh.
+
+Host:    r1226.uppmax.uu.se (AVX2, FMA3, 243 GB RAM)
+Command: iqtree -s mafft/test/component39/component39.mafft -nt 1 -bb 1000 -pre mafft/test/component39/DEFAULT_component39
+Seed:    192321 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug  8 09:10:07 2022
+Kernel:  AVX+FMA
+
+NOTE: Consider using the multicore version because your CPU has 16 cores!
+
+Reading alignment file mafft/test/component39/component39.mafft ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 343 sequences with 279 columns and 278 patterns (246 informative sites, 15 constant sites)
+WARNING: Some sequence names are changed as follows:
+Dunn2008:Acropora_millepora:45264:Tribe1162 -> Dunn2008_Acropora_millepora_45264_Tribe1162
+Dunn2008:Anoplodactylus_eroticus:488521:Tribe1162 -> Dunn2008_Anoplodactylus_eroticus_488521_Tribe1162
+Dunn2008:Asterina_pectinifera:7594:Tribe1162 -> Dunn2008_Asterina_pectinifera_7594_Tribe1162
+Dunn2008:Biomphalaria_glabrata:6526:Tribe1162 -> Dunn2008_Biomphalaria_glabrata_6526_Tribe1162
+Dunn2008:Boophilus_microplus:6941:Tribe1162 -> Dunn2008_Boophilus_microplus_6941_Tribe1162
+Dunn2008:Branchiostoma_floridae:7739:Tribe1162 -> Dunn2008_Branchiostoma_floridae_7739_Tribe1162
+Dunn2008:Capitella_teleta:283909:Tribe1162 -> Dunn2008_Capitella_teleta_283909_Tribe1162
+Dunn2008:Ciona_intestinalis:7719:Tribe1162 -> Dunn2008_Ciona_intestinalis_7719_Tribe1162
+Dunn2008:Cryptococcus_neoformans:5207:Tribe1162 -> Dunn2008_Cryptococcus_neoformans_5207_Tribe1162
+Dunn2008:Cyanea_capillata:27804:Tribe1162 -> Dunn2008_Cyanea_capillata_27804_Tribe1162
+Dunn2008:Drosophila_melanogaster:7227:Tribe1162 -> Dunn2008_Drosophila_melanogaster_7227_Tribe1162
+Dunn2008:Gallus_gallus:9031:Tribe1162 -> Dunn2008_Gallus_gallus_9031_Tribe1162
+Dunn2008:Homo_sapiens:9606:Tribe1162 -> Dunn2008_Homo_sapiens_9606_Tribe1162
+Dunn2008:Hydra_vulgaris_01:6087:Tribe1162 -> Dunn2008_Hydra_vulgaris_01_6087_Tribe1162
+Dunn2008:Hypsibius_dujardini:232323:Tribe1162 -> Dunn2008_Hypsibius_dujardini_232323_Tribe1162
+Dunn2008:Macrostomum_lignano:282301:Tribe1162 -> Dunn2008_Macrostomum_lignano_282301_Tribe1162
+Dunn2008:Mnemiopsis_leidyi:27923:Tribe1162 -> Dunn2008_Mnemiopsis_leidyi_27923_Tribe1162
+Dunn2008:Mytilus_galloprovincialis:29158:Tribe1162 -> Dunn2008_Mytilus_galloprovincialis_29158_Tribe1162
+Dunn2008:Nematostella_vectensis:45351:Tribe1162 -> Dunn2008_Nematostella_vectensis_45351_Tribe1162
+Dunn2008:Ptychodera_flava:63121:Tribe1162 -> Dunn2008_Ptychodera_flava_63121_Tribe1162
+Dunn2008:Richtersius_coronifer:245088:Tribe1162 -> Dunn2008_Richtersius_coronifer_245088_Tribe1162
+Dunn2008:Saccharomyces_cerevisiae:4932:Tribe1162 -> Dunn2008_Saccharomyces_cerevisiae_4932_Tribe1162
+Dunn2008:Saccoglossus_kowalevskii:10224:Tribe1162 -> Dunn2008_Saccoglossus_kowalevskii_10224_Tribe1162
+Dunn2008:Schmidtea_mediterranea:79327:Tribe1162 -> Dunn2008_Schmidtea_mediterranea_79327_Tribe1162
+Dunn2008:Terebratalia_transversa:34513:Tribe1162 -> Dunn2008_Terebratalia_transversa_34513_Tribe1162
+Dunn2008:Urechis_caupo:6431:Tribe1162 -> Dunn2008_Urechis_caupo_6431_Tribe1162
+Dunn2008:Xenoturbella_bocki:242395:Tribe1162 -> Dunn2008_Xenoturbella_bocki_242395_Tribe1162
+Dunn2008:Acanthoscurria_gomesiana:115339:Tribe703 -> Dunn2008_Acanthoscurria_gomesiana_115339_Tribe703
+Dunn2008:Asterina_pectinifera:7594:Tribe703 -> Dunn2008_Asterina_pectinifera_7594_Tribe703
+Dunn2008:Biomphalaria_glabrata:6526:Tribe703 -> Dunn2008_Biomphalaria_glabrata_6526_Tribe703
+Dunn2008:Boophilus_microplus:6941:Tribe703 -> Dunn2008_Boophilus_microplus_6941_Tribe703
+Dunn2008:Capitella_teleta:283909:Tribe703 -> Dunn2008_Capitella_teleta_283909_Tribe703
+Dunn2008:Ciona_intestinalis:7719:Tribe703 -> Dunn2008_Ciona_intestinalis_7719_Tribe703
+Dunn2008:Crassostrea_virginica:6565:Tribe703 -> Dunn2008_Crassostrea_virginica_6565_Tribe703
+Dunn2008:Cryptococcus_neoformans:5207:Tribe703 -> Dunn2008_Cryptococcus_neoformans_5207_Tribe703
+Dunn2008:Drosophila_melanogaster:7227:Tribe703 -> Dunn2008_Drosophila_melanogaster_7227_Tribe703
+Dunn2008:Dugesia_japonica:6161:Tribe703 -> Dunn2008_Dugesia_japonica_6161_Tribe703
+Dunn2008:Echinococcus_granulosus:6210:Tribe703 -> Dunn2008_Echinococcus_granulosus_6210_Tribe703
+Dunn2008:Echinoderes_horni:488522:Tribe703 -> Dunn2008_Echinoderes_horni_488522_Tribe703
+Dunn2008:Euprymna_scolopes:6613:Tribe703 -> Dunn2008_Euprymna_scolopes_6613_Tribe703
+Dunn2008:Fenneropenaeus_chinensis:139456:Tribe703 -> Dunn2008_Fenneropenaeus_chinensis_139456_Tribe703
+Dunn2008:Gallus_gallus:9031:Tribe703 -> Dunn2008_Gallus_gallus_9031_Tribe703
+Dunn2008:Haementeria_depressa:279730:Tribe703 -> Dunn2008_Haementeria_depressa_279730_Tribe703
+Dunn2008:Homo_sapiens:9606:Tribe703 -> Dunn2008_Homo_sapiens_9606_Tribe703
+Dunn2008:Hydra_vulgaris_01:6087:Tribe703 -> Dunn2008_Hydra_vulgaris_01_6087_Tribe703
+Dunn2008:Hydractinia_echinata:35630:Tribe703 -> Dunn2008_Hydractinia_echinata_35630_Tribe703
+Dunn2008:Lumbricus_rubellus:35632:Tribe703 -> Dunn2008_Lumbricus_rubellus_35632_Tribe703
+Dunn2008:Macrostomum_lignano:282301:Tribe703 -> Dunn2008_Macrostomum_lignano_282301_Tribe703
+Dunn2008:Mnemiopsis_leidyi:27923:Tribe703 -> Dunn2008_Mnemiopsis_leidyi_27923_Tribe703
+Dunn2008:Monosiga_ovata:81526:Tribe703 -> Dunn2008_Monosiga_ovata_81526_Tribe703
+Dunn2008:Nematostella_vectensis:45351:Tribe703 -> Dunn2008_Nematostella_vectensis_45351_Tribe703
+Dunn2008:Oscarella_carmela:386100:Tribe703 -> Dunn2008_Oscarella_carmela_386100_Tribe703
+Dunn2008:Richtersius_coronifer:245088:Tribe703 -> Dunn2008_Richtersius_coronifer_245088_Tribe703
+Dunn2008:Saccharomyces_cerevisiae:4932:Tribe703 -> Dunn2008_Saccharomyces_cerevisiae_4932_Tribe703
+Dunn2008:Saccoglossus_kowalevskii:10224:Tribe703 -> Dunn2008_Saccoglossus_kowalevskii_10224_Tribe703
+Dunn2008:Schmidtea_mediterranea:79327:Tribe703 -> Dunn2008_Schmidtea_mediterranea_79327_Tribe703
+Dunn2008:Sphaeroforma_arctica:72019:Tribe703 -> Dunn2008_Sphaeroforma_arctica_72019_Tribe703
+Dunn2008:Strongylocentrotus_purpuratus:7668:Tribe703 -> Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe703
+Dunn2008:Trichinella_spiralis:6334:Tribe703 -> Dunn2008_Trichinella_spiralis_6334_Tribe703
+Dunn2008:Xiphinema_index:46003:Tribe703 -> Dunn2008_Xiphinema_index_46003_Tribe703
+Dunn2008:Acanthoscurria_gomesiana:115339:Tribe833 -> Dunn2008_Acanthoscurria_gomesiana_115339_Tribe833
+Dunn2008:Acropora_millepora:45264:Tribe833 -> Dunn2008_Acropora_millepora_45264_Tribe833
+Dunn2008:Branchiostoma_floridae:7739:Tribe833 -> Dunn2008_Branchiostoma_floridae_7739_Tribe833
+Dunn2008:Capitella_teleta:283909:Tribe833 -> Dunn2008_Capitella_teleta_283909_Tribe833
+Dunn2008:Ciona_intestinalis:7719:Tribe833 -> Dunn2008_Ciona_intestinalis_7719_Tribe833
+Dunn2008:Cryptococcus_neoformans:5207:Tribe833 -> Dunn2008_Cryptococcus_neoformans_5207_Tribe833
+Dunn2008:Drosophila_melanogaster:7227:Tribe833 -> Dunn2008_Drosophila_melanogaster_7227_Tribe833
+Dunn2008:Echinococcus_granulosus:6210:Tribe833 -> Dunn2008_Echinococcus_granulosus_6210_Tribe833
+Dunn2008:Echinoderes_horni:488522:Tribe833 -> Dunn2008_Echinoderes_horni_488522_Tribe833
+Dunn2008:Euprymna_scolopes:6613:Tribe833 -> Dunn2008_Euprymna_scolopes_6613_Tribe833
+Dunn2008:Fenneropenaeus_chinensis:139456:Tribe833 -> Dunn2008_Fenneropenaeus_chinensis_139456_Tribe833
+Dunn2008:Gallus_gallus:9031:Tribe833 -> Dunn2008_Gallus_gallus_9031_Tribe833
+Dunn2008:Homo_sapiens:9606:Tribe833 -> Dunn2008_Homo_sapiens_9606_Tribe833
+Dunn2008:Hydra_vulgaris_01:6087:Tribe833 -> Dunn2008_Hydra_vulgaris_01_6087_Tribe833
+Dunn2008:Hypsibius_dujardini:232323:Tribe833 -> Dunn2008_Hypsibius_dujardini_232323_Tribe833
+Dunn2008:Mnemiopsis_leidyi:27923:Tribe833 -> Dunn2008_Mnemiopsis_leidyi_27923_Tribe833
+Dunn2008:Monosiga_ovata:81526:Tribe833 -> Dunn2008_Monosiga_ovata_81526_Tribe833
+Dunn2008:Nematostella_vectensis:45351:Tribe833 -> Dunn2008_Nematostella_vectensis_45351_Tribe833
+Dunn2008:Paraplanocera_oligoglena:1468194:Tribe833 -> Dunn2008_Paraplanocera_oligoglena_1468194_Tribe833
+Dunn2008:Ptychodera_flava:63121:Tribe833 -> Dunn2008_Ptychodera_flava_63121_Tribe833
+Dunn2008:Richtersius_coronifer:245088:Tribe833 -> Dunn2008_Richtersius_coronifer_245088_Tribe833
+Dunn2008:Saccharomyces_cerevisiae:4932:Tribe833 -> Dunn2008_Saccharomyces_cerevisiae_4932_Tribe833
+Dunn2008:Saccoglossus_kowalevskii:10224:Tribe833 -> Dunn2008_Saccoglossus_kowalevskii_10224_Tribe833
+Dunn2008:Schmidtea_mediterranea:79327:Tribe833 -> Dunn2008_Schmidtea_mediterranea_79327_Tribe833
+Dunn2008:Sphaeroforma_arctica:72019:Tribe833 -> Dunn2008_Sphaeroforma_arctica_72019_Tribe833
+Dunn2008:Strongylocentrotus_purpuratus:7668:Tribe833 -> Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe833
+Dunn2008:Trichinella_spiralis:6334:Tribe833 -> Dunn2008_Trichinella_spiralis_6334_Tribe833
+Dunn2008:Amoebidium_parasiticum:4881:Tribe868 -> Dunn2008_Amoebidium_parasiticum_4881_Tribe868
+Dunn2008:Anoplodactylus_eroticus:488521:Tribe868 -> Dunn2008_Anoplodactylus_eroticus_488521_Tribe868
+Dunn2008:Aplysia_californica:6500:Tribe868 -> Dunn2008_Aplysia_californica_6500_Tribe868
+Dunn2008:Asterina_pectinifera:7594:Tribe868 -> Dunn2008_Asterina_pectinifera_7594_Tribe868
+Dunn2008:Boophilus_microplus:6941:Tribe868 -> Dunn2008_Boophilus_microplus_6941_Tribe868
+Dunn2008:Branchiostoma_floridae:7739:Tribe868 -> Dunn2008_Branchiostoma_floridae_7739_Tribe868
+Dunn2008:Capitella_teleta:283909:Tribe868 -> Dunn2008_Capitella_teleta_283909_Tribe868
+Dunn2008:Capsaspora_owczarzaki:192875:Tribe868 -> Dunn2008_Capsaspora_owczarzaki_192875_Tribe868
+Dunn2008:Chaetoderma_nitidulum:256131:Tribe868 -> Dunn2008_Chaetoderma_nitidulum_256131_Tribe868
+Dunn2008:Ciona_intestinalis:7719:Tribe868 -> Dunn2008_Ciona_intestinalis_7719_Tribe868
+Dunn2008:Crassostrea_virginica:6565:Tribe868 -> Dunn2008_Crassostrea_virginica_6565_Tribe868
+Dunn2008:Cryptococcus_neoformans:5207:Tribe868 -> Dunn2008_Cryptococcus_neoformans_5207_Tribe868
+Dunn2008:Dugesia_japonica:6161:Tribe868 -> Dunn2008_Dugesia_japonica_6161_Tribe868
+Dunn2008:Echinococcus_granulosus:6210:Tribe868 -> Dunn2008_Echinococcus_granulosus_6210_Tribe868
+Dunn2008:Gallus_gallus:9031:Tribe868 -> Dunn2008_Gallus_gallus_9031_Tribe868
+Dunn2008:Homo_sapiens:9606:Tribe868 -> Dunn2008_Homo_sapiens_9606_Tribe868
+Dunn2008:Hydractinia_echinata:35630:Tribe868 -> Dunn2008_Hydractinia_echinata_35630_Tribe868
+Dunn2008:Lumbricus_rubellus:35632:Tribe868 -> Dunn2008_Lumbricus_rubellus_35632_Tribe868
+Dunn2008:Mnemiopsis_leidyi:27923:Tribe868 -> Dunn2008_Mnemiopsis_leidyi_27923_Tribe868
+Dunn2008:Monosiga_ovata:81526:Tribe868 -> Dunn2008_Monosiga_ovata_81526_Tribe868
+Dunn2008:Nematostella_vectensis:45351:Tribe868 -> Dunn2008_Nematostella_vectensis_45351_Tribe868
+Dunn2008:Ptychodera_flava:63121:Tribe868 -> Dunn2008_Ptychodera_flava_63121_Tribe868
+Dunn2008:Saccharomyces_cerevisiae:4932:Tribe868 -> Dunn2008_Saccharomyces_cerevisiae_4932_Tribe868
+Dunn2008:Saccoglossus_kowalevskii:10224:Tribe868 -> Dunn2008_Saccoglossus_kowalevskii_10224_Tribe868
+Dunn2008:Sphaeroforma_arctica:72019:Tribe868 -> Dunn2008_Sphaeroforma_arctica_72019_Tribe868
+Philippe2009:Allomyces_macrogynus:28583:Gene_0044 -> Philippe2009_Allomyces_macrogynus_28583_Gene_0044
+Philippe2009:Amoebidium_parasiticum:4881:Gene_0044 -> Philippe2009_Amoebidium_parasiticum_4881_Gene_0044
+Philippe2009:Anoplodactylus_eroticus:488521:Gene_0044 -> Philippe2009_Anoplodactylus_eroticus_488521_Gene_0044
+Philippe2009:Aplysia_californica:6500:Gene_0044 -> Philippe2009_Aplysia_californica_6500_Gene_0044
+Philippe2009:Batrachochytrium_dendrobatidis:109871:Gene_0044 -> Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0044
+Philippe2009:Branchiostoma_floridae:7739:Gene_0044 -> Philippe2009_Branchiostoma_floridae_7739_Gene_0044
+Philippe2009:Capitella_teleta:283909:Gene_0044 -> Philippe2009_Capitella_teleta_283909_Gene_0044
+Philippe2009:Capsaspora_owczarzaki:192875:Gene_0044 -> Philippe2009_Capsaspora_owczarzaki_192875_Gene_0044
+Philippe2009:Carteriospongia_foliascens:593584:Gene_0044 -> Philippe2009_Carteriospongia_foliascens_593584_Gene_0044
+Philippe2009:Ciona_savignyi:51511:Gene_0044 -> Philippe2009_Ciona_savignyi_51511_Gene_0044
+Philippe2009:Crassostrea_gigas:29159:Gene_0044 -> Philippe2009_Crassostrea_gigas_29159_Gene_0044
+Philippe2009:Danio_rerio:7955:Gene_0044 -> Philippe2009_Danio_rerio_7955_Gene_0044
+Philippe2009:Daphnia_pulex:6669:Gene_0044 -> Philippe2009_Daphnia_pulex_6669_Gene_0044
+Philippe2009:Helobdella_robusta:6412:Gene_0044 -> Philippe2009_Helobdella_robusta_6412_Gene_0044
+Philippe2009:Hydra_magnipapillata:6087:Gene_0044 -> Philippe2009_Hydra_magnipapillata_6087_Gene_0044
+Philippe2009:Hydractinia_echinata:35630:Gene_0044 -> Philippe2009_Hydractinia_echinata_35630_Gene_0044
+Philippe2009:Ixodes_scapularis:6945:Gene_0044 -> Philippe2009_Ixodes_scapularis_6945_Gene_0044
+Philippe2009:Leucetta_chagosensis:185688:Gene_0044 -> Philippe2009_Leucetta_chagosensis_185688_Gene_0044
+Philippe2009:Mnemiopsis_leidyi:27923:Gene_0044 -> Philippe2009_Mnemiopsis_leidyi_27923_Gene_0044
+Philippe2009:Molgula_tectiformis:30286:Gene_0044 -> Philippe2009_Molgula_tectiformis_30286_Gene_0044
+Philippe2009:Monosiga_brevicollis:81824:Gene_0044 -> Philippe2009_Monosiga_brevicollis_81824_Gene_0044
+Philippe2009:Monosiga_ovata:81526:Gene_0044 -> Philippe2009_Monosiga_ovata_81526_Gene_0044
+Philippe2009:Nasonia_vitripennis:7425:Gene_0044 -> Philippe2009_Nasonia_vitripennis_7425_Gene_0044
+Philippe2009:Nematostella_vectensis:45351:Gene_0044 -> Philippe2009_Nematostella_vectensis_45351_Gene_0044
+Philippe2009:Pediculus_humanus:121225:Gene_0044 -> Philippe2009_Pediculus_humanus_121225_Gene_0044
+Philippe2009:Petromyzon_marinus:7757:Gene_0044 -> Philippe2009_Petromyzon_marinus_7757_Gene_0044
+Philippe2009:Phycomyces_blakesleeanus:4837:Gene_0044 -> Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0044
+Philippe2009:Pleurobrachia_pileus:140457:Gene_0044 -> Philippe2009_Pleurobrachia_pileus_140457_Gene_0044
+Philippe2009:Podocoryne_carnea:6096:Gene_0044 -> Philippe2009_Podocoryne_carnea_6096_Gene_0044
+Philippe2009:Amphimedon_queenslandica:400682:Gene_0044 -> Philippe2009_Amphimedon_queenslandica_400682_Gene_0044
+Philippe2009:Rhizopus_oryzae:64495:Gene_0044 -> Philippe2009_Rhizopus_oryzae_64495_Gene_0044
+Philippe2009:Saccoglossus_kowalevskii:10224:Gene_0044 -> Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0044
+Philippe2009:Sphaeroforma_arctica:72019:Gene_0044 -> Philippe2009_Sphaeroforma_arctica_72019_Gene_0044
+Philippe2009:Spizellomyces_punctatus:109760:Gene_0044 -> Philippe2009_Spizellomyces_punctatus_109760_Gene_0044
+Philippe2009:Strongylocentrotus_purpuratus:7668:Gene_0044 -> Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0044
+Philippe2009:Trichoplax_adhaerens:10228:Gene_0044 -> Philippe2009_Trichoplax_adhaerens_10228_Gene_0044
+Philippe2009:Tubifex_tubifex:6386:Gene_0044 -> Philippe2009_Tubifex_tubifex_6386_Gene_0044
+Philippe2009:Acropora_millepora:45264:Gene_0045 -> Philippe2009_Acropora_millepora_45264_Gene_0045
+Philippe2009:Allomyces_macrogynus:28583:Gene_0045 -> Philippe2009_Allomyces_macrogynus_28583_Gene_0045
+Philippe2009:Aplysia_californica:6500:Gene_0045 -> Philippe2009_Aplysia_californica_6500_Gene_0045
+Philippe2009:Batrachochytrium_dendrobatidis:109871:Gene_0045 -> Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0045
+Philippe2009:Branchiostoma_floridae:7739:Gene_0045 -> Philippe2009_Branchiostoma_floridae_7739_Gene_0045
+Philippe2009:Capitella_teleta:283909:Gene_0045 -> Philippe2009_Capitella_teleta_283909_Gene_0045
+Philippe2009:Capsaspora_owczarzaki:192875:Gene_0045 -> Philippe2009_Capsaspora_owczarzaki_192875_Gene_0045
+Philippe2009:Ciona_savignyi:51511:Gene_0045 -> Philippe2009_Ciona_savignyi_51511_Gene_0045
+Philippe2009:Clytia_hemisphaerica:252671:Gene_0045 -> Philippe2009_Clytia_hemisphaerica_252671_Gene_0045
+Philippe2009:Crassostrea_gigas:29159:Gene_0045 -> Philippe2009_Crassostrea_gigas_29159_Gene_0045
+Philippe2009:Danio_rerio:7955:Gene_0045 -> Philippe2009_Danio_rerio_7955_Gene_0045
+Philippe2009:Daphnia_pulex:6669:Gene_0045 -> Philippe2009_Daphnia_pulex_6669_Gene_0045
+Philippe2009:Euprymna_scolopes:6613:Gene_0045 -> Philippe2009_Euprymna_scolopes_6613_Gene_0045
+Philippe2009:Helobdella_robusta:6412:Gene_0045 -> Philippe2009_Helobdella_robusta_6412_Gene_0045
+Philippe2009:Hydra_magnipapillata:6087:Gene_0045 -> Philippe2009_Hydra_magnipapillata_6087_Gene_0045
+Philippe2009:Hydractinia_echinata:35630:Gene_0045 -> Philippe2009_Hydractinia_echinata_35630_Gene_0045
+Philippe2009:Ixodes_scapularis:6945:Gene_0045 -> Philippe2009_Ixodes_scapularis_6945_Gene_0045
+Philippe2009:Leucetta_chagosensis:185688:Gene_0045 -> Philippe2009_Leucetta_chagosensis_185688_Gene_0045
+Philippe2009:Mnemiopsis_leidyi:27923:Gene_0045 -> Philippe2009_Mnemiopsis_leidyi_27923_Gene_0045
+Philippe2009:Molgula_tectiformis:30286:Gene_0045 -> Philippe2009_Molgula_tectiformis_30286_Gene_0045
+Philippe2009:Monosiga_brevicollis:81824:Gene_0045 -> Philippe2009_Monosiga_brevicollis_81824_Gene_0045
+Philippe2009:Monosiga_ovata:81526:Gene_0045 -> Philippe2009_Monosiga_ovata_81526_Gene_0045
+Philippe2009:Nasonia_vitripennis:7425:Gene_0045 -> Philippe2009_Nasonia_vitripennis_7425_Gene_0045
+Philippe2009:Nematostella_vectensis:45351:Gene_0045 -> Philippe2009_Nematostella_vectensis_45351_Gene_0045
+Philippe2009:Pediculus_humanus:121225:Gene_0045 -> Philippe2009_Pediculus_humanus_121225_Gene_0045
+Philippe2009:Petromyzon_marinus:7757:Gene_0045 -> Philippe2009_Petromyzon_marinus_7757_Gene_0045
+Philippe2009:Phycomyces_blakesleeanus:4837:Gene_0045 -> Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0045
+Philippe2009:Pleurobrachia_pileus:140457:Gene_0045 -> Philippe2009_Pleurobrachia_pileus_140457_Gene_0045
+Philippe2009:Podocoryne_carnea:6096:Gene_0045 -> Philippe2009_Podocoryne_carnea_6096_Gene_0045
+Philippe2009:Proterospongia_sp:218847:Gene_0045 -> Philippe2009_Proterospongia_sp_218847_Gene_0045
+Philippe2009:Amphimedon_queenslandica:400682:Gene_0045 -> Philippe2009_Amphimedon_queenslandica_400682_Gene_0045
+Philippe2009:Rhizopus_oryzae:64495:Gene_0045 -> Philippe2009_Rhizopus_oryzae_64495_Gene_0045
+Philippe2009:Saccoglossus_kowalevskii:10224:Gene_0045 -> Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0045
+Philippe2009:Sphaeroforma_arctica:72019:Gene_0045 -> Philippe2009_Sphaeroforma_arctica_72019_Gene_0045
+Philippe2009:Spizellomyces_punctatus:109760:Gene_0045 -> Philippe2009_Spizellomyces_punctatus_109760_Gene_0045
+Philippe2009:Strongylocentrotus_purpuratus:7668:Gene_0045 -> Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0045
+Philippe2009:Trichoplax_adhaerens:10228:Gene_0045 -> Philippe2009_Trichoplax_adhaerens_10228_Gene_0045
+Philippe2009:Acropora_millepora:45264:Gene_0046 -> Philippe2009_Acropora_millepora_45264_Gene_0046
+Philippe2009:Allomyces_macrogynus:28583:Gene_0046 -> Philippe2009_Allomyces_macrogynus_28583_Gene_0046
+Philippe2009:Anoplodactylus_eroticus:488521:Gene_0046 -> Philippe2009_Anoplodactylus_eroticus_488521_Gene_0046
+Philippe2009:Aplysia_californica:6500:Gene_0046 -> Philippe2009_Aplysia_californica_6500_Gene_0046
+Philippe2009:Batrachochytrium_dendrobatidis:109871:Gene_0046 -> Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0046
+Philippe2009:Branchiostoma_floridae:7739:Gene_0046 -> Philippe2009_Branchiostoma_floridae_7739_Gene_0046
+Philippe2009:Capitella_teleta:283909:Gene_0046 -> Philippe2009_Capitella_teleta_283909_Gene_0046
+Philippe2009:Capsaspora_owczarzaki:192875:Gene_0046 -> Philippe2009_Capsaspora_owczarzaki_192875_Gene_0046
+Philippe2009:Ciona_savignyi:51511:Gene_0046 -> Philippe2009_Ciona_savignyi_51511_Gene_0046
+Philippe2009:Crassostrea_gigas:29159:Gene_0046 -> Philippe2009_Crassostrea_gigas_29159_Gene_0046
+Philippe2009:Cyanea_capillata:27804:Gene_0046 -> Philippe2009_Cyanea_capillata_27804_Gene_0046
+Philippe2009:Danio_rerio:7955:Gene_0046 -> Philippe2009_Danio_rerio_7955_Gene_0046
+Philippe2009:Daphnia_pulex:6669:Gene_0046 -> Philippe2009_Daphnia_pulex_6669_Gene_0046
+Philippe2009:Euprymna_scolopes:6613:Gene_0046 -> Philippe2009_Euprymna_scolopes_6613_Gene_0046
+Philippe2009:Helobdella_robusta:6412:Gene_0046 -> Philippe2009_Helobdella_robusta_6412_Gene_0046
+Philippe2009:Hydra_magnipapillata:6087:Gene_0046 -> Philippe2009_Hydra_magnipapillata_6087_Gene_0046
+Philippe2009:Ixodes_scapularis:6945:Gene_0046 -> Philippe2009_Ixodes_scapularis_6945_Gene_0046
+Philippe2009:Metridium_senile:6116:Gene_0046 -> Philippe2009_Metridium_senile_6116_Gene_0046
+Philippe2009:Mnemiopsis_leidyi:27923:Gene_0046 -> Philippe2009_Mnemiopsis_leidyi_27923_Gene_0046
+Philippe2009:Molgula_tectiformis:30286:Gene_0046 -> Philippe2009_Molgula_tectiformis_30286_Gene_0046
+Philippe2009:Monosiga_brevicollis:81824:Gene_0046 -> Philippe2009_Monosiga_brevicollis_81824_Gene_0046
+Philippe2009:Monosiga_ovata:81526:Gene_0046 -> Philippe2009_Monosiga_ovata_81526_Gene_0046
+Philippe2009:Nasonia_vitripennis:7425:Gene_0046 -> Philippe2009_Nasonia_vitripennis_7425_Gene_0046
+Philippe2009:Nematostella_vectensis:45351:Gene_0046 -> Philippe2009_Nematostella_vectensis_45351_Gene_0046
+Philippe2009:Oopsacas_minuta:111878:Gene_0046 -> Philippe2009_Oopsacas_minuta_111878_Gene_0046
+Philippe2009:Pedicellina_cernua:43123:Gene_0046 -> Philippe2009_Pedicellina_cernua_43123_Gene_0046
+Philippe2009:Pediculus_humanus:121225:Gene_0046 -> Philippe2009_Pediculus_humanus_121225_Gene_0046
+Philippe2009:Petromyzon_marinus:7757:Gene_0046 -> Philippe2009_Petromyzon_marinus_7757_Gene_0046
+Philippe2009:Phycomyces_blakesleeanus:4837:Gene_0046 -> Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0046
+Philippe2009:Pleurobrachia_pileus:140457:Gene_0046 -> Philippe2009_Pleurobrachia_pileus_140457_Gene_0046
+Philippe2009:Podocoryne_carnea:6096:Gene_0046 -> Philippe2009_Podocoryne_carnea_6096_Gene_0046
+Philippe2009:Proterospongia_sp:218847:Gene_0046 -> Philippe2009_Proterospongia_sp_218847_Gene_0046
+Philippe2009:Amphimedon_queenslandica:400682:Gene_0046 -> Philippe2009_Amphimedon_queenslandica_400682_Gene_0046
+Philippe2009:Rhizopus_oryzae:64495:Gene_0046 -> Philippe2009_Rhizopus_oryzae_64495_Gene_0046
+Philippe2009:Saccoglossus_kowalevskii:10224:Gene_0046 -> Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0046
+Philippe2009:Scutigera_coleoptrata:29022:Gene_0046 -> Philippe2009_Scutigera_coleoptrata_29022_Gene_0046
+Philippe2009:Spizellomyces_punctatus:109760:Gene_0046 -> Philippe2009_Spizellomyces_punctatus_109760_Gene_0046
+Philippe2009:Strongylocentrotus_purpuratus:7668:Gene_0046 -> Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0046
+Philippe2009:Trichoplax_adhaerens:10228:Gene_0046 -> Philippe2009_Trichoplax_adhaerens_10228_Gene_0046
+Philippe2009:Tubifex_tubifex:6386:Gene_0046 -> Philippe2009_Tubifex_tubifex_6386_Gene_0046
+Philippe2009:Xenoturbella_bocki:242395:Gene_0046 -> Philippe2009_Xenoturbella_bocki_242395_Gene_0046
+Philippe2009:Acropora_millepora:45264:Gene_0047 -> Philippe2009_Acropora_millepora_45264_Gene_0047
+Philippe2009:Allomyces_macrogynus:28583:Gene_0047 -> Philippe2009_Allomyces_macrogynus_28583_Gene_0047
+Philippe2009:Aplysia_californica:6500:Gene_0047 -> Philippe2009_Aplysia_californica_6500_Gene_0047
+Philippe2009:Batrachochytrium_dendrobatidis:109871:Gene_0047 -> Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0047
+Philippe2009:Branchiostoma_floridae:7739:Gene_0047 -> Philippe2009_Branchiostoma_floridae_7739_Gene_0047
+Philippe2009:Capitella_teleta:283909:Gene_0047 -> Philippe2009_Capitella_teleta_283909_Gene_0047
+Philippe2009:Capsaspora_owczarzaki:192875:Gene_0047 -> Philippe2009_Capsaspora_owczarzaki_192875_Gene_0047
+Philippe2009:Ciona_savignyi:51511:Gene_0047 -> Philippe2009_Ciona_savignyi_51511_Gene_0047
+Philippe2009:Clytia_hemisphaerica:252671:Gene_0047 -> Philippe2009_Clytia_hemisphaerica_252671_Gene_0047
+Philippe2009:Crassostrea_gigas:29159:Gene_0047 -> Philippe2009_Crassostrea_gigas_29159_Gene_0047
+Philippe2009:Danio_rerio:7955:Gene_0047 -> Philippe2009_Danio_rerio_7955_Gene_0047
+Philippe2009:Daphnia_pulex:6669:Gene_0047 -> Philippe2009_Daphnia_pulex_6669_Gene_0047
+Philippe2009:Ephydatia_muelleri:6052:Gene_0047 -> Philippe2009_Ephydatia_muelleri_6052_Gene_0047
+Philippe2009:Euprymna_scolopes:6613:Gene_0047 -> Philippe2009_Euprymna_scolopes_6613_Gene_0047
+Philippe2009:Helobdella_robusta:6412:Gene_0047 -> Philippe2009_Helobdella_robusta_6412_Gene_0047
+Philippe2009:Heterochone_sp:367900:Gene_0047 -> Philippe2009_Heterochone_sp_367900_Gene_0047
+Philippe2009:Hydra_magnipapillata:6087:Gene_0047 -> Philippe2009_Hydra_magnipapillata_6087_Gene_0047
+Philippe2009:Ixodes_scapularis:6945:Gene_0047 -> Philippe2009_Ixodes_scapularis_6945_Gene_0047
+Philippe2009:Mnemiopsis_leidyi:27923:Gene_0047 -> Philippe2009_Mnemiopsis_leidyi_27923_Gene_0047
+Philippe2009:Molgula_tectiformis:30286:Gene_0047 -> Philippe2009_Molgula_tectiformis_30286_Gene_0047
+Philippe2009:Monosiga_brevicollis:81824:Gene_0047 -> Philippe2009_Monosiga_brevicollis_81824_Gene_0047
+Philippe2009:Monosiga_ovata:81526:Gene_0047 -> Philippe2009_Monosiga_ovata_81526_Gene_0047
+Philippe2009:Nasonia_vitripennis:7425:Gene_0047 -> Philippe2009_Nasonia_vitripennis_7425_Gene_0047
+Philippe2009:Nematostella_vectensis:45351:Gene_0047 -> Philippe2009_Nematostella_vectensis_45351_Gene_0047
+Philippe2009:Oopsacas_minuta:111878:Gene_0047 -> Philippe2009_Oopsacas_minuta_111878_Gene_0047
+Philippe2009:Oscarella_carmela:386100:Gene_0047 -> Philippe2009_Oscarella_carmela_386100_Gene_0047
+Philippe2009:Pediculus_humanus:121225:Gene_0047 -> Philippe2009_Pediculus_humanus_121225_Gene_0047
+Philippe2009:Petromyzon_marinus:7757:Gene_0047 -> Philippe2009_Petromyzon_marinus_7757_Gene_0047
+Philippe2009:Phycomyces_blakesleeanus:4837:Gene_0047 -> Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0047
+Philippe2009:Pleurobrachia_pileus:140457:Gene_0047 -> Philippe2009_Pleurobrachia_pileus_140457_Gene_0047
+Philippe2009:Amphimedon_queenslandica:400682:Gene_0047 -> Philippe2009_Amphimedon_queenslandica_400682_Gene_0047
+Philippe2009:Rhizopus_oryzae:64495:Gene_0047 -> Philippe2009_Rhizopus_oryzae_64495_Gene_0047
+Philippe2009:Saccoglossus_kowalevskii:10224:Gene_0047 -> Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0047
+Philippe2009:Spizellomyces_punctatus:109760:Gene_0047 -> Philippe2009_Spizellomyces_punctatus_109760_Gene_0047
+Philippe2009:Strongylocentrotus_purpuratus:7668:Gene_0047 -> Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0047
+Philippe2009:Trichoplax_adhaerens:10228:Gene_0047 -> Philippe2009_Trichoplax_adhaerens_10228_Gene_0047
+Philippe2009:Tubifex_tubifex:6386:Gene_0047 -> Philippe2009_Tubifex_tubifex_6386_Gene_0047
+Philippe2009:Mertensiid_sp:140499:Gene_0047 -> Philippe2009_Mertensiid_sp_140499_Gene_0047
+Philippe2009:Allomyces_macrogynus:28583:Gene_0048 -> Philippe2009_Allomyces_macrogynus_28583_Gene_0048
+Philippe2009:Aplysia_californica:6500:Gene_0048 -> Philippe2009_Aplysia_californica_6500_Gene_0048
+Philippe2009:Batrachochytrium_dendrobatidis:109871:Gene_0048 -> Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0048
+Philippe2009:Branchiostoma_floridae:7739:Gene_0048 -> Philippe2009_Branchiostoma_floridae_7739_Gene_0048
+Philippe2009:Capitella_teleta:283909:Gene_0048 -> Philippe2009_Capitella_teleta_283909_Gene_0048
+Philippe2009:Capsaspora_owczarzaki:192875:Gene_0048 -> Philippe2009_Capsaspora_owczarzaki_192875_Gene_0048
+Philippe2009:Ciona_savignyi:51511:Gene_0048 -> Philippe2009_Ciona_savignyi_51511_Gene_0048
+Philippe2009:Clytia_hemisphaerica:252671:Gene_0048 -> Philippe2009_Clytia_hemisphaerica_252671_Gene_0048
+Philippe2009:Crassostrea_gigas:29159:Gene_0048 -> Philippe2009_Crassostrea_gigas_29159_Gene_0048
+Philippe2009:Danio_rerio:7955:Gene_0048 -> Philippe2009_Danio_rerio_7955_Gene_0048
+Philippe2009:Daphnia_pulex:6669:Gene_0048 -> Philippe2009_Daphnia_pulex_6669_Gene_0048
+Philippe2009:Euprymna_scolopes:6613:Gene_0048 -> Philippe2009_Euprymna_scolopes_6613_Gene_0048
+Philippe2009:Helobdella_robusta:6412:Gene_0048 -> Philippe2009_Helobdella_robusta_6412_Gene_0048
+Philippe2009:Hydra_magnipapillata:6087:Gene_0048 -> Philippe2009_Hydra_magnipapillata_6087_Gene_0048
+Philippe2009:Hydractinia_echinata:35630:Gene_0048 -> Philippe2009_Hydractinia_echinata_35630_Gene_0048
+Philippe2009:Ixodes_scapularis:6945:Gene_0048 -> Philippe2009_Ixodes_scapularis_6945_Gene_0048
+Philippe2009:Leucetta_chagosensis:185688:Gene_0048 -> Philippe2009_Leucetta_chagosensis_185688_Gene_0048
+Philippe2009:Metridium_senile:6116:Gene_0048 -> Philippe2009_Metridium_senile_6116_Gene_0048
+Philippe2009:Mnemiopsis_leidyi:27923:Gene_0048 -> Philippe2009_Mnemiopsis_leidyi_27923_Gene_0048
+Philippe2009:Molgula_tectiformis:30286:Gene_0048 -> Philippe2009_Molgula_tectiformis_30286_Gene_0048
+Philippe2009:Monosiga_brevicollis:81824:Gene_0048 -> Philippe2009_Monosiga_brevicollis_81824_Gene_0048
+Philippe2009:Nasonia_vitripennis:7425:Gene_0048 -> Philippe2009_Nasonia_vitripennis_7425_Gene_0048
+Philippe2009:Nematostella_vectensis:45351:Gene_0048 -> Philippe2009_Nematostella_vectensis_45351_Gene_0048
+Philippe2009:Oscarella_carmela:386100:Gene_0048 -> Philippe2009_Oscarella_carmela_386100_Gene_0048
+Philippe2009:Pediculus_humanus:121225:Gene_0048 -> Philippe2009_Pediculus_humanus_121225_Gene_0048
+Philippe2009:Petromyzon_marinus:7757:Gene_0048 -> Philippe2009_Petromyzon_marinus_7757_Gene_0048
+Philippe2009:Phycomyces_blakesleeanus:4837:Gene_0048 -> Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0048
+Philippe2009:Pleurobrachia_pileus:140457:Gene_0048 -> Philippe2009_Pleurobrachia_pileus_140457_Gene_0048
+Philippe2009:Podocoryne_carnea:6096:Gene_0048 -> Philippe2009_Podocoryne_carnea_6096_Gene_0048
+Philippe2009:Amphimedon_queenslandica:400682:Gene_0048 -> Philippe2009_Amphimedon_queenslandica_400682_Gene_0048
+Philippe2009:Rhizopus_oryzae:64495:Gene_0048 -> Philippe2009_Rhizopus_oryzae_64495_Gene_0048
+Philippe2009:Saccoglossus_kowalevskii:10224:Gene_0048 -> Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0048
+Philippe2009:Sphaeroforma_arctica:72019:Gene_0048 -> Philippe2009_Sphaeroforma_arctica_72019_Gene_0048
+Philippe2009:Spizellomyces_punctatus:109760:Gene_0048 -> Philippe2009_Spizellomyces_punctatus_109760_Gene_0048
+Philippe2009:Strongylocentrotus_purpuratus:7668:Gene_0048 -> Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0048
+Philippe2009:Sycon_raphanus:56443:Gene_0048 -> Philippe2009_Sycon_raphanus_56443_Gene_0048
+Philippe2009:Trichoplax_adhaerens:10228:Gene_0048 -> Philippe2009_Trichoplax_adhaerens_10228_Gene_0048
+Philippe2009:Allomyces_macrogynus:28583:Gene_0050 -> Philippe2009_Allomyces_macrogynus_28583_Gene_0050
+Philippe2009:Aplysia_californica:6500:Gene_0050 -> Philippe2009_Aplysia_californica_6500_Gene_0050
+Philippe2009:Batrachochytrium_dendrobatidis:109871:Gene_0050 -> Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0050
+Philippe2009:Branchiostoma_floridae:7739:Gene_0050 -> Philippe2009_Branchiostoma_floridae_7739_Gene_0050
+Philippe2009:Capitella_teleta:283909:Gene_0050 -> Philippe2009_Capitella_teleta_283909_Gene_0050
+Philippe2009:Capsaspora_owczarzaki:192875:Gene_0050 -> Philippe2009_Capsaspora_owczarzaki_192875_Gene_0050
+Philippe2009:Ciona_savignyi:51511:Gene_0050 -> Philippe2009_Ciona_savignyi_51511_Gene_0050
+Philippe2009:Clytia_hemisphaerica:252671:Gene_0050 -> Philippe2009_Clytia_hemisphaerica_252671_Gene_0050
+Philippe2009:Crassostrea_gigas:29159:Gene_0050 -> Philippe2009_Crassostrea_gigas_29159_Gene_0050
+Philippe2009:Danio_rerio:7955:Gene_0050 -> Philippe2009_Danio_rerio_7955_Gene_0050
+Philippe2009:Daphnia_pulex:6669:Gene_0050 -> Philippe2009_Daphnia_pulex_6669_Gene_0050
+Philippe2009:Euperipatoides_kanangrensis:488523:Gene_0050 -> Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0050
+Philippe2009:Euprymna_scolopes:6613:Gene_0050 -> Philippe2009_Euprymna_scolopes_6613_Gene_0050
+Philippe2009:Helobdella_robusta:6412:Gene_0050 -> Philippe2009_Helobdella_robusta_6412_Gene_0050
+Philippe2009:Hydra_magnipapillata:6087:Gene_0050 -> Philippe2009_Hydra_magnipapillata_6087_Gene_0050
+Philippe2009:Hydractinia_echinata:35630:Gene_0050 -> Philippe2009_Hydractinia_echinata_35630_Gene_0050
+Philippe2009:Ixodes_scapularis:6945:Gene_0050 -> Philippe2009_Ixodes_scapularis_6945_Gene_0050
+Philippe2009:Leucetta_chagosensis:185688:Gene_0050 -> Philippe2009_Leucetta_chagosensis_185688_Gene_0050
+Philippe2009:Metridium_senile:6116:Gene_0050 -> Philippe2009_Metridium_senile_6116_Gene_0050
+Philippe2009:Mnemiopsis_leidyi:27923:Gene_0050 -> Philippe2009_Mnemiopsis_leidyi_27923_Gene_0050
+Philippe2009:Molgula_tectiformis:30286:Gene_0050 -> Philippe2009_Molgula_tectiformis_30286_Gene_0050
+Philippe2009:Monosiga_brevicollis:81824:Gene_0050 -> Philippe2009_Monosiga_brevicollis_81824_Gene_0050
+Philippe2009:Monosiga_ovata:81526:Gene_0050 -> Philippe2009_Monosiga_ovata_81526_Gene_0050
+Philippe2009:Nasonia_vitripennis:7425:Gene_0050 -> Philippe2009_Nasonia_vitripennis_7425_Gene_0050
+Philippe2009:Nematostella_vectensis:45351:Gene_0050 -> Philippe2009_Nematostella_vectensis_45351_Gene_0050
+Philippe2009:Oopsacas_minuta:111878:Gene_0050 -> Philippe2009_Oopsacas_minuta_111878_Gene_0050
+Philippe2009:Oscarella_carmela:386100:Gene_0050 -> Philippe2009_Oscarella_carmela_386100_Gene_0050
+Philippe2009:Pediculus_humanus:121225:Gene_0050 -> Philippe2009_Pediculus_humanus_121225_Gene_0050
+Philippe2009:Petromyzon_marinus:7757:Gene_0050 -> Philippe2009_Petromyzon_marinus_7757_Gene_0050
+Philippe2009:Phycomyces_blakesleeanus:4837:Gene_0050 -> Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0050
+Philippe2009:Pleurobrachia_pileus:140457:Gene_0050 -> Philippe2009_Pleurobrachia_pileus_140457_Gene_0050
+Philippe2009:Podocoryne_carnea:6096:Gene_0050 -> Philippe2009_Podocoryne_carnea_6096_Gene_0050
+Philippe2009:Proterospongia_sp:218847:Gene_0050 -> Philippe2009_Proterospongia_sp_218847_Gene_0050
+Philippe2009:Amphimedon_queenslandica:400682:Gene_0050 -> Philippe2009_Amphimedon_queenslandica_400682_Gene_0050
+Philippe2009:Rhizopus_oryzae:64495:Gene_0050 -> Philippe2009_Rhizopus_oryzae_64495_Gene_0050
+Philippe2009:Saccoglossus_kowalevskii:10224:Gene_0050 -> Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0050
+Philippe2009:Sphaeroforma_arctica:72019:Gene_0050 -> Philippe2009_Sphaeroforma_arctica_72019_Gene_0050
+Philippe2009:Spizellomyces_punctatus:109760:Gene_0050 -> Philippe2009_Spizellomyces_punctatus_109760_Gene_0050
+Philippe2009:Strongylocentrotus_purpuratus:7668:Gene_0050 -> Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0050
+Philippe2009:Trichoplax_adhaerens:10228:Gene_0050 -> Philippe2009_Trichoplax_adhaerens_10228_Gene_0050
+Philippe2009:Tubifex_tubifex:6386:Gene_0050 -> Philippe2009_Tubifex_tubifex_6386_Gene_0050
+
+                                                              Gap/Ambiguity  Composition  p-value
+   1  Dunn2008_Acropora_millepora_45264_Tribe1162                    28.67%    passed     86.74%
+   2  Dunn2008_Anoplodactylus_eroticus_488521_Tribe1162              22.22%    passed     75.38%
+   3  Dunn2008_Asterina_pectinifera_7594_Tribe1162                   38.71%    passed     86.78%
+   4  Dunn2008_Biomphalaria_glabrata_6526_Tribe1162                  82.08%    failed      2.17%
+   5  Dunn2008_Boophilus_microplus_6941_Tribe1162                    22.22%    passed     82.16%
+   6  Dunn2008_Branchiostoma_floridae_7739_Tribe1162                 22.22%    passed     99.84%
+   7  Dunn2008_Capitella_teleta_283909_Tribe1162                     22.22%    passed     60.63%
+   8  Dunn2008_Ciona_intestinalis_7719_Tribe1162                     22.58%    passed     97.77%
+   9  Dunn2008_Cryptococcus_neoformans_5207_Tribe1162                21.51%    passed     81.44%
+  10  Dunn2008_Cyanea_capillata_27804_Tribe1162                      23.66%    passed     50.91%
+  11  Dunn2008_Drosophila_melanogaster_7227_Tribe1162                21.51%    passed     93.66%
+  12  Dunn2008_Gallus_gallus_9031_Tribe1162                          22.22%    passed     99.95%
+  13  Dunn2008_Homo_sapiens_9606_Tribe1162                           22.22%    passed     99.99%
+  14  Dunn2008_Hydra_vulgaris_01_6087_Tribe1162                      22.22%    passed     47.42%
+  15  Dunn2008_Hypsibius_dujardini_232323_Tribe1162                  22.22%    passed     74.40%
+  16  Dunn2008_Macrostomum_lignano_282301_Tribe1162                  36.92%    passed      6.89%
+  17  Dunn2008_Mnemiopsis_leidyi_27923_Tribe1162                     22.22%    passed     99.47%
+  18  Dunn2008_Mytilus_galloprovincialis_29158_Tribe1162             61.29%    passed     66.01%
+  19  Dunn2008_Nematostella_vectensis_45351_Tribe1162                22.22%    passed     93.97%
+  20  Dunn2008_Ptychodera_flava_63121_Tribe1162                      22.22%    passed     99.68%
+  21  Dunn2008_Richtersius_coronifer_245088_Tribe1162                21.51%    passed     62.36%
+  22  Dunn2008_Saccharomyces_cerevisiae_4932_Tribe1162               19.00%    passed     41.19%
+  23  Dunn2008_Saccoglossus_kowalevskii_10224_Tribe1162              22.22%    passed     99.38%
+  24  Dunn2008_Schmidtea_mediterranea_79327_Tribe1162                23.30%    passed     54.05%
+  25  Dunn2008_Terebratalia_transversa_34513_Tribe1162               22.22%    passed     90.36%
+  26  Dunn2008_Urechis_caupo_6431_Tribe1162                          22.22%    passed     98.27%
+  27  Dunn2008_Xenoturbella_bocki_242395_Tribe1162                   22.58%    passed     94.94%
+  28  Dunn2008_Acanthoscurria_gomesiana_115339_Tribe703              46.59%    passed     68.38%
+  29  Dunn2008_Asterina_pectinifera_7594_Tribe703                    29.75%    passed     34.84%
+  30  Dunn2008_Biomphalaria_glabrata_6526_Tribe703                   77.06%    passed     64.09%
+  31  Dunn2008_Boophilus_microplus_6941_Tribe703                     29.03%    passed     82.64%
+  32  Dunn2008_Capitella_teleta_283909_Tribe703                      29.39%    passed     68.85%
+  33  Dunn2008_Ciona_intestinalis_7719_Tribe703                      29.03%    passed     48.64%
+  34  Dunn2008_Crassostrea_virginica_6565_Tribe703                   59.86%    passed     12.13%
+  35  Dunn2008_Cryptococcus_neoformans_5207_Tribe703                 26.16%    passed     68.24%
+  36  Dunn2008_Drosophila_melanogaster_7227_Tribe703                 29.03%    passed     65.52%
+  37  Dunn2008_Dugesia_japonica_6161_Tribe703                        50.54%    passed     39.64%
+  38  Dunn2008_Echinococcus_granulosus_6210_Tribe703                 63.44%    passed     65.69%
+  39  Dunn2008_Echinoderes_horni_488522_Tribe703                     29.75%    passed     37.82%
+  40  Dunn2008_Euprymna_scolopes_6613_Tribe703                       34.41%    passed     62.55%
+  41  Dunn2008_Fenneropenaeus_chinensis_139456_Tribe703              33.69%    passed     74.10%
+  42  Dunn2008_Gallus_gallus_9031_Tribe703                           26.88%    passed     81.22%
+  43  Dunn2008_Haementeria_depressa_279730_Tribe703                  75.99%    passed     70.70%
+  44  Dunn2008_Homo_sapiens_9606_Tribe703                            29.39%    passed     49.11%
+  45  Dunn2008_Hydra_vulgaris_01_6087_Tribe703                       54.12%    passed     73.15%
+  46  Dunn2008_Hydractinia_echinata_35630_Tribe703                   29.39%    passed     99.95%
+  47  Dunn2008_Lumbricus_rubellus_35632_Tribe703                     64.52%    passed      8.58%
+  48  Dunn2008_Macrostomum_lignano_282301_Tribe703                   48.39%    failed      1.64%
+  49  Dunn2008_Mnemiopsis_leidyi_27923_Tribe703                      29.03%    passed     72.92%
+  50  Dunn2008_Monosiga_ovata_81526_Tribe703                         35.84%    passed     78.83%
+  51  Dunn2008_Nematostella_vectensis_45351_Tribe703                 29.39%    passed     89.35%
+  52  Dunn2008_Oscarella_carmela_386100_Tribe703                     29.03%    passed     81.95%
+  53  Dunn2008_Richtersius_coronifer_245088_Tribe703                 29.39%    passed     64.88%
+  54  Dunn2008_Saccharomyces_cerevisiae_4932_Tribe703                27.24%    passed     71.69%
+  55  Dunn2008_Saccoglossus_kowalevskii_10224_Tribe703               29.39%    passed     79.82%
+  56  Dunn2008_Schmidtea_mediterranea_79327_Tribe703                 32.97%    passed     93.50%
+  57  Dunn2008_Sphaeroforma_arctica_72019_Tribe703                   39.43%    passed     60.03%
+  58  Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe703           29.39%    passed     85.23%
+  59  Dunn2008_Trichinella_spiralis_6334_Tribe703                    64.87%    passed     25.49%
+  60  Dunn2008_Xiphinema_index_46003_Tribe703                        32.62%    passed     40.68%
+  61  Dunn2008_Acanthoscurria_gomesiana_115339_Tribe833              26.52%    passed     69.38%
+  62  Dunn2008_Acropora_millepora_45264_Tribe833                     26.52%    passed     90.96%
+  63  Dunn2008_Branchiostoma_floridae_7739_Tribe833                  55.56%    passed     20.07%
+  64  Dunn2008_Capitella_teleta_283909_Tribe833                      26.52%    passed     90.48%
+  65  Dunn2008_Ciona_intestinalis_7719_Tribe833                      26.52%    passed     83.54%
+  66  Dunn2008_Cryptococcus_neoformans_5207_Tribe833                 27.24%    passed     83.76%
+  67  Dunn2008_Drosophila_melanogaster_7227_Tribe833                 26.52%    passed     41.57%
+  68  Dunn2008_Echinococcus_granulosus_6210_Tribe833                 26.52%    passed     38.59%
+  69  Dunn2008_Echinoderes_horni_488522_Tribe833                     26.52%    passed     82.90%
+  70  Dunn2008_Euprymna_scolopes_6613_Tribe833                       26.16%    passed     81.31%
+  71  Dunn2008_Fenneropenaeus_chinensis_139456_Tribe833              28.32%    passed     76.21%
+  72  Dunn2008_Gallus_gallus_9031_Tribe833                           26.52%    passed     43.44%
+  73  Dunn2008_Homo_sapiens_9606_Tribe833                            26.52%    passed     64.69%
+  74  Dunn2008_Hydra_vulgaris_01_6087_Tribe833                       26.52%    passed     91.10%
+  75  Dunn2008_Hypsibius_dujardini_232323_Tribe833                   27.24%    passed     75.35%
+  76  Dunn2008_Mnemiopsis_leidyi_27923_Tribe833                      30.82%    passed     72.60%
+  77  Dunn2008_Monosiga_ovata_81526_Tribe833                         39.78%    passed     38.60%
+  78  Dunn2008_Nematostella_vectensis_45351_Tribe833                 26.52%    passed     85.36%
+  79  Dunn2008_Paraplanocera_oligoglena_1468194_Tribe833             26.52%    failed      3.95%
+  80  Dunn2008_Ptychodera_flava_63121_Tribe833                       26.52%    passed     86.79%
+  81  Dunn2008_Richtersius_coronifer_245088_Tribe833                 75.27%    passed     55.11%
+  82  Dunn2008_Saccharomyces_cerevisiae_4932_Tribe833                26.88%    passed     97.97%
+  83  Dunn2008_Saccoglossus_kowalevskii_10224_Tribe833               32.62%    passed     84.14%
+  84  Dunn2008_Schmidtea_mediterranea_79327_Tribe833                 26.52%    passed     41.75%
+  85  Dunn2008_Sphaeroforma_arctica_72019_Tribe833                   31.90%    passed     59.24%
+  86  Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe833           31.90%    passed     89.10%
+  87  Dunn2008_Trichinella_spiralis_6334_Tribe833                    46.59%    passed     93.55%
+  88  Dunn2008_Amoebidium_parasiticum_4881_Tribe868                  48.39%    passed     99.90%
+  89  Dunn2008_Anoplodactylus_eroticus_488521_Tribe868               32.26%    passed     21.00%
+  90  Dunn2008_Aplysia_californica_6500_Tribe868                     32.62%    passed     74.34%
+  91  Dunn2008_Asterina_pectinifera_7594_Tribe868                    32.62%    passed     35.79%
+  92  Dunn2008_Boophilus_microplus_6941_Tribe868                     32.62%    passed     54.40%
+  93  Dunn2008_Branchiostoma_floridae_7739_Tribe868                  34.77%    passed     64.33%
+  94  Dunn2008_Capitella_teleta_283909_Tribe868                      32.62%    passed     76.99%
+  95  Dunn2008_Capsaspora_owczarzaki_192875_Tribe868                 35.84%    passed     20.65%
+  96  Dunn2008_Chaetoderma_nitidulum_256131_Tribe868                 32.62%    passed     81.38%
+  97  Dunn2008_Ciona_intestinalis_7719_Tribe868                      32.97%    passed     88.14%
+  98  Dunn2008_Crassostrea_virginica_6565_Tribe868                   52.33%    passed     70.37%
+  99  Dunn2008_Cryptococcus_neoformans_5207_Tribe868                 32.62%    passed     35.95%
+ 100  Dunn2008_Dugesia_japonica_6161_Tribe868                        64.52%    passed     53.55%
+ 101  Dunn2008_Echinococcus_granulosus_6210_Tribe868                 32.62%    passed     43.35%
+ 102  Dunn2008_Gallus_gallus_9031_Tribe868                           32.62%    passed     52.96%
+ 103  Dunn2008_Homo_sapiens_9606_Tribe868                            32.62%    passed     78.47%
+ 104  Dunn2008_Hydractinia_echinata_35630_Tribe868                   55.20%    passed     91.43%
+ 105  Dunn2008_Lumbricus_rubellus_35632_Tribe868                     32.62%    passed     75.08%
+ 106  Dunn2008_Mnemiopsis_leidyi_27923_Tribe868                      32.62%    passed     43.70%
+ 107  Dunn2008_Monosiga_ovata_81526_Tribe868                         32.97%    passed     17.78%
+ 108  Dunn2008_Nematostella_vectensis_45351_Tribe868                 32.62%    passed     96.18%
+ 109  Dunn2008_Ptychodera_flava_63121_Tribe868                       32.62%    passed     47.60%
+ 110  Dunn2008_Saccharomyces_cerevisiae_4932_Tribe868                32.26%    passed     41.67%
+ 111  Dunn2008_Saccoglossus_kowalevskii_10224_Tribe868               32.62%    passed     68.96%
+ 112  Dunn2008_Sphaeroforma_arctica_72019_Tribe868                   32.26%    passed     96.75%
+ 113  Philippe2009_Allomyces_macrogynus_28583_Gene_0044              34.77%    passed     81.64%
+ 114  Philippe2009_Amoebidium_parasiticum_4881_Gene_0044             50.54%    passed     99.94%
+ 115  Philippe2009_Anoplodactylus_eroticus_488521_Gene_0044          34.77%    passed     22.51%
+ 116  Philippe2009_Aplysia_californica_6500_Gene_0044                34.77%    passed     76.03%
+ 117  Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0044   34.77%    passed     69.50%
+ 118  Philippe2009_Branchiostoma_floridae_7739_Gene_0044             34.77%    passed     55.55%
+ 119  Philippe2009_Capitella_teleta_283909_Gene_0044                 34.77%    passed     86.18%
+ 120  Philippe2009_Capsaspora_owczarzaki_192875_Gene_0044            35.13%    passed      9.29%
+ 121  Philippe2009_Carteriospongia_foliascens_593584_Gene_0044       35.13%    passed     31.93%
+ 122  Philippe2009_Ciona_savignyi_51511_Gene_0044                    35.13%    passed     91.94%
+ 123  Philippe2009_Crassostrea_gigas_29159_Gene_0044                 34.77%    passed     75.55%
+ 124  Philippe2009_Danio_rerio_7955_Gene_0044                        34.77%    passed     31.71%
+ 125  Philippe2009_Daphnia_pulex_6669_Gene_0044                      34.77%    passed     74.05%
+ 126  Philippe2009_Helobdella_robusta_6412_Gene_0044                 59.50%    passed     73.53%
+ 127  Philippe2009_Hydra_magnipapillata_6087_Gene_0044               34.77%    passed     67.92%
+ 128  Philippe2009_Hydractinia_echinata_35630_Gene_0044              57.71%    passed     84.15%
+ 129  Philippe2009_Ixodes_scapularis_6945_Gene_0044                  34.77%    passed     52.16%
+ 130  Philippe2009_Leucetta_chagosensis_185688_Gene_0044             34.77%    passed     84.10%
+ 131  Philippe2009_Mnemiopsis_leidyi_27923_Gene_0044                 34.77%    passed     38.15%
+ 132  Philippe2009_Molgula_tectiformis_30286_Gene_0044               34.77%    passed     99.07%
+ 133  Philippe2009_Monosiga_brevicollis_81824_Gene_0044              34.77%    passed     83.18%
+ 134  Philippe2009_Monosiga_ovata_81526_Gene_0044                    34.77%    passed     17.62%
+ 135  Philippe2009_Nasonia_vitripennis_7425_Gene_0044                34.77%    passed     88.85%
+ 136  Philippe2009_Nematostella_vectensis_45351_Gene_0044            34.77%    passed     96.09%
+ 137  Philippe2009_Pediculus_humanus_121225_Gene_0044                34.77%    passed     87.57%
+ 138  Philippe2009_Petromyzon_marinus_7757_Gene_0044                 67.74%    passed     64.04%
+ 139  Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0044           34.77%    passed     99.71%
+ 140  Philippe2009_Pleurobrachia_pileus_140457_Gene_0044             35.13%    failed      4.54%
+ 141  Philippe2009_Podocoryne_carnea_6096_Gene_0044                  34.77%    passed     76.95%
+ 142  Philippe2009_Amphimedon_queenslandica_400682_Gene_0044         35.13%    passed     72.04%
+ 143  Philippe2009_Rhizopus_oryzae_64495_Gene_0044                   34.77%    passed     99.98%
+ 144  Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0044          34.77%    passed     77.51%
+ 145  Philippe2009_Sphaeroforma_arctica_72019_Gene_0044              34.77%    passed     92.64%
+ 146  Philippe2009_Spizellomyces_punctatus_109760_Gene_0044          34.77%    passed     98.32%
+ 147  Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0044      34.77%    passed     39.38%
+ 148  Philippe2009_Trichoplax_adhaerens_10228_Gene_0044              34.77%    passed     80.05%
+ 149  Philippe2009_Tubifex_tubifex_6386_Gene_0044                    44.80%    passed     95.22%
+ 150  Philippe2009_Acropora_millepora_45264_Gene_0045                27.24%    passed     93.84%
+ 151  Philippe2009_Allomyces_macrogynus_28583_Gene_0045              32.97%    passed     95.21%
+ 152  Philippe2009_Aplysia_californica_6500_Gene_0045                27.24%    passed     89.05%
+ 153  Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0045   41.94%    passed     44.45%
+ 154  Philippe2009_Branchiostoma_floridae_7739_Gene_0045             27.24%    passed     80.48%
+ 155  Philippe2009_Capitella_teleta_283909_Gene_0045                 27.24%    passed     94.76%
+ 156  Philippe2009_Capsaspora_owczarzaki_192875_Gene_0045            27.24%    passed     89.59%
+ 157  Philippe2009_Ciona_savignyi_51511_Gene_0045                    27.24%    passed     94.57%
+ 158  Philippe2009_Clytia_hemisphaerica_252671_Gene_0045             27.24%    passed     96.31%
+ 159  Philippe2009_Crassostrea_gigas_29159_Gene_0045                 31.54%    passed     77.85%
+ 160  Philippe2009_Danio_rerio_7955_Gene_0045                        27.24%    passed     64.08%
+ 161  Philippe2009_Daphnia_pulex_6669_Gene_0045                      27.24%    passed     57.36%
+ 162  Philippe2009_Euprymna_scolopes_6613_Gene_0045                  27.24%    passed     85.77%
+ 163  Philippe2009_Helobdella_robusta_6412_Gene_0045                 27.24%    passed     98.52%
+ 164  Philippe2009_Hydra_magnipapillata_6087_Gene_0045               27.24%    passed     89.73%
+ 165  Philippe2009_Hydractinia_echinata_35630_Gene_0045              86.02%    passed     99.19%
+ 166  Philippe2009_Ixodes_scapularis_6945_Gene_0045                  31.90%    passed     66.95%
+ 167  Philippe2009_Leucetta_chagosensis_185688_Gene_0045             49.10%    passed     71.49%
+ 168  Philippe2009_Mnemiopsis_leidyi_27923_Gene_0045                 27.24%    passed     85.51%
+ 169  Philippe2009_Molgula_tectiformis_30286_Gene_0045               27.24%    passed     91.63%
+ 170  Philippe2009_Monosiga_brevicollis_81824_Gene_0045              27.60%    passed     78.60%
+ 171  Philippe2009_Monosiga_ovata_81526_Gene_0045                    27.96%    passed     57.44%
+ 172  Philippe2009_Nasonia_vitripennis_7425_Gene_0045                27.24%    passed     78.20%
+ 173  Philippe2009_Nematostella_vectensis_45351_Gene_0045            27.24%    passed     88.65%
+ 174  Philippe2009_Pediculus_humanus_121225_Gene_0045                27.24%    passed     73.43%
+ 175  Philippe2009_Petromyzon_marinus_7757_Gene_0045                 44.09%    passed     30.69%
+ 176  Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0045           32.97%    passed     82.74%
+ 177  Philippe2009_Pleurobrachia_pileus_140457_Gene_0045             27.24%    passed     83.59%
+ 178  Philippe2009_Podocoryne_carnea_6096_Gene_0045                  46.95%    passed     99.26%
+ 179  Philippe2009_Proterospongia_sp_218847_Gene_0045                27.96%    passed     97.47%
+ 180  Philippe2009_Amphimedon_queenslandica_400682_Gene_0045         27.96%    passed     99.94%
+ 181  Philippe2009_Rhizopus_oryzae_64495_Gene_0045                   32.97%    passed     95.34%
+ 182  Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0045          27.24%    passed     95.63%
+ 183  Philippe2009_Sphaeroforma_arctica_72019_Gene_0045              27.24%    passed     70.12%
+ 184  Philippe2009_Spizellomyces_punctatus_109760_Gene_0045          29.39%    passed     90.37%
+ 185  Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0045      27.24%    passed     97.52%
+ 186  Philippe2009_Trichoplax_adhaerens_10228_Gene_0045              27.60%    passed     98.09%
+ 187  Philippe2009_Acropora_millepora_45264_Gene_0046                34.05%    passed     95.78%
+ 188  Philippe2009_Allomyces_macrogynus_28583_Gene_0046              29.75%    passed     64.50%
+ 189  Philippe2009_Anoplodactylus_eroticus_488521_Gene_0046          31.54%    passed     90.67%
+ 190  Philippe2009_Aplysia_californica_6500_Gene_0046                29.75%    passed     99.47%
+ 191  Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0046   44.44%    passed     93.08%
+ 192  Philippe2009_Branchiostoma_floridae_7739_Gene_0046             29.75%    passed     99.71%
+ 193  Philippe2009_Capitella_teleta_283909_Gene_0046                 29.75%    passed     71.53%
+ 194  Philippe2009_Capsaspora_owczarzaki_192875_Gene_0046            45.16%    passed     84.35%
+ 195  Philippe2009_Ciona_savignyi_51511_Gene_0046                    29.75%    passed     98.82%
+ 196  Philippe2009_Crassostrea_gigas_29159_Gene_0046                 29.75%    passed     97.09%
+ 197  Philippe2009_Cyanea_capillata_27804_Gene_0046                  31.18%    passed     74.98%
+ 198  Philippe2009_Danio_rerio_7955_Gene_0046                        29.75%    passed     99.93%
+ 199  Philippe2009_Daphnia_pulex_6669_Gene_0046                      29.75%    passed    100.00%
+ 200  Philippe2009_Euprymna_scolopes_6613_Gene_0046                  45.16%    passed     97.97%
+ 201  Philippe2009_Helobdella_robusta_6412_Gene_0046                 45.16%    passed     96.79%
+ 202  Philippe2009_Hydra_magnipapillata_6087_Gene_0046               29.75%    passed     74.07%
+ 203  Philippe2009_Ixodes_scapularis_6945_Gene_0046                  29.75%    passed     53.01%
+ 204  Philippe2009_Metridium_senile_6116_Gene_0046                   29.75%    passed     99.28%
+ 205  Philippe2009_Mnemiopsis_leidyi_27923_Gene_0046                 29.75%    passed     99.32%
+ 206  Philippe2009_Molgula_tectiformis_30286_Gene_0046               29.75%    passed     87.72%
+ 207  Philippe2009_Monosiga_brevicollis_81824_Gene_0046              29.75%    passed     30.86%
+ 208  Philippe2009_Monosiga_ovata_81526_Gene_0046                    38.35%    passed     89.86%
+ 209  Philippe2009_Nasonia_vitripennis_7425_Gene_0046                29.75%    passed    100.00%
+ 210  Philippe2009_Nematostella_vectensis_45351_Gene_0046            29.75%    passed     98.38%
+ 211  Philippe2009_Oopsacas_minuta_111878_Gene_0046                  29.75%    passed     74.55%
+ 212  Philippe2009_Pedicellina_cernua_43123_Gene_0046                29.75%    passed     88.19%
+ 213  Philippe2009_Pediculus_humanus_121225_Gene_0046                32.26%    passed     94.56%
+ 214  Philippe2009_Petromyzon_marinus_7757_Gene_0046                 37.28%    passed     77.92%
+ 215  Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0046           29.75%    passed     83.19%
+ 216  Philippe2009_Pleurobrachia_pileus_140457_Gene_0046             29.75%    passed     99.35%
+ 217  Philippe2009_Podocoryne_carnea_6096_Gene_0046                  34.05%    passed     80.90%
+ 218  Philippe2009_Proterospongia_sp_218847_Gene_0046                33.69%    passed     97.75%
+ 219  Philippe2009_Amphimedon_queenslandica_400682_Gene_0046         29.75%    passed     72.44%
+ 220  Philippe2009_Rhizopus_oryzae_64495_Gene_0046                   34.05%    passed     80.97%
+ 221  Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0046          29.75%    passed     97.42%
+ 222  Philippe2009_Scutigera_coleoptrata_29022_Gene_0046             66.31%    passed     74.94%
+ 223  Philippe2009_Spizellomyces_punctatus_109760_Gene_0046          48.39%    passed     42.19%
+ 224  Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0046      29.75%    passed     98.64%
+ 225  Philippe2009_Trichoplax_adhaerens_10228_Gene_0046              29.75%    passed     40.55%
+ 226  Philippe2009_Tubifex_tubifex_6386_Gene_0046                    29.75%    passed     98.73%
+ 227  Philippe2009_Xenoturbella_bocki_242395_Gene_0046               29.75%    passed     84.96%
+ 228  Philippe2009_Acropora_millepora_45264_Gene_0047                16.13%    passed     89.85%
+ 229  Philippe2009_Allomyces_macrogynus_28583_Gene_0047              16.13%    passed     76.29%
+ 230  Philippe2009_Aplysia_californica_6500_Gene_0047                16.13%    passed     99.09%
+ 231  Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0047   16.13%    passed     78.59%
+ 232  Philippe2009_Branchiostoma_floridae_7739_Gene_0047             16.13%    passed     96.50%
+ 233  Philippe2009_Capitella_teleta_283909_Gene_0047                 19.00%    passed     85.07%
+ 234  Philippe2009_Capsaspora_owczarzaki_192875_Gene_0047            28.32%    passed     82.74%
+ 235  Philippe2009_Ciona_savignyi_51511_Gene_0047                    16.13%    passed     71.78%
+ 236  Philippe2009_Clytia_hemisphaerica_252671_Gene_0047             16.13%    passed     55.94%
+ 237  Philippe2009_Crassostrea_gigas_29159_Gene_0047                 16.13%    passed     96.50%
+ 238  Philippe2009_Danio_rerio_7955_Gene_0047                        16.13%    passed     89.65%
+ 239  Philippe2009_Daphnia_pulex_6669_Gene_0047                      16.13%    passed     64.13%
+ 240  Philippe2009_Ephydatia_muelleri_6052_Gene_0047                 30.47%    passed     92.81%
+ 241  Philippe2009_Euprymna_scolopes_6613_Gene_0047                  16.13%    passed     94.89%
+ 242  Philippe2009_Helobdella_robusta_6412_Gene_0047                 16.13%    passed     61.19%
+ 243  Philippe2009_Heterochone_sp_367900_Gene_0047                   46.59%    passed      7.38%
+ 244  Philippe2009_Hydra_magnipapillata_6087_Gene_0047               16.13%    passed     75.28%
+ 245  Philippe2009_Ixodes_scapularis_6945_Gene_0047                  16.13%    passed     67.20%
+ 246  Philippe2009_Mnemiopsis_leidyi_27923_Gene_0047                 16.13%    passed     88.65%
+ 247  Philippe2009_Molgula_tectiformis_30286_Gene_0047               16.13%    passed     65.96%
+ 248  Philippe2009_Monosiga_brevicollis_81824_Gene_0047              16.13%    passed     82.22%
+ 249  Philippe2009_Monosiga_ovata_81526_Gene_0047                    20.79%    passed     91.12%
+ 250  Philippe2009_Nasonia_vitripennis_7425_Gene_0047                16.13%    passed     93.22%
+ 251  Philippe2009_Nematostella_vectensis_45351_Gene_0047            16.13%    passed     98.00%
+ 252  Philippe2009_Oopsacas_minuta_111878_Gene_0047                  27.60%    passed     73.80%
+ 253  Philippe2009_Oscarella_carmela_386100_Gene_0047                16.13%    passed     98.24%
+ 254  Philippe2009_Pediculus_humanus_121225_Gene_0047                16.13%    passed     85.92%
+ 255  Philippe2009_Petromyzon_marinus_7757_Gene_0047                 16.13%    passed     99.35%
+ 256  Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0047           39.43%    passed     90.16%
+ 257  Philippe2009_Pleurobrachia_pileus_140457_Gene_0047             16.13%    passed     68.00%
+ 258  Philippe2009_Amphimedon_queenslandica_400682_Gene_0047         16.13%    passed     54.49%
+ 259  Philippe2009_Rhizopus_oryzae_64495_Gene_0047                   16.13%    passed     83.99%
+ 260  Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0047          16.13%    passed     92.25%
+ 261  Philippe2009_Spizellomyces_punctatus_109760_Gene_0047          28.67%    passed     99.44%
+ 262  Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0047      16.13%    passed     90.10%
+ 263  Philippe2009_Trichoplax_adhaerens_10228_Gene_0047              20.07%    passed     96.16%
+ 264  Philippe2009_Tubifex_tubifex_6386_Gene_0047                    16.13%    passed     76.83%
+ 265  Philippe2009_Mertensiid_sp_140499_Gene_0047                    16.13%    passed     86.30%
+ 266  Philippe2009_Allomyces_macrogynus_28583_Gene_0048              30.11%    passed     14.11%
+ 267  Philippe2009_Aplysia_californica_6500_Gene_0048                27.96%    passed     90.90%
+ 268  Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0048   38.71%    passed     99.68%
+ 269  Philippe2009_Branchiostoma_floridae_7739_Gene_0048             27.96%    passed     78.50%
+ 270  Philippe2009_Capitella_teleta_283909_Gene_0048                 29.75%    passed     73.64%
+ 271  Philippe2009_Capsaspora_owczarzaki_192875_Gene_0048            38.71%    passed     93.86%
+ 272  Philippe2009_Ciona_savignyi_51511_Gene_0048                    27.96%    passed     85.65%
+ 273  Philippe2009_Clytia_hemisphaerica_252671_Gene_0048             29.39%    passed     32.27%
+ 274  Philippe2009_Crassostrea_gigas_29159_Gene_0048                 43.01%    passed     57.99%
+ 275  Philippe2009_Danio_rerio_7955_Gene_0048                        27.96%    passed     36.81%
+ 276  Philippe2009_Daphnia_pulex_6669_Gene_0048                      29.39%    passed     68.06%
+ 277  Philippe2009_Euprymna_scolopes_6613_Gene_0048                  27.96%    passed     63.93%
+ 278  Philippe2009_Helobdella_robusta_6412_Gene_0048                 37.99%    passed     71.27%
+ 279  Philippe2009_Hydra_magnipapillata_6087_Gene_0048               27.96%    passed     54.60%
+ 280  Philippe2009_Hydractinia_echinata_35630_Gene_0048              28.32%    passed     63.30%
+ 281  Philippe2009_Ixodes_scapularis_6945_Gene_0048                  27.96%    passed     79.89%
+ 282  Philippe2009_Leucetta_chagosensis_185688_Gene_0048             47.31%    passed     91.65%
+ 283  Philippe2009_Metridium_senile_6116_Gene_0048                   27.96%    passed     62.75%
+ 284  Philippe2009_Mnemiopsis_leidyi_27923_Gene_0048                 29.03%    passed     82.04%
+ 285  Philippe2009_Molgula_tectiformis_30286_Gene_0048               27.96%    passed     93.16%
+ 286  Philippe2009_Monosiga_brevicollis_81824_Gene_0048              31.18%    passed     81.95%
+ 287  Philippe2009_Nasonia_vitripennis_7425_Gene_0048                27.96%    passed     87.49%
+ 288  Philippe2009_Nematostella_vectensis_45351_Gene_0048            27.96%    passed     75.90%
+ 289  Philippe2009_Oscarella_carmela_386100_Gene_0048                27.96%    passed     94.51%
+ 290  Philippe2009_Pediculus_humanus_121225_Gene_0048                29.75%    passed     44.16%
+ 291  Philippe2009_Petromyzon_marinus_7757_Gene_0048                 27.96%    passed     84.00%
+ 292  Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0048           29.75%    passed     92.08%
+ 293  Philippe2009_Pleurobrachia_pileus_140457_Gene_0048             29.03%    passed     90.02%
+ 294  Philippe2009_Podocoryne_carnea_6096_Gene_0048                  75.99%    passed     62.56%
+ 295  Philippe2009_Amphimedon_queenslandica_400682_Gene_0048         28.32%    passed     79.29%
+ 296  Philippe2009_Rhizopus_oryzae_64495_Gene_0048                   27.96%    passed     98.86%
+ 297  Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0048          27.96%    passed     96.33%
+ 298  Philippe2009_Sphaeroforma_arctica_72019_Gene_0048              71.68%    passed     51.86%
+ 299  Philippe2009_Spizellomyces_punctatus_109760_Gene_0048          40.50%    passed     83.36%
+ 300  Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0048      27.96%    passed     98.26%
+ 301  Philippe2009_Sycon_raphanus_56443_Gene_0048                    30.82%    passed     33.39%
+ 302  Philippe2009_Trichoplax_adhaerens_10228_Gene_0048              29.03%    passed     26.04%
+ 303  Philippe2009_Allomyces_macrogynus_28583_Gene_0050              34.77%    passed     99.34%
+ 304  Philippe2009_Aplysia_californica_6500_Gene_0050                34.77%    passed     99.35%
+ 305  Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0050   35.48%    passed     38.20%
+ 306  Philippe2009_Branchiostoma_floridae_7739_Gene_0050             34.77%    passed     98.07%
+ 307  Philippe2009_Capitella_teleta_283909_Gene_0050                 35.48%    passed     85.88%
+ 308  Philippe2009_Capsaspora_owczarzaki_192875_Gene_0050            35.13%    passed     77.71%
+ 309  Philippe2009_Ciona_savignyi_51511_Gene_0050                    34.77%    passed     94.12%
+ 310  Philippe2009_Clytia_hemisphaerica_252671_Gene_0050             34.77%    passed     64.86%
+ 311  Philippe2009_Crassostrea_gigas_29159_Gene_0050                 53.76%    passed     96.21%
+ 312  Philippe2009_Danio_rerio_7955_Gene_0050                        34.77%    passed     93.72%
+ 313  Philippe2009_Daphnia_pulex_6669_Gene_0050                      34.77%    passed     95.03%
+ 314  Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0050      34.77%    passed     72.22%
+ 315  Philippe2009_Euprymna_scolopes_6613_Gene_0050                  41.22%    passed     88.19%
+ 316  Philippe2009_Helobdella_robusta_6412_Gene_0050                 58.42%    passed     75.48%
+ 317  Philippe2009_Hydra_magnipapillata_6087_Gene_0050               34.77%    passed     99.84%
+ 318  Philippe2009_Hydractinia_echinata_35630_Gene_0050              34.77%    passed     99.57%
+ 319  Philippe2009_Ixodes_scapularis_6945_Gene_0050                  34.77%    passed     38.27%
+ 320  Philippe2009_Leucetta_chagosensis_185688_Gene_0050             48.75%    passed     87.94%
+ 321  Philippe2009_Metridium_senile_6116_Gene_0050                   34.77%    passed     99.17%
+ 322  Philippe2009_Mnemiopsis_leidyi_27923_Gene_0050                 34.77%    passed     90.65%
+ 323  Philippe2009_Molgula_tectiformis_30286_Gene_0050               34.77%    passed     49.91%
+ 324  Philippe2009_Monosiga_brevicollis_81824_Gene_0050              46.59%    passed     93.45%
+ 325  Philippe2009_Monosiga_ovata_81526_Gene_0050                    34.77%    passed     96.59%
+ 326  Philippe2009_Nasonia_vitripennis_7425_Gene_0050                34.77%    passed     97.98%
+ 327  Philippe2009_Nematostella_vectensis_45351_Gene_0050            34.77%    passed     96.97%
+ 328  Philippe2009_Oopsacas_minuta_111878_Gene_0050                  46.59%    passed     81.19%
+ 329  Philippe2009_Oscarella_carmela_386100_Gene_0050                34.77%    passed     89.53%
+ 330  Philippe2009_Pediculus_humanus_121225_Gene_0050                34.77%    passed     78.24%
+ 331  Philippe2009_Petromyzon_marinus_7757_Gene_0050                 34.77%    passed     88.31%
+ 332  Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0050           34.77%    passed     96.50%
+ 333  Philippe2009_Pleurobrachia_pileus_140457_Gene_0050             34.77%    passed     64.71%
+ 334  Philippe2009_Podocoryne_carnea_6096_Gene_0050                  44.80%    passed     97.58%
+ 335  Philippe2009_Proterospongia_sp_218847_Gene_0050                34.77%    passed     89.45%
+ 336  Philippe2009_Amphimedon_queenslandica_400682_Gene_0050         60.22%    passed     60.45%
+ 337  Philippe2009_Rhizopus_oryzae_64495_Gene_0050                   34.77%    passed     96.73%
+ 338  Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0050          34.77%    passed     99.33%
+ 339  Philippe2009_Sphaeroforma_arctica_72019_Gene_0050              36.20%    passed     70.98%
+ 340  Philippe2009_Spizellomyces_punctatus_109760_Gene_0050          44.80%    passed     86.20%
+ 341  Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0050      34.77%    passed     99.77%
+ 342  Philippe2009_Trichoplax_adhaerens_10228_Gene_0050              34.77%    passed     28.66%
+ 343  Philippe2009_Tubifex_tubifex_6386_Gene_0050                    34.77%    passed     40.54%
+WARNING: 26 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                                          32.82%  4 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.187 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 192321)...
+WARNING: Default model LG may be under-fitting. Use option '-m TEST' to determine the best-fit model.
+
+NOTE: 17 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -60881.292
+Optimal log-likelihood: -59821.359
+Parameters optimization took 1 rounds (0.351 sec)
+Computing ML distances based on estimated model parameters... 10.215 sec
+WARNING: Some pairwise ML distances are too long (saturated)
+Computing BIONJ tree...
+0.111 seconds
+Log-likelihood of BIONJ tree: -60744.042
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 22.592 second
+Computing log-likelihood of 98 initial trees ... 15.838 seconds
+Current best score: -59635.891
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -59479.529
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -59458.316
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 5: -59417.622
+Iteration 10 / LogL: -59472.792 / Time: 0h:1m:16s
+Iteration 20 / LogL: -59432.930 / Time: 0h:1m:43s
+Finish initializing candidate tree set (20)
+Current best tree score: -59417.622 / CPU time: 91.264
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 22: -59391.424
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 25: -59366.186
+Iteration 30 / LogL: -59382.237 / Time: 0h:2m:5s (0h:6m:52s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 32: -59364.561
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 33: -59355.754
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 35: -59346.411
+Iteration 40 / LogL: -59367.352 / Time: 0h:2m:28s (0h:6m:1s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 41: -59340.451
+Iteration 50 / LogL: -59362.440 / Time: 0h:2m:50s (0h:5m:16s left)
+Log-likelihood cutoff on original alignment: -59545.282
+Iteration 60 / LogL: -59353.152 / Time: 0h:3m:13s (0h:4m:25s left)
+
+******************************************************
+CHECKPOINT: Resuming analysis from mafft/test/component39/DEFAULT_component39.ckp.gz
+
+IQ-TREE version 1.5.3 for Linux 64-bit built Mar 12 2017
+Copyright (c) 2011-2016 Nguyen Lam Tung, Olga Chernomor, Arndt von Haeseler and Bui Quang Minh.
+
+Host:    r1226.uppmax.uu.se (AVX2, FMA3, 243 GB RAM)
+Command: iqtree -s mafft/test/component39/component39.mafft -nt 1 -bb 1000 -pre mafft/test/component39/DEFAULT_component39
+Seed:    192321 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug  8 09:13:48 2022
+Kernel:  AVX+FMA
+
+NOTE: Consider using the multicore version because your CPU has 16 cores!
+
+Reading alignment file mafft/test/component39/component39.mafft ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 343 sequences with 279 columns and 278 patterns (246 informative sites, 15 constant sites)
+WARNING: Some sequence names are changed as follows:
+Dunn2008:Acropora_millepora:45264:Tribe1162 -> Dunn2008_Acropora_millepora_45264_Tribe1162
+Dunn2008:Anoplodactylus_eroticus:488521:Tribe1162 -> Dunn2008_Anoplodactylus_eroticus_488521_Tribe1162
+Dunn2008:Asterina_pectinifera:7594:Tribe1162 -> Dunn2008_Asterina_pectinifera_7594_Tribe1162
+Dunn2008:Biomphalaria_glabrata:6526:Tribe1162 -> Dunn2008_Biomphalaria_glabrata_6526_Tribe1162
+Dunn2008:Boophilus_microplus:6941:Tribe1162 -> Dunn2008_Boophilus_microplus_6941_Tribe1162
+Dunn2008:Branchiostoma_floridae:7739:Tribe1162 -> Dunn2008_Branchiostoma_floridae_7739_Tribe1162
+Dunn2008:Capitella_teleta:283909:Tribe1162 -> Dunn2008_Capitella_teleta_283909_Tribe1162
+Dunn2008:Ciona_intestinalis:7719:Tribe1162 -> Dunn2008_Ciona_intestinalis_7719_Tribe1162
+Dunn2008:Cryptococcus_neoformans:5207:Tribe1162 -> Dunn2008_Cryptococcus_neoformans_5207_Tribe1162
+Dunn2008:Cyanea_capillata:27804:Tribe1162 -> Dunn2008_Cyanea_capillata_27804_Tribe1162
+Dunn2008:Drosophila_melanogaster:7227:Tribe1162 -> Dunn2008_Drosophila_melanogaster_7227_Tribe1162
+Dunn2008:Gallus_gallus:9031:Tribe1162 -> Dunn2008_Gallus_gallus_9031_Tribe1162
+Dunn2008:Homo_sapiens:9606:Tribe1162 -> Dunn2008_Homo_sapiens_9606_Tribe1162
+Dunn2008:Hydra_vulgaris_01:6087:Tribe1162 -> Dunn2008_Hydra_vulgaris_01_6087_Tribe1162
+Dunn2008:Hypsibius_dujardini:232323:Tribe1162 -> Dunn2008_Hypsibius_dujardini_232323_Tribe1162
+Dunn2008:Macrostomum_lignano:282301:Tribe1162 -> Dunn2008_Macrostomum_lignano_282301_Tribe1162
+Dunn2008:Mnemiopsis_leidyi:27923:Tribe1162 -> Dunn2008_Mnemiopsis_leidyi_27923_Tribe1162
+Dunn2008:Mytilus_galloprovincialis:29158:Tribe1162 -> Dunn2008_Mytilus_galloprovincialis_29158_Tribe1162
+Dunn2008:Nematostella_vectensis:45351:Tribe1162 -> Dunn2008_Nematostella_vectensis_45351_Tribe1162
+Dunn2008:Ptychodera_flava:63121:Tribe1162 -> Dunn2008_Ptychodera_flava_63121_Tribe1162
+Dunn2008:Richtersius_coronifer:245088:Tribe1162 -> Dunn2008_Richtersius_coronifer_245088_Tribe1162
+Dunn2008:Saccharomyces_cerevisiae:4932:Tribe1162 -> Dunn2008_Saccharomyces_cerevisiae_4932_Tribe1162
+Dunn2008:Saccoglossus_kowalevskii:10224:Tribe1162 -> Dunn2008_Saccoglossus_kowalevskii_10224_Tribe1162
+Dunn2008:Schmidtea_mediterranea:79327:Tribe1162 -> Dunn2008_Schmidtea_mediterranea_79327_Tribe1162
+Dunn2008:Terebratalia_transversa:34513:Tribe1162 -> Dunn2008_Terebratalia_transversa_34513_Tribe1162
+Dunn2008:Urechis_caupo:6431:Tribe1162 -> Dunn2008_Urechis_caupo_6431_Tribe1162
+Dunn2008:Xenoturbella_bocki:242395:Tribe1162 -> Dunn2008_Xenoturbella_bocki_242395_Tribe1162
+Dunn2008:Acanthoscurria_gomesiana:115339:Tribe703 -> Dunn2008_Acanthoscurria_gomesiana_115339_Tribe703
+Dunn2008:Asterina_pectinifera:7594:Tribe703 -> Dunn2008_Asterina_pectinifera_7594_Tribe703
+Dunn2008:Biomphalaria_glabrata:6526:Tribe703 -> Dunn2008_Biomphalaria_glabrata_6526_Tribe703
+Dunn2008:Boophilus_microplus:6941:Tribe703 -> Dunn2008_Boophilus_microplus_6941_Tribe703
+Dunn2008:Capitella_teleta:283909:Tribe703 -> Dunn2008_Capitella_teleta_283909_Tribe703
+Dunn2008:Ciona_intestinalis:7719:Tribe703 -> Dunn2008_Ciona_intestinalis_7719_Tribe703
+Dunn2008:Crassostrea_virginica:6565:Tribe703 -> Dunn2008_Crassostrea_virginica_6565_Tribe703
+Dunn2008:Cryptococcus_neoformans:5207:Tribe703 -> Dunn2008_Cryptococcus_neoformans_5207_Tribe703
+Dunn2008:Drosophila_melanogaster:7227:Tribe703 -> Dunn2008_Drosophila_melanogaster_7227_Tribe703
+Dunn2008:Dugesia_japonica:6161:Tribe703 -> Dunn2008_Dugesia_japonica_6161_Tribe703
+Dunn2008:Echinococcus_granulosus:6210:Tribe703 -> Dunn2008_Echinococcus_granulosus_6210_Tribe703
+Dunn2008:Echinoderes_horni:488522:Tribe703 -> Dunn2008_Echinoderes_horni_488522_Tribe703
+Dunn2008:Euprymna_scolopes:6613:Tribe703 -> Dunn2008_Euprymna_scolopes_6613_Tribe703
+Dunn2008:Fenneropenaeus_chinensis:139456:Tribe703 -> Dunn2008_Fenneropenaeus_chinensis_139456_Tribe703
+Dunn2008:Gallus_gallus:9031:Tribe703 -> Dunn2008_Gallus_gallus_9031_Tribe703
+Dunn2008:Haementeria_depressa:279730:Tribe703 -> Dunn2008_Haementeria_depressa_279730_Tribe703
+Dunn2008:Homo_sapiens:9606:Tribe703 -> Dunn2008_Homo_sapiens_9606_Tribe703
+Dunn2008:Hydra_vulgaris_01:6087:Tribe703 -> Dunn2008_Hydra_vulgaris_01_6087_Tribe703
+Dunn2008:Hydractinia_echinata:35630:Tribe703 -> Dunn2008_Hydractinia_echinata_35630_Tribe703
+Dunn2008:Lumbricus_rubellus:35632:Tribe703 -> Dunn2008_Lumbricus_rubellus_35632_Tribe703
+Dunn2008:Macrostomum_lignano:282301:Tribe703 -> Dunn2008_Macrostomum_lignano_282301_Tribe703
+Dunn2008:Mnemiopsis_leidyi:27923:Tribe703 -> Dunn2008_Mnemiopsis_leidyi_27923_Tribe703
+Dunn2008:Monosiga_ovata:81526:Tribe703 -> Dunn2008_Monosiga_ovata_81526_Tribe703
+Dunn2008:Nematostella_vectensis:45351:Tribe703 -> Dunn2008_Nematostella_vectensis_45351_Tribe703
+Dunn2008:Oscarella_carmela:386100:Tribe703 -> Dunn2008_Oscarella_carmela_386100_Tribe703
+Dunn2008:Richtersius_coronifer:245088:Tribe703 -> Dunn2008_Richtersius_coronifer_245088_Tribe703
+Dunn2008:Saccharomyces_cerevisiae:4932:Tribe703 -> Dunn2008_Saccharomyces_cerevisiae_4932_Tribe703
+Dunn2008:Saccoglossus_kowalevskii:10224:Tribe703 -> Dunn2008_Saccoglossus_kowalevskii_10224_Tribe703
+Dunn2008:Schmidtea_mediterranea:79327:Tribe703 -> Dunn2008_Schmidtea_mediterranea_79327_Tribe703
+Dunn2008:Sphaeroforma_arctica:72019:Tribe703 -> Dunn2008_Sphaeroforma_arctica_72019_Tribe703
+Dunn2008:Strongylocentrotus_purpuratus:7668:Tribe703 -> Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe703
+Dunn2008:Trichinella_spiralis:6334:Tribe703 -> Dunn2008_Trichinella_spiralis_6334_Tribe703
+Dunn2008:Xiphinema_index:46003:Tribe703 -> Dunn2008_Xiphinema_index_46003_Tribe703
+Dunn2008:Acanthoscurria_gomesiana:115339:Tribe833 -> Dunn2008_Acanthoscurria_gomesiana_115339_Tribe833
+Dunn2008:Acropora_millepora:45264:Tribe833 -> Dunn2008_Acropora_millepora_45264_Tribe833
+Dunn2008:Branchiostoma_floridae:7739:Tribe833 -> Dunn2008_Branchiostoma_floridae_7739_Tribe833
+Dunn2008:Capitella_teleta:283909:Tribe833 -> Dunn2008_Capitella_teleta_283909_Tribe833
+Dunn2008:Ciona_intestinalis:7719:Tribe833 -> Dunn2008_Ciona_intestinalis_7719_Tribe833
+Dunn2008:Cryptococcus_neoformans:5207:Tribe833 -> Dunn2008_Cryptococcus_neoformans_5207_Tribe833
+Dunn2008:Drosophila_melanogaster:7227:Tribe833 -> Dunn2008_Drosophila_melanogaster_7227_Tribe833
+Dunn2008:Echinococcus_granulosus:6210:Tribe833 -> Dunn2008_Echinococcus_granulosus_6210_Tribe833
+Dunn2008:Echinoderes_horni:488522:Tribe833 -> Dunn2008_Echinoderes_horni_488522_Tribe833
+Dunn2008:Euprymna_scolopes:6613:Tribe833 -> Dunn2008_Euprymna_scolopes_6613_Tribe833
+Dunn2008:Fenneropenaeus_chinensis:139456:Tribe833 -> Dunn2008_Fenneropenaeus_chinensis_139456_Tribe833
+Dunn2008:Gallus_gallus:9031:Tribe833 -> Dunn2008_Gallus_gallus_9031_Tribe833
+Dunn2008:Homo_sapiens:9606:Tribe833 -> Dunn2008_Homo_sapiens_9606_Tribe833
+Dunn2008:Hydra_vulgaris_01:6087:Tribe833 -> Dunn2008_Hydra_vulgaris_01_6087_Tribe833
+Dunn2008:Hypsibius_dujardini:232323:Tribe833 -> Dunn2008_Hypsibius_dujardini_232323_Tribe833
+Dunn2008:Mnemiopsis_leidyi:27923:Tribe833 -> Dunn2008_Mnemiopsis_leidyi_27923_Tribe833
+Dunn2008:Monosiga_ovata:81526:Tribe833 -> Dunn2008_Monosiga_ovata_81526_Tribe833
+Dunn2008:Nematostella_vectensis:45351:Tribe833 -> Dunn2008_Nematostella_vectensis_45351_Tribe833
+Dunn2008:Paraplanocera_oligoglena:1468194:Tribe833 -> Dunn2008_Paraplanocera_oligoglena_1468194_Tribe833
+Dunn2008:Ptychodera_flava:63121:Tribe833 -> Dunn2008_Ptychodera_flava_63121_Tribe833
+Dunn2008:Richtersius_coronifer:245088:Tribe833 -> Dunn2008_Richtersius_coronifer_245088_Tribe833
+Dunn2008:Saccharomyces_cerevisiae:4932:Tribe833 -> Dunn2008_Saccharomyces_cerevisiae_4932_Tribe833
+Dunn2008:Saccoglossus_kowalevskii:10224:Tribe833 -> Dunn2008_Saccoglossus_kowalevskii_10224_Tribe833
+Dunn2008:Schmidtea_mediterranea:79327:Tribe833 -> Dunn2008_Schmidtea_mediterranea_79327_Tribe833
+Dunn2008:Sphaeroforma_arctica:72019:Tribe833 -> Dunn2008_Sphaeroforma_arctica_72019_Tribe833
+Dunn2008:Strongylocentrotus_purpuratus:7668:Tribe833 -> Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe833
+Dunn2008:Trichinella_spiralis:6334:Tribe833 -> Dunn2008_Trichinella_spiralis_6334_Tribe833
+Dunn2008:Amoebidium_parasiticum:4881:Tribe868 -> Dunn2008_Amoebidium_parasiticum_4881_Tribe868
+Dunn2008:Anoplodactylus_eroticus:488521:Tribe868 -> Dunn2008_Anoplodactylus_eroticus_488521_Tribe868
+Dunn2008:Aplysia_californica:6500:Tribe868 -> Dunn2008_Aplysia_californica_6500_Tribe868
+Dunn2008:Asterina_pectinifera:7594:Tribe868 -> Dunn2008_Asterina_pectinifera_7594_Tribe868
+Dunn2008:Boophilus_microplus:6941:Tribe868 -> Dunn2008_Boophilus_microplus_6941_Tribe868
+Dunn2008:Branchiostoma_floridae:7739:Tribe868 -> Dunn2008_Branchiostoma_floridae_7739_Tribe868
+Dunn2008:Capitella_teleta:283909:Tribe868 -> Dunn2008_Capitella_teleta_283909_Tribe868
+Dunn2008:Capsaspora_owczarzaki:192875:Tribe868 -> Dunn2008_Capsaspora_owczarzaki_192875_Tribe868
+Dunn2008:Chaetoderma_nitidulum:256131:Tribe868 -> Dunn2008_Chaetoderma_nitidulum_256131_Tribe868
+Dunn2008:Ciona_intestinalis:7719:Tribe868 -> Dunn2008_Ciona_intestinalis_7719_Tribe868
+Dunn2008:Crassostrea_virginica:6565:Tribe868 -> Dunn2008_Crassostrea_virginica_6565_Tribe868
+Dunn2008:Cryptococcus_neoformans:5207:Tribe868 -> Dunn2008_Cryptococcus_neoformans_5207_Tribe868
+Dunn2008:Dugesia_japonica:6161:Tribe868 -> Dunn2008_Dugesia_japonica_6161_Tribe868
+Dunn2008:Echinococcus_granulosus:6210:Tribe868 -> Dunn2008_Echinococcus_granulosus_6210_Tribe868
+Dunn2008:Gallus_gallus:9031:Tribe868 -> Dunn2008_Gallus_gallus_9031_Tribe868
+Dunn2008:Homo_sapiens:9606:Tribe868 -> Dunn2008_Homo_sapiens_9606_Tribe868
+Dunn2008:Hydractinia_echinata:35630:Tribe868 -> Dunn2008_Hydractinia_echinata_35630_Tribe868
+Dunn2008:Lumbricus_rubellus:35632:Tribe868 -> Dunn2008_Lumbricus_rubellus_35632_Tribe868
+Dunn2008:Mnemiopsis_leidyi:27923:Tribe868 -> Dunn2008_Mnemiopsis_leidyi_27923_Tribe868
+Dunn2008:Monosiga_ovata:81526:Tribe868 -> Dunn2008_Monosiga_ovata_81526_Tribe868
+Dunn2008:Nematostella_vectensis:45351:Tribe868 -> Dunn2008_Nematostella_vectensis_45351_Tribe868
+Dunn2008:Ptychodera_flava:63121:Tribe868 -> Dunn2008_Ptychodera_flava_63121_Tribe868
+Dunn2008:Saccharomyces_cerevisiae:4932:Tribe868 -> Dunn2008_Saccharomyces_cerevisiae_4932_Tribe868
+Dunn2008:Saccoglossus_kowalevskii:10224:Tribe868 -> Dunn2008_Saccoglossus_kowalevskii_10224_Tribe868
+Dunn2008:Sphaeroforma_arctica:72019:Tribe868 -> Dunn2008_Sphaeroforma_arctica_72019_Tribe868
+Philippe2009:Allomyces_macrogynus:28583:Gene_0044 -> Philippe2009_Allomyces_macrogynus_28583_Gene_0044
+Philippe2009:Amoebidium_parasiticum:4881:Gene_0044 -> Philippe2009_Amoebidium_parasiticum_4881_Gene_0044
+Philippe2009:Anoplodactylus_eroticus:488521:Gene_0044 -> Philippe2009_Anoplodactylus_eroticus_488521_Gene_0044
+Philippe2009:Aplysia_californica:6500:Gene_0044 -> Philippe2009_Aplysia_californica_6500_Gene_0044
+Philippe2009:Batrachochytrium_dendrobatidis:109871:Gene_0044 -> Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0044
+Philippe2009:Branchiostoma_floridae:7739:Gene_0044 -> Philippe2009_Branchiostoma_floridae_7739_Gene_0044
+Philippe2009:Capitella_teleta:283909:Gene_0044 -> Philippe2009_Capitella_teleta_283909_Gene_0044
+Philippe2009:Capsaspora_owczarzaki:192875:Gene_0044 -> Philippe2009_Capsaspora_owczarzaki_192875_Gene_0044
+Philippe2009:Carteriospongia_foliascens:593584:Gene_0044 -> Philippe2009_Carteriospongia_foliascens_593584_Gene_0044
+Philippe2009:Ciona_savignyi:51511:Gene_0044 -> Philippe2009_Ciona_savignyi_51511_Gene_0044
+Philippe2009:Crassostrea_gigas:29159:Gene_0044 -> Philippe2009_Crassostrea_gigas_29159_Gene_0044
+Philippe2009:Danio_rerio:7955:Gene_0044 -> Philippe2009_Danio_rerio_7955_Gene_0044
+Philippe2009:Daphnia_pulex:6669:Gene_0044 -> Philippe2009_Daphnia_pulex_6669_Gene_0044
+Philippe2009:Helobdella_robusta:6412:Gene_0044 -> Philippe2009_Helobdella_robusta_6412_Gene_0044
+Philippe2009:Hydra_magnipapillata:6087:Gene_0044 -> Philippe2009_Hydra_magnipapillata_6087_Gene_0044
+Philippe2009:Hydractinia_echinata:35630:Gene_0044 -> Philippe2009_Hydractinia_echinata_35630_Gene_0044
+Philippe2009:Ixodes_scapularis:6945:Gene_0044 -> Philippe2009_Ixodes_scapularis_6945_Gene_0044
+Philippe2009:Leucetta_chagosensis:185688:Gene_0044 -> Philippe2009_Leucetta_chagosensis_185688_Gene_0044
+Philippe2009:Mnemiopsis_leidyi:27923:Gene_0044 -> Philippe2009_Mnemiopsis_leidyi_27923_Gene_0044
+Philippe2009:Molgula_tectiformis:30286:Gene_0044 -> Philippe2009_Molgula_tectiformis_30286_Gene_0044
+Philippe2009:Monosiga_brevicollis:81824:Gene_0044 -> Philippe2009_Monosiga_brevicollis_81824_Gene_0044
+Philippe2009:Monosiga_ovata:81526:Gene_0044 -> Philippe2009_Monosiga_ovata_81526_Gene_0044
+Philippe2009:Nasonia_vitripennis:7425:Gene_0044 -> Philippe2009_Nasonia_vitripennis_7425_Gene_0044
+Philippe2009:Nematostella_vectensis:45351:Gene_0044 -> Philippe2009_Nematostella_vectensis_45351_Gene_0044
+Philippe2009:Pediculus_humanus:121225:Gene_0044 -> Philippe2009_Pediculus_humanus_121225_Gene_0044
+Philippe2009:Petromyzon_marinus:7757:Gene_0044 -> Philippe2009_Petromyzon_marinus_7757_Gene_0044
+Philippe2009:Phycomyces_blakesleeanus:4837:Gene_0044 -> Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0044
+Philippe2009:Pleurobrachia_pileus:140457:Gene_0044 -> Philippe2009_Pleurobrachia_pileus_140457_Gene_0044
+Philippe2009:Podocoryne_carnea:6096:Gene_0044 -> Philippe2009_Podocoryne_carnea_6096_Gene_0044
+Philippe2009:Amphimedon_queenslandica:400682:Gene_0044 -> Philippe2009_Amphimedon_queenslandica_400682_Gene_0044
+Philippe2009:Rhizopus_oryzae:64495:Gene_0044 -> Philippe2009_Rhizopus_oryzae_64495_Gene_0044
+Philippe2009:Saccoglossus_kowalevskii:10224:Gene_0044 -> Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0044
+Philippe2009:Sphaeroforma_arctica:72019:Gene_0044 -> Philippe2009_Sphaeroforma_arctica_72019_Gene_0044
+Philippe2009:Spizellomyces_punctatus:109760:Gene_0044 -> Philippe2009_Spizellomyces_punctatus_109760_Gene_0044
+Philippe2009:Strongylocentrotus_purpuratus:7668:Gene_0044 -> Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0044
+Philippe2009:Trichoplax_adhaerens:10228:Gene_0044 -> Philippe2009_Trichoplax_adhaerens_10228_Gene_0044
+Philippe2009:Tubifex_tubifex:6386:Gene_0044 -> Philippe2009_Tubifex_tubifex_6386_Gene_0044
+Philippe2009:Acropora_millepora:45264:Gene_0045 -> Philippe2009_Acropora_millepora_45264_Gene_0045
+Philippe2009:Allomyces_macrogynus:28583:Gene_0045 -> Philippe2009_Allomyces_macrogynus_28583_Gene_0045
+Philippe2009:Aplysia_californica:6500:Gene_0045 -> Philippe2009_Aplysia_californica_6500_Gene_0045
+Philippe2009:Batrachochytrium_dendrobatidis:109871:Gene_0045 -> Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0045
+Philippe2009:Branchiostoma_floridae:7739:Gene_0045 -> Philippe2009_Branchiostoma_floridae_7739_Gene_0045
+Philippe2009:Capitella_teleta:283909:Gene_0045 -> Philippe2009_Capitella_teleta_283909_Gene_0045
+Philippe2009:Capsaspora_owczarzaki:192875:Gene_0045 -> Philippe2009_Capsaspora_owczarzaki_192875_Gene_0045
+Philippe2009:Ciona_savignyi:51511:Gene_0045 -> Philippe2009_Ciona_savignyi_51511_Gene_0045
+Philippe2009:Clytia_hemisphaerica:252671:Gene_0045 -> Philippe2009_Clytia_hemisphaerica_252671_Gene_0045
+Philippe2009:Crassostrea_gigas:29159:Gene_0045 -> Philippe2009_Crassostrea_gigas_29159_Gene_0045
+Philippe2009:Danio_rerio:7955:Gene_0045 -> Philippe2009_Danio_rerio_7955_Gene_0045
+Philippe2009:Daphnia_pulex:6669:Gene_0045 -> Philippe2009_Daphnia_pulex_6669_Gene_0045
+Philippe2009:Euprymna_scolopes:6613:Gene_0045 -> Philippe2009_Euprymna_scolopes_6613_Gene_0045
+Philippe2009:Helobdella_robusta:6412:Gene_0045 -> Philippe2009_Helobdella_robusta_6412_Gene_0045
+Philippe2009:Hydra_magnipapillata:6087:Gene_0045 -> Philippe2009_Hydra_magnipapillata_6087_Gene_0045
+Philippe2009:Hydractinia_echinata:35630:Gene_0045 -> Philippe2009_Hydractinia_echinata_35630_Gene_0045
+Philippe2009:Ixodes_scapularis:6945:Gene_0045 -> Philippe2009_Ixodes_scapularis_6945_Gene_0045
+Philippe2009:Leucetta_chagosensis:185688:Gene_0045 -> Philippe2009_Leucetta_chagosensis_185688_Gene_0045
+Philippe2009:Mnemiopsis_leidyi:27923:Gene_0045 -> Philippe2009_Mnemiopsis_leidyi_27923_Gene_0045
+Philippe2009:Molgula_tectiformis:30286:Gene_0045 -> Philippe2009_Molgula_tectiformis_30286_Gene_0045
+Philippe2009:Monosiga_brevicollis:81824:Gene_0045 -> Philippe2009_Monosiga_brevicollis_81824_Gene_0045
+Philippe2009:Monosiga_ovata:81526:Gene_0045 -> Philippe2009_Monosiga_ovata_81526_Gene_0045
+Philippe2009:Nasonia_vitripennis:7425:Gene_0045 -> Philippe2009_Nasonia_vitripennis_7425_Gene_0045
+Philippe2009:Nematostella_vectensis:45351:Gene_0045 -> Philippe2009_Nematostella_vectensis_45351_Gene_0045
+Philippe2009:Pediculus_humanus:121225:Gene_0045 -> Philippe2009_Pediculus_humanus_121225_Gene_0045
+Philippe2009:Petromyzon_marinus:7757:Gene_0045 -> Philippe2009_Petromyzon_marinus_7757_Gene_0045
+Philippe2009:Phycomyces_blakesleeanus:4837:Gene_0045 -> Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0045
+Philippe2009:Pleurobrachia_pileus:140457:Gene_0045 -> Philippe2009_Pleurobrachia_pileus_140457_Gene_0045
+Philippe2009:Podocoryne_carnea:6096:Gene_0045 -> Philippe2009_Podocoryne_carnea_6096_Gene_0045
+Philippe2009:Proterospongia_sp:218847:Gene_0045 -> Philippe2009_Proterospongia_sp_218847_Gene_0045
+Philippe2009:Amphimedon_queenslandica:400682:Gene_0045 -> Philippe2009_Amphimedon_queenslandica_400682_Gene_0045
+Philippe2009:Rhizopus_oryzae:64495:Gene_0045 -> Philippe2009_Rhizopus_oryzae_64495_Gene_0045
+Philippe2009:Saccoglossus_kowalevskii:10224:Gene_0045 -> Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0045
+Philippe2009:Sphaeroforma_arctica:72019:Gene_0045 -> Philippe2009_Sphaeroforma_arctica_72019_Gene_0045
+Philippe2009:Spizellomyces_punctatus:109760:Gene_0045 -> Philippe2009_Spizellomyces_punctatus_109760_Gene_0045
+Philippe2009:Strongylocentrotus_purpuratus:7668:Gene_0045 -> Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0045
+Philippe2009:Trichoplax_adhaerens:10228:Gene_0045 -> Philippe2009_Trichoplax_adhaerens_10228_Gene_0045
+Philippe2009:Acropora_millepora:45264:Gene_0046 -> Philippe2009_Acropora_millepora_45264_Gene_0046
+Philippe2009:Allomyces_macrogynus:28583:Gene_0046 -> Philippe2009_Allomyces_macrogynus_28583_Gene_0046
+Philippe2009:Anoplodactylus_eroticus:488521:Gene_0046 -> Philippe2009_Anoplodactylus_eroticus_488521_Gene_0046
+Philippe2009:Aplysia_californica:6500:Gene_0046 -> Philippe2009_Aplysia_californica_6500_Gene_0046
+Philippe2009:Batrachochytrium_dendrobatidis:109871:Gene_0046 -> Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0046
+Philippe2009:Branchiostoma_floridae:7739:Gene_0046 -> Philippe2009_Branchiostoma_floridae_7739_Gene_0046
+Philippe2009:Capitella_teleta:283909:Gene_0046 -> Philippe2009_Capitella_teleta_283909_Gene_0046
+Philippe2009:Capsaspora_owczarzaki:192875:Gene_0046 -> Philippe2009_Capsaspora_owczarzaki_192875_Gene_0046
+Philippe2009:Ciona_savignyi:51511:Gene_0046 -> Philippe2009_Ciona_savignyi_51511_Gene_0046
+Philippe2009:Crassostrea_gigas:29159:Gene_0046 -> Philippe2009_Crassostrea_gigas_29159_Gene_0046
+Philippe2009:Cyanea_capillata:27804:Gene_0046 -> Philippe2009_Cyanea_capillata_27804_Gene_0046
+Philippe2009:Danio_rerio:7955:Gene_0046 -> Philippe2009_Danio_rerio_7955_Gene_0046
+Philippe2009:Daphnia_pulex:6669:Gene_0046 -> Philippe2009_Daphnia_pulex_6669_Gene_0046
+Philippe2009:Euprymna_scolopes:6613:Gene_0046 -> Philippe2009_Euprymna_scolopes_6613_Gene_0046
+Philippe2009:Helobdella_robusta:6412:Gene_0046 -> Philippe2009_Helobdella_robusta_6412_Gene_0046
+Philippe2009:Hydra_magnipapillata:6087:Gene_0046 -> Philippe2009_Hydra_magnipapillata_6087_Gene_0046
+Philippe2009:Ixodes_scapularis:6945:Gene_0046 -> Philippe2009_Ixodes_scapularis_6945_Gene_0046
+Philippe2009:Metridium_senile:6116:Gene_0046 -> Philippe2009_Metridium_senile_6116_Gene_0046
+Philippe2009:Mnemiopsis_leidyi:27923:Gene_0046 -> Philippe2009_Mnemiopsis_leidyi_27923_Gene_0046
+Philippe2009:Molgula_tectiformis:30286:Gene_0046 -> Philippe2009_Molgula_tectiformis_30286_Gene_0046
+Philippe2009:Monosiga_brevicollis:81824:Gene_0046 -> Philippe2009_Monosiga_brevicollis_81824_Gene_0046
+Philippe2009:Monosiga_ovata:81526:Gene_0046 -> Philippe2009_Monosiga_ovata_81526_Gene_0046
+Philippe2009:Nasonia_vitripennis:7425:Gene_0046 -> Philippe2009_Nasonia_vitripennis_7425_Gene_0046
+Philippe2009:Nematostella_vectensis:45351:Gene_0046 -> Philippe2009_Nematostella_vectensis_45351_Gene_0046
+Philippe2009:Oopsacas_minuta:111878:Gene_0046 -> Philippe2009_Oopsacas_minuta_111878_Gene_0046
+Philippe2009:Pedicellina_cernua:43123:Gene_0046 -> Philippe2009_Pedicellina_cernua_43123_Gene_0046
+Philippe2009:Pediculus_humanus:121225:Gene_0046 -> Philippe2009_Pediculus_humanus_121225_Gene_0046
+Philippe2009:Petromyzon_marinus:7757:Gene_0046 -> Philippe2009_Petromyzon_marinus_7757_Gene_0046
+Philippe2009:Phycomyces_blakesleeanus:4837:Gene_0046 -> Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0046
+Philippe2009:Pleurobrachia_pileus:140457:Gene_0046 -> Philippe2009_Pleurobrachia_pileus_140457_Gene_0046
+Philippe2009:Podocoryne_carnea:6096:Gene_0046 -> Philippe2009_Podocoryne_carnea_6096_Gene_0046
+Philippe2009:Proterospongia_sp:218847:Gene_0046 -> Philippe2009_Proterospongia_sp_218847_Gene_0046
+Philippe2009:Amphimedon_queenslandica:400682:Gene_0046 -> Philippe2009_Amphimedon_queenslandica_400682_Gene_0046
+Philippe2009:Rhizopus_oryzae:64495:Gene_0046 -> Philippe2009_Rhizopus_oryzae_64495_Gene_0046
+Philippe2009:Saccoglossus_kowalevskii:10224:Gene_0046 -> Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0046
+Philippe2009:Scutigera_coleoptrata:29022:Gene_0046 -> Philippe2009_Scutigera_coleoptrata_29022_Gene_0046
+Philippe2009:Spizellomyces_punctatus:109760:Gene_0046 -> Philippe2009_Spizellomyces_punctatus_109760_Gene_0046
+Philippe2009:Strongylocentrotus_purpuratus:7668:Gene_0046 -> Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0046
+Philippe2009:Trichoplax_adhaerens:10228:Gene_0046 -> Philippe2009_Trichoplax_adhaerens_10228_Gene_0046
+Philippe2009:Tubifex_tubifex:6386:Gene_0046 -> Philippe2009_Tubifex_tubifex_6386_Gene_0046
+Philippe2009:Xenoturbella_bocki:242395:Gene_0046 -> Philippe2009_Xenoturbella_bocki_242395_Gene_0046
+Philippe2009:Acropora_millepora:45264:Gene_0047 -> Philippe2009_Acropora_millepora_45264_Gene_0047
+Philippe2009:Allomyces_macrogynus:28583:Gene_0047 -> Philippe2009_Allomyces_macrogynus_28583_Gene_0047
+Philippe2009:Aplysia_californica:6500:Gene_0047 -> Philippe2009_Aplysia_californica_6500_Gene_0047
+Philippe2009:Batrachochytrium_dendrobatidis:109871:Gene_0047 -> Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0047
+Philippe2009:Branchiostoma_floridae:7739:Gene_0047 -> Philippe2009_Branchiostoma_floridae_7739_Gene_0047
+Philippe2009:Capitella_teleta:283909:Gene_0047 -> Philippe2009_Capitella_teleta_283909_Gene_0047
+Philippe2009:Capsaspora_owczarzaki:192875:Gene_0047 -> Philippe2009_Capsaspora_owczarzaki_192875_Gene_0047
+Philippe2009:Ciona_savignyi:51511:Gene_0047 -> Philippe2009_Ciona_savignyi_51511_Gene_0047
+Philippe2009:Clytia_hemisphaerica:252671:Gene_0047 -> Philippe2009_Clytia_hemisphaerica_252671_Gene_0047
+Philippe2009:Crassostrea_gigas:29159:Gene_0047 -> Philippe2009_Crassostrea_gigas_29159_Gene_0047
+Philippe2009:Danio_rerio:7955:Gene_0047 -> Philippe2009_Danio_rerio_7955_Gene_0047
+Philippe2009:Daphnia_pulex:6669:Gene_0047 -> Philippe2009_Daphnia_pulex_6669_Gene_0047
+Philippe2009:Ephydatia_muelleri:6052:Gene_0047 -> Philippe2009_Ephydatia_muelleri_6052_Gene_0047
+Philippe2009:Euprymna_scolopes:6613:Gene_0047 -> Philippe2009_Euprymna_scolopes_6613_Gene_0047
+Philippe2009:Helobdella_robusta:6412:Gene_0047 -> Philippe2009_Helobdella_robusta_6412_Gene_0047
+Philippe2009:Heterochone_sp:367900:Gene_0047 -> Philippe2009_Heterochone_sp_367900_Gene_0047
+Philippe2009:Hydra_magnipapillata:6087:Gene_0047 -> Philippe2009_Hydra_magnipapillata_6087_Gene_0047
+Philippe2009:Ixodes_scapularis:6945:Gene_0047 -> Philippe2009_Ixodes_scapularis_6945_Gene_0047
+Philippe2009:Mnemiopsis_leidyi:27923:Gene_0047 -> Philippe2009_Mnemiopsis_leidyi_27923_Gene_0047
+Philippe2009:Molgula_tectiformis:30286:Gene_0047 -> Philippe2009_Molgula_tectiformis_30286_Gene_0047
+Philippe2009:Monosiga_brevicollis:81824:Gene_0047 -> Philippe2009_Monosiga_brevicollis_81824_Gene_0047
+Philippe2009:Monosiga_ovata:81526:Gene_0047 -> Philippe2009_Monosiga_ovata_81526_Gene_0047
+Philippe2009:Nasonia_vitripennis:7425:Gene_0047 -> Philippe2009_Nasonia_vitripennis_7425_Gene_0047
+Philippe2009:Nematostella_vectensis:45351:Gene_0047 -> Philippe2009_Nematostella_vectensis_45351_Gene_0047
+Philippe2009:Oopsacas_minuta:111878:Gene_0047 -> Philippe2009_Oopsacas_minuta_111878_Gene_0047
+Philippe2009:Oscarella_carmela:386100:Gene_0047 -> Philippe2009_Oscarella_carmela_386100_Gene_0047
+Philippe2009:Pediculus_humanus:121225:Gene_0047 -> Philippe2009_Pediculus_humanus_121225_Gene_0047
+Philippe2009:Petromyzon_marinus:7757:Gene_0047 -> Philippe2009_Petromyzon_marinus_7757_Gene_0047
+Philippe2009:Phycomyces_blakesleeanus:4837:Gene_0047 -> Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0047
+Philippe2009:Pleurobrachia_pileus:140457:Gene_0047 -> Philippe2009_Pleurobrachia_pileus_140457_Gene_0047
+Philippe2009:Amphimedon_queenslandica:400682:Gene_0047 -> Philippe2009_Amphimedon_queenslandica_400682_Gene_0047
+Philippe2009:Rhizopus_oryzae:64495:Gene_0047 -> Philippe2009_Rhizopus_oryzae_64495_Gene_0047
+Philippe2009:Saccoglossus_kowalevskii:10224:Gene_0047 -> Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0047
+Philippe2009:Spizellomyces_punctatus:109760:Gene_0047 -> Philippe2009_Spizellomyces_punctatus_109760_Gene_0047
+Philippe2009:Strongylocentrotus_purpuratus:7668:Gene_0047 -> Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0047
+Philippe2009:Trichoplax_adhaerens:10228:Gene_0047 -> Philippe2009_Trichoplax_adhaerens_10228_Gene_0047
+Philippe2009:Tubifex_tubifex:6386:Gene_0047 -> Philippe2009_Tubifex_tubifex_6386_Gene_0047
+Philippe2009:Mertensiid_sp:140499:Gene_0047 -> Philippe2009_Mertensiid_sp_140499_Gene_0047
+Philippe2009:Allomyces_macrogynus:28583:Gene_0048 -> Philippe2009_Allomyces_macrogynus_28583_Gene_0048
+Philippe2009:Aplysia_californica:6500:Gene_0048 -> Philippe2009_Aplysia_californica_6500_Gene_0048
+Philippe2009:Batrachochytrium_dendrobatidis:109871:Gene_0048 -> Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0048
+Philippe2009:Branchiostoma_floridae:7739:Gene_0048 -> Philippe2009_Branchiostoma_floridae_7739_Gene_0048
+Philippe2009:Capitella_teleta:283909:Gene_0048 -> Philippe2009_Capitella_teleta_283909_Gene_0048
+Philippe2009:Capsaspora_owczarzaki:192875:Gene_0048 -> Philippe2009_Capsaspora_owczarzaki_192875_Gene_0048
+Philippe2009:Ciona_savignyi:51511:Gene_0048 -> Philippe2009_Ciona_savignyi_51511_Gene_0048
+Philippe2009:Clytia_hemisphaerica:252671:Gene_0048 -> Philippe2009_Clytia_hemisphaerica_252671_Gene_0048
+Philippe2009:Crassostrea_gigas:29159:Gene_0048 -> Philippe2009_Crassostrea_gigas_29159_Gene_0048
+Philippe2009:Danio_rerio:7955:Gene_0048 -> Philippe2009_Danio_rerio_7955_Gene_0048
+Philippe2009:Daphnia_pulex:6669:Gene_0048 -> Philippe2009_Daphnia_pulex_6669_Gene_0048
+Philippe2009:Euprymna_scolopes:6613:Gene_0048 -> Philippe2009_Euprymna_scolopes_6613_Gene_0048
+Philippe2009:Helobdella_robusta:6412:Gene_0048 -> Philippe2009_Helobdella_robusta_6412_Gene_0048
+Philippe2009:Hydra_magnipapillata:6087:Gene_0048 -> Philippe2009_Hydra_magnipapillata_6087_Gene_0048
+Philippe2009:Hydractinia_echinata:35630:Gene_0048 -> Philippe2009_Hydractinia_echinata_35630_Gene_0048
+Philippe2009:Ixodes_scapularis:6945:Gene_0048 -> Philippe2009_Ixodes_scapularis_6945_Gene_0048
+Philippe2009:Leucetta_chagosensis:185688:Gene_0048 -> Philippe2009_Leucetta_chagosensis_185688_Gene_0048
+Philippe2009:Metridium_senile:6116:Gene_0048 -> Philippe2009_Metridium_senile_6116_Gene_0048
+Philippe2009:Mnemiopsis_leidyi:27923:Gene_0048 -> Philippe2009_Mnemiopsis_leidyi_27923_Gene_0048
+Philippe2009:Molgula_tectiformis:30286:Gene_0048 -> Philippe2009_Molgula_tectiformis_30286_Gene_0048
+Philippe2009:Monosiga_brevicollis:81824:Gene_0048 -> Philippe2009_Monosiga_brevicollis_81824_Gene_0048
+Philippe2009:Nasonia_vitripennis:7425:Gene_0048 -> Philippe2009_Nasonia_vitripennis_7425_Gene_0048
+Philippe2009:Nematostella_vectensis:45351:Gene_0048 -> Philippe2009_Nematostella_vectensis_45351_Gene_0048
+Philippe2009:Oscarella_carmela:386100:Gene_0048 -> Philippe2009_Oscarella_carmela_386100_Gene_0048
+Philippe2009:Pediculus_humanus:121225:Gene_0048 -> Philippe2009_Pediculus_humanus_121225_Gene_0048
+Philippe2009:Petromyzon_marinus:7757:Gene_0048 -> Philippe2009_Petromyzon_marinus_7757_Gene_0048
+Philippe2009:Phycomyces_blakesleeanus:4837:Gene_0048 -> Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0048
+Philippe2009:Pleurobrachia_pileus:140457:Gene_0048 -> Philippe2009_Pleurobrachia_pileus_140457_Gene_0048
+Philippe2009:Podocoryne_carnea:6096:Gene_0048 -> Philippe2009_Podocoryne_carnea_6096_Gene_0048
+Philippe2009:Amphimedon_queenslandica:400682:Gene_0048 -> Philippe2009_Amphimedon_queenslandica_400682_Gene_0048
+Philippe2009:Rhizopus_oryzae:64495:Gene_0048 -> Philippe2009_Rhizopus_oryzae_64495_Gene_0048
+Philippe2009:Saccoglossus_kowalevskii:10224:Gene_0048 -> Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0048
+Philippe2009:Sphaeroforma_arctica:72019:Gene_0048 -> Philippe2009_Sphaeroforma_arctica_72019_Gene_0048
+Philippe2009:Spizellomyces_punctatus:109760:Gene_0048 -> Philippe2009_Spizellomyces_punctatus_109760_Gene_0048
+Philippe2009:Strongylocentrotus_purpuratus:7668:Gene_0048 -> Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0048
+Philippe2009:Sycon_raphanus:56443:Gene_0048 -> Philippe2009_Sycon_raphanus_56443_Gene_0048
+Philippe2009:Trichoplax_adhaerens:10228:Gene_0048 -> Philippe2009_Trichoplax_adhaerens_10228_Gene_0048
+Philippe2009:Allomyces_macrogynus:28583:Gene_0050 -> Philippe2009_Allomyces_macrogynus_28583_Gene_0050
+Philippe2009:Aplysia_californica:6500:Gene_0050 -> Philippe2009_Aplysia_californica_6500_Gene_0050
+Philippe2009:Batrachochytrium_dendrobatidis:109871:Gene_0050 -> Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0050
+Philippe2009:Branchiostoma_floridae:7739:Gene_0050 -> Philippe2009_Branchiostoma_floridae_7739_Gene_0050
+Philippe2009:Capitella_teleta:283909:Gene_0050 -> Philippe2009_Capitella_teleta_283909_Gene_0050
+Philippe2009:Capsaspora_owczarzaki:192875:Gene_0050 -> Philippe2009_Capsaspora_owczarzaki_192875_Gene_0050
+Philippe2009:Ciona_savignyi:51511:Gene_0050 -> Philippe2009_Ciona_savignyi_51511_Gene_0050
+Philippe2009:Clytia_hemisphaerica:252671:Gene_0050 -> Philippe2009_Clytia_hemisphaerica_252671_Gene_0050
+Philippe2009:Crassostrea_gigas:29159:Gene_0050 -> Philippe2009_Crassostrea_gigas_29159_Gene_0050
+Philippe2009:Danio_rerio:7955:Gene_0050 -> Philippe2009_Danio_rerio_7955_Gene_0050
+Philippe2009:Daphnia_pulex:6669:Gene_0050 -> Philippe2009_Daphnia_pulex_6669_Gene_0050
+Philippe2009:Euperipatoides_kanangrensis:488523:Gene_0050 -> Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0050
+Philippe2009:Euprymna_scolopes:6613:Gene_0050 -> Philippe2009_Euprymna_scolopes_6613_Gene_0050
+Philippe2009:Helobdella_robusta:6412:Gene_0050 -> Philippe2009_Helobdella_robusta_6412_Gene_0050
+Philippe2009:Hydra_magnipapillata:6087:Gene_0050 -> Philippe2009_Hydra_magnipapillata_6087_Gene_0050
+Philippe2009:Hydractinia_echinata:35630:Gene_0050 -> Philippe2009_Hydractinia_echinata_35630_Gene_0050
+Philippe2009:Ixodes_scapularis:6945:Gene_0050 -> Philippe2009_Ixodes_scapularis_6945_Gene_0050
+Philippe2009:Leucetta_chagosensis:185688:Gene_0050 -> Philippe2009_Leucetta_chagosensis_185688_Gene_0050
+Philippe2009:Metridium_senile:6116:Gene_0050 -> Philippe2009_Metridium_senile_6116_Gene_0050
+Philippe2009:Mnemiopsis_leidyi:27923:Gene_0050 -> Philippe2009_Mnemiopsis_leidyi_27923_Gene_0050
+Philippe2009:Molgula_tectiformis:30286:Gene_0050 -> Philippe2009_Molgula_tectiformis_30286_Gene_0050
+Philippe2009:Monosiga_brevicollis:81824:Gene_0050 -> Philippe2009_Monosiga_brevicollis_81824_Gene_0050
+Philippe2009:Monosiga_ovata:81526:Gene_0050 -> Philippe2009_Monosiga_ovata_81526_Gene_0050
+Philippe2009:Nasonia_vitripennis:7425:Gene_0050 -> Philippe2009_Nasonia_vitripennis_7425_Gene_0050
+Philippe2009:Nematostella_vectensis:45351:Gene_0050 -> Philippe2009_Nematostella_vectensis_45351_Gene_0050
+Philippe2009:Oopsacas_minuta:111878:Gene_0050 -> Philippe2009_Oopsacas_minuta_111878_Gene_0050
+Philippe2009:Oscarella_carmela:386100:Gene_0050 -> Philippe2009_Oscarella_carmela_386100_Gene_0050
+Philippe2009:Pediculus_humanus:121225:Gene_0050 -> Philippe2009_Pediculus_humanus_121225_Gene_0050
+Philippe2009:Petromyzon_marinus:7757:Gene_0050 -> Philippe2009_Petromyzon_marinus_7757_Gene_0050
+Philippe2009:Phycomyces_blakesleeanus:4837:Gene_0050 -> Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0050
+Philippe2009:Pleurobrachia_pileus:140457:Gene_0050 -> Philippe2009_Pleurobrachia_pileus_140457_Gene_0050
+Philippe2009:Podocoryne_carnea:6096:Gene_0050 -> Philippe2009_Podocoryne_carnea_6096_Gene_0050
+Philippe2009:Proterospongia_sp:218847:Gene_0050 -> Philippe2009_Proterospongia_sp_218847_Gene_0050
+Philippe2009:Amphimedon_queenslandica:400682:Gene_0050 -> Philippe2009_Amphimedon_queenslandica_400682_Gene_0050
+Philippe2009:Rhizopus_oryzae:64495:Gene_0050 -> Philippe2009_Rhizopus_oryzae_64495_Gene_0050
+Philippe2009:Saccoglossus_kowalevskii:10224:Gene_0050 -> Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0050
+Philippe2009:Sphaeroforma_arctica:72019:Gene_0050 -> Philippe2009_Sphaeroforma_arctica_72019_Gene_0050
+Philippe2009:Spizellomyces_punctatus:109760:Gene_0050 -> Philippe2009_Spizellomyces_punctatus_109760_Gene_0050
+Philippe2009:Strongylocentrotus_purpuratus:7668:Gene_0050 -> Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0050
+Philippe2009:Trichoplax_adhaerens:10228:Gene_0050 -> Philippe2009_Trichoplax_adhaerens_10228_Gene_0050
+Philippe2009:Tubifex_tubifex:6386:Gene_0050 -> Philippe2009_Tubifex_tubifex_6386_Gene_0050
+
+                                                              Gap/Ambiguity  Composition  p-value
+   1  Dunn2008_Acropora_millepora_45264_Tribe1162                    28.67%    passed     86.74%
+   2  Dunn2008_Anoplodactylus_eroticus_488521_Tribe1162              22.22%    passed     75.38%
+   3  Dunn2008_Asterina_pectinifera_7594_Tribe1162                   38.71%    passed     86.78%
+   4  Dunn2008_Biomphalaria_glabrata_6526_Tribe1162                  82.08%    failed      2.17%
+   5  Dunn2008_Boophilus_microplus_6941_Tribe1162                    22.22%    passed     82.16%
+   6  Dunn2008_Branchiostoma_floridae_7739_Tribe1162                 22.22%    passed     99.84%
+   7  Dunn2008_Capitella_teleta_283909_Tribe1162                     22.22%    passed     60.63%
+   8  Dunn2008_Ciona_intestinalis_7719_Tribe1162                     22.58%    passed     97.77%
+   9  Dunn2008_Cryptococcus_neoformans_5207_Tribe1162                21.51%    passed     81.44%
+  10  Dunn2008_Cyanea_capillata_27804_Tribe1162                      23.66%    passed     50.91%
+  11  Dunn2008_Drosophila_melanogaster_7227_Tribe1162                21.51%    passed     93.66%
+  12  Dunn2008_Gallus_gallus_9031_Tribe1162                          22.22%    passed     99.95%
+  13  Dunn2008_Homo_sapiens_9606_Tribe1162                           22.22%    passed     99.99%
+  14  Dunn2008_Hydra_vulgaris_01_6087_Tribe1162                      22.22%    passed     47.42%
+  15  Dunn2008_Hypsibius_dujardini_232323_Tribe1162                  22.22%    passed     74.40%
+  16  Dunn2008_Macrostomum_lignano_282301_Tribe1162                  36.92%    passed      6.89%
+  17  Dunn2008_Mnemiopsis_leidyi_27923_Tribe1162                     22.22%    passed     99.47%
+  18  Dunn2008_Mytilus_galloprovincialis_29158_Tribe1162             61.29%    passed     66.01%
+  19  Dunn2008_Nematostella_vectensis_45351_Tribe1162                22.22%    passed     93.97%
+  20  Dunn2008_Ptychodera_flava_63121_Tribe1162                      22.22%    passed     99.68%
+  21  Dunn2008_Richtersius_coronifer_245088_Tribe1162                21.51%    passed     62.36%
+  22  Dunn2008_Saccharomyces_cerevisiae_4932_Tribe1162               19.00%    passed     41.19%
+  23  Dunn2008_Saccoglossus_kowalevskii_10224_Tribe1162              22.22%    passed     99.38%
+  24  Dunn2008_Schmidtea_mediterranea_79327_Tribe1162                23.30%    passed     54.05%
+  25  Dunn2008_Terebratalia_transversa_34513_Tribe1162               22.22%    passed     90.36%
+  26  Dunn2008_Urechis_caupo_6431_Tribe1162                          22.22%    passed     98.27%
+  27  Dunn2008_Xenoturbella_bocki_242395_Tribe1162                   22.58%    passed     94.94%
+  28  Dunn2008_Acanthoscurria_gomesiana_115339_Tribe703              46.59%    passed     68.38%
+  29  Dunn2008_Asterina_pectinifera_7594_Tribe703                    29.75%    passed     34.84%
+  30  Dunn2008_Biomphalaria_glabrata_6526_Tribe703                   77.06%    passed     64.09%
+  31  Dunn2008_Boophilus_microplus_6941_Tribe703                     29.03%    passed     82.64%
+  32  Dunn2008_Capitella_teleta_283909_Tribe703                      29.39%    passed     68.85%
+  33  Dunn2008_Ciona_intestinalis_7719_Tribe703                      29.03%    passed     48.64%
+  34  Dunn2008_Crassostrea_virginica_6565_Tribe703                   59.86%    passed     12.13%
+  35  Dunn2008_Cryptococcus_neoformans_5207_Tribe703                 26.16%    passed     68.24%
+  36  Dunn2008_Drosophila_melanogaster_7227_Tribe703                 29.03%    passed     65.52%
+  37  Dunn2008_Dugesia_japonica_6161_Tribe703                        50.54%    passed     39.64%
+  38  Dunn2008_Echinococcus_granulosus_6210_Tribe703                 63.44%    passed     65.69%
+  39  Dunn2008_Echinoderes_horni_488522_Tribe703                     29.75%    passed     37.82%
+  40  Dunn2008_Euprymna_scolopes_6613_Tribe703                       34.41%    passed     62.55%
+  41  Dunn2008_Fenneropenaeus_chinensis_139456_Tribe703              33.69%    passed     74.10%
+  42  Dunn2008_Gallus_gallus_9031_Tribe703                           26.88%    passed     81.22%
+  43  Dunn2008_Haementeria_depressa_279730_Tribe703                  75.99%    passed     70.70%
+  44  Dunn2008_Homo_sapiens_9606_Tribe703                            29.39%    passed     49.11%
+  45  Dunn2008_Hydra_vulgaris_01_6087_Tribe703                       54.12%    passed     73.15%
+  46  Dunn2008_Hydractinia_echinata_35630_Tribe703                   29.39%    passed     99.95%
+  47  Dunn2008_Lumbricus_rubellus_35632_Tribe703                     64.52%    passed      8.58%
+  48  Dunn2008_Macrostomum_lignano_282301_Tribe703                   48.39%    failed      1.64%
+  49  Dunn2008_Mnemiopsis_leidyi_27923_Tribe703                      29.03%    passed     72.92%
+  50  Dunn2008_Monosiga_ovata_81526_Tribe703                         35.84%    passed     78.83%
+  51  Dunn2008_Nematostella_vectensis_45351_Tribe703                 29.39%    passed     89.35%
+  52  Dunn2008_Oscarella_carmela_386100_Tribe703                     29.03%    passed     81.95%
+  53  Dunn2008_Richtersius_coronifer_245088_Tribe703                 29.39%    passed     64.88%
+  54  Dunn2008_Saccharomyces_cerevisiae_4932_Tribe703                27.24%    passed     71.69%
+  55  Dunn2008_Saccoglossus_kowalevskii_10224_Tribe703               29.39%    passed     79.82%
+  56  Dunn2008_Schmidtea_mediterranea_79327_Tribe703                 32.97%    passed     93.50%
+  57  Dunn2008_Sphaeroforma_arctica_72019_Tribe703                   39.43%    passed     60.03%
+  58  Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe703           29.39%    passed     85.23%
+  59  Dunn2008_Trichinella_spiralis_6334_Tribe703                    64.87%    passed     25.49%
+  60  Dunn2008_Xiphinema_index_46003_Tribe703                        32.62%    passed     40.68%
+  61  Dunn2008_Acanthoscurria_gomesiana_115339_Tribe833              26.52%    passed     69.38%
+  62  Dunn2008_Acropora_millepora_45264_Tribe833                     26.52%    passed     90.96%
+  63  Dunn2008_Branchiostoma_floridae_7739_Tribe833                  55.56%    passed     20.07%
+  64  Dunn2008_Capitella_teleta_283909_Tribe833                      26.52%    passed     90.48%
+  65  Dunn2008_Ciona_intestinalis_7719_Tribe833                      26.52%    passed     83.54%
+  66  Dunn2008_Cryptococcus_neoformans_5207_Tribe833                 27.24%    passed     83.76%
+  67  Dunn2008_Drosophila_melanogaster_7227_Tribe833                 26.52%    passed     41.57%
+  68  Dunn2008_Echinococcus_granulosus_6210_Tribe833                 26.52%    passed     38.59%
+  69  Dunn2008_Echinoderes_horni_488522_Tribe833                     26.52%    passed     82.90%
+  70  Dunn2008_Euprymna_scolopes_6613_Tribe833                       26.16%    passed     81.31%
+  71  Dunn2008_Fenneropenaeus_chinensis_139456_Tribe833              28.32%    passed     76.21%
+  72  Dunn2008_Gallus_gallus_9031_Tribe833                           26.52%    passed     43.44%
+  73  Dunn2008_Homo_sapiens_9606_Tribe833                            26.52%    passed     64.69%
+  74  Dunn2008_Hydra_vulgaris_01_6087_Tribe833                       26.52%    passed     91.10%
+  75  Dunn2008_Hypsibius_dujardini_232323_Tribe833                   27.24%    passed     75.35%
+  76  Dunn2008_Mnemiopsis_leidyi_27923_Tribe833                      30.82%    passed     72.60%
+  77  Dunn2008_Monosiga_ovata_81526_Tribe833                         39.78%    passed     38.60%
+  78  Dunn2008_Nematostella_vectensis_45351_Tribe833                 26.52%    passed     85.36%
+  79  Dunn2008_Paraplanocera_oligoglena_1468194_Tribe833             26.52%    failed      3.95%
+  80  Dunn2008_Ptychodera_flava_63121_Tribe833                       26.52%    passed     86.79%
+  81  Dunn2008_Richtersius_coronifer_245088_Tribe833                 75.27%    passed     55.11%
+  82  Dunn2008_Saccharomyces_cerevisiae_4932_Tribe833                26.88%    passed     97.97%
+  83  Dunn2008_Saccoglossus_kowalevskii_10224_Tribe833               32.62%    passed     84.14%
+  84  Dunn2008_Schmidtea_mediterranea_79327_Tribe833                 26.52%    passed     41.75%
+  85  Dunn2008_Sphaeroforma_arctica_72019_Tribe833                   31.90%    passed     59.24%
+  86  Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe833           31.90%    passed     89.10%
+  87  Dunn2008_Trichinella_spiralis_6334_Tribe833                    46.59%    passed     93.55%
+  88  Dunn2008_Amoebidium_parasiticum_4881_Tribe868                  48.39%    passed     99.90%
+  89  Dunn2008_Anoplodactylus_eroticus_488521_Tribe868               32.26%    passed     21.00%
+  90  Dunn2008_Aplysia_californica_6500_Tribe868                     32.62%    passed     74.34%
+  91  Dunn2008_Asterina_pectinifera_7594_Tribe868                    32.62%    passed     35.79%
+  92  Dunn2008_Boophilus_microplus_6941_Tribe868                     32.62%    passed     54.40%
+  93  Dunn2008_Branchiostoma_floridae_7739_Tribe868                  34.77%    passed     64.33%
+  94  Dunn2008_Capitella_teleta_283909_Tribe868                      32.62%    passed     76.99%
+  95  Dunn2008_Capsaspora_owczarzaki_192875_Tribe868                 35.84%    passed     20.65%
+  96  Dunn2008_Chaetoderma_nitidulum_256131_Tribe868                 32.62%    passed     81.38%
+  97  Dunn2008_Ciona_intestinalis_7719_Tribe868                      32.97%    passed     88.14%
+  98  Dunn2008_Crassostrea_virginica_6565_Tribe868                   52.33%    passed     70.37%
+  99  Dunn2008_Cryptococcus_neoformans_5207_Tribe868                 32.62%    passed     35.95%
+ 100  Dunn2008_Dugesia_japonica_6161_Tribe868                        64.52%    passed     53.55%
+ 101  Dunn2008_Echinococcus_granulosus_6210_Tribe868                 32.62%    passed     43.35%
+ 102  Dunn2008_Gallus_gallus_9031_Tribe868                           32.62%    passed     52.96%
+ 103  Dunn2008_Homo_sapiens_9606_Tribe868                            32.62%    passed     78.47%
+ 104  Dunn2008_Hydractinia_echinata_35630_Tribe868                   55.20%    passed     91.43%
+ 105  Dunn2008_Lumbricus_rubellus_35632_Tribe868                     32.62%    passed     75.08%
+ 106  Dunn2008_Mnemiopsis_leidyi_27923_Tribe868                      32.62%    passed     43.70%
+ 107  Dunn2008_Monosiga_ovata_81526_Tribe868                         32.97%    passed     17.78%
+ 108  Dunn2008_Nematostella_vectensis_45351_Tribe868                 32.62%    passed     96.18%
+ 109  Dunn2008_Ptychodera_flava_63121_Tribe868                       32.62%    passed     47.60%
+ 110  Dunn2008_Saccharomyces_cerevisiae_4932_Tribe868                32.26%    passed     41.67%
+ 111  Dunn2008_Saccoglossus_kowalevskii_10224_Tribe868               32.62%    passed     68.96%
+ 112  Dunn2008_Sphaeroforma_arctica_72019_Tribe868                   32.26%    passed     96.75%
+ 113  Philippe2009_Allomyces_macrogynus_28583_Gene_0044              34.77%    passed     81.64%
+ 114  Philippe2009_Amoebidium_parasiticum_4881_Gene_0044             50.54%    passed     99.94%
+ 115  Philippe2009_Anoplodactylus_eroticus_488521_Gene_0044          34.77%    passed     22.51%
+ 116  Philippe2009_Aplysia_californica_6500_Gene_0044                34.77%    passed     76.03%
+ 117  Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0044   34.77%    passed     69.50%
+ 118  Philippe2009_Branchiostoma_floridae_7739_Gene_0044             34.77%    passed     55.55%
+ 119  Philippe2009_Capitella_teleta_283909_Gene_0044                 34.77%    passed     86.18%
+ 120  Philippe2009_Capsaspora_owczarzaki_192875_Gene_0044            35.13%    passed      9.29%
+ 121  Philippe2009_Carteriospongia_foliascens_593584_Gene_0044       35.13%    passed     31.93%
+ 122  Philippe2009_Ciona_savignyi_51511_Gene_0044                    35.13%    passed     91.94%
+ 123  Philippe2009_Crassostrea_gigas_29159_Gene_0044                 34.77%    passed     75.55%
+ 124  Philippe2009_Danio_rerio_7955_Gene_0044                        34.77%    passed     31.71%
+ 125  Philippe2009_Daphnia_pulex_6669_Gene_0044                      34.77%    passed     74.05%
+ 126  Philippe2009_Helobdella_robusta_6412_Gene_0044                 59.50%    passed     73.53%
+ 127  Philippe2009_Hydra_magnipapillata_6087_Gene_0044               34.77%    passed     67.92%
+ 128  Philippe2009_Hydractinia_echinata_35630_Gene_0044              57.71%    passed     84.15%
+ 129  Philippe2009_Ixodes_scapularis_6945_Gene_0044                  34.77%    passed     52.16%
+ 130  Philippe2009_Leucetta_chagosensis_185688_Gene_0044             34.77%    passed     84.10%
+ 131  Philippe2009_Mnemiopsis_leidyi_27923_Gene_0044                 34.77%    passed     38.15%
+ 132  Philippe2009_Molgula_tectiformis_30286_Gene_0044               34.77%    passed     99.07%
+ 133  Philippe2009_Monosiga_brevicollis_81824_Gene_0044              34.77%    passed     83.18%
+ 134  Philippe2009_Monosiga_ovata_81526_Gene_0044                    34.77%    passed     17.62%
+ 135  Philippe2009_Nasonia_vitripennis_7425_Gene_0044                34.77%    passed     88.85%
+ 136  Philippe2009_Nematostella_vectensis_45351_Gene_0044            34.77%    passed     96.09%
+ 137  Philippe2009_Pediculus_humanus_121225_Gene_0044                34.77%    passed     87.57%
+ 138  Philippe2009_Petromyzon_marinus_7757_Gene_0044                 67.74%    passed     64.04%
+ 139  Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0044           34.77%    passed     99.71%
+ 140  Philippe2009_Pleurobrachia_pileus_140457_Gene_0044             35.13%    failed      4.54%
+ 141  Philippe2009_Podocoryne_carnea_6096_Gene_0044                  34.77%    passed     76.95%
+ 142  Philippe2009_Amphimedon_queenslandica_400682_Gene_0044         35.13%    passed     72.04%
+ 143  Philippe2009_Rhizopus_oryzae_64495_Gene_0044                   34.77%    passed     99.98%
+ 144  Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0044          34.77%    passed     77.51%
+ 145  Philippe2009_Sphaeroforma_arctica_72019_Gene_0044              34.77%    passed     92.64%
+ 146  Philippe2009_Spizellomyces_punctatus_109760_Gene_0044          34.77%    passed     98.32%
+ 147  Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0044      34.77%    passed     39.38%
+ 148  Philippe2009_Trichoplax_adhaerens_10228_Gene_0044              34.77%    passed     80.05%
+ 149  Philippe2009_Tubifex_tubifex_6386_Gene_0044                    44.80%    passed     95.22%
+ 150  Philippe2009_Acropora_millepora_45264_Gene_0045                27.24%    passed     93.84%
+ 151  Philippe2009_Allomyces_macrogynus_28583_Gene_0045              32.97%    passed     95.21%
+ 152  Philippe2009_Aplysia_californica_6500_Gene_0045                27.24%    passed     89.05%
+ 153  Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0045   41.94%    passed     44.45%
+ 154  Philippe2009_Branchiostoma_floridae_7739_Gene_0045             27.24%    passed     80.48%
+ 155  Philippe2009_Capitella_teleta_283909_Gene_0045                 27.24%    passed     94.76%
+ 156  Philippe2009_Capsaspora_owczarzaki_192875_Gene_0045            27.24%    passed     89.59%
+ 157  Philippe2009_Ciona_savignyi_51511_Gene_0045                    27.24%    passed     94.57%
+ 158  Philippe2009_Clytia_hemisphaerica_252671_Gene_0045             27.24%    passed     96.31%
+ 159  Philippe2009_Crassostrea_gigas_29159_Gene_0045                 31.54%    passed     77.85%
+ 160  Philippe2009_Danio_rerio_7955_Gene_0045                        27.24%    passed     64.08%
+ 161  Philippe2009_Daphnia_pulex_6669_Gene_0045                      27.24%    passed     57.36%
+ 162  Philippe2009_Euprymna_scolopes_6613_Gene_0045                  27.24%    passed     85.77%
+ 163  Philippe2009_Helobdella_robusta_6412_Gene_0045                 27.24%    passed     98.52%
+ 164  Philippe2009_Hydra_magnipapillata_6087_Gene_0045               27.24%    passed     89.73%
+ 165  Philippe2009_Hydractinia_echinata_35630_Gene_0045              86.02%    passed     99.19%
+ 166  Philippe2009_Ixodes_scapularis_6945_Gene_0045                  31.90%    passed     66.95%
+ 167  Philippe2009_Leucetta_chagosensis_185688_Gene_0045             49.10%    passed     71.49%
+ 168  Philippe2009_Mnemiopsis_leidyi_27923_Gene_0045                 27.24%    passed     85.51%
+ 169  Philippe2009_Molgula_tectiformis_30286_Gene_0045               27.24%    passed     91.63%
+ 170  Philippe2009_Monosiga_brevicollis_81824_Gene_0045              27.60%    passed     78.60%
+ 171  Philippe2009_Monosiga_ovata_81526_Gene_0045                    27.96%    passed     57.44%
+ 172  Philippe2009_Nasonia_vitripennis_7425_Gene_0045                27.24%    passed     78.20%
+ 173  Philippe2009_Nematostella_vectensis_45351_Gene_0045            27.24%    passed     88.65%
+ 174  Philippe2009_Pediculus_humanus_121225_Gene_0045                27.24%    passed     73.43%
+ 175  Philippe2009_Petromyzon_marinus_7757_Gene_0045                 44.09%    passed     30.69%
+ 176  Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0045           32.97%    passed     82.74%
+ 177  Philippe2009_Pleurobrachia_pileus_140457_Gene_0045             27.24%    passed     83.59%
+ 178  Philippe2009_Podocoryne_carnea_6096_Gene_0045                  46.95%    passed     99.26%
+ 179  Philippe2009_Proterospongia_sp_218847_Gene_0045                27.96%    passed     97.47%
+ 180  Philippe2009_Amphimedon_queenslandica_400682_Gene_0045         27.96%    passed     99.94%
+ 181  Philippe2009_Rhizopus_oryzae_64495_Gene_0045                   32.97%    passed     95.34%
+ 182  Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0045          27.24%    passed     95.63%
+ 183  Philippe2009_Sphaeroforma_arctica_72019_Gene_0045              27.24%    passed     70.12%
+ 184  Philippe2009_Spizellomyces_punctatus_109760_Gene_0045          29.39%    passed     90.37%
+ 185  Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0045      27.24%    passed     97.52%
+ 186  Philippe2009_Trichoplax_adhaerens_10228_Gene_0045              27.60%    passed     98.09%
+ 187  Philippe2009_Acropora_millepora_45264_Gene_0046                34.05%    passed     95.78%
+ 188  Philippe2009_Allomyces_macrogynus_28583_Gene_0046              29.75%    passed     64.50%
+ 189  Philippe2009_Anoplodactylus_eroticus_488521_Gene_0046          31.54%    passed     90.67%
+ 190  Philippe2009_Aplysia_californica_6500_Gene_0046                29.75%    passed     99.47%
+ 191  Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0046   44.44%    passed     93.08%
+ 192  Philippe2009_Branchiostoma_floridae_7739_Gene_0046             29.75%    passed     99.71%
+ 193  Philippe2009_Capitella_teleta_283909_Gene_0046                 29.75%    passed     71.53%
+ 194  Philippe2009_Capsaspora_owczarzaki_192875_Gene_0046            45.16%    passed     84.35%
+ 195  Philippe2009_Ciona_savignyi_51511_Gene_0046                    29.75%    passed     98.82%
+ 196  Philippe2009_Crassostrea_gigas_29159_Gene_0046                 29.75%    passed     97.09%
+ 197  Philippe2009_Cyanea_capillata_27804_Gene_0046                  31.18%    passed     74.98%
+ 198  Philippe2009_Danio_rerio_7955_Gene_0046                        29.75%    passed     99.93%
+ 199  Philippe2009_Daphnia_pulex_6669_Gene_0046                      29.75%    passed    100.00%
+ 200  Philippe2009_Euprymna_scolopes_6613_Gene_0046                  45.16%    passed     97.97%
+ 201  Philippe2009_Helobdella_robusta_6412_Gene_0046                 45.16%    passed     96.79%
+ 202  Philippe2009_Hydra_magnipapillata_6087_Gene_0046               29.75%    passed     74.07%
+ 203  Philippe2009_Ixodes_scapularis_6945_Gene_0046                  29.75%    passed     53.01%
+ 204  Philippe2009_Metridium_senile_6116_Gene_0046                   29.75%    passed     99.28%
+ 205  Philippe2009_Mnemiopsis_leidyi_27923_Gene_0046                 29.75%    passed     99.32%
+ 206  Philippe2009_Molgula_tectiformis_30286_Gene_0046               29.75%    passed     87.72%
+ 207  Philippe2009_Monosiga_brevicollis_81824_Gene_0046              29.75%    passed     30.86%
+ 208  Philippe2009_Monosiga_ovata_81526_Gene_0046                    38.35%    passed     89.86%
+ 209  Philippe2009_Nasonia_vitripennis_7425_Gene_0046                29.75%    passed    100.00%
+ 210  Philippe2009_Nematostella_vectensis_45351_Gene_0046            29.75%    passed     98.38%
+ 211  Philippe2009_Oopsacas_minuta_111878_Gene_0046                  29.75%    passed     74.55%
+ 212  Philippe2009_Pedicellina_cernua_43123_Gene_0046                29.75%    passed     88.19%
+ 213  Philippe2009_Pediculus_humanus_121225_Gene_0046                32.26%    passed     94.56%
+ 214  Philippe2009_Petromyzon_marinus_7757_Gene_0046                 37.28%    passed     77.92%
+ 215  Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0046           29.75%    passed     83.19%
+ 216  Philippe2009_Pleurobrachia_pileus_140457_Gene_0046             29.75%    passed     99.35%
+ 217  Philippe2009_Podocoryne_carnea_6096_Gene_0046                  34.05%    passed     80.90%
+ 218  Philippe2009_Proterospongia_sp_218847_Gene_0046                33.69%    passed     97.75%
+ 219  Philippe2009_Amphimedon_queenslandica_400682_Gene_0046         29.75%    passed     72.44%
+ 220  Philippe2009_Rhizopus_oryzae_64495_Gene_0046                   34.05%    passed     80.97%
+ 221  Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0046          29.75%    passed     97.42%
+ 222  Philippe2009_Scutigera_coleoptrata_29022_Gene_0046             66.31%    passed     74.94%
+ 223  Philippe2009_Spizellomyces_punctatus_109760_Gene_0046          48.39%    passed     42.19%
+ 224  Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0046      29.75%    passed     98.64%
+ 225  Philippe2009_Trichoplax_adhaerens_10228_Gene_0046              29.75%    passed     40.55%
+ 226  Philippe2009_Tubifex_tubifex_6386_Gene_0046                    29.75%    passed     98.73%
+ 227  Philippe2009_Xenoturbella_bocki_242395_Gene_0046               29.75%    passed     84.96%
+ 228  Philippe2009_Acropora_millepora_45264_Gene_0047                16.13%    passed     89.85%
+ 229  Philippe2009_Allomyces_macrogynus_28583_Gene_0047              16.13%    passed     76.29%
+ 230  Philippe2009_Aplysia_californica_6500_Gene_0047                16.13%    passed     99.09%
+ 231  Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0047   16.13%    passed     78.59%
+ 232  Philippe2009_Branchiostoma_floridae_7739_Gene_0047             16.13%    passed     96.50%
+ 233  Philippe2009_Capitella_teleta_283909_Gene_0047                 19.00%    passed     85.07%
+ 234  Philippe2009_Capsaspora_owczarzaki_192875_Gene_0047            28.32%    passed     82.74%
+ 235  Philippe2009_Ciona_savignyi_51511_Gene_0047                    16.13%    passed     71.78%
+ 236  Philippe2009_Clytia_hemisphaerica_252671_Gene_0047             16.13%    passed     55.94%
+ 237  Philippe2009_Crassostrea_gigas_29159_Gene_0047                 16.13%    passed     96.50%
+ 238  Philippe2009_Danio_rerio_7955_Gene_0047                        16.13%    passed     89.65%
+ 239  Philippe2009_Daphnia_pulex_6669_Gene_0047                      16.13%    passed     64.13%
+ 240  Philippe2009_Ephydatia_muelleri_6052_Gene_0047                 30.47%    passed     92.81%
+ 241  Philippe2009_Euprymna_scolopes_6613_Gene_0047                  16.13%    passed     94.89%
+ 242  Philippe2009_Helobdella_robusta_6412_Gene_0047                 16.13%    passed     61.19%
+ 243  Philippe2009_Heterochone_sp_367900_Gene_0047                   46.59%    passed      7.38%
+ 244  Philippe2009_Hydra_magnipapillata_6087_Gene_0047               16.13%    passed     75.28%
+ 245  Philippe2009_Ixodes_scapularis_6945_Gene_0047                  16.13%    passed     67.20%
+ 246  Philippe2009_Mnemiopsis_leidyi_27923_Gene_0047                 16.13%    passed     88.65%
+ 247  Philippe2009_Molgula_tectiformis_30286_Gene_0047               16.13%    passed     65.96%
+ 248  Philippe2009_Monosiga_brevicollis_81824_Gene_0047              16.13%    passed     82.22%
+ 249  Philippe2009_Monosiga_ovata_81526_Gene_0047                    20.79%    passed     91.12%
+ 250  Philippe2009_Nasonia_vitripennis_7425_Gene_0047                16.13%    passed     93.22%
+ 251  Philippe2009_Nematostella_vectensis_45351_Gene_0047            16.13%    passed     98.00%
+ 252  Philippe2009_Oopsacas_minuta_111878_Gene_0047                  27.60%    passed     73.80%
+ 253  Philippe2009_Oscarella_carmela_386100_Gene_0047                16.13%    passed     98.24%
+ 254  Philippe2009_Pediculus_humanus_121225_Gene_0047                16.13%    passed     85.92%
+ 255  Philippe2009_Petromyzon_marinus_7757_Gene_0047                 16.13%    passed     99.35%
+ 256  Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0047           39.43%    passed     90.16%
+ 257  Philippe2009_Pleurobrachia_pileus_140457_Gene_0047             16.13%    passed     68.00%
+ 258  Philippe2009_Amphimedon_queenslandica_400682_Gene_0047         16.13%    passed     54.49%
+ 259  Philippe2009_Rhizopus_oryzae_64495_Gene_0047                   16.13%    passed     83.99%
+ 260  Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0047          16.13%    passed     92.25%
+ 261  Philippe2009_Spizellomyces_punctatus_109760_Gene_0047          28.67%    passed     99.44%
+ 262  Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0047      16.13%    passed     90.10%
+ 263  Philippe2009_Trichoplax_adhaerens_10228_Gene_0047              20.07%    passed     96.16%
+ 264  Philippe2009_Tubifex_tubifex_6386_Gene_0047                    16.13%    passed     76.83%
+ 265  Philippe2009_Mertensiid_sp_140499_Gene_0047                    16.13%    passed     86.30%
+ 266  Philippe2009_Allomyces_macrogynus_28583_Gene_0048              30.11%    passed     14.11%
+ 267  Philippe2009_Aplysia_californica_6500_Gene_0048                27.96%    passed     90.90%
+ 268  Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0048   38.71%    passed     99.68%
+ 269  Philippe2009_Branchiostoma_floridae_7739_Gene_0048             27.96%    passed     78.50%
+ 270  Philippe2009_Capitella_teleta_283909_Gene_0048                 29.75%    passed     73.64%
+ 271  Philippe2009_Capsaspora_owczarzaki_192875_Gene_0048            38.71%    passed     93.86%
+ 272  Philippe2009_Ciona_savignyi_51511_Gene_0048                    27.96%    passed     85.65%
+ 273  Philippe2009_Clytia_hemisphaerica_252671_Gene_0048             29.39%    passed     32.27%
+ 274  Philippe2009_Crassostrea_gigas_29159_Gene_0048                 43.01%    passed     57.99%
+ 275  Philippe2009_Danio_rerio_7955_Gene_0048                        27.96%    passed     36.81%
+ 276  Philippe2009_Daphnia_pulex_6669_Gene_0048                      29.39%    passed     68.06%
+ 277  Philippe2009_Euprymna_scolopes_6613_Gene_0048                  27.96%    passed     63.93%
+ 278  Philippe2009_Helobdella_robusta_6412_Gene_0048                 37.99%    passed     71.27%
+ 279  Philippe2009_Hydra_magnipapillata_6087_Gene_0048               27.96%    passed     54.60%
+ 280  Philippe2009_Hydractinia_echinata_35630_Gene_0048              28.32%    passed     63.30%
+ 281  Philippe2009_Ixodes_scapularis_6945_Gene_0048                  27.96%    passed     79.89%
+ 282  Philippe2009_Leucetta_chagosensis_185688_Gene_0048             47.31%    passed     91.65%
+ 283  Philippe2009_Metridium_senile_6116_Gene_0048                   27.96%    passed     62.75%
+ 284  Philippe2009_Mnemiopsis_leidyi_27923_Gene_0048                 29.03%    passed     82.04%
+ 285  Philippe2009_Molgula_tectiformis_30286_Gene_0048               27.96%    passed     93.16%
+ 286  Philippe2009_Monosiga_brevicollis_81824_Gene_0048              31.18%    passed     81.95%
+ 287  Philippe2009_Nasonia_vitripennis_7425_Gene_0048                27.96%    passed     87.49%
+ 288  Philippe2009_Nematostella_vectensis_45351_Gene_0048            27.96%    passed     75.90%
+ 289  Philippe2009_Oscarella_carmela_386100_Gene_0048                27.96%    passed     94.51%
+ 290  Philippe2009_Pediculus_humanus_121225_Gene_0048                29.75%    passed     44.16%
+ 291  Philippe2009_Petromyzon_marinus_7757_Gene_0048                 27.96%    passed     84.00%
+ 292  Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0048           29.75%    passed     92.08%
+ 293  Philippe2009_Pleurobrachia_pileus_140457_Gene_0048             29.03%    passed     90.02%
+ 294  Philippe2009_Podocoryne_carnea_6096_Gene_0048                  75.99%    passed     62.56%
+ 295  Philippe2009_Amphimedon_queenslandica_400682_Gene_0048         28.32%    passed     79.29%
+ 296  Philippe2009_Rhizopus_oryzae_64495_Gene_0048                   27.96%    passed     98.86%
+ 297  Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0048          27.96%    passed     96.33%
+ 298  Philippe2009_Sphaeroforma_arctica_72019_Gene_0048              71.68%    passed     51.86%
+ 299  Philippe2009_Spizellomyces_punctatus_109760_Gene_0048          40.50%    passed     83.36%
+ 300  Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0048      27.96%    passed     98.26%
+ 301  Philippe2009_Sycon_raphanus_56443_Gene_0048                    30.82%    passed     33.39%
+ 302  Philippe2009_Trichoplax_adhaerens_10228_Gene_0048              29.03%    passed     26.04%
+ 303  Philippe2009_Allomyces_macrogynus_28583_Gene_0050              34.77%    passed     99.34%
+ 304  Philippe2009_Aplysia_californica_6500_Gene_0050                34.77%    passed     99.35%
+ 305  Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0050   35.48%    passed     38.20%
+ 306  Philippe2009_Branchiostoma_floridae_7739_Gene_0050             34.77%    passed     98.07%
+ 307  Philippe2009_Capitella_teleta_283909_Gene_0050                 35.48%    passed     85.88%
+ 308  Philippe2009_Capsaspora_owczarzaki_192875_Gene_0050            35.13%    passed     77.71%
+ 309  Philippe2009_Ciona_savignyi_51511_Gene_0050                    34.77%    passed     94.12%
+ 310  Philippe2009_Clytia_hemisphaerica_252671_Gene_0050             34.77%    passed     64.86%
+ 311  Philippe2009_Crassostrea_gigas_29159_Gene_0050                 53.76%    passed     96.21%
+ 312  Philippe2009_Danio_rerio_7955_Gene_0050                        34.77%    passed     93.72%
+ 313  Philippe2009_Daphnia_pulex_6669_Gene_0050                      34.77%    passed     95.03%
+ 314  Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0050      34.77%    passed     72.22%
+ 315  Philippe2009_Euprymna_scolopes_6613_Gene_0050                  41.22%    passed     88.19%
+ 316  Philippe2009_Helobdella_robusta_6412_Gene_0050                 58.42%    passed     75.48%
+ 317  Philippe2009_Hydra_magnipapillata_6087_Gene_0050               34.77%    passed     99.84%
+ 318  Philippe2009_Hydractinia_echinata_35630_Gene_0050              34.77%    passed     99.57%
+ 319  Philippe2009_Ixodes_scapularis_6945_Gene_0050                  34.77%    passed     38.27%
+ 320  Philippe2009_Leucetta_chagosensis_185688_Gene_0050             48.75%    passed     87.94%
+ 321  Philippe2009_Metridium_senile_6116_Gene_0050                   34.77%    passed     99.17%
+ 322  Philippe2009_Mnemiopsis_leidyi_27923_Gene_0050                 34.77%    passed     90.65%
+ 323  Philippe2009_Molgula_tectiformis_30286_Gene_0050               34.77%    passed     49.91%
+ 324  Philippe2009_Monosiga_brevicollis_81824_Gene_0050              46.59%    passed     93.45%
+ 325  Philippe2009_Monosiga_ovata_81526_Gene_0050                    34.77%    passed     96.59%
+ 326  Philippe2009_Nasonia_vitripennis_7425_Gene_0050                34.77%    passed     97.98%
+ 327  Philippe2009_Nematostella_vectensis_45351_Gene_0050            34.77%    passed     96.97%
+ 328  Philippe2009_Oopsacas_minuta_111878_Gene_0050                  46.59%    passed     81.19%
+ 329  Philippe2009_Oscarella_carmela_386100_Gene_0050                34.77%    passed     89.53%
+ 330  Philippe2009_Pediculus_humanus_121225_Gene_0050                34.77%    passed     78.24%
+ 331  Philippe2009_Petromyzon_marinus_7757_Gene_0050                 34.77%    passed     88.31%
+ 332  Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0050           34.77%    passed     96.50%
+ 333  Philippe2009_Pleurobrachia_pileus_140457_Gene_0050             34.77%    passed     64.71%
+ 334  Philippe2009_Podocoryne_carnea_6096_Gene_0050                  44.80%    passed     97.58%
+ 335  Philippe2009_Proterospongia_sp_218847_Gene_0050                34.77%    passed     89.45%
+ 336  Philippe2009_Amphimedon_queenslandica_400682_Gene_0050         60.22%    passed     60.45%
+ 337  Philippe2009_Rhizopus_oryzae_64495_Gene_0050                   34.77%    passed     96.73%
+ 338  Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0050          34.77%    passed     99.33%
+ 339  Philippe2009_Sphaeroforma_arctica_72019_Gene_0050              36.20%    passed     70.98%
+ 340  Philippe2009_Spizellomyces_punctatus_109760_Gene_0050          44.80%    passed     86.20%
+ 341  Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0050      34.77%    passed     99.77%
+ 342  Philippe2009_Trichoplax_adhaerens_10228_Gene_0050              34.77%    passed     28.66%
+ 343  Philippe2009_Tubifex_tubifex_6386_Gene_0050                    34.77%    passed     40.54%
+WARNING: 26 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                                          32.82%  4 sequences failed composition chi2 test (p-value<5%; df=19)
+
+CHECKPOINT: Initial tree restored
+Generating 1000 samples for ultrafast bootstrap (seed: 192321)...
+CHECKPOINT: 1000 UFBoot trees and 1 UFBootSplits restored
+WARNING: Default model LG may be under-fitting. Use option '-m TEST' to determine the best-fit model.
+
+NOTE: 17 MB RAM (0 GB) is required!
+CHECKPOINT: Model parameters restored, LogL: -59340.451
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+CHECKPOINT: Candidate tree set restored, best LogL: -59340.451
+Finish initializing candidate tree set (20)
+Current best tree score: -59340.451 / CPU time: 0.000
+Number of iterations: 57
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 60 / LogL: -59363.232 / Time: 0h:0m:5s (0h:0m:8s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 63: -59335.549
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 66: -59334.910
+Iteration 70 / LogL: -59341.218 / Time: 0h:0m:27s (0h:0m:37s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 79: -59330.772
+Iteration 80 / LogL: -59338.529 / Time: 0h:0m:48s (0h:1m:0s left)
+Iteration 90 / LogL: -59338.352 / Time: 0h:1m:9s (0h:1m:9s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 96: -59328.790
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 97: -59312.500
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 98: -59312.109
+Iteration 100 / LogL: -59370.408 / Time: 0h:1m:31s (0h:1m:30s left)
+Log-likelihood cutoff on original alignment: -59532.672
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.971
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 109: -59310.736
+Iteration 110 / LogL: -59340.705 / Time: 0h:1m:56s (0h:1m:45s left)
+Iteration 120 / LogL: -59472.801 / Time: 0h:2m:18s (0h:1m:43s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 123: -59309.481
+Iteration 130 / LogL: -59337.023 / Time: 0h:2m:39s (0h:1m:55s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 132: -59306.096
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 134: -59304.722
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 138: -59302.380
+Iteration 140 / LogL: -59308.281 / Time: 0h:3m:1s (0h:2m:7s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 141: -59296.346
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 143: -59282.894
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 150: -59282.423
+Iteration 150 / LogL: -59282.423 / Time: 0h:3m:23s (0h:2m:16s left)
+Log-likelihood cutoff on original alignment: -59532.672
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 153: -59276.673
+Iteration 160 / LogL: -59300.126 / Time: 0h:3m:48s (0h:2m:13s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 164: -59272.324
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 167: -59271.023
+Iteration 170 / LogL: -59327.423 / Time: 0h:4m:13s (0h:2m:25s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 180: -59268.485
+Iteration 180 / LogL: -59268.485 / Time: 0h:4m:36s (0h:2m:34s left)
+Iteration 190 / LogL: -59302.028 / Time: 0h:4m:57s (0h:2m:21s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 192: -59266.891
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 200: -59266.439
+Iteration 200 / LogL: -59266.439 / Time: 0h:5m:19s (0h:2m:40s left)
+Log-likelihood cutoff on original alignment: -59492.740
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.909
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 201: -59261.050
+Iteration 210 / LogL: -59265.153 / Time: 0h:5m:42s (0h:2m:29s left)
+Iteration 220 / LogL: -59288.897 / Time: 0h:6m:4s (0h:2m:14s left)
+Iteration 230 / LogL: -59267.922 / Time: 0h:6m:25s (0h:1m:59s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 240: -59260.666
+Iteration 240 / LogL: -59260.666 / Time: 0h:6m:48s (0h:2m:50s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 249: -59256.875
+Iteration 250 / LogL: -59325.152 / Time: 0h:7m:9s (0h:2m:50s left)
+Log-likelihood cutoff on original alignment: -59485.365
+Iteration 260 / LogL: -59261.605 / Time: 0h:7m:32s (0h:2m:35s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 263: -59255.962
+Iteration 270 / LogL: -59285.300 / Time: 0h:7m:55s (0h:2m:44s left)
+Iteration 280 / LogL: -59310.873 / Time: 0h:8m:15s (0h:2m:27s left)
+Iteration 290 / LogL: -59266.880 / Time: 0h:8m:36s (0h:2m:10s left)
+Iteration 300 / LogL: -59289.854 / Time: 0h:8m:59s (0h:1m:53s left)
+Log-likelihood cutoff on original alignment: -59485.365
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.964
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 310 / LogL: -59299.967 / Time: 0h:9m:22s (0h:2m:43s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 317: -59255.090
+Iteration 320 / LogL: -59289.426 / Time: 0h:9m:43s (0h:2m:57s left)
+Iteration 330 / LogL: -59265.629 / Time: 0h:10m:6s (0h:2m:40s left)
+Iteration 340 / LogL: -59316.451 / Time: 0h:10m:28s (0h:2m:22s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 341: -59254.456
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 349: -59254.130
+Iteration 350 / LogL: -59290.955 / Time: 0h:10m:50s (0h:3m:4s left)
+Log-likelihood cutoff on original alignment: -59485.365
+Iteration 360 / LogL: -59283.480 / Time: 0h:11m:14s (0h:2m:47s left)
+Iteration 370 / LogL: -59293.536 / Time: 0h:11m:37s (0h:2m:29s left)
+Iteration 380 / LogL: -59261.476 / Time: 0h:11m:59s (0h:2m:10s left)
+Iteration 390 / LogL: -59270.049 / Time: 0h:12m:21s (0h:1m:52s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 400: -59251.489
+Iteration 400 / LogL: -59251.489 / Time: 0h:12m:43s (0h:3m:11s left)
+Log-likelihood cutoff on original alignment: -59485.365
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.991
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 405: -59250.961
+Iteration 410 / LogL: -59261.576 / Time: 0h:13m:8s (0h:3m:3s left)
+Iteration 420 / LogL: -59271.440 / Time: 0h:13m:31s (0h:2m:44s left)
+Iteration 430 / LogL: -59287.378 / Time: 0h:13m:53s (0h:2m:25s left)
+Iteration 440 / LogL: -59300.176 / Time: 0h:14m:16s (0h:2m:6s left)
+Iteration 450 / LogL: -59285.379 / Time: 0h:14m:38s (0h:1m:47s left)
+Log-likelihood cutoff on original alignment: -59485.365
+Iteration 460 / LogL: -59281.773 / Time: 0h:15m:2s (0h:1m:28s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 469: -59247.534
+Iteration 470 / LogL: -59261.046 / Time: 0h:15m:25s (0h:3m:15s left)
+Iteration 480 / LogL: -59254.136 / Time: 0h:15m:46s (0h:2m:55s left)
+Iteration 490 / LogL: -59294.102 / Time: 0h:16m:9s (0h:2m:36s left)
+Iteration 500 / LogL: -59283.130 / Time: 0h:16m:32s (0h:2m:17s left)
+Log-likelihood cutoff on original alignment: -59485.365
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.991
+Iteration 510 / LogL: -59251.226 / Time: 0h:16m:57s (0h:2m:59s left)
+Iteration 520 / LogL: -59310.926 / Time: 0h:17m:21s (0h:2m:40s left)
+Iteration 530 / LogL: -59273.046 / Time: 0h:17m:45s (0h:2m:21s left)
+Iteration 540 / LogL: -59261.487 / Time: 0h:18m:10s (0h:2m:1s left)
+Iteration 550 / LogL: -59287.736 / Time: 0h:18m:33s (0h:1m:41s left)
+Log-likelihood cutoff on original alignment: -59483.166
+Iteration 560 / LogL: -59259.190 / Time: 0h:18m:57s (0h:1m:21s left)
+Iteration 570 / LogL: -59248.450 / Time: 0h:19m:19s (0h:1m:1s left)
+TREE SEARCH COMPLETED AFTER 570 ITERATIONS / Time: 0h:19m:20s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -59247.534
+Optimal log-likelihood: -59247.534
+Parameters optimization took 1 rounds (0.124 sec)
+BEST SCORE FOUND : -59247.534
+Creating bootstrap support values...
+Split supports printed to NEXUS file mafft/test/component39/DEFAULT_component39.splits.nex
+Total tree length: 78.030
+
+Total number of iterations: 570
+CPU time used for tree search: 1159.197 sec (0h:19m:19s)
+Wall-clock time used for tree search: 1160.033 sec (0h:19m:20s)
+Total CPU time used: 1160.947 sec (0h:19m:20s)
+Total wall-clock time used: 1161.802 sec (0h:19m:21s)
+
+Computing bootstrap consensus tree...
+Reading input file mafft/test/component39/DEFAULT_component39.splits.nex...
+343 taxa and 2419 splits.
+Consensus tree written to mafft/test/component39/DEFAULT_component39.contree
+Reading input trees file mafft/test/component39/DEFAULT_component39.contree
+Log-likelihood of consensus tree: -59246.644
+
+Analysis results written to: 
+  IQ-TREE report:                mafft/test/component39/DEFAULT_component39.iqtree
+  Maximum-likelihood tree:       mafft/test/component39/DEFAULT_component39.treefile
+  Likelihood distances:          mafft/test/component39/DEFAULT_component39.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          mafft/test/component39/DEFAULT_component39.splits.nex
+  Consensus tree:                mafft/test/component39/DEFAULT_component39.contree
+  Screen log file:               mafft/test/component39/DEFAULT_component39.log
+
+Date and Time: Mon Aug  8 09:33:11 2022

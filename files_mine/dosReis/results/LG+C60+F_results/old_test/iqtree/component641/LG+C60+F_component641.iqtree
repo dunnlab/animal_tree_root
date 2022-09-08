@@ -1,0 +1,761 @@
+IQ-TREE 1.5.3 built Mar 12 2017
+
+Input file name: /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component641.mafft
+Type of analysis: tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 596064
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh (2015)
+IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol. Biol. Evol., 32:268-274.
+http://dx.doi.org/10.1093/molbev/msu300
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Bui Quang Minh, Minh Anh Thi Nguyen, and Arndt von Haeseler (2013) Ultrafast
+approximation for phylogenetic bootstrap. Mol. Biol. Evol., 30:1188-1195.
+http://dx.doi.org/10.1093/molbev/mst024
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 144 sequences with 104 amino-acid sites
+Number of constant sites: 5 (= 4.80769% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 5 (= 4.80769% of all sites)
+Number of distinct site patterns: 104
+
+SUBSTITUTION PROCESS
+--------------------
+
+Mixture model of substitution: MIX{LG+F+F,LG+FC60pi1,LG+FC60pi2,LG+FC60pi3,LG+FC60pi4,LG+FC60pi5,LG+FC60pi6,LG+FC60pi7,LG+FC60pi8,LG+FC60pi9,LG+FC60pi10,LG+FC60pi11,LG+FC60pi12,LG+FC60pi13,LG+FC60pi14,LG+FC60pi15,LG+FC60pi16,LG+FC60pi17,LG+FC60pi18,LG+FC60pi19,LG+FC60pi20,LG+FC60pi21,LG+FC60pi22,LG+FC60pi23,LG+FC60pi24,LG+FC60pi25,LG+FC60pi26,LG+FC60pi27,LG+FC60pi28,LG+FC60pi29,LG+FC60pi30,LG+FC60pi31,LG+FC60pi32,LG+FC60pi33,LG+FC60pi34,LG+FC60pi35,LG+FC60pi36,LG+FC60pi37,LG+FC60pi38,LG+FC60pi39,LG+FC60pi40,LG+FC60pi41,LG+FC60pi42,LG+FC60pi43,LG+FC60pi44,LG+FC60pi45,LG+FC60pi46,LG+FC60pi47,LG+FC60pi48,LG+FC60pi49,LG+FC60pi50,LG+FC60pi51,LG+FC60pi52,LG+FC60pi53,LG+FC60pi54,LG+FC60pi55,LG+FC60pi56,LG+FC60pi57,LG+FC60pi58,LG+FC60pi59,LG+FC60pi60}+G4
+
+  No  Component      Rate    Weight   Parameters
+   1  LG+F          1.0000   0.0570   LG+F
+   2  LG+FC60pi1    1.0000   0.0449   LG+FC60pi1
+   3  LG+FC60pi2    1.0000   0.0000   LG+FC60pi2
+   4  LG+FC60pi3    1.0000   0.0240   LG+FC60pi3
+   5  LG+FC60pi4    1.0000   0.0000   LG+FC60pi4
+   6  LG+FC60pi5    1.0000   0.0454   LG+FC60pi5
+   7  LG+FC60pi6    1.0000   0.0000   LG+FC60pi6
+   8  LG+FC60pi7    1.0000   0.0000   LG+FC60pi7
+   9  LG+FC60pi8    1.0000   0.0000   LG+FC60pi8
+  10  LG+FC60pi9    1.0000   0.0000   LG+FC60pi9
+  11  LG+FC60pi10   1.0000   0.0232   LG+FC60pi10
+  12  LG+FC60pi11   1.0000   0.0468   LG+FC60pi11
+  13  LG+FC60pi12   1.0000   0.0000   LG+FC60pi12
+  14  LG+FC60pi13   1.0000   0.0000   LG+FC60pi13
+  15  LG+FC60pi14   1.0000   0.0119   LG+FC60pi14
+  16  LG+FC60pi15   1.0000   0.0000   LG+FC60pi15
+  17  LG+FC60pi16   1.0000   0.0178   LG+FC60pi16
+  18  LG+FC60pi17   1.0000   0.0714   LG+FC60pi17
+  19  LG+FC60pi18   1.0000   0.0596   LG+FC60pi18
+  20  LG+FC60pi19   1.0000   0.0366   LG+FC60pi19
+  21  LG+FC60pi20   1.0000   0.0204   LG+FC60pi20
+  22  LG+FC60pi21   1.0000   0.0000   LG+FC60pi21
+  23  LG+FC60pi22   1.0000   0.0803   LG+FC60pi22
+  24  LG+FC60pi23   1.0000   0.0000   LG+FC60pi23
+  25  LG+FC60pi24   1.0000   0.0000   LG+FC60pi24
+  26  LG+FC60pi25   1.0000   0.0127   LG+FC60pi25
+  27  LG+FC60pi26   1.0000   0.0000   LG+FC60pi26
+  28  LG+FC60pi27   1.0000   0.0474   LG+FC60pi27
+  29  LG+FC60pi28   1.0000   0.0000   LG+FC60pi28
+  30  LG+FC60pi29   1.0000   0.0253   LG+FC60pi29
+  31  LG+FC60pi30   1.0000   0.0164   LG+FC60pi30
+  32  LG+FC60pi31   1.0000   0.0000   LG+FC60pi31
+  33  LG+FC60pi32   1.0000   0.0115   LG+FC60pi32
+  34  LG+FC60pi33   1.0000   0.0175   LG+FC60pi33
+  35  LG+FC60pi34   1.0000   0.0238   LG+FC60pi34
+  36  LG+FC60pi35   1.0000   0.0358   LG+FC60pi35
+  37  LG+FC60pi36   1.0000   0.0132   LG+FC60pi36
+  38  LG+FC60pi37   1.0000   0.0000   LG+FC60pi37
+  39  LG+FC60pi38   1.0000   0.0199   LG+FC60pi38
+  40  LG+FC60pi39   1.0000   0.0000   LG+FC60pi39
+  41  LG+FC60pi40   1.0000   0.0189   LG+FC60pi40
+  42  LG+FC60pi41   1.0000   0.0000   LG+FC60pi41
+  43  LG+FC60pi42   1.0000   0.0000   LG+FC60pi42
+  44  LG+FC60pi43   1.0000   0.0283   LG+FC60pi43
+  45  LG+FC60pi44   1.0000   0.0141   LG+FC60pi44
+  46  LG+FC60pi45   1.0000   0.0000   LG+FC60pi45
+  47  LG+FC60pi46   1.0000   0.0000   LG+FC60pi46
+  48  LG+FC60pi47   1.0000   0.0000   LG+FC60pi47
+  49  LG+FC60pi48   1.0000   0.0381   LG+FC60pi48
+  50  LG+FC60pi49   1.0000   0.0235   LG+FC60pi49
+  51  LG+FC60pi50   1.0000   0.0147   LG+FC60pi50
+  52  LG+FC60pi51   1.0000   0.0075   LG+FC60pi51
+  53  LG+FC60pi52   1.0000   0.0303   LG+FC60pi52
+  54  LG+FC60pi53   1.0000   0.0000   LG+FC60pi53
+  55  LG+FC60pi54   1.0000   0.0000   LG+FC60pi54
+  56  LG+FC60pi55   1.0000   0.0000   LG+FC60pi55
+  57  LG+FC60pi56   1.0000   0.0205   LG+FC60pi56
+  58  LG+FC60pi57   1.0000   0.0000   LG+FC60pi57
+  59  LG+FC60pi58   1.0000   0.0000   LG+FC60pi58
+  60  LG+FC60pi59   1.0000   0.0411   LG+FC60pi59
+  61  LG+FC60pi60   1.0000   0.0000   LG+FC60pi60
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 0.9566
+
+ Category  Relative_rate  Proportion
+  1         0.1282         0.2500
+  2         0.4633         0.2500
+  3         0.9924         0.2500
+  4         2.4160         0.2500
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -8158.0300 (s.e. 579.6562)
+Unconstrained log-likelihood (without tree): -483.0167
+Number of free parameters (#branches + #model parameters): 365
+Akaike information criterion (AIC) score: 17046.0600
+Corrected Akaike information criterion (AICc) score: 284226.0600
+Bayesian information criterion (BIC) score: 18011.2627
+
+**************************** WARNING ****************************
+Number of parameters (K, model parameters and branch lengths): 365
+Sample size (n, alignment length): 104
+
+Given that K>=n, the parameter estimates might be inaccurate.
+Thus, phylogenetic estimates should be interpreted with caution.
+
+Ideally, it is desirable that n >> K. When selecting optimal models,
+1. use AIC or BIC if n > 40K;
+2. use AICc or BIC if 40K >= n > K;
+3. be extremely cautious if n <= K
+
+To improve the situation (3), consider the following options:
+  1. Increase the sample size (n)
+  2. Decrease the number of parameters (K) to be estimated. If
+     possible:
+     a. Remove the least important sequences from the alignment
+     b. Specify some of the parameter values for the substitution
+        model (e.g., the nucleotide or amino acid frequencies)
+     c. Specify some of the parameter values for the rates-across-
+        sites model (e.g., the shape parameter for the discrete
+        Gamma distribution, the proportion of invariable sites, or
+        the rates of change for different rate categories under
+        the FreeRate model)
+
+Reference:
+Burnham KR, Anderson DR (2002). Model Selection and Multimodel
+Inference: A Practical Information-Theoretic Approach. Springer,
+New York.
+************************ END OF WARNING ***********************
+
+Total tree length (sum of branch lengths): 38.6248
+Sum of internal branch lengths: 12.4247 (32.1677% of tree length)
+
+WARNING: 18 near-zero internal branches (<0.0096) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Chang2015_Acanthoeca_sp_81532_tribe717' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++--Chang2015_Acanthoeca_sp_81532_tribe717
+|
+|                                                               +**Chang2015_Acropora_cervicornis_6130_tribe717
+|                                                            +--| (100)
+|                                                            |  |  +**Dunn2008_Acropora_millepora_45264_Tribe717
+|                                                            |  +--| (100)
+|                                                            |     +**Hejnol2009_Acropora_millepora_45264_Tribe828_0
+|                                                         +**| (64)
+|                                                         |  +---Chang2015_Pocillopora_damicornis_46731_tribe717
+|                                                      +--| (92)
+|                                                      |  |           +--Chang2015_Aiptasia_pallida_1720309_tribe717
+|                                                      |  |        +--| (96)
+|                                                      |  |        |  +--Chang2015_Hormathia_digitata_1163372_tribe717
+|                                                      |  |     +--| (52)
+|                                                      |  |     |  +--Chang2015_Urticina_eques_417072_tribe717
+|                                                      |  |  +--| (99)
+|                                                      |  |  |  +--Chang2015_Bolocera_tuediae_1163374_tribe717
+|                                                      |  +--| (100)
+|                                                      |     |  +--Chang2015_Edwardsiella_lineata_132407_tribe717
+|                                                      |     +--| (100)
+|                                                      |        |  +**Chang2015_Nematostella_vectensis_45351_tribe717
+|                                                      |        +**| (71)
+|                                                      |           |  +**Dunn2008_Nematostella_vectensis_45351_Tribe717
+|                                                      |           +**| (74)
+|                                                      |              +**Hejnol2009_Nematostella_vectensis_45351_Tribe828_0
+|                                                   +--| (82)
+|                                                   |  +--Chang2015_Orbicella_faveolata_48498_tribe717
+|                                                +--| (91)
+|                                                |  |        +--Chang2015_Eunicella_cavolinii_317547_tribe717
+|                                                |  +--------| (100)
+|                                                |           +**Chang2015_Gorgonia_ventalina_204384_tribe717
+|                                             +--| (92)
+|                                             |  |       +**Chang2015_Trichoplax_adhaerens_10228_tribe717
+|                                             |  +-------| (100)
+|                                             |          +**Hejnol2009_Trichoplax_adhaerens_10228_Tribe828_0
+|                                          +--| (60)
+|                                          |  |                 +--Chang2015_Amoebidium_parasiticum_4881_tribe717
+|                                          |  |        +--------| (100)
+|                                          |  |        |        |  +**Dunn2008_Amoebidium_parasiticum_4881_Tribe717
+|                                          |  |        |        +--| (100)
+|                                          |  |        |           +**Hejnol2009_Amoebidium_parasiticum_4881_Tribe828_0
+|                                          |  |     +**| (42)
+|                                          |  |     |  |             +**Chang2015_Capsaspora_owczarzaki_192875_tribe717
+|                                          |  |     |  |      +------| (100)
+|                                          |  |     |  |      |      |  +**Dunn2008_Capsaspora_owczarzaki_192875_Tribe717
+|                                          |  |     |  |      |      +**| (64)
+|                                          |  |     |  |      |         +**Hejnol2009_Capsaspora_owczarzaki_192875_Tribe828_0
+|                                          |  |     |  |  +---| (79)
+|                                          |  |     |  |  |   |            +**Chang2015_Monosiga_brevicollis_81824_tribe717
+|                                          |  |     |  |  |   +------------| (100)
+|                                          |  |     |  |  |                +**Hejnol2009_Monosiga_brevicollis_81824_Tribe828_0
+|                                          |  |     |  +--| (71)
+|                                          |  |     |     |  +-----------Chang2015_Ministeria_vibrans_134558_tribe717
+|                                          |  |     |     +--| (88)
+|                                          |  |     |        |       +**Chang2015_Sphaeroforma_arctica_72019_tribe717
+|                                          |  |     |        +-------| (100)
+|                                          |  |     |                |  +**Dunn2008_Sphaeroforma_arctica_72019_Tribe717
+|                                          |  |     |                +**| (72)
+|                                          |  |     |                   +**Hejnol2009_Sphaeroforma_arctica_72019_Tribe828_0
+|                                          |  |  +--| (47)
+|                                          |  |  |  |                   +--Chang2015_Aphrocallistes_vastus_83887_tribe717
+|                                          |  |  |  |        +----------| (100)
+|                                          |  |  |  |        |          +---Chang2015_Euplectella_aspergillum_936045_tribe717
+|                                          |  |  |  |     +--| (82)
+|                                          |  |  |  |     |  |  +------------------Chang2015_Kudoa_iwatai_269814_tribe717
+|                                          |  |  |  |     |  +--| (85)
+|                                          |  |  |  |     |     +------------Hejnol2009_Gnathostomula_peregrina_338297_Tribe828_0
+|                                          |  |  |  |  +--| (78)
+|                                          |  |  |  |  |  |          +--Chang2015_Sycon_ciliatum_27933_tribe717
+|                                          |  |  |  |  |  +----------| (100)
+|                                          |  |  |  |  |             +--Chang2015_Sycon_coactum_1009717_tribe717
+|                                          |  |  |  +--| (68)
+|                                          |  |  |     |             +--Chang2015_Beroe_abyssicola_320166_tribe717
+|                                          |  |  |     |          +--| (100)
+|                                          |  |  |     |          |  |     +**Chang2015_Mnemiopsis_leidyi_27923_tribe717
+|                                          |  |  |     |          |  |  +--| (99)
+|                                          |  |  |     |          |  |  |  |  +**Dunn2008_Mnemiopsis_leidyi_27923_Tribe717
+|                                          |  |  |     |          |  |  |  +**| (76)
+|                                          |  |  |     |          |  |  |     +**Hejnol2009_Mnemiopsis_leidyi_27923_Tribe828_0
+|                                          |  |  |     |          |  +--| (96)
+|                                          |  |  |     |          |     +--Chang2015_Pleurobrachia_pileus_140457_tribe717
+|                                          |  |  |     |     +----| (100)
+|                                          |  |  |     |     |    +-----Chang2015_Vallicula_multiformis_140489_tribe717
+|                                          |  |  |     |  +--| (73)
+|                                          |  |  |     |  |  |    +-----------Chang2015_Corticium_candelabrum_121492_tribe717
+|                                          |  |  |     |  |  +----| (92)
+|                                          |  |  |     |  |       |  +--Chang2015_Oscarella_carmela_386100_tribe717
+|                                          |  |  |     |  |       +--| (100)
+|                                          |  |  |     |  |          +-----Chang2015_Oscarella_sp_SN-2011_386100_tribe717
+|                                          |  |  |     +--| (74)
+|                                          |  |  |        |     +------Chang2015_Clytia_hemisphaerica_252671_tribe717
+|                                          |  |  |        |  +--| (97)
+|                                          |  |  |        |  |  |  +**Chang2015_Hydractinia_polyclina_589945_tribe717
+|                                          |  |  |        |  |  +--| (100)
+|                                          |  |  |        |  |     |   +**Dunn2008_Hydractinia_echinata_35630_Tribe717
+|                                          |  |  |        |  |     +---| (100)
+|                                          |  |  |        |  |         +**Hejnol2009_Hydractinia_echinata_35630_Tribe828_0
+|                                          |  |  |        +--| (83)
+|                                          |  |  |           |     +--Chang2015_Ectopleura_larynx_264052_tribe717
+|                                          |  |  |           |  +--| (97)
+|                                          |  |  |           |  |  |  +**Chang2015_Hydra_vulgaris_01_6087_tribe717
+|                                          |  |  |           |  |  +--| (100)
+|                                          |  |  |           |  |     |  +**Dunn2008_Hydra_vulgaris_01_6087_Tribe717
+|                                          |  |  |           |  |     +**| (68)
+|                                          |  |  |           |  |        +**Hejnol2009_Hydra_vulgaris_01_6087_Tribe828_0
+|                                          |  |  |           +--| (80)
+|                                          |  |  |              |  +--Chang2015_Nanomia_bijuga_168759_tribe717
+|                                          |  |  |              +--| (60)
+|                                          |  |  |                 |                           +**Dunn2008_Saccharomyces_cerevisiae_4932_Tribe717
+|                                          |  |  |                 +---------------------------| (100)
+|                                          |  |  |                                             +**Hejnol2009_Saccharomyces_cerevisiae_4932_Tribe828_0
+|                                          |  +--| (79)
+|                                          |     +-----Hejnol2009_Bugula_neritina_10212_Tribe828_0
+|                                       +--| (52)
+|                                       |  |        +--Chang2015_Aurelia_aurita_6145_tribe717
+|                                       |  |     +--| (100)
+|                                       |  |     |  |     +**Chang2015_Cyanea_capillata_27804_tribe717
+|                                       |  |     |  |  +--| (100)
+|                                       |  |     |  |  |  |  +**Dunn2008_Cyanea_capillata_27804_Tribe717
+|                                       |  |     |  |  |  +**| (74)
+|                                       |  |     |  |  |     +**Hejnol2009_Cyanea_capillata_27804_Tribe828_0
+|                                       |  |     |  +--| (94)
+|                                       |  |     |     +--Chang2015_Stomolophus_meleagris_168796_tribe717
+|                                       |  |  +--| (97)
+|                                       |  |  |  +----Chang2015_Craspedacusta_sowerbii_128124_tribe717
+|                                       |  +--| (59)
+|                                       |     +---Hejnol2009_Convoluta_pulchra_52062_Tribe828_0
+|                                    +--| (33)
+|                                    |  |           +**Chang2015_Patiria_miniata_46514_tribe717
+|                                    |  |        +**| (52)
+|                                    |  |        |  +--Hejnol2009_Asterina_pectinifera_7594_Tribe828_0
+|                                    |  |  +-----| (100)
+|                                    |  |  |     +**Dunn2008_Asterina_pectinifera_7594_Tribe717
+|                                    |  +--| (63)
+|                                    |     |  +--Chang2015_Saccoglossus_kowalevskii_10224_tribe717
+|                                    |     +--| (99)
+|                                    |        |  +**Dunn2008_Ptychodera_flava_63121_Tribe717
+|                                    |        +--| (100)
+|                                    |           +**Hejnol2009_Ptychodera_flava_63121_Tribe828_0
+|                                 +--| (75)
+|                                 |  |     +--Dunn2008_Hypsibius_dujardini_232323_Tribe717
+|                                 |  +-----| (100)
+|                                 |        +--Dunn2008_Richtersius_coronifer_245088_Tribe717
+|                              +--| (66)
+|                              |  |              +**Chang2015_Branchiostoma_floridae_7739_tribe717
+|                              |  |           +--| (100)
+|                              |  |           |  +**Hejnol2009_Branchiostoma_floridae_7739_Tribe828_0
+|                              |  |        +--| (87)
+|                              |  |        |  +-------Hejnol2009_Brachionus_plicatilis_10195_Tribe828_0
+|                              |  |     +--| (76)
+|                              |  |     |  |  +-----Hejnol2009_Nemertoderma_westbladi_172109_Tribe828_0
+|                              |  |     |  +--| (84)
+|                              |  |     |     +-----Hejnol2009_Turbanella_ambronensis_488524_Tribe828_0
+|                              |  |  +--| (74)
+|                              |  |  |  |   +**Dunn2008_Euperipatoides_kanangrensis_488523_Tribe717
+|                              |  |  |  +---| (100)
+|                              |  |  |      +**Hejnol2009_Euperipatoides_kanangrensis_488523_Tribe828_0
+|                              |  +--| (67)
+|                              |     |              +--Chang2015_Daphnia_pulex_6669_tribe717
+|                              |     |           +--| (99)
+|                              |     |           |  +-----Dunn2008_Daphnia_magna_35525_Tribe717
+|                              |     |        +--| (99)
+|                              |     |        |  |     +--Chang2015_Nasonia_vitripennis_7425_tribe717
+|                              |     |        |  |  +--| (96)
+|                              |     |        |  |  |  +------Dunn2008_Drosophila_melanogaster_7227_Tribe717
+|                              |     |        |  +--| (95)
+|                              |     |        |     +--Chang2015_Pediculus_humanus_121225_tribe717
+|                              |     |     +--| (87)
+|                              |     |     |  +-----------------Chang2015_Myxobolus_cerebralis_59783_tribe717
+|                              |     |  +--| (82)
+|                              |     |  |  +--------------Hejnol2009_Meara_stichopi_84115_Tribe828_0
+|                              |     +--| (71)
+|                              |        |      +--Chang2015_Helobdella_robusta_6412_tribe717
+|                              |        |   +--| (100)
+|                              |        |   |  +**Hejnol2009_Helobdella_robusta_6412_Tribe828_0
+|                              |        +---| (100)
+|                              |            |  +**Dunn2008_Lumbricus_rubellus_35632_Tribe717
+|                              |            +--| (100)
+|                              |               +--Hejnol2009_Lumbricus_rubellus_35632_Tribe828_0
+|                           +--| (61)
+|                           |  |        +------Chang2015_Ixodes_scapularis_6945_tribe717
+|                           |  |     +--| (92)
+|                           |  |     |  |  +**Dunn2008_Anoplodactylus_eroticus_488521_Tribe717
+|                           |  |     |  +--| (100)
+|                           |  |     |     +**Hejnol2009_Anoplodactylus_eroticus_488521_Tribe828_0
+|                           |  |  +--| (93)
+|                           |  |  |  |  +---Chang2015_Strigamia_maritima_126957_tribe717
+|                           |  |  |  +--| (86)
+|                           |  |  |     |  +**Dunn2008_Scutigera_coleoptrata_29022_Tribe717
+|                           |  |  |     +--| (100)
+|                           |  |  |        +**Hejnol2009_Scutigera_coleoptrata_29022_Tribe828_0
+|                           |  +--| (63)
+|                           |     +----------Hejnol2009_Philodina_roseola_96448_Tribe828_0
+|                        +**| (34)
+|                        |  |       +**Chang2015_Capitella_teleta_283909_tribe717
+|                        |  |  +----| (100)
+|                        |  |  |    |  +**Dunn2008_Capitella_teleta_283909_Tribe717
+|                        |  |  |    +**| (72)
+|                        |  |  |       +**Hejnol2009_Capitella_teleta_283909_Tribe828_0
+|                        |  +--| (87)
+|                        |     |  +**Dunn2008_Chaetopterus_variopedatus_34590_Tribe717
+|                        |     +--| (99)
+|                        |        +**Hejnol2009_Chaetopterus_sp_6379_Tribe828_0
+|                     +--| (36)
+|                     |  |                       +--Chang2015_Botryllus_schlosseri_30301_tribe717
+|                     |  |                    +--| (91)
+|                     |  |                    |  |    +--Chang2015_Ciona_intestinalis_7719_tribe717
+|                     |  |                    |  +----| (100)
+|                     |  |                    |       |  +**Dunn2008_Ciona_intestinalis_7719_Tribe717
+|                     |  |                    |       +**| (98)
+|                     |  |                    |          +**Hejnol2009_Ciona_intestinalis_7719_Tribe828_0
+|                     |  |                 +--| (87)
+|                     |  |                 |  +--Hejnol2009_Diplosoma_listerianum_168635_Tribe828_0
+|                     |  |              +--| (83)
+|                     |  |              |  +------Hejnol2009_Halocynthia_roretzi_7729_Tribe828_0
+|                     |  |           +--| (63)
+|                     |  |           |  +--Chang2015_Crassostrea_gigas_29159_tribe717
+|                     |  |        +--| (68)
+|                     |  |        |  |  +----Chang2015_Octopus_vulgaris_6645_tribe717
+|                     |  |        |  +**| (37)
+|                     |  |        |     +-------Hejnol2009_Symbion_pandora_69817_Tribe828_0
+|                     |  |     +--| (54)
+|                     |  |     |  |  +----Chang2015_Ilyanassa_obsoleta_1934733_tribe717
+|                     |  |     |  +--| (61)
+|                     |  |     |     |  +**Dunn2008_Biomphalaria_glabrata_6526_Tribe717
+|                     |  |     |     +--| (100)
+|                     |  |     |        +**Hejnol2009_Biomphalaria_glabrata_6526_Tribe828_0
+|                     |  |  +--| (53)
+|                     |  |  |  |  +-------Chang2015_Chondrilla_nucula_220712_tribe717
+|                     |  |  |  +--| (72)
+|                     |  |  |     |  +----Dunn2008_Trichinella_spiralis_6334_Tribe717
+|                     |  |  |     +--| (100)
+|                     |  |  |        +------Dunn2008_Xiphinema_index_46003_Tribe717
+|                     |  +--| (50)
+|                     |     |         +**Dunn2008_Echinococcus_granulosus_6210_Tribe717
+|                     |     |      +**| (95)
+|                     |     |      |  +**Hejnol2009_Echinococcus_granulosus_6210_Tribe828_0
+|                     |     |  +---| (100)
+|                     |     |  |   +--Hejnol2009_Taenia_solium_6204_Tribe828_0
+|                     |     +--| (99)
+|                     |        |      +**Dunn2008_Schmidtea_mediterranea_79327_Tribe717
+|                     |        +------| (100)
+|                     |               +**Hejnol2009_Schmidtea_mediterranea_79327_Tribe828_0
+|                  +**| (44)
+|                  |  |              +**Chang2015_Homo_sapiens_9606_tribe717
+|                  |  |           +--| (100)
+|                  |  |           |  |  +**Dunn2008_Homo_sapiens_9606_Tribe717
+|                  |  |           |  +**| (94)
+|                  |  |           |     +**Hejnol2009_Homo_sapiens_9606_Tribe828_0
+|                  |  |        +--| (93)
+|                  |  |        |  |  +**Dunn2008_Gallus_gallus_9031_Tribe717
+|                  |  |        |  +--| (100)
+|                  |  |        |     +**Hejnol2009_Gallus_gallus_9031_Tribe828_0
+|                  |  |     +--| (95)
+|                  |  |     |  +--Chang2015_Latimeria_menadoensis_106881_tribe717
+|                  |  |  +--| (74)
+|                  |  |  |  |     +**Hejnol2009_Pedicellina_cernua_43123_Tribe828_0
+|                  |  |  |  +-----| (100)
+|                  |  |  |        +--Hejnol2009_Pedicellina_sp_JB1_43122_Tribe828_0
+|                  |  +--| (37)
+|                  |     |     +**Dunn2008_Terebratalia_transversa_34513_Tribe717
+|                  |     +-----| (100)
+|                  |           +**Hejnol2009_Terebratalia_transversa_34513_Tribe828_0
+|               +--| (86)
+|               |  |     +----------Chang2015_Leucetta_chagosensis_185688_tribe717
+|               |  |  +--| (87)
+|               |  |  |  +--Hejnol2009_Lottia_gigantea_225164_Tribe828_0
+|               |  +--| (79)
+|               |     +--Chang2015_Petromyzon_marinus_7757_tribe717
+|            +**| (35)
+|            |  |        +----Chang2015_Ephydatia_muelleri_6052_tribe717
+|            |  |     +--| (39)
+|            |  |     |  +--Chang2015_Petrosia_ficiformis_68564_tribe717
+|            |  |  +--| (84)
+|            |  |  |  +------------Chang2015_Polypodium_hydriforme_43186_tribe717
+|            |  +--| (72)
+|            |     +-------Chang2015_Strongylocentrotus_purpuratus_7668_tribe717
+|   +--------| (99)
+|   |        |       +**Chang2015_Amphimedon_queenslandica_400682_tribe717
+|   |        |  +----| (100)
+|   |        |  |    +**Hejnol2009_Amphimedon_queenslandica_400682_Tribe828_0
+|   |        +--| (96)
+|   |           +----Chang2015_Sarcotragus_fasciculatus_1234657_tribe717
++---| (99)
+|   +------Chang2015_Salpingoeca_sp_86017_tribe717
+|
++---Chang2015_Stephanoeca_diplocostata_81535_tribe717
+
+Tree in newick format:
+
+(Chang2015_Acanthoeca_sp_81532_tribe717:0.1883843321,(((((((((((((((((((Chang2015_Acropora_cervicornis_6130_tribe717:0.0000021401,(Dunn2008_Acropora_millepora_45264_Tribe717:0.0000025056,Hejnol2009_Acropora_millepora_45264_Tribe828_0:0.0000021796)100:0.017554)100:0.135153,Chang2015_Pocillopora_damicornis_46731_tribe717:0.2415122043)64:0.000002,((((Chang2015_Aiptasia_pallida_1720309_tribe717:0.1065134120,Chang2015_Hormathia_digitata_1163372_tribe717:0.1582395580)96:0.086660,Chang2015_Urticina_eques_417072_tribe717:0.1413659434)52:0.011556,Chang2015_Bolocera_tuediae_1163374_tribe717:0.0655231272)99:0.073871,(Chang2015_Edwardsiella_lineata_132407_tribe717:0.1442105646,(Chang2015_Nematostella_vectensis_45351_tribe717:0.0000026284,(Dunn2008_Nematostella_vectensis_45351_Tribe717:0.0000027879,Hejnol2009_Nematostella_vectensis_45351_Tribe828_0:0.0000021796)74:0.000002)71:0.000002)100:0.167531)100:0.092271)92:0.053300,Chang2015_Orbicella_faveolata_48498_tribe717:0.0990191878)82:0.034395,(Chang2015_Eunicella_cavolinii_317547_tribe717:0.0595926157,Chang2015_Gorgonia_ventalina_204384_tribe717:0.0000025669)100:0.515342)91:0.086296,(Chang2015_Trichoplax_adhaerens_10228_tribe717:0.0000021525,Hejnol2009_Trichoplax_adhaerens_10228_Tribe828_0:0.0000026783)100:0.430218)92:0.053861,((((Chang2015_Amoebidium_parasiticum_4881_tribe717:0.0138045386,(Dunn2008_Amoebidium_parasiticum_4881_Tribe717:0.0000024521,Hejnol2009_Amoebidium_parasiticum_4881_Tribe828_0:0.0000021796)100:0.016676)100:0.497447,(((Chang2015_Capsaspora_owczarzaki_192875_tribe717:0.0000022124,(Dunn2008_Capsaspora_owczarzaki_192875_Tribe717:0.0000021190,Hejnol2009_Capsaspora_owczarzaki_192875_Tribe828_0:0.0000021796)64:0.000003)100:0.379612,(Chang2015_Monosiga_brevicollis_81824_tribe717:0.0000028127,Hejnol2009_Monosiga_brevicollis_81824_Tribe828_0:0.0000025455)100:0.723067)79:0.223749,(Chang2015_Ministeria_vibrans_134558_tribe717:0.6342211360,(Chang2015_Sphaeroforma_arctica_72019_tribe717:0.0000021796,(Dunn2008_Sphaeroforma_arctica_72019_Tribe717:0.0000021981,Hejnol2009_Sphaeroforma_arctica_72019_Tribe828_0:0.0000021796)72:0.000003)100:0.428869)88:0.171321)71:0.163086)42:0.002158,((((Chang2015_Aphrocallistes_vastus_83887_tribe717:0.2028208499,Chang2015_Euplectella_aspergillum_936045_tribe717:0.2140458182)100:0.576654,(Chang2015_Kudoa_iwatai_269814_tribe717:1.0403880364,Hejnol2009_Gnathostomula_peregrina_338297_Tribe828_0:0.7273730157)85:0.101831)82:0.082546,(Chang2015_Sycon_ciliatum_27933_tribe717:0.0750178813,Chang2015_Sycon_coactum_1009717_tribe717:0.1211470325)100:0.600980)78:0.054831,((((Chang2015_Beroe_abyssicola_320166_tribe717:0.1436404964,((Chang2015_Mnemiopsis_leidyi_27923_tribe717:0.0000021796,(Dunn2008_Mnemiopsis_leidyi_27923_Tribe717:0.0000021857,Hejnol2009_Mnemiopsis_leidyi_27923_Tribe828_0:0.0000021796)76:0.000002)99:0.052547,Chang2015_Pleurobrachia_pileus_140457_tribe717:0.0624375262)96:0.056111)100:0.129573,Chang2015_Vallicula_multiformis_140489_tribe717:0.3232555452)100:0.292065,(Chang2015_Corticium_candelabrum_121492_tribe717:0.6418044756,(Chang2015_Oscarella_carmela_386100_tribe717:0.1547251211,Chang2015_Oscarella_sp_SN-2011_386100_tribe717:0.3438836375)100:0.177575)92:0.271344)73:0.058452,((Chang2015_Clytia_hemisphaerica_252671_tribe717:0.4033770653,(Chang2015_Hydractinia_polyclina_589945_tribe717:0.0000022867,(Dunn2008_Hydractinia_echinata_35630_Tribe717:0.0000020967,Hejnol2009_Hydractinia_echinata_35630_Tribe828_0:0.0000029727)100:0.241639)100:0.186419)97:0.079224,((Chang2015_Ectopleura_larynx_264052_tribe717:0.1033764819,(Chang2015_Hydra_vulgaris_01_6087_tribe717:0.0000021796,(Dunn2008_Hydra_vulgaris_01_6087_Tribe717:0.0000021796,Hejnol2009_Hydra_vulgaris_01_6087_Tribe828_0:0.0000021796)68:0.000002)100:0.139811)97:0.069704,(Chang2015_Nanomia_bijuga_168759_tribe717:0.0782577791,(Dunn2008_Saccharomyces_cerevisiae_4932_Tribe717:0.0000020876,Hejnol2009_Saccharomyces_cerevisiae_4932_Tribe828_0:0.0000029396)100:1.478490)60:0.158371)80:0.044252)83:0.084624)74:0.060205)68:0.043403)47:0.047884,Hejnol2009_Bugula_neritina_10212_Tribe828_0:0.3479341131)79:0.081848)60:0.071378,(((Chang2015_Aurelia_aurita_6145_tribe717:0.1142087690,((Chang2015_Cyanea_capillata_27804_tribe717:0.0000027776,(Dunn2008_Cyanea_capillata_27804_Tribe717:0.0000021857,Hejnol2009_Cyanea_capillata_27804_Tribe828_0:0.0000021796)74:0.000003)100:0.155128,Chang2015_Stomolophus_meleagris_168796_tribe717:0.1109974661)94:0.044000)100:0.153721,Chang2015_Craspedacusta_sowerbii_128124_tribe717:0.2682110714)97:0.195616,Hejnol2009_Convoluta_pulchra_52062_Tribe828_0:0.2447072043)59:0.019187)52:0.031699,(((Chang2015_Patiria_miniata_46514_tribe717:0.0000021796,Hejnol2009_Asterina_pectinifera_7594_Tribe828_0:0.0284362317)52:0.000002,Dunn2008_Asterina_pectinifera_7594_Tribe717:0.0000021981)100:0.313731,(Chang2015_Saccoglossus_kowalevskii_10224_tribe717:0.0608823311,(Dunn2008_Ptychodera_flava_63121_Tribe717:0.0000021857,Hejnol2009_Ptychodera_flava_63121_Tribe828_0:0.0000021389)100:0.136791)99:0.197024)63:0.080839)33:0.029663,(Dunn2008_Hypsibius_dujardini_232323_Tribe717:0.1765587113,Dunn2008_Richtersius_coronifer_245088_Tribe717:0.0337430610)100:0.317454)75:0.047228,(((((Chang2015_Branchiostoma_floridae_7739_tribe717:0.0000029893,Hejnol2009_Branchiostoma_floridae_7739_Tribe828_0:0.0000028528)100:0.187031,Hejnol2009_Brachionus_plicatilis_10195_Tribe828_0:0.4594880026)87:0.041243,(Hejnol2009_Nemertoderma_westbladi_172109_Tribe828_0:0.3289125244,Hejnol2009_Turbanella_ambronensis_488524_Tribe828_0:0.3486331999)84:0.143806)76:0.051265,(Dunn2008_Euperipatoides_kanangrensis_488523_Tribe717:0.0000028764,Hejnol2009_Euperipatoides_kanangrensis_488523_Tribe828_0:0.0000023043)100:0.257082)74:0.027314,(((((Chang2015_Daphnia_pulex_6669_tribe717:0.0174324161,Dunn2008_Daphnia_magna_35525_Tribe717:0.3522567859)99:0.133077,((Chang2015_Nasonia_vitripennis_7425_tribe717:0.1234920381,Dunn2008_Drosophila_melanogaster_7227_Tribe717:0.3895599814)96:0.026582,Chang2015_Pediculus_humanus_121225_tribe717:0.0920657723)95:0.086995)99:0.084005,Chang2015_Myxobolus_cerebralis_59783_tribe717:0.9788393274)87:0.059407,Hejnol2009_Meara_stichopi_84115_Tribe828_0:0.8151118055)82:0.120419,((Chang2015_Helobdella_robusta_6412_tribe717:0.0145315073,Hejnol2009_Helobdella_robusta_6412_Tribe828_0:0.0000027279)100:0.151706,(Dunn2008_Lumbricus_rubellus_35632_Tribe717:0.0000023015,Hejnol2009_Lumbricus_rubellus_35632_Tribe828_0:0.0150518345)100:0.117487)100:0.229392)71:0.021396)67:0.071335)66:0.059934,(((Chang2015_Ixodes_scapularis_6945_tribe717:0.3868037759,(Dunn2008_Anoplodactylus_eroticus_488521_Tribe717:0.0000027879,Hejnol2009_Anoplodactylus_eroticus_488521_Tribe828_0:0.0000021796)100:0.160176)92:0.112041,(Chang2015_Strigamia_maritima_126957_tribe717:0.2419550502,(Dunn2008_Scutigera_coleoptrata_29022_Tribe717:0.0000021796,Hejnol2009_Scutigera_coleoptrata_29022_Tribe828_0:0.0000021796)100:0.108562)86:0.042803)93:0.056578,Hejnol2009_Philodina_roseola_96448_Tribe828_0:0.5832615670)63:0.047665)61:0.046135,((Chang2015_Capitella_teleta_283909_tribe717:0.0000021796,(Dunn2008_Capitella_teleta_283909_Tribe717:0.0000021255,Hejnol2009_Capitella_teleta_283909_Tribe828_0:0.0000021796)72:0.000003)100:0.281737,(Dunn2008_Chaetopterus_variopedatus_34590_Tribe717:0.0000023167,Hejnol2009_Chaetopterus_sp_6379_Tribe828_0:0.0000027512)99:0.165772)87:0.149797)34:0.000002,((((((((Chang2015_Botryllus_schlosseri_30301_tribe717:0.1992538704,(Chang2015_Ciona_intestinalis_7719_tribe717:0.0174988015,(Dunn2008_Ciona_intestinalis_7719_Tribe717:0.0000027879,Hejnol2009_Ciona_intestinalis_7719_Tribe828_0:0.0000021796)98:0.000003)100:0.312084)91:0.067160,Hejnol2009_Diplosoma_listerianum_168635_Tribe828_0:0.1976362588)87:0.109240,Hejnol2009_Halocynthia_roretzi_7729_Tribe828_0:0.3803065778)83:0.128838,Chang2015_Crassostrea_gigas_29159_tribe717:0.1015179793)63:0.024553,(Chang2015_Octopus_vulgaris_6645_tribe717:0.3065633137,Hejnol2009_Symbion_pandora_69817_Tribe828_0:0.4331348044)37:0.003793)68:0.062484,(Chang2015_Ilyanassa_obsoleta_1934733_tribe717:0.2989755138,(Dunn2008_Biomphalaria_glabrata_6526_Tribe717:0.0000021796,Hejnol2009_Biomphalaria_glabrata_6526_Tribe828_0:0.0000021796)100:0.027240)61:0.082240)54:0.021768,(Chang2015_Chondrilla_nucula_220712_tribe717:0.4304636192,(Dunn2008_Trichinella_spiralis_6334_Tribe717:0.2801594480,Dunn2008_Xiphinema_index_46003_Tribe717:0.3795120971)100:0.113475)72:0.081840)53:0.015547,(((Dunn2008_Echinococcus_granulosus_6210_Tribe717:0.0000021796,Hejnol2009_Echinococcus_granulosus_6210_Tribe828_0:0.0000021796)95:0.000002,Hejnol2009_Taenia_solium_6204_Tribe828_0:0.0949067792)100:0.213574,(Dunn2008_Schmidtea_mediterranea_79327_Tribe717:0.0000021857,Hejnol2009_Schmidtea_mediterranea_79327_Tribe828_0:0.0000021796)100:0.405969)99:0.180446)50:0.060247)36:0.019189,(((((Chang2015_Homo_sapiens_9606_tribe717:0.0000027149,(Dunn2008_Homo_sapiens_9606_Tribe717:0.0000024080,Hejnol2009_Homo_sapiens_9606_Tribe828_0:0.0000022066)94:0.000003)100:0.028835,(Dunn2008_Gallus_gallus_9031_Tribe717:0.0000028517,Hejnol2009_Gallus_gallus_9031_Tribe828_0:0.0000026369)100:0.122838)93:0.116744,Chang2015_Latimeria_menadoensis_106881_tribe717:0.0492169983)95:0.040651,(Hejnol2009_Pedicellina_cernua_43123_Tribe828_0:0.0043160091,Hejnol2009_Pedicellina_sp_JB1_43122_Tribe828_0:0.0818593561)100:0.329253)74:0.130485,(Dunn2008_Terebratalia_transversa_34513_Tribe717:0.0000029954,Hejnol2009_Terebratalia_transversa_34513_Tribe828_0:0.0000020011)100:0.343682)37:0.061744)44:0.003500,((Chang2015_Leucetta_chagosensis_185688_tribe717:0.6115806491,Hejnol2009_Lottia_gigantea_225164_Tribe828_0:0.0837193604)87:0.090671,Chang2015_Petromyzon_marinus_7757_tribe717:0.1853072925)79:0.065188)86:0.119994,(((Chang2015_Ephydatia_muelleri_6052_tribe717:0.3123455635,Chang2015_Petrosia_ficiformis_68564_tribe717:0.1311696593)39:0.065476,Chang2015_Polypodium_hydriforme_43186_tribe717:0.7079004019)84:0.025442,Chang2015_Strongylocentrotus_purpuratus_7668_tribe717:0.4209747506)72:0.066434)35:0.000002,((Chang2015_Amphimedon_queenslandica_400682_tribe717:0.0000025666,Hejnol2009_Amphimedon_queenslandica_400682_Tribe828_0:0.0000021796)100:0.268088,Chang2015_Sarcotragus_fasciculatus_1234657_tribe717:0.2977485992)96:0.104840)99:0.490696,Chang2015_Salpingoeca_sp_86017_tribe717:0.3677469331)99:0.209304,Chang2015_Stephanoeca_diplocostata_81535_tribe717:0.2476520041);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -8158.039447
+Robinson-Foulds distance between ML tree and consensus tree: 4
+
+Branches with bootstrap support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--Chang2015_Acanthoeca_sp_81532_tribe717
+|
+|                                                           +--Chang2015_Acropora_cervicornis_6130_tribe717
+|                                                        +--| (100)
+|                                                        |  |  +--Dunn2008_Acropora_millepora_45264_Tribe717
+|                                                        |  +--| (100)
+|                                                        |     +--Hejnol2009_Acropora_millepora_45264_Tribe828_0
+|                                                     +**| (64)
+|                                                     |  +---Chang2015_Pocillopora_damicornis_46731_tribe717
+|                                                  +--| (92)
+|                                                  |  |           +--Chang2015_Aiptasia_pallida_1720309_tribe717
+|                                                  |  |        +--| (96)
+|                                                  |  |        |  +--Chang2015_Hormathia_digitata_1163372_tribe717
+|                                                  |  |     +--| (52)
+|                                                  |  |     |  +--Chang2015_Urticina_eques_417072_tribe717
+|                                                  |  |  +--| (99)
+|                                                  |  |  |  +--Chang2015_Bolocera_tuediae_1163374_tribe717
+|                                                  |  +--| (100)
+|                                                  |     |  +--Chang2015_Edwardsiella_lineata_132407_tribe717
+|                                                  |     +--| (100)
+|                                                  |        |  +--Chang2015_Nematostella_vectensis_45351_tribe717
+|                                                  |        +**| (71)
+|                                                  |           |  +--Dunn2008_Nematostella_vectensis_45351_Tribe717
+|                                                  |           +--| (74)
+|                                                  |              +--Hejnol2009_Nematostella_vectensis_45351_Tribe828_0
+|                                               +--| (82)
+|                                               |  +--Chang2015_Orbicella_faveolata_48498_tribe717
+|                                            +--| (91)
+|                                            |  |        +--Chang2015_Eunicella_cavolinii_317547_tribe717
+|                                            |  +--------| (100)
+|                                            |           +--Chang2015_Gorgonia_ventalina_204384_tribe717
+|                                         +--| (92)
+|                                         |  |       +--Chang2015_Trichoplax_adhaerens_10228_tribe717
+|                                         |  +-------| (100)
+|                                         |          +--Hejnol2009_Trichoplax_adhaerens_10228_Tribe828_0
+|                                      +--| (60)
+|                                      |  |                 +--Chang2015_Amoebidium_parasiticum_4881_tribe717
+|                                      |  |        +--------| (100)
+|                                      |  |        |        |  +--Dunn2008_Amoebidium_parasiticum_4881_Tribe717
+|                                      |  |        |        +--| (100)
+|                                      |  |        |           +--Hejnol2009_Amoebidium_parasiticum_4881_Tribe828_0
+|                                      |  |     +--| (42)
+|                                      |  |     |  |             +--Chang2015_Capsaspora_owczarzaki_192875_tribe717
+|                                      |  |     |  |      +------| (100)
+|                                      |  |     |  |      |      |  +--Dunn2008_Capsaspora_owczarzaki_192875_Tribe717
+|                                      |  |     |  |      |      +**| (64)
+|                                      |  |     |  |      |         +--Hejnol2009_Capsaspora_owczarzaki_192875_Tribe828_0
+|                                      |  |     |  |  +---| (79)
+|                                      |  |     |  |  |   |            +--Chang2015_Monosiga_brevicollis_81824_tribe717
+|                                      |  |     |  |  |   +------------| (100)
+|                                      |  |     |  |  |                +--Hejnol2009_Monosiga_brevicollis_81824_Tribe828_0
+|                                      |  |     |  +--| (71)
+|                                      |  |     |     |  +-----------Chang2015_Ministeria_vibrans_134558_tribe717
+|                                      |  |     |     +--| (88)
+|                                      |  |     |        |       +--Chang2015_Sphaeroforma_arctica_72019_tribe717
+|                                      |  |     |        +-------| (100)
+|                                      |  |     |                |  +--Dunn2008_Sphaeroforma_arctica_72019_Tribe717
+|                                      |  |     |                +**| (72)
+|                                      |  |     |                   +--Hejnol2009_Sphaeroforma_arctica_72019_Tribe828_0
+|                                      |  |  +--| (47)
+|                                      |  |  |  |                   +--Chang2015_Aphrocallistes_vastus_83887_tribe717
+|                                      |  |  |  |        +----------| (100)
+|                                      |  |  |  |        |          +---Chang2015_Euplectella_aspergillum_936045_tribe717
+|                                      |  |  |  |     +--| (82)
+|                                      |  |  |  |     |  |  +------------------Chang2015_Kudoa_iwatai_269814_tribe717
+|                                      |  |  |  |     |  +--| (85)
+|                                      |  |  |  |     |     +------------Hejnol2009_Gnathostomula_peregrina_338297_Tribe828_0
+|                                      |  |  |  |  +--| (78)
+|                                      |  |  |  |  |  |          +--Chang2015_Sycon_ciliatum_27933_tribe717
+|                                      |  |  |  |  |  +----------| (100)
+|                                      |  |  |  |  |             +--Chang2015_Sycon_coactum_1009717_tribe717
+|                                      |  |  |  +--| (68)
+|                                      |  |  |     |             +--Chang2015_Beroe_abyssicola_320166_tribe717
+|                                      |  |  |     |          +--| (100)
+|                                      |  |  |     |          |  |     +--Chang2015_Mnemiopsis_leidyi_27923_tribe717
+|                                      |  |  |     |          |  |  +--| (99)
+|                                      |  |  |     |          |  |  |  |  +--Dunn2008_Mnemiopsis_leidyi_27923_Tribe717
+|                                      |  |  |     |          |  |  |  +--| (76)
+|                                      |  |  |     |          |  |  |     +--Hejnol2009_Mnemiopsis_leidyi_27923_Tribe828_0
+|                                      |  |  |     |          |  +--| (96)
+|                                      |  |  |     |          |     +--Chang2015_Pleurobrachia_pileus_140457_tribe717
+|                                      |  |  |     |     +----| (100)
+|                                      |  |  |     |     |    +-----Chang2015_Vallicula_multiformis_140489_tribe717
+|                                      |  |  |     |  +--| (73)
+|                                      |  |  |     |  |  |    +-----------Chang2015_Corticium_candelabrum_121492_tribe717
+|                                      |  |  |     |  |  +----| (92)
+|                                      |  |  |     |  |       |  +--Chang2015_Oscarella_carmela_386100_tribe717
+|                                      |  |  |     |  |       +--| (100)
+|                                      |  |  |     |  |          +-----Chang2015_Oscarella_sp_SN-2011_386100_tribe717
+|                                      |  |  |     +--| (74)
+|                                      |  |  |        |     +------Chang2015_Clytia_hemisphaerica_252671_tribe717
+|                                      |  |  |        |  +--| (97)
+|                                      |  |  |        |  |  |  +--Chang2015_Hydractinia_polyclina_589945_tribe717
+|                                      |  |  |        |  |  +--| (100)
+|                                      |  |  |        |  |     |   +--Dunn2008_Hydractinia_echinata_35630_Tribe717
+|                                      |  |  |        |  |     +---| (100)
+|                                      |  |  |        |  |         +--Hejnol2009_Hydractinia_echinata_35630_Tribe828_0
+|                                      |  |  |        +--| (83)
+|                                      |  |  |           |     +--Chang2015_Ectopleura_larynx_264052_tribe717
+|                                      |  |  |           |  +--| (97)
+|                                      |  |  |           |  |  |  +--Chang2015_Hydra_vulgaris_01_6087_tribe717
+|                                      |  |  |           |  |  +--| (100)
+|                                      |  |  |           |  |     |  +--Dunn2008_Hydra_vulgaris_01_6087_Tribe717
+|                                      |  |  |           |  |     +**| (68)
+|                                      |  |  |           |  |        +--Hejnol2009_Hydra_vulgaris_01_6087_Tribe828_0
+|                                      |  |  |           +--| (80)
+|                                      |  |  |              |  +--Chang2015_Nanomia_bijuga_168759_tribe717
+|                                      |  |  |              +--| (60)
+|                                      |  |  |                 |                           +--Dunn2008_Saccharomyces_cerevisiae_4932_Tribe717
+|                                      |  |  |                 +---------------------------| (100)
+|                                      |  |  |                                             +--Hejnol2009_Saccharomyces_cerevisiae_4932_Tribe828_0
+|                                      |  +--| (79)
+|                                      |     +-----Hejnol2009_Bugula_neritina_10212_Tribe828_0
+|                                   +--| (52)
+|                                   |  |        +--Chang2015_Aurelia_aurita_6145_tribe717
+|                                   |  |     +--| (100)
+|                                   |  |     |  |     +--Chang2015_Cyanea_capillata_27804_tribe717
+|                                   |  |     |  |  +--| (100)
+|                                   |  |     |  |  |  |  +--Dunn2008_Cyanea_capillata_27804_Tribe717
+|                                   |  |     |  |  |  +--| (74)
+|                                   |  |     |  |  |     +--Hejnol2009_Cyanea_capillata_27804_Tribe828_0
+|                                   |  |     |  +--| (94)
+|                                   |  |     |     +--Chang2015_Stomolophus_meleagris_168796_tribe717
+|                                   |  |  +--| (97)
+|                                   |  |  |  +----Chang2015_Craspedacusta_sowerbii_128124_tribe717
+|                                   |  +--| (59)
+|                                   |     +---Hejnol2009_Convoluta_pulchra_52062_Tribe828_0
+|                                +--| (33)
+|                                |  |           +--Chang2015_Patiria_miniata_46514_tribe717
+|                                |  |        +**| (52)
+|                                |  |        |  +--Hejnol2009_Asterina_pectinifera_7594_Tribe828_0
+|                                |  |  +-----| (100)
+|                                |  |  |     +--Dunn2008_Asterina_pectinifera_7594_Tribe717
+|                                |  +--| (63)
+|                                |     |  +--Chang2015_Saccoglossus_kowalevskii_10224_tribe717
+|                                |     +--| (99)
+|                                |        |  +--Dunn2008_Ptychodera_flava_63121_Tribe717
+|                                |        +--| (100)
+|                                |           +--Hejnol2009_Ptychodera_flava_63121_Tribe828_0
+|                             +--| (75)
+|                             |  |     +--Dunn2008_Hypsibius_dujardini_232323_Tribe717
+|                             |  +-----| (100)
+|                             |        +--Dunn2008_Richtersius_coronifer_245088_Tribe717
+|                          +--| (66)
+|                          |  |              +--Chang2015_Branchiostoma_floridae_7739_tribe717
+|                          |  |           +--| (100)
+|                          |  |           |  +--Hejnol2009_Branchiostoma_floridae_7739_Tribe828_0
+|                          |  |        +--| (87)
+|                          |  |        |  +-------Hejnol2009_Brachionus_plicatilis_10195_Tribe828_0
+|                          |  |     +--| (76)
+|                          |  |     |  |  +-----Hejnol2009_Nemertoderma_westbladi_172109_Tribe828_0
+|                          |  |     |  +--| (84)
+|                          |  |     |     +-----Hejnol2009_Turbanella_ambronensis_488524_Tribe828_0
+|                          |  |  +--| (74)
+|                          |  |  |  |   +--Dunn2008_Euperipatoides_kanangrensis_488523_Tribe717
+|                          |  |  |  +---| (100)
+|                          |  |  |      +--Hejnol2009_Euperipatoides_kanangrensis_488523_Tribe828_0
+|                          |  +--| (67)
+|                          |     |              +--Chang2015_Daphnia_pulex_6669_tribe717
+|                          |     |           +--| (99)
+|                          |     |           |  +-----Dunn2008_Daphnia_magna_35525_Tribe717
+|                          |     |        +--| (99)
+|                          |     |        |  |     +--Chang2015_Nasonia_vitripennis_7425_tribe717
+|                          |     |        |  |  +--| (96)
+|                          |     |        |  |  |  +------Dunn2008_Drosophila_melanogaster_7227_Tribe717
+|                          |     |        |  +--| (95)
+|                          |     |        |     +--Chang2015_Pediculus_humanus_121225_tribe717
+|                          |     |     +--| (87)
+|                          |     |     |  +-----------------Chang2015_Myxobolus_cerebralis_59783_tribe717
+|                          |     |  +--| (82)
+|                          |     |  |  +--------------Hejnol2009_Meara_stichopi_84115_Tribe828_0
+|                          |     +--| (71)
+|                          |        |      +--Chang2015_Helobdella_robusta_6412_tribe717
+|                          |        |   +--| (100)
+|                          |        |   |  +--Hejnol2009_Helobdella_robusta_6412_Tribe828_0
+|                          |        +---| (100)
+|                          |            |  +--Dunn2008_Lumbricus_rubellus_35632_Tribe717
+|                          |            +--| (100)
+|                          |               +--Hejnol2009_Lumbricus_rubellus_35632_Tribe828_0
+|                       +--| (61)
+|                       |  |        +------Chang2015_Ixodes_scapularis_6945_tribe717
+|                       |  |     +--| (92)
+|                       |  |     |  |  +--Dunn2008_Anoplodactylus_eroticus_488521_Tribe717
+|                       |  |     |  +--| (100)
+|                       |  |     |     +--Hejnol2009_Anoplodactylus_eroticus_488521_Tribe828_0
+|                       |  |  +--| (93)
+|                       |  |  |  |  +---Chang2015_Strigamia_maritima_126957_tribe717
+|                       |  |  |  +--| (86)
+|                       |  |  |     |  +--Dunn2008_Scutigera_coleoptrata_29022_Tribe717
+|                       |  |  |     +--| (100)
+|                       |  |  |        +--Hejnol2009_Scutigera_coleoptrata_29022_Tribe828_0
+|                       |  +--| (63)
+|                       |     +----------Hejnol2009_Philodina_roseola_96448_Tribe828_0
+|                    +--| (34)
+|                    |  |       +--Chang2015_Capitella_teleta_283909_tribe717
+|                    |  |  +----| (100)
+|                    |  |  |    |  +--Dunn2008_Capitella_teleta_283909_Tribe717
+|                    |  |  |    +--| (72)
+|                    |  |  |       +--Hejnol2009_Capitella_teleta_283909_Tribe828_0
+|                    |  +--| (87)
+|                    |     |  +--Dunn2008_Chaetopterus_variopedatus_34590_Tribe717
+|                    |     +--| (99)
+|                    |        +--Hejnol2009_Chaetopterus_sp_6379_Tribe828_0
+|                 +--| (36)
+|                 |  |                       +--Chang2015_Botryllus_schlosseri_30301_tribe717
+|                 |  |                    +--| (91)
+|                 |  |                    |  |    +--Chang2015_Ciona_intestinalis_7719_tribe717
+|                 |  |                    |  +----| (100)
+|                 |  |                    |       |  +--Dunn2008_Ciona_intestinalis_7719_Tribe717
+|                 |  |                    |       +**| (98)
+|                 |  |                    |          +--Hejnol2009_Ciona_intestinalis_7719_Tribe828_0
+|                 |  |                 +--| (87)
+|                 |  |                 |  +--Hejnol2009_Diplosoma_listerianum_168635_Tribe828_0
+|                 |  |              +--| (83)
+|                 |  |              |  +------Hejnol2009_Halocynthia_roretzi_7729_Tribe828_0
+|                 |  |           +--| (63)
+|                 |  |           |  +--Chang2015_Crassostrea_gigas_29159_tribe717
+|                 |  |        +--| (68)
+|                 |  |        |  |  +----Chang2015_Octopus_vulgaris_6645_tribe717
+|                 |  |        |  +--| (37)
+|                 |  |        |     +-------Hejnol2009_Symbion_pandora_69817_Tribe828_0
+|                 |  |     +--| (54)
+|                 |  |     |  |  +----Chang2015_Ilyanassa_obsoleta_1934733_tribe717
+|                 |  |     |  +--| (61)
+|                 |  |     |     |  +--Dunn2008_Biomphalaria_glabrata_6526_Tribe717
+|                 |  |     |     +--| (100)
+|                 |  |     |        +--Hejnol2009_Biomphalaria_glabrata_6526_Tribe828_0
+|                 |  |  +--| (53)
+|                 |  |  |  |  +-------Chang2015_Chondrilla_nucula_220712_tribe717
+|                 |  |  |  +--| (72)
+|                 |  |  |     |  +----Dunn2008_Trichinella_spiralis_6334_Tribe717
+|                 |  |  |     +--| (100)
+|                 |  |  |        +------Dunn2008_Xiphinema_index_46003_Tribe717
+|                 |  +--| (50)
+|                 |     |         +--Dunn2008_Echinococcus_granulosus_6210_Tribe717
+|                 |     |      +--| (95)
+|                 |     |      |  +--Hejnol2009_Echinococcus_granulosus_6210_Tribe828_0
+|                 |     |  +---| (100)
+|                 |     |  |   +--Hejnol2009_Taenia_solium_6204_Tribe828_0
+|                 |     +--| (99)
+|                 |        |      +--Dunn2008_Schmidtea_mediterranea_79327_Tribe717
+|                 |        +------| (100)
+|                 |               +--Hejnol2009_Schmidtea_mediterranea_79327_Tribe828_0
+|              +--| (44)
+|              |  |              +--Chang2015_Homo_sapiens_9606_tribe717
+|              |  |           +--| (100)
+|              |  |           |  |  +--Dunn2008_Homo_sapiens_9606_Tribe717
+|              |  |           |  +--| (94)
+|              |  |           |     +--Hejnol2009_Homo_sapiens_9606_Tribe828_0
+|              |  |        +--| (93)
+|              |  |        |  |  +--Dunn2008_Gallus_gallus_9031_Tribe717
+|              |  |        |  +--| (100)
+|              |  |        |     +--Hejnol2009_Gallus_gallus_9031_Tribe828_0
+|              |  |     +--| (95)
+|              |  |     |  +--Chang2015_Latimeria_menadoensis_106881_tribe717
+|              |  |  +--| (74)
+|              |  |  |  |     +--Hejnol2009_Pedicellina_cernua_43123_Tribe828_0
+|              |  |  |  +-----| (100)
+|              |  |  |        +--Hejnol2009_Pedicellina_sp_JB1_43122_Tribe828_0
+|              |  +--| (37)
+|              |     |     +--Dunn2008_Terebratalia_transversa_34513_Tribe717
+|              |     +-----| (100)
+|              |           +--Hejnol2009_Terebratalia_transversa_34513_Tribe828_0
+|           +--| (86)
+|           |  |     +----------Chang2015_Leucetta_chagosensis_185688_tribe717
+|           |  |  +--| (87)
+|           |  |  |  +--Hejnol2009_Lottia_gigantea_225164_Tribe828_0
+|           |  +--| (79)
+|           |     +--Chang2015_Petromyzon_marinus_7757_tribe717
+|  +--------| (99)
+|  |        |          +--Chang2015_Amphimedon_queenslandica_400682_tribe717
+|  |        |     +----| (100)
+|  |        |     |    +--Hejnol2009_Amphimedon_queenslandica_400682_Tribe828_0
+|  |        |  +--| (96)
+|  |        |  |  +----Chang2015_Sarcotragus_fasciculatus_1234657_tribe717
+|  |        +--| (39)
+|  |           |        +---Chang2015_Ephydatia_muelleri_6052_tribe717
+|  |           |     +--| (61)
+|  |           |     |  +-----------Chang2015_Polypodium_hydriforme_43186_tribe717
+|  |           |  +--| (84)
+|  |           |  |  +--Chang2015_Petrosia_ficiformis_68564_tribe717
+|  |           +--| (72)
+|  |              +-------Chang2015_Strongylocentrotus_purpuratus_7668_tribe717
++--| (99)
+|  +------Chang2015_Salpingoeca_sp_86017_tribe717
+|
++---Chang2015_Stephanoeca_diplocostata_81535_tribe717
+
+
+Consensus tree in newick format: 
+
+(Chang2015_Acanthoeca_sp_81532_tribe717:0.1855677678,((((((((((((((((((Chang2015_Acropora_cervicornis_6130_tribe717:0.0000021857,(Dunn2008_Acropora_millepora_45264_Tribe717:0.0000028163,Hejnol2009_Acropora_millepora_45264_Tribe828_0:0.0000021796)100:0.0174280000)100:0.1340320000,Chang2015_Pocillopora_damicornis_46731_tribe717:0.2395590547)64:0.0000020000,((((Chang2015_Aiptasia_pallida_1720309_tribe717:0.1058268318,Chang2015_Hormathia_digitata_1163372_tribe717:0.1569621149)96:0.0859850000,Chang2015_Urticina_eques_417072_tribe717:0.1402436100)52:0.0116520000,Chang2015_Bolocera_tuediae_1163374_tribe717:0.0649888789)99:0.0732770000,(Chang2015_Edwardsiella_lineata_132407_tribe717:0.1431599207,(Chang2015_Nematostella_vectensis_45351_tribe717:0.0000021796,(Dunn2008_Nematostella_vectensis_45351_Tribe717:0.0000025056,Hejnol2009_Nematostella_vectensis_45351_Tribe828_0:0.0000021796)74:0.0000030000)71:0.0000020000)100:0.1663520000)100:0.0916780000)92:0.0529830000,Chang2015_Orbicella_faveolata_48498_tribe717:0.0983256067)82:0.0343270000,(Chang2015_Eunicella_cavolinii_317547_tribe717:0.0590886941,Chang2015_Gorgonia_ventalina_204384_tribe717:0.0000020732)100:0.5108400000)91:0.0857430000,(Chang2015_Trichoplax_adhaerens_10228_tribe717:0.0000021796,Hejnol2009_Trichoplax_adhaerens_10228_Tribe828_0:0.0000027879)100:0.4274990000)92:0.0538410000,((((Chang2015_Amoebidium_parasiticum_4881_tribe717:0.0136984670,(Dunn2008_Amoebidium_parasiticum_4881_Tribe717:0.0000021857,Hejnol2009_Amoebidium_parasiticum_4881_Tribe828_0:0.0000021796)100:0.0165380000)100:0.4924170000,(((Chang2015_Capsaspora_owczarzaki_192875_tribe717:0.0000021796,(Dunn2008_Capsaspora_owczarzaki_192875_Tribe717:0.0000028163,Hejnol2009_Capsaspora_owczarzaki_192875_Tribe828_0:0.0000021796)64:0.0000020000)100:0.3771490000,(Chang2015_Monosiga_brevicollis_81824_tribe717:0.0000021796,Hejnol2009_Monosiga_brevicollis_81824_Tribe828_0:0.0000027879)100:0.7168290000)79:0.2230070000,(Chang2015_Ministeria_vibrans_134558_tribe717:0.6314657604,(Chang2015_Sphaeroforma_arctica_72019_tribe717:0.0000021796,(Dunn2008_Sphaeroforma_arctica_72019_Tribe717:0.0000021981,Hejnol2009_Sphaeroforma_arctica_72019_Tribe828_0:0.0000021796)72:0.0000020000)100:0.4275450000)88:0.1715660000)71:0.1598380000)42:0.0023350000,((((Chang2015_Aphrocallistes_vastus_83887_tribe717:0.2017126660,Chang2015_Euplectella_aspergillum_936045_tribe717:0.2123941648)100:0.5721050000,(Chang2015_Kudoa_iwatai_269814_tribe717:1.0302192360,Hejnol2009_Gnathostomula_peregrina_338297_Tribe828_0:0.7172859874)85:0.1021710000)82:0.0827660000,(Chang2015_Sycon_ciliatum_27933_tribe717:0.0736539493,Chang2015_Sycon_coactum_1009717_tribe717:0.1211400876)100:0.5975700000)78:0.0549840000,((((Chang2015_Beroe_abyssicola_320166_tribe717:0.1434982885,((Chang2015_Mnemiopsis_leidyi_27923_tribe717:0.0000021796,(Dunn2008_Mnemiopsis_leidyi_27923_Tribe717:0.0000027879,Hejnol2009_Mnemiopsis_leidyi_27923_Tribe828_0:0.0000021796)76:0.0000030000)99:0.0522560000,Chang2015_Pleurobrachia_pileus_140457_tribe717:0.0620384015)96:0.0547270000)100:0.1300110000,Chang2015_Vallicula_multiformis_140489_tribe717:0.3206806259)100:0.2888340000,(Chang2015_Corticium_candelabrum_121492_tribe717:0.6372728569,(Chang2015_Oscarella_carmela_386100_tribe717:0.1530068601,Chang2015_Oscarella_sp_SN-2011_386100_tribe717:0.3407489412)100:0.1727530000)92:0.2713460000)73:0.0581320000,((Chang2015_Clytia_hemisphaerica_252671_tribe717:0.4005688809,(Chang2015_Hydractinia_polyclina_589945_tribe717:0.0000025056,(Dunn2008_Hydractinia_echinata_35630_Tribe717:0.0000021796,Hejnol2009_Hydractinia_echinata_35630_Tribe828_0:0.0000021796)100:0.2397970000)100:0.1855070000)97:0.0787330000,((Chang2015_Ectopleura_larynx_264052_tribe717:0.1026512387,(Chang2015_Hydra_vulgaris_01_6087_tribe717:0.0000021796,(Dunn2008_Hydra_vulgaris_01_6087_Tribe717:0.0000021796,Hejnol2009_Hydra_vulgaris_01_6087_Tribe828_0:0.0000021796)68:0.0000020000)100:0.1388060000)97:0.0692900000,(Chang2015_Nanomia_bijuga_168759_tribe717:0.0790891007,(Dunn2008_Saccharomyces_cerevisiae_4932_Tribe717:0.0000022240,Hejnol2009_Saccharomyces_cerevisiae_4932_Tribe828_0:0.0000021796)100:1.4652270000)60:0.1553080000)80:0.0439900000)83:0.0834230000)74:0.0595790000)68:0.0429590000)47:0.0481740000,Hejnol2009_Bugula_neritina_10212_Tribe828_0:0.3458864044)79:0.0810160000)60:0.0707910000,(((Chang2015_Aurelia_aurita_6145_tribe717:0.1134277026,((Chang2015_Cyanea_capillata_27804_tribe717:0.0000021796,(Dunn2008_Cyanea_capillata_27804_Tribe717:0.0000027879,Hejnol2009_Cyanea_capillata_27804_Tribe828_0:0.0000021796)74:0.0000030000)100:0.1538920000,Chang2015_Stomolophus_meleagris_168796_tribe717:0.1102165463)94:0.0437080000)100:0.1530090000,Chang2015_Craspedacusta_sowerbii_128124_tribe717:0.2656086189)97:0.1938480000,Hejnol2009_Convoluta_pulchra_52062_Tribe828_0:0.2430596029)59:0.0191780000)52:0.0316900000,(((Chang2015_Patiria_miniata_46514_tribe717:0.0000021796,Hejnol2009_Asterina_pectinifera_7594_Tribe828_0:0.0282899000)52:0.0000020000,Dunn2008_Asterina_pectinifera_7594_Tribe717:0.0000021981)100:0.3114430000,(Chang2015_Saccoglossus_kowalevskii_10224_tribe717:0.0602935706,(Dunn2008_Ptychodera_flava_63121_Tribe717:0.0000025056,Hejnol2009_Ptychodera_flava_63121_Tribe828_0:0.0000021796)100:0.1361540000)99:0.1956550000)63:0.0803640000)33:0.0295710000,(Dunn2008_Hypsibius_dujardini_232323_Tribe717:0.1750523274,Dunn2008_Richtersius_coronifer_245088_Tribe717:0.0339423829)100:0.3147440000)75:0.0468950000,(((((Chang2015_Branchiostoma_floridae_7739_tribe717:0.0000021857,Hejnol2009_Branchiostoma_floridae_7739_Tribe828_0:0.0000021796)100:0.1858730000,Hejnol2009_Brachionus_plicatilis_10195_Tribe828_0:0.4558012023)87:0.0410070000,(Hejnol2009_Nemertoderma_westbladi_172109_Tribe828_0:0.3266095037,Hejnol2009_Turbanella_ambronensis_488524_Tribe828_0:0.3454769588)84:0.1431130000)76:0.0510130000,(Dunn2008_Euperipatoides_kanangrensis_488523_Tribe717:0.0000028163,Hejnol2009_Euperipatoides_kanangrensis_488523_Tribe828_0:0.0000021796)100:0.2551560000)74:0.0271780000,(((((Chang2015_Daphnia_pulex_6669_tribe717:0.0173067665,Dunn2008_Daphnia_magna_35525_Tribe717:0.3508460403)99:0.1327660000,((Chang2015_Nasonia_vitripennis_7425_tribe717:0.1224407172,Dunn2008_Drosophila_melanogaster_7227_Tribe717:0.3870330645)96:0.0268800000,Chang2015_Pediculus_humanus_121225_tribe717:0.0913485200)95:0.0864970000)99:0.0819110000,Chang2015_Myxobolus_cerebralis_59783_tribe717:0.9722671161)87:0.0608230000,Hejnol2009_Meara_stichopi_84115_Tribe828_0:0.8111810261)82:0.1193100000,((Chang2015_Helobdella_robusta_6412_tribe717:0.0144683222,Hejnol2009_Helobdella_robusta_6412_Tribe828_0:0.0000021857)100:0.1509270000,(Dunn2008_Lumbricus_rubellus_35632_Tribe717:0.0000025056,Hejnol2009_Lumbricus_rubellus_35632_Tribe828_0:0.0149782459)100:0.1167350000)100:0.2281690000)71:0.0212280000)67:0.0709650000)66:0.0596360000,(((Chang2015_Ixodes_scapularis_6945_tribe717:0.3850464446,(Dunn2008_Anoplodactylus_eroticus_488521_Tribe717:0.0000021857,Hejnol2009_Anoplodactylus_eroticus_488521_Tribe828_0:0.0000021796)100:0.1582280000)92:0.1124410000,(Chang2015_Strigamia_maritima_126957_tribe717:0.2393348227,(Dunn2008_Scutigera_coleoptrata_29022_Tribe717:0.0000027879,Hejnol2009_Scutigera_coleoptrata_29022_Tribe828_0:0.0000021796)100:0.1063860000)86:0.0442130000)93:0.0558520000,Hejnol2009_Philodina_roseola_96448_Tribe828_0:0.5782650970)63:0.0476720000)61:0.0457680000,((Chang2015_Capitella_teleta_283909_tribe717:0.0000021796,(Dunn2008_Capitella_teleta_283909_Tribe717:0.0000027879,Hejnol2009_Capitella_teleta_283909_Tribe828_0:0.0000021796)72:0.0000030000)100:0.2797200000,(Dunn2008_Chaetopterus_variopedatus_34590_Tribe717:0.0000027879,Hejnol2009_Chaetopterus_sp_6379_Tribe828_0:0.0000021796)99:0.1648580000)87:0.1490450000)34:0.0000030000,((((((((Chang2015_Botryllus_schlosseri_30301_tribe717:0.1980512846,(Chang2015_Ciona_intestinalis_7719_tribe717:0.0174005947,(Dunn2008_Ciona_intestinalis_7719_Tribe717:0.0000020652,Hejnol2009_Ciona_intestinalis_7719_Tribe828_0:0.0000021796)98:0.0000020000)100:0.3096780000)91:0.0666920000,Hejnol2009_Diplosoma_listerianum_168635_Tribe828_0:0.1964026683)87:0.1084290000,Hejnol2009_Halocynthia_roretzi_7729_Tribe828_0:0.3779641094)83:0.1279080000,Chang2015_Crassostrea_gigas_29159_tribe717:0.1008219743)63:0.0239810000,(Chang2015_Octopus_vulgaris_6645_tribe717:0.3045041416,Hejnol2009_Symbion_pandora_69817_Tribe828_0:0.4284623597)37:0.0045600000)68:0.0630220000,(Chang2015_Ilyanassa_obsoleta_1934733_tribe717:0.2982656268,(Dunn2008_Biomphalaria_glabrata_6526_Tribe717:0.0000021796,Hejnol2009_Biomphalaria_glabrata_6526_Tribe828_0:0.0000021796)100:0.0271920000)61:0.0818300000)54:0.0215490000,(Chang2015_Chondrilla_nucula_220712_tribe717:0.4289459119,(Dunn2008_Trichinella_spiralis_6334_Tribe717:0.2785495317,Dunn2008_Xiphinema_index_46003_Tribe717:0.3768477256)100:0.1130880000)72:0.0811320000)53:0.0154200000,(((Dunn2008_Echinococcus_granulosus_6210_Tribe717:0.0000021796,Hejnol2009_Echinococcus_granulosus_6210_Tribe828_0:0.0000021796)95:0.0000030000,Hejnol2009_Taenia_solium_6204_Tribe828_0:0.0946825725)100:0.2124160000,(Dunn2008_Schmidtea_mediterranea_79327_Tribe717:0.0000021857,Hejnol2009_Schmidtea_mediterranea_79327_Tribe828_0:0.0000021796)100:0.4034970000)99:0.1791880000)50:0.0600550000)36:0.0190480000,(((((Chang2015_Homo_sapiens_9606_tribe717:0.0000021796,(Dunn2008_Homo_sapiens_9606_Tribe717:0.0000021857,Hejnol2009_Homo_sapiens_9606_Tribe828_0:0.0000021796)94:0.0000030000)100:0.0287040000,(Dunn2008_Gallus_gallus_9031_Tribe717:0.0000021857,Hejnol2009_Gallus_gallus_9031_Tribe828_0:0.0000021796)100:0.1222270000)93:0.1162160000,Chang2015_Latimeria_menadoensis_106881_tribe717:0.0489089292)95:0.0405130000,(Hejnol2009_Pedicellina_cernua_43123_Tribe828_0:0.0043031901,Hejnol2009_Pedicellina_sp_JB1_43122_Tribe828_0:0.0813669502)100:0.3268220000)74:0.1294500000,(Dunn2008_Terebratalia_transversa_34513_Tribe717:0.0000025056,Hejnol2009_Terebratalia_transversa_34513_Tribe828_0:0.0000021796)100:0.3414850000)37:0.0614610000)44:0.0038330000,((Chang2015_Leucetta_chagosensis_185688_tribe717:0.6070195555,Hejnol2009_Lottia_gigantea_225164_Tribe828_0:0.0836562019)87:0.0895750000,Chang2015_Petromyzon_marinus_7757_tribe717:0.1841765534)79:0.0645080000)86:0.1179970000,(((Chang2015_Amphimedon_queenslandica_400682_tribe717:0.0000025056,Hejnol2009_Amphimedon_queenslandica_400682_Tribe828_0:0.0000021857)100:0.2625180000,Chang2015_Sarcotragus_fasciculatus_1234657_tribe717:0.3018716127)96:0.1087230000,(((Chang2015_Ephydatia_muelleri_6052_tribe717:0.2283939512,Chang2015_Polypodium_hydriforme_43186_tribe717:0.6677927465)61:0.0977620000,Chang2015_Petrosia_ficiformis_68564_tribe717:0.1446298886)84:0.0608760000,Chang2015_Strongylocentrotus_purpuratus_7668_tribe717:0.4289838740)72:0.0646300000)39:0.0000030000)99:0.4964330000,Chang2015_Salpingoeca_sp_86017_tribe717:0.3663775870)99:0.2064280000,Chang2015_Stephanoeca_diplocostata_81535_tribe717:0.2467212980);
+
+TIME STAMP
+----------
+
+Date and time: Mon Aug 29 22:32:38 2022
+Total CPU time used: 25212.90896 seconds (7h:0m:12s)
+Total wall-clock time used: 25286.89127 seconds (7h:1m:26s)
+

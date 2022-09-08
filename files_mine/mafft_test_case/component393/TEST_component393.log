@@ -1,0 +1,490 @@
+IQ-TREE version 1.5.3 for Linux 64-bit built Mar 12 2017
+Copyright (c) 2011-2016 Nguyen Lam Tung, Olga Chernomor, Arndt von Haeseler and Bui Quang Minh.
+
+Host:    r1226.uppmax.uu.se (AVX2, FMA3, 243 GB RAM)
+Command: iqtree -s mafft/test/component393/component393.mafft -m TEST -nt 1 -bb 1000 -pre mafft/test/component393/TEST_component393
+Seed:    499834 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug  8 09:10:15 2022
+Kernel:  AVX+FMA
+
+NOTE: Consider using the multicore version because your CPU has 16 cores!
+
+Reading alignment file mafft/test/component393/component393.mafft ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 48 sequences with 777 columns and 665 patterns (401 informative sites, 295 constant sites)
+WARNING: Some sequence names are changed as follows:
+Philippe2009:Acropora_millepora:45264:Gene_0015 -> Philippe2009_Acropora_millepora_45264_Gene_0015
+Philippe2009:Allomyces_macrogynus:28583:Gene_0015 -> Philippe2009_Allomyces_macrogynus_28583_Gene_0015
+Philippe2009:Amoebidium_parasiticum:4881:Gene_0015 -> Philippe2009_Amoebidium_parasiticum_4881_Gene_0015
+Philippe2009:Aplysia_californica:6500:Gene_0015 -> Philippe2009_Aplysia_californica_6500_Gene_0015
+Philippe2009:Batrachochytrium_dendrobatidis:109871:Gene_0015 -> Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0015
+Philippe2009:Branchiostoma_floridae:7739:Gene_0015 -> Philippe2009_Branchiostoma_floridae_7739_Gene_0015
+Philippe2009:Capitella_teleta:283909:Gene_0015 -> Philippe2009_Capitella_teleta_283909_Gene_0015
+Philippe2009:Capsaspora_owczarzaki:192875:Gene_0015 -> Philippe2009_Capsaspora_owczarzaki_192875_Gene_0015
+Philippe2009:Carteriospongia_foliascens:593584:Gene_0015 -> Philippe2009_Carteriospongia_foliascens_593584_Gene_0015
+Philippe2009:Ciona_savignyi:51511:Gene_0015 -> Philippe2009_Ciona_savignyi_51511_Gene_0015
+Philippe2009:Clytia_hemisphaerica:252671:Gene_0015 -> Philippe2009_Clytia_hemisphaerica_252671_Gene_0015
+Philippe2009:Crassostrea_gigas:29159:Gene_0015 -> Philippe2009_Crassostrea_gigas_29159_Gene_0015
+Philippe2009:Danio_rerio:7955:Gene_0015 -> Philippe2009_Danio_rerio_7955_Gene_0015
+Philippe2009:Daphnia_pulex:6669:Gene_0015 -> Philippe2009_Daphnia_pulex_6669_Gene_0015
+Philippe2009:Ephydatia_muelleri:6052:Gene_0015 -> Philippe2009_Ephydatia_muelleri_6052_Gene_0015
+Philippe2009:Euperipatoides_kanangrensis:488523:Gene_0015 -> Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0015
+Philippe2009:Euprymna_scolopes:6613:Gene_0015 -> Philippe2009_Euprymna_scolopes_6613_Gene_0015
+Philippe2009:Helobdella_robusta:6412:Gene_0015 -> Philippe2009_Helobdella_robusta_6412_Gene_0015
+Philippe2009:Heterochone_sp:367900:Gene_0015 -> Philippe2009_Heterochone_sp_367900_Gene_0015
+Philippe2009:Hydra_magnipapillata:6087:Gene_0015 -> Philippe2009_Hydra_magnipapillata_6087_Gene_0015
+Philippe2009:Hydractinia_echinata:35630:Gene_0015 -> Philippe2009_Hydractinia_echinata_35630_Gene_0015
+Philippe2009:Ixodes_scapularis:6945:Gene_0015 -> Philippe2009_Ixodes_scapularis_6945_Gene_0015
+Philippe2009:Metridium_senile:6116:Gene_0015 -> Philippe2009_Metridium_senile_6116_Gene_0015
+Philippe2009:Mnemiopsis_leidyi:27923:Gene_0015 -> Philippe2009_Mnemiopsis_leidyi_27923_Gene_0015
+Philippe2009:Molgula_tectiformis:30286:Gene_0015 -> Philippe2009_Molgula_tectiformis_30286_Gene_0015
+Philippe2009:Monosiga_brevicollis:81824:Gene_0015 -> Philippe2009_Monosiga_brevicollis_81824_Gene_0015
+Philippe2009:Monosiga_ovata:81526:Gene_0015 -> Philippe2009_Monosiga_ovata_81526_Gene_0015
+Philippe2009:Nasonia_vitripennis:7425:Gene_0015 -> Philippe2009_Nasonia_vitripennis_7425_Gene_0015
+Philippe2009:Nematostella_vectensis:45351:Gene_0015 -> Philippe2009_Nematostella_vectensis_45351_Gene_0015
+Philippe2009:Oscarella_carmela:386100:Gene_0015 -> Philippe2009_Oscarella_carmela_386100_Gene_0015
+Philippe2009:Pedicellina_cernua:43123:Gene_0015 -> Philippe2009_Pedicellina_cernua_43123_Gene_0015
+Philippe2009:Pediculus_humanus:121225:Gene_0015 -> Philippe2009_Pediculus_humanus_121225_Gene_0015
+Philippe2009:Petromyzon_marinus:7757:Gene_0015 -> Philippe2009_Petromyzon_marinus_7757_Gene_0015
+Philippe2009:Phycomyces_blakesleeanus:4837:Gene_0015 -> Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0015
+Philippe2009:Pleurobrachia_pileus:140457:Gene_0015 -> Philippe2009_Pleurobrachia_pileus_140457_Gene_0015
+Philippe2009:Podocoryne_carnea:6096:Gene_0015 -> Philippe2009_Podocoryne_carnea_6096_Gene_0015
+Philippe2009:Proterospongia_sp:218847:Gene_0015 -> Philippe2009_Proterospongia_sp_218847_Gene_0015
+Philippe2009:Amphimedon_queenslandica:400682:Gene_0015 -> Philippe2009_Amphimedon_queenslandica_400682_Gene_0015
+Philippe2009:Rhizopus_oryzae:64495:Gene_0015 -> Philippe2009_Rhizopus_oryzae_64495_Gene_0015
+Philippe2009:Saccoglossus_kowalevskii:10224:Gene_0015 -> Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0015
+Philippe2009:Scutigera_coleoptrata:29022:Gene_0015 -> Philippe2009_Scutigera_coleoptrata_29022_Gene_0015
+Philippe2009:Sphaeroforma_arctica:72019:Gene_0015 -> Philippe2009_Sphaeroforma_arctica_72019_Gene_0015
+Philippe2009:Spizellomyces_punctatus:109760:Gene_0015 -> Philippe2009_Spizellomyces_punctatus_109760_Gene_0015
+Philippe2009:Strongylocentrotus_purpuratus:7668:Gene_0015 -> Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0015
+Philippe2009:Sycon_raphanus:56443:Gene_0015 -> Philippe2009_Sycon_raphanus_56443_Gene_0015
+Philippe2009:Trichoplax_adhaerens:10228:Gene_0015 -> Philippe2009_Trichoplax_adhaerens_10228_Gene_0015
+Philippe2009:Tubifex_tubifex:6386:Gene_0015 -> Philippe2009_Tubifex_tubifex_6386_Gene_0015
+Philippe2009:Xenoturbella_bocki:242395:Gene_0015 -> Philippe2009_Xenoturbella_bocki_242395_Gene_0015
+
+                                                              Gap/Ambiguity  Composition  p-value
+   1  Philippe2009_Acropora_millepora_45264_Gene_0015                45.95%    passed     90.72%
+   2  Philippe2009_Allomyces_macrogynus_28583_Gene_0015               0.00%    passed     99.25%
+   3  Philippe2009_Amoebidium_parasiticum_4881_Gene_0015             50.58%    passed     99.47%
+   4  Philippe2009_Aplysia_californica_6500_Gene_0015                 0.00%    passed     99.94%
+   5  Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0015    3.60%    passed     99.90%
+   6  Philippe2009_Branchiostoma_floridae_7739_Gene_0015              0.26%    passed    100.00%
+   7  Philippe2009_Capitella_teleta_283909_Gene_0015                  0.00%    passed     99.93%
+   8  Philippe2009_Capsaspora_owczarzaki_192875_Gene_0015             0.00%    passed     99.98%
+   9  Philippe2009_Carteriospongia_foliascens_593584_Gene_0015       73.75%    passed     61.64%
+  10  Philippe2009_Ciona_savignyi_51511_Gene_0015                     0.00%    passed     99.93%
+  11  Philippe2009_Clytia_hemisphaerica_252671_Gene_0015              1.67%    passed    100.00%
+  12  Philippe2009_Crassostrea_gigas_29159_Gene_0015                  2.96%    passed     99.73%
+  13  Philippe2009_Danio_rerio_7955_Gene_0015                         0.00%    passed    100.00%
+  14  Philippe2009_Daphnia_pulex_6669_Gene_0015                       0.00%    passed     99.98%
+  15  Philippe2009_Ephydatia_muelleri_6052_Gene_0015                 75.42%    passed     56.25%
+  16  Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0015      12.48%    passed     99.99%
+  17  Philippe2009_Euprymna_scolopes_6613_Gene_0015                   7.59%    passed    100.00%
+  18  Philippe2009_Helobdella_robusta_6412_Gene_0015                  0.00%    passed     99.99%
+  19  Philippe2009_Heterochone_sp_367900_Gene_0015                   12.48%    passed     99.99%
+  20  Philippe2009_Hydra_magnipapillata_6087_Gene_0015                0.00%    passed     99.96%
+  21  Philippe2009_Hydractinia_echinata_35630_Gene_0015               0.00%    passed    100.00%
+  22  Philippe2009_Ixodes_scapularis_6945_Gene_0015                   2.32%    passed     99.98%
+  23  Philippe2009_Metridium_senile_6116_Gene_0015                    0.13%    passed     99.74%
+  24  Philippe2009_Mnemiopsis_leidyi_27923_Gene_0015                 49.94%    passed     87.17%
+  25  Philippe2009_Molgula_tectiformis_30286_Gene_0015                0.00%    passed     99.97%
+  26  Philippe2009_Monosiga_brevicollis_81824_Gene_0015               0.00%    passed     99.15%
+  27  Philippe2009_Monosiga_ovata_81526_Gene_0015                     0.00%    passed     99.92%
+  28  Philippe2009_Nasonia_vitripennis_7425_Gene_0015                 0.00%    passed     99.99%
+  29  Philippe2009_Nematostella_vectensis_45351_Gene_0015             0.00%    passed    100.00%
+  30  Philippe2009_Oscarella_carmela_386100_Gene_0015                 0.00%    passed    100.00%
+  31  Philippe2009_Pedicellina_cernua_43123_Gene_0015                11.71%    passed    100.00%
+  32  Philippe2009_Pediculus_humanus_121225_Gene_0015                12.61%    passed     99.97%
+  33  Philippe2009_Petromyzon_marinus_7757_Gene_0015                  0.00%    passed    100.00%
+  34  Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0015            0.00%    passed     99.43%
+  35  Philippe2009_Pleurobrachia_pileus_140457_Gene_0015             58.17%    passed     98.51%
+  36  Philippe2009_Podocoryne_carnea_6096_Gene_0015                  38.87%    passed     53.91%
+  37  Philippe2009_Proterospongia_sp_218847_Gene_0015                72.46%    passed     81.67%
+  38  Philippe2009_Amphimedon_queenslandica_400682_Gene_0015          0.13%    passed    100.00%
+  39  Philippe2009_Rhizopus_oryzae_64495_Gene_0015                    0.00%    passed     99.62%
+  40  Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0015           0.00%    passed    100.00%
+  41  Philippe2009_Scutigera_coleoptrata_29022_Gene_0015             12.48%    passed    100.00%
+  42  Philippe2009_Sphaeroforma_arctica_72019_Gene_0015              56.11%    passed     84.99%
+  43  Philippe2009_Spizellomyces_punctatus_109760_Gene_0015           0.00%    passed     99.96%
+  44  Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0015       0.00%    passed    100.00%
+  45  Philippe2009_Sycon_raphanus_56443_Gene_0015                    62.93%    passed     71.06%
+  46  Philippe2009_Trichoplax_adhaerens_10228_Gene_0015               0.00%    passed    100.00%
+  47  Philippe2009_Tubifex_tubifex_6386_Gene_0015                    24.32%    passed     99.74%
+  48  Philippe2009_Xenoturbella_bocki_242395_Gene_0015                0.00%    passed    100.00%
+WARNING: 7 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                                          14.35%  0 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.019 seconds
+NOTE: MODEL SELECTION REQUIRES 23 MB MEMORY!
+Testing 144 protein models (sample size: 777) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  Dayhoff       22223.017    93  44632.034    44657.633    45064.990
+  2  Dayhoff+I     20994.374    94  42176.748    42202.936    42614.359
+  3  Dayhoff+G4    20244.564    94  40677.128    40703.316    41114.740
+  4  Dayhoff+I+G4  20190.440    95  40570.879    40597.663    41013.146
+  5  Dayhoff+F     22170.468    112 44564.936    44603.057    45086.345
+  6  Dayhoff+F+I   20956.756    113 42139.512    42178.371    42665.576
+  7  Dayhoff+F+G4  20191.999    113 40609.998    40648.858    41136.063
+  8  Dayhoff+F+I+G4 20139.768    114 40507.536    40547.144    41038.257
+  9  mtMAM         24854.351    93  49894.702    49920.301    50327.658
+ 10  mtMAM+I       23518.180    94  47224.359    47250.547    47661.970
+ 11  mtMAM+G4      21793.148    94  43774.295    43800.483    44211.907
+ 12  mtMAM+I+G4    21742.883    95  43675.765    43702.549    44118.032
+ 13  mtMAM+F       23947.847    112 48119.694    48157.814    48641.103
+ 14  mtMAM+F+I     22610.285    113 45446.570    45485.430    45972.635
+ 15  mtMAM+F+G4    21188.674    113 42603.348    42642.208    43129.413
+ 16  mtMAM+F+I+G4  21127.312    114 42482.624    42522.231    43013.344
+ 17  JTT           22214.885    93  44615.770    44641.369    45048.726
+ 18  JTT+I         20968.511    94  42125.022    42151.210    42562.633
+ 19  JTT+G4        20250.451    94  40688.902    40715.090    41126.514
+ 20  JTT+I+G4      20193.737    95  40577.474    40604.258    41019.740
+ 21  JTT+F         22220.786    112 44665.573    44703.693    45186.982
+ 22  JTT+F+I       20984.365    113 42194.730    42233.589    42720.794
+ 23  JTT+F+G4      20247.482    113 40720.963    40759.823    41247.028
+ 24  JTT+F+I+G4    20192.314    114 40612.629    40652.236    41143.349
+ 25  WAG           21999.119    93  44184.239    44209.837    44617.195
+ 26  WAG+I         20814.221    94  41816.442    41842.629    42254.053
+ 27  WAG+G4        20131.017    94  40450.035    40476.222    40887.646
+ 28  WAG+I+G4      20073.824    95  40337.649    40364.433    40779.915
+ 29  WAG+F         22007.516    112 44239.031    44277.152    44760.440
+ 30  WAG+F+I       20828.520    113 41883.040    41921.900    42409.105
+ 31  WAG+F+G4      20126.766    113 40479.531    40518.391    41005.596
+ 32  WAG+F+I+G4    20070.130    114 40368.260    40407.867    40898.980
+ 33  cpREV         22387.016    93  44960.033    44985.632    45392.989
+ 34  cpREV+I       21223.843    94  42635.686    42661.874    43073.298
+ 35  cpREV+G4      20433.354    94  41054.707    41080.895    41492.319
+ 36  cpREV+I+G4    20375.401    95  40940.803    40967.587    41383.069
+ 37  cpREV+F       22306.530    112 44837.061    44875.181    45358.470
+ 38  cpREV+F+I     21133.689    113 42493.377    42532.237    43019.442
+ 39  cpREV+F+G4    20333.368    113 40892.735    40931.595    41418.800
+ 40  cpREV+F+I+G4  20276.311    114 40780.622    40820.230    41311.343
+ 41  mtREV         23555.069    93  47296.138    47321.737    47729.094
+ 42  mtREV+I       22410.030    94  45008.060    45034.247    45445.671
+ 43  mtREV+G4      21267.849    94  42723.698    42749.886    43161.310
+ 44  mtREV+I+G4    21209.490    95  42608.980    42635.764    43051.247
+ 45  mtREV+F       22724.072    112 45672.143    45710.264    46193.553
+ 46  mtREV+F+I     21572.264    113 43370.528    43409.387    43896.592
+ 47  mtREV+F+G4    20608.502    113 41443.004    41481.863    41969.068
+ 48  mtREV+F+I+G4  20547.529    114 41323.058    41362.665    41853.778
+ 49  rtREV         22075.455    93  44336.909    44362.508    44769.865
+ 50  rtREV+I       20905.086    94  41998.171    42024.359    42435.783
+ 51  rtREV+G4      20154.672    94  40497.344    40523.531    40934.955
+ 52  rtREV+I+G4    20091.437    95  40372.874    40399.658    40815.141
+ 53  rtREV+F       21884.311    112 43992.623    44030.743    44514.032
+ 54  rtREV+F+I     20731.197    113 41688.394    41727.254    42214.459
+ 55  rtREV+F+G4    19950.904    113 40127.809    40166.669    40653.874
+ 56  rtREV+F+I+G4  19892.917    114 40013.834    40053.441    40544.554
+ 57  mtART         23534.844    93  47255.688    47281.287    47688.644
+ 58  mtART+I       22374.305    94  44936.611    44962.798    45374.222
+ 59  mtART+G4      20786.470    94  41760.939    41787.127    42198.551
+ 60  mtART+I+G4    20746.738    95  41683.477    41710.261    42125.743
+ 61  mtART+F       22646.612    112 45517.225    45555.345    46038.634
+ 62  mtART+F+I     21480.331    113 43186.662    43225.521    43712.726
+ 63  mtART+F+G4    20251.603    113 40729.207    40768.067    41255.272
+ 64  mtART+F+I+G4  20189.215    114 40606.430    40646.037    41137.150
+ 65  mtZOA         22915.838    93  46017.676    46043.275    46450.632
+ 66  mtZOA+I       21806.128    94  43800.255    43826.443    44237.867
+ 67  mtZOA+G4      20474.769    94  41137.538    41163.726    41575.149
+ 68  mtZOA+I+G4    20430.642    95  41051.285    41078.069    41493.552
+ 69  mtZOA+F       22268.881    112 44761.763    44799.883    45283.172
+ 70  mtZOA+F+I     21133.708    113 42493.416    42532.276    43019.481
+ 71  mtZOA+F+G4    20114.728    113 40455.457    40494.316    40981.521
+ 72  mtZOA+F+I+G4  20049.428    114 40326.856    40366.464    40857.577
+ 73  VT            22094.834    93  44375.669    44401.268    44808.625
+ 74  VT+I          20909.155    94  42006.311    42032.499    42443.922
+ 75  VT+G4         20252.228    94  40692.456    40718.644    41130.068
+ 76  VT+I+G4       20203.121    95  40596.243    40623.027    41038.510
+ 77  VT+F          22077.214    112 44378.428    44416.549    44899.838
+ 78  VT+F+I        20896.466    113 42018.931    42057.791    42544.996
+ 79  VT+F+G4       20228.508    113 40683.016    40721.875    41209.080
+ 80  VT+F+I+G4     20181.631    114 40591.261    40630.869    41121.982
+ 81  LG            21893.927    93  43973.855    43999.454    44406.811
+ 82  LG+I          20702.547    94  41593.094    41619.282    42030.706
+ 83  LG+G4         19953.111    94  40094.222    40120.410    40531.834
+ 84  LG+I+G4       19890.397    95  39970.795    39997.579    40413.062
+ 85  LG+F          21854.757    112 43933.514    43971.635    44454.924
+ 86  LG+F+I        20671.859    113 41569.718    41608.578    42095.783
+ 87  LG+F+G4       19902.641    113 40031.281    40070.141    40557.346
+ 88  LG+F+I+G4     19846.057    114 39920.114    39959.722    40450.835
+ 89  DCMut         22223.264    93  44632.528    44658.127    45065.484
+ 90  DCMut+I       20994.769    94  42177.538    42203.726    42615.150
+ 91  DCMut+G4      20247.016    94  40682.032    40708.220    41119.644
+ 92  DCMut+I+G4    20192.926    95  40575.852    40602.636    41018.118
+ 93  DCMut+F       22170.203    112 44564.405    44602.526    45085.815
+ 94  DCMut+F+I     20956.632    113 42139.263    42178.123    42665.328
+ 95  DCMut+F+G4    20193.984    113 40613.969    40652.828    41140.033
+ 96  DCMut+F+I+G4  20141.769    114 40511.539    40551.146    41042.259
+ 97  PMB           22222.947    93  44631.893    44657.492    45064.849
+ 98  PMB+I         21068.245    94  42324.491    42350.679    42762.102
+ 99  PMB+G4        20390.028    94  40968.055    40994.243    41405.667
+100  PMB+I+G4      20341.111    95  40872.223    40899.007    41314.490
+101  PMB+F         22234.150    112 44692.301    44730.421    45213.710
+102  PMB+F+I       21072.059    113 42370.119    42408.978    42896.183
+103  PMB+F+G4      20385.430    113 40996.860    41035.719    41522.924
+104  PMB+F+I+G4    20336.373    114 40900.746    40940.353    41431.466
+105  HIVb          23503.523    93  47193.045    47218.644    47626.001
+106  HIVb+I        22074.912    94  44337.825    44364.012    44775.436
+107  HIVb+G4       21102.429    94  42392.859    42419.046    42830.470
+108  HIVb+I+G4     21016.966    95  42223.931    42250.716    42666.198
+109  HIVb+F        23377.172    112 46978.344    47016.464    47499.753
+110  HIVb+F+I      21968.103    113 44162.206    44201.066    44688.271
+111  HIVb+F+G4     20977.304    113 42180.608    42219.468    42706.673
+112  HIVb+F+I+G4   20894.791    114 42017.581    42057.188    42548.301
+113  HIVw          25046.346    93  50278.692    50304.290    50711.648
+114  HIVw+I        23460.188    94  47108.376    47134.564    47545.988
+115  HIVw+G4       22393.164    94  44974.328    45000.516    45411.940
+116  HIVw+I+G4     22308.356    95  44806.712    44833.496    45248.979
+117  HIVw+F        24759.428    112 49742.856    49780.977    50264.265
+118  HIVw+F+I      23196.656    113 46619.311    46658.171    47145.376
+119  HIVw+F+G4     22121.910    113 44469.821    44508.681    44995.886
+120  HIVw+F+I+G4   22031.126    114 44290.252    44329.860    44820.973
+121  JTTDCMut      22202.504    93  44591.009    44616.607    45023.965
+122  JTTDCMut+I    20956.544    94  42101.088    42127.276    42538.699
+123  JTTDCMut+G4   20239.044    94  40666.088    40692.276    41103.700
+124  JTTDCMut+I+G4 20182.216    95  40554.432    40581.216    40996.699
+125  JTTDCMut+F    22207.654    112 44639.308    44677.428    45160.717
+126  JTTDCMut+F+I  20971.738    113 42169.476    42208.336    42695.541
+127  JTTDCMut+F+G4 20235.076    113 40696.152    40735.012    41222.217
+128  JTTDCMut+F+I+G4 20179.814    114 40587.628    40627.236    41118.349
+129  FLU           23205.391    93  46596.782    46622.381    47029.738
+130  FLU+I         21882.113    94  43952.226    43978.413    44389.837
+131  FLU+G4        20920.850    94  42029.700    42055.887    42467.311
+132  FLU+I+G4      20846.974    95  41883.948    41910.732    42326.215
+133  FLU+F         23227.762    112 46679.523    46717.644    47200.932
+134  FLU+F+I       21913.198    113 44052.397    44091.257    44578.462
+135  FLU+F+G4      20865.962    113 41957.924    41996.784    42483.989
+136  FLU+F+I+G4    20789.850    114 41807.701    41847.308    42338.421
+137  Blosum62      22190.337    93  44566.674    44592.272    44999.630
+138  Blosum62+I    21044.310    94  42276.619    42302.807    42714.230
+139  Blosum62+G4   20361.005    94  40910.010    40936.198    41347.621
+140  Blosum62+I+G4 20310.053    95  40810.106    40836.890    41252.372
+141  Blosum62+F    22208.277    112 44640.554    44678.674    45161.963
+142  Blosum62+F+I  21056.225    113 42338.451    42377.310    42864.515
+143  Blosum62+F+G4 20367.586    113 40961.171    41000.031    41487.236
+144  Blosum62+F+I+G4 20317.212    114 40862.424    40902.031    41393.144
+Akaike Information Criterion:           LG+F+I+G4
+Corrected Akaike Information Criterion: LG+F+I+G4
+Bayesian Information Criterion:         LG+I+G4
+Best-fit model: LG+I+G4 chosen according to BIC
+CPU time for model selection: 109.042 seconds.
+Generating 1000 samples for ultrafast bootstrap (seed: 499834)...
+
+NOTE: 23 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+
+Testing with init. pinv = 0.000 / init. alpha = 1.000
+Est. p_inv: 0.000 / Est. gamma shape: 0.437 / Logl: -19953.115
+
+Testing with init. pinv = 0.042 / init. alpha = 1.000
+Est. p_inv: 0.318 / Est. gamma shape: 0.903 / Logl: -19890.415
+
+Testing with init. pinv = 0.084 / init. alpha = 1.000
+Est. p_inv: 0.318 / Est. gamma shape: 0.904 / Logl: -19890.413
+
+Testing with init. pinv = 0.127 / init. alpha = 1.000
+Est. p_inv: 0.317 / Est. gamma shape: 0.900 / Logl: -19890.432
+
+Testing with init. pinv = 0.169 / init. alpha = 1.000
+Est. p_inv: 0.317 / Est. gamma shape: 0.901 / Logl: -19890.430
+
+Testing with init. pinv = 0.211 / init. alpha = 1.000
+Est. p_inv: 0.317 / Est. gamma shape: 0.901 / Logl: -19890.432
+
+Testing with init. pinv = 0.253 / init. alpha = 1.000
+Est. p_inv: 0.318 / Est. gamma shape: 0.904 / Logl: -19890.413
+
+Testing with init. pinv = 0.295 / init. alpha = 1.000
+Est. p_inv: 0.317 / Est. gamma shape: 0.902 / Logl: -19890.434
+
+Testing with init. pinv = 0.337 / init. alpha = 1.000
+Est. p_inv: 0.323 / Est. gamma shape: 0.912 / Logl: -19890.416
+
+Testing with init. pinv = 0.380 / init. alpha = 1.000
+Est. p_inv: 0.322 / Est. gamma shape: 0.912 / Logl: -19890.415
+
+Best p_inv: 0.318 / best gamma shape: 0.904 / Logl: -19890.413
+Parameters optimization took 24.288 sec
+Computing ML distances based on estimated model parameters... 0.627 sec
+WARNING: Some pairwise ML distances are too long (saturated)
+Computing BIONJ tree...
+0.005 seconds
+Log-likelihood of BIONJ tree: -19902.453
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 2.230 second
+Computing log-likelihood of 98 initial trees ... 13.370 seconds
+Current best score: -19859.580
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -19841.028
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 5: -19836.135
+Iteration 10 / LogL: -19858.335 / Time: 0h:2m:40s
+Iteration 20 / LogL: -19870.751 / Time: 0h:2m:50s
+Finish initializing candidate tree set (20)
+Current best tree score: -19836.135 / CPU time: 35.314
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 22: -19835.271
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 26: -19833.723
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 28: -19826.334
+Iteration 30 / LogL: -19833.209 / Time: 0h:3m:5s (0h:4m:18s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 40: -19825.832
+Iteration 40 / LogL: -19825.832 / Time: 0h:3m:21s (0h:3m:55s left)
+Iteration 50 / LogL: -19829.246 / Time: 0h:3m:36s (0h:3m:17s left)
+Log-likelihood cutoff on original alignment: -19890.726
+Iteration 60 / LogL: -19837.811 / Time: 0h:3m:53s (0h:2m:48s left)
+Iteration 70 / LogL: -19833.833 / Time: 0h:4m:9s (0h:2m:22s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 75: -19825.246
+Iteration 80 / LogL: -19825.392 / Time: 0h:4m:23s (0h:3m:5s left)
+Iteration 90 / LogL: -19875.405 / Time: 0h:4m:38s (0h:2m:42s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 100: -19824.043
+Iteration 100 / LogL: -19824.043 / Time: 0h:4m:53s (0h:3m:6s left)
+Log-likelihood cutoff on original alignment: -19890.726
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.997
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 106: -19823.785
+Iteration 110 / LogL: -19839.796 / Time: 0h:5m:8s (0h:2m:55s left)
+Iteration 120 / LogL: -19823.914 / Time: 0h:5m:23s (0h:2m:34s left)
+UPDATE BEST LOG-LIKELIHOOD: -19823.778
+Iteration 130 / LogL: -19823.893 / Time: 0h:5m:36s (0h:2m:14s left)
+Iteration 140 / LogL: -19824.104 / Time: 0h:5m:50s (0h:1m:54s left)
+Iteration 150 / LogL: -19824.306 / Time: 0h:6m:5s (0h:1m:36s left)
+Log-likelihood cutoff on original alignment: -19890.726
+Iteration 160 / LogL: -19824.483 / Time: 0h:6m:18s (0h:1m:17s left)
+Iteration 170 / LogL: -19823.819 / Time: 0h:6m:32s (0h:1m:0s left)
+Iteration 180 / LogL: -19823.815 / Time: 0h:6m:46s (0h:0m:43s left)
+Iteration 190 / LogL: -19824.129 / Time: 0h:7m:0s (0h:0m:26s left)
+Iteration 200 / LogL: -19824.328 / Time: 0h:7m:15s (0h:0m:9s left)
+Log-likelihood cutoff on original alignment: -19890.726
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.983
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 210 / LogL: -19823.819 / Time: 0h:7m:29s (0h:2m:26s left)
+Iteration 220 / LogL: -19824.985 / Time: 0h:7m:44s (0h:2m:9s left)
+Iteration 230 / LogL: -19825.193 / Time: 0h:7m:57s (0h:1m:52s left)
+Iteration 240 / LogL: -19824.260 / Time: 0h:8m:12s (0h:1m:36s left)
+Iteration 250 / LogL: -19828.622 / Time: 0h:8m:25s (0h:1m:19s left)
+Log-likelihood cutoff on original alignment: -19890.726
+Iteration 260 / LogL: -19824.065 / Time: 0h:8m:39s (0h:1m:3s left)
+Iteration 270 / LogL: -19839.693 / Time: 0h:8m:53s (0h:0m:47s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 274: -19823.411
+Iteration 280 / LogL: -19823.864 / Time: 0h:9m:6s (0h:2m:27s left)
+Iteration 290 / LogL: -19838.662 / Time: 0h:9m:20s (0h:2m:11s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 299: -19821.020
+Iteration 300 / LogL: -19823.427 / Time: 0h:9m:35s (0h:2m:34s left)
+Log-likelihood cutoff on original alignment: -19890.726
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.995
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 304: -19820.985
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 310: -19820.644
+Iteration 310 / LogL: -19820.644 / Time: 0h:9m:51s (0h:2m:35s left)
+Iteration 320 / LogL: -19821.121 / Time: 0h:10m:5s (0h:2m:20s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 329: -19819.629
+Iteration 330 / LogL: -19821.780 / Time: 0h:10m:19s (0h:2m:33s left)
+Iteration 340 / LogL: -19830.332 / Time: 0h:10m:35s (0h:2m:18s left)
+Iteration 350 / LogL: -19820.965 / Time: 0h:10m:50s (0h:2m:2s left)
+Log-likelihood cutoff on original alignment: -19890.726
+Iteration 360 / LogL: -19821.980 / Time: 0h:11m:5s (0h:1m:47s left)
+Iteration 370 / LogL: -19820.646 / Time: 0h:11m:21s (0h:1m:31s left)
+Iteration 380 / LogL: -19820.320 / Time: 0h:11m:37s (0h:1m:16s left)
+Iteration 390 / LogL: -19821.101 / Time: 0h:11m:52s (0h:1m:0s left)
+Iteration 400 / LogL: -19819.666 / Time: 0h:12m:8s (0h:0m:45s left)
+Log-likelihood cutoff on original alignment: -19884.318
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.983
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 410 / LogL: -19821.054 / Time: 0h:12m:25s (0h:2m:20s left)
+Iteration 420 / LogL: -19820.316 / Time: 0h:12m:41s (0h:2m:4s left)
+Iteration 430 / LogL: -19819.748 / Time: 0h:12m:57s (0h:1m:49s left)
+Iteration 440 / LogL: -19821.592 / Time: 0h:13m:12s (0h:1m:33s left)
+Iteration 450 / LogL: -19819.676 / Time: 0h:13m:27s (0h:1m:17s left)
+Log-likelihood cutoff on original alignment: -19884.318
+Iteration 460 / LogL: -19837.898 / Time: 0h:13m:42s (0h:1m:2s left)
+Iteration 470 / LogL: -19820.342 / Time: 0h:13m:57s (0h:0m:46s left)
+Iteration 480 / LogL: -19824.559 / Time: 0h:14m:11s (0h:0m:31s left)
+Iteration 490 / LogL: -19820.112 / Time: 0h:14m:27s (0h:0m:15s left)
+Iteration 500 / LogL: -19819.788 / Time: 0h:14m:41s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -19884.318
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.980
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 510 / LogL: -19831.261 / Time: 0h:14m:56s (0h:2m:19s left)
+Iteration 520 / LogL: -19820.127 / Time: 0h:15m:12s (0h:2m:3s left)
+Iteration 530 / LogL: -19821.194 / Time: 0h:15m:27s (0h:1m:48s left)
+Iteration 540 / LogL: -19825.408 / Time: 0h:15m:42s (0h:1m:32s left)
+Iteration 550 / LogL: -19819.960 / Time: 0h:15m:57s (0h:1m:17s left)
+Log-likelihood cutoff on original alignment: -19884.318
+Iteration 560 / LogL: -19829.969 / Time: 0h:16m:15s (0h:1m:1s left)
+Iteration 570 / LogL: -19819.661 / Time: 0h:16m:30s (0h:0m:46s left)
+Iteration 580 / LogL: -19819.657 / Time: 0h:16m:46s (0h:0m:30s left)
+Iteration 590 / LogL: -19828.839 / Time: 0h:17m:0s (0h:0m:15s left)
+Iteration 600 / LogL: -19819.664 / Time: 0h:17m:14s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -19884.318
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.985
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 610 / LogL: -19821.064 / Time: 0h:17m:30s (0h:2m:19s left)
+Iteration 620 / LogL: -19820.796 / Time: 0h:17m:44s (0h:2m:3s left)
+Iteration 630 / LogL: -19819.629 / Time: 0h:17m:59s (0h:1m:48s left)
+Iteration 640 / LogL: -19821.036 / Time: 0h:18m:14s (0h:1m:32s left)
+Iteration 650 / LogL: -19822.708 / Time: 0h:18m:28s (0h:1m:16s left)
+Log-likelihood cutoff on original alignment: -19884.318
+Iteration 660 / LogL: -19827.675 / Time: 0h:18m:43s (0h:1m:1s left)
+Iteration 670 / LogL: -19827.175 / Time: 0h:18m:58s (0h:0m:46s left)
+Iteration 680 / LogL: -19828.015 / Time: 0h:19m:13s (0h:0m:30s left)
+Iteration 690 / LogL: -19883.658 / Time: 0h:19m:29s (0h:0m:15s left)
+Iteration 700 / LogL: -19832.756 / Time: 0h:19m:45s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -19884.318
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.996
+TREE SEARCH COMPLETED AFTER 700 ITERATIONS / Time: 0h:19m:45s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -19819.629
+Optimal log-likelihood: -19819.627
+Proportion of invariable sites: 0.318
+Gamma shape alpha: 0.906
+Parameters optimization took 1 rounds (0.246 sec)
+BEST SCORE FOUND : -19819.627
+Creating bootstrap support values...
+Split supports printed to NEXUS file mafft/test/component393/TEST_component393.splits.nex
+Total tree length: 8.203
+
+Total number of iterations: 700
+CPU time used for tree search: 1050.178 sec (0h:17m:30s)
+Wall-clock time used for tree search: 1050.487 sec (0h:17m:30s)
+Total CPU time used: 1185.488 sec (0h:19m:45s)
+Total wall-clock time used: 1185.890 sec (0h:19m:45s)
+
+Computing bootstrap consensus tree...
+Reading input file mafft/test/component393/TEST_component393.splits.nex...
+48 taxa and 709 splits.
+Consensus tree written to mafft/test/component393/TEST_component393.contree
+Reading input trees file mafft/test/component393/TEST_component393.contree
+Log-likelihood of consensus tree: -19820.768
+
+Analysis results written to: 
+  IQ-TREE report:                mafft/test/component393/TEST_component393.iqtree
+  Maximum-likelihood tree:       mafft/test/component393/TEST_component393.treefile
+  Likelihood distances:          mafft/test/component393/TEST_component393.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          mafft/test/component393/TEST_component393.splits.nex
+  Consensus tree:                mafft/test/component393/TEST_component393.contree
+  Screen log file:               mafft/test/component393/TEST_component393.log
+
+Date and Time: Mon Aug  8 09:30:02 2022

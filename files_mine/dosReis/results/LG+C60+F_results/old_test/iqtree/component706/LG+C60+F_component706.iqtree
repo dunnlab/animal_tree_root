@@ -1,0 +1,841 @@
+IQ-TREE 1.5.3 built Mar 12 2017
+
+Input file name: /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component706.mafft
+Type of analysis: tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 102116
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh (2015)
+IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol. Biol. Evol., 32:268-274.
+http://dx.doi.org/10.1093/molbev/msu300
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Bui Quang Minh, Minh Anh Thi Nguyen, and Arndt von Haeseler (2013) Ultrafast
+approximation for phylogenetic bootstrap. Mol. Biol. Evol., 30:1188-1195.
+http://dx.doi.org/10.1093/molbev/mst024
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 164 sequences with 58 amino-acid sites
+Number of constant sites: 15 (= 25.8621% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 15 (= 25.8621% of all sites)
+Number of distinct site patterns: 57
+
+SUBSTITUTION PROCESS
+--------------------
+
+Mixture model of substitution: MIX{LG+F+F,LG+FC60pi1,LG+FC60pi2,LG+FC60pi3,LG+FC60pi4,LG+FC60pi5,LG+FC60pi6,LG+FC60pi7,LG+FC60pi8,LG+FC60pi9,LG+FC60pi10,LG+FC60pi11,LG+FC60pi12,LG+FC60pi13,LG+FC60pi14,LG+FC60pi15,LG+FC60pi16,LG+FC60pi17,LG+FC60pi18,LG+FC60pi19,LG+FC60pi20,LG+FC60pi21,LG+FC60pi22,LG+FC60pi23,LG+FC60pi24,LG+FC60pi25,LG+FC60pi26,LG+FC60pi27,LG+FC60pi28,LG+FC60pi29,LG+FC60pi30,LG+FC60pi31,LG+FC60pi32,LG+FC60pi33,LG+FC60pi34,LG+FC60pi35,LG+FC60pi36,LG+FC60pi37,LG+FC60pi38,LG+FC60pi39,LG+FC60pi40,LG+FC60pi41,LG+FC60pi42,LG+FC60pi43,LG+FC60pi44,LG+FC60pi45,LG+FC60pi46,LG+FC60pi47,LG+FC60pi48,LG+FC60pi49,LG+FC60pi50,LG+FC60pi51,LG+FC60pi52,LG+FC60pi53,LG+FC60pi54,LG+FC60pi55,LG+FC60pi56,LG+FC60pi57,LG+FC60pi58,LG+FC60pi59,LG+FC60pi60}+G4
+
+  No  Component      Rate    Weight   Parameters
+   1  LG+F          1.0000   0.2486   LG+F
+   2  LG+FC60pi1    1.0000   0.0618   LG+FC60pi1
+   3  LG+FC60pi2    1.0000   0.0000   LG+FC60pi2
+   4  LG+FC60pi3    1.0000   0.0000   LG+FC60pi3
+   5  LG+FC60pi4    1.0000   0.0000   LG+FC60pi4
+   6  LG+FC60pi5    1.0000   0.0423   LG+FC60pi5
+   7  LG+FC60pi6    1.0000   0.0000   LG+FC60pi6
+   8  LG+FC60pi7    1.0000   0.0000   LG+FC60pi7
+   9  LG+FC60pi8    1.0000   0.0116   LG+FC60pi8
+  10  LG+FC60pi9    1.0000   0.0000   LG+FC60pi9
+  11  LG+FC60pi10   1.0000   0.0000   LG+FC60pi10
+  12  LG+FC60pi11   1.0000   0.0001   LG+FC60pi11
+  13  LG+FC60pi12   1.0000   0.0000   LG+FC60pi12
+  14  LG+FC60pi13   1.0000   0.0000   LG+FC60pi13
+  15  LG+FC60pi14   1.0000   0.0000   LG+FC60pi14
+  16  LG+FC60pi15   1.0000   0.0000   LG+FC60pi15
+  17  LG+FC60pi16   1.0000   0.0294   LG+FC60pi16
+  18  LG+FC60pi17   1.0000   0.0000   LG+FC60pi17
+  19  LG+FC60pi18   1.0000   0.0000   LG+FC60pi18
+  20  LG+FC60pi19   1.0000   0.0000   LG+FC60pi19
+  21  LG+FC60pi20   1.0000   0.0000   LG+FC60pi20
+  22  LG+FC60pi21   1.0000   0.0000   LG+FC60pi21
+  23  LG+FC60pi22   1.0000   0.0000   LG+FC60pi22
+  24  LG+FC60pi23   1.0000   0.0000   LG+FC60pi23
+  25  LG+FC60pi24   1.0000   0.0000   LG+FC60pi24
+  26  LG+FC60pi25   1.0000   0.0000   LG+FC60pi25
+  27  LG+FC60pi26   1.0000   0.0675   LG+FC60pi26
+  28  LG+FC60pi27   1.0000   0.0000   LG+FC60pi27
+  29  LG+FC60pi28   1.0000   0.0000   LG+FC60pi28
+  30  LG+FC60pi29   1.0000   0.0567   LG+FC60pi29
+  31  LG+FC60pi30   1.0000   0.0000   LG+FC60pi30
+  32  LG+FC60pi31   1.0000   0.0000   LG+FC60pi31
+  33  LG+FC60pi32   1.0000   0.0000   LG+FC60pi32
+  34  LG+FC60pi33   1.0000   0.0000   LG+FC60pi33
+  35  LG+FC60pi34   1.0000   0.0062   LG+FC60pi34
+  36  LG+FC60pi35   1.0000   0.0356   LG+FC60pi35
+  37  LG+FC60pi36   1.0000   0.0000   LG+FC60pi36
+  38  LG+FC60pi37   1.0000   0.0127   LG+FC60pi37
+  39  LG+FC60pi38   1.0000   0.1491   LG+FC60pi38
+  40  LG+FC60pi39   1.0000   0.0146   LG+FC60pi39
+  41  LG+FC60pi40   1.0000   0.0143   LG+FC60pi40
+  42  LG+FC60pi41   1.0000   0.0061   LG+FC60pi41
+  43  LG+FC60pi42   1.0000   0.0000   LG+FC60pi42
+  44  LG+FC60pi43   1.0000   0.1007   LG+FC60pi43
+  45  LG+FC60pi44   1.0000   0.0000   LG+FC60pi44
+  46  LG+FC60pi45   1.0000   0.0000   LG+FC60pi45
+  47  LG+FC60pi46   1.0000   0.0000   LG+FC60pi46
+  48  LG+FC60pi47   1.0000   0.0000   LG+FC60pi47
+  49  LG+FC60pi48   1.0000   0.0000   LG+FC60pi48
+  50  LG+FC60pi49   1.0000   0.0000   LG+FC60pi49
+  51  LG+FC60pi50   1.0000   0.0000   LG+FC60pi50
+  52  LG+FC60pi51   1.0000   0.0468   LG+FC60pi51
+  53  LG+FC60pi52   1.0000   0.0959   LG+FC60pi52
+  54  LG+FC60pi53   1.0000   0.0000   LG+FC60pi53
+  55  LG+FC60pi54   1.0000   0.0000   LG+FC60pi54
+  56  LG+FC60pi55   1.0000   0.0000   LG+FC60pi55
+  57  LG+FC60pi56   1.0000   0.0000   LG+FC60pi56
+  58  LG+FC60pi57   1.0000   0.0000   LG+FC60pi57
+  59  LG+FC60pi58   1.0000   0.0000   LG+FC60pi58
+  60  LG+FC60pi59   1.0000   0.0000   LG+FC60pi59
+  61  LG+FC60pi60   1.0000   0.0000   LG+FC60pi60
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 0.4121
+
+ Category  Relative_rate  Proportion
+  1         0.0185         0.2500
+  2         0.1908         0.2500
+  3         0.7441         0.2500
+  4         3.0467         0.2500
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -1551.9526 (s.e. 198.6264)
+Unconstrained log-likelihood (without tree): -234.1194
+Number of free parameters (#branches + #model parameters): 405
+Akaike information criterion (AIC) score: 3913.9051
+Corrected Akaike information criterion (AICc) score: 332773.9051
+Bayesian information criterion (BIC) score: 4748.3845
+
+**************************** WARNING ****************************
+Number of parameters (K, model parameters and branch lengths): 405
+Sample size (n, alignment length): 58
+
+Given that K>=n, the parameter estimates might be inaccurate.
+Thus, phylogenetic estimates should be interpreted with caution.
+
+Ideally, it is desirable that n >> K. When selecting optimal models,
+1. use AIC or BIC if n > 40K;
+2. use AICc or BIC if 40K >= n > K;
+3. be extremely cautious if n <= K
+
+To improve the situation (3), consider the following options:
+  1. Increase the sample size (n)
+  2. Decrease the number of parameters (K) to be estimated. If
+     possible:
+     a. Remove the least important sequences from the alignment
+     b. Specify some of the parameter values for the substitution
+        model (e.g., the nucleotide or amino acid frequencies)
+     c. Specify some of the parameter values for the rates-across-
+        sites model (e.g., the shape parameter for the discrete
+        Gamma distribution, the proportion of invariable sites, or
+        the rates of change for different rate categories under
+        the FreeRate model)
+
+Reference:
+Burnham KR, Anderson DR (2002). Model Selection and Multimodel
+Inference: A Practical Information-Theoretic Approach. Springer,
+New York.
+************************ END OF WARNING ***********************
+
+Total tree length (sum of branch lengths): 6.3058
+Sum of internal branch lengths: 2.3955 (37.9883% of tree length)
+
+WARNING: 89 near-zero internal branches (<0.0172) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Nosenko2013_ribo_11057_Amphimedon_queenslandica_400682_KOG0004' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++**Nosenko2013_ribo_11057_Amphimedon_queenslandica_400682_KOG0004
+|
+|                +**Nosenko2013_ribo_11057_Asbestopluma_sp_68560_KOG0004
+|            +---| (100)
+|            |   +**Nosenko2013_ribo_14615_Asbestopluma_sp_68560_KOG0004
+|         +--| (97)
+|         |  |  +**Nosenko2013_ribo_11057_Suberites_domuncula_55567_KOG0004
+|         |  +--| (96)
+|         |     |  +**Nosenko2013_ribo_14615_Suberites_domuncula_55567_KOG0004
+|         |     +**| (44)
+|         |        +**Philippe2009_Suberites_domuncula_55567_Gene_0108
++---------| (100)
+|         |                        +**Nosenko2013_ribo_11057_Carteriospongia_foliascens_593584_KOG0004
+|         |              +---------| (100)
+|         |              |         |  +**Nosenko2013_ribo_14615_Carteriospongia_foliascens_593584_KOG0004
+|         |              |         +**| (93)
+|         |              |            +**Philippe2009_Carteriospongia_foliascens_593584_Gene_0108
+|         |           +--| (34)
+|         |           |  |                                                     +**Nosenko2013_ribo_11057_Pachydictyum_globosum_348075_KOG0004
+|         |           |  |                                                  +--| (100)
+|         |           |  |                                                  |  +**Nosenko2013_ribo_14615_Pachydictyum_globosum_348075_KOG0004
+|         |           |  |                                               +**| (66)
+|         |           |  |                                               |  |  +**Nosenko2013_ribo_14615_Danio_rerio_7955_KOG0004
+|         |           |  |                                               |  +**| (67)
+|         |           |  |                                               |     +**Philippe2009_Danio_rerio_7955_Gene_0108
+|         |           |  |                                         +-----| (98)
+|         |           |  |                                         |     +**Nosenko2013_ribo_11057_Danio_rerio_7955_KOG0004
+|         |           |  |                                      +**| (60)
+|         |           |  |                                      |  |   +**Nosenko2013_ribo_14615_Euprymna_scolopes_6613_KOG0004
+|         |           |  |                                      |  +---| (99)
+|         |           |  |                                      |      +**Philippe2009_Euprymna_scolopes_6613_Gene_0108
+|         |           |  |                                   +--| (55)
+|         |           |  |                                   |  |     +**Nosenko2013_ribo_11057_Capitella_teleta_283909_KOG0004
+|         |           |  |                                   |  |  +**| (81)
+|         |           |  |                                   |  |  |  +**Nosenko2013_ribo_14615_Capitella_teleta_283909_KOG0004
+|         |           |  |                                   |  +**| (94)
+|         |           |  |                                   |     +**Philippe2009_Capitella_teleta_283909_Gene_0108
+|         |           |  |                                +**| (3)
+|         |           |  |                                |  |            +**Nosenko2013_ribo_11057_Helobdella_robusta_6412_KOG0004
+|         |           |  |                                |  |         +**| (54)
+|         |           |  |                                |  |         |  +**Nosenko2013_ribo_14615_Helobdella_robusta_6412_KOG0004
+|         |           |  |                                |  |  +------| (100)
+|         |           |  |                                |  |  |      +**Philippe2009_Helobdella_robusta_6412_Gene_0108
+|         |           |  |                                |  +**| (21)
+|         |           |  |                                |     |  +**Nosenko2013_ribo_14615_Xenoturbella_bocki_242395_KOG0004
+|         |           |  |                                |     +--| (98)
+|         |           |  |                                |        +**Philippe2009_Xenoturbella_bocki_242395_Gene_0108
+|         |           |  |                             +**| (6)
+|         |           |  |                             |  |                                       +**Nosenko2013_ribo_11057_Crateromorpha_meyeri_472232_KOG0004
+|         |           |  |                             |  |                                   +---| (100)
+|         |           |  |                             |  |                                   |   +**Nosenko2013_ribo_14615_Crateromorpha_meyeri_472232_KOG0004
+|         |           |  |                             |  |                       +-----------| (100)
+|         |           |  |                             |  |                       |           |  +**Nosenko2013_ribo_11057_Oopsacas_minuta_111878_KOG0004
+|         |           |  |                             |  |                       |           +**| (89)
+|         |           |  |                             |  |                       |              |  +**Nosenko2013_ribo_14615_Oopsacas_minuta_111878_KOG0004
+|         |           |  |                             |  |                       |              +**| (84)
+|         |           |  |                             |  |                       |                 +**Philippe2009_Oopsacas_minuta_111878_Gene_0108
+|         |           |  |                             |  |                    +--| (91)
+|         |           |  |                             |  |                    |  |              +**Nosenko2013_ribo_11057_Monosiga_brevicollis_81824_KOG0004
+|         |           |  |                             |  |                    |  |           +**| (76)
+|         |           |  |                             |  |                    |  |           |  +**Nosenko2013_ribo_14615_Monosiga_brevicollis_81824_KOG0004
+|         |           |  |                             |  |                    |  |      +----| (95)
+|         |           |  |                             |  |                    |  |      |    +**Philippe2009_Monosiga_brevicollis_81824_Gene_0108
+|         |           |  |                             |  |                    |  +------| (94)
+|         |           |  |                             |  |                    |         |               +**Nosenko2013_ribo_11057_Proterospongia_sp_218847_KOG0004
+|         |           |  |                             |  |                    |         +---------------| (100)
+|         |           |  |                             |  |                    |                         |  +**Nosenko2013_ribo_14615_Proterospongia_sp_218847_KOG0004
+|         |           |  |                             |  |                    |                         +**| (87)
+|         |           |  |                             |  |                    |                            +**Philippe2009_Proterospongia_sp_218847_Gene_0108
+|         |           |  |                             |  |                 +--| (49)
+|         |           |  |                             |  |                 |  |                 +**Nosenko2013_ribo_11057_Pleurobrachia_pileus_140457_KOG0004
+|         |           |  |                             |  |                 |  |              +**| (60)
+|         |           |  |                             |  |                 |  |              |  +**Nosenko2013_ribo_14615_Pleurobrachia_pileus_140457_KOG0004
+|         |           |  |                             |  |                 |  |           +--| (98)
+|         |           |  |                             |  |                 |  |           |  +**Philippe2009_Pleurobrachia_pileus_140457_Gene_0108
+|         |           |  |                             |  |                 |  +-----------| (99)
+|         |           |  |                             |  |                 |              |     +**Nosenko2013_ribo_11057_Beroe_sp_10199_KOG0004
+|         |           |  |                             |  |                 |              |  +**| (90)
+|         |           |  |                             |  |                 |              |  |  +**Nosenko2013_ribo_14615_Beroe_sp_10199_KOG0004
+|         |           |  |                             |  |                 |              +--| (99)
+|         |           |  |                             |  |                 |                 |        +**Nosenko2013_ribo_11057_Mnemiopsis_leidyi_27923_KOG0004
+|         |           |  |                             |  |                 |                 |     +**| (91)
+|         |           |  |                             |  |                 |                 |     |  +**Nosenko2013_ribo_14615_Mnemiopsis_leidyi_27923_KOG0004
+|         |           |  |                             |  |                 |                 |  +--| (99)
+|         |           |  |                             |  |                 |                 |  |  +**Philippe2009_Mnemiopsis_leidyi_27923_Gene_0108
+|         |           |  |                             |  |                 |                 +--| (92)
+|         |           |  |                             |  |                 |                    |     +**Nosenko2013_ribo_11057_Mertensiid_sp_140499_KOG0004
+|         |           |  |                             |  |                 |                    |  +**| (88)
+|         |           |  |                             |  |                 |                    |  |  +**Nosenko2013_ribo_14615_Mertensiid_sp_140499_KOG0004
+|         |           |  |                             |  |                 |                    +--| (99)
+|         |           |  |                             |  |                 |                       +**Philippe2009_Mertensiid_sp_140499_Gene_0108
+|         |           |  |                             |  |              +**| (25)
+|         |           |  |                             |  |              |  |           +**Nosenko2013_ribo_11057_Oscarella_sp_121493_KOG0004
+|         |           |  |                             |  |              |  |        +**| (67)
+|         |           |  |                             |  |              |  |        |  |  +**Nosenko2013_ribo_14615_Oscarella_carmela_386100_KOG0004
+|         |           |  |                             |  |              |  |        |  +**| (90)
+|         |           |  |                             |  |              |  |        |     +**Nosenko2013_ribo_14615_Oscarella_sp_121493_KOG0004
+|         |           |  |                             |  |              |  |     +--| (86)
+|         |           |  |                             |  |              |  |     |  +**Philippe2009_Oscarella_carmela_386100_Gene_0108
+|         |           |  |                             |  |              |  |  +**| (39)
+|         |           |  |                             |  |              |  |  |  +-----Nosenko2013_ribo_11057_Sycon_ciliatum_27933_KOG0004
+|         |           |  |                             |  |              |  +**| (33)
+|         |           |  |                             |  |              |     |             +**Nosenko2013_ribo_14615_Capsaspora_owczarzaki_192875_KOG0004
+|         |           |  |                             |  |              |     |     +-------| (100)
+|         |           |  |                             |  |              |     |     |       +**Philippe2009_Capsaspora_owczarzaki_192875_Gene_0108
+|         |           |  |                             |  |              |     |  +**| (32)
+|         |           |  |                             |  |              |     |  |  +**Nosenko2013_ribo_14615_Scutigera_coleoptrata_29022_KOG0004
+|         |           |  |                             |  |              |     +**| (40)
+|         |           |  |                             |  |              |        +**Philippe2009_Scutigera_coleoptrata_29022_Gene_0108
+|         |           |  |                             |  |           +--| (52)
+|         |           |  |                             |  |           |  |                      +**Nosenko2013_ribo_11057_Nasonia_vitripennis_7425_KOG0004
+|         |           |  |                             |  |           |  |                   +**| (81)
+|         |           |  |                             |  |           |  |                   |  +**Nosenko2013_ribo_14615_Nasonia_vitripennis_7425_KOG0004
+|         |           |  |                             |  |           |  |                +**| (81)
+|         |           |  |                             |  |           |  |                |  +**Philippe2009_Nasonia_vitripennis_7425_Gene_0108
+|         |           |  |                             |  |           |  +----------------| (100)
+|         |           |  |                             |  |           |                   |  +**Nosenko2013_ribo_14615_Pediculus_humanus_capitis_121226_KOG0004
+|         |           |  |                             |  |           |                   +--| (99)
+|         |           |  |                             |  |           |                      +**Philippe2009_Pediculus_humanus_121225_Gene_0108
+|         |           |  |                             |  |        +**| (34)
+|         |           |  |                             |  |        |  |                 +**Nosenko2013_ribo_11057_Leucetta_chagosensis_185688_KOG0004
+|         |           |  |                             |  |        |  |              +**| (84)
+|         |           |  |                             |  |        |  |              |  +**Nosenko2013_ribo_14615_Leucetta_chagosensis_185688_KOG0004
+|         |           |  |                             |  |        |  |           +--| (100)
+|         |           |  |                             |  |        |  |           |  +**Philippe2009_Leucetta_chagosensis_185688_Gene_0108
+|         |           |  |                             |  |        |  |        +--| (85)
+|         |           |  |                             |  |        |  |        |  |     +**Nosenko2013_ribo_11057_Ixodes_scapularis_6945_KOG0004
+|         |           |  |                             |  |        |  |        |  |  +**| (72)
+|         |           |  |                             |  |        |  |        |  |  |  +**Nosenko2013_ribo_14615_Ixodes_scapularis_6945_KOG0004
+|         |           |  |                             |  |        |  |        |  +**| (82)
+|         |           |  |                             |  |        |  |        |     +**Philippe2009_Ixodes_scapularis_6945_Gene_0108
+|         |           |  |                             |  |        |  |     +**| (36)
+|         |           |  |                             |  |        |  |     |  |     +**Nosenko2013_ribo_14615_Anoplodactylus_eroticus_488521_KOG0004
+|         |           |  |                             |  |        |  |     |  |  +**| (95)
+|         |           |  |                             |  |        |  |     |  |  |  +**Philippe2009_Anoplodactylus_eroticus_488521_Gene_0108
+|         |           |  |                             |  |        |  |     |  +--| (36)
+|         |           |  |                             |  |        |  |     |     +-----Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0108
+|         |           |  |                             |  |        |  |  +**| (11)
+|         |           |  |                             |  |        |  |  |  |     +**Nosenko2013_ribo_11057_Sycon_raphanus_56443_KOG0004
+|         |           |  |                             |  |        |  |  |  |  +**| (69)
+|         |           |  |                             |  |        |  |  |  |  |  +**Nosenko2013_ribo_14615_Sycon_raphanus_56443_KOG0004
+|         |           |  |                             |  |        |  |  |  +--| (99)
+|         |           |  |                             |  |        |  |  |     +**Philippe2009_Sycon_raphanus_56443_Gene_0108
+|         |           |  |                             |  |        |  +**| (10)
+|         |           |  |                             |  |        |     |  +**Nosenko2013_ribo_14615_Strongylocentrotus_purpuratus_7668_KOG0004
+|         |           |  |                             |  |        |     +**| (61)
+|         |           |  |                             |  |        |        +**Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0108
+|         |           |  |                             |  |     +--| (13)
+|         |           |  |                             |  |     |  |     +**Nosenko2013_ribo_11057_Branchiostoma_floridae_7739_KOG0004
+|         |           |  |                             |  |     |  |  +**| (54)
+|         |           |  |                             |  |     |  |  |  +**Nosenko2013_ribo_14615_Branchiostoma_floridae_7739_KOG0004
+|         |           |  |                             |  |     |  +--| (99)
+|         |           |  |                             |  |     |     +**Philippe2009_Branchiostoma_floridae_7739_Gene_0108
+|         |           |  |                             |  |  +**| (6)
+|         |           |  |                             |  |  |  |  +**Nosenko2013_ribo_11057_Petromyzon_marinus_7757_KOG0004
+|         |           |  |                             |  |  |  +--| (99)
+|         |           |  |                             |  |  |     |  +**Nosenko2013_ribo_14615_Petromyzon_marinus_7757_KOG0004
+|         |           |  |                             |  |  |     +**| (65)
+|         |           |  |                             |  |  |        +**Philippe2009_Petromyzon_marinus_7757_Gene_0108
+|         |           |  |                             |  +**| (10)
+|         |           |  |                             |     |                                           +**Nosenko2013_ribo_11057_Clytia_hemisphaerica_252671_KOG0004
+|         |           |  |                             |     |                                      +----| (96)
+|         |           |  |                             |     |                                      |    |  +**Nosenko2013_ribo_14615_Clytia_hemisphaerica_252671_KOG0004
+|         |           |  |                             |     |                                      |    +**| (79)
+|         |           |  |                             |     |                                      |       +**Philippe2009_Clytia_hemisphaerica_252671_Gene_0108
+|         |           |  |                             |     |                                   +--| (68)
+|         |           |  |                             |     |                                   |  |                         +**Nosenko2013_ribo_11057_Hydra_magnipapillata_6087_KOG0004
+|         |           |  |                             |     |                                   |  |                      +**| (72)
+|         |           |  |                             |     |                                   |  |                      |  |  +**Nosenko2013_ribo_14615_Hydra_magnipapillata_6087_KOG0004
+|         |           |  |                             |     |                                   |  |                      |  +**| (91)
+|         |           |  |                             |     |                                   |  |                      |     +**Philippe2009_Hydra_magnipapillata_6087_Gene_0108
+|         |           |  |                             |     |                                   |  |                   +**| (41)
+|         |           |  |                             |     |                                   |  |                   |  +**Nosenko2013_ribo_11057_Hydra_vulgaris_6087_KOG0004
+|         |           |  |                             |     |                                   |  +-------------------| (100)
+|         |           |  |                             |     |                                   |                      +**Nosenko2013_ribo_14615_Hydra_vulgaris_6087_KOG0004
+|         |           |  |                             |     |                                +**| (23)
+|         |           |  |                             |     |                                |  +**Nosenko2013_ribo_11057_Hydractinia_echinata_35630_KOG0004
+|         |           |  |                             |     |                             +**| (4)
+|         |           |  |                             |     |                             |  |           +**Nosenko2013_ribo_11057_Acropora_hyacinthus_55974_KOG0004
+|         |           |  |                             |     |                             |  |        +**| (81)
+|         |           |  |                             |     |                             |  |        |  +**Nosenko2013_ribo_11057_Acropora_millepora_45264_KOG0004
+|         |           |  |                             |     |                             |  |     +**| (72)
+|         |           |  |                             |     |                             |  |     |  |  +**Nosenko2013_ribo_14615_Acropora_hyacinthus_55974_KOG0004
+|         |           |  |                             |     |                             |  |     |  +**| (79)
+|         |           |  |                             |     |                             |  |     |     +**Nosenko2013_ribo_14615_Acropora_millepora_45264_KOG0004
+|         |           |  |                             |     |                             |  |  +**| (89)
+|         |           |  |                             |     |                             |  |  |  +**Philippe2009_Acropora_millepora_45264_Gene_0108
+|         |           |  |                             |     |                             |  +**| (52)
+|         |           |  |                             |     |                             |     |  +**Philippe2009_Hydractinia_echinata_35630_Gene_0108
+|         |           |  |                             |     |                             |     +**| (65)
+|         |           |  |                             |     |                             |        +**Philippe2009_Podocoryne_carnea_6096_Gene_0108
+|         |           |  |                             |     |                          +**| (3)
+|         |           |  |                             |     |                          |  +**Nosenko2013_ribo_14615_Podocoryna_carnea_6096_KOG0004
+|         |           |  |                             |     |                       +**| (12)
+|         |           |  |                             |     |                       |  +**Nosenko2013_ribo_14615_Hydractinia_echinata_35630_KOG0004
+|         |           |  |                             |     |                    +--| (80)
+|         |           |  |                             |     |                    |  +**Nosenko2013_ribo_11057_Podocoryna_carnea_6096_KOG0004
+|         |           |  |                             |     |                 +**| (59)
+|         |           |  |                             |     |                 |  |       +**Nosenko2013_ribo_11057_Porites_46719_KOG0004
+|         |           |  |                             |     |                 |  +-------| (100)
+|         |           |  |                             |     |                 |          +**Nosenko2013_ribo_14615_Porites_46719_KOG0004
+|         |           |  |                             |     |              +**| (23)
+|         |           |  |                             |     |              |  +**Nosenko2013_ribo_14615_Nematostella_vectensis_45351_KOG0004
+|         |           |  |                             |     |           +**| (40)
+|         |           |  |                             |     |           |  +**Nosenko2013_ribo_14615_Montastraea_faveolata_48498_KOG0004
+|         |           |  |                             |     |        +**| (42)
+|         |           |  |                             |     |        |  |  +**Philippe2009_Montastraea_faveolata_48498_Gene_0108
+|         |           |  |                             |     |        |  +**| (77)
+|         |           |  |                             |     |        |     +**Philippe2009_Nematostella_vectensis_45351_Gene_0108
+|         |           |  |                             |     |     +**| (26)
+|         |           |  |                             |     |     |  +**Nosenko2013_ribo_11057_Nematostella_vectensis_45351_KOG0004
+|         |           |  |                             |     |  +**| (57)
+|         |           |  |                             |     |  |  +**Nosenko2013_ribo_11057_Metridium_senile_6116_KOG0004
+|         |           |  |                             |     +--| (75)
+|         |           |  |                             |        |  +**Nosenko2013_ribo_14615_Metridium_senile_6116_KOG0004
+|         |           |  |                             |        +**| (42)
+|         |           |  |                             |           +**Philippe2009_Metridium_senile_6116_Gene_0108
+|         |           |  |                          +**| (5)
+|         |           |  |                          |  +**Philippe2009_Crassostrea_gigas_29159_Gene_0108
+|         |           |  |                       +**| (2)
+|         |           |  |                       |  +**Nosenko2013_ribo_14615_Crassostrea_gigas_29159_KOG0004
+|         |           |  |                    +**| (29)
+|         |           |  |                    |  |           +**Nosenko2013_ribo_11057_Saccoglossus_kowalevskii_10224_KOG0004
+|         |           |  |                    |  |        +**| (84)
+|         |           |  |                    |  |        |  +**Nosenko2013_ribo_11057_Tubifex_tubifex_6386_KOG0004
+|         |           |  |                    |  |     +**| (66)
+|         |           |  |                    |  |     |  |  +**Nosenko2013_ribo_14615_Saccoglossus_kowalevskii_10224_KOG0004
+|         |           |  |                    |  |     |  +**| (73)
+|         |           |  |                    |  |     |     +**Nosenko2013_ribo_14615_Tubifex_tubifex_6386_KOG0004
+|         |           |  |                    |  |  +**| (58)
+|         |           |  |                    |  |  |  |  +**Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0108
+|         |           |  |                    |  |  |  +**| (81)
+|         |           |  |                    |  |  |     +**Philippe2009_Tubifex_tubifex_6386_Gene_0108
+|         |           |  |                    |  +**| (43)
+|         |           |  |                    |     |     +**Nosenko2013_ribo_11057_Aplysia_californica_6500_KOG0004
+|         |           |  |                    |     |  +**| (77)
+|         |           |  |                    |     |  |  +**Nosenko2013_ribo_14615_Aplysia_californica_6500_KOG0004
+|         |           |  |                    |     +--| (99)
+|         |           |  |                    |        +**Philippe2009_Aplysia_californica_6500_Gene_0108
+|         |           |  |                 +--| (49)
+|         |           |  |                 |  +**Nosenko2013_ribo_11057_Crassostrea_gigas_29159_KOG0004
+|         |           |  |              +--| (52)
+|         |           |  |              |  |                                  +**Nosenko2013_ribo_11057_Daphnia_pulex_6669_KOG0004
+|         |           |  |              |  |                     +------------| (100)
+|         |           |  |              |  |                     |            |  +**Nosenko2013_ribo_14615_Daphnia_pulex_6669_KOG0004
+|         |           |  |              |  |                     |            +**| (80)
+|         |           |  |              |  |                     |               +**Philippe2009_Daphnia_pulex_6669_Gene_0108
+|         |           |  |              |  |              +------| (61)
+|         |           |  |              |  |              |      |     +**Nosenko2013_ribo_11057_Monosiga_ovata_81526_KOG0004
+|         |           |  |              |  |              |      +-----| (98)
+|         |           |  |              |  |              |            |  +**Nosenko2013_ribo_14615_Monosiga_ovata_81526_KOG0004
+|         |           |  |              |  |              |            +**| (71)
+|         |           |  |              |  |              |               +**Philippe2009_Monosiga_ovata_81526_Gene_0108
+|         |           |  |              |  |           +--| (31)
+|         |           |  |              |  |           |  |                               +**Nosenko2013_ribo_14615_Allomyces_macrogynus_28583_KOG0004
+|         |           |  |              |  |           |  |  +----------------------------| (100)
+|         |           |  |              |  |           |  |  |                            +**Philippe2009_Allomyces_macrogynus_28583_Gene_0108
+|         |           |  |              |  |           |  +**| (66)
+|         |           |  |              |  |           |     |      +**Nosenko2013_ribo_14615_Amoebidium_parasiticum_4881_KOG0004
+|         |           |  |              |  |           |     +------| (99)
+|         |           |  |              |  |           |            +**Philippe2009_Amoebidium_parasiticum_4881_Gene_0108
+|         |           |  |              |  |        +--| (33)
+|         |           |  |              |  |        |  |                  +**Nosenko2013_ribo_14615_Batrachochytrium_dendrobatidis_109871_KOG0004
+|         |           |  |              |  |        |  |      +-----------| (100)
+|         |           |  |              |  |        |  |      |           +**Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0108
+|         |           |  |              |  |        |  +------| (98)
+|         |           |  |              |  |        |         |  +**Nosenko2013_ribo_14615_Spizellomyces_punctatus_109760_KOG0004
+|         |           |  |              |  |        |         +--| (98)
+|         |           |  |              |  |        |            +**Philippe2009_Spizellomyces_punctatus_109760_Gene_0108
+|         |           |  |              |  |     +**| (35)
+|         |           |  |              |  |     |  |     +**Nosenko2013_ribo_14615_Cyanea_capillata_27804_KOG0004
+|         |           |  |              |  |     |  |  +--| (99)
+|         |           |  |              |  |     |  |  |  +**Philippe2009_Cyanea_capillata_27804_Gene_0108
+|         |           |  |              |  |     |  +--| (73)
+|         |           |  |              |  |     |     |                +**Nosenko2013_ribo_14615_Phycomyces_blakesleeanus_4837_KOG0004
+|         |           |  |              |  |     |     |          +-----| (100)
+|         |           |  |              |  |     |     |          |     +**Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0108
+|         |           |  |              |  |     |     +----------| (99)
+|         |           |  |              |  |     |                +**Philippe2009_Rhizopus_oryzae_64495_Gene_0108
+|         |           |  |              |  |  +--| (47)
+|         |           |  |              |  |  |  |         +**Nosenko2013_ribo_11057_Trichoplax_sp_H4_10227_KOG0004
+|         |           |  |              |  |  |  |   +-----| (99)
+|         |           |  |              |  |  |  |   |     |  +**Nosenko2013_ribo_14615_Trichoplax_sp_H4_10227_KOG0004
+|         |           |  |              |  |  |  |   |     +**| (65)
+|         |           |  |              |  |  |  |   |        +**Philippe2009_Trichoplax_adhaerens_10228_Gene_0108
+|         |           |  |              |  |  |  +---| (96)
+|         |           |  |              |  |  |      |  +**Nosenko2013_ribo_11057_Trichoplax_adhaerens_10228_KOG0004
+|         |           |  |              |  |  |      +--| (98)
+|         |           |  |              |  |  |         +**Nosenko2013_ribo_14615_Trichoplax_adhaerens_10228_KOG0004
+|         |           |  |              |  +**| (45)
+|         |           |  |              |     |     +**Nosenko2013_ribo_14615_Pedicellina_cernua_43123_KOG0004
+|         |           |  |              |     +-----| (99)
+|         |           |  |              |           +**Philippe2009_Pedicellina_cernua_43123_Gene_0108
+|         |           |  |           +**| (56)
+|         |           |  |           |  |        +**Nosenko2013_ribo_11057_Ciona_intestinalis_7719_KOG0004
+|         |           |  |           |  |     +--| (100)
+|         |           |  |           |  |     |  +**Nosenko2013_ribo_14615_Ciona_intestinalis_7719_KOG0004
+|         |           |  |           |  |  +--| (93)
+|         |           |  |           |  |  |  +**Philippe2009_Ciona_savignyi_51511_Gene_0108
+|         |           |  |           |  +--| (90)
+|         |           |  |           |     |     +**Nosenko2013_ribo_11057_Molgula_tectiformis_30286_KOG0004
+|         |           |  |           |     +-----| (99)
+|         |           |  |           |           |  +**Nosenko2013_ribo_14615_Molgula_tectiformis_30286_KOG0004
+|         |           |  |           |           +**| (87)
+|         |           |  |           |              +**Philippe2009_Molgula_tectiformis_30286_Gene_0108
+|         |           |  |  +--------| (99)
+|         |           |  |  |        |             +**Nosenko2013_ribo_14615_Sphaeroforma_arctica_72019_KOG0004
+|         |           |  |  |        +-------------| (100)
+|         |           |  |  |                      +**Philippe2009_Sphaeroforma_arctica_72019_Gene_0108
+|         |           |  +**| (90)
+|         |           |     |  +**Nosenko2013_ribo_11057_Tethya_wilhelma_463344_KOG0004
+|         |           |     +--| (95)
+|         |           |        +**Nosenko2013_ribo_14615_Tethya_wilhelma_463344_KOG0004
+|         |        +**| (7)
+|         |        |  |  +**Nosenko2013_ribo_11057_Ephydatia_muelleri_6052_KOG0004
+|         |        |  +**| (35)
+|         |        |     +**Nosenko2013_ribo_11057_Lubomirskia_baicalensis_289074_KOG0004
+|         |     +**| (8)
+|         |     |  +**Nosenko2013_ribo_14615_Ephydatia_muelleri_6052_KOG0004
+|         |  +**| (8)
+|         |  |  +**Nosenko2013_ribo_14615_Lubomirskia_baicalensis_289074_KOG0004
+|         +**| (25)
+|            +**Philippe2009_Ephydatia_muelleri_6052_Gene_0108
+|
+|  +**Nosenko2013_ribo_14615_Amphimedon_queenslandica_400682_KOG0004
++**| (93)
+   +**Philippe2009_Amphimedon_queenslandica_400682_Gene_0108
+
+Tree in newick format:
+
+(Nosenko2013_ribo_11057_Amphimedon_queenslandica_400682_KOG0004:0.0000021389,(((Nosenko2013_ribo_11057_Asbestopluma_sp_68560_KOG0004:0.0000025933,Nosenko2013_ribo_14615_Asbestopluma_sp_68560_KOG0004:0.0000027823)100:0.062249,(Nosenko2013_ribo_11057_Suberites_domuncula_55567_KOG0004:0.0000024537,(Nosenko2013_ribo_14615_Suberites_domuncula_55567_KOG0004:0.0000020619,Philippe2009_Suberites_domuncula_55567_Gene_0108:0.0000020619)44:0.000002)96:0.029300)97:0.032624,((((((Nosenko2013_ribo_11057_Carteriospongia_foliascens_593584_KOG0004:0.0000020167,(Nosenko2013_ribo_14615_Carteriospongia_foliascens_593584_KOG0004:0.0000020619,Philippe2009_Carteriospongia_foliascens_593584_Gene_0108:0.0000024199)93:0.000002)100:0.163889,(((((((((((((((Nosenko2013_ribo_11057_Pachydictyum_globosum_348075_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Pachydictyum_globosum_348075_KOG0004:0.0000020619)100:0.019023,(Nosenko2013_ribo_14615_Danio_rerio_7955_KOG0004:0.0000020619,Philippe2009_Danio_rerio_7955_Gene_0108:0.0000028481)67:0.000002)66:0.000002,Nosenko2013_ribo_11057_Danio_rerio_7955_KOG0004:0.0000027738)98:0.093918,(Nosenko2013_ribo_14615_Euprymna_scolopes_6613_KOG0004:0.0000022374,Philippe2009_Euprymna_scolopes_6613_Gene_0108:0.0000021965)99:0.060491)60:0.017105,((Nosenko2013_ribo_11057_Capitella_teleta_283909_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Capitella_teleta_283909_KOG0004:0.0000020619)81:0.000002,Philippe2009_Capitella_teleta_283909_Gene_0108:0.0000020619)94:0.015172)55:0.018591,(((Nosenko2013_ribo_11057_Helobdella_robusta_6412_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Helobdella_robusta_6412_KOG0004:0.0000020619)54:0.000002,Philippe2009_Helobdella_robusta_6412_Gene_0108:0.0000020619)100:0.106233,(Nosenko2013_ribo_14615_Xenoturbella_bocki_242395_KOG0004:0.0000020619,Philippe2009_Xenoturbella_bocki_242395_Gene_0108:0.0000020619)98:0.045830)21:0.006071)3:0.000003,((((((((((Nosenko2013_ribo_11057_Crateromorpha_meyeri_472232_KOG0004:0.0000029049,Nosenko2013_ribo_14615_Crateromorpha_meyeri_472232_KOG0004:0.0000020018)100:0.061646,(Nosenko2013_ribo_11057_Oopsacas_minuta_111878_KOG0004:0.0000021051,(Nosenko2013_ribo_14615_Oopsacas_minuta_111878_KOG0004:0.0000020619,Philippe2009_Oopsacas_minuta_111878_Gene_0108:0.0000020619)84:0.000002)89:0.000003)100:0.182977,(((Nosenko2013_ribo_11057_Monosiga_brevicollis_81824_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Monosiga_brevicollis_81824_KOG0004:0.0000020619)76:0.000002,Philippe2009_Monosiga_brevicollis_81824_Gene_0108:0.0000020619)95:0.079537,(Nosenko2013_ribo_11057_Proterospongia_sp_218847_KOG0004:0.0000020619,(Nosenko2013_ribo_14615_Proterospongia_sp_218847_KOG0004:0.0000020619,Philippe2009_Proterospongia_sp_218847_Gene_0108:0.0000020619)87:0.000002)100:0.248589)94:0.115531)91:0.035854,(((Nosenko2013_ribo_11057_Pleurobrachia_pileus_140457_KOG0004:0.0000020827,Nosenko2013_ribo_14615_Pleurobrachia_pileus_140457_KOG0004:0.0000028620)60:0.000003,Philippe2009_Pleurobrachia_pileus_140457_Gene_0108:0.0000023474)98:0.040632,((Nosenko2013_ribo_11057_Beroe_sp_10199_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Beroe_sp_10199_KOG0004:0.0000023747)90:0.000002,(((Nosenko2013_ribo_11057_Mnemiopsis_leidyi_27923_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Mnemiopsis_leidyi_27923_KOG0004:0.0000020619)91:0.000002,Philippe2009_Mnemiopsis_leidyi_27923_Gene_0108:0.0000021339)99:0.018179,((Nosenko2013_ribo_11057_Mertensiid_sp_140499_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Mertensiid_sp_140499_KOG0004:0.0000020619)88:0.000002,Philippe2009_Mertensiid_sp_140499_Gene_0108:0.0000020619)99:0.038412)92:0.020218)99:0.032710)99:0.187787)49:0.024780,((((Nosenko2013_ribo_11057_Oscarella_sp_121493_KOG0004:0.0000020619,(Nosenko2013_ribo_14615_Oscarella_carmela_386100_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Oscarella_sp_121493_KOG0004:0.0000020619)90:0.000002)67:0.000003,Philippe2009_Oscarella_carmela_386100_Gene_0108:0.0000020709)86:0.029696,Nosenko2013_ribo_11057_Sycon_ciliatum_27933_KOG0004:0.0915039831)39:0.011402,(((Nosenko2013_ribo_14615_Capsaspora_owczarzaki_192875_KOG0004:0.0000021929,Philippe2009_Capsaspora_owczarzaki_192875_Gene_0108:0.0000021041)100:0.122397,Nosenko2013_ribo_14615_Scutigera_coleoptrata_29022_KOG0004:0.0000020185)32:0.000002,Philippe2009_Scutigera_coleoptrata_29022_Gene_0108:0.0000022295)40:0.000002)33:0.014330)25:0.000002,(((Nosenko2013_ribo_11057_Nasonia_vitripennis_7425_KOG0004:0.0000029581,Nosenko2013_ribo_14615_Nasonia_vitripennis_7425_KOG0004:0.0000020619)81:0.000002,Philippe2009_Nasonia_vitripennis_7425_Gene_0108:0.0000020619)81:0.000002,(Nosenko2013_ribo_14615_Pediculus_humanus_capitis_121226_KOG0004:0.0000021466,Philippe2009_Pediculus_humanus_121225_Gene_0108:0.0000022326)99:0.035110)100:0.262427)52:0.020813,((((((Nosenko2013_ribo_11057_Leucetta_chagosensis_185688_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Leucetta_chagosensis_185688_KOG0004:0.0000020619)84:0.000003,Philippe2009_Leucetta_chagosensis_185688_Gene_0108:0.0000023830)100:0.036275,((Nosenko2013_ribo_11057_Ixodes_scapularis_6945_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Ixodes_scapularis_6945_KOG0004:0.0000029222)72:0.000002,Philippe2009_Ixodes_scapularis_6945_Gene_0108:0.0000021326)82:0.000003)85:0.034388,((Nosenko2013_ribo_14615_Anoplodactylus_eroticus_488521_KOG0004:0.0000020619,Philippe2009_Anoplodactylus_eroticus_488521_Gene_0108:0.0000020619)95:0.000002,Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0108:0.0911621445)36:0.034712)36:0.016541,((Nosenko2013_ribo_11057_Sycon_raphanus_56443_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Sycon_raphanus_56443_KOG0004:0.0000020619)69:0.000003,Philippe2009_Sycon_raphanus_56443_Gene_0108:0.0000025861)99:0.055179)11:0.000002,(Nosenko2013_ribo_14615_Strongylocentrotus_purpuratus_7668_KOG0004:0.0000029956,Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0108:0.0000022320)61:0.000003)10:0.000002)34:0.015788,((Nosenko2013_ribo_11057_Branchiostoma_floridae_7739_KOG0004:0.0000024055,Nosenko2013_ribo_14615_Branchiostoma_floridae_7739_KOG0004:0.0000020619)54:0.000003,Philippe2009_Branchiostoma_floridae_7739_Gene_0108:0.0000020619)99:0.035678)13:0.017658,(Nosenko2013_ribo_11057_Petromyzon_marinus_7757_KOG0004:0.0000020619,(Nosenko2013_ribo_14615_Petromyzon_marinus_7757_KOG0004:0.0000020948,Philippe2009_Petromyzon_marinus_7757_Gene_0108:0.0000029254)65:0.000002)99:0.052171)6:0.000002,((((((((((((((Nosenko2013_ribo_11057_Clytia_hemisphaerica_252671_KOG0004:0.0000024679,(Nosenko2013_ribo_14615_Clytia_hemisphaerica_252671_KOG0004:0.0000020619,Philippe2009_Clytia_hemisphaerica_252671_Gene_0108:0.0000020619)79:0.000002)96:0.081900,(((Nosenko2013_ribo_11057_Hydra_magnipapillata_6087_KOG0004:0.0000020619,(Nosenko2013_ribo_14615_Hydra_magnipapillata_6087_KOG0004:0.0000020619,Philippe2009_Hydra_magnipapillata_6087_Gene_0108:0.0000020619)91:0.000002)72:0.000002,Nosenko2013_ribo_11057_Hydra_vulgaris_6087_KOG0004:0.0000020619)41:0.000003,Nosenko2013_ribo_14615_Hydra_vulgaris_6087_KOG0004:0.0000020619)100:0.306128)68:0.025048,Nosenko2013_ribo_11057_Hydractinia_echinata_35630_KOG0004:0.0000020976)23:0.000002,((((Nosenko2013_ribo_11057_Acropora_hyacinthus_55974_KOG0004:0.0000020619,Nosenko2013_ribo_11057_Acropora_millepora_45264_KOG0004:0.0000020619)81:0.000002,(Nosenko2013_ribo_14615_Acropora_hyacinthus_55974_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Acropora_millepora_45264_KOG0004:0.0000020619)79:0.000002)72:0.000003,Philippe2009_Acropora_millepora_45264_Gene_0108:0.0000020619)89:0.016508,(Philippe2009_Hydractinia_echinata_35630_Gene_0108:0.0000020619,Philippe2009_Podocoryne_carnea_6096_Gene_0108:0.0000020619)65:0.000003)52:0.000002)4:0.000003,Nosenko2013_ribo_14615_Podocoryna_carnea_6096_KOG0004:0.0000020619)3:0.000002,Nosenko2013_ribo_14615_Hydractinia_echinata_35630_KOG0004:0.0000020619)12:0.000003,Nosenko2013_ribo_11057_Podocoryna_carnea_6096_KOG0004:0.0000020619)80:0.033713,(Nosenko2013_ribo_11057_Porites_46719_KOG0004:0.0000024117,Nosenko2013_ribo_14615_Porites_46719_KOG0004:0.0000024074)100:0.126598)59:0.000002,Nosenko2013_ribo_14615_Nematostella_vectensis_45351_KOG0004:0.0000029537)23:0.000002,Nosenko2013_ribo_14615_Montastraea_faveolata_48498_KOG0004:0.0000020619)40:0.000002,(Philippe2009_Montastraea_faveolata_48498_Gene_0108:0.0000020619,Philippe2009_Nematostella_vectensis_45351_Gene_0108:0.0000020619)77:0.000002)42:0.016034,Nosenko2013_ribo_11057_Nematostella_vectensis_45351_KOG0004:0.0000020619)26:0.000002,Nosenko2013_ribo_11057_Metridium_senile_6116_KOG0004:0.0000020498)57:0.000002,(Nosenko2013_ribo_14615_Metridium_senile_6116_KOG0004:0.0000021083,Philippe2009_Metridium_senile_6116_Gene_0108:0.0000026286)42:0.000003)75:0.017315)10:0.016853)6:0.000002,Philippe2009_Crassostrea_gigas_29159_Gene_0108:0.0000020619)5:0.000003,Nosenko2013_ribo_14615_Crassostrea_gigas_29159_KOG0004:0.0000022180)2:0.000002,((((Nosenko2013_ribo_11057_Saccoglossus_kowalevskii_10224_KOG0004:0.0000020619,Nosenko2013_ribo_11057_Tubifex_tubifex_6386_KOG0004:0.0000020619)84:0.000002,(Nosenko2013_ribo_14615_Saccoglossus_kowalevskii_10224_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Tubifex_tubifex_6386_KOG0004:0.0000020619)73:0.000002)66:0.000003,(Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0108:0.0000020619,Philippe2009_Tubifex_tubifex_6386_Gene_0108:0.0000024157)81:0.000002)58:0.000003,((Nosenko2013_ribo_11057_Aplysia_californica_6500_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Aplysia_californica_6500_KOG0004:0.0000020619)77:0.000003,Philippe2009_Aplysia_californica_6500_Gene_0108:0.0000020496)99:0.037727)43:0.016801)29:0.000002,Nosenko2013_ribo_11057_Crassostrea_gigas_29159_KOG0004:0.0000026486)49:0.040347,(((((((Nosenko2013_ribo_11057_Daphnia_pulex_6669_KOG0004:0.0000022162,(Nosenko2013_ribo_14615_Daphnia_pulex_6669_KOG0004:0.0000020619,Philippe2009_Daphnia_pulex_6669_Gene_0108:0.0000020619)80:0.000002)100:0.208199,(Nosenko2013_ribo_11057_Monosiga_ovata_81526_KOG0004:0.0000020619,(Nosenko2013_ribo_14615_Monosiga_ovata_81526_KOG0004:0.0000020619,Philippe2009_Monosiga_ovata_81526_Gene_0108:0.0000020619)71:0.000002)98:0.094333)61:0.117894,((Nosenko2013_ribo_14615_Allomyces_macrogynus_28583_KOG0004:0.0000020272,Philippe2009_Allomyces_macrogynus_28583_Gene_0108:0.0000021874)100:0.437127,(Nosenko2013_ribo_14615_Amoebidium_parasiticum_4881_KOG0004:0.0000020619,Philippe2009_Amoebidium_parasiticum_4881_Gene_0108:0.0000024668)99:0.112203)66:0.007201)31:0.031163,((Nosenko2013_ribo_14615_Batrachochytrium_dendrobatidis_109871_KOG0004:0.0000026040,Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0108:0.0000023143)100:0.187902,(Nosenko2013_ribo_14615_Spizellomyces_punctatus_109760_KOG0004:0.0000027667,Philippe2009_Spizellomyces_punctatus_109760_Gene_0108:0.0000026020)98:0.024399)98:0.114879)33:0.028491,((Nosenko2013_ribo_14615_Cyanea_capillata_27804_KOG0004:0.0000024404,Philippe2009_Cyanea_capillata_27804_Gene_0108:0.0000020711)99:0.051958,((Nosenko2013_ribo_14615_Phycomyces_blakesleeanus_4837_KOG0004:0.0000020619,Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0108:0.0000026310)100:0.095103,Philippe2009_Rhizopus_oryzae_64495_Gene_0108:0.0000021392)99:0.177677)73:0.031550)35:0.005076,((Nosenko2013_ribo_11057_Trichoplax_sp_H4_10227_KOG0004:0.0000020619,(Nosenko2013_ribo_14615_Trichoplax_sp_H4_10227_KOG0004:0.0000020619,Philippe2009_Trichoplax_adhaerens_10228_Gene_0108:0.0000020619)65:0.000002)99:0.090904,(Nosenko2013_ribo_11057_Trichoplax_adhaerens_10228_KOG0004:0.0000020859,Nosenko2013_ribo_14615_Trichoplax_adhaerens_10228_KOG0004:0.0000027439)98:0.031109)96:0.060804)47:0.043467,(Nosenko2013_ribo_14615_Pedicellina_cernua_43123_KOG0004:0.0000021562,Philippe2009_Pedicellina_cernua_43123_Gene_0108:0.0000020445)99:0.094147)45:0.005411)52:0.019037,(((Nosenko2013_ribo_11057_Ciona_intestinalis_7719_KOG0004:0.0000023929,Nosenko2013_ribo_14615_Ciona_intestinalis_7719_KOG0004:0.0000020876)100:0.038763,Philippe2009_Ciona_savignyi_51511_Gene_0108:0.0000023518)93:0.022708,(Nosenko2013_ribo_11057_Molgula_tectiformis_30286_KOG0004:0.0000020146,(Nosenko2013_ribo_14615_Molgula_tectiformis_30286_KOG0004:0.0000020619,Philippe2009_Molgula_tectiformis_30286_Gene_0108:0.0000020619)87:0.000003)99:0.093010)90:0.045663)56:0.000003,(Nosenko2013_ribo_14615_Sphaeroforma_arctica_72019_KOG0004:0.0000020619,Philippe2009_Sphaeroforma_arctica_72019_Gene_0108:0.0000020619)100:0.222159)99:0.139525,(Nosenko2013_ribo_11057_Tethya_wilhelma_463344_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Tethya_wilhelma_463344_KOG0004:0.0000020619)95:0.021357)90:0.000002)34:0.020303,(Nosenko2013_ribo_11057_Ephydatia_muelleri_6052_KOG0004:0.0000020619,Nosenko2013_ribo_11057_Lubomirskia_baicalensis_289074_KOG0004:0.0000020619)35:0.000003)7:0.000002,Nosenko2013_ribo_14615_Ephydatia_muelleri_6052_KOG0004:0.0000024007)8:0.000002,Nosenko2013_ribo_14615_Lubomirskia_baicalensis_289074_KOG0004:0.0000020619)8:0.000002,Philippe2009_Ephydatia_muelleri_6052_Gene_0108:0.0000020619)25:0.000002)100:0.162235,(Nosenko2013_ribo_14615_Amphimedon_queenslandica_400682_KOG0004:0.0000020619,Philippe2009_Amphimedon_queenslandica_400682_Gene_0108:0.0000020619)93:0.000002);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -1553.611181
+Robinson-Foulds distance between ML tree and consensus tree: 42
+
+Branches with bootstrap support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--Nosenko2013_ribo_11057_Amphimedon_queenslandica_400682_KOG0004
+|
+|                         +--Nosenko2013_ribo_11057_Asbestopluma_sp_68560_KOG0004
+|                     +---| (100)
+|                     |   +--Nosenko2013_ribo_14615_Asbestopluma_sp_68560_KOG0004
+|                  +--| (97)
+|                  |  |     +--Nosenko2013_ribo_11057_Suberites_domuncula_55567_KOG0004
+|                  |  |  +**| (53)
+|                  |  |  |  +--Nosenko2013_ribo_14615_Suberites_domuncula_55567_KOG0004
+|                  |  +--| (96)
+|                  |     +--Philippe2009_Suberites_domuncula_55567_Gene_0108
+|               +--| (49)
+|               |  |         +--Nosenko2013_ribo_11057_Carteriospongia_foliascens_593584_KOG0004
+|               |  +---------| (100)
+|               |            |  +--Nosenko2013_ribo_14615_Carteriospongia_foliascens_593584_KOG0004
+|               |            +**| (93)
+|               |               +--Philippe2009_Carteriospongia_foliascens_593584_Gene_0108
+|            +--| (31)
+|            |  |  +--Nosenko2013_ribo_11057_Ephydatia_muelleri_6052_KOG0004
+|            |  +**| (35)
+|            |     +--Nosenko2013_ribo_11057_Lubomirskia_baicalensis_289074_KOG0004
+|         +**| (37)
+|         |  |     +--Nosenko2013_ribo_14615_Ephydatia_muelleri_6052_KOG0004
+|         |  |  +**| (43)
+|         |  |  |  +--Nosenko2013_ribo_14615_Lubomirskia_baicalensis_289074_KOG0004
+|         |  +**| (24)
+|         |     +--Philippe2009_Ephydatia_muelleri_6052_Gene_0108
++---------| (100)
+|         |                                                     +--Nosenko2013_ribo_11057_Pachydictyum_globosum_348075_KOG0004
+|         |                                                  +--| (100)
+|         |                                                  |  +--Nosenko2013_ribo_14615_Pachydictyum_globosum_348075_KOG0004
+|         |                                               +**| (66)
+|         |                                               |  |  +--Nosenko2013_ribo_14615_Danio_rerio_7955_KOG0004
+|         |                                               |  +**| (67)
+|         |                                               |     +--Philippe2009_Danio_rerio_7955_Gene_0108
+|         |                                         +-----| (98)
+|         |                                         |     +--Nosenko2013_ribo_11057_Danio_rerio_7955_KOG0004
+|         |                                      +--| (60)
+|         |                                      |  |   +--Nosenko2013_ribo_14615_Euprymna_scolopes_6613_KOG0004
+|         |                                      |  +---| (99)
+|         |                                      |      +--Philippe2009_Euprymna_scolopes_6613_Gene_0108
+|         |                                   +--| (55)
+|         |                                   |  |     +--Nosenko2013_ribo_11057_Capitella_teleta_283909_KOG0004
+|         |                                   |  |  +**| (81)
+|         |                                   |  |  |  +--Nosenko2013_ribo_14615_Capitella_teleta_283909_KOG0004
+|         |                                   |  +--| (94)
+|         |                                   |     +--Philippe2009_Capitella_teleta_283909_Gene_0108
+|         |                                +**| (14)
+|         |                                |  |                                       +--Nosenko2013_ribo_11057_Crateromorpha_meyeri_472232_KOG0004
+|         |                                |  |                                   +---| (100)
+|         |                                |  |                                   |   +--Nosenko2013_ribo_14615_Crateromorpha_meyeri_472232_KOG0004
+|         |                                |  |                       +-----------| (100)
+|         |                                |  |                       |           |  +--Nosenko2013_ribo_11057_Oopsacas_minuta_111878_KOG0004
+|         |                                |  |                       |           +--| (89)
+|         |                                |  |                       |              |  +--Nosenko2013_ribo_14615_Oopsacas_minuta_111878_KOG0004
+|         |                                |  |                       |              +**| (84)
+|         |                                |  |                       |                 +--Philippe2009_Oopsacas_minuta_111878_Gene_0108
+|         |                                |  |                    +--| (91)
+|         |                                |  |                    |  |              +--Nosenko2013_ribo_11057_Monosiga_brevicollis_81824_KOG0004
+|         |                                |  |                    |  |           +**| (76)
+|         |                                |  |                    |  |           |  +--Nosenko2013_ribo_14615_Monosiga_brevicollis_81824_KOG0004
+|         |                                |  |                    |  |      +----| (95)
+|         |                                |  |                    |  |      |    +--Philippe2009_Monosiga_brevicollis_81824_Gene_0108
+|         |                                |  |                    |  +------| (94)
+|         |                                |  |                    |         |               +--Nosenko2013_ribo_11057_Proterospongia_sp_218847_KOG0004
+|         |                                |  |                    |         +---------------| (100)
+|         |                                |  |                    |                         |  +--Nosenko2013_ribo_14615_Proterospongia_sp_218847_KOG0004
+|         |                                |  |                    |                         +--| (87)
+|         |                                |  |                    |                            +--Philippe2009_Proterospongia_sp_218847_Gene_0108
+|         |                                |  |                 +--| (49)
+|         |                                |  |                 |  |                 +--Nosenko2013_ribo_11057_Pleurobrachia_pileus_140457_KOG0004
+|         |                                |  |                 |  |              +**| (60)
+|         |                                |  |                 |  |              |  +--Nosenko2013_ribo_14615_Pleurobrachia_pileus_140457_KOG0004
+|         |                                |  |                 |  |           +--| (98)
+|         |                                |  |                 |  |           |  +--Philippe2009_Pleurobrachia_pileus_140457_Gene_0108
+|         |                                |  |                 |  +-----------| (99)
+|         |                                |  |                 |              |     +--Nosenko2013_ribo_11057_Beroe_sp_10199_KOG0004
+|         |                                |  |                 |              |  +**| (90)
+|         |                                |  |                 |              |  |  +--Nosenko2013_ribo_14615_Beroe_sp_10199_KOG0004
+|         |                                |  |                 |              +--| (99)
+|         |                                |  |                 |                 |        +--Nosenko2013_ribo_11057_Mnemiopsis_leidyi_27923_KOG0004
+|         |                                |  |                 |                 |     +**| (91)
+|         |                                |  |                 |                 |     |  +--Nosenko2013_ribo_14615_Mnemiopsis_leidyi_27923_KOG0004
+|         |                                |  |                 |                 |  +--| (99)
+|         |                                |  |                 |                 |  |  +--Philippe2009_Mnemiopsis_leidyi_27923_Gene_0108
+|         |                                |  |                 |                 +--| (92)
+|         |                                |  |                 |                    |     +--Nosenko2013_ribo_11057_Mertensiid_sp_140499_KOG0004
+|         |                                |  |                 |                    |  +**| (88)
+|         |                                |  |                 |                    |  |  +--Nosenko2013_ribo_14615_Mertensiid_sp_140499_KOG0004
+|         |                                |  |                 |                    +--| (99)
+|         |                                |  |                 |                       +--Philippe2009_Mertensiid_sp_140499_Gene_0108
+|         |                                |  |              +**| (25)
+|         |                                |  |              |  |           +--Nosenko2013_ribo_11057_Oscarella_sp_121493_KOG0004
+|         |                                |  |              |  |        +**| (67)
+|         |                                |  |              |  |        |  |  +--Nosenko2013_ribo_14615_Oscarella_carmela_386100_KOG0004
+|         |                                |  |              |  |        |  +**| (90)
+|         |                                |  |              |  |        |     +--Nosenko2013_ribo_14615_Oscarella_sp_121493_KOG0004
+|         |                                |  |              |  |     +--| (86)
+|         |                                |  |              |  |     |  +--Philippe2009_Oscarella_carmela_386100_Gene_0108
+|         |                                |  |              |  |  +--| (39)
+|         |                                |  |              |  |  |  +-----Nosenko2013_ribo_11057_Sycon_ciliatum_27933_KOG0004
+|         |                                |  |              |  +--| (33)
+|         |                                |  |              |     |          +--Nosenko2013_ribo_14615_Capsaspora_owczarzaki_192875_KOG0004
+|         |                                |  |              |     |  +-------| (100)
+|         |                                |  |              |     |  |       +--Philippe2009_Capsaspora_owczarzaki_192875_Gene_0108
+|         |                                |  |              |     +**| (40)
+|         |                                |  |              |        |  +--Nosenko2013_ribo_14615_Scutigera_coleoptrata_29022_KOG0004
+|         |                                |  |              |        +**| (43)
+|         |                                |  |              |           +--Philippe2009_Scutigera_coleoptrata_29022_Gene_0108
+|         |                                |  |           +--| (52)
+|         |                                |  |           |  |                      +--Nosenko2013_ribo_11057_Nasonia_vitripennis_7425_KOG0004
+|         |                                |  |           |  |                   +**| (81)
+|         |                                |  |           |  |                   |  +--Nosenko2013_ribo_14615_Nasonia_vitripennis_7425_KOG0004
+|         |                                |  |           |  |                +**| (81)
+|         |                                |  |           |  |                |  +--Philippe2009_Nasonia_vitripennis_7425_Gene_0108
+|         |                                |  |           |  +----------------| (100)
+|         |                                |  |           |                   |  +--Nosenko2013_ribo_14615_Pediculus_humanus_capitis_121226_KOG0004
+|         |                                |  |           |                   +--| (99)
+|         |                                |  |           |                      +--Philippe2009_Pediculus_humanus_121225_Gene_0108
+|         |                                |  |        +**| (21)
+|         |                                |  |        |  |  +--Nosenko2013_ribo_14615_Strongylocentrotus_purpuratus_7668_KOG0004
+|         |                                |  |        |  +**| (61)
+|         |                                |  |        |     +--Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0108
+|         |                                |  |     +--| (31)
+|         |                                |  |     |  |     +--Nosenko2013_ribo_11057_Sycon_raphanus_56443_KOG0004
+|         |                                |  |     |  |  +**| (69)
+|         |                                |  |     |  |  |  +--Nosenko2013_ribo_14615_Sycon_raphanus_56443_KOG0004
+|         |                                |  |     |  +--| (99)
+|         |                                |  |     |     +--Philippe2009_Sycon_raphanus_56443_Gene_0108
+|         |                                |  |  +--| (34)
+|         |                                |  |  |  |           +--Nosenko2013_ribo_11057_Leucetta_chagosensis_185688_KOG0004
+|         |                                |  |  |  |        +**| (84)
+|         |                                |  |  |  |        |  +--Nosenko2013_ribo_14615_Leucetta_chagosensis_185688_KOG0004
+|         |                                |  |  |  |     +--| (100)
+|         |                                |  |  |  |     |  +--Philippe2009_Leucetta_chagosensis_185688_Gene_0108
+|         |                                |  |  |  |  +--| (85)
+|         |                                |  |  |  |  |  |     +--Nosenko2013_ribo_11057_Ixodes_scapularis_6945_KOG0004
+|         |                                |  |  |  |  |  |  +**| (72)
+|         |                                |  |  |  |  |  |  |  +--Nosenko2013_ribo_14615_Ixodes_scapularis_6945_KOG0004
+|         |                                |  |  |  |  |  +**| (82)
+|         |                                |  |  |  |  |     +--Philippe2009_Ixodes_scapularis_6945_Gene_0108
+|         |                                |  |  |  +--| (36)
+|         |                                |  |  |     |     +--Nosenko2013_ribo_14615_Anoplodactylus_eroticus_488521_KOG0004
+|         |                                |  |  |     |  +**| (95)
+|         |                                |  |  |     |  |  +--Philippe2009_Anoplodactylus_eroticus_488521_Gene_0108
+|         |                                |  |  |     +--| (36)
+|         |                                |  |  |        +-----Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0108
+|         |                                |  +--| (24)
+|         |                                |     |           +--Nosenko2013_ribo_11057_Helobdella_robusta_6412_KOG0004
+|         |                                |     |        +**| (54)
+|         |                                |     |        |  +--Nosenko2013_ribo_14615_Helobdella_robusta_6412_KOG0004
+|         |                                |     |  +-----| (100)
+|         |                                |     |  |     +--Philippe2009_Helobdella_robusta_6412_Gene_0108
+|         |                                |     +**| (21)
+|         |                                |        |  +--Nosenko2013_ribo_14615_Xenoturbella_bocki_242395_KOG0004
+|         |                                |        +--| (98)
+|         |                                |           +--Philippe2009_Xenoturbella_bocki_242395_Gene_0108
+|         |                             +**| (9)
+|         |                             |  |           +--Nosenko2013_ribo_11057_Saccoglossus_kowalevskii_10224_KOG0004
+|         |                             |  |        +**| (84)
+|         |                             |  |        |  +--Nosenko2013_ribo_11057_Tubifex_tubifex_6386_KOG0004
+|         |                             |  |     +**| (66)
+|         |                             |  |     |  |  +--Nosenko2013_ribo_14615_Saccoglossus_kowalevskii_10224_KOG0004
+|         |                             |  |     |  +**| (73)
+|         |                             |  |     |     +--Nosenko2013_ribo_14615_Tubifex_tubifex_6386_KOG0004
+|         |                             |  |  +--| (58)
+|         |                             |  |  |  |  +--Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0108
+|         |                             |  |  |  +**| (81)
+|         |                             |  |  |     +--Philippe2009_Tubifex_tubifex_6386_Gene_0108
+|         |                             |  +--| (43)
+|         |                             |     |     +--Nosenko2013_ribo_11057_Aplysia_californica_6500_KOG0004
+|         |                             |     |  +**| (77)
+|         |                             |     |  |  +--Nosenko2013_ribo_14615_Aplysia_californica_6500_KOG0004
+|         |                             |     +--| (99)
+|         |                             |        +--Philippe2009_Aplysia_californica_6500_Gene_0108
+|         |                          +**| (10)
+|         |                          |  +--Philippe2009_Crassostrea_gigas_29159_Gene_0108
+|         |                       +**| (33)
+|         |                       |  |                                           +--Nosenko2013_ribo_11057_Clytia_hemisphaerica_252671_KOG0004
+|         |                       |  |                                      +----| (96)
+|         |                       |  |                                      |    |  +--Nosenko2013_ribo_14615_Clytia_hemisphaerica_252671_KOG0004
+|         |                       |  |                                      |    +**| (79)
+|         |                       |  |                                      |       +--Philippe2009_Clytia_hemisphaerica_252671_Gene_0108
+|         |                       |  |                                   +--| (68)
+|         |                       |  |                                   |  |                         +--Nosenko2013_ribo_11057_Hydra_magnipapillata_6087_KOG0004
+|         |                       |  |                                   |  |                      +--| (72)
+|         |                       |  |                                   |  |                      |  |  +--Nosenko2013_ribo_14615_Hydra_magnipapillata_6087_KOG0004
+|         |                       |  |                                   |  |                      |  +--| (91)
+|         |                       |  |                                   |  |                      |     +--Philippe2009_Hydra_magnipapillata_6087_Gene_0108
+|         |                       |  |                                   |  |                   +--| (49)
+|         |                       |  |                                   |  |                   |  +--Nosenko2013_ribo_14615_Hydra_vulgaris_6087_KOG0004
+|         |                       |  |                                   |  +-------------------| (100)
+|         |                       |  |                                   |                      +--Nosenko2013_ribo_11057_Hydra_vulgaris_6087_KOG0004
+|         |                       |  |                                +**| (23)
+|         |                       |  |                                |  +--Nosenko2013_ribo_11057_Hydractinia_echinata_35630_KOG0004
+|         |                       |  |                             +--| (23)
+|         |                       |  |                             |  +--Nosenko2013_ribo_11057_Podocoryna_carnea_6096_KOG0004
+|         |                       |  |                          +**| (15)
+|         |                       |  |                          |  |           +--Nosenko2013_ribo_11057_Acropora_hyacinthus_55974_KOG0004
+|         |                       |  |                          |  |        +**| (81)
+|         |                       |  |                          |  |        |  +--Nosenko2013_ribo_11057_Acropora_millepora_45264_KOG0004
+|         |                       |  |                          |  |     +**| (72)
+|         |                       |  |                          |  |     |  |  +--Nosenko2013_ribo_14615_Acropora_hyacinthus_55974_KOG0004
+|         |                       |  |                          |  |     |  +**| (79)
+|         |                       |  |                          |  |     |     +--Nosenko2013_ribo_14615_Acropora_millepora_45264_KOG0004
+|         |                       |  |                          |  |  +--| (89)
+|         |                       |  |                          |  |  |  +--Philippe2009_Acropora_millepora_45264_Gene_0108
+|         |                       |  |                          |  +**| (52)
+|         |                       |  |                          |     |  +--Philippe2009_Hydractinia_echinata_35630_Gene_0108
+|         |                       |  |                          |     +**| (65)
+|         |                       |  |                          |        +--Philippe2009_Podocoryne_carnea_6096_Gene_0108
+|         |                       |  |                       +--| (80)
+|         |                       |  |                       |  |  +--Nosenko2013_ribo_14615_Hydractinia_echinata_35630_KOG0004
+|         |                       |  |                       |  +**| (16)
+|         |                       |  |                       |     +--Nosenko2013_ribo_14615_Podocoryna_carnea_6096_KOG0004
+|         |                       |  |                    +**| (59)
+|         |                       |  |                    |  |       +--Nosenko2013_ribo_11057_Porites_46719_KOG0004
+|         |                       |  |                    |  +-------| (100)
+|         |                       |  |                    |          +--Nosenko2013_ribo_14615_Porites_46719_KOG0004
+|         |                       |  |                 +**| (23)
+|         |                       |  |                 |  +--Nosenko2013_ribo_14615_Nematostella_vectensis_45351_KOG0004
+|         |                       |  |              +**| (40)
+|         |                       |  |              |  +--Nosenko2013_ribo_14615_Montastraea_faveolata_48498_KOG0004
+|         |                       |  |           +**| (42)
+|         |                       |  |           |  |  +--Philippe2009_Montastraea_faveolata_48498_Gene_0108
+|         |                       |  |           |  +**| (77)
+|         |                       |  |           |     +--Philippe2009_Nematostella_vectensis_45351_Gene_0108
+|         |                       |  |        +**| (36)
+|         |                       |  |        |  +--Nosenko2013_ribo_11057_Metridium_senile_6116_KOG0004
+|         |                       |  |     +--| (57)
+|         |                       |  |     |  +--Nosenko2013_ribo_11057_Nematostella_vectensis_45351_KOG0004
+|         |                       |  |  +--| (75)
+|         |                       |  |  |  |  +--Nosenko2013_ribo_14615_Metridium_senile_6116_KOG0004
+|         |                       |  |  |  +**| (42)
+|         |                       |  |  |     +--Philippe2009_Metridium_senile_6116_Gene_0108
+|         |                       |  +--| (34)
+|         |                       |     |        +--Nosenko2013_ribo_11057_Branchiostoma_floridae_7739_KOG0004
+|         |                       |     |     +**| (54)
+|         |                       |     |     |  +--Nosenko2013_ribo_14615_Branchiostoma_floridae_7739_KOG0004
+|         |                       |     |  +--| (99)
+|         |                       |     |  |  +--Philippe2009_Branchiostoma_floridae_7739_Gene_0108
+|         |                       |     +**| (22)
+|         |                       |        |  +--Nosenko2013_ribo_11057_Petromyzon_marinus_7757_KOG0004
+|         |                       |        +--| (99)
+|         |                       |           |  +--Nosenko2013_ribo_14615_Petromyzon_marinus_7757_KOG0004
+|         |                       |           +**| (65)
+|         |                       |              +--Philippe2009_Petromyzon_marinus_7757_Gene_0108
+|         |                    +**| (29)
+|         |                    |  +--Nosenko2013_ribo_14615_Crassostrea_gigas_29159_KOG0004
+|         |                 +--| (49)
+|         |                 |  +--Nosenko2013_ribo_11057_Crassostrea_gigas_29159_KOG0004
+|         |              +--| (52)
+|         |              |  |                                  +--Nosenko2013_ribo_11057_Daphnia_pulex_6669_KOG0004
+|         |              |  |                     +------------| (100)
+|         |              |  |                     |            |  +--Nosenko2013_ribo_14615_Daphnia_pulex_6669_KOG0004
+|         |              |  |                     |            +**| (80)
+|         |              |  |                     |               +--Philippe2009_Daphnia_pulex_6669_Gene_0108
+|         |              |  |              +------| (61)
+|         |              |  |              |      |     +--Nosenko2013_ribo_11057_Monosiga_ovata_81526_KOG0004
+|         |              |  |              |      +-----| (98)
+|         |              |  |              |            |  +--Nosenko2013_ribo_14615_Monosiga_ovata_81526_KOG0004
+|         |              |  |              |            +**| (71)
+|         |              |  |              |               +--Philippe2009_Monosiga_ovata_81526_Gene_0108
+|         |              |  |           +--| (31)
+|         |              |  |           |  |                               +--Nosenko2013_ribo_14615_Allomyces_macrogynus_28583_KOG0004
+|         |              |  |           |  |  +----------------------------| (100)
+|         |              |  |           |  |  |                            +--Philippe2009_Allomyces_macrogynus_28583_Gene_0108
+|         |              |  |           |  +--| (66)
+|         |              |  |           |     |       +--Nosenko2013_ribo_14615_Amoebidium_parasiticum_4881_KOG0004
+|         |              |  |           |     +-------| (99)
+|         |              |  |           |             +--Philippe2009_Amoebidium_parasiticum_4881_Gene_0108
+|         |              |  |        +--| (33)
+|         |              |  |        |  |                  +--Nosenko2013_ribo_14615_Batrachochytrium_dendrobatidis_109871_KOG0004
+|         |              |  |        |  |      +-----------| (100)
+|         |              |  |        |  |      |           +--Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0108
+|         |              |  |        |  +------| (98)
+|         |              |  |        |         |  +--Nosenko2013_ribo_14615_Spizellomyces_punctatus_109760_KOG0004
+|         |              |  |        |         +--| (98)
+|         |              |  |        |            +--Philippe2009_Spizellomyces_punctatus_109760_Gene_0108
+|         |              |  |     +--| (35)
+|         |              |  |     |  |     +--Nosenko2013_ribo_14615_Cyanea_capillata_27804_KOG0004
+|         |              |  |     |  |  +--| (99)
+|         |              |  |     |  |  |  +--Philippe2009_Cyanea_capillata_27804_Gene_0108
+|         |              |  |     |  +--| (73)
+|         |              |  |     |     |                +--Nosenko2013_ribo_14615_Phycomyces_blakesleeanus_4837_KOG0004
+|         |              |  |     |     |          +-----| (100)
+|         |              |  |     |     |          |     +--Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0108
+|         |              |  |     |     +----------| (99)
+|         |              |  |     |                +--Philippe2009_Rhizopus_oryzae_64495_Gene_0108
+|         |              |  |  +--| (47)
+|         |              |  |  |  |         +--Nosenko2013_ribo_11057_Trichoplax_sp_H4_10227_KOG0004
+|         |              |  |  |  |   +-----| (99)
+|         |              |  |  |  |   |     |  +--Nosenko2013_ribo_14615_Trichoplax_sp_H4_10227_KOG0004
+|         |              |  |  |  |   |     +**| (65)
+|         |              |  |  |  |   |        +--Philippe2009_Trichoplax_adhaerens_10228_Gene_0108
+|         |              |  |  |  +---| (96)
+|         |              |  |  |      |  +--Nosenko2013_ribo_11057_Trichoplax_adhaerens_10228_KOG0004
+|         |              |  |  |      +--| (98)
+|         |              |  |  |         +--Nosenko2013_ribo_14615_Trichoplax_adhaerens_10228_KOG0004
+|         |              |  +--| (45)
+|         |              |     |     +--Nosenko2013_ribo_14615_Pedicellina_cernua_43123_KOG0004
+|         |              |     +-----| (99)
+|         |              |           +--Philippe2009_Pedicellina_cernua_43123_Gene_0108
+|         |           +--| (56)
+|         |           |  |        +--Nosenko2013_ribo_11057_Ciona_intestinalis_7719_KOG0004
+|         |           |  |     +--| (100)
+|         |           |  |     |  +--Nosenko2013_ribo_14615_Ciona_intestinalis_7719_KOG0004
+|         |           |  |  +--| (93)
+|         |           |  |  |  +--Philippe2009_Ciona_savignyi_51511_Gene_0108
+|         |           |  +--| (90)
+|         |           |     |     +--Nosenko2013_ribo_11057_Molgula_tectiformis_30286_KOG0004
+|         |           |     +-----| (99)
+|         |           |           |  +--Nosenko2013_ribo_14615_Molgula_tectiformis_30286_KOG0004
+|         |           |           +**| (87)
+|         |           |              +--Philippe2009_Molgula_tectiformis_30286_Gene_0108
+|         |  +--------| (99)
+|         |  |        |             +--Nosenko2013_ribo_14615_Sphaeroforma_arctica_72019_KOG0004
+|         |  |        +-------------| (100)
+|         |  |                      +--Philippe2009_Sphaeroforma_arctica_72019_Gene_0108
+|         +--| (90)
+|            |  +--Nosenko2013_ribo_11057_Tethya_wilhelma_463344_KOG0004
+|            +--| (95)
+|               +--Nosenko2013_ribo_14615_Tethya_wilhelma_463344_KOG0004
+|
+|  +--Nosenko2013_ribo_14615_Amphimedon_queenslandica_400682_KOG0004
++**| (93)
+   +--Philippe2009_Amphimedon_queenslandica_400682_Gene_0108
+
+
+Consensus tree in newick format: 
+
+(Nosenko2013_ribo_11057_Amphimedon_queenslandica_400682_KOG0004:0.0000020619,((((((Nosenko2013_ribo_11057_Asbestopluma_sp_68560_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Asbestopluma_sp_68560_KOG0004:0.0000020619)100:0.0639110000,((Nosenko2013_ribo_11057_Suberites_domuncula_55567_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Suberites_domuncula_55567_KOG0004:0.0000020619)53:0.0000020000,Philippe2009_Suberites_domuncula_55567_Gene_0108:0.0000020619)96:0.0304610000)97:0.0167100000,(Nosenko2013_ribo_11057_Carteriospongia_foliascens_593584_KOG0004:0.0000020619,(Nosenko2013_ribo_14615_Carteriospongia_foliascens_593584_KOG0004:0.0000020619,Philippe2009_Carteriospongia_foliascens_593584_Gene_0108:0.0000020619)93:0.0000020000)100:0.1572980000)49:0.0131820000,(Nosenko2013_ribo_11057_Ephydatia_muelleri_6052_KOG0004:0.0000020619,Nosenko2013_ribo_11057_Lubomirskia_baicalensis_289074_KOG0004:0.0000020619)35:0.0000020000)31:0.0000030000,((Nosenko2013_ribo_14615_Ephydatia_muelleri_6052_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Lubomirskia_baicalensis_289074_KOG0004:0.0000020619)43:0.0000020000,Philippe2009_Ephydatia_muelleri_6052_Gene_0108:0.0000020619)24:0.0000020000)37:0.0000020000,(((((((((((((((Nosenko2013_ribo_11057_Pachydictyum_globosum_348075_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Pachydictyum_globosum_348075_KOG0004:0.0000020619)100:0.0192390000,(Nosenko2013_ribo_14615_Danio_rerio_7955_KOG0004:0.0000020619,Philippe2009_Danio_rerio_7955_Gene_0108:0.0000020619)67:0.0000020000)66:0.0000020000,Nosenko2013_ribo_11057_Danio_rerio_7955_KOG0004:0.0000020619)98:0.0948260000,(Nosenko2013_ribo_14615_Euprymna_scolopes_6613_KOG0004:0.0000020619,Philippe2009_Euprymna_scolopes_6613_Gene_0108:0.0000020619)99:0.0610970000)60:0.0173030000,((Nosenko2013_ribo_11057_Capitella_teleta_283909_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Capitella_teleta_283909_KOG0004:0.0000020619)81:0.0000020000,Philippe2009_Capitella_teleta_283909_Gene_0108:0.0000020619)94:0.0153030000)55:0.0188120000,((((((((((Nosenko2013_ribo_11057_Crateromorpha_meyeri_472232_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Crateromorpha_meyeri_472232_KOG0004:0.0000020619)100:0.0622300000,(Nosenko2013_ribo_11057_Oopsacas_minuta_111878_KOG0004:0.0000020619,(Nosenko2013_ribo_14615_Oopsacas_minuta_111878_KOG0004:0.0000020619,Philippe2009_Oopsacas_minuta_111878_Gene_0108:0.0000020619)84:0.0000020000)89:0.0000030000)100:0.1846280000,(((Nosenko2013_ribo_11057_Monosiga_brevicollis_81824_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Monosiga_brevicollis_81824_KOG0004:0.0000020619)76:0.0000020000,Philippe2009_Monosiga_brevicollis_81824_Gene_0108:0.0000020619)95:0.0796010000,(Nosenko2013_ribo_11057_Proterospongia_sp_218847_KOG0004:0.0000020619,(Nosenko2013_ribo_14615_Proterospongia_sp_218847_KOG0004:0.0000020619,Philippe2009_Proterospongia_sp_218847_Gene_0108:0.0000020619)87:0.0000030000)100:0.2540650000)94:0.1163430000)91:0.0363010000,(((Nosenko2013_ribo_11057_Pleurobrachia_pileus_140457_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Pleurobrachia_pileus_140457_KOG0004:0.0000020619)60:0.0000020000,Philippe2009_Pleurobrachia_pileus_140457_Gene_0108:0.0000020619)98:0.0412790000,((Nosenko2013_ribo_11057_Beroe_sp_10199_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Beroe_sp_10199_KOG0004:0.0000020619)90:0.0000020000,(((Nosenko2013_ribo_11057_Mnemiopsis_leidyi_27923_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Mnemiopsis_leidyi_27923_KOG0004:0.0000020619)91:0.0000020000,Philippe2009_Mnemiopsis_leidyi_27923_Gene_0108:0.0000020619)99:0.0184260000,((Nosenko2013_ribo_11057_Mertensiid_sp_140499_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Mertensiid_sp_140499_KOG0004:0.0000020619)88:0.0000020000,Philippe2009_Mertensiid_sp_140499_Gene_0108:0.0000020619)99:0.0389480000)92:0.0205370000)99:0.0330220000)99:0.1895530000)49:0.0251560000,((((Nosenko2013_ribo_11057_Oscarella_sp_121493_KOG0004:0.0000020619,(Nosenko2013_ribo_14615_Oscarella_carmela_386100_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Oscarella_sp_121493_KOG0004:0.0000020619)90:0.0000020000)67:0.0000020000,Philippe2009_Oscarella_carmela_386100_Gene_0108:0.0000020619)86:0.0301070000,Nosenko2013_ribo_11057_Sycon_ciliatum_27933_KOG0004:0.0915201501)39:0.0116070000,((Nosenko2013_ribo_14615_Capsaspora_owczarzaki_192875_KOG0004:0.0000020619,Philippe2009_Capsaspora_owczarzaki_192875_Gene_0108:0.0000020619)100:0.1237750000,(Nosenko2013_ribo_14615_Scutigera_coleoptrata_29022_KOG0004:0.0000020619,Philippe2009_Scutigera_coleoptrata_29022_Gene_0108:0.0000020619)43:0.0000020000)40:0.0000020000)33:0.0144590000)25:0.0000020000,(((Nosenko2013_ribo_11057_Nasonia_vitripennis_7425_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Nasonia_vitripennis_7425_KOG0004:0.0000020619)81:0.0000020000,Philippe2009_Nasonia_vitripennis_7425_Gene_0108:0.0000020619)81:0.0000020000,(Nosenko2013_ribo_14615_Pediculus_humanus_capitis_121226_KOG0004:0.0000020619,Philippe2009_Pediculus_humanus_121225_Gene_0108:0.0000020619)99:0.0355350000)100:0.2641400000)52:0.0211830000,(Nosenko2013_ribo_14615_Strongylocentrotus_purpuratus_7668_KOG0004:0.0000020619,Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0108:0.0000020619)61:0.0000020000)21:0.0000020000,((Nosenko2013_ribo_11057_Sycon_raphanus_56443_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Sycon_raphanus_56443_KOG0004:0.0000020619)69:0.0000020000,Philippe2009_Sycon_raphanus_56443_Gene_0108:0.0000020619)99:0.0559330000)31:0.0159170000,((((Nosenko2013_ribo_11057_Leucetta_chagosensis_185688_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Leucetta_chagosensis_185688_KOG0004:0.0000020619)84:0.0000020000,Philippe2009_Leucetta_chagosensis_185688_Gene_0108:0.0000020619)100:0.0372350000,((Nosenko2013_ribo_11057_Ixodes_scapularis_6945_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Ixodes_scapularis_6945_KOG0004:0.0000020619)72:0.0000020000,Philippe2009_Ixodes_scapularis_6945_Gene_0108:0.0000020619)82:0.0000020000)85:0.0521750000,((Nosenko2013_ribo_14615_Anoplodactylus_eroticus_488521_KOG0004:0.0000020619,Philippe2009_Anoplodactylus_eroticus_488521_Gene_0108:0.0000020619)95:0.0000020000,Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0108:0.0922356890)36:0.0188880000)36:0.0170850000)34:0.0177950000,(((Nosenko2013_ribo_11057_Helobdella_robusta_6412_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Helobdella_robusta_6412_KOG0004:0.0000020619)54:0.0000020000,Philippe2009_Helobdella_robusta_6412_Gene_0108:0.0000020619)100:0.0944760000,(Nosenko2013_ribo_14615_Xenoturbella_bocki_242395_KOG0004:0.0000020619,Philippe2009_Xenoturbella_bocki_242395_Gene_0108:0.0000020619)98:0.0351690000)21:0.0000020000)24:0.0170890000)14:0.0000020000,((((Nosenko2013_ribo_11057_Saccoglossus_kowalevskii_10224_KOG0004:0.0000020619,Nosenko2013_ribo_11057_Tubifex_tubifex_6386_KOG0004:0.0000020619)84:0.0000020000,(Nosenko2013_ribo_14615_Saccoglossus_kowalevskii_10224_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Tubifex_tubifex_6386_KOG0004:0.0000020619)73:0.0000020000)66:0.0000020000,(Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0108:0.0000020619,Philippe2009_Tubifex_tubifex_6386_Gene_0108:0.0000020619)81:0.0000020000)58:0.0000030000,((Nosenko2013_ribo_11057_Aplysia_californica_6500_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Aplysia_californica_6500_KOG0004:0.0000020619)77:0.0000020000,Philippe2009_Aplysia_californica_6500_Gene_0108:0.0000020619)99:0.0381290000)43:0.0169750000)9:0.0000020000,Philippe2009_Crassostrea_gigas_29159_Gene_0108:0.0000020619)10:0.0000020000,((((((((((((((Nosenko2013_ribo_11057_Clytia_hemisphaerica_252671_KOG0004:0.0000020619,(Nosenko2013_ribo_14615_Clytia_hemisphaerica_252671_KOG0004:0.0000020619,Philippe2009_Clytia_hemisphaerica_252671_Gene_0108:0.0000020619)79:0.0000020000)96:0.0829290000,(((Nosenko2013_ribo_11057_Hydra_magnipapillata_6087_KOG0004:0.0000020619,(Nosenko2013_ribo_14615_Hydra_magnipapillata_6087_KOG0004:0.0000020619,Philippe2009_Hydra_magnipapillata_6087_Gene_0108:0.0000020619)91:0.0000030000)72:0.0000030000,Nosenko2013_ribo_14615_Hydra_vulgaris_6087_KOG0004:0.0000020619)49:0.0000030000,Nosenko2013_ribo_11057_Hydra_vulgaris_6087_KOG0004:0.0000020619)100:0.3098150000)68:0.0249380000,Nosenko2013_ribo_11057_Hydractinia_echinata_35630_KOG0004:0.0000020619)23:0.0000020000,Nosenko2013_ribo_11057_Podocoryna_carnea_6096_KOG0004:0.0000020619)23:0.0000030000,((((Nosenko2013_ribo_11057_Acropora_hyacinthus_55974_KOG0004:0.0000020619,Nosenko2013_ribo_11057_Acropora_millepora_45264_KOG0004:0.0000020619)81:0.0000020000,(Nosenko2013_ribo_14615_Acropora_hyacinthus_55974_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Acropora_millepora_45264_KOG0004:0.0000020619)79:0.0000020000)72:0.0000020000,Philippe2009_Acropora_millepora_45264_Gene_0108:0.0000020619)89:0.0166740000,(Philippe2009_Hydractinia_echinata_35630_Gene_0108:0.0000020619,Philippe2009_Podocoryne_carnea_6096_Gene_0108:0.0000020619)65:0.0000020000)52:0.0000020000)15:0.0000020000,(Nosenko2013_ribo_14615_Hydractinia_echinata_35630_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Podocoryna_carnea_6096_KOG0004:0.0000020619)16:0.0000020000)80:0.0340420000,(Nosenko2013_ribo_11057_Porites_46719_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Porites_46719_KOG0004:0.0000020619)100:0.1276560000)59:0.0000020000,Nosenko2013_ribo_14615_Nematostella_vectensis_45351_KOG0004:0.0000020619)23:0.0000020000,Nosenko2013_ribo_14615_Montastraea_faveolata_48498_KOG0004:0.0000020619)40:0.0000020000,(Philippe2009_Montastraea_faveolata_48498_Gene_0108:0.0000020619,Philippe2009_Nematostella_vectensis_45351_Gene_0108:0.0000020619)77:0.0000020000)42:0.0000020000,Nosenko2013_ribo_11057_Metridium_senile_6116_KOG0004:0.0000020619)36:0.0000020000,Nosenko2013_ribo_11057_Nematostella_vectensis_45351_KOG0004:0.0000020619)57:0.0161910000,(Nosenko2013_ribo_14615_Metridium_senile_6116_KOG0004:0.0000020619,Philippe2009_Metridium_senile_6116_Gene_0108:0.0000020619)42:0.0000020000)75:0.0175820000,(((Nosenko2013_ribo_11057_Branchiostoma_floridae_7739_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Branchiostoma_floridae_7739_KOG0004:0.0000020619)54:0.0000020000,Philippe2009_Branchiostoma_floridae_7739_Gene_0108:0.0000020619)99:0.0515280000,(Nosenko2013_ribo_11057_Petromyzon_marinus_7757_KOG0004:0.0000020619,(Nosenko2013_ribo_14615_Petromyzon_marinus_7757_KOG0004:0.0000020619,Philippe2009_Petromyzon_marinus_7757_Gene_0108:0.0000020619)65:0.0000020000)99:0.0526880000)22:0.0000020000)34:0.0169330000)33:0.0000020000,Nosenko2013_ribo_14615_Crassostrea_gigas_29159_KOG0004:0.0000020619)29:0.0000020000,Nosenko2013_ribo_11057_Crassostrea_gigas_29159_KOG0004:0.0000020619)49:0.0399480000,(((((((Nosenko2013_ribo_11057_Daphnia_pulex_6669_KOG0004:0.0000020619,(Nosenko2013_ribo_14615_Daphnia_pulex_6669_KOG0004:0.0000020619,Philippe2009_Daphnia_pulex_6669_Gene_0108:0.0000020619)80:0.0000020000)100:0.2069410000,(Nosenko2013_ribo_11057_Monosiga_ovata_81526_KOG0004:0.0000020619,(Nosenko2013_ribo_14615_Monosiga_ovata_81526_KOG0004:0.0000020619,Philippe2009_Monosiga_ovata_81526_Gene_0108:0.0000020619)71:0.0000020000)98:0.1001780000)61:0.1172180000,((Nosenko2013_ribo_14615_Allomyces_macrogynus_28583_KOG0004:0.0000020619,Philippe2009_Allomyces_macrogynus_28583_Gene_0108:0.0000020619)100:0.4422330000,(Nosenko2013_ribo_14615_Amoebidium_parasiticum_4881_KOG0004:0.0000020619,Philippe2009_Amoebidium_parasiticum_4881_Gene_0108:0.0000020619)99:0.1225100000)66:0.0005070000)31:0.0302190000,((Nosenko2013_ribo_14615_Batrachochytrium_dendrobatidis_109871_KOG0004:0.0000020619,Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0108:0.0000020619)100:0.1888600000,(Nosenko2013_ribo_14615_Spizellomyces_punctatus_109760_KOG0004:0.0000020619,Philippe2009_Spizellomyces_punctatus_109760_Gene_0108:0.0000020619)98:0.0245600000)98:0.1155090000)33:0.0281590000,((Nosenko2013_ribo_14615_Cyanea_capillata_27804_KOG0004:0.0000020619,Philippe2009_Cyanea_capillata_27804_Gene_0108:0.0000020619)99:0.0524060000,((Nosenko2013_ribo_14615_Phycomyces_blakesleeanus_4837_KOG0004:0.0000020619,Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0108:0.0000020619)100:0.0963650000,Philippe2009_Rhizopus_oryzae_64495_Gene_0108:0.0000022926)99:0.1788290000)73:0.0321670000)35:0.0055920000,((Nosenko2013_ribo_11057_Trichoplax_sp_H4_10227_KOG0004:0.0000020619,(Nosenko2013_ribo_14615_Trichoplax_sp_H4_10227_KOG0004:0.0000020619,Philippe2009_Trichoplax_adhaerens_10228_Gene_0108:0.0000020619)65:0.0000020000)99:0.0915140000,(Nosenko2013_ribo_11057_Trichoplax_adhaerens_10228_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Trichoplax_adhaerens_10228_KOG0004:0.0000020619)98:0.0314250000)96:0.0611670000)47:0.0439790000,(Nosenko2013_ribo_14615_Pedicellina_cernua_43123_KOG0004:0.0000020619,Philippe2009_Pedicellina_cernua_43123_Gene_0108:0.0000020619)99:0.0955870000)45:0.0057910000)52:0.0192870000,(((Nosenko2013_ribo_11057_Ciona_intestinalis_7719_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Ciona_intestinalis_7719_KOG0004:0.0000020619)100:0.0391950000,Philippe2009_Ciona_savignyi_51511_Gene_0108:0.0000020619)93:0.0229680000,(Nosenko2013_ribo_11057_Molgula_tectiformis_30286_KOG0004:0.0000020619,(Nosenko2013_ribo_14615_Molgula_tectiformis_30286_KOG0004:0.0000020619,Philippe2009_Molgula_tectiformis_30286_Gene_0108:0.0000020619)87:0.0000020000)99:0.0942290000)90:0.0467870000)56:0.0000030000,(Nosenko2013_ribo_14615_Sphaeroforma_arctica_72019_KOG0004:0.0000020619,Philippe2009_Sphaeroforma_arctica_72019_Gene_0108:0.0000020619)100:0.2222550000)99:0.1411930000,(Nosenko2013_ribo_11057_Tethya_wilhelma_463344_KOG0004:0.0000020619,Nosenko2013_ribo_14615_Tethya_wilhelma_463344_KOG0004:0.0000020619)95:0.0194480000)90:0.0233920000)100:0.1633020000,(Nosenko2013_ribo_14615_Amphimedon_queenslandica_400682_KOG0004:0.0000020619,Philippe2009_Amphimedon_queenslandica_400682_Gene_0108:0.0000020619)93:0.0000020000);
+
+TIME STAMP
+----------
+
+Date and time: Tue Aug 30 07:23:42 2022
+Total CPU time used: 56970.83284 seconds (15h:49m:30s)
+Total wall-clock time used: 57121.24174 seconds (15h:52m:1s)
+

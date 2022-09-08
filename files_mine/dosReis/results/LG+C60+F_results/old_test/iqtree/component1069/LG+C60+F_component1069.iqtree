@@ -1,0 +1,637 @@
+IQ-TREE 1.5.3 built Mar 12 2017
+
+Input file name: /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component1069.mafft
+Type of analysis: tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 17839
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh (2015)
+IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol. Biol. Evol., 32:268-274.
+http://dx.doi.org/10.1093/molbev/msu300
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Bui Quang Minh, Minh Anh Thi Nguyen, and Arndt von Haeseler (2013) Ultrafast
+approximation for phylogenetic bootstrap. Mol. Biol. Evol., 30:1188-1195.
+http://dx.doi.org/10.1093/molbev/mst024
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 113 sequences with 229 amino-acid sites
+Number of constant sites: 27 (= 11.7904% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 27 (= 11.7904% of all sites)
+Number of distinct site patterns: 222
+
+SUBSTITUTION PROCESS
+--------------------
+
+Mixture model of substitution: MIX{LG+F+F,LG+FC60pi1,LG+FC60pi2,LG+FC60pi3,LG+FC60pi4,LG+FC60pi5,LG+FC60pi6,LG+FC60pi7,LG+FC60pi8,LG+FC60pi9,LG+FC60pi10,LG+FC60pi11,LG+FC60pi12,LG+FC60pi13,LG+FC60pi14,LG+FC60pi15,LG+FC60pi16,LG+FC60pi17,LG+FC60pi18,LG+FC60pi19,LG+FC60pi20,LG+FC60pi21,LG+FC60pi22,LG+FC60pi23,LG+FC60pi24,LG+FC60pi25,LG+FC60pi26,LG+FC60pi27,LG+FC60pi28,LG+FC60pi29,LG+FC60pi30,LG+FC60pi31,LG+FC60pi32,LG+FC60pi33,LG+FC60pi34,LG+FC60pi35,LG+FC60pi36,LG+FC60pi37,LG+FC60pi38,LG+FC60pi39,LG+FC60pi40,LG+FC60pi41,LG+FC60pi42,LG+FC60pi43,LG+FC60pi44,LG+FC60pi45,LG+FC60pi46,LG+FC60pi47,LG+FC60pi48,LG+FC60pi49,LG+FC60pi50,LG+FC60pi51,LG+FC60pi52,LG+FC60pi53,LG+FC60pi54,LG+FC60pi55,LG+FC60pi56,LG+FC60pi57,LG+FC60pi58,LG+FC60pi59,LG+FC60pi60}+G4
+
+  No  Component      Rate    Weight   Parameters
+   1  LG+F          1.0000   0.0339   LG+F
+   2  LG+FC60pi1    1.0000   0.0215   LG+FC60pi1
+   3  LG+FC60pi2    1.0000   0.0000   LG+FC60pi2
+   4  LG+FC60pi3    1.0000   0.0414   LG+FC60pi3
+   5  LG+FC60pi4    1.0000   0.0090   LG+FC60pi4
+   6  LG+FC60pi5    1.0000   0.0454   LG+FC60pi5
+   7  LG+FC60pi6    1.0000   0.0001   LG+FC60pi6
+   8  LG+FC60pi7    1.0000   0.0000   LG+FC60pi7
+   9  LG+FC60pi8    1.0000   0.0258   LG+FC60pi8
+  10  LG+FC60pi9    1.0000   0.0069   LG+FC60pi9
+  11  LG+FC60pi10   1.0000   0.0621   LG+FC60pi10
+  12  LG+FC60pi11   1.0000   0.0269   LG+FC60pi11
+  13  LG+FC60pi12   1.0000   0.0030   LG+FC60pi12
+  14  LG+FC60pi13   1.0000   0.0084   LG+FC60pi13
+  15  LG+FC60pi14   1.0000   0.0305   LG+FC60pi14
+  16  LG+FC60pi15   1.0000   0.0000   LG+FC60pi15
+  17  LG+FC60pi16   1.0000   0.0294   LG+FC60pi16
+  18  LG+FC60pi17   1.0000   0.0075   LG+FC60pi17
+  19  LG+FC60pi18   1.0000   0.0265   LG+FC60pi18
+  20  LG+FC60pi19   1.0000   0.0186   LG+FC60pi19
+  21  LG+FC60pi20   1.0000   0.0175   LG+FC60pi20
+  22  LG+FC60pi21   1.0000   0.0000   LG+FC60pi21
+  23  LG+FC60pi22   1.0000   0.0296   LG+FC60pi22
+  24  LG+FC60pi23   1.0000   0.0495   LG+FC60pi23
+  25  LG+FC60pi24   1.0000   0.0000   LG+FC60pi24
+  26  LG+FC60pi25   1.0000   0.0000   LG+FC60pi25
+  27  LG+FC60pi26   1.0000   0.0000   LG+FC60pi26
+  28  LG+FC60pi27   1.0000   0.0369   LG+FC60pi27
+  29  LG+FC60pi28   1.0000   0.0000   LG+FC60pi28
+  30  LG+FC60pi29   1.0000   0.0274   LG+FC60pi29
+  31  LG+FC60pi30   1.0000   0.0522   LG+FC60pi30
+  32  LG+FC60pi31   1.0000   0.0276   LG+FC60pi31
+  33  LG+FC60pi32   1.0000   0.0000   LG+FC60pi32
+  34  LG+FC60pi33   1.0000   0.0332   LG+FC60pi33
+  35  LG+FC60pi34   1.0000   0.0231   LG+FC60pi34
+  36  LG+FC60pi35   1.0000   0.0544   LG+FC60pi35
+  37  LG+FC60pi36   1.0000   0.0615   LG+FC60pi36
+  38  LG+FC60pi37   1.0000   0.0089   LG+FC60pi37
+  39  LG+FC60pi38   1.0000   0.0285   LG+FC60pi38
+  40  LG+FC60pi39   1.0000   0.0089   LG+FC60pi39
+  41  LG+FC60pi40   1.0000   0.0000   LG+FC60pi40
+  42  LG+FC60pi41   1.0000   0.0000   LG+FC60pi41
+  43  LG+FC60pi42   1.0000   0.0000   LG+FC60pi42
+  44  LG+FC60pi43   1.0000   0.0157   LG+FC60pi43
+  45  LG+FC60pi44   1.0000   0.0000   LG+FC60pi44
+  46  LG+FC60pi45   1.0000   0.0000   LG+FC60pi45
+  47  LG+FC60pi46   1.0000   0.0000   LG+FC60pi46
+  48  LG+FC60pi47   1.0000   0.0029   LG+FC60pi47
+  49  LG+FC60pi48   1.0000   0.0136   LG+FC60pi48
+  50  LG+FC60pi49   1.0000   0.0000   LG+FC60pi49
+  51  LG+FC60pi50   1.0000   0.0137   LG+FC60pi50
+  52  LG+FC60pi51   1.0000   0.0116   LG+FC60pi51
+  53  LG+FC60pi52   1.0000   0.0317   LG+FC60pi52
+  54  LG+FC60pi53   1.0000   0.0105   LG+FC60pi53
+  55  LG+FC60pi54   1.0000   0.0000   LG+FC60pi54
+  56  LG+FC60pi55   1.0000   0.0143   LG+FC60pi55
+  57  LG+FC60pi56   1.0000   0.0000   LG+FC60pi56
+  58  LG+FC60pi57   1.0000   0.0000   LG+FC60pi57
+  59  LG+FC60pi58   1.0000   0.0000   LG+FC60pi58
+  60  LG+FC60pi59   1.0000   0.0295   LG+FC60pi59
+  61  LG+FC60pi60   1.0000   0.0003   LG+FC60pi60
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 0.5948
+
+ Category  Relative_rate  Proportion
+  1         0.0520         0.2500
+  2         0.3094         0.2500
+  3         0.8787         0.2500
+  4         2.7599         0.2500
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -12008.3298 (s.e. 623.4954)
+Unconstrained log-likelihood (without tree): -1234.0950
+Number of free parameters (#branches + #model parameters): 303
+Akaike information criterion (AIC) score: 24622.6596
+Corrected Akaike information criterion (AICc) score: 208846.6596
+Bayesian information criterion (BIC) score: 25663.0773
+
+**************************** WARNING ****************************
+Number of parameters (K, model parameters and branch lengths): 303
+Sample size (n, alignment length): 229
+
+Given that K>=n, the parameter estimates might be inaccurate.
+Thus, phylogenetic estimates should be interpreted with caution.
+
+Ideally, it is desirable that n >> K. When selecting optimal models,
+1. use AIC or BIC if n > 40K;
+2. use AICc or BIC if 40K >= n > K;
+3. be extremely cautious if n <= K
+
+To improve the situation (3), consider the following options:
+  1. Increase the sample size (n)
+  2. Decrease the number of parameters (K) to be estimated. If
+     possible:
+     a. Remove the least important sequences from the alignment
+     b. Specify some of the parameter values for the substitution
+        model (e.g., the nucleotide or amino acid frequencies)
+     c. Specify some of the parameter values for the rates-across-
+        sites model (e.g., the shape parameter for the discrete
+        Gamma distribution, the proportion of invariable sites, or
+        the rates of change for different rate categories under
+        the FreeRate model)
+
+Reference:
+Burnham KR, Anderson DR (2002). Model Selection and Multimodel
+Inference: A Practical Information-Theoretic Approach. Springer,
+New York.
+************************ END OF WARNING ***********************
+
+Total tree length (sum of branch lengths): 28.3595
+Sum of internal branch lengths: 10.6895 (37.6926% of tree length)
+
+WARNING: 4 near-zero internal branches (<0.0044) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Chang2015_Acanthoeca_sp_81532_psma' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++--Chang2015_Acanthoeca_sp_81532_psma
+|
+|                                             +**Chang2015_Acropora_cervicornis_6130_psma
+|                                          +--| (100)
+|                                          |  +**Philippe2009_Acropora_millepora_45264_Gene_0041
+|                                       +**| (78)
+|                                       |  |  +--Chang2015_Orbicella_faveolata_48498_psma
+|                                       |  +--| (97)
+|                                       |     +--Chang2015_Porites_australiensis_51061_psma
+|                                    +--| (100)
+|                                    |  +--Chang2015_Pocillopora_damicornis_46731_psma
+|                                 +--| (66)
+|                                 |  |     +--Chang2015_Aiptasia_pallida_1720309_psma
+|                                 |  |  +--| (99)
+|                                 |  |  |  |     +--Chang2015_Bolocera_tuediae_1163374_psma
+|                                 |  |  |  |  +--| (90)
+|                                 |  |  |  |  |  +--Chang2015_Urticina_eques_417072_psma
+|                                 |  |  |  +--| (59)
+|                                 |  |  |     +--Chang2015_Hormathia_digitata_1163372_psma
+|                                 |  +--| (98)
+|                                 |     |  +--Chang2015_Edwardsiella_lineata_132407_psma
+|                                 |     +--| (100)
+|                                 |        |  +**Chang2015_Nematostella_vectensis_45351_psma
+|                                 |        +--| (100)
+|                                 |           +**Philippe2009_Nematostella_vectensis_45351_Gene_0041
+|                              +--| (67)
+|                              |  |     +---Chang2015_Corticium_candelabrum_121492_psma
+|                              |  |  +--| (100)
+|                              |  |  |  |  +--Chang2015_Oscarella_carmela_386100_psma
+|                              |  |  |  +--| (100)
+|                              |  |  |     +--Chang2015_Oscarella_sp_SN-2011_386100_psma
+|                              |  +--| (79)
+|                              |     |   +**Chang2015_Eunicella_cavolinii_317547_psma
+|                              |     +---| (100)
+|                              |         +--Chang2015_Gorgonia_ventalina_204384_psma
+|                           +--| (53)
+|                           |  |          +--Chang2015_Botryllus_schlosseri_30301_psma
+|                           |  |       +--| (99)
+|                           |  |       |  +-------Philippe2009_Molgula_tectiformis_30286_Gene_0041
+|                           |  |  +----| (100)
+|                           |  |  |    |  +--Chang2015_Ciona_intestinalis_7719_psma
+|                           |  |  |    +--| (100)
+|                           |  |  |       +--Philippe2009_Ciona_savignyi_51511_Gene_0041
+|                           |  +--| (65)
+|                           |     |     +--Chang2015_Homo_sapiens_9606_psma
+|                           |     |  +--| (98)
+|                           |     |  |  |  +--Chang2015_Latimeria_menadoensis_106881_psma
+|                           |     |  |  +**| (67)
+|                           |     |  |     +--Philippe2009_Danio_rerio_7955_Gene_0041
+|                           |     +--| (100)
+|                           |        |  +**Chang2015_Petromyzon_marinus_7757_psma
+|                           |        +--| (100)
+|                           |           +**Philippe2009_Petromyzon_marinus_7757_Gene_0041
+|                        +--| (89)
+|                        |  |           +**Chang2015_Branchiostoma_floridae_7739_psma
+|                        |  |        +--| (100)
+|                        |  |        |  +**Philippe2009_Branchiostoma_floridae_7739_Gene_0041
+|                        |  |     +--| (69)
+|                        |  |     |  |               +**Chang2015_Trichoplax_adhaerens_10228_psma
+|                        |  |     |  +---------------| (100)
+|                        |  |     |                  +**Philippe2009_Trichoplax_adhaerens_10228_Gene_0041
+|                        |  |  +--| (74)
+|                        |  |  |  |              +**Chang2015_Daphnia_pulex_6669_psma
+|                        |  |  |  |           +--| (100)
+|                        |  |  |  |           |  +**Philippe2009_Daphnia_pulex_6669_Gene_0041
+|                        |  |  |  |        +--| (93)
+|                        |  |  |  |        |  |     +**Chang2015_Nasonia_vitripennis_7425_psma
+|                        |  |  |  |        |  |  +--| (100)
+|                        |  |  |  |        |  |  |  +**Philippe2009_Nasonia_vitripennis_7425_Gene_0041
+|                        |  |  |  |        |  +--| (100)
+|                        |  |  |  |        |     |  +**Chang2015_Pediculus_humanus_121225_psma
+|                        |  |  |  |        |     +--| (100)
+|                        |  |  |  |        |        +**Philippe2009_Pediculus_humanus_121225_Gene_0041
+|                        |  |  |  |     +--| (52)
+|                        |  |  |  |     |  +--Chang2015_Strigamia_maritima_126957_psma
+|                        |  |  |  |  +--| (95)
+|                        |  |  |  |  |  +--Philippe2009_Anoplodactylus_eroticus_488521_Gene_0041
+|                        |  |  |  +--| (98)
+|                        |  |  |     |  +**Chang2015_Ixodes_scapularis_6945_psma
+|                        |  |  |     +--| (100)
+|                        |  |  |        +**Philippe2009_Ixodes_scapularis_6945_Gene_0041
+|                        |  +--| (44)
+|                        |     |              +**Chang2015_Capitella_teleta_283909_psma
+|                        |     |           +--| (100)
+|                        |     |           |  +**Philippe2009_Capitella_teleta_283909_Gene_0041
+|                        |     |        +--| (74)
+|                        |     |        |  |     +**Chang2015_Helobdella_robusta_6412_psma
+|                        |     |        |  |  +--| (100)
+|                        |     |        |  |  |  +**Philippe2009_Helobdella_robusta_6412_Gene_0041
+|                        |     |        |  +--| (99)
+|                        |     |        |     +--Philippe2009_Tubifex_tubifex_6386_Gene_0041
+|                        |     |     +--| (66)
+|                        |     |     |  |        +**Chang2015_Crassostrea_gigas_29159_psma
+|                        |     |     |  |     +--| (100)
+|                        |     |     |  |     |  +--Philippe2009_Crassostrea_gigas_29159_Gene_0041
+|                        |     |     |  |  +--| (99)
+|                        |     |     |  |  |  |  +--Chang2015_Ilyanassa_obsoleta_1934733_psma
+|                        |     |     |  |  |  +--| (100)
+|                        |     |     |  |  |     +--Philippe2009_Aplysia_californica_6500_Gene_0041
+|                        |     |     |  +--| (94)
+|                        |     |     |     |  +--Chang2015_Octopus_vulgaris_6645_psma
+|                        |     |     |     +--| (97)
+|                        |     |     |        +--Philippe2009_Euprymna_scolopes_6613_Gene_0041
+|                        |     |  +--| (55)
+|                        |     |  |  |     +**Chang2015_Saccoglossus_kowalevskii_10224_psma
+|                        |     |  |  |  +--| (100)
+|                        |     |  |  |  |  +**Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0041
+|                        |     |  |  +--| (69)
+|                        |     |  |     +----Philippe2009_Xenoturbella_bocki_242395_Gene_0041
+|                        |     +--| (81)
+|                        |        |  +--Chang2015_Patiria_miniata_46514_psma
+|                        |        +--| (96)
+|                        |           |  +**Chang2015_Strongylocentrotus_purpuratus_7668_psma
+|                        |           +--| (100)
+|                        |              +**Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0041
+|                     +--| (87)
+|                     |  |           +--Chang2015_Amoebidium_parasiticum_4881_psma
+|                     |  |        +--| (100)
+|                     |  |        |  |    +**Chang2015_Sphaeroforma_arctica_72019_psma
+|                     |  |        |  +----| (100)
+|                     |  |        |       +**Philippe2009_Sphaeroforma_arctica_72019_Gene_0041
+|                     |  |     +--| (96)
+|                     |  |     |  +-------Chang2015_Ministeria_vibrans_134558_psma
+|                     |  |  +--| (95)
+|                     |  |  |  |     +**Chang2015_Capsaspora_owczarzaki_192875_psma
+|                     |  |  |  +-----| (100)
+|                     |  |  |        +**Philippe2009_Capsaspora_owczarzaki_192875_Gene_0041
+|                     |  +--| (98)
+|                     |     |        +--------------------Philippe2009_Allomyces_macrogynus_28583_Gene_0041
+|                     |     +--------| (100)
+|                     |              |     +------Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0041
+|                     |              |  +--| (97)
+|                     |              |  |  +--Philippe2009_Spizellomyces_punctatus_109760_Gene_0041
+|                     |              +--| (88)
+|                     |                 |   +--Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0041
+|                     |                 +---| (99)
+|                     |                     +--Philippe2009_Rhizopus_oryzae_64495_Gene_0041
+|                  +**| (32)
+|                  |  |          +**Chang2015_Leucetta_chagosensis_185688_psma
+|                  |  |       +--| (99)
+|                  |  |       |  +**Philippe2009_Leucetta_chagosensis_185688_Gene_0041
+|                  |  +-------| (99)
+|                  |          |      +--Chang2015_Sycon_ciliatum_27933_psma
+|                  |          +------| (99)
+|                  |                 |  +--Chang2015_Sycon_coactum_1009717_psma
+|                  |                 +--| (99)
+|                  |                    +--Philippe2009_Sycon_raphanus_56443_Gene_0041
+|               +--| (37)
+|               |  |            +**Chang2015_Amphimedon_queenslandica_400682_psma
+|               |  |         +--| (100)
+|               |  |         |  +**Philippe2009_Amphimedon_queenslandica_400682_Gene_0041
+|               |  |      +--| (100)
+|               |  |      |  +--Chang2015_Petrosia_ficiformis_68564_psma
+|               |  |   +--| (96)
+|               |  |   |  +--Chang2015_Ephydatia_muelleri_6052_psma
+|               |  +---| (83)
+|               |      |  +------Chang2015_Chondrilla_nucula_220712_psma
+|               |      +--| (77)
+|               |         +----Chang2015_Sarcotragus_fasciculatus_1234657_psma
+|            +--| (59)
+|            |  |                +--Chang2015_Aphrocallistes_vastus_83887_psma
+|            |  |             +--| (100)
+|            |  |             |  +--Philippe2009_Heterochone_sp_367900_Gene_0041
+|            |  |  +----------| (100)
+|            |  |  |          |  +--Chang2015_Euplectella_aspergillum_936045_psma
+|            |  |  |          +--| (95)
+|            |  |  |             +--Philippe2009_Oopsacas_minuta_111878_Gene_0041
+|            |  +--| (85)
+|            |     |           +--Chang2015_Aurelia_aurita_6145_psma
+|            |     |        +--| (100)
+|            |     |        |  +--Chang2015_Stomolophus_meleagris_168796_psma
+|            |     |     +--| (88)
+|            |     |     |  +--Chang2015_Tripedalia_cystophora_6141_psma
+|            |     |  +--| (100)
+|            |     |  |  |              +**Chang2015_Clytia_hemisphaerica_252671_psma
+|            |     |  |  |           +--| (100)
+|            |     |  |  |           |  +**Philippe2009_Clytia_hemisphaerica_252671_Gene_0041
+|            |     |  |  |        +--| (60)
+|            |     |  |  |        |  |     +--Chang2015_Hydractinia_polyclina_589945_psma
+|            |     |  |  |        |  |  +--| (75)
+|            |     |  |  |        |  |  |  +**Philippe2009_Podocoryne_carnea_6096_Gene_0041
+|            |     |  |  |        |  +**| (62)
+|            |     |  |  |        |     +**Philippe2009_Hydractinia_echinata_35630_Gene_0041
+|            |     |  |  |     +--| (61)
+|            |     |  |  |     |  +--Chang2015_Nanomia_bijuga_168759_psma
+|            |     |  |  |  +--| (99)
+|            |     |  |  |  |  |  +--Chang2015_Ectopleura_larynx_264052_psma
+|            |     |  |  |  |  +--| (62)
+|            |     |  |  |  |     |  +**Chang2015_Hydra_vulgaris_01_6087_psma
+|            |     |  |  |  |     +--| (100)
+|            |     |  |  |  |        +**Philippe2009_Hydra_magnipapillata_6087_Gene_0041
+|            |     |  |  +--| (100)
+|            |     |  |     +----Chang2015_Craspedacusta_sowerbii_128124_psma
+|            |     +--| (98)
+|            |        |     +-------------------------------------Chang2015_Kudoa_iwatai_269814_psma
+|            |        |  +--| (97)
+|            |        |  |  +-------------------Chang2015_Myxobolus_cerebralis_59783_psma
+|            |        +--| (99)
+|            |           +-----Chang2015_Polypodium_hydriforme_43186_psma
+|         +--| (96)
+|         |  |             +--Chang2015_Beroe_abyssicola_320166_psma
+|         |  |          +--| (97)
+|         |  |          |  |     +**Chang2015_Mnemiopsis_leidyi_27923_psma
+|         |  |          |  |  +--| (100)
+|         |  |          |  |  |  +**Philippe2009_Mnemiopsis_leidyi_27923_Gene_0041
+|         |  |          |  +--| (97)
+|         |  |          |     |  +**Chang2015_Pleurobrachia_pileus_140457_psma
+|         |  |          |     +--| (100)
+|         |  |          |        +**Philippe2009_Pleurobrachia_pileus_140457_Gene_0041
+|         |  |       +--| (97)
+|         |  |       |  +--Chang2015_Euplokamis_dunlapae_1403701_psma
+|         |  +-------| (100)
+|         |          +--Chang2015_Vallicula_multiformis_140489_psma
++---------| (100)
+|         |             +**Chang2015_Monosiga_brevicollis_81824_psma
+|         |      +------| (100)
+|         |      |      +**Philippe2009_Monosiga_brevicollis_81824_Gene_0041
+|         |  +---| (100)
+|         |  |   +-----Chang2015_Salpingoeca_sp_86017_psma
+|         +--| (100)
+|            |         +**Chang2015_Monosiga_ovata_81526_psma
+|            +---------| (100)
+|                      +--Philippe2009_Monosiga_ovata_81526_Gene_0041
+|
++--Chang2015_Stephanoeca_diplocostata_81535_psma
+
+Tree in newick format:
+
+(Chang2015_Acanthoeca_sp_81532_psma:0.2002358112,(((((((((((((Chang2015_Acropora_cervicornis_6130_psma:0.0000021471,Philippe2009_Acropora_millepora_45264_Gene_0041:0.0000020683)100:0.049183,(Chang2015_Orbicella_faveolata_48498_psma:0.0135480682,Chang2015_Porites_australiensis_51061_psma:0.0704980112)97:0.012595)78:0.000813,Chang2015_Pocillopora_damicornis_46731_psma:0.0255549369)100:0.073218,((Chang2015_Aiptasia_pallida_1720309_psma:0.0393925768,((Chang2015_Bolocera_tuediae_1163374_psma:0.0827202033,Chang2015_Urticina_eques_417072_psma:0.0417426565)90:0.030081,Chang2015_Hormathia_digitata_1163372_psma:0.0594162188)59:0.023679)99:0.070927,(Chang2015_Edwardsiella_lineata_132407_psma:0.0530043007,(Chang2015_Nematostella_vectensis_45351_psma:0.0000020709,Philippe2009_Nematostella_vectensis_45351_Gene_0041:0.0000020683)100:0.041183)100:0.049927)98:0.062619)66:0.012826,((Chang2015_Corticium_candelabrum_121492_psma:0.2912727521,(Chang2015_Oscarella_carmela_386100_psma:0.0991184394,Chang2015_Oscarella_sp_SN-2011_386100_psma:0.2068676308)100:0.207590)100:0.164134,(Chang2015_Eunicella_cavolinii_317547_psma:0.0000025010,Chang2015_Gorgonia_ventalina_204384_psma:0.0667119394)100:0.290474)79:0.052848)67:0.035974,(((Chang2015_Botryllus_schlosseri_30301_psma:0.1480463048,Philippe2009_Molgula_tectiformis_30286_Gene_0041:0.5286489417)99:0.120024,(Chang2015_Ciona_intestinalis_7719_psma:0.0732804259,Philippe2009_Ciona_savignyi_51511_Gene_0041:0.0250547730)100:0.158806)100:0.309229,((Chang2015_Homo_sapiens_9606_psma:0.0260409105,(Chang2015_Latimeria_menadoensis_106881_psma:0.0657547353,Philippe2009_Danio_rerio_7955_Gene_0041:0.0416507658)67:0.000002)98:0.069038,(Chang2015_Petromyzon_marinus_7757_psma:0.0000026941,Philippe2009_Petromyzon_marinus_7757_Gene_0041:0.0000021758)100:0.130432)100:0.173227)65:0.057988)53:0.036026,((((Chang2015_Branchiostoma_floridae_7739_psma:0.0000021940,Philippe2009_Branchiostoma_floridae_7739_Gene_0041:0.0000027515)100:0.156236,(Chang2015_Trichoplax_adhaerens_10228_psma:0.0000022249,Philippe2009_Trichoplax_adhaerens_10228_Gene_0041:0.0000020683)100:0.950317)69:0.018415,(((((Chang2015_Daphnia_pulex_6669_psma:0.0000022926,Philippe2009_Daphnia_pulex_6669_Gene_0041:0.0000020683)100:0.226576,((Chang2015_Nasonia_vitripennis_7425_psma:0.0000020862,Philippe2009_Nasonia_vitripennis_7425_Gene_0041:0.0000028640)100:0.182620,(Chang2015_Pediculus_humanus_121225_psma:0.0000022249,Philippe2009_Pediculus_humanus_121225_Gene_0041:0.0000020911)100:0.190449)100:0.139428)93:0.086552,Chang2015_Strigamia_maritima_126957_psma:0.1498241908)52:0.066066,Philippe2009_Anoplodactylus_eroticus_488521_Gene_0041:0.2352794407)95:0.021282,(Chang2015_Ixodes_scapularis_6945_psma:0.0000028029,Philippe2009_Ixodes_scapularis_6945_Gene_0041:0.0000020848)100:0.169235)98:0.054281)74:0.031861,(((((Chang2015_Capitella_teleta_283909_psma:0.0000023481,Philippe2009_Capitella_teleta_283909_Gene_0041:0.0000020683)100:0.167218,((Chang2015_Helobdella_robusta_6412_psma:0.0000020683,Philippe2009_Helobdella_robusta_6412_Gene_0041:0.0000020683)100:0.136579,Philippe2009_Tubifex_tubifex_6386_Gene_0041:0.1185710608)99:0.079932)74:0.028443,(((Chang2015_Crassostrea_gigas_29159_psma:0.0000023481,Philippe2009_Crassostrea_gigas_29159_Gene_0041:0.0095061969)100:0.084983,(Chang2015_Ilyanassa_obsoleta_1934733_psma:0.1553725061,Philippe2009_Aplysia_californica_6500_Gene_0041:0.1193648970)100:0.122678)99:0.039003,(Chang2015_Octopus_vulgaris_6645_psma:0.1422383522,Philippe2009_Euprymna_scolopes_6613_Gene_0041:0.0922541715)97:0.046322)94:0.055513)66:0.021943,((Chang2015_Saccoglossus_kowalevskii_10224_psma:0.0000026216,Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0041:0.0000020683)100:0.169490,Philippe2009_Xenoturbella_bocki_242395_Gene_0041:0.3338743317)69:0.019288)55:0.029487,(Chang2015_Patiria_miniata_46514_psma:0.1056303328,(Chang2015_Strongylocentrotus_purpuratus_7668_psma:0.0000027630,Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0041:0.0000020683)100:0.126399)96:0.023984)81:0.069217)44:0.036007)89:0.054874,((((Chang2015_Amoebidium_parasiticum_4881_psma:0.2063421935,(Chang2015_Sphaeroforma_arctica_72019_psma:0.0000026216,Philippe2009_Sphaeroforma_arctica_72019_Gene_0041:0.0000020683)100:0.315533)100:0.127998,Chang2015_Ministeria_vibrans_134558_psma:0.4964181572)96:0.040267,(Chang2015_Capsaspora_owczarzaki_192875_psma:0.0000020862,Philippe2009_Capsaspora_owczarzaki_192875_Gene_0041:0.0000020683)100:0.360871)95:0.067805,(Philippe2009_Allomyces_macrogynus_28583_Gene_0041:1.2935815056,((Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0041:0.4145071244,Philippe2009_Spizellomyces_punctatus_109760_Gene_0041:0.1270849298)97:0.094512,(Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0041:0.1604448641,Philippe2009_Rhizopus_oryzae_64495_Gene_0041:0.0054880401)99:0.253535)88:0.162773)100:0.561956)98:0.155225)87:0.080682,((Chang2015_Leucetta_chagosensis_185688_psma:0.0000021245,Philippe2009_Leucetta_chagosensis_185688_Gene_0041:0.0000020683)99:0.212607,(Chang2015_Sycon_ciliatum_27933_psma:0.0288268951,(Chang2015_Sycon_coactum_1009717_psma:0.0305684700,Philippe2009_Sycon_raphanus_56443_Gene_0041:0.0279440317)99:0.050735)99:0.447246)99:0.475682)32:0.000002,((((Chang2015_Amphimedon_queenslandica_400682_psma:0.0000020760,Philippe2009_Amphimedon_queenslandica_400682_Gene_0041:0.0000020683)100:0.177420,Chang2015_Petrosia_ficiformis_68564_psma:0.1111191461)100:0.081234,Chang2015_Ephydatia_muelleri_6052_psma:0.1655801713)96:0.069901,(Chang2015_Chondrilla_nucula_220712_psma:0.4360106738,Chang2015_Sarcotragus_fasciculatus_1234657_psma:0.2971699093)77:0.072759)83:0.270390)37:0.014252,(((Chang2015_Aphrocallistes_vastus_83887_psma:0.0066782269,Philippe2009_Heterochone_sp_367900_Gene_0041:0.0225291518)100:0.195870,(Chang2015_Euplectella_aspergillum_936045_psma:0.1353714179,Philippe2009_Oopsacas_minuta_111878_Gene_0041:0.0649145171)95:0.119804)100:0.669196,((((Chang2015_Aurelia_aurita_6145_psma:0.0500432991,Chang2015_Stomolophus_meleagris_168796_psma:0.0704072521)100:0.118836,Chang2015_Tripedalia_cystophora_6141_psma:0.2329664309)88:0.061238,(((((Chang2015_Clytia_hemisphaerica_252671_psma:0.0000026102,Philippe2009_Clytia_hemisphaerica_252671_Gene_0041:0.0000020683)100:0.071212,((Chang2015_Hydractinia_polyclina_589945_psma:0.0229038491,Philippe2009_Podocoryne_carnea_6096_Gene_0041:0.0000024649)75:0.023897,Philippe2009_Hydractinia_echinata_35630_Gene_0041:0.0000028643)62:0.000003)60:0.017779,Chang2015_Nanomia_bijuga_168759_psma:0.0783554449)61:0.012686,(Chang2015_Ectopleura_larynx_264052_psma:0.1385275320,(Chang2015_Hydra_vulgaris_01_6087_psma:0.0000021873,Philippe2009_Hydra_magnipapillata_6087_Gene_0041:0.0000020683)100:0.134549)62:0.034980)99:0.049757,Chang2015_Craspedacusta_sowerbii_128124_psma:0.3010190684)100:0.073901)100:0.142105,((Chang2015_Kudoa_iwatai_269814_psma:2.2738722887,Chang2015_Myxobolus_cerebralis_59783_psma:1.1989420350)97:0.129899,Chang2015_Polypodium_hydriforme_43186_psma:0.3647867296)99:0.203601)98:0.059000)85:0.141054)59:0.048134,(((Chang2015_Beroe_abyssicola_320166_psma:0.0153288679,((Chang2015_Mnemiopsis_leidyi_27923_psma:0.0000023629,Philippe2009_Mnemiopsis_leidyi_27923_Gene_0041:0.0000020683)100:0.042490,(Chang2015_Pleurobrachia_pileus_140457_psma:0.0000023623,Philippe2009_Pleurobrachia_pileus_140457_Gene_0041:0.0000020683)100:0.113380)97:0.013524)97:0.045526,Chang2015_Euplokamis_dunlapae_1403701_psma:0.0921159841)97:0.034688,Chang2015_Vallicula_multiformis_140489_psma:0.0252476207)100:0.521709)96:0.095115,(((Chang2015_Monosiga_brevicollis_81824_psma:0.0000025042,Philippe2009_Monosiga_brevicollis_81824_Gene_0041:0.0000020683)100:0.437927,Chang2015_Salpingoeca_sp_86017_psma:0.3906844075)100:0.264637,(Chang2015_Monosiga_ovata_81526_psma:0.0000022339,Philippe2009_Monosiga_ovata_81526_Gene_0041:0.0160546815)100:0.643329)100:0.198920)100:0.601717,Chang2015_Stephanoeca_diplocostata_81535_psma:0.1857513079);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -12008.334445
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with bootstrap support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--Chang2015_Acanthoeca_sp_81532_psma
+|
+|                                             +--Chang2015_Acropora_cervicornis_6130_psma
+|                                          +--| (100)
+|                                          |  +--Philippe2009_Acropora_millepora_45264_Gene_0041
+|                                       +--| (78)
+|                                       |  |  +--Chang2015_Orbicella_faveolata_48498_psma
+|                                       |  +--| (97)
+|                                       |     +--Chang2015_Porites_australiensis_51061_psma
+|                                    +--| (100)
+|                                    |  +--Chang2015_Pocillopora_damicornis_46731_psma
+|                                 +--| (66)
+|                                 |  |     +--Chang2015_Aiptasia_pallida_1720309_psma
+|                                 |  |  +--| (99)
+|                                 |  |  |  |     +--Chang2015_Bolocera_tuediae_1163374_psma
+|                                 |  |  |  |  +--| (90)
+|                                 |  |  |  |  |  +--Chang2015_Urticina_eques_417072_psma
+|                                 |  |  |  +--| (59)
+|                                 |  |  |     +--Chang2015_Hormathia_digitata_1163372_psma
+|                                 |  +--| (98)
+|                                 |     |  +--Chang2015_Edwardsiella_lineata_132407_psma
+|                                 |     +--| (100)
+|                                 |        |  +--Chang2015_Nematostella_vectensis_45351_psma
+|                                 |        +--| (100)
+|                                 |           +--Philippe2009_Nematostella_vectensis_45351_Gene_0041
+|                              +--| (67)
+|                              |  |     +---Chang2015_Corticium_candelabrum_121492_psma
+|                              |  |  +--| (100)
+|                              |  |  |  |  +--Chang2015_Oscarella_carmela_386100_psma
+|                              |  |  |  +--| (100)
+|                              |  |  |     +--Chang2015_Oscarella_sp_SN-2011_386100_psma
+|                              |  +--| (79)
+|                              |     |   +--Chang2015_Eunicella_cavolinii_317547_psma
+|                              |     +---| (100)
+|                              |         +--Chang2015_Gorgonia_ventalina_204384_psma
+|                           +--| (53)
+|                           |  |          +--Chang2015_Botryllus_schlosseri_30301_psma
+|                           |  |       +--| (99)
+|                           |  |       |  +-------Philippe2009_Molgula_tectiformis_30286_Gene_0041
+|                           |  |  +----| (100)
+|                           |  |  |    |  +--Chang2015_Ciona_intestinalis_7719_psma
+|                           |  |  |    +--| (100)
+|                           |  |  |       +--Philippe2009_Ciona_savignyi_51511_Gene_0041
+|                           |  +--| (65)
+|                           |     |     +--Chang2015_Homo_sapiens_9606_psma
+|                           |     |  +--| (98)
+|                           |     |  |  |  +--Chang2015_Latimeria_menadoensis_106881_psma
+|                           |     |  |  +**| (67)
+|                           |     |  |     +--Philippe2009_Danio_rerio_7955_Gene_0041
+|                           |     +--| (100)
+|                           |        |  +--Chang2015_Petromyzon_marinus_7757_psma
+|                           |        +--| (100)
+|                           |           +--Philippe2009_Petromyzon_marinus_7757_Gene_0041
+|                        +--| (89)
+|                        |  |           +--Chang2015_Branchiostoma_floridae_7739_psma
+|                        |  |        +--| (100)
+|                        |  |        |  +--Philippe2009_Branchiostoma_floridae_7739_Gene_0041
+|                        |  |     +--| (69)
+|                        |  |     |  |               +--Chang2015_Trichoplax_adhaerens_10228_psma
+|                        |  |     |  +---------------| (100)
+|                        |  |     |                  +--Philippe2009_Trichoplax_adhaerens_10228_Gene_0041
+|                        |  |  +--| (74)
+|                        |  |  |  |              +--Chang2015_Daphnia_pulex_6669_psma
+|                        |  |  |  |           +--| (100)
+|                        |  |  |  |           |  +--Philippe2009_Daphnia_pulex_6669_Gene_0041
+|                        |  |  |  |        +--| (93)
+|                        |  |  |  |        |  |     +--Chang2015_Nasonia_vitripennis_7425_psma
+|                        |  |  |  |        |  |  +--| (100)
+|                        |  |  |  |        |  |  |  +--Philippe2009_Nasonia_vitripennis_7425_Gene_0041
+|                        |  |  |  |        |  +--| (100)
+|                        |  |  |  |        |     |  +--Chang2015_Pediculus_humanus_121225_psma
+|                        |  |  |  |        |     +--| (100)
+|                        |  |  |  |        |        +--Philippe2009_Pediculus_humanus_121225_Gene_0041
+|                        |  |  |  |     +--| (52)
+|                        |  |  |  |     |  +--Chang2015_Strigamia_maritima_126957_psma
+|                        |  |  |  |  +--| (95)
+|                        |  |  |  |  |  +--Philippe2009_Anoplodactylus_eroticus_488521_Gene_0041
+|                        |  |  |  +--| (98)
+|                        |  |  |     |  +--Chang2015_Ixodes_scapularis_6945_psma
+|                        |  |  |     +--| (100)
+|                        |  |  |        +--Philippe2009_Ixodes_scapularis_6945_Gene_0041
+|                        |  +--| (44)
+|                        |     |              +--Chang2015_Capitella_teleta_283909_psma
+|                        |     |           +--| (100)
+|                        |     |           |  +--Philippe2009_Capitella_teleta_283909_Gene_0041
+|                        |     |        +--| (74)
+|                        |     |        |  |     +--Chang2015_Helobdella_robusta_6412_psma
+|                        |     |        |  |  +--| (100)
+|                        |     |        |  |  |  +--Philippe2009_Helobdella_robusta_6412_Gene_0041
+|                        |     |        |  +--| (99)
+|                        |     |        |     +--Philippe2009_Tubifex_tubifex_6386_Gene_0041
+|                        |     |     +--| (66)
+|                        |     |     |  |        +--Chang2015_Crassostrea_gigas_29159_psma
+|                        |     |     |  |     +--| (100)
+|                        |     |     |  |     |  +--Philippe2009_Crassostrea_gigas_29159_Gene_0041
+|                        |     |     |  |  +--| (99)
+|                        |     |     |  |  |  |  +--Chang2015_Ilyanassa_obsoleta_1934733_psma
+|                        |     |     |  |  |  +--| (100)
+|                        |     |     |  |  |     +--Philippe2009_Aplysia_californica_6500_Gene_0041
+|                        |     |     |  +--| (94)
+|                        |     |     |     |  +--Chang2015_Octopus_vulgaris_6645_psma
+|                        |     |     |     +--| (97)
+|                        |     |     |        +--Philippe2009_Euprymna_scolopes_6613_Gene_0041
+|                        |     |  +--| (55)
+|                        |     |  |  |     +--Chang2015_Saccoglossus_kowalevskii_10224_psma
+|                        |     |  |  |  +--| (100)
+|                        |     |  |  |  |  +--Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0041
+|                        |     |  |  +--| (69)
+|                        |     |  |     +----Philippe2009_Xenoturbella_bocki_242395_Gene_0041
+|                        |     +--| (81)
+|                        |        |  +--Chang2015_Patiria_miniata_46514_psma
+|                        |        +--| (96)
+|                        |           |  +--Chang2015_Strongylocentrotus_purpuratus_7668_psma
+|                        |           +--| (100)
+|                        |              +--Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0041
+|                     +--| (87)
+|                     |  |           +--Chang2015_Amoebidium_parasiticum_4881_psma
+|                     |  |        +--| (100)
+|                     |  |        |  |    +--Chang2015_Sphaeroforma_arctica_72019_psma
+|                     |  |        |  +----| (100)
+|                     |  |        |       +--Philippe2009_Sphaeroforma_arctica_72019_Gene_0041
+|                     |  |     +--| (96)
+|                     |  |     |  +-------Chang2015_Ministeria_vibrans_134558_psma
+|                     |  |  +--| (95)
+|                     |  |  |  |     +--Chang2015_Capsaspora_owczarzaki_192875_psma
+|                     |  |  |  +-----| (100)
+|                     |  |  |        +--Philippe2009_Capsaspora_owczarzaki_192875_Gene_0041
+|                     |  +--| (98)
+|                     |     |        +--------------------Philippe2009_Allomyces_macrogynus_28583_Gene_0041
+|                     |     +--------| (100)
+|                     |              |     +-----Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0041
+|                     |              |  +--| (97)
+|                     |              |  |  +--Philippe2009_Spizellomyces_punctatus_109760_Gene_0041
+|                     |              +--| (88)
+|                     |                 |   +--Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0041
+|                     |                 +---| (99)
+|                     |                     +--Philippe2009_Rhizopus_oryzae_64495_Gene_0041
+|                  +**| (32)
+|                  |  |          +--Chang2015_Leucetta_chagosensis_185688_psma
+|                  |  |       +--| (99)
+|                  |  |       |  +--Philippe2009_Leucetta_chagosensis_185688_Gene_0041
+|                  |  +-------| (99)
+|                  |          |      +--Chang2015_Sycon_ciliatum_27933_psma
+|                  |          +------| (99)
+|                  |                 |  +--Chang2015_Sycon_coactum_1009717_psma
+|                  |                 +--| (99)
+|                  |                    +--Philippe2009_Sycon_raphanus_56443_Gene_0041
+|               +--| (37)
+|               |  |            +--Chang2015_Amphimedon_queenslandica_400682_psma
+|               |  |         +--| (100)
+|               |  |         |  +--Philippe2009_Amphimedon_queenslandica_400682_Gene_0041
+|               |  |      +--| (100)
+|               |  |      |  +--Chang2015_Petrosia_ficiformis_68564_psma
+|               |  |   +--| (96)
+|               |  |   |  +--Chang2015_Ephydatia_muelleri_6052_psma
+|               |  +---| (83)
+|               |      |  +------Chang2015_Chondrilla_nucula_220712_psma
+|               |      +--| (77)
+|               |         +----Chang2015_Sarcotragus_fasciculatus_1234657_psma
+|            +--| (59)
+|            |  |                +--Chang2015_Aphrocallistes_vastus_83887_psma
+|            |  |             +--| (100)
+|            |  |             |  +--Philippe2009_Heterochone_sp_367900_Gene_0041
+|            |  |  +----------| (100)
+|            |  |  |          |  +--Chang2015_Euplectella_aspergillum_936045_psma
+|            |  |  |          +--| (95)
+|            |  |  |             +--Philippe2009_Oopsacas_minuta_111878_Gene_0041
+|            |  +--| (85)
+|            |     |           +--Chang2015_Aurelia_aurita_6145_psma
+|            |     |        +--| (100)
+|            |     |        |  +--Chang2015_Stomolophus_meleagris_168796_psma
+|            |     |     +--| (88)
+|            |     |     |  +--Chang2015_Tripedalia_cystophora_6141_psma
+|            |     |  +--| (100)
+|            |     |  |  |              +--Chang2015_Clytia_hemisphaerica_252671_psma
+|            |     |  |  |           +--| (100)
+|            |     |  |  |           |  +--Philippe2009_Clytia_hemisphaerica_252671_Gene_0041
+|            |     |  |  |        +--| (60)
+|            |     |  |  |        |  |     +--Chang2015_Hydractinia_polyclina_589945_psma
+|            |     |  |  |        |  |  +--| (75)
+|            |     |  |  |        |  |  |  +--Philippe2009_Podocoryne_carnea_6096_Gene_0041
+|            |     |  |  |        |  +--| (62)
+|            |     |  |  |        |     +--Philippe2009_Hydractinia_echinata_35630_Gene_0041
+|            |     |  |  |     +--| (61)
+|            |     |  |  |     |  +--Chang2015_Nanomia_bijuga_168759_psma
+|            |     |  |  |  +--| (99)
+|            |     |  |  |  |  |  +--Chang2015_Ectopleura_larynx_264052_psma
+|            |     |  |  |  |  +--| (62)
+|            |     |  |  |  |     |  +--Chang2015_Hydra_vulgaris_01_6087_psma
+|            |     |  |  |  |     +--| (100)
+|            |     |  |  |  |        +--Philippe2009_Hydra_magnipapillata_6087_Gene_0041
+|            |     |  |  +--| (100)
+|            |     |  |     +----Chang2015_Craspedacusta_sowerbii_128124_psma
+|            |     +--| (98)
+|            |        |     +-------------------------------------Chang2015_Kudoa_iwatai_269814_psma
+|            |        |  +--| (97)
+|            |        |  |  +-------------------Chang2015_Myxobolus_cerebralis_59783_psma
+|            |        +--| (99)
+|            |           +-----Chang2015_Polypodium_hydriforme_43186_psma
+|         +--| (96)
+|         |  |             +--Chang2015_Beroe_abyssicola_320166_psma
+|         |  |          +--| (97)
+|         |  |          |  |     +--Chang2015_Mnemiopsis_leidyi_27923_psma
+|         |  |          |  |  +--| (100)
+|         |  |          |  |  |  +--Philippe2009_Mnemiopsis_leidyi_27923_Gene_0041
+|         |  |          |  +--| (97)
+|         |  |          |     |  +--Chang2015_Pleurobrachia_pileus_140457_psma
+|         |  |          |     +--| (100)
+|         |  |          |        +--Philippe2009_Pleurobrachia_pileus_140457_Gene_0041
+|         |  |       +--| (97)
+|         |  |       |  +--Chang2015_Euplokamis_dunlapae_1403701_psma
+|         |  +-------| (100)
+|         |          +--Chang2015_Vallicula_multiformis_140489_psma
++---------| (100)
+|         |             +--Chang2015_Monosiga_brevicollis_81824_psma
+|         |      +------| (100)
+|         |      |      +--Philippe2009_Monosiga_brevicollis_81824_Gene_0041
+|         |  +---| (100)
+|         |  |   +-----Chang2015_Salpingoeca_sp_86017_psma
+|         +--| (100)
+|            |         +--Chang2015_Monosiga_ovata_81526_psma
+|            +---------| (100)
+|                      +--Philippe2009_Monosiga_ovata_81526_Gene_0041
+|
++--Chang2015_Stephanoeca_diplocostata_81535_psma
+
+
+Consensus tree in newick format: 
+
+(Chang2015_Acanthoeca_sp_81532_psma:0.2001463775,(((((((((((((Chang2015_Acropora_cervicornis_6130_psma:0.0000020709,Philippe2009_Acropora_millepora_45264_Gene_0041:0.0000020683)100:0.0491420000,(Chang2015_Orbicella_faveolata_48498_psma:0.0135375224,Chang2015_Porites_australiensis_51061_psma:0.0704423998)97:0.0125870000)78:0.0007910000,Chang2015_Pocillopora_damicornis_46731_psma:0.0255643027)100:0.0731600000,((Chang2015_Aiptasia_pallida_1720309_psma:0.0393944680,((Chang2015_Bolocera_tuediae_1163374_psma:0.0824109828,Chang2015_Urticina_eques_417072_psma:0.0414966595)90:0.0304510000,Chang2015_Hormathia_digitata_1163372_psma:0.0593298415)59:0.0236150000)99:0.0708380000,(Chang2015_Edwardsiella_lineata_132407_psma:0.0529822438,(Chang2015_Nematostella_vectensis_45351_psma:0.0000020709,Philippe2009_Nematostella_vectensis_45351_Gene_0041:0.0000020683)100:0.0411400000)100:0.0499130000)98:0.0625590000)66:0.0127990000,((Chang2015_Corticium_candelabrum_121492_psma:0.2909725143,(Chang2015_Oscarella_carmela_386100_psma:0.0990764832,Chang2015_Oscarella_sp_SN-2011_386100_psma:0.2066548380)100:0.2074210000)100:0.1640250000,(Chang2015_Eunicella_cavolinii_317547_psma:0.0000026102,Chang2015_Gorgonia_ventalina_204384_psma:0.0666589708)100:0.2901370000)79:0.0528370000)67:0.0359600000,(((Chang2015_Botryllus_schlosseri_30301_psma:0.1479166477,Philippe2009_Molgula_tectiformis_30286_Gene_0041:0.5280712804)99:0.1199740000,(Chang2015_Ciona_intestinalis_7719_psma:0.0732384861,Philippe2009_Ciona_savignyi_51511_Gene_0041:0.0250175716)100:0.1586380000)100:0.3089450000,((Chang2015_Homo_sapiens_9606_psma:0.0260348759,(Chang2015_Latimeria_menadoensis_106881_psma:0.0656923542,Philippe2009_Danio_rerio_7955_Gene_0041:0.0416135099)67:0.0000020000)98:0.0689360000,(Chang2015_Petromyzon_marinus_7757_psma:0.0000028963,Philippe2009_Petromyzon_marinus_7757_Gene_0041:0.0000020683)100:0.1303870000)100:0.1730350000)65:0.0579760000)53:0.0359700000,((((Chang2015_Branchiostoma_floridae_7739_psma:0.0000023481,Philippe2009_Branchiostoma_floridae_7739_Gene_0041:0.0000020683)100:0.1558220000,(Chang2015_Trichoplax_adhaerens_10228_psma:0.0000025042,Philippe2009_Trichoplax_adhaerens_10228_Gene_0041:0.0000020683)100:0.9489220000)69:0.0187620000,(((((Chang2015_Daphnia_pulex_6669_psma:0.0000023642,Philippe2009_Daphnia_pulex_6669_Gene_0041:0.0000020683)100:0.2263230000,((Chang2015_Nasonia_vitripennis_7425_psma:0.0000020862,Philippe2009_Nasonia_vitripennis_7425_Gene_0041:0.0000020683)100:0.1824170000,(Chang2015_Pediculus_humanus_121225_psma:0.0000022249,Philippe2009_Pediculus_humanus_121225_Gene_0041:0.0000020683)100:0.1902520000)100:0.1393060000)93:0.0864310000,Chang2015_Strigamia_maritima_126957_psma:0.1497414526)52:0.0659420000,Philippe2009_Anoplodactylus_eroticus_488521_Gene_0041:0.2349422759)95:0.0213450000,(Chang2015_Ixodes_scapularis_6945_psma:0.0000026216,Philippe2009_Ixodes_scapularis_6945_Gene_0041:0.0000020683)100:0.1690210000)98:0.0541860000)74:0.0318170000,(((((Chang2015_Capitella_teleta_283909_psma:0.0000026102,Philippe2009_Capitella_teleta_283909_Gene_0041:0.0000020683)100:0.1670440000,((Chang2015_Helobdella_robusta_6412_psma:0.0000020683,Philippe2009_Helobdella_robusta_6412_Gene_0041:0.0000020683)100:0.1364300000,Philippe2009_Tubifex_tubifex_6386_Gene_0041:0.1184123206)99:0.0799390000)74:0.0284240000,(((Chang2015_Crassostrea_gigas_29159_psma:0.0000026102,Philippe2009_Crassostrea_gigas_29159_Gene_0041:0.0094975382)100:0.0848840000,(Chang2015_Ilyanassa_obsoleta_1934733_psma:0.1552150359,Philippe2009_Aplysia_californica_6500_Gene_0041:0.1192365552)100:0.1225900000)99:0.0389770000,(Chang2015_Octopus_vulgaris_6645_psma:0.1420876564,Philippe2009_Euprymna_scolopes_6613_Gene_0041:0.0921381814)97:0.0463230000)94:0.0554260000)66:0.0219400000,((Chang2015_Saccoglossus_kowalevskii_10224_psma:0.0000023481,Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0041:0.0000020683)100:0.1692170000,Philippe2009_Xenoturbella_bocki_242395_Gene_0041:0.3334029596)69:0.0194270000)55:0.0294600000,(Chang2015_Patiria_miniata_46514_psma:0.1055238716,(Chang2015_Strongylocentrotus_purpuratus_7668_psma:0.0000023481,Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0041:0.0000020683)100:0.1262900000)96:0.0239860000)81:0.0691350000)44:0.0359980000)89:0.0548480000,((((Chang2015_Amoebidium_parasiticum_4881_psma:0.2062199986,(Chang2015_Sphaeroforma_arctica_72019_psma:0.0000026216,Philippe2009_Sphaeroforma_arctica_72019_Gene_0041:0.0000020683)100:0.3152720000)100:0.1279370000,Chang2015_Ministeria_vibrans_134558_psma:0.4960515395)96:0.0402570000,(Chang2015_Capsaspora_owczarzaki_192875_psma:0.0000020862,Philippe2009_Capsaspora_owczarzaki_192875_Gene_0041:0.0000020683)100:0.3605400000)95:0.0677750000,(Philippe2009_Allomyces_macrogynus_28583_Gene_0041:1.2927232153,((Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0041:0.4141403169,Philippe2009_Spizellomyces_punctatus_109760_Gene_0041:0.1269496069)97:0.0945080000,(Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0041:0.1602934552,Philippe2009_Rhizopus_oryzae_64495_Gene_0041:0.0055209568)99:0.2532920000)88:0.1625370000)100:0.5616530000)98:0.1551120000)87:0.0806410000,((Chang2015_Leucetta_chagosensis_185688_psma:0.0000020760,Philippe2009_Leucetta_chagosensis_185688_Gene_0041:0.0000020683)99:0.2125120000,(Chang2015_Sycon_ciliatum_27933_psma:0.0289045294,(Chang2015_Sycon_coactum_1009717_psma:0.0305536766,Philippe2009_Sycon_raphanus_56443_Gene_0041:0.0279218234)99:0.0506260000)99:0.4467130000)99:0.4757590000)32:0.0000020000,((((Chang2015_Amphimedon_queenslandica_400682_psma:0.0000020760,Philippe2009_Amphimedon_queenslandica_400682_Gene_0041:0.0000020683)100:0.1772910000,Chang2015_Petrosia_ficiformis_68564_psma:0.1110634762)100:0.0811760000,Chang2015_Ephydatia_muelleri_6052_psma:0.1654931813)96:0.0697970000,(Chang2015_Chondrilla_nucula_220712_psma:0.4356839136,Chang2015_Sarcotragus_fasciculatus_1234657_psma:0.2969259183)77:0.0728200000)83:0.2702800000)37:0.0142360000,(((Chang2015_Aphrocallistes_vastus_83887_psma:0.0066762271,Philippe2009_Heterochone_sp_367900_Gene_0041:0.0225167073)100:0.1956500000,(Chang2015_Euplectella_aspergillum_936045_psma:0.1353368850,Philippe2009_Oopsacas_minuta_111878_Gene_0041:0.0648493501)95:0.1198650000)100:0.6687390000,((((Chang2015_Aurelia_aurita_6145_psma:0.0500342324,Chang2015_Stomolophus_meleagris_168796_psma:0.0703590544)100:0.1187640000,Chang2015_Tripedalia_cystophora_6141_psma:0.2328277938)88:0.0612000000,(((((Chang2015_Clytia_hemisphaerica_252671_psma:0.0000020760,Philippe2009_Clytia_hemisphaerica_252671_Gene_0041:0.0000020683)100:0.0712020000,((Chang2015_Hydractinia_polyclina_589945_psma:0.0228414596,Philippe2009_Podocoryne_carnea_6096_Gene_0041:0.0000020683)75:0.0125690000,Philippe2009_Hydractinia_echinata_35630_Gene_0041:0.0000020683)62:0.0112860000)60:0.0177890000,Chang2015_Nanomia_bijuga_168759_psma:0.0783097441)61:0.0126810000,(Chang2015_Ectopleura_larynx_264052_psma:0.1384591771,(Chang2015_Hydra_vulgaris_01_6087_psma:0.0000020760,Philippe2009_Hydra_magnipapillata_6087_Gene_0041:0.0000020683)100:0.1344800000)62:0.0349860000)99:0.0497600000,Chang2015_Craspedacusta_sowerbii_128124_psma:0.3008308140)100:0.0738640000)100:0.1419690000,((Chang2015_Kudoa_iwatai_269814_psma:2.2724176841,Chang2015_Myxobolus_cerebralis_59783_psma:1.1979322469)97:0.1301640000,Chang2015_Polypodium_hydriforme_43186_psma:0.3643236343)99:0.2038690000)98:0.0589760000)85:0.1410250000)59:0.0481830000,(((Chang2015_Beroe_abyssicola_320166_psma:0.0153200665,((Chang2015_Mnemiopsis_leidyi_27923_psma:0.0000026102,Philippe2009_Mnemiopsis_leidyi_27923_Gene_0041:0.0000020683)100:0.0424670000,(Chang2015_Pleurobrachia_pileus_140457_psma:0.0000026216,Philippe2009_Pleurobrachia_pileus_140457_Gene_0041:0.0000020683)100:0.1133150000)97:0.0135200000)97:0.0454810000,Chang2015_Euplokamis_dunlapae_1403701_psma:0.0920647345)97:0.0347770000,Chang2015_Vallicula_multiformis_140489_psma:0.0251394107)100:0.5214070000)96:0.0950790000,(((Chang2015_Monosiga_brevicollis_81824_psma:0.0000025042,Philippe2009_Monosiga_brevicollis_81824_Gene_0041:0.0000020683)100:0.4375840000,Chang2015_Salpingoeca_sp_86017_psma:0.3905017050)100:0.2644930000,(Chang2015_Monosiga_ovata_81526_psma:0.0000025042,Philippe2009_Monosiga_ovata_81526_Gene_0041:0.0160440556)100:0.6428230000)100:0.1988930000)100:0.6012600000,Chang2015_Stephanoeca_diplocostata_81535_psma:0.1855991709);
+
+TIME STAMP
+----------
+
+Date and time: Mon Aug 29 20:18:39 2022
+Total CPU time used: 17131.22728 seconds (4h:45m:31s)
+Total wall-clock time used: 17217.46083 seconds (4h:46m:57s)
+

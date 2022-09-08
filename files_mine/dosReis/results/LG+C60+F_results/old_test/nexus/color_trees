@@ -1,0 +1,7 @@
+
+while read line;
+do	
+	Rscript convertNewick2Nexus_test.R ../iqtree/$line/LG+C60+F_$line.contree $line.nex
+	perl /proj/metazoa_phylo/private/ShareScripts/metazoa_phylo_TreeColors.pl -i /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/nexus/$line.nex -o /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/colored_trees/$line.colors.nex -p /proj/metazoa_phylo/private/ShareScripts/taxon_table.ManuallyCorrected -c /proj/metazoa_phylo/private/ShareScripts/taxon_table.ColoringScheme
+
+done < /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/finished_trees.txt

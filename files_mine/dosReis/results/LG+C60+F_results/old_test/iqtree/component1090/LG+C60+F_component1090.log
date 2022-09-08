@@ -1,0 +1,295 @@
+IQ-TREE version 1.5.3 for Linux 64-bit built Mar 12 2017
+Copyright (c) 2011-2016 Nguyen Lam Tung, Olga Chernomor, Arndt von Haeseler and Bui Quang Minh.
+
+Host:    r273.uppmax.uu.se (AVX2, FMA3, 125 GB RAM)
+Command: iqtree -s /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component1090.mafft -m LG+C60+F -nt 1 -bb 1000 -pre /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1090/LG+C60+F_component1090
+Seed:    265000 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 29 15:31:35 2022
+Kernel:  AVX+FMA
+
+NOTE: Consider using the multicore version because your CPU has 20 cores!
+
+Reading alignment file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component1090.mafft ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 71 sequences with 146 columns and 146 patterns (121 informative sites, 22 constant sites)
+WARNING: Some sequence names are changed as follows:
+Dunn2008:Acanthoscurria_gomesiana:115339:Tribe550 -> Dunn2008_Acanthoscurria_gomesiana_115339_Tribe550
+Dunn2008:Acropora_millepora:45264:Tribe550 -> Dunn2008_Acropora_millepora_45264_Tribe550
+Dunn2008:Anoplodactylus_eroticus:488521:Tribe550 -> Dunn2008_Anoplodactylus_eroticus_488521_Tribe550
+Dunn2008:Argopecten_irradians:31199:Tribe550 -> Dunn2008_Argopecten_irradians_31199_Tribe550
+Dunn2008:Asterina_pectinifera:7594:Tribe550 -> Dunn2008_Asterina_pectinifera_7594_Tribe550
+Dunn2008:Biomphalaria_glabrata:6526:Tribe550 -> Dunn2008_Biomphalaria_glabrata_6526_Tribe550
+Dunn2008:Boophilus_microplus:6941:Tribe550 -> Dunn2008_Boophilus_microplus_6941_Tribe550
+Dunn2008:Branchiostoma_floridae:7739:Tribe550 -> Dunn2008_Branchiostoma_floridae_7739_Tribe550
+Dunn2008:Capitella_teleta:283909:Tribe550 -> Dunn2008_Capitella_teleta_283909_Tribe550
+Dunn2008:Carcinus_maenas:6759:Tribe550 -> Dunn2008_Carcinus_maenas_6759_Tribe550
+Dunn2008:Cerebratulus_lacteus:6221:Tribe550 -> Dunn2008_Cerebratulus_lacteus_6221_Tribe550
+Dunn2008:Chaetopterus_variopedatus:34590:Tribe550 -> Dunn2008_Chaetopterus_variopedatus_34590_Tribe550
+Dunn2008:Ciona_intestinalis:7719:Tribe550 -> Dunn2008_Ciona_intestinalis_7719_Tribe550
+Dunn2008:Daphnia_magna:35525:Tribe550 -> Dunn2008_Daphnia_magna_35525_Tribe550
+Dunn2008:Echinoderes_horni:488522:Tribe550 -> Dunn2008_Echinoderes_horni_488522_Tribe550
+Dunn2008:Euperipatoides_kanangrensis:488523:Tribe550 -> Dunn2008_Euperipatoides_kanangrensis_488523_Tribe550
+Dunn2008:Euprymna_scolopes:6613:Tribe550 -> Dunn2008_Euprymna_scolopes_6613_Tribe550
+Dunn2008:Fenneropenaeus_chinensis:139456:Tribe550 -> Dunn2008_Fenneropenaeus_chinensis_139456_Tribe550
+Dunn2008:Gallus_gallus:9031:Tribe550 -> Dunn2008_Gallus_gallus_9031_Tribe550
+Dunn2008:Homo_sapiens:9606:Tribe550 -> Dunn2008_Homo_sapiens_9606_Tribe550
+Dunn2008:Hydra_vulgaris_01:6087:Tribe550 -> Dunn2008_Hydra_vulgaris_01_6087_Tribe550
+Dunn2008:Hydractinia_echinata:35630:Tribe550 -> Dunn2008_Hydractinia_echinata_35630_Tribe550
+Dunn2008:Lumbricus_rubellus:35632:Tribe550 -> Dunn2008_Lumbricus_rubellus_35632_Tribe550
+Dunn2008:Macrostomum_lignano:282301:Tribe550 -> Dunn2008_Macrostomum_lignano_282301_Tribe550
+Dunn2008:Mnemiopsis_leidyi:27923:Tribe550 -> Dunn2008_Mnemiopsis_leidyi_27923_Tribe550
+Dunn2008:Monosiga_ovata:81526:Tribe550 -> Dunn2008_Monosiga_ovata_81526_Tribe550
+Dunn2008:Mytilus_galloprovincialis:29158:Tribe550 -> Dunn2008_Mytilus_galloprovincialis_29158_Tribe550
+Dunn2008:Nematostella_vectensis:45351:Tribe550 -> Dunn2008_Nematostella_vectensis_45351_Tribe550
+Dunn2008:Paraplanocera_oligoglena:1468194:Tribe550 -> Dunn2008_Paraplanocera_oligoglena_1468194_Tribe550
+Dunn2008:Ptychodera_flava:63121:Tribe550 -> Dunn2008_Ptychodera_flava_63121_Tribe550
+Dunn2008:Saccoglossus_kowalevskii:10224:Tribe550 -> Dunn2008_Saccoglossus_kowalevskii_10224_Tribe550
+Dunn2008:Schmidtea_mediterranea:79327:Tribe550 -> Dunn2008_Schmidtea_mediterranea_79327_Tribe550
+Dunn2008:Scutigera_coleoptrata:29022:Tribe550 -> Dunn2008_Scutigera_coleoptrata_29022_Tribe550
+Dunn2008:Strongylocentrotus_purpuratus:7668:Tribe550 -> Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe550
+Dunn2008:Terebratalia_transversa:34513:Tribe550 -> Dunn2008_Terebratalia_transversa_34513_Tribe550
+Dunn2008:Themiste_lageniformis:216211:Tribe550 -> Dunn2008_Themiste_lageniformis_216211_Tribe550
+Dunn2008:Trichinella_spiralis:6334:Tribe550 -> Dunn2008_Trichinella_spiralis_6334_Tribe550
+Dunn2008:Xenoturbella_bocki:242395:Tribe550 -> Dunn2008_Xenoturbella_bocki_242395_Tribe550
+Dunn2008:Xiphinema_index:46003:Tribe550 -> Dunn2008_Xiphinema_index_46003_Tribe550
+Ryan2013_est:Asterina_pectinifera:7594:gene126 -> Ryan2013_est_Asterina_pectinifera_7594_gene126
+Ryan2013_est:Strongylocentrotus_purpuratus:7668:gene126 -> Ryan2013_est_Strongylocentrotus_purpuratus_7668_gene126
+Ryan2013_est:Capitella_teleta:283909:gene126 -> Ryan2013_est_Capitella_teleta_283909_gene126
+Ryan2013_est:Branchiostoma_floridae:7739:gene126 -> Ryan2013_est_Branchiostoma_floridae_7739_gene126
+Ryan2013_est:Helobdella_robusta:6412:gene126 -> Ryan2013_est_Helobdella_robusta_6412_gene126
+Ryan2013_est:Lottia_gigantea:225164:gene126 -> Ryan2013_est_Lottia_gigantea_225164_gene126
+Ryan2013_est:Saccoglossus_kowalevskii:10224:gene126 -> Ryan2013_est_Saccoglossus_kowalevskii_10224_gene126
+Ryan2013_est:Drosophila_melanogaster:7227:gene126 -> Ryan2013_est_Drosophila_melanogaster_7227_gene126
+Ryan2013_est:Anoplodactylus_eroticus:488521:gene126 -> Ryan2013_est_Anoplodactylus_eroticus_488521_gene126
+Ryan2013_est:Daphnia_pulex:6669:gene126 -> Ryan2013_est_Daphnia_pulex_6669_gene126
+Ryan2013_est:Petromyzon_marinus:7757:gene126 -> Ryan2013_est_Petromyzon_marinus_7757_gene126
+Ryan2013_est:Acropora_palmata:6131:gene126 -> Ryan2013_est_Acropora_palmata_6131_gene126
+Ryan2013_est:Acropora_millepora:45264:gene126 -> Ryan2013_est_Acropora_millepora_45264_gene126
+Ryan2013_est:Nematostella_vectensis:45351:gene126 -> Ryan2013_est_Nematostella_vectensis_45351_gene126
+Ryan2013_est:Anemonia_viridis:51769:gene126 -> Ryan2013_est_Anemonia_viridis_51769_gene126
+Ryan2013_est:Hydra_vulgaris_01:6087:gene126 -> Ryan2013_est_Hydra_vulgaris_01_6087_gene126
+Ryan2013_est:Crassostrea_virginica:6565:gene126 -> Ryan2013_est_Crassostrea_virginica_6565_gene126
+Ryan2013_est:Schmidtea_mediterranea:79327:gene126 -> Ryan2013_est_Schmidtea_mediterranea_79327_gene126
+Ryan2013_est:Cerebratulus_lacteus:6221:gene126 -> Ryan2013_est_Cerebratulus_lacteus_6221_gene126
+Ryan2013_est:Hydractinia_echinata:35630:gene126 -> Ryan2013_est_Hydractinia_echinata_35630_gene126
+Ryan2013_est:Metridium_senile:6116:gene126 -> Ryan2013_est_Metridium_senile_6116_gene126
+Ryan2013_est:Orbicella_faveolata:48498:gene126 -> Ryan2013_est_Orbicella_faveolata_48498_gene126
+Ryan2013_est:Euprymna_scolopes:6613:gene126 -> Ryan2013_est_Euprymna_scolopes_6613_gene126
+Ryan2013_est:Boophilus_microplus:6941:gene126 -> Ryan2013_est_Boophilus_microplus_6941_gene126
+Ryan2013_est:Gallus_gallus:9031:gene126 -> Ryan2013_est_Gallus_gallus_9031_gene126
+Ryan2013_est:Terebratalia_transversa:34513:gene126 -> Ryan2013_est_Terebratalia_transversa_34513_gene126
+Ryan2013_est:Xiphinema_index:46003:gene126 -> Ryan2013_est_Xiphinema_index_46003_gene126
+Ryan2013_est:Paraplanocera_oligoglena:1468194:gene126 -> Ryan2013_est_Paraplanocera_oligoglena_1468194_gene126
+Ryan2013_est:Echinoderes_horni:488522:gene126 -> Ryan2013_est_Echinoderes_horni_488522_gene126
+Ryan2013_est:Ptychodera_flava:63121:gene126 -> Ryan2013_est_Ptychodera_flava_63121_gene126
+Ryan2013_est:Podocoryna_carnea:6096:gene126 -> Ryan2013_est_Podocoryna_carnea_6096_gene126
+Ryan2013_est:Xenoturbella_bocki:242395:gene126 -> Ryan2013_est_Xenoturbella_bocki_242395_gene126
+
+                                                         Gap/Ambiguity  Composition  p-value
+   1  Dunn2008_Acanthoscurria_gomesiana_115339_Tribe550         26.03%    passed     96.79%
+   2  Dunn2008_Acropora_millepora_45264_Tribe550                38.36%    passed     31.66%
+   3  Dunn2008_Anoplodactylus_eroticus_488521_Tribe550          26.03%    passed     99.21%
+   4  Dunn2008_Argopecten_irradians_31199_Tribe550              26.03%    passed     59.34%
+   5  Dunn2008_Asterina_pectinifera_7594_Tribe550               33.56%    passed     95.76%
+   6  Dunn2008_Biomphalaria_glabrata_6526_Tribe550              26.03%    passed     79.77%
+   7  Dunn2008_Boophilus_microplus_6941_Tribe550                26.03%    passed     93.34%
+   8  Dunn2008_Branchiostoma_floridae_7739_Tribe550             26.03%    passed     44.81%
+   9  Dunn2008_Capitella_teleta_283909_Tribe550                 26.03%    passed     62.47%
+  10  Dunn2008_Carcinus_maenas_6759_Tribe550                    26.03%    passed     98.35%
+  11  Dunn2008_Cerebratulus_lacteus_6221_Tribe550               26.03%    passed     86.17%
+  12  Dunn2008_Chaetopterus_variopedatus_34590_Tribe550         26.03%    passed     79.62%
+  13  Dunn2008_Ciona_intestinalis_7719_Tribe550                 25.34%    passed     68.88%
+  14  Dunn2008_Daphnia_magna_35525_Tribe550                     26.03%    passed     98.22%
+  15  Dunn2008_Echinoderes_horni_488522_Tribe550                24.66%    passed     96.40%
+  16  Dunn2008_Euperipatoides_kanangrensis_488523_Tribe550      69.86%    passed     32.58%
+  17  Dunn2008_Euprymna_scolopes_6613_Tribe550                  26.03%    passed     99.93%
+  18  Dunn2008_Fenneropenaeus_chinensis_139456_Tribe550         26.03%    passed     98.49%
+  19  Dunn2008_Gallus_gallus_9031_Tribe550                      52.74%    passed     60.42%
+  20  Dunn2008_Homo_sapiens_9606_Tribe550                       26.03%    passed     45.93%
+  21  Dunn2008_Hydra_vulgaris_01_6087_Tribe550                  29.45%    passed     90.97%
+  22  Dunn2008_Hydractinia_echinata_35630_Tribe550              34.25%    passed     94.63%
+  23  Dunn2008_Lumbricus_rubellus_35632_Tribe550                26.03%    passed     99.70%
+  24  Dunn2008_Macrostomum_lignano_282301_Tribe550              26.71%    passed     59.85%
+  25  Dunn2008_Mnemiopsis_leidyi_27923_Tribe550                 30.82%    failed      0.05%
+  26  Dunn2008_Monosiga_ovata_81526_Tribe550                    44.52%    passed     28.33%
+  27  Dunn2008_Mytilus_galloprovincialis_29158_Tribe550         39.04%    passed     99.40%
+  28  Dunn2008_Nematostella_vectensis_45351_Tribe550            34.93%    passed     76.33%
+  29  Dunn2008_Paraplanocera_oligoglena_1468194_Tribe550        34.93%    passed     84.70%
+  30  Dunn2008_Ptychodera_flava_63121_Tribe550                  33.56%    passed     45.58%
+  31  Dunn2008_Saccoglossus_kowalevskii_10224_Tribe550          31.51%    passed     25.72%
+  32  Dunn2008_Schmidtea_mediterranea_79327_Tribe550            26.03%    passed     54.02%
+  33  Dunn2008_Scutigera_coleoptrata_29022_Tribe550             26.03%    passed     41.61%
+  34  Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe550      73.29%    passed     84.45%
+  35  Dunn2008_Terebratalia_transversa_34513_Tribe550           26.03%    passed     92.57%
+  36  Dunn2008_Themiste_lageniformis_216211_Tribe550            47.95%    passed     98.88%
+  37  Dunn2008_Trichinella_spiralis_6334_Tribe550               26.71%    passed     98.81%
+  38  Dunn2008_Xenoturbella_bocki_242395_Tribe550               25.34%    passed     97.21%
+  39  Dunn2008_Xiphinema_index_46003_Tribe550                   26.03%    passed     95.38%
+  40  Ryan2013_est_Asterina_pectinifera_7594_gene126            21.23%    passed     90.14%
+  41  Ryan2013_est_Strongylocentrotus_purpuratus_7668_gene126   21.23%    passed     99.73%
+  42  Ryan2013_est_Capitella_teleta_283909_gene126              23.97%    passed     71.33%
+  43  Ryan2013_est_Branchiostoma_floridae_7739_gene126          22.60%    passed     53.07%
+  44  Ryan2013_est_Helobdella_robusta_6412_gene126              23.29%    passed     99.50%
+  45  Ryan2013_est_Lottia_gigantea_225164_gene126               35.62%    passed     77.48%
+  46  Ryan2013_est_Saccoglossus_kowalevskii_10224_gene126       23.29%    passed     38.06%
+  47  Ryan2013_est_Drosophila_melanogaster_7227_gene126         23.29%    passed     96.50%
+  48  Ryan2013_est_Anoplodactylus_eroticus_488521_gene126       23.29%    passed     99.30%
+  49  Ryan2013_est_Daphnia_pulex_6669_gene126                   23.29%    passed     95.67%
+  50  Ryan2013_est_Petromyzon_marinus_7757_gene126              34.25%    passed     72.77%
+  51  Ryan2013_est_Acropora_palmata_6131_gene126                31.51%    passed     39.74%
+  52  Ryan2013_est_Acropora_millepora_45264_gene126             32.19%    passed     31.42%
+  53  Ryan2013_est_Nematostella_vectensis_45351_gene126         30.14%    passed     92.91%
+  54  Ryan2013_est_Anemonia_viridis_51769_gene126               31.51%    passed     96.00%
+  55  Ryan2013_est_Hydra_vulgaris_01_6087_gene126               30.14%    passed     93.25%
+  56  Ryan2013_est_Crassostrea_virginica_6565_gene126           28.08%    passed     80.54%
+  57  Ryan2013_est_Schmidtea_mediterranea_79327_gene126         23.97%    passed     26.33%
+  58  Ryan2013_est_Cerebratulus_lacteus_6221_gene126            23.29%    passed     97.54%
+  59  Ryan2013_est_Hydractinia_echinata_35630_gene126           31.51%    passed     95.47%
+  60  Ryan2013_est_Metridium_senile_6116_gene126                36.30%    passed     79.51%
+  61  Ryan2013_est_Orbicella_faveolata_48498_gene126            31.51%    passed     66.91%
+  62  Ryan2013_est_Euprymna_scolopes_6613_gene126               23.97%    passed     94.00%
+  63  Ryan2013_est_Boophilus_microplus_6941_gene126             23.29%    passed     97.67%
+  64  Ryan2013_est_Gallus_gallus_9031_gene126                   22.60%    passed     99.10%
+  65  Ryan2013_est_Terebratalia_transversa_34513_gene126        23.29%    passed     86.76%
+  66  Ryan2013_est_Xiphinema_index_46003_gene126                23.29%    passed     97.11%
+  67  Ryan2013_est_Paraplanocera_oligoglena_1468194_gene126     23.29%    passed     87.87%
+  68  Ryan2013_est_Echinoderes_horni_488522_gene126             19.86%    passed     44.20%
+  69  Ryan2013_est_Ptychodera_flava_63121_gene126               21.23%    passed     36.62%
+  70  Ryan2013_est_Podocoryna_carnea_6096_gene126               31.51%    passed     90.75%
+  71  Ryan2013_est_Xenoturbella_bocki_242395_gene126            22.60%    passed     97.74%
+WARNING: 3 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                                     29.47%  1 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.028 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 265000)...
+Model LG+C60+F is alias for LG+POISSON+G+FMIX{C60pi1:1:0.0169698865,C60pi2:1:0.0211683374,C60pi3:1:0.0276589079,C60pi4:1:0.0065675964,C60pi5:1:0.0141221416,C60pi6:1:0.0068774834,C60pi7:1:0.0146909701,C60pi8:1:0.0067225777,C60pi9:1:0.0018396660,C60pi10:1:0.0102547197,C60pi11:1:0.0230896163,C60pi12:1:0.0057941033,C60pi13:1:0.0125394534,C60pi14:1:0.0204526478,C60pi15:1:0.0070629602,C60pi16:1:0.0117982741,C60pi17:1:0.0068334668,C60pi18:1:0.0433775839,C60pi19:1:0.0318278731,C60pi20:1:0.0222546108,C60pi21:1:0.0102264969,C60pi22:1:0.0150545891,C60pi23:1:0.0134159878,C60pi24:1:0.0148552065,C60pi25:1:0.0239111516,C60pi26:1:0.0128776278,C60pi27:1:0.0222318842,C60pi28:1:0.0247444742,C60pi29:1:0.0214274810,C60pi30:1:0.0115001882,C60pi31:1:0.0076017389,C60pi32:1:0.0130258568,C60pi33:1:0.0093701965,C60pi34:1:0.0467194264,C60pi35:1:0.0441940314,C60pi36:1:0.0322263154,C60pi37:1:0.0402999891,C60pi38:1:0.0150234227,C60pi39:1:0.0104589903,C60pi40:1:0.0214742395,C60pi41:1:0.0154957836,C60pi42:1:0.0101789953,C60pi43:1:0.0227980379,C60pi44:1:0.0123204539,C60pi45:1:0.0066777583,C60pi46:1:0.0004150083,C60pi47:1:0.0344385130,C60pi48:1:0.0113663379,C60pi49:1:0.0127143049,C60pi50:1:0.0124323741,C60pi51:1:0.0262124415,C60pi52:1:0.0064994957,C60pi53:1:0.0103203293,C60pi54:1:0.0142463512,C60pi55:1:0.0215600067,C60pi56:1:0.0199150700,C60pi57:1:0.0038964200,C60pi58:1:0.0113448855,C60pi59:1:0.0128595846,C60pi60:1:0.0117656776}+F
+
+NOTE: 451 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -8290.573
+2. Current log-likelihood: -7832.410
+3. Current log-likelihood: -7828.626
+4. Current log-likelihood: -7828.289
+Optimal log-likelihood: -7828.265
+Mixture weights: 0.237 0.000 0.000 0.000 0.000 0.010 0.000 0.005 0.000 0.021 0.170 0.028 0.000 0.000 0.000 0.000 0.000 0.062 0.000 0.000 0.000 0.001 0.033 0.000 0.000 0.020 0.044 0.000 0.000 0.000 0.070 0.000 0.000 0.015 0.007 0.013 0.009 0.006 0.000 0.000 0.005 0.017 0.012 0.000 0.008 0.000 0.000 0.059 0.016 0.000 0.075 0.003 0.010 0.000 0.000 0.000 0.013 0.029 0.000 0.000 0.000
+Gamma shape alpha: 1.040
+Parameters optimization took 4 rounds (30.622 sec)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+Computing ML distances based on estimated model parameters... 1.367 sec
+WARNING: Some pairwise ML distances are too long (saturated)
+Computing BIONJ tree...
+0.005 seconds
+Log-likelihood of BIONJ tree: -7838.712
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 1.343 second
+Computing log-likelihood of 98 initial trees ... 361.822 seconds
+Current best score: -7828.265
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 1: -7803.445
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 3: -7802.028
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 8: -7796.298
+Iteration 10 / LogL: -7810.890 / Time: 0h:14m:52s
+Iteration 20 / LogL: -7799.223 / Time: 0h:23m:24s
+Finish initializing candidate tree set (20)
+Current best tree score: -7796.298 / CPU time: 1342.656
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 21: -7796.141
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 22: -7789.638
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 24: -7788.851
+Iteration 30 / LogL: -7795.392 / Time: 0h:31m:49s (1h:43m:8s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 31: -7788.530
+Iteration 40 / LogL: -7788.932 / Time: 0h:40m:31s (1h:34m:33s left)
+BETTER TREE FOUND at iteration 41: -7788.530
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 46: -7788.360
+Iteration 50 / LogL: -7790.610 / Time: 0h:48m:41s (1h:35m:22s left)
+Log-likelihood cutoff on original alignment: -7838.268
+Iteration 60 / LogL: -7788.614 / Time: 0h:56m:18s (1h:22m:4s left)
+Iteration 70 / LogL: -7788.600 / Time: 1h:4m:36s (1h:11m:9s left)
+Iteration 80 / LogL: -7789.921 / Time: 1h:12m:36s (1h:0m:39s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 84: -7788.028
+Iteration 90 / LogL: -7788.973 / Time: 1h:20m:31s (1h:25m:3s left)
+Iteration 100 / LogL: -7788.436 / Time: 1h:28m:37s (1h:15m:11s left)
+Log-likelihood cutoff on original alignment: -7838.268
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.996
+Iteration 110 / LogL: -7788.395 / Time: 1h:36m:29s (1h:19m:40s left)
+Iteration 120 / LogL: -7789.336 / Time: 1h:44m:10s (1h:10m:2s left)
+BETTER TREE FOUND at iteration 123: -7788.028
+Iteration 130 / LogL: -7790.876 / Time: 1h:52m:22s (1h:21m:0s left)
+Iteration 140 / LogL: -7789.269 / Time: 2h:0m:3s (1h:11m:41s left)
+Iteration 150 / LogL: -7788.029 / Time: 2h:8m:0s (1h:2m:42s left)
+Log-likelihood cutoff on original alignment: -7838.268
+Iteration 160 / LogL: -7788.262 / Time: 2h:15m:51s (0h:53m:49s left)
+Iteration 170 / LogL: -7789.652 / Time: 2h:23m:41s (0h:45m:3s left)
+Iteration 180 / LogL: -7788.180 / Time: 2h:31m:18s (0h:36m:20s left)
+Iteration 190 / LogL: -7788.033 / Time: 2h:39m:11s (0h:27m:47s left)
+Iteration 200 / LogL: -7790.098 / Time: 2h:46m:57s (0h:19m:17s left)
+Log-likelihood cutoff on original alignment: -7838.268
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+Iteration 210 / LogL: -7788.263 / Time: 2h:54m:51s (1h:15m:18s left)
+Iteration 220 / LogL: -7788.262 / Time: 3h:2m:59s (1h:6m:50s left)
+TREE SEARCH COMPLETED AFTER 224 ITERATIONS / Time: 3h:6m:2s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -7788.028
+Optimal log-likelihood: -7788.027
+Mixture weights: 0.234 0.000 0.000 0.000 0.000 0.013 0.000 0.008 0.000 0.023 0.155 0.029 0.000 0.000 0.000 0.000 0.000 0.060 0.000 0.000 0.000 0.001 0.033 0.000 0.000 0.017 0.047 0.000 0.000 0.000 0.060 0.000 0.000 0.022 0.008 0.009 0.009 0.007 0.000 0.000 0.008 0.018 0.010 0.000 0.035 0.000 0.000 0.063 0.013 0.000 0.057 0.000 0.017 0.000 0.000 0.000 0.014 0.033 0.000 0.000 0.000
+Gamma shape alpha: 1.080
+Parameters optimization took 1 rounds (4.871 sec)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BEST SCORE FOUND : -7788.027
+Creating bootstrap support values...
+Split supports printed to NEXUS file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1090/LG+C60+F_component1090.splits.nex
+Total tree length: 32.410
+
+Total number of iterations: 224
+CPU time used for tree search: 11082.958 sec (3h:4m:42s)
+Wall-clock time used for tree search: 11100.831 sec (3h:5m:0s)
+Total CPU time used: 11148.747 sec (3h:5m:48s)
+Total wall-clock time used: 11167.406 sec (3h:6m:7s)
+
+Computing bootstrap consensus tree...
+Reading input file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1090/LG+C60+F_component1090.splits.nex...
+71 taxa and 858 splits.
+Consensus tree written to /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1090/LG+C60+F_component1090.contree
+Reading input trees file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1090/LG+C60+F_component1090.contree
+Log-likelihood of consensus tree: -7788.638
+
+Analysis results written to: 
+  IQ-TREE report:                /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1090/LG+C60+F_component1090.iqtree
+  Maximum-likelihood tree:       /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1090/LG+C60+F_component1090.treefile
+  Likelihood distances:          /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1090/LG+C60+F_component1090.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1090/LG+C60+F_component1090.splits.nex
+  Consensus tree:                /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1090/LG+C60+F_component1090.contree
+  Screen log file:               /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component1090/LG+C60+F_component1090.log
+
+Date and Time: Mon Aug 29 18:37:53 2022

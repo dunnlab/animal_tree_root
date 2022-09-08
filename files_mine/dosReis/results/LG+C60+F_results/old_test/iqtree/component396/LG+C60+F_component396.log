@@ -1,0 +1,687 @@
+IQ-TREE version 1.5.3 for Linux 64-bit built Mar 12 2017
+Copyright (c) 2011-2016 Nguyen Lam Tung, Olga Chernomor, Arndt von Haeseler and Bui Quang Minh.
+
+Host:    r74.uppmax.uu.se (AVX2, FMA3, 125 GB RAM)
+Command: iqtree -s /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component396.mafft -m LG+C60+F -nt 1 -bb 1000 -pre /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component396/LG+C60+F_component396
+Seed:    999424 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 29 15:33:48 2022
+Kernel:  AVX+FMA
+
+NOTE: Consider using the multicore version because your CPU has 20 cores!
+
+Reading alignment file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component396.mafft ... Fasta format detected
+NOTE: Change sequence name 'Chang2015:Acanthoeca_sp:81532:nsf2_01 Component_nr:396' -> Chang2015:Acanthoeca_sp:81532:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Acropora_cervicornis:6130:nsf2_01 Component_nr:396' -> Chang2015:Acropora_cervicornis:6130:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Aiptasia_pallida:1720309:nsf2_01 Component_nr:396' -> Chang2015:Aiptasia_pallida:1720309:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Amoebidium_parasiticum:4881:nsf2_01 Component_nr:396' -> Chang2015:Amoebidium_parasiticum:4881:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Amphimedon_queenslandica:400682:nsf2_01 Component_nr:396' -> Chang2015:Amphimedon_queenslandica:400682:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Aphrocallistes_vastus:83887:nsf2_01 Component_nr:396' -> Chang2015:Aphrocallistes_vastus:83887:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Aurelia_aurita:6145:nsf2_01 Component_nr:396' -> Chang2015:Aurelia_aurita:6145:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Beroe_abyssicola:320166:nsf2_01 Component_nr:396' -> Chang2015:Beroe_abyssicola:320166:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Bolocera_tuediae:1163374:nsf2_01 Component_nr:396' -> Chang2015:Bolocera_tuediae:1163374:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Branchiostoma_floridae:7739:nsf2_01 Component_nr:396' -> Chang2015:Branchiostoma_floridae:7739:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Capitella_teleta:283909:nsf2_01 Component_nr:396' -> Chang2015:Capitella_teleta:283909:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Capsaspora_owczarzaki:192875:nsf2_01 Component_nr:396' -> Chang2015:Capsaspora_owczarzaki:192875:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Chondrilla_nucula:220712:nsf2_01 Component_nr:396' -> Chang2015:Chondrilla_nucula:220712:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Ciona_intestinalis:7719:nsf2_01 Component_nr:396' -> Chang2015:Ciona_intestinalis:7719:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Clytia_hemisphaerica:252671:nsf2_01 Component_nr:396' -> Chang2015:Clytia_hemisphaerica:252671:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Corticium_candelabrum:121492:nsf2_01 Component_nr:396' -> Chang2015:Corticium_candelabrum:121492:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Craspedacusta_sowerbii:128124:nsf2_01 Component_nr:396' -> Chang2015:Craspedacusta_sowerbii:128124:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Crassostrea_gigas:29159:nsf2_01 Component_nr:396' -> Chang2015:Crassostrea_gigas:29159:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Daphnia_pulex:6669:nsf2_01 Component_nr:396' -> Chang2015:Daphnia_pulex:6669:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Ectopleura_larynx:264052:nsf2_01 Component_nr:396' -> Chang2015:Ectopleura_larynx:264052:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Edwardsiella_lineata:132407:nsf2_01 Component_nr:396' -> Chang2015:Edwardsiella_lineata:132407:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Enteromyxum_leei:188704:nsf2_01 Component_nr:396' -> Chang2015:Enteromyxum_leei:188704:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Ephydatia_muelleri:6052:nsf2_01 Component_nr:396' -> Chang2015:Ephydatia_muelleri:6052:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Eunicella_cavolinii:317547:nsf2_01 Component_nr:396' -> Chang2015:Eunicella_cavolinii:317547:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Euplectella_aspergillum:936045:nsf2_01 Component_nr:396' -> Chang2015:Euplectella_aspergillum:936045:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Euplokamis_dunlapae:1403701:nsf2_01 Component_nr:396' -> Chang2015:Euplokamis_dunlapae:1403701:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Gorgonia_ventalina:204384:nsf2_01 Component_nr:396' -> Chang2015:Gorgonia_ventalina:204384:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Helobdella_robusta:6412:nsf2_01 Component_nr:396' -> Chang2015:Helobdella_robusta:6412:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Homo_sapiens:9606:nsf2_01 Component_nr:396' -> Chang2015:Homo_sapiens:9606:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Hormathia_digitata:1163372:nsf2_01 Component_nr:396' -> Chang2015:Hormathia_digitata:1163372:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Hydra_vulgaris_01:6087:nsf2_01 Component_nr:396' -> Chang2015:Hydra_vulgaris_01:6087:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Hydractinia_polyclina:589945:nsf2_01 Component_nr:396' -> Chang2015:Hydractinia_polyclina:589945:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Ilyanassa_obsoleta:1934733:nsf2_01 Component_nr:396' -> Chang2015:Ilyanassa_obsoleta:1934733:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Ixodes_scapularis:6945:nsf2_01 Component_nr:396' -> Chang2015:Ixodes_scapularis:6945:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Kudoa_iwatai:269814:nsf2_01 Component_nr:396' -> Chang2015:Kudoa_iwatai:269814:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Latimeria_menadoensis:106881:nsf2_01 Component_nr:396' -> Chang2015:Latimeria_menadoensis:106881:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Ministeria_vibrans:134558:nsf2_01 Component_nr:396' -> Chang2015:Ministeria_vibrans:134558:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Mnemiopsis_leidyi:27923:nsf2_01 Component_nr:396' -> Chang2015:Mnemiopsis_leidyi:27923:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Monosiga_brevicollis:81824:nsf2_01 Component_nr:396' -> Chang2015:Monosiga_brevicollis:81824:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Monosiga_ovata:81526:nsf2_01 Component_nr:396' -> Chang2015:Monosiga_ovata:81526:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Orbicella_faveolata:48498:nsf2_01 Component_nr:396' -> Chang2015:Orbicella_faveolata:48498:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Myxobolus_cerebralis:59783:nsf2_01 Component_nr:396' -> Chang2015:Myxobolus_cerebralis:59783:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Nanomia_bijuga:168759:nsf2_01 Component_nr:396' -> Chang2015:Nanomia_bijuga:168759:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Nasonia_vitripennis:7425:nsf2_01 Component_nr:396' -> Chang2015:Nasonia_vitripennis:7425:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Nematostella_vectensis:45351:nsf2_01 Component_nr:396' -> Chang2015:Nematostella_vectensis:45351:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Octopus_vulgaris:6645:nsf2_01 Component_nr:396' -> Chang2015:Octopus_vulgaris:6645:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Oscarella_carmela:386100:nsf2_01 Component_nr:396' -> Chang2015:Oscarella_carmela:386100:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Oscarella_sp_SN-2011:386100:nsf2_01 Component_nr:396' -> Chang2015:Oscarella_sp_SN-2011:386100:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Patiria_miniata:46514:nsf2_01 Component_nr:396' -> Chang2015:Patiria_miniata:46514:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Pediculus_humanus:121225:nsf2_01 Component_nr:396' -> Chang2015:Pediculus_humanus:121225:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Petromyzon_marinus:7757:nsf2_01 Component_nr:396' -> Chang2015:Petromyzon_marinus:7757:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Petrosia_ficiformis:68564:nsf2_01 Component_nr:396' -> Chang2015:Petrosia_ficiformis:68564:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Pleurobrachia_pileus:140457:nsf2_01 Component_nr:396' -> Chang2015:Pleurobrachia_pileus:140457:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Pocillopora_damicornis:46731:nsf2_01 Component_nr:396' -> Chang2015:Pocillopora_damicornis:46731:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Polypodium_hydriforme:43186:nsf2_01 Component_nr:396' -> Chang2015:Polypodium_hydriforme:43186:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Porites_australiensis:51061:nsf2_01 Component_nr:396' -> Chang2015:Porites_australiensis:51061:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Saccoglossus_kowalevskii:10224:nsf2_01 Component_nr:396' -> Chang2015:Saccoglossus_kowalevskii:10224:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Salpingoeca_sp:86017:nsf2_01 Component_nr:396' -> Chang2015:Salpingoeca_sp:86017:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Sarcotragus_fasciculatus:1234657:nsf2_01 Component_nr:396' -> Chang2015:Sarcotragus_fasciculatus:1234657:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Sphaeroforma_arctica:72019:nsf2_01 Component_nr:396' -> Chang2015:Sphaeroforma_arctica:72019:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Stephanoeca_diplocostata:81535:nsf2_01 Component_nr:396' -> Chang2015:Stephanoeca_diplocostata:81535:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Stomolophus_meleagris:168796:nsf2_01 Component_nr:396' -> Chang2015:Stomolophus_meleagris:168796:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Strigamia_maritima:126957:nsf2_01 Component_nr:396' -> Chang2015:Strigamia_maritima:126957:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Strongylocentrotus_purpuratus:7668:nsf2_01 Component_nr:396' -> Chang2015:Strongylocentrotus_purpuratus:7668:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Sycon_ciliatum:27933:nsf2_01 Component_nr:396' -> Chang2015:Sycon_ciliatum:27933:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Sycon_coactum:1009717:nsf2_01 Component_nr:396' -> Chang2015:Sycon_coactum:1009717:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Thelohanellus_kitauei:669202:nsf2_01 Component_nr:396' -> Chang2015:Thelohanellus_kitauei:669202:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Trichoplax_adhaerens:10228:nsf2_01 Component_nr:396' -> Chang2015:Trichoplax_adhaerens:10228:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Tripedalia_cystophora:6141:nsf2_01 Component_nr:396' -> Chang2015:Tripedalia_cystophora:6141:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Vallicula_multiformis:140489:nsf2_01 Component_nr:396' -> Chang2015:Vallicula_multiformis:140489:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Acanthoeca_sp:81532:nsf2_01 Component_nr:396' -> Chang2015:Acanthoeca_sp:81532:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Acropora_cervicornis:6130:nsf2_01 Component_nr:396' -> Chang2015:Acropora_cervicornis:6130:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Aiptasia_pallida:1720309:nsf2_01 Component_nr:396' -> Chang2015:Aiptasia_pallida:1720309:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Amoebidium_parasiticum:4881:nsf2_01 Component_nr:396' -> Chang2015:Amoebidium_parasiticum:4881:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Amphimedon_queenslandica:400682:nsf2_01 Component_nr:396' -> Chang2015:Amphimedon_queenslandica:400682:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Aphrocallistes_vastus:83887:nsf2_01 Component_nr:396' -> Chang2015:Aphrocallistes_vastus:83887:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Aurelia_aurita:6145:nsf2_01 Component_nr:396' -> Chang2015:Aurelia_aurita:6145:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Beroe_abyssicola:320166:nsf2_01 Component_nr:396' -> Chang2015:Beroe_abyssicola:320166:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Bolocera_tuediae:1163374:nsf2_01 Component_nr:396' -> Chang2015:Bolocera_tuediae:1163374:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Botryllus_schlosseri:30301:nsf2_01 Component_nr:396' -> Chang2015:Botryllus_schlosseri:30301:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Branchiostoma_floridae:7739:nsf2_01 Component_nr:396' -> Chang2015:Branchiostoma_floridae:7739:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Capitella_teleta:283909:nsf2_01 Component_nr:396' -> Chang2015:Capitella_teleta:283909:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Capsaspora_owczarzaki:192875:nsf2_01 Component_nr:396' -> Chang2015:Capsaspora_owczarzaki:192875:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Chondrilla_nucula:220712:nsf2_01 Component_nr:396' -> Chang2015:Chondrilla_nucula:220712:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Ciona_intestinalis:7719:nsf2_01 Component_nr:396' -> Chang2015:Ciona_intestinalis:7719:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Clytia_hemisphaerica:252671:nsf2_01 Component_nr:396' -> Chang2015:Clytia_hemisphaerica:252671:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Corticium_candelabrum:121492:nsf2_01 Component_nr:396' -> Chang2015:Corticium_candelabrum:121492:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Craspedacusta_sowerbii:128124:nsf2_01 Component_nr:396' -> Chang2015:Craspedacusta_sowerbii:128124:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Crassostrea_gigas:29159:nsf2_01 Component_nr:396' -> Chang2015:Crassostrea_gigas:29159:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Daphnia_pulex:6669:nsf2_01 Component_nr:396' -> Chang2015:Daphnia_pulex:6669:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Ectopleura_larynx:264052:nsf2_01 Component_nr:396' -> Chang2015:Ectopleura_larynx:264052:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Edwardsiella_lineata:132407:nsf2_01 Component_nr:396' -> Chang2015:Edwardsiella_lineata:132407:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Enteromyxum_leei:188704:nsf2_01 Component_nr:396' -> Chang2015:Enteromyxum_leei:188704:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Ephydatia_muelleri:6052:nsf2_01 Component_nr:396' -> Chang2015:Ephydatia_muelleri:6052:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Eunicella_cavolinii:317547:nsf2_01 Component_nr:396' -> Chang2015:Eunicella_cavolinii:317547:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Euplectella_aspergillum:936045:nsf2_01 Component_nr:396' -> Chang2015:Euplectella_aspergillum:936045:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Euplokamis_dunlapae:1403701:nsf2_01 Component_nr:396' -> Chang2015:Euplokamis_dunlapae:1403701:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Gorgonia_ventalina:204384:nsf2_01 Component_nr:396' -> Chang2015:Gorgonia_ventalina:204384:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Helobdella_robusta:6412:nsf2_01 Component_nr:396' -> Chang2015:Helobdella_robusta:6412:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Homo_sapiens:9606:nsf2_01 Component_nr:396' -> Chang2015:Homo_sapiens:9606:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Hormathia_digitata:1163372:nsf2_01 Component_nr:396' -> Chang2015:Hormathia_digitata:1163372:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Hydra_vulgaris_01:6087:nsf2_01 Component_nr:396' -> Chang2015:Hydra_vulgaris_01:6087:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Hydractinia_polyclina:589945:nsf2_01 Component_nr:396' -> Chang2015:Hydractinia_polyclina:589945:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Ilyanassa_obsoleta:1934733:nsf2_01 Component_nr:396' -> Chang2015:Ilyanassa_obsoleta:1934733:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Ixodes_scapularis:6945:nsf2_01 Component_nr:396' -> Chang2015:Ixodes_scapularis:6945:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Kudoa_iwatai:269814:nsf2_01 Component_nr:396' -> Chang2015:Kudoa_iwatai:269814:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Latimeria_menadoensis:106881:nsf2_01 Component_nr:396' -> Chang2015:Latimeria_menadoensis:106881:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Leucetta_chagosensis:185688:nsf2_01 Component_nr:396' -> Chang2015:Leucetta_chagosensis:185688:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Ministeria_vibrans:134558:nsf2_01 Component_nr:396' -> Chang2015:Ministeria_vibrans:134558:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Mnemiopsis_leidyi:27923:nsf2_01 Component_nr:396' -> Chang2015:Mnemiopsis_leidyi:27923:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Monosiga_brevicollis:81824:nsf2_01 Component_nr:396' -> Chang2015:Monosiga_brevicollis:81824:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Monosiga_ovata:81526:nsf2_01 Component_nr:396' -> Chang2015:Monosiga_ovata:81526:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Orbicella_faveolata:48498:nsf2_01 Component_nr:396' -> Chang2015:Orbicella_faveolata:48498:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Myxobolus_cerebralis:59783:nsf2_01 Component_nr:396' -> Chang2015:Myxobolus_cerebralis:59783:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Nanomia_bijuga:168759:nsf2_01 Component_nr:396' -> Chang2015:Nanomia_bijuga:168759:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Nasonia_vitripennis:7425:nsf2_01 Component_nr:396' -> Chang2015:Nasonia_vitripennis:7425:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Nematostella_vectensis:45351:nsf2_01 Component_nr:396' -> Chang2015:Nematostella_vectensis:45351:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Octopus_vulgaris:6645:nsf2_01 Component_nr:396' -> Chang2015:Octopus_vulgaris:6645:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Oscarella_carmela:386100:nsf2_01 Component_nr:396' -> Chang2015:Oscarella_carmela:386100:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Oscarella_sp_SN-2011:386100:nsf2_01 Component_nr:396' -> Chang2015:Oscarella_sp_SN-2011:386100:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Patiria_miniata:46514:nsf2_01 Component_nr:396' -> Chang2015:Patiria_miniata:46514:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Pediculus_humanus:121225:nsf2_01 Component_nr:396' -> Chang2015:Pediculus_humanus:121225:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Petromyzon_marinus:7757:nsf2_01 Component_nr:396' -> Chang2015:Petromyzon_marinus:7757:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Petrosia_ficiformis:68564:nsf2_01 Component_nr:396' -> Chang2015:Petrosia_ficiformis:68564:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Pleurobrachia_pileus:140457:nsf2_01 Component_nr:396' -> Chang2015:Pleurobrachia_pileus:140457:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Pocillopora_damicornis:46731:nsf2_01 Component_nr:396' -> Chang2015:Pocillopora_damicornis:46731:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Polypodium_hydriforme:43186:nsf2_01 Component_nr:396' -> Chang2015:Polypodium_hydriforme:43186:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Porites_australiensis:51061:nsf2_01 Component_nr:396' -> Chang2015:Porites_australiensis:51061:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Saccoglossus_kowalevskii:10224:nsf2_01 Component_nr:396' -> Chang2015:Saccoglossus_kowalevskii:10224:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Salpingoeca_sp:86017:nsf2_01 Component_nr:396' -> Chang2015:Salpingoeca_sp:86017:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Sarcotragus_fasciculatus:1234657:nsf2_01 Component_nr:396' -> Chang2015:Sarcotragus_fasciculatus:1234657:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Sphaeroforma_arctica:72019:nsf2_01 Component_nr:396' -> Chang2015:Sphaeroforma_arctica:72019:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Sphaeromyxa_zaharoni:275449:nsf2_01 Component_nr:396' -> Chang2015:Sphaeromyxa_zaharoni:275449:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Stephanoeca_diplocostata:81535:nsf2_01 Component_nr:396' -> Chang2015:Stephanoeca_diplocostata:81535:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Stomolophus_meleagris:168796:nsf2_01 Component_nr:396' -> Chang2015:Stomolophus_meleagris:168796:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Strigamia_maritima:126957:nsf2_01 Component_nr:396' -> Chang2015:Strigamia_maritima:126957:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Strongylocentrotus_purpuratus:7668:nsf2_01 Component_nr:396' -> Chang2015:Strongylocentrotus_purpuratus:7668:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Sycon_ciliatum:27933:nsf2_01 Component_nr:396' -> Chang2015:Sycon_ciliatum:27933:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Sycon_coactum:1009717:nsf2_01 Component_nr:396' -> Chang2015:Sycon_coactum:1009717:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Thelohanellus_kitauei:669202:nsf2_01 Component_nr:396' -> Chang2015:Thelohanellus_kitauei:669202:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Trichoplax_adhaerens:10228:nsf2_01 Component_nr:396' -> Chang2015:Trichoplax_adhaerens:10228:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Tripedalia_cystophora:6141:nsf2_01 Component_nr:396' -> Chang2015:Tripedalia_cystophora:6141:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Urticina_eques:417072:nsf2_01 Component_nr:396' -> Chang2015:Urticina_eques:417072:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Chang2015:Vallicula_multiformis:140489:nsf2_01 Component_nr:396' -> Chang2015:Vallicula_multiformis:140489:nsf2_01_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Acropora_millepora:45264:Gene_0035 Component_nr:396' -> Philippe2009:Acropora_millepora:45264:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Allomyces_macrogynus:28583:Gene_0035 Component_nr:396' -> Philippe2009:Allomyces_macrogynus:28583:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Amoebidium_parasiticum:4881:Gene_0035 Component_nr:396' -> Philippe2009:Amoebidium_parasiticum:4881:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Aplysia_californica:6500:Gene_0035 Component_nr:396' -> Philippe2009:Aplysia_californica:6500:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Batrachochytrium_dendrobatidis:109871:Gene_0035 Component_nr:396' -> Philippe2009:Batrachochytrium_dendrobatidis:109871:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Branchiostoma_floridae:7739:Gene_0035 Component_nr:396' -> Philippe2009:Branchiostoma_floridae:7739:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Capitella_teleta:283909:Gene_0035 Component_nr:396' -> Philippe2009:Capitella_teleta:283909:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Capsaspora_owczarzaki:192875:Gene_0035 Component_nr:396' -> Philippe2009:Capsaspora_owczarzaki:192875:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Ciona_savignyi:51511:Gene_0035 Component_nr:396' -> Philippe2009:Ciona_savignyi:51511:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Crassostrea_gigas:29159:Gene_0035 Component_nr:396' -> Philippe2009:Crassostrea_gigas:29159:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Danio_rerio:7955:Gene_0035 Component_nr:396' -> Philippe2009:Danio_rerio:7955:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Daphnia_pulex:6669:Gene_0035 Component_nr:396' -> Philippe2009:Daphnia_pulex:6669:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Ephydatia_muelleri:6052:Gene_0035 Component_nr:396' -> Philippe2009:Ephydatia_muelleri:6052:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Euprymna_scolopes:6613:Gene_0035 Component_nr:396' -> Philippe2009:Euprymna_scolopes:6613:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Helobdella_robusta:6412:Gene_0035 Component_nr:396' -> Philippe2009:Helobdella_robusta:6412:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Heterochone_sp:367900:Gene_0035 Component_nr:396' -> Philippe2009:Heterochone_sp:367900:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Hydra_magnipapillata:6087:Gene_0035 Component_nr:396' -> Philippe2009:Hydra_magnipapillata:6087:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Hydractinia_echinata:35630:Gene_0035 Component_nr:396' -> Philippe2009:Hydractinia_echinata:35630:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Ixodes_scapularis:6945:Gene_0035 Component_nr:396' -> Philippe2009:Ixodes_scapularis:6945:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Metridium_senile:6116:Gene_0035 Component_nr:396' -> Philippe2009:Metridium_senile:6116:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Molgula_tectiformis:30286:Gene_0035 Component_nr:396' -> Philippe2009:Molgula_tectiformis:30286:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Monosiga_brevicollis:81824:Gene_0035 Component_nr:396' -> Philippe2009:Monosiga_brevicollis:81824:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Monosiga_ovata:81526:Gene_0035 Component_nr:396' -> Philippe2009:Monosiga_ovata:81526:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Nasonia_vitripennis:7425:Gene_0035 Component_nr:396' -> Philippe2009:Nasonia_vitripennis:7425:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Nematostella_vectensis:45351:Gene_0035 Component_nr:396' -> Philippe2009:Nematostella_vectensis:45351:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Oscarella_carmela:386100:Gene_0035 Component_nr:396' -> Philippe2009:Oscarella_carmela:386100:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Pediculus_humanus:121225:Gene_0035 Component_nr:396' -> Philippe2009:Pediculus_humanus:121225:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Petromyzon_marinus:7757:Gene_0035 Component_nr:396' -> Philippe2009:Petromyzon_marinus:7757:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Phycomyces_blakesleeanus:4837:Gene_0035 Component_nr:396' -> Philippe2009:Phycomyces_blakesleeanus:4837:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Pleurobrachia_pileus:140457:Gene_0035 Component_nr:396' -> Philippe2009:Pleurobrachia_pileus:140457:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Proterospongia_sp:218847:Gene_0035 Component_nr:396' -> Philippe2009:Proterospongia_sp:218847:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Amphimedon_queenslandica:400682:Gene_0035 Component_nr:396' -> Philippe2009:Amphimedon_queenslandica:400682:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Rhizopus_oryzae:64495:Gene_0035 Component_nr:396' -> Philippe2009:Rhizopus_oryzae:64495:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Saccoglossus_kowalevskii:10224:Gene_0035 Component_nr:396' -> Philippe2009:Saccoglossus_kowalevskii:10224:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Sphaeroforma_arctica:72019:Gene_0035 Component_nr:396' -> Philippe2009:Sphaeroforma_arctica:72019:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Spizellomyces_punctatus:109760:Gene_0035 Component_nr:396' -> Philippe2009:Spizellomyces_punctatus:109760:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Strongylocentrotus_purpuratus:7668:Gene_0035 Component_nr:396' -> Philippe2009:Strongylocentrotus_purpuratus:7668:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Trichoplax_adhaerens:10228:Gene_0035 Component_nr:396' -> Philippe2009:Trichoplax_adhaerens:10228:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Philippe2009:Tubifex_tubifex:6386:Gene_0035 Component_nr:396' -> Philippe2009:Tubifex_tubifex:6386:Gene_0035_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Acanthoeca_sp:81532:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Acanthoeca_sp:81532:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Acanthoeca_spectabilis:81533:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Acanthoeca_spectabilis:81533:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Alatina_alata:1193083:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Alatina_alata:1193083:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Amoebidium_parasiticum:4881:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Amoebidium_parasiticum:4881:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Amphimedon_queenslandica:400682:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Amphimedon_queenslandica:400682:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Aplysia_californica:6500:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Aplysia_californica:6500:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Aurelia_aurita:6145:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Aurelia_aurita:6145:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Beroe_abyssicola:320166:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Beroe_abyssicola:320166:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Bolinopsis_infundibulum:140455:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Bolinopsis_infundibulum:140455:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Branchiostoma_floridae:7739:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Branchiostoma_floridae:7739:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Capitella_teleta:283909:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Capitella_teleta:283909:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Capsaspora_owczarzaki:192875:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Capsaspora_owczarzaki:192875:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Choanoeca_perplexa_11:81531:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Choanoeca_perplexa_11:81531:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Chondrilla_nucula:220712:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Chondrilla_nucula:220712:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Clytia_hemisphaerica:252671:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Clytia_hemisphaerica:252671:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Codosiga_hollandica_17:1742608:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Codosiga_hollandica_17:1742608:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Coeloplana_species:140473:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Coeloplana_species:140473:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Corticium_candelabrum:121492:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Corticium_candelabrum:121492:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Craspedacusta_sowerbii:128124:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Craspedacusta_sowerbii:128124:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Crassostrea_gigas:29159:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Crassostrea_gigas:29159:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Daphnia_pulex:6669:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Daphnia_pulex:6669:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Diaphanoeca_grandis:28014:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Diaphanoeca_grandis:28014:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Didymoeca_costata_10:459534:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Didymoeca_costata_10:459534:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Dryodora_glandiformis:1566677:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Dryodora_glandiformis:1566677:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Ephydatia_muelleri:6052:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Ephydatia_muelleri:6052:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Euplectella_aspergillum:936045:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Euplectella_aspergillum:936045:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Euplokamis_dunlapae:1403701:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Euplokamis_dunlapae:1403701:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Helobdella_robusta:6412:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Helobdella_robusta:6412:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Homo_sapiens:9606:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Homo_sapiens:9606:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Hormiphora_californensis:1403702:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Hormiphora_californensis:1403702:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Hyalonema_populiferum:1631155:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Hyalonema_populiferum:1631155:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Hydra_vulgaris_01:6087:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Hydra_vulgaris_01:6087:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Ircinia_fasciculata:1234657:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Ircinia_fasciculata:1234657:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Ixodes_scapularis:6945:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Ixodes_scapularis:6945:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Kirkpatrickia_variolosa:1631157:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Kirkpatrickia_variolosa:1631157:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Lampea_pancerina:1532213:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Lampea_pancerina:1532213:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Latrunculia_apicalis:1325597:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Latrunculia_apicalis:1325597:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Liriope_tetraphylla:37524:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Liriope_tetraphylla:37524:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Ministeria_vibrans:134558:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Ministeria_vibrans:134558:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Mnemiopsis_leidyi:27923:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Mnemiopsis_leidyi:27923:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Monosiga_brevicollis:81824:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Monosiga_brevicollis:81824:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Orbicella_faveolata:48498:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Orbicella_faveolata:48498:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Mycale_phyllophila:1325607:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Mycale_phyllophila:1325607:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Mylnosiga_fluctuans_19:1928486:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Mylnosiga_fluctuans_19:1928486:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Oscarella_carmela:386100:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Oscarella_carmela:386100:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Oscarella_species:121493:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Oscarella_species:121493:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Periphylla_periphylla:880221:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Periphylla_periphylla:880221:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Petrosia_ficiformis:68564:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Petrosia_ficiformis:68564:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Pleraplysilla_spinifera:119433:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Pleraplysilla_spinifera:119433:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Pleurobrachia_species:34498:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Pleurobrachia_species:34498:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Rossella_fibulata:1076269:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Rossella_fibulata:1076269:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Saccoglossus_kowalevskii:10224:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Saccoglossus_kowalevskii:10224:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Salpingoeca_dolichothecata_16:1742605:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Salpingoeca_dolichothecata_16:1742605:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Salpingoeca_helianthica_18:1928494:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Salpingoeca_helianthica_18:1928494:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Salpingoeca_infusionum_12:86018:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Salpingoeca_infusionum_12:86018:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Salpingoeca_macrocollata_06:1924736:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Salpingoeca_macrocollata_06:1924736:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Salpingoeca_punica_03:1924735:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Salpingoeca_punica_03:1924735:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Salpingoeca_kvevrii:1924737:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Salpingoeca_kvevrii:1924737:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Microstomoeca_roanoka:1923864:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Microstomoeca_roanoka:1923864:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Salpingoeca_rosetta:946362:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Salpingoeca_rosetta:946362:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Salpingoeca_urceolata_04:473813:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Salpingoeca_urceolata_04:473813:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Spongilla_lacustris:6055:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Spongilla_lacustris:6055:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Stephanoeca_diplocostata:81535:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Stephanoeca_diplocostata:81535:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Stomolophus_meleagris:168796:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Stomolophus_meleagris:168796:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Strongylocentrotus_purpuratus:7668:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Strongylocentrotus_purpuratus:7668:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Sycon_ciliatum:27933:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Sycon_ciliatum:27933:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Sycon_coactum:1009717:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Sycon_coactum:1009717:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Sympagella_nux:76350:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Sympagella_nux:76350:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Tribolium_castaneum:7070:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Tribolium_castaneum:7070:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Trichoplax_adhaerens:10228:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Trichoplax_adhaerens:10228:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Simion2017:Vallicula_multiformis:140489:V2META11663-2-42-Calc_Hmm10-BMGE05 Component_nr:396' -> Simion2017:Vallicula_multiformis:140489:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Sphaeroforma_arctica:72019:Subset25_02 Component_nr:396' -> Whelan2017_full:Sphaeroforma_arctica:72019:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Drosophila_melanogaster:7227:Subset25_02 Component_nr:396' -> Whelan2017_full:Drosophila_melanogaster:7227:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Rossella_fibulata:1076269:Subset25_02 Component_nr:396' -> Whelan2017_full:Rossella_fibulata:1076269:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Amoebidium_parasiticum:4881:Subset25_02 Component_nr:396' -> Whelan2017_full:Amoebidium_parasiticum:4881:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Abylopsis_tetragona:316209:Subset25_02 Component_nr:396' -> Whelan2017_full:Abylopsis_tetragona:316209:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Eunicella_verrucosa:396355:Subset25_02 Component_nr:396' -> Whelan2017_full:Eunicella_verrucosa:396355:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Daphnia_pulex:6669:Subset25_02 Component_nr:396' -> Whelan2017_full:Daphnia_pulex:6669:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Aiptasia_pallida:1720309:Subset25_02 Component_nr:396' -> Whelan2017_full:Aiptasia_pallida:1720309:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Homo_sapiens:9606:Subset25_02 Component_nr:396' -> Whelan2017_full:Homo_sapiens:9606:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Amphimedon_queenslandica:400682:Subset25_02 Component_nr:396' -> Whelan2017_full:Amphimedon_queenslandica:400682:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Petrosia_ficiformis:68564:Subset25_02 Component_nr:396' -> Whelan2017_full:Petrosia_ficiformis:68564:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Strongylocentrotus_purpuratus:7668:Subset25_02 Component_nr:396' -> Whelan2017_full:Strongylocentrotus_purpuratus:7668:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Physalia_physalis:168775:Subset25_02 Component_nr:396' -> Whelan2017_full:Physalia_physalis:168775:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Hydra_vulgaris:6087:Subset25_02 Component_nr:396' -> Whelan2017_full:Hydra_vulgaris:6087:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Nanomia_bijuga:168759:Subset25_02 Component_nr:396' -> Whelan2017_full:Nanomia_bijuga:168759:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Acanthoeca_sp:81532:Subset25_02 Component_nr:396' -> Whelan2017_full:Acanthoeca_sp:81532:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Sycon_ciliatum:27933:Subset25_02 Component_nr:396' -> Whelan2017_full:Sycon_ciliatum:27933:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Sympagella_nux:76350:Subset25_02 Component_nr:396' -> Whelan2017_full:Sympagella_nux:76350:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Spongilla_lacustris:6055:Subset25_02 Component_nr:396' -> Whelan2017_full:Spongilla_lacustris:6055:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Monosiga_ovata:81526:Subset25_02 Component_nr:396' -> Whelan2017_full:Monosiga_ovata:81526:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Crella_elegans:252961:Subset25_02 Component_nr:396' -> Whelan2017_full:Crella_elegans:252961:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Ministeria_vibrans:134558:Subset25_02 Component_nr:396' -> Whelan2017_full:Ministeria_vibrans:134558:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Mycale_phyllophila:1325607:Subset25_02 Component_nr:396' -> Whelan2017_full:Mycale_phyllophila:1325607:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Hemithiris_psittacea:763142:Subset25_02 Component_nr:396' -> Whelan2017_full:Hemithiris_psittacea:763142:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Agalma_elegans:316166:Subset25_02 Component_nr:396' -> Whelan2017_full:Agalma_elegans:316166:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Capitella_teleta:283909:Subset25_02 Component_nr:396' -> Whelan2017_full:Capitella_teleta:283909:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Salpingoeca_pyxidium:473812:Subset25_02 Component_nr:396' -> Whelan2017_full:Salpingoeca_pyxidium:473812:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Salpingoeca_rosetta:946362:Subset25_02 Component_nr:396' -> Whelan2017_full:Salpingoeca_rosetta:946362:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Trichoplax_adhaerens:10228:Subset25_02 Component_nr:396' -> Whelan2017_full:Trichoplax_adhaerens:10228:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Monosiga_brevicollis:81824:Subset25_02 Component_nr:396' -> Whelan2017_full:Monosiga_brevicollis:81824:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Capsaspora_owczarzaki:192875:Subset25_02 Component_nr:396' -> Whelan2017_full:Capsaspora_owczarzaki:192875:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Hydra_viridissima:6082:Subset25_02 Component_nr:396' -> Whelan2017_full:Hydra_viridissima:6082:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Acropora_digitifera:70779:Subset25_02 Component_nr:396' -> Whelan2017_full:Acropora_digitifera:70779:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Cliona_varians:297654:Subset25_02 Component_nr:396' -> Whelan2017_full:Cliona_varians:297654:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Kirkpatrickia_variolosa:1631157:Subset25_02 Component_nr:396' -> Whelan2017_full:Kirkpatrickia_variolosa:1631157:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Latrunculia_apicalis:1325597:Subset25_02 Component_nr:396' -> Whelan2017_full:Latrunculia_apicalis:1325597:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Hyalonema_populiferum:1631155:Subset25_02 Component_nr:396' -> Whelan2017_full:Hyalonema_populiferum:1631155:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Periphylla_periphylla:880221:Subset25_02 Component_nr:396' -> Whelan2017_full:Periphylla_periphylla:880221:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Hormathia_digitata:1163372:Subset25_02 Component_nr:396' -> Whelan2017_full:Hormathia_digitata:1163372:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Hydra_oligactis:6088:Subset25_02 Component_nr:396' -> Whelan2017_full:Hydra_oligactis:6088:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Sycon_coactum:1009717:Subset25_02 Component_nr:396' -> Whelan2017_full:Sycon_coactum:1009717:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Ircinia_fasciculata:1234657:Subset25_02 Component_nr:396' -> Whelan2017_full:Ircinia_fasciculata:1234657:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Aphrocallistes_vastus:83887:Subset25_02 Component_nr:396' -> Whelan2017_full:Aphrocallistes_vastus:83887:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Oscarella_carmela:386100:Subset25_02 Component_nr:396' -> Whelan2017_full:Oscarella_carmela:386100:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Craseoa_lathetica:316205:Subset25_02 Component_nr:396' -> Whelan2017_full:Craseoa_lathetica:316205:Subset25_02_Component_nr:396
+NOTE: Change sequence name 'Whelan2017_full:Nematostella_vectensis:45351:Subset25_02 Component_nr:396' -> Whelan2017_full:Nematostella_vectensis:45351:Subset25_02_Component_nr:396
+Alignment most likely contains protein sequences
+Alignment has 300 sequences with 761 columns and 753 patterns (634 informative sites, 75 constant sites)
+WARNING: Some sequence names are changed as follows:
+Chang2015:Acanthoeca_sp:81532:nsf2_01_Component_nr:396 -> Chang2015_Acanthoeca_sp_81532_nsf2_01_Component_nr_396
+Chang2015:Acropora_cervicornis:6130:nsf2_01_Component_nr:396 -> Chang2015_Acropora_cervicornis_6130_nsf2_01_Component_nr_396
+Chang2015:Aiptasia_pallida:1720309:nsf2_01_Component_nr:396 -> Chang2015_Aiptasia_pallida_1720309_nsf2_01_Component_nr_396
+Chang2015:Amoebidium_parasiticum:4881:nsf2_01_Component_nr:396 -> Chang2015_Amoebidium_parasiticum_4881_nsf2_01_Component_nr_396
+Chang2015:Amphimedon_queenslandica:400682:nsf2_01_Component_nr:396 -> Chang2015_Amphimedon_queenslandica_400682_nsf2_01_Component_nr_396
+Chang2015:Aphrocallistes_vastus:83887:nsf2_01_Component_nr:396 -> Chang2015_Aphrocallistes_vastus_83887_nsf2_01_Component_nr_396
+Chang2015:Aurelia_aurita:6145:nsf2_01_Component_nr:396 -> Chang2015_Aurelia_aurita_6145_nsf2_01_Component_nr_396
+Chang2015:Beroe_abyssicola:320166:nsf2_01_Component_nr:396 -> Chang2015_Beroe_abyssicola_320166_nsf2_01_Component_nr_396
+Chang2015:Bolocera_tuediae:1163374:nsf2_01_Component_nr:396 -> Chang2015_Bolocera_tuediae_1163374_nsf2_01_Component_nr_396
+Chang2015:Branchiostoma_floridae:7739:nsf2_01_Component_nr:396 -> Chang2015_Branchiostoma_floridae_7739_nsf2_01_Component_nr_396
+Chang2015:Capitella_teleta:283909:nsf2_01_Component_nr:396 -> Chang2015_Capitella_teleta_283909_nsf2_01_Component_nr_396
+Chang2015:Capsaspora_owczarzaki:192875:nsf2_01_Component_nr:396 -> Chang2015_Capsaspora_owczarzaki_192875_nsf2_01_Component_nr_396
+Chang2015:Chondrilla_nucula:220712:nsf2_01_Component_nr:396 -> Chang2015_Chondrilla_nucula_220712_nsf2_01_Component_nr_396
+Chang2015:Ciona_intestinalis:7719:nsf2_01_Component_nr:396 -> Chang2015_Ciona_intestinalis_7719_nsf2_01_Component_nr_396
+Chang2015:Clytia_hemisphaerica:252671:nsf2_01_Component_nr:396 -> Chang2015_Clytia_hemisphaerica_252671_nsf2_01_Component_nr_396
+Chang2015:Corticium_candelabrum:121492:nsf2_01_Component_nr:396 -> Chang2015_Corticium_candelabrum_121492_nsf2_01_Component_nr_396
+Chang2015:Craspedacusta_sowerbii:128124:nsf2_01_Component_nr:396 -> Chang2015_Craspedacusta_sowerbii_128124_nsf2_01_Component_nr_396
+Chang2015:Crassostrea_gigas:29159:nsf2_01_Component_nr:396 -> Chang2015_Crassostrea_gigas_29159_nsf2_01_Component_nr_396
+Chang2015:Daphnia_pulex:6669:nsf2_01_Component_nr:396 -> Chang2015_Daphnia_pulex_6669_nsf2_01_Component_nr_396
+Chang2015:Ectopleura_larynx:264052:nsf2_01_Component_nr:396 -> Chang2015_Ectopleura_larynx_264052_nsf2_01_Component_nr_396
+Chang2015:Edwardsiella_lineata:132407:nsf2_01_Component_nr:396 -> Chang2015_Edwardsiella_lineata_132407_nsf2_01_Component_nr_396
+Chang2015:Enteromyxum_leei:188704:nsf2_01_Component_nr:396 -> Chang2015_Enteromyxum_leei_188704_nsf2_01_Component_nr_396
+Chang2015:Ephydatia_muelleri:6052:nsf2_01_Component_nr:396 -> Chang2015_Ephydatia_muelleri_6052_nsf2_01_Component_nr_396
+Chang2015:Eunicella_cavolinii:317547:nsf2_01_Component_nr:396 -> Chang2015_Eunicella_cavolinii_317547_nsf2_01_Component_nr_396
+Chang2015:Euplectella_aspergillum:936045:nsf2_01_Component_nr:396 -> Chang2015_Euplectella_aspergillum_936045_nsf2_01_Component_nr_396
+Chang2015:Euplokamis_dunlapae:1403701:nsf2_01_Component_nr:396 -> Chang2015_Euplokamis_dunlapae_1403701_nsf2_01_Component_nr_396
+Chang2015:Gorgonia_ventalina:204384:nsf2_01_Component_nr:396 -> Chang2015_Gorgonia_ventalina_204384_nsf2_01_Component_nr_396
+Chang2015:Helobdella_robusta:6412:nsf2_01_Component_nr:396 -> Chang2015_Helobdella_robusta_6412_nsf2_01_Component_nr_396
+Chang2015:Homo_sapiens:9606:nsf2_01_Component_nr:396 -> Chang2015_Homo_sapiens_9606_nsf2_01_Component_nr_396
+Chang2015:Hormathia_digitata:1163372:nsf2_01_Component_nr:396 -> Chang2015_Hormathia_digitata_1163372_nsf2_01_Component_nr_396
+Chang2015:Hydra_vulgaris_01:6087:nsf2_01_Component_nr:396 -> Chang2015_Hydra_vulgaris_01_6087_nsf2_01_Component_nr_396
+Chang2015:Hydractinia_polyclina:589945:nsf2_01_Component_nr:396 -> Chang2015_Hydractinia_polyclina_589945_nsf2_01_Component_nr_396
+Chang2015:Ilyanassa_obsoleta:1934733:nsf2_01_Component_nr:396 -> Chang2015_Ilyanassa_obsoleta_1934733_nsf2_01_Component_nr_396
+Chang2015:Ixodes_scapularis:6945:nsf2_01_Component_nr:396 -> Chang2015_Ixodes_scapularis_6945_nsf2_01_Component_nr_396
+Chang2015:Kudoa_iwatai:269814:nsf2_01_Component_nr:396 -> Chang2015_Kudoa_iwatai_269814_nsf2_01_Component_nr_396
+Chang2015:Latimeria_menadoensis:106881:nsf2_01_Component_nr:396 -> Chang2015_Latimeria_menadoensis_106881_nsf2_01_Component_nr_396
+Chang2015:Ministeria_vibrans:134558:nsf2_01_Component_nr:396 -> Chang2015_Ministeria_vibrans_134558_nsf2_01_Component_nr_396
+Chang2015:Mnemiopsis_leidyi:27923:nsf2_01_Component_nr:396 -> Chang2015_Mnemiopsis_leidyi_27923_nsf2_01_Component_nr_396
+Chang2015:Monosiga_brevicollis:81824:nsf2_01_Component_nr:396 -> Chang2015_Monosiga_brevicollis_81824_nsf2_01_Component_nr_396
+Chang2015:Monosiga_ovata:81526:nsf2_01_Component_nr:396 -> Chang2015_Monosiga_ovata_81526_nsf2_01_Component_nr_396
+Chang2015:Orbicella_faveolata:48498:nsf2_01_Component_nr:396 -> Chang2015_Orbicella_faveolata_48498_nsf2_01_Component_nr_396
+Chang2015:Myxobolus_cerebralis:59783:nsf2_01_Component_nr:396 -> Chang2015_Myxobolus_cerebralis_59783_nsf2_01_Component_nr_396
+Chang2015:Nanomia_bijuga:168759:nsf2_01_Component_nr:396 -> Chang2015_Nanomia_bijuga_168759_nsf2_01_Component_nr_396
+Chang2015:Nasonia_vitripennis:7425:nsf2_01_Component_nr:396 -> Chang2015_Nasonia_vitripennis_7425_nsf2_01_Component_nr_396
+Chang2015:Nematostella_vectensis:45351:nsf2_01_Component_nr:396 -> Chang2015_Nematostella_vectensis_45351_nsf2_01_Component_nr_396
+Chang2015:Octopus_vulgaris:6645:nsf2_01_Component_nr:396 -> Chang2015_Octopus_vulgaris_6645_nsf2_01_Component_nr_396
+Chang2015:Oscarella_carmela:386100:nsf2_01_Component_nr:396 -> Chang2015_Oscarella_carmela_386100_nsf2_01_Component_nr_396
+Chang2015:Oscarella_sp_SN-2011:386100:nsf2_01_Component_nr:396 -> Chang2015_Oscarella_sp_SN-2011_386100_nsf2_01_Component_nr_396
+Chang2015:Patiria_miniata:46514:nsf2_01_Component_nr:396 -> Chang2015_Patiria_miniata_46514_nsf2_01_Component_nr_396
+Chang2015:Pediculus_humanus:121225:nsf2_01_Component_nr:396 -> Chang2015_Pediculus_humanus_121225_nsf2_01_Component_nr_396
+Chang2015:Petromyzon_marinus:7757:nsf2_01_Component_nr:396 -> Chang2015_Petromyzon_marinus_7757_nsf2_01_Component_nr_396
+Chang2015:Petrosia_ficiformis:68564:nsf2_01_Component_nr:396 -> Chang2015_Petrosia_ficiformis_68564_nsf2_01_Component_nr_396
+Chang2015:Pleurobrachia_pileus:140457:nsf2_01_Component_nr:396 -> Chang2015_Pleurobrachia_pileus_140457_nsf2_01_Component_nr_396
+Chang2015:Pocillopora_damicornis:46731:nsf2_01_Component_nr:396 -> Chang2015_Pocillopora_damicornis_46731_nsf2_01_Component_nr_396
+Chang2015:Polypodium_hydriforme:43186:nsf2_01_Component_nr:396 -> Chang2015_Polypodium_hydriforme_43186_nsf2_01_Component_nr_396
+Chang2015:Porites_australiensis:51061:nsf2_01_Component_nr:396 -> Chang2015_Porites_australiensis_51061_nsf2_01_Component_nr_396
+Chang2015:Saccoglossus_kowalevskii:10224:nsf2_01_Component_nr:396 -> Chang2015_Saccoglossus_kowalevskii_10224_nsf2_01_Component_nr_396
+Chang2015:Salpingoeca_sp:86017:nsf2_01_Component_nr:396 -> Chang2015_Salpingoeca_sp_86017_nsf2_01_Component_nr_396
+Chang2015:Sarcotragus_fasciculatus:1234657:nsf2_01_Component_nr:396 -> Chang2015_Sarcotragus_fasciculatus_1234657_nsf2_01_Component_nr_396
+Chang2015:Sphaeroforma_arctica:72019:nsf2_01_Component_nr:396 -> Chang2015_Sphaeroforma_arctica_72019_nsf2_01_Component_nr_396
+Chang2015:Stephanoeca_diplocostata:81535:nsf2_01_Component_nr:396 -> Chang2015_Stephanoeca_diplocostata_81535_nsf2_01_Component_nr_396
+Chang2015:Stomolophus_meleagris:168796:nsf2_01_Component_nr:396 -> Chang2015_Stomolophus_meleagris_168796_nsf2_01_Component_nr_396
+Chang2015:Strigamia_maritima:126957:nsf2_01_Component_nr:396 -> Chang2015_Strigamia_maritima_126957_nsf2_01_Component_nr_396
+Chang2015:Strongylocentrotus_purpuratus:7668:nsf2_01_Component_nr:396 -> Chang2015_Strongylocentrotus_purpuratus_7668_nsf2_01_Component_nr_396
+Chang2015:Sycon_ciliatum:27933:nsf2_01_Component_nr:396 -> Chang2015_Sycon_ciliatum_27933_nsf2_01_Component_nr_396
+Chang2015:Sycon_coactum:1009717:nsf2_01_Component_nr:396 -> Chang2015_Sycon_coactum_1009717_nsf2_01_Component_nr_396
+Chang2015:Thelohanellus_kitauei:669202:nsf2_01_Component_nr:396 -> Chang2015_Thelohanellus_kitauei_669202_nsf2_01_Component_nr_396
+Chang2015:Trichoplax_adhaerens:10228:nsf2_01_Component_nr:396 -> Chang2015_Trichoplax_adhaerens_10228_nsf2_01_Component_nr_396
+Chang2015:Tripedalia_cystophora:6141:nsf2_01_Component_nr:396 -> Chang2015_Tripedalia_cystophora_6141_nsf2_01_Component_nr_396
+Chang2015:Vallicula_multiformis:140489:nsf2_01_Component_nr:396 -> Chang2015_Vallicula_multiformis_140489_nsf2_01_Component_nr_396
+Chang2015:Acanthoeca_sp:81532:nsf2_01_Component_nr:396 -> Chang2015_Acanthoeca_sp_81532_nsf2_01_Component_nr_396
+Chang2015:Acropora_cervicornis:6130:nsf2_01_Component_nr:396 -> Chang2015_Acropora_cervicornis_6130_nsf2_01_Component_nr_396
+Chang2015:Aiptasia_pallida:1720309:nsf2_01_Component_nr:396 -> Chang2015_Aiptasia_pallida_1720309_nsf2_01_Component_nr_396
+Chang2015:Amoebidium_parasiticum:4881:nsf2_01_Component_nr:396 -> Chang2015_Amoebidium_parasiticum_4881_nsf2_01_Component_nr_396
+Chang2015:Amphimedon_queenslandica:400682:nsf2_01_Component_nr:396 -> Chang2015_Amphimedon_queenslandica_400682_nsf2_01_Component_nr_396
+Chang2015:Aphrocallistes_vastus:83887:nsf2_01_Component_nr:396 -> Chang2015_Aphrocallistes_vastus_83887_nsf2_01_Component_nr_396
+Chang2015:Aurelia_aurita:6145:nsf2_01_Component_nr:396 -> Chang2015_Aurelia_aurita_6145_nsf2_01_Component_nr_396
+Chang2015:Beroe_abyssicola:320166:nsf2_01_Component_nr:396 -> Chang2015_Beroe_abyssicola_320166_nsf2_01_Component_nr_396
+Chang2015:Bolocera_tuediae:1163374:nsf2_01_Component_nr:396 -> Chang2015_Bolocera_tuediae_1163374_nsf2_01_Component_nr_396
+Chang2015:Botryllus_schlosseri:30301:nsf2_01_Component_nr:396 -> Chang2015_Botryllus_schlosseri_30301_nsf2_01_Component_nr_396
+Chang2015:Branchiostoma_floridae:7739:nsf2_01_Component_nr:396 -> Chang2015_Branchiostoma_floridae_7739_nsf2_01_Component_nr_396
+Chang2015:Capitella_teleta:283909:nsf2_01_Component_nr:396 -> Chang2015_Capitella_teleta_283909_nsf2_01_Component_nr_396
+Chang2015:Capsaspora_owczarzaki:192875:nsf2_01_Component_nr:396 -> Chang2015_Capsaspora_owczarzaki_192875_nsf2_01_Component_nr_396
+Chang2015:Chondrilla_nucula:220712:nsf2_01_Component_nr:396 -> Chang2015_Chondrilla_nucula_220712_nsf2_01_Component_nr_396
+Chang2015:Ciona_intestinalis:7719:nsf2_01_Component_nr:396 -> Chang2015_Ciona_intestinalis_7719_nsf2_01_Component_nr_396
+Chang2015:Clytia_hemisphaerica:252671:nsf2_01_Component_nr:396 -> Chang2015_Clytia_hemisphaerica_252671_nsf2_01_Component_nr_396
+Chang2015:Corticium_candelabrum:121492:nsf2_01_Component_nr:396 -> Chang2015_Corticium_candelabrum_121492_nsf2_01_Component_nr_396
+Chang2015:Craspedacusta_sowerbii:128124:nsf2_01_Component_nr:396 -> Chang2015_Craspedacusta_sowerbii_128124_nsf2_01_Component_nr_396
+Chang2015:Crassostrea_gigas:29159:nsf2_01_Component_nr:396 -> Chang2015_Crassostrea_gigas_29159_nsf2_01_Component_nr_396
+Chang2015:Daphnia_pulex:6669:nsf2_01_Component_nr:396 -> Chang2015_Daphnia_pulex_6669_nsf2_01_Component_nr_396
+Chang2015:Ectopleura_larynx:264052:nsf2_01_Component_nr:396 -> Chang2015_Ectopleura_larynx_264052_nsf2_01_Component_nr_396
+Chang2015:Edwardsiella_lineata:132407:nsf2_01_Component_nr:396 -> Chang2015_Edwardsiella_lineata_132407_nsf2_01_Component_nr_396
+Chang2015:Enteromyxum_leei:188704:nsf2_01_Component_nr:396 -> Chang2015_Enteromyxum_leei_188704_nsf2_01_Component_nr_396
+Chang2015:Ephydatia_muelleri:6052:nsf2_01_Component_nr:396 -> Chang2015_Ephydatia_muelleri_6052_nsf2_01_Component_nr_396
+Chang2015:Eunicella_cavolinii:317547:nsf2_01_Component_nr:396 -> Chang2015_Eunicella_cavolinii_317547_nsf2_01_Component_nr_396
+Chang2015:Euplectella_aspergillum:936045:nsf2_01_Component_nr:396 -> Chang2015_Euplectella_aspergillum_936045_nsf2_01_Component_nr_396
+Chang2015:Euplokamis_dunlapae:1403701:nsf2_01_Component_nr:396 -> Chang2015_Euplokamis_dunlapae_1403701_nsf2_01_Component_nr_396
+Chang2015:Gorgonia_ventalina:204384:nsf2_01_Component_nr:396 -> Chang2015_Gorgonia_ventalina_204384_nsf2_01_Component_nr_396
+Chang2015:Helobdella_robusta:6412:nsf2_01_Component_nr:396 -> Chang2015_Helobdella_robusta_6412_nsf2_01_Component_nr_396
+Chang2015:Homo_sapiens:9606:nsf2_01_Component_nr:396 -> Chang2015_Homo_sapiens_9606_nsf2_01_Component_nr_396
+Chang2015:Hormathia_digitata:1163372:nsf2_01_Component_nr:396 -> Chang2015_Hormathia_digitata_1163372_nsf2_01_Component_nr_396
+Chang2015:Hydra_vulgaris_01:6087:nsf2_01_Component_nr:396 -> Chang2015_Hydra_vulgaris_01_6087_nsf2_01_Component_nr_396
+Chang2015:Hydractinia_polyclina:589945:nsf2_01_Component_nr:396 -> Chang2015_Hydractinia_polyclina_589945_nsf2_01_Component_nr_396
+Chang2015:Ilyanassa_obsoleta:1934733:nsf2_01_Component_nr:396 -> Chang2015_Ilyanassa_obsoleta_1934733_nsf2_01_Component_nr_396
+Chang2015:Ixodes_scapularis:6945:nsf2_01_Component_nr:396 -> Chang2015_Ixodes_scapularis_6945_nsf2_01_Component_nr_396
+Chang2015:Kudoa_iwatai:269814:nsf2_01_Component_nr:396 -> Chang2015_Kudoa_iwatai_269814_nsf2_01_Component_nr_396
+Chang2015:Latimeria_menadoensis:106881:nsf2_01_Component_nr:396 -> Chang2015_Latimeria_menadoensis_106881_nsf2_01_Component_nr_396
+Chang2015:Leucetta_chagosensis:185688:nsf2_01_Component_nr:396 -> Chang2015_Leucetta_chagosensis_185688_nsf2_01_Component_nr_396
+Chang2015:Ministeria_vibrans:134558:nsf2_01_Component_nr:396 -> Chang2015_Ministeria_vibrans_134558_nsf2_01_Component_nr_396
+Chang2015:Mnemiopsis_leidyi:27923:nsf2_01_Component_nr:396 -> Chang2015_Mnemiopsis_leidyi_27923_nsf2_01_Component_nr_396
+Chang2015:Monosiga_brevicollis:81824:nsf2_01_Component_nr:396 -> Chang2015_Monosiga_brevicollis_81824_nsf2_01_Component_nr_396
+Chang2015:Monosiga_ovata:81526:nsf2_01_Component_nr:396 -> Chang2015_Monosiga_ovata_81526_nsf2_01_Component_nr_396
+Chang2015:Orbicella_faveolata:48498:nsf2_01_Component_nr:396 -> Chang2015_Orbicella_faveolata_48498_nsf2_01_Component_nr_396
+Chang2015:Myxobolus_cerebralis:59783:nsf2_01_Component_nr:396 -> Chang2015_Myxobolus_cerebralis_59783_nsf2_01_Component_nr_396
+Chang2015:Nanomia_bijuga:168759:nsf2_01_Component_nr:396 -> Chang2015_Nanomia_bijuga_168759_nsf2_01_Component_nr_396
+Chang2015:Nasonia_vitripennis:7425:nsf2_01_Component_nr:396 -> Chang2015_Nasonia_vitripennis_7425_nsf2_01_Component_nr_396
+Chang2015:Nematostella_vectensis:45351:nsf2_01_Component_nr:396 -> Chang2015_Nematostella_vectensis_45351_nsf2_01_Component_nr_396
+Chang2015:Octopus_vulgaris:6645:nsf2_01_Component_nr:396 -> Chang2015_Octopus_vulgaris_6645_nsf2_01_Component_nr_396
+Chang2015:Oscarella_carmela:386100:nsf2_01_Component_nr:396 -> Chang2015_Oscarella_carmela_386100_nsf2_01_Component_nr_396
+Chang2015:Oscarella_sp_SN-2011:386100:nsf2_01_Component_nr:396 -> Chang2015_Oscarella_sp_SN-2011_386100_nsf2_01_Component_nr_396
+Chang2015:Patiria_miniata:46514:nsf2_01_Component_nr:396 -> Chang2015_Patiria_miniata_46514_nsf2_01_Component_nr_396
+Chang2015:Pediculus_humanus:121225:nsf2_01_Component_nr:396 -> Chang2015_Pediculus_humanus_121225_nsf2_01_Component_nr_396
+Chang2015:Petromyzon_marinus:7757:nsf2_01_Component_nr:396 -> Chang2015_Petromyzon_marinus_7757_nsf2_01_Component_nr_396
+Chang2015:Petrosia_ficiformis:68564:nsf2_01_Component_nr:396 -> Chang2015_Petrosia_ficiformis_68564_nsf2_01_Component_nr_396
+Chang2015:Pleurobrachia_pileus:140457:nsf2_01_Component_nr:396 -> Chang2015_Pleurobrachia_pileus_140457_nsf2_01_Component_nr_396
+Chang2015:Pocillopora_damicornis:46731:nsf2_01_Component_nr:396 -> Chang2015_Pocillopora_damicornis_46731_nsf2_01_Component_nr_396
+Chang2015:Polypodium_hydriforme:43186:nsf2_01_Component_nr:396 -> Chang2015_Polypodium_hydriforme_43186_nsf2_01_Component_nr_396
+Chang2015:Porites_australiensis:51061:nsf2_01_Component_nr:396 -> Chang2015_Porites_australiensis_51061_nsf2_01_Component_nr_396
+Chang2015:Saccoglossus_kowalevskii:10224:nsf2_01_Component_nr:396 -> Chang2015_Saccoglossus_kowalevskii_10224_nsf2_01_Component_nr_396
+Chang2015:Salpingoeca_sp:86017:nsf2_01_Component_nr:396 -> Chang2015_Salpingoeca_sp_86017_nsf2_01_Component_nr_396
+Chang2015:Sarcotragus_fasciculatus:1234657:nsf2_01_Component_nr:396 -> Chang2015_Sarcotragus_fasciculatus_1234657_nsf2_01_Component_nr_396
+Chang2015:Sphaeroforma_arctica:72019:nsf2_01_Component_nr:396 -> Chang2015_Sphaeroforma_arctica_72019_nsf2_01_Component_nr_396
+Chang2015:Sphaeromyxa_zaharoni:275449:nsf2_01_Component_nr:396 -> Chang2015_Sphaeromyxa_zaharoni_275449_nsf2_01_Component_nr_396
+Chang2015:Stephanoeca_diplocostata:81535:nsf2_01_Component_nr:396 -> Chang2015_Stephanoeca_diplocostata_81535_nsf2_01_Component_nr_396
+Chang2015:Stomolophus_meleagris:168796:nsf2_01_Component_nr:396 -> Chang2015_Stomolophus_meleagris_168796_nsf2_01_Component_nr_396
+Chang2015:Strigamia_maritima:126957:nsf2_01_Component_nr:396 -> Chang2015_Strigamia_maritima_126957_nsf2_01_Component_nr_396
+Chang2015:Strongylocentrotus_purpuratus:7668:nsf2_01_Component_nr:396 -> Chang2015_Strongylocentrotus_purpuratus_7668_nsf2_01_Component_nr_396
+Chang2015:Sycon_ciliatum:27933:nsf2_01_Component_nr:396 -> Chang2015_Sycon_ciliatum_27933_nsf2_01_Component_nr_396
+Chang2015:Sycon_coactum:1009717:nsf2_01_Component_nr:396 -> Chang2015_Sycon_coactum_1009717_nsf2_01_Component_nr_396
+Chang2015:Thelohanellus_kitauei:669202:nsf2_01_Component_nr:396 -> Chang2015_Thelohanellus_kitauei_669202_nsf2_01_Component_nr_396
+Chang2015:Trichoplax_adhaerens:10228:nsf2_01_Component_nr:396 -> Chang2015_Trichoplax_adhaerens_10228_nsf2_01_Component_nr_396
+Chang2015:Tripedalia_cystophora:6141:nsf2_01_Component_nr:396 -> Chang2015_Tripedalia_cystophora_6141_nsf2_01_Component_nr_396
+Chang2015:Urticina_eques:417072:nsf2_01_Component_nr:396 -> Chang2015_Urticina_eques_417072_nsf2_01_Component_nr_396
+Chang2015:Vallicula_multiformis:140489:nsf2_01_Component_nr:396 -> Chang2015_Vallicula_multiformis_140489_nsf2_01_Component_nr_396
+Philippe2009:Acropora_millepora:45264:Gene_0035_Component_nr:396 -> Philippe2009_Acropora_millepora_45264_Gene_0035_Component_nr_396
+Philippe2009:Allomyces_macrogynus:28583:Gene_0035_Component_nr:396 -> Philippe2009_Allomyces_macrogynus_28583_Gene_0035_Component_nr_396
+Philippe2009:Amoebidium_parasiticum:4881:Gene_0035_Component_nr:396 -> Philippe2009_Amoebidium_parasiticum_4881_Gene_0035_Component_nr_396
+Philippe2009:Aplysia_californica:6500:Gene_0035_Component_nr:396 -> Philippe2009_Aplysia_californica_6500_Gene_0035_Component_nr_396
+Philippe2009:Batrachochytrium_dendrobatidis:109871:Gene_0035_Component_nr:396 -> Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0035_Component_nr_396
+Philippe2009:Branchiostoma_floridae:7739:Gene_0035_Component_nr:396 -> Philippe2009_Branchiostoma_floridae_7739_Gene_0035_Component_nr_396
+Philippe2009:Capitella_teleta:283909:Gene_0035_Component_nr:396 -> Philippe2009_Capitella_teleta_283909_Gene_0035_Component_nr_396
+Philippe2009:Capsaspora_owczarzaki:192875:Gene_0035_Component_nr:396 -> Philippe2009_Capsaspora_owczarzaki_192875_Gene_0035_Component_nr_396
+Philippe2009:Ciona_savignyi:51511:Gene_0035_Component_nr:396 -> Philippe2009_Ciona_savignyi_51511_Gene_0035_Component_nr_396
+Philippe2009:Crassostrea_gigas:29159:Gene_0035_Component_nr:396 -> Philippe2009_Crassostrea_gigas_29159_Gene_0035_Component_nr_396
+Philippe2009:Danio_rerio:7955:Gene_0035_Component_nr:396 -> Philippe2009_Danio_rerio_7955_Gene_0035_Component_nr_396
+Philippe2009:Daphnia_pulex:6669:Gene_0035_Component_nr:396 -> Philippe2009_Daphnia_pulex_6669_Gene_0035_Component_nr_396
+Philippe2009:Ephydatia_muelleri:6052:Gene_0035_Component_nr:396 -> Philippe2009_Ephydatia_muelleri_6052_Gene_0035_Component_nr_396
+Philippe2009:Euprymna_scolopes:6613:Gene_0035_Component_nr:396 -> Philippe2009_Euprymna_scolopes_6613_Gene_0035_Component_nr_396
+Philippe2009:Helobdella_robusta:6412:Gene_0035_Component_nr:396 -> Philippe2009_Helobdella_robusta_6412_Gene_0035_Component_nr_396
+Philippe2009:Heterochone_sp:367900:Gene_0035_Component_nr:396 -> Philippe2009_Heterochone_sp_367900_Gene_0035_Component_nr_396
+Philippe2009:Hydra_magnipapillata:6087:Gene_0035_Component_nr:396 -> Philippe2009_Hydra_magnipapillata_6087_Gene_0035_Component_nr_396
+Philippe2009:Hydractinia_echinata:35630:Gene_0035_Component_nr:396 -> Philippe2009_Hydractinia_echinata_35630_Gene_0035_Component_nr_396
+Philippe2009:Ixodes_scapularis:6945:Gene_0035_Component_nr:396 -> Philippe2009_Ixodes_scapularis_6945_Gene_0035_Component_nr_396
+Philippe2009:Metridium_senile:6116:Gene_0035_Component_nr:396 -> Philippe2009_Metridium_senile_6116_Gene_0035_Component_nr_396
+Philippe2009:Molgula_tectiformis:30286:Gene_0035_Component_nr:396 -> Philippe2009_Molgula_tectiformis_30286_Gene_0035_Component_nr_396
+Philippe2009:Monosiga_brevicollis:81824:Gene_0035_Component_nr:396 -> Philippe2009_Monosiga_brevicollis_81824_Gene_0035_Component_nr_396
+Philippe2009:Monosiga_ovata:81526:Gene_0035_Component_nr:396 -> Philippe2009_Monosiga_ovata_81526_Gene_0035_Component_nr_396
+Philippe2009:Nasonia_vitripennis:7425:Gene_0035_Component_nr:396 -> Philippe2009_Nasonia_vitripennis_7425_Gene_0035_Component_nr_396
+Philippe2009:Nematostella_vectensis:45351:Gene_0035_Component_nr:396 -> Philippe2009_Nematostella_vectensis_45351_Gene_0035_Component_nr_396
+Philippe2009:Oscarella_carmela:386100:Gene_0035_Component_nr:396 -> Philippe2009_Oscarella_carmela_386100_Gene_0035_Component_nr_396
+Philippe2009:Pediculus_humanus:121225:Gene_0035_Component_nr:396 -> Philippe2009_Pediculus_humanus_121225_Gene_0035_Component_nr_396
+Philippe2009:Petromyzon_marinus:7757:Gene_0035_Component_nr:396 -> Philippe2009_Petromyzon_marinus_7757_Gene_0035_Component_nr_396
+Philippe2009:Phycomyces_blakesleeanus:4837:Gene_0035_Component_nr:396 -> Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0035_Component_nr_396
+Philippe2009:Pleurobrachia_pileus:140457:Gene_0035_Component_nr:396 -> Philippe2009_Pleurobrachia_pileus_140457_Gene_0035_Component_nr_396
+Philippe2009:Proterospongia_sp:218847:Gene_0035_Component_nr:396 -> Philippe2009_Proterospongia_sp_218847_Gene_0035_Component_nr_396
+Philippe2009:Amphimedon_queenslandica:400682:Gene_0035_Component_nr:396 -> Philippe2009_Amphimedon_queenslandica_400682_Gene_0035_Component_nr_396
+Philippe2009:Rhizopus_oryzae:64495:Gene_0035_Component_nr:396 -> Philippe2009_Rhizopus_oryzae_64495_Gene_0035_Component_nr_396
+Philippe2009:Saccoglossus_kowalevskii:10224:Gene_0035_Component_nr:396 -> Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0035_Component_nr_396
+Philippe2009:Sphaeroforma_arctica:72019:Gene_0035_Component_nr:396 -> Philippe2009_Sphaeroforma_arctica_72019_Gene_0035_Component_nr_396
+Philippe2009:Spizellomyces_punctatus:109760:Gene_0035_Component_nr:396 -> Philippe2009_Spizellomyces_punctatus_109760_Gene_0035_Component_nr_396
+Philippe2009:Strongylocentrotus_purpuratus:7668:Gene_0035_Component_nr:396 -> Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0035_Component_nr_396
+Philippe2009:Trichoplax_adhaerens:10228:Gene_0035_Component_nr:396 -> Philippe2009_Trichoplax_adhaerens_10228_Gene_0035_Component_nr_396
+Philippe2009:Tubifex_tubifex:6386:Gene_0035_Component_nr:396 -> Philippe2009_Tubifex_tubifex_6386_Gene_0035_Component_nr_396
+Simion2017:Acanthoeca_sp:81532:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Acanthoeca_sp_81532_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Acanthoeca_spectabilis:81533:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Acanthoeca_spectabilis_81533_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Alatina_alata:1193083:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Alatina_alata_1193083_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Amoebidium_parasiticum:4881:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Amoebidium_parasiticum_4881_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Amphimedon_queenslandica:400682:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Amphimedon_queenslandica_400682_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Aplysia_californica:6500:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Aplysia_californica_6500_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Aurelia_aurita:6145:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Aurelia_aurita_6145_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Beroe_abyssicola:320166:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Beroe_abyssicola_320166_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Bolinopsis_infundibulum:140455:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Bolinopsis_infundibulum_140455_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Branchiostoma_floridae:7739:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Branchiostoma_floridae_7739_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Capitella_teleta:283909:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Capitella_teleta_283909_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Capsaspora_owczarzaki:192875:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Capsaspora_owczarzaki_192875_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Choanoeca_perplexa_11:81531:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Choanoeca_perplexa_11_81531_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Chondrilla_nucula:220712:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Chondrilla_nucula_220712_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Clytia_hemisphaerica:252671:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Clytia_hemisphaerica_252671_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Codosiga_hollandica_17:1742608:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Codosiga_hollandica_17_1742608_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Coeloplana_species:140473:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Coeloplana_species_140473_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Corticium_candelabrum:121492:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Corticium_candelabrum_121492_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Craspedacusta_sowerbii:128124:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Craspedacusta_sowerbii_128124_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Crassostrea_gigas:29159:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Crassostrea_gigas_29159_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Daphnia_pulex:6669:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Daphnia_pulex_6669_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Diaphanoeca_grandis:28014:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Diaphanoeca_grandis_28014_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Didymoeca_costata_10:459534:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Didymoeca_costata_10_459534_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Dryodora_glandiformis:1566677:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Dryodora_glandiformis_1566677_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Ephydatia_muelleri:6052:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Ephydatia_muelleri_6052_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Euplectella_aspergillum:936045:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Euplectella_aspergillum_936045_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Euplokamis_dunlapae:1403701:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Euplokamis_dunlapae_1403701_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Helobdella_robusta:6412:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Helobdella_robusta_6412_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Homo_sapiens:9606:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Homo_sapiens_9606_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Hormiphora_californensis:1403702:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Hormiphora_californensis_1403702_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Hyalonema_populiferum:1631155:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Hyalonema_populiferum_1631155_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Hydra_vulgaris_01:6087:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Hydra_vulgaris_01_6087_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Ircinia_fasciculata:1234657:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Ircinia_fasciculata_1234657_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Ixodes_scapularis:6945:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Ixodes_scapularis_6945_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Kirkpatrickia_variolosa:1631157:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Kirkpatrickia_variolosa_1631157_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Lampea_pancerina:1532213:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Lampea_pancerina_1532213_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Latrunculia_apicalis:1325597:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Latrunculia_apicalis_1325597_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Liriope_tetraphylla:37524:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Liriope_tetraphylla_37524_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Ministeria_vibrans:134558:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Ministeria_vibrans_134558_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Mnemiopsis_leidyi:27923:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Mnemiopsis_leidyi_27923_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Monosiga_brevicollis:81824:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Monosiga_brevicollis_81824_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Orbicella_faveolata:48498:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Orbicella_faveolata_48498_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Mycale_phyllophila:1325607:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Mycale_phyllophila_1325607_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Mylnosiga_fluctuans_19:1928486:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Mylnosiga_fluctuans_19_1928486_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Oscarella_carmela:386100:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Oscarella_carmela_386100_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Oscarella_species:121493:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Oscarella_species_121493_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Periphylla_periphylla:880221:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Periphylla_periphylla_880221_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Petrosia_ficiformis:68564:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Petrosia_ficiformis_68564_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Pleraplysilla_spinifera:119433:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Pleraplysilla_spinifera_119433_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Pleurobrachia_species:34498:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Pleurobrachia_species_34498_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Rossella_fibulata:1076269:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Rossella_fibulata_1076269_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Saccoglossus_kowalevskii:10224:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Saccoglossus_kowalevskii_10224_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Salpingoeca_dolichothecata_16:1742605:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Salpingoeca_dolichothecata_16_1742605_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Salpingoeca_helianthica_18:1928494:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Salpingoeca_helianthica_18_1928494_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Salpingoeca_infusionum_12:86018:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Salpingoeca_infusionum_12_86018_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Salpingoeca_macrocollata_06:1924736:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Salpingoeca_macrocollata_06_1924736_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Salpingoeca_punica_03:1924735:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Salpingoeca_punica_03_1924735_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Salpingoeca_kvevrii:1924737:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Salpingoeca_kvevrii_1924737_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Microstomoeca_roanoka:1923864:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Microstomoeca_roanoka_1923864_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Salpingoeca_rosetta:946362:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Salpingoeca_rosetta_946362_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Salpingoeca_urceolata_04:473813:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Salpingoeca_urceolata_04_473813_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Spongilla_lacustris:6055:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Spongilla_lacustris_6055_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Stephanoeca_diplocostata:81535:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Stephanoeca_diplocostata_81535_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Stomolophus_meleagris:168796:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Stomolophus_meleagris_168796_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Strongylocentrotus_purpuratus:7668:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Strongylocentrotus_purpuratus_7668_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Sycon_ciliatum:27933:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Sycon_ciliatum_27933_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Sycon_coactum:1009717:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Sycon_coactum_1009717_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Sympagella_nux:76350:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Sympagella_nux_76350_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Tribolium_castaneum:7070:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Tribolium_castaneum_7070_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Trichoplax_adhaerens:10228:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Trichoplax_adhaerens_10228_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Simion2017:Vallicula_multiformis:140489:V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr:396 -> Simion2017_Vallicula_multiformis_140489_V2META11663-2-42-Calc_Hmm10-BMGE05_Component_nr_396
+Whelan2017_full:Sphaeroforma_arctica:72019:Subset25_02_Component_nr:396 -> Whelan2017_full_Sphaeroforma_arctica_72019_Subset25_02_Component_nr_396
+Whelan2017_full:Drosophila_melanogaster:7227:Subset25_02_Component_nr:396 -> Whelan2017_full_Drosophila_melanogaster_7227_Subset25_02_Component_nr_396
+Whelan2017_full:Rossella_fibulata:1076269:Subset25_02_Component_nr:396 -> Whelan2017_full_Rossella_fibulata_1076269_Subset25_02_Component_nr_396
+Whelan2017_full:Amoebidium_parasiticum:4881:Subset25_02_Component_nr:396 -> Whelan2017_full_Amoebidium_parasiticum_4881_Subset25_02_Component_nr_396
+Whelan2017_full:Abylopsis_tetragona:316209:Subset25_02_Component_nr:396 -> Whelan2017_full_Abylopsis_tetragona_316209_Subset25_02_Component_nr_396
+Whelan2017_full:Eunicella_verrucosa:396355:Subset25_02_Component_nr:396 -> Whelan2017_full_Eunicella_verrucosa_396355_Subset25_02_Component_nr_396
+Whelan2017_full:Daphnia_pulex:6669:Subset25_02_Component_nr:396 -> Whelan2017_full_Daphnia_pulex_6669_Subset25_02_Component_nr_396
+Whelan2017_full:Aiptasia_pallida:1720309:Subset25_02_Component_nr:396 -> Whelan2017_full_Aiptasia_pallida_1720309_Subset25_02_Component_nr_396
+Whelan2017_full:Homo_sapiens:9606:Subset25_02_Component_nr:396 -> Whelan2017_full_Homo_sapiens_9606_Subset25_02_Component_nr_396
+Whelan2017_full:Amphimedon_queenslandica:400682:Subset25_02_Component_nr:396 -> Whelan2017_full_Amphimedon_queenslandica_400682_Subset25_02_Component_nr_396
+Whelan2017_full:Petrosia_ficiformis:68564:Subset25_02_Component_nr:396 -> Whelan2017_full_Petrosia_ficiformis_68564_Subset25_02_Component_nr_396
+Whelan2017_full:Strongylocentrotus_purpuratus:7668:Subset25_02_Component_nr:396 -> Whelan2017_full_Strongylocentrotus_purpuratus_7668_Subset25_02_Component_nr_396
+Whelan2017_full:Physalia_physalis:168775:Subset25_02_Component_nr:396 -> Whelan2017_full_Physalia_physalis_168775_Subset25_02_Component_nr_396
+Whelan2017_full:Hydra_vulgaris:6087:Subset25_02_Component_nr:396 -> Whelan2017_full_Hydra_vulgaris_6087_Subset25_02_Component_nr_396
+Whelan2017_full:Nanomia_bijuga:168759:Subset25_02_Component_nr:396 -> Whelan2017_full_Nanomia_bijuga_168759_Subset25_02_Component_nr_396
+Whelan2017_full:Acanthoeca_sp:81532:Subset25_02_Component_nr:396 -> Whelan2017_full_Acanthoeca_sp_81532_Subset25_02_Component_nr_396
+Whelan2017_full:Sycon_ciliatum:27933:Subset25_02_Component_nr:396 -> Whelan2017_full_Sycon_ciliatum_27933_Subset25_02_Component_nr_396
+Whelan2017_full:Sympagella_nux:76350:Subset25_02_Component_nr:396 -> Whelan2017_full_Sympagella_nux_76350_Subset25_02_Component_nr_396
+Whelan2017_full:Spongilla_lacustris:6055:Subset25_02_Component_nr:396 -> Whelan2017_full_Spongilla_lacustris_6055_Subset25_02_Component_nr_396
+Whelan2017_full:Monosiga_ovata:81526:Subset25_02_Component_nr:396 -> Whelan2017_full_Monosiga_ovata_81526_Subset25_02_Component_nr_396
+Whelan2017_full:Crella_elegans:252961:Subset25_02_Component_nr:396 -> Whelan2017_full_Crella_elegans_252961_Subset25_02_Component_nr_396
+Whelan2017_full:Ministeria_vibrans:134558:Subset25_02_Component_nr:396 -> Whelan2017_full_Ministeria_vibrans_134558_Subset25_02_Component_nr_396
+Whelan2017_full:Mycale_phyllophila:1325607:Subset25_02_Component_nr:396 -> Whelan2017_full_Mycale_phyllophila_1325607_Subset25_02_Component_nr_396
+Whelan2017_full:Hemithiris_psittacea:763142:Subset25_02_Component_nr:396 -> Whelan2017_full_Hemithiris_psittacea_763142_Subset25_02_Component_nr_396
+Whelan2017_full:Agalma_elegans:316166:Subset25_02_Component_nr:396 -> Whelan2017_full_Agalma_elegans_316166_Subset25_02_Component_nr_396
+Whelan2017_full:Capitella_teleta:283909:Subset25_02_Component_nr:396 -> Whelan2017_full_Capitella_teleta_283909_Subset25_02_Component_nr_396
+Whelan2017_full:Salpingoeca_pyxidium:473812:Subset25_02_Component_nr:396 -> Whelan2017_full_Salpingoeca_pyxidium_473812_Subset25_02_Component_nr_396
+Whelan2017_full:Salpingoeca_rosetta:946362:Subset25_02_Component_nr:396 -> Whelan2017_full_Salpingoeca_rosetta_946362_Subset25_02_Component_nr_396
+Whelan2017_full:Trichoplax_adhaerens:10228:Subset25_02_Component_nr:396 -> Whelan2017_full_Trichoplax_adhaerens_10228_Subset25_02_Component_nr_396
+Whelan2017_full:Monosiga_brevicollis:81824:Subset25_02_Component_nr:396 -> Whelan2017_full_Monosiga_brevicollis_81824_Subset25_02_Component_nr_396
+Whelan2017_full:Capsaspora_owczarzaki:192875:Subset25_02_Component_nr:396 -> Whelan2017_full_Capsaspora_owczarzaki_192875_Subset25_02_Component_nr_396
+Whelan2017_full:Hydra_viridissima:6082:Subset25_02_Component_nr:396 -> Whelan2017_full_Hydra_viridissima_6082_Subset25_02_Component_nr_396
+Whelan2017_full:Acropora_digitifera:70779:Subset25_02_Component_nr:396 -> Whelan2017_full_Acropora_digitifera_70779_Subset25_02_Component_nr_396
+Whelan2017_full:Cliona_varians:297654:Subset25_02_Component_nr:396 -> Whelan2017_full_Cliona_varians_297654_Subset25_02_Component_nr_396
+Whelan2017_full:Kirkpatrickia_variolosa:1631157:Subset25_02_Component_nr:396 -> Whelan2017_full_Kirkpatrickia_variolosa_1631157_Subset25_02_Component_nr_396
+Whelan2017_full:Latrunculia_apicalis:1325597:Subset25_02_Component_nr:396 -> Whelan2017_full_Latrunculia_apicalis_1325597_Subset25_02_Component_nr_396
+Whelan2017_full:Hyalonema_populiferum:1631155:Subset25_02_Component_nr:396 -> Whelan2017_full_Hyalonema_populiferum_1631155_Subset25_02_Component_nr_396
+Whelan2017_full:Periphylla_periphylla:880221:Subset25_02_Component_nr:396 -> Whelan2017_full_Periphylla_periphylla_880221_Subset25_02_Component_nr_396
+Whelan2017_full:Hormathia_digitata:1163372:Subset25_02_Component_nr:396 -> Whelan2017_full_Hormathia_digitata_1163372_Subset25_02_Component_nr_396
+Whelan2017_full:Hydra_oligactis:6088:Subset25_02_Component_nr:396 -> Whelan2017_full_Hydra_oligactis_6088_Subset25_02_Component_nr_396
+Whelan2017_full:Sycon_coactum:1009717:Subset25_02_Component_nr:396 -> Whelan2017_full_Sycon_coactum_1009717_Subset25_02_Component_nr_396
+Whelan2017_full:Ircinia_fasciculata:1234657:Subset25_02_Component_nr:396 -> Whelan2017_full_Ircinia_fasciculata_1234657_Subset25_02_Component_nr_396
+Whelan2017_full:Aphrocallistes_vastus:83887:Subset25_02_Component_nr:396 -> Whelan2017_full_Aphrocallistes_vastus_83887_Subset25_02_Component_nr_396
+Whelan2017_full:Oscarella_carmela:386100:Subset25_02_Component_nr:396 -> Whelan2017_full_Oscarella_carmela_386100_Subset25_02_Component_nr_396
+Whelan2017_full:Craseoa_lathetica:316205:Subset25_02_Component_nr:396 -> Whelan2017_full_Craseoa_lathetica_316205_Subset25_02_Component_nr_396
+Whelan2017_full:Nematostella_vectensis:45351:Subset25_02_Component_nr:396 -> Whelan2017_full_Nematostella_vectensis_45351_Subset25_02_Component_nr_396
+
+ERROR: Duplicated sequence name Chang2015_Acanthoeca_sp_81532_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Acropora_cervicornis_6130_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Aiptasia_pallida_1720309_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Amoebidium_parasiticum_4881_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Amphimedon_queenslandica_400682_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Aphrocallistes_vastus_83887_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Aurelia_aurita_6145_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Beroe_abyssicola_320166_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Bolocera_tuediae_1163374_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Branchiostoma_floridae_7739_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Capitella_teleta_283909_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Capsaspora_owczarzaki_192875_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Chondrilla_nucula_220712_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Ciona_intestinalis_7719_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Clytia_hemisphaerica_252671_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Corticium_candelabrum_121492_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Craspedacusta_sowerbii_128124_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Crassostrea_gigas_29159_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Daphnia_pulex_6669_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Ectopleura_larynx_264052_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Edwardsiella_lineata_132407_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Enteromyxum_leei_188704_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Ephydatia_muelleri_6052_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Eunicella_cavolinii_317547_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Euplectella_aspergillum_936045_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Euplokamis_dunlapae_1403701_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Gorgonia_ventalina_204384_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Helobdella_robusta_6412_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Homo_sapiens_9606_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Hormathia_digitata_1163372_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Hydra_vulgaris_01_6087_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Hydractinia_polyclina_589945_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Ilyanassa_obsoleta_1934733_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Ixodes_scapularis_6945_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Kudoa_iwatai_269814_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Latimeria_menadoensis_106881_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Ministeria_vibrans_134558_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Mnemiopsis_leidyi_27923_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Monosiga_brevicollis_81824_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Monosiga_ovata_81526_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Myxobolus_cerebralis_59783_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Nanomia_bijuga_168759_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Nasonia_vitripennis_7425_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Nematostella_vectensis_45351_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Octopus_vulgaris_6645_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Orbicella_faveolata_48498_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Oscarella_carmela_386100_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Oscarella_sp_SN-2011_386100_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Patiria_miniata_46514_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Pediculus_humanus_121225_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Petromyzon_marinus_7757_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Petrosia_ficiformis_68564_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Pleurobrachia_pileus_140457_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Pocillopora_damicornis_46731_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Polypodium_hydriforme_43186_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Porites_australiensis_51061_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Saccoglossus_kowalevskii_10224_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Salpingoeca_sp_86017_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Sarcotragus_fasciculatus_1234657_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Sphaeroforma_arctica_72019_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Stephanoeca_diplocostata_81535_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Stomolophus_meleagris_168796_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Strigamia_maritima_126957_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Strongylocentrotus_purpuratus_7668_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Sycon_ciliatum_27933_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Sycon_coactum_1009717_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Thelohanellus_kitauei_669202_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Trichoplax_adhaerens_10228_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Tripedalia_cystophora_6141_nsf2_01_Component_nr_396
+ERROR: Duplicated sequence name Chang2015_Vallicula_multiformis_140489_nsf2_01_Component_nr_396
+ERROR: Please rename sequences listed above!

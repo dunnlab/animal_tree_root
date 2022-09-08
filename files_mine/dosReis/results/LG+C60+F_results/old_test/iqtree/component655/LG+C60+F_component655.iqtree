@@ -1,0 +1,657 @@
+IQ-TREE 1.5.3 built Mar 12 2017
+
+Input file name: /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component655.mafft
+Type of analysis: tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 520851
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh (2015)
+IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol. Biol. Evol., 32:268-274.
+http://dx.doi.org/10.1093/molbev/msu300
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Bui Quang Minh, Minh Anh Thi Nguyen, and Arndt von Haeseler (2013) Ultrafast
+approximation for phylogenetic bootstrap. Mol. Biol. Evol., 30:1188-1195.
+http://dx.doi.org/10.1093/molbev/mst024
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 118 sequences with 102 amino-acid sites
+Number of constant sites: 9 (= 8.82353% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 9 (= 8.82353% of all sites)
+Number of distinct site patterns: 101
+
+SUBSTITUTION PROCESS
+--------------------
+
+Mixture model of substitution: MIX{LG+F+F,LG+FC60pi1,LG+FC60pi2,LG+FC60pi3,LG+FC60pi4,LG+FC60pi5,LG+FC60pi6,LG+FC60pi7,LG+FC60pi8,LG+FC60pi9,LG+FC60pi10,LG+FC60pi11,LG+FC60pi12,LG+FC60pi13,LG+FC60pi14,LG+FC60pi15,LG+FC60pi16,LG+FC60pi17,LG+FC60pi18,LG+FC60pi19,LG+FC60pi20,LG+FC60pi21,LG+FC60pi22,LG+FC60pi23,LG+FC60pi24,LG+FC60pi25,LG+FC60pi26,LG+FC60pi27,LG+FC60pi28,LG+FC60pi29,LG+FC60pi30,LG+FC60pi31,LG+FC60pi32,LG+FC60pi33,LG+FC60pi34,LG+FC60pi35,LG+FC60pi36,LG+FC60pi37,LG+FC60pi38,LG+FC60pi39,LG+FC60pi40,LG+FC60pi41,LG+FC60pi42,LG+FC60pi43,LG+FC60pi44,LG+FC60pi45,LG+FC60pi46,LG+FC60pi47,LG+FC60pi48,LG+FC60pi49,LG+FC60pi50,LG+FC60pi51,LG+FC60pi52,LG+FC60pi53,LG+FC60pi54,LG+FC60pi55,LG+FC60pi56,LG+FC60pi57,LG+FC60pi58,LG+FC60pi59,LG+FC60pi60}+G4
+
+  No  Component      Rate    Weight   Parameters
+   1  LG+F          1.0000   0.3590   LG+F
+   2  LG+FC60pi1    1.0000   0.0165   LG+FC60pi1
+   3  LG+FC60pi2    1.0000   0.0000   LG+FC60pi2
+   4  LG+FC60pi3    1.0000   0.0000   LG+FC60pi3
+   5  LG+FC60pi4    1.0000   0.0000   LG+FC60pi4
+   6  LG+FC60pi5    1.0000   0.0000   LG+FC60pi5
+   7  LG+FC60pi6    1.0000   0.0000   LG+FC60pi6
+   8  LG+FC60pi7    1.0000   0.0000   LG+FC60pi7
+   9  LG+FC60pi8    1.0000   0.0000   LG+FC60pi8
+  10  LG+FC60pi9    1.0000   0.0599   LG+FC60pi9
+  11  LG+FC60pi10   1.0000   0.1175   LG+FC60pi10
+  12  LG+FC60pi11   1.0000   0.0173   LG+FC60pi11
+  13  LG+FC60pi12   1.0000   0.0000   LG+FC60pi12
+  14  LG+FC60pi13   1.0000   0.0000   LG+FC60pi13
+  15  LG+FC60pi14   1.0000   0.0000   LG+FC60pi14
+  16  LG+FC60pi15   1.0000   0.0000   LG+FC60pi15
+  17  LG+FC60pi16   1.0000   0.0000   LG+FC60pi16
+  18  LG+FC60pi17   1.0000   0.0955   LG+FC60pi17
+  19  LG+FC60pi18   1.0000   0.0000   LG+FC60pi18
+  20  LG+FC60pi19   1.0000   0.0087   LG+FC60pi19
+  21  LG+FC60pi20   1.0000   0.0173   LG+FC60pi20
+  22  LG+FC60pi21   1.0000   0.0000   LG+FC60pi21
+  23  LG+FC60pi22   1.0000   0.0478   LG+FC60pi22
+  24  LG+FC60pi23   1.0000   0.0000   LG+FC60pi23
+  25  LG+FC60pi24   1.0000   0.0000   LG+FC60pi24
+  26  LG+FC60pi25   1.0000   0.0044   LG+FC60pi25
+  27  LG+FC60pi26   1.0000   0.0569   LG+FC60pi26
+  28  LG+FC60pi27   1.0000   0.0000   LG+FC60pi27
+  29  LG+FC60pi28   1.0000   0.0000   LG+FC60pi28
+  30  LG+FC60pi29   1.0000   0.0000   LG+FC60pi29
+  31  LG+FC60pi30   1.0000   0.0568   LG+FC60pi30
+  32  LG+FC60pi31   1.0000   0.0000   LG+FC60pi31
+  33  LG+FC60pi32   1.0000   0.0000   LG+FC60pi32
+  34  LG+FC60pi33   1.0000   0.0612   LG+FC60pi33
+  35  LG+FC60pi34   1.0000   0.0204   LG+FC60pi34
+  36  LG+FC60pi35   1.0000   0.0000   LG+FC60pi35
+  37  LG+FC60pi36   1.0000   0.0000   LG+FC60pi36
+  38  LG+FC60pi37   1.0000   0.0071   LG+FC60pi37
+  39  LG+FC60pi38   1.0000   0.0328   LG+FC60pi38
+  40  LG+FC60pi39   1.0000   0.0000   LG+FC60pi39
+  41  LG+FC60pi40   1.0000   0.0000   LG+FC60pi40
+  42  LG+FC60pi41   1.0000   0.0000   LG+FC60pi41
+  43  LG+FC60pi42   1.0000   0.0000   LG+FC60pi42
+  44  LG+FC60pi43   1.0000   0.0050   LG+FC60pi43
+  45  LG+FC60pi44   1.0000   0.0033   LG+FC60pi44
+  46  LG+FC60pi45   1.0000   0.0000   LG+FC60pi45
+  47  LG+FC60pi46   1.0000   0.0000   LG+FC60pi46
+  48  LG+FC60pi47   1.0000   0.0000   LG+FC60pi47
+  49  LG+FC60pi48   1.0000   0.0000   LG+FC60pi48
+  50  LG+FC60pi49   1.0000   0.0000   LG+FC60pi49
+  51  LG+FC60pi50   1.0000   0.0125   LG+FC60pi50
+  52  LG+FC60pi51   1.0000   0.0000   LG+FC60pi51
+  53  LG+FC60pi52   1.0000   0.0000   LG+FC60pi52
+  54  LG+FC60pi53   1.0000   0.0000   LG+FC60pi53
+  55  LG+FC60pi54   1.0000   0.0000   LG+FC60pi54
+  56  LG+FC60pi55   1.0000   0.0000   LG+FC60pi55
+  57  LG+FC60pi56   1.0000   0.0000   LG+FC60pi56
+  58  LG+FC60pi57   1.0000   0.0000   LG+FC60pi57
+  59  LG+FC60pi58   1.0000   0.0000   LG+FC60pi58
+  60  LG+FC60pi59   1.0000   0.0000   LG+FC60pi59
+  61  LG+FC60pi60   1.0000   0.0000   LG+FC60pi60
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.0332
+
+ Category  Relative_rate  Proportion
+  1         0.1435         0.2500
+  2         0.4865         0.2500
+  3         1.0053         0.2500
+  4         2.3647         0.2500
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -7044.7381 (s.e. 450.4243)
+Unconstrained log-likelihood (without tree): -470.3609
+Number of free parameters (#branches + #model parameters): 313
+Akaike information criterion (AIC) score: 14715.4761
+Corrected Akaike information criterion (AICc) score: 211279.4761
+Bayesian information criterion (BIC) score: 15537.0926
+
+**************************** WARNING ****************************
+Number of parameters (K, model parameters and branch lengths): 313
+Sample size (n, alignment length): 102
+
+Given that K>=n, the parameter estimates might be inaccurate.
+Thus, phylogenetic estimates should be interpreted with caution.
+
+Ideally, it is desirable that n >> K. When selecting optimal models,
+1. use AIC or BIC if n > 40K;
+2. use AICc or BIC if 40K >= n > K;
+3. be extremely cautious if n <= K
+
+To improve the situation (3), consider the following options:
+  1. Increase the sample size (n)
+  2. Decrease the number of parameters (K) to be estimated. If
+     possible:
+     a. Remove the least important sequences from the alignment
+     b. Specify some of the parameter values for the substitution
+        model (e.g., the nucleotide or amino acid frequencies)
+     c. Specify some of the parameter values for the rates-across-
+        sites model (e.g., the shape parameter for the discrete
+        Gamma distribution, the proportion of invariable sites, or
+        the rates of change for different rate categories under
+        the FreeRate model)
+
+Reference:
+Burnham KR, Anderson DR (2002). Model Selection and Multimodel
+Inference: A Practical Information-Theoretic Approach. Springer,
+New York.
+************************ END OF WARNING ***********************
+
+Total tree length (sum of branch lengths): 47.9030
+Sum of internal branch lengths: 17.1734 (35.8504% of tree length)
+
+WARNING: 18 near-zero internal branches (<0.0098) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Dunn2008_Acanthoscurria_gomesiana_115339_Tribe739' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++**Dunn2008_Acanthoscurria_gomesiana_115339_Tribe739
+|
+|         +**Dunn2008_Anoplodactylus_eroticus_488521_Tribe739
+|      +--| (100)
+|      |  +**Ryan2013_est_Anoplodactylus_eroticus_488521_gene44
+|  +---| (100)
+|  |   +**Hejnol2009_Anoplodactylus_eroticus_488521_Tribe1039_0
++--| (100)
+|  |                       +**Dunn2008_Asterina_pectinifera_7594_Tribe739
+|  |                    +**| (70)
+|  |                    |  +**Hejnol2009_Asterina_pectinifera_7594_Tribe1039_0
+|  |                 +--| (99)
+|  |                 |  +**Ryan2013_est_Asterina_pectinifera_7594_gene44
+|  |              +--| (100)
+|  |              |  |     +**Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe739
+|  |              |  |  +**| (72)
+|  |              |  |  |  +**Hejnol2009_Strongylocentrotus_purpuratus_7668_Tribe1039_0
+|  |              |  +--| (98)
+|  |              |     +**Ryan2013_est_Strongylocentrotus_purpuratus_7668_gene44
+|  |           +--| (70)
+|  |           |  |              +**Dunn2008_Branchiostoma_floridae_7739_Tribe739
+|  |           |  |           +**| (70)
+|  |           |  |           |  +--Hejnol2009_Branchiostoma_floridae_7739_Tribe1039_0
+|  |           |  |        +--| (100)
+|  |           |  |        |  +**Ryan2013_est_Branchiostoma_floridae_7739_gene44
+|  |           |  |     +--| (48)
+|  |           |  |     |  |                                        +**Dunn2008_Ciona_intestinalis_7719_Tribe739
+|  |           |  |     |  |             +--------------------------| (100)
+|  |           |  |     |  |             |                          +**Hejnol2009_Ciona_intestinalis_7719_Tribe1039_0
+|  |           |  |     |  |        +----| (64)
+|  |           |  |     |  |        |    +-----------Hejnol2009_Symsagittifera_roscoffensis_84072_Tribe1039_0
+|  |           |  |     |  |     +--| (51)
+|  |           |  |     |  |     |  +-------------------------------Hejnol2009_Nemertoderma_westbladi_172109_Tribe1039_0
+|  |           |  |     |  |  +**| (21)
+|  |           |  |     |  |  |  |          +**Dunn2008_Homo_sapiens_9606_Tribe739
+|  |           |  |     |  |  |  |       +--| (100)
+|  |           |  |     |  |  |  |       |  +**Hejnol2009_Homo_sapiens_9606_Tribe1039_0
+|  |           |  |     |  |  |  |    +--| (98)
+|  |           |  |     |  |  |  |    |  +--Ryan2013_est_Petromyzon_marinus_7757_gene44
+|  |           |  |     |  |  |  +----| (83)
+|  |           |  |     |  |  |       |                            +**Hejnol2009_Halocynthia_roretzi_7729_Tribe1039_0
+|  |           |  |     |  |  |       |                       +----| (100)
+|  |           |  |     |  |  |       |                       |    +**Ryan2013_est_Halocynthia_roretzi_7729_gene44
+|  |           |  |     |  |  |       +-----------------------| (100)
+|  |           |  |     |  |  |                               +---------------Ryan2013_est_Ciona_intestinalis_7719_gene44
+|  |           |  |     |  +--| (34)
+|  |           |  |     |     |                     +**Dunn2008_Hydra_vulgaris_01_6087_Tribe739
+|  |           |  |     |     |                  +**| (78)
+|  |           |  |     |     |                  |  +**Hejnol2009_Hydra_vulgaris_01_6087_Tribe1039_0
+|  |           |  |     |     |               +--| (100)
+|  |           |  |     |     |               |  +**Ryan2013_est_Hydra_vulgaris_01_6087_gene44
+|  |           |  |     |     |           +---| (97)
+|  |           |  |     |     |           |   |  +--Ryan2013_est_Clytia_hemisphaerica_252671_gene44
+|  |           |  |     |     |           |   +--| (90)
+|  |           |  |     |     |           |      +--Ryan2013_est_Podocoryna_carnea_6096_gene44
+|  |           |  |     |     |        +--| (40)
+|  |           |  |     |     |        |  |                     +**Dunn2008_Monosiga_ovata_81526_Tribe739
+|  |           |  |     |     |        |  |                  +**| (74)
+|  |           |  |     |     |        |  |                  |  +**Hejnol2009_Monosiga_ovata_81526_Tribe1039_0
+|  |           |  |     |     |        |  |               +--| (99)
+|  |           |  |     |     |        |  |               |  +**Ryan2013_est_Monosiga_ovata_81526_gene44
+|  |           |  |     |     |        |  |  +------------| (100)
+|  |           |  |     |     |        |  |  |            |         +**Hejnol2009_Monosiga_brevicollis_81824_Tribe1039_0
+|  |           |  |     |     |        |  |  |            |  +------| (100)
+|  |           |  |     |     |        |  |  |            |  |      +**Ryan2013_est_Monosiga_brevicollis_81824_gene44
+|  |           |  |     |     |        |  |  |            +--| (87)
+|  |           |  |     |     |        |  |  |               +--Ryan2013_est_Salpingoeca_rosetta_946362_gene44
+|  |           |  |     |     |        |  +--| (64)
+|  |           |  |     |     |        |     |  +**Hejnol2009_Suberites_domuncula_55567_Tribe1039_0
+|  |           |  |     |     |        |     +--| (100)
+|  |           |  |     |     |        |        +**Ryan2013_est_Suberites_domuncula_55567_gene44
+|  |           |  |     |     |     +--| (41)
+|  |           |  |     |     |     |  +--Ryan2013_est_Lubomirskia_baicalensis_289074_gene44
+|  |           |  |     |     |  +--| (50)
+|  |           |  |     |     |  |  |           +**Dunn2008_Nematostella_vectensis_45351_Tribe739
+|  |           |  |     |     |  |  |        +**| (76)
+|  |           |  |     |     |  |  |        |  +**Hejnol2009_Nematostella_vectensis_45351_Tribe1039_0
+|  |           |  |     |     |  |  |     +--| (97)
+|  |           |  |     |     |  |  |     |  +**Ryan2013_est_Nematostella_vectensis_45351_gene44
+|  |           |  |     |     |  |  |  +--| (92)
+|  |           |  |     |     |  |  |  |  +---Ryan2013_est_Anemonia_viridis_51769_gene44
+|  |           |  |     |     |  |  +--| (44)
+|  |           |  |     |     |  |     |            +**Dunn2008_Oscarella_carmela_386100_Tribe739
+|  |           |  |     |     |  |     |         +**| (73)
+|  |           |  |     |     |  |     |         |  +**Hejnol2009_Oscarella_carmela_386100_Tribe1039_0
+|  |           |  |     |     |  |     |     +---| (100)
+|  |           |  |     |     |  |     |     |   +**Ryan2013_est_Oscarella_carmela_386100_gene44
+|  |           |  |     |     |  |     |  +--| (85)
+|  |           |  |     |     |  |     |  |  |      +**Hejnol2009_Trichoplax_adhaerens_10228_Tribe1039_0
+|  |           |  |     |     |  |     |  |  +------| (100)
+|  |           |  |     |     |  |     |  |         +**Ryan2013_est_Trichoplax_adhaerens_10228_gene44
+|  |           |  |     |     |  |     +--| (51)
+|  |           |  |     |     |  |        |     +--Ryan2013_est_Acropora_palmata_6131_gene44
+|  |           |  |     |     |  |        |  +--| (100)
+|  |           |  |     |     |  |        |  |  +--Ryan2013_est_Acropora_millepora_45264_gene44
+|  |           |  |     |     |  |        +--| (100)
+|  |           |  |     |     |  |           +--Ryan2013_est_Orbicella_faveolata_48498_gene44
+|  |           |  |     |     +--| (81)
+|  |           |  |     |        |     +**Hejnol2009_Amphimedon_queenslandica_400682_Tribe1039_0
+|  |           |  |     |        +-----| (100)
+|  |           |  |     |              +**Ryan2013_est_Amphimedon_queenslandica_400682_gene44
+|  |           |  |  +--| (44)
+|  |           |  |  |  |        +**Dunn2008_Ptychodera_flava_63121_Tribe739
+|  |           |  |  |  |     +**| (74)
+|  |           |  |  |  |     |  +**Hejnol2009_Ptychodera_flava_63121_Tribe1039_0
+|  |           |  |  |  |  +--| (99)
+|  |           |  |  |  |  |  +**Ryan2013_est_Ptychodera_flava_63121_gene44
+|  |           |  |  |  +--| (98)
+|  |           |  |  |     +--Ryan2013_est_Saccoglossus_kowalevskii_10224_gene44
+|  |           |  +--| (64)
+|  |           |     |       +**Dunn2008_Xenoturbella_bocki_242395_Tribe739
+|  |           |     |    +**| (74)
+|  |           |     |    |  +**Hejnol2009_Xenoturbella_bocki_242395_Tribe1039_0
+|  |           |     +----| (99)
+|  |           |          +**Ryan2013_est_Xenoturbella_bocki_242395_gene44
+|  |        +--| (35)
+|  |        |  |                 +**Dunn2008_Biomphalaria_glabrata_6526_Tribe739
+|  |        |  |              +**| (88)
+|  |        |  |              |  +**Hejnol2009_Biomphalaria_glabrata_6526_Tribe1039_0
+|  |        |  |           +--| (68)
+|  |        |  |           |  |                                           +**Dunn2008_Saccharomyces_cerevisiae_4932_Tribe739
+|  |        |  |           |  |                                        +**| (89)
+|  |        |  |           |  |                                        |  +**Hejnol2009_Saccharomyces_cerevisiae_4932_Tribe1039_0
+|  |        |  |           |  |                                +-------| (100)
+|  |        |  |           |  |                                |       +**Ryan2013_est_Saccharomyces_cerevisiae_4932_gene44
+|  |        |  |           |  |                             +--| (66)
+|  |        |  |           |  |                             |  |   +--Ryan2013_est_Phycomyces_blakesleeanus_4837_gene44
+|  |        |  |           |  |                             |  +---| (100)
+|  |        |  |           |  |                             |      +--Ryan2013_est_Rhizopus_oryzae_64495_gene44
+|  |        |  |           |  +-----------------------------| (100)
+|  |        |  |           |                                +---Ryan2013_est_Cryptococcus_neoformans_5207_gene44
+|  |        |  |        +--| (45)
+|  |        |  |        |  +------------Hejnol2009_Flaccisagitta_enflata_366393_Tribe1039_0
+|  |        |  |     +--| (18)
+|  |        |  |     |  |              +**Dunn2008_Chaetopterus_variopedatus_34590_Tribe739
+|  |        |  |     |  |           +--| (100)
+|  |        |  |     |  |           |  +**Hejnol2009_Chaetopterus_sp_6379_Tribe1039_0
+|  |        |  |     |  |        +--| (42)
+|  |        |  |     |  |        |  |        +**Dunn2008_Euprymna_scolopes_6613_Tribe739
+|  |        |  |     |  |        |  |     +**| (92)
+|  |        |  |     |  |        |  |     |  +**Hejnol2009_Euprymna_scolopes_6613_Tribe1039_0
+|  |        |  |     |  |        |  |  +--| (99)
+|  |        |  |     |  |        |  |  |  +**Ryan2013_est_Euprymna_scolopes_6613_gene44
+|  |        |  |     |  |        |  +--| (77)
+|  |        |  |     |  |        |     |             +**Dunn2008_Paraplanocera_oligoglena_1468194_Tribe739
+|  |        |  |     |  |        |     +-------------| (100)
+|  |        |  |     |  |        |                   +**Hejnol2009_Paraplanocera_oligoglena_1468194_Tribe1039_0
+|  |        |  |     |  |     +--| (38)
+|  |        |  |     |  |     |  |        +**Dunn2008_Haementeria_depressa_279730_Tribe739
+|  |        |  |     |  |     |  |     +--| (100)
+|  |        |  |     |  |     |  |     |  +**Hejnol2009_Haementeria_depressa_279730_Tribe1039_0
+|  |        |  |     |  |     |  |  +--| (97)
+|  |        |  |     |  |     |  |  |  +**Hejnol2009_Helobdella_robusta_6412_Tribe1039_0
+|  |        |  |     |  |     |  +--| (43)
+|  |        |  |     |  |     |     |  +**Dunn2008_Urechis_caupo_6431_Tribe739
+|  |        |  |     |  |     |     +--| (100)
+|  |        |  |     |  |     |        +**Hejnol2009_Urechis_caupo_6431_Tribe1039_0
+|  |        |  |     |  |  +--| (33)
+|  |        |  |     |  |  |  |  +--Dunn2008_Lumbricus_rubellus_35632_Tribe739
+|  |        |  |     |  |  |  +--| (100)
+|  |        |  |     |  |  |     +**Hejnol2009_Lumbricus_rubellus_35632_Tribe1039_0
+|  |        |  |     |  +--| (16)
+|  |        |  |     |     +----Hejnol2009_Symbion_pandora_69817_Tribe1039_0
+|  |        |  |  +--| (20)
+|  |        |  |  |  |              +**Dunn2008_Capitella_teleta_283909_Tribe739
+|  |        |  |  |  |           +**| (87)
+|  |        |  |  |  |           |  +**Hejnol2009_Capitella_teleta_283909_Tribe1039_0
+|  |        |  |  |  |     +-----| (100)
+|  |        |  |  |  |     |     +**Ryan2013_est_Capitella_teleta_283909_gene44
+|  |        |  |  |  |  +--| (76)
+|  |        |  |  |  |  |  +--Hejnol2009_Cristatella_mucedo_67896_Tribe1039_0
+|  |        |  |  |  +--| (73)
+|  |        |  |  |     +---------Hejnol2009_Bugula_neritina_10212_Tribe1039_0
+|  |        |  +--| (69)
+|  |        |     |             +**Dunn2008_Crassostrea_virginica_6565_Tribe739
+|  |        |     +-------------| (100)
+|  |        |                   +**Hejnol2009_Crassostrea_virginica_6565_Tribe1039_0
+|  |     +--| (40)
+|  |     |  |         +**Dunn2008_Richtersius_coronifer_245088_Tribe739
+|  |     |  |     +---| (100)
+|  |     |  |     |   +**Hejnol2009_Richtersius_coronifer_245088_Tribe1039_0
+|  |     |  |  +--| (68)
+|  |     |  |  |  +----Hejnol2009_Onychiurus_arcticus_1071257_Tribe1039_0
+|  |     |  +--| (39)
+|  |     |     |          +**Dunn2008_Xiphinema_index_46003_Tribe739
+|  |     |     |      +---| (100)
+|  |     |     |      |   +**Hejnol2009_Xiphinema_index_46003_Tribe1039_0
+|  |     |     +------| (100)
+|  |     |            +----Ryan2013_est_Xiphinema_index_46003_gene44
+|  |  +--| (31)
+|  |  |  |                      +**Dunn2008_Mytilus_galloprovincialis_29158_Tribe739
+|  |  |  |  +-------------------| (100)
+|  |  |  |  |                   +**Hejnol2009_Mytilus_galloprovincialis_29158_Tribe1039_0
+|  |  |  +--| (46)
+|  |  |     |  +**Hejnol2009_Daphnia_pulex_6669_Tribe1039_0
+|  |  |     +--| (99)
+|  |  |        +**Ryan2013_est_Daphnia_pulex_6669_gene44
+|  +--| (61)
+|     |                 +**Dunn2008_Boophilus_microplus_6941_Tribe739
+|     |              +**| (74)
+|     |              |  +**Hejnol2009_Boophilus_microplus_6941_Tribe1039_0
+|     |           +--| (100)
+|     |           |  +**Ryan2013_est_Boophilus_microplus_6941_gene44
+|     |        +--| (56)
+|     |        |  |     +**Dunn2008_Drosophila_melanogaster_7227_Tribe739
+|     |        |  |  +**| (82)
+|     |        |  |  |  +**Hejnol2009_Drosophila_melanogaster_7227_Tribe1039_0
+|     |        |  +--| (100)
+|     |        |     +**Ryan2013_est_Drosophila_melanogaster_7227_gene44
+|     |     +--| (56)
+|     |     |  |                     +**Dunn2008_Echinoderes_horni_488522_Tribe739
+|     |     |  |                  +**| (76)
+|     |     |  |                  |  +**Hejnol2009_Echinoderes_horni_488522_Tribe1039_0
+|     |     |  |  +---------------| (100)
+|     |     |  |  |               +**Ryan2013_est_Echinoderes_horni_488522_gene44
+|     |     |  +--| (90)
+|     |     |     |  +**Dunn2008_Scutigera_coleoptrata_29022_Tribe739
+|     |     |     +**| (83)
+|     |     |        +**Hejnol2009_Scutigera_coleoptrata_29022_Tribe1039_0
+|     |  +--| (56)
+|     |  |  |     +**Dunn2008_Carcinoscorpius_rotundicauda_6848_Tribe739
+|     |  |  |  +--| (100)
+|     |  |  |  |  +**Hejnol2009_Carcinoscorpius_rotundicauda_6848_Tribe1039_0
+|     |  |  +--| (98)
+|     |  |     |    +**Dunn2008_Fenneropenaeus_chinensis_139456_Tribe739
+|     |  |     +----| (100)
+|     |  |          +**Hejnol2009_Fenneropenaeus_chinensis_139456_Tribe1039_0
+|     +--| (53)
+|        |     +**Dunn2008_Euperipatoides_kanangrensis_488523_Tribe739
+|        |  +--| (100)
+|        |  |  +**Hejnol2009_Euperipatoides_kanangrensis_488523_Tribe1039_0
+|        +--| (100)
+|           +**Ryan2013_est_Euperipatoides_kanangrensis_488523_gene44
+|
++**Hejnol2009_Acanthoscurria_gomesiana_115339_Tribe1039_0
+
+Tree in newick format:
+
+(Dunn2008_Acanthoscurria_gomesiana_115339_Tribe739:0.0000020608,(((Dunn2008_Anoplodactylus_eroticus_488521_Tribe739:0.0000029672,Ryan2013_est_Anoplodactylus_eroticus_488521_gene44:0.0000021870)100:0.027580,Hejnol2009_Anoplodactylus_eroticus_488521_Tribe1039_0:0.0000024320)100:0.388307,((((((((Dunn2008_Asterina_pectinifera_7594_Tribe739:0.0000022029,Hejnol2009_Asterina_pectinifera_7594_Tribe1039_0:0.0000022029)70:0.000002,Ryan2013_est_Asterina_pectinifera_7594_gene44:0.0000029594)99:0.295145,((Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe739:0.0000022029,Hejnol2009_Strongylocentrotus_purpuratus_7668_Tribe1039_0:0.0000022029)72:0.000003,Ryan2013_est_Strongylocentrotus_purpuratus_7668_gene44:0.0000029870)98:0.190235)100:0.333423,(((((Dunn2008_Branchiostoma_floridae_7739_Tribe739:0.0000020135,Hejnol2009_Branchiostoma_floridae_7739_Tribe1039_0:0.0137207817)70:0.000002,Ryan2013_est_Branchiostoma_floridae_7739_gene44:0.0000029133)100:0.312004,(((((Dunn2008_Ciona_intestinalis_7719_Tribe739:0.0000022029,Hejnol2009_Ciona_intestinalis_7719_Tribe1039_0:0.0000020805)100:2.555060,Hejnol2009_Symsagittifera_roscoffensis_84072_Tribe1039_0:1.1799829358)64:0.545420,Hejnol2009_Nemertoderma_westbladi_172109_Tribe1039_0:3.0254812596)51:0.159752,(((Dunn2008_Homo_sapiens_9606_Tribe739:0.0000022029,Hejnol2009_Homo_sapiens_9606_Tribe1039_0:0.0000022029)100:0.258841,Ryan2013_est_Petromyzon_marinus_7757_gene44:0.2690126094)98:0.318672,((Hejnol2009_Halocynthia_roretzi_7729_Tribe1039_0:0.0000028531,Ryan2013_est_Halocynthia_roretzi_7729_gene44:0.0000022029)100:0.514465,Ryan2013_est_Ciona_intestinalis_7719_gene44:1.5264711397)100:2.301930)83:0.523308)21:0.000002,(((((((Dunn2008_Hydra_vulgaris_01_6087_Tribe739:0.0000022029,Hejnol2009_Hydra_vulgaris_01_6087_Tribe1039_0:0.0000022029)78:0.000002,Ryan2013_est_Hydra_vulgaris_01_6087_gene44:0.0000029184)100:0.250867,(Ryan2013_est_Clytia_hemisphaerica_252671_gene44:0.0790289247,Ryan2013_est_Podocoryna_carnea_6096_gene44:0.1021801294)90:0.037663)97:0.385989,((((Dunn2008_Monosiga_ovata_81526_Tribe739:0.0000022029,Hejnol2009_Monosiga_ovata_81526_Tribe1039_0:0.0000022029)74:0.000002,Ryan2013_est_Monosiga_ovata_81526_gene44:0.0000022029)99:0.206526,((Hejnol2009_Monosiga_brevicollis_81824_Tribe1039_0:0.0000022221,Ryan2013_est_Monosiga_brevicollis_81824_gene44:0.0000022029)100:0.664632,Ryan2013_est_Salpingoeca_rosetta_946362_gene44:0.3431772442)87:0.354043)100:1.241570,(Hejnol2009_Suberites_domuncula_55567_Tribe1039_0:0.0000023835,Ryan2013_est_Suberites_domuncula_55567_gene44:0.0000021743)100:0.346017)64:0.289722)40:0.042453,Ryan2013_est_Lubomirskia_baicalensis_289074_gene44:0.2554176034)41:0.047103,((((Dunn2008_Nematostella_vectensis_45351_Tribe739:0.0000022029,Hejnol2009_Nematostella_vectensis_45351_Tribe1039_0:0.0000022029)76:0.000003,Ryan2013_est_Nematostella_vectensis_45351_gene44:0.0000022029)97:0.200688,Ryan2013_est_Anemonia_viridis_51769_gene44:0.4434377662)92:0.229042,((((Dunn2008_Oscarella_carmela_386100_Tribe739:0.0000022029,Hejnol2009_Oscarella_carmela_386100_Tribe1039_0:0.0000022029)73:0.000003,Ryan2013_est_Oscarella_carmela_386100_gene44:0.0000028792)100:0.433936,(Hejnol2009_Trichoplax_adhaerens_10228_Tribe1039_0:0.0000023859,Ryan2013_est_Trichoplax_adhaerens_10228_gene44:0.0000022472)100:0.693260)85:0.216912,((Ryan2013_est_Acropora_palmata_6131_gene44:0.0862401915,Ryan2013_est_Acropora_millepora_45264_gene44:0.0153572340)100:0.280208,Ryan2013_est_Orbicella_faveolata_48498_gene44:0.1694570515)100:0.296345)51:0.081165)44:0.057440)50:0.025216,(Hejnol2009_Amphimedon_queenslandica_400682_Tribe1039_0:0.0000023944,Ryan2013_est_Amphimedon_queenslandica_400682_gene44:0.0000028827)100:0.603863)81:0.248369)34:0.025239)48:0.205314,(((Dunn2008_Ptychodera_flava_63121_Tribe739:0.0000022029,Hejnol2009_Ptychodera_flava_63121_Tribe1039_0:0.0000022029)74:0.000002,Ryan2013_est_Ptychodera_flava_63121_gene44:0.0000022029)99:0.086168,Ryan2013_est_Saccoglossus_kowalevskii_10224_gene44:0.3344414500)98:0.293424)44:0.075547,((Dunn2008_Xenoturbella_bocki_242395_Tribe739:0.0000026971,Hejnol2009_Xenoturbella_bocki_242395_Tribe1039_0:0.0000022029)74:0.000002,Ryan2013_est_Xenoturbella_bocki_242395_gene44:0.0000022029)99:0.480594)64:0.101192)70:0.305986,((((((Dunn2008_Biomphalaria_glabrata_6526_Tribe739:0.0000020409,Hejnol2009_Biomphalaria_glabrata_6526_Tribe1039_0:0.0000026659)88:0.000002,((((Dunn2008_Saccharomyces_cerevisiae_4932_Tribe739:0.0000022029,Hejnol2009_Saccharomyces_cerevisiae_4932_Tribe1039_0:0.0000022029)89:0.000003,Ryan2013_est_Saccharomyces_cerevisiae_4932_gene44:0.0000022029)100:0.791752,(Ryan2013_est_Phycomyces_blakesleeanus_4837_gene44:0.1046374663,Ryan2013_est_Rhizopus_oryzae_64495_gene44:0.0690188784)100:0.398799)66:0.226448,Ryan2013_est_Cryptococcus_neoformans_5207_gene44:0.4386758136)100:2.786520)68:0.159914,Hejnol2009_Flaccisagitta_enflata_366393_Tribe1039_0:1.2595149709)45:0.180666,(((((Dunn2008_Chaetopterus_variopedatus_34590_Tribe739:0.0000027704,Hejnol2009_Chaetopterus_sp_6379_Tribe1039_0:0.0000022004)100:0.194304,(((Dunn2008_Euprymna_scolopes_6613_Tribe739:0.0000026348,Hejnol2009_Euprymna_scolopes_6613_Tribe1039_0:0.0000024461)92:0.000002,Ryan2013_est_Euprymna_scolopes_6613_gene44:0.0000022260)99:0.209109,(Dunn2008_Paraplanocera_oligoglena_1468194_Tribe739:0.0000026289,Hejnol2009_Paraplanocera_oligoglena_1468194_Tribe1039_0:0.0000022928)100:1.327040)77:0.249195)42:0.095882,(((Dunn2008_Haementeria_depressa_279730_Tribe739:0.0000027748,Hejnol2009_Haementeria_depressa_279730_Tribe1039_0:0.0000022062)100:0.019993,Hejnol2009_Helobdella_robusta_6412_Tribe1039_0:0.0000022062)97:0.153311,(Dunn2008_Urechis_caupo_6431_Tribe739:0.0000027110,Hejnol2009_Urechis_caupo_6431_Tribe1039_0:0.0000025671)100:0.249277)43:0.020545)38:0.072196,(Dunn2008_Lumbricus_rubellus_35632_Tribe739:0.0454390671,Hejnol2009_Lumbricus_rubellus_35632_Tribe1039_0:0.0000020553)100:0.125658)33:0.097753,Hejnol2009_Symbion_pandora_69817_Tribe1039_0:0.5091278997)16:0.090572)18:0.043115,((((Dunn2008_Capitella_teleta_283909_Tribe739:0.0000022029,Hejnol2009_Capitella_teleta_283909_Tribe1039_0:0.0000022029)87:0.000002,Ryan2013_est_Capitella_teleta_283909_gene44:0.0000022029)100:0.628392,Hejnol2009_Cristatella_mucedo_67896_Tribe1039_0:0.1589177943)76:0.126986,Hejnol2009_Bugula_neritina_10212_Tribe1039_0:0.9933617248)73:0.161106)20:0.084597,(Dunn2008_Crassostrea_virginica_6565_Tribe739:0.0000025883,Hejnol2009_Crassostrea_virginica_6565_Tribe1039_0:0.0000027309)100:1.318200)69:0.225839)35:0.030008,(((Dunn2008_Richtersius_coronifer_245088_Tribe739:0.0000022029,Hejnol2009_Richtersius_coronifer_245088_Tribe1039_0:0.0000022029)100:0.454987,Hejnol2009_Onychiurus_arcticus_1071257_Tribe1039_0:0.4830151776)68:0.102885,((Dunn2008_Xiphinema_index_46003_Tribe739:0.0000020554,Hejnol2009_Xiphinema_index_46003_Tribe1039_0:0.0000020351)100:0.430082,Ryan2013_est_Xiphinema_index_46003_gene44:0.5323507544)100:0.654471)39:0.057592)40:0.026687,((Dunn2008_Mytilus_galloprovincialis_29158_Tribe739:0.0000022029,Hejnol2009_Mytilus_galloprovincialis_29158_Tribe1039_0:0.0000022029)100:1.845740,(Hejnol2009_Daphnia_pulex_6669_Tribe1039_0:0.0000022271,Ryan2013_est_Daphnia_pulex_6669_gene44:0.0000022515)99:0.292611)46:0.191364)31:0.017513,((((((Dunn2008_Boophilus_microplus_6941_Tribe739:0.0000022029,Hejnol2009_Boophilus_microplus_6941_Tribe1039_0:0.0000022029)74:0.000002,Ryan2013_est_Boophilus_microplus_6941_gene44:0.0000022029)100:0.295139,((Dunn2008_Drosophila_melanogaster_7227_Tribe739:0.0000022029,Hejnol2009_Drosophila_melanogaster_7227_Tribe1039_0:0.0000022029)82:0.000002,Ryan2013_est_Drosophila_melanogaster_7227_gene44:0.0000022029)100:0.307934)56:0.050238,(((Dunn2008_Echinoderes_horni_488522_Tribe739:0.0000022922,Hejnol2009_Echinoderes_horni_488522_Tribe1039_0:0.0000022029)76:0.000002,Ryan2013_est_Echinoderes_horni_488522_gene44:0.0000020111)100:1.533800,(Dunn2008_Scutigera_coleoptrata_29022_Tribe739:0.0000025078,Hejnol2009_Scutigera_coleoptrata_29022_Tribe1039_0:0.0000021693)83:0.000002)90:0.135556)56:0.048236,((Dunn2008_Carcinoscorpius_rotundicauda_6848_Tribe739:0.0000022187,Hejnol2009_Carcinoscorpius_rotundicauda_6848_Tribe1039_0:0.0000022029)100:0.095374,(Dunn2008_Fenneropenaeus_chinensis_139456_Tribe739:0.0000020158,Hejnol2009_Fenneropenaeus_chinensis_139456_Tribe1039_0:0.0000020153)100:0.466761)98:0.160236)56:0.056545,((Dunn2008_Euperipatoides_kanangrensis_488523_Tribe739:0.0000022029,Hejnol2009_Euperipatoides_kanangrensis_488523_Tribe1039_0:0.0000022029)100:0.023501,Ryan2013_est_Euperipatoides_kanangrensis_488523_gene44:0.0000029267)100:0.179185)53:0.053996)61:0.063675)100:0.323371,Hejnol2009_Acanthoscurria_gomesiana_115339_Tribe1039_0:0.0000022029);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -7045.472660
+Robinson-Foulds distance between ML tree and consensus tree: 6
+
+Branches with bootstrap support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--Dunn2008_Acanthoscurria_gomesiana_115339_Tribe739
+|
+|         +--Dunn2008_Anoplodactylus_eroticus_488521_Tribe739
+|      +--| (100)
+|      |  +--Ryan2013_est_Anoplodactylus_eroticus_488521_gene44
+|  +---| (100)
+|  |   +--Hejnol2009_Anoplodactylus_eroticus_488521_Tribe1039_0
++--| (100)
+|  |                       +--Dunn2008_Asterina_pectinifera_7594_Tribe739
+|  |                    +--| (70)
+|  |                    |  +--Hejnol2009_Asterina_pectinifera_7594_Tribe1039_0
+|  |                 +--| (99)
+|  |                 |  +--Ryan2013_est_Asterina_pectinifera_7594_gene44
+|  |              +--| (100)
+|  |              |  |     +--Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe739
+|  |              |  |  +--| (72)
+|  |              |  |  |  +--Hejnol2009_Strongylocentrotus_purpuratus_7668_Tribe1039_0
+|  |              |  +--| (98)
+|  |              |     +--Ryan2013_est_Strongylocentrotus_purpuratus_7668_gene44
+|  |           +--| (70)
+|  |           |  |              +--Dunn2008_Branchiostoma_floridae_7739_Tribe739
+|  |           |  |           +**| (70)
+|  |           |  |           |  +--Hejnol2009_Branchiostoma_floridae_7739_Tribe1039_0
+|  |           |  |        +--| (100)
+|  |           |  |        |  +--Ryan2013_est_Branchiostoma_floridae_7739_gene44
+|  |           |  |     +--| (48)
+|  |           |  |     |  |                                        +--Dunn2008_Ciona_intestinalis_7719_Tribe739
+|  |           |  |     |  |             +--------------------------| (100)
+|  |           |  |     |  |             |                          +--Hejnol2009_Ciona_intestinalis_7719_Tribe1039_0
+|  |           |  |     |  |        +----| (64)
+|  |           |  |     |  |        |    +-----------Hejnol2009_Symsagittifera_roscoffensis_84072_Tribe1039_0
+|  |           |  |     |  |     +--| (51)
+|  |           |  |     |  |     |  +-------------------------------Hejnol2009_Nemertoderma_westbladi_172109_Tribe1039_0
+|  |           |  |     |  |  +**| (21)
+|  |           |  |     |  |  |  |          +--Dunn2008_Homo_sapiens_9606_Tribe739
+|  |           |  |     |  |  |  |       +--| (100)
+|  |           |  |     |  |  |  |       |  +--Hejnol2009_Homo_sapiens_9606_Tribe1039_0
+|  |           |  |     |  |  |  |    +--| (98)
+|  |           |  |     |  |  |  |    |  +--Ryan2013_est_Petromyzon_marinus_7757_gene44
+|  |           |  |     |  |  |  +----| (83)
+|  |           |  |     |  |  |       |                            +--Hejnol2009_Halocynthia_roretzi_7729_Tribe1039_0
+|  |           |  |     |  |  |       |                       +----| (100)
+|  |           |  |     |  |  |       |                       |    +--Ryan2013_est_Halocynthia_roretzi_7729_gene44
+|  |           |  |     |  |  |       +-----------------------| (100)
+|  |           |  |     |  |  |                               +---------------Ryan2013_est_Ciona_intestinalis_7719_gene44
+|  |           |  |     |  +--| (34)
+|  |           |  |     |     |                     +--Dunn2008_Hydra_vulgaris_01_6087_Tribe739
+|  |           |  |     |     |                  +--| (78)
+|  |           |  |     |     |                  |  +--Hejnol2009_Hydra_vulgaris_01_6087_Tribe1039_0
+|  |           |  |     |     |               +--| (100)
+|  |           |  |     |     |               |  +--Ryan2013_est_Hydra_vulgaris_01_6087_gene44
+|  |           |  |     |     |           +---| (97)
+|  |           |  |     |     |           |   |  +--Ryan2013_est_Clytia_hemisphaerica_252671_gene44
+|  |           |  |     |     |           |   +--| (90)
+|  |           |  |     |     |           |      +--Ryan2013_est_Podocoryna_carnea_6096_gene44
+|  |           |  |     |     |        +--| (40)
+|  |           |  |     |     |        |  |                     +--Dunn2008_Monosiga_ovata_81526_Tribe739
+|  |           |  |     |     |        |  |                  +--| (74)
+|  |           |  |     |     |        |  |                  |  +--Hejnol2009_Monosiga_ovata_81526_Tribe1039_0
+|  |           |  |     |     |        |  |               +--| (99)
+|  |           |  |     |     |        |  |               |  +--Ryan2013_est_Monosiga_ovata_81526_gene44
+|  |           |  |     |     |        |  |  +------------| (100)
+|  |           |  |     |     |        |  |  |            |         +--Hejnol2009_Monosiga_brevicollis_81824_Tribe1039_0
+|  |           |  |     |     |        |  |  |            |  +------| (100)
+|  |           |  |     |     |        |  |  |            |  |      +--Ryan2013_est_Monosiga_brevicollis_81824_gene44
+|  |           |  |     |     |        |  |  |            +--| (87)
+|  |           |  |     |     |        |  |  |               +--Ryan2013_est_Salpingoeca_rosetta_946362_gene44
+|  |           |  |     |     |        |  +--| (64)
+|  |           |  |     |     |        |     |  +--Hejnol2009_Suberites_domuncula_55567_Tribe1039_0
+|  |           |  |     |     |        |     +--| (100)
+|  |           |  |     |     |        |        +--Ryan2013_est_Suberites_domuncula_55567_gene44
+|  |           |  |     |     |     +--| (41)
+|  |           |  |     |     |     |  +--Ryan2013_est_Lubomirskia_baicalensis_289074_gene44
+|  |           |  |     |     |  +--| (50)
+|  |           |  |     |     |  |  |           +--Dunn2008_Nematostella_vectensis_45351_Tribe739
+|  |           |  |     |     |  |  |        +--| (76)
+|  |           |  |     |     |  |  |        |  +--Hejnol2009_Nematostella_vectensis_45351_Tribe1039_0
+|  |           |  |     |     |  |  |     +--| (97)
+|  |           |  |     |     |  |  |     |  +--Ryan2013_est_Nematostella_vectensis_45351_gene44
+|  |           |  |     |     |  |  |  +--| (92)
+|  |           |  |     |     |  |  |  |  +---Ryan2013_est_Anemonia_viridis_51769_gene44
+|  |           |  |     |     |  |  +--| (44)
+|  |           |  |     |     |  |     |            +--Dunn2008_Oscarella_carmela_386100_Tribe739
+|  |           |  |     |     |  |     |         +**| (73)
+|  |           |  |     |     |  |     |         |  +--Hejnol2009_Oscarella_carmela_386100_Tribe1039_0
+|  |           |  |     |     |  |     |     +---| (100)
+|  |           |  |     |     |  |     |     |   +--Ryan2013_est_Oscarella_carmela_386100_gene44
+|  |           |  |     |     |  |     |  +--| (85)
+|  |           |  |     |     |  |     |  |  |      +--Hejnol2009_Trichoplax_adhaerens_10228_Tribe1039_0
+|  |           |  |     |     |  |     |  |  +------| (100)
+|  |           |  |     |     |  |     |  |         +--Ryan2013_est_Trichoplax_adhaerens_10228_gene44
+|  |           |  |     |     |  |     +--| (51)
+|  |           |  |     |     |  |        |     +--Ryan2013_est_Acropora_palmata_6131_gene44
+|  |           |  |     |     |  |        |  +--| (100)
+|  |           |  |     |     |  |        |  |  +--Ryan2013_est_Acropora_millepora_45264_gene44
+|  |           |  |     |     |  |        +--| (100)
+|  |           |  |     |     |  |           +--Ryan2013_est_Orbicella_faveolata_48498_gene44
+|  |           |  |     |     +--| (81)
+|  |           |  |     |        |     +--Hejnol2009_Amphimedon_queenslandica_400682_Tribe1039_0
+|  |           |  |     |        +-----| (100)
+|  |           |  |     |              +--Ryan2013_est_Amphimedon_queenslandica_400682_gene44
+|  |           |  |  +--| (44)
+|  |           |  |  |  |        +--Dunn2008_Ptychodera_flava_63121_Tribe739
+|  |           |  |  |  |     +**| (74)
+|  |           |  |  |  |     |  +--Hejnol2009_Ptychodera_flava_63121_Tribe1039_0
+|  |           |  |  |  |  +--| (99)
+|  |           |  |  |  |  |  +--Ryan2013_est_Ptychodera_flava_63121_gene44
+|  |           |  |  |  +--| (98)
+|  |           |  |  |     +--Ryan2013_est_Saccoglossus_kowalevskii_10224_gene44
+|  |           |  +--| (64)
+|  |           |     |       +--Dunn2008_Xenoturbella_bocki_242395_Tribe739
+|  |           |     |    +--| (74)
+|  |           |     |    |  +--Hejnol2009_Xenoturbella_bocki_242395_Tribe1039_0
+|  |           |     +----| (99)
+|  |           |          +--Ryan2013_est_Xenoturbella_bocki_242395_gene44
+|  |        +--| (35)
+|  |        |  |                 +--Dunn2008_Biomphalaria_glabrata_6526_Tribe739
+|  |        |  |              +--| (88)
+|  |        |  |              |  +--Hejnol2009_Biomphalaria_glabrata_6526_Tribe1039_0
+|  |        |  |           +--| (68)
+|  |        |  |           |  |                                           +--Dunn2008_Saccharomyces_cerevisiae_4932_Tribe739
+|  |        |  |           |  |                                        +--| (89)
+|  |        |  |           |  |                                        |  +--Hejnol2009_Saccharomyces_cerevisiae_4932_Tribe1039_0
+|  |        |  |           |  |                                +-------| (100)
+|  |        |  |           |  |                                |       +--Ryan2013_est_Saccharomyces_cerevisiae_4932_gene44
+|  |        |  |           |  |                             +--| (66)
+|  |        |  |           |  |                             |  |   +--Ryan2013_est_Phycomyces_blakesleeanus_4837_gene44
+|  |        |  |           |  |                             |  +---| (100)
+|  |        |  |           |  |                             |      +--Ryan2013_est_Rhizopus_oryzae_64495_gene44
+|  |        |  |           |  +-----------------------------| (100)
+|  |        |  |           |                                +---Ryan2013_est_Cryptococcus_neoformans_5207_gene44
+|  |        |  |        +--| (45)
+|  |        |  |        |  +------------Hejnol2009_Flaccisagitta_enflata_366393_Tribe1039_0
+|  |        |  |     +--| (21)
+|  |        |  |     |  |           +--Dunn2008_Chaetopterus_variopedatus_34590_Tribe739
+|  |        |  |     |  |        +--| (100)
+|  |        |  |     |  |        |  +--Hejnol2009_Chaetopterus_sp_6379_Tribe1039_0
+|  |        |  |     |  |     +--| (42)
+|  |        |  |     |  |     |  |        +--Dunn2008_Euprymna_scolopes_6613_Tribe739
+|  |        |  |     |  |     |  |     +**| (92)
+|  |        |  |     |  |     |  |     |  +--Hejnol2009_Euprymna_scolopes_6613_Tribe1039_0
+|  |        |  |     |  |     |  |  +--| (99)
+|  |        |  |     |  |     |  |  |  +--Ryan2013_est_Euprymna_scolopes_6613_gene44
+|  |        |  |     |  |     |  +--| (77)
+|  |        |  |     |  |     |     |             +--Dunn2008_Paraplanocera_oligoglena_1468194_Tribe739
+|  |        |  |     |  |     |     +-------------| (100)
+|  |        |  |     |  |     |                   +--Hejnol2009_Paraplanocera_oligoglena_1468194_Tribe1039_0
+|  |        |  |     |  |  +--| (38)
+|  |        |  |     |  |  |  |        +--Dunn2008_Haementeria_depressa_279730_Tribe739
+|  |        |  |     |  |  |  |     +--| (100)
+|  |        |  |     |  |  |  |     |  +--Hejnol2009_Haementeria_depressa_279730_Tribe1039_0
+|  |        |  |     |  |  |  |  +--| (97)
+|  |        |  |     |  |  |  |  |  +--Hejnol2009_Helobdella_robusta_6412_Tribe1039_0
+|  |        |  |     |  |  |  +--| (43)
+|  |        |  |     |  |  |     |  +--Dunn2008_Urechis_caupo_6431_Tribe739
+|  |        |  |     |  |  |     +--| (100)
+|  |        |  |     |  |  |        +--Hejnol2009_Urechis_caupo_6431_Tribe1039_0
+|  |        |  |     |  +--| (33)
+|  |        |  |     |     |  +--Dunn2008_Lumbricus_rubellus_35632_Tribe739
+|  |        |  |     |     +--| (100)
+|  |        |  |     |        +--Hejnol2009_Lumbricus_rubellus_35632_Tribe1039_0
+|  |        |  |  +--| (45)
+|  |        |  |  |  |               +--Dunn2008_Crassostrea_virginica_6565_Tribe739
+|  |        |  |  |  |  +------------| (100)
+|  |        |  |  |  |  |            +--Hejnol2009_Crassostrea_virginica_6565_Tribe1039_0
+|  |        |  |  |  +--| (39)
+|  |        |  |  |     +---Hejnol2009_Symbion_pandora_69817_Tribe1039_0
+|  |        |  +--| (69)
+|  |        |     |              +--Dunn2008_Capitella_teleta_283909_Tribe739
+|  |        |     |           +**| (87)
+|  |        |     |           |  +--Hejnol2009_Capitella_teleta_283909_Tribe1039_0
+|  |        |     |     +-----| (100)
+|  |        |     |     |     +--Ryan2013_est_Capitella_teleta_283909_gene44
+|  |        |     |  +--| (76)
+|  |        |     |  |  +--Hejnol2009_Cristatella_mucedo_67896_Tribe1039_0
+|  |        |     +--| (73)
+|  |        |        +---------Hejnol2009_Bugula_neritina_10212_Tribe1039_0
+|  |     +--| (40)
+|  |     |  |         +--Dunn2008_Richtersius_coronifer_245088_Tribe739
+|  |     |  |     +---| (100)
+|  |     |  |     |   +--Hejnol2009_Richtersius_coronifer_245088_Tribe1039_0
+|  |     |  |  +--| (68)
+|  |     |  |  |  +----Hejnol2009_Onychiurus_arcticus_1071257_Tribe1039_0
+|  |     |  +--| (39)
+|  |     |     |          +--Dunn2008_Xiphinema_index_46003_Tribe739
+|  |     |     |      +---| (100)
+|  |     |     |      |   +--Hejnol2009_Xiphinema_index_46003_Tribe1039_0
+|  |     |     +------| (100)
+|  |     |            +----Ryan2013_est_Xiphinema_index_46003_gene44
+|  |  +--| (31)
+|  |  |  |                     +--Dunn2008_Mytilus_galloprovincialis_29158_Tribe739
+|  |  |  |  +------------------| (100)
+|  |  |  |  |                  +--Hejnol2009_Mytilus_galloprovincialis_29158_Tribe1039_0
+|  |  |  +--| (46)
+|  |  |     |  +--Hejnol2009_Daphnia_pulex_6669_Tribe1039_0
+|  |  |     +--| (99)
+|  |  |        +--Ryan2013_est_Daphnia_pulex_6669_gene44
+|  +--| (61)
+|     |                 +--Dunn2008_Boophilus_microplus_6941_Tribe739
+|     |              +**| (74)
+|     |              |  +--Hejnol2009_Boophilus_microplus_6941_Tribe1039_0
+|     |           +--| (100)
+|     |           |  +--Ryan2013_est_Boophilus_microplus_6941_gene44
+|     |        +--| (56)
+|     |        |  |     +--Dunn2008_Drosophila_melanogaster_7227_Tribe739
+|     |        |  |  +**| (82)
+|     |        |  |  |  +--Hejnol2009_Drosophila_melanogaster_7227_Tribe1039_0
+|     |        |  +--| (100)
+|     |        |     +--Ryan2013_est_Drosophila_melanogaster_7227_gene44
+|     |     +--| (56)
+|     |     |  |                     +--Dunn2008_Echinoderes_horni_488522_Tribe739
+|     |     |  |                  +**| (76)
+|     |     |  |                  |  +--Hejnol2009_Echinoderes_horni_488522_Tribe1039_0
+|     |     |  |  +---------------| (100)
+|     |     |  |  |               +--Ryan2013_est_Echinoderes_horni_488522_gene44
+|     |     |  +--| (90)
+|     |     |     |  +--Dunn2008_Scutigera_coleoptrata_29022_Tribe739
+|     |     |     +**| (83)
+|     |     |        +--Hejnol2009_Scutigera_coleoptrata_29022_Tribe1039_0
+|     |  +--| (56)
+|     |  |  |     +--Dunn2008_Carcinoscorpius_rotundicauda_6848_Tribe739
+|     |  |  |  +--| (100)
+|     |  |  |  |  +--Hejnol2009_Carcinoscorpius_rotundicauda_6848_Tribe1039_0
+|     |  |  +--| (98)
+|     |  |     |    +--Dunn2008_Fenneropenaeus_chinensis_139456_Tribe739
+|     |  |     +----| (100)
+|     |  |          +--Hejnol2009_Fenneropenaeus_chinensis_139456_Tribe1039_0
+|     +--| (53)
+|        |     +--Dunn2008_Euperipatoides_kanangrensis_488523_Tribe739
+|        |  +--| (100)
+|        |  |  +--Hejnol2009_Euperipatoides_kanangrensis_488523_Tribe1039_0
+|        +--| (100)
+|           +--Ryan2013_est_Euperipatoides_kanangrensis_488523_gene44
+|
++--Hejnol2009_Acanthoscurria_gomesiana_115339_Tribe1039_0
+
+
+Consensus tree in newick format: 
+
+(Dunn2008_Acanthoscurria_gomesiana_115339_Tribe739:0.0000022029,(((Dunn2008_Anoplodactylus_eroticus_488521_Tribe739:0.0000022029,Ryan2013_est_Anoplodactylus_eroticus_488521_gene44:0.0000022029)100:0.0275810000,Hejnol2009_Anoplodactylus_eroticus_488521_Tribe1039_0:0.0000023193)100:0.3902200000,((((((((Dunn2008_Asterina_pectinifera_7594_Tribe739:0.0000022029,Hejnol2009_Asterina_pectinifera_7594_Tribe1039_0:0.0000022029)70:0.0000030000,Ryan2013_est_Asterina_pectinifera_7594_gene44:0.0000022029)99:0.2950870000,((Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe739:0.0000022029,Hejnol2009_Strongylocentrotus_purpuratus_7668_Tribe1039_0:0.0000022029)72:0.0000030000,Ryan2013_est_Strongylocentrotus_purpuratus_7668_gene44:0.0000022029)98:0.1912290000)100:0.3323030000,(((((Dunn2008_Branchiostoma_floridae_7739_Tribe739:0.0000022029,Hejnol2009_Branchiostoma_floridae_7739_Tribe1039_0:0.0137418089)70:0.0000020000,Ryan2013_est_Branchiostoma_floridae_7739_gene44:0.0000022029)100:0.3132960000,(((((Dunn2008_Ciona_intestinalis_7719_Tribe739:0.0000022029,Hejnol2009_Ciona_intestinalis_7719_Tribe1039_0:0.0000020869)100:2.5721260000,Hejnol2009_Symsagittifera_roscoffensis_84072_Tribe1039_0:1.1828989039)64:0.5467450000,Hejnol2009_Nemertoderma_westbladi_172109_Tribe1039_0:3.0362890401)51:0.1614100000,(((Dunn2008_Homo_sapiens_9606_Tribe739:0.0000022029,Hejnol2009_Homo_sapiens_9606_Tribe1039_0:0.0000022029)100:0.2581680000,Ryan2013_est_Petromyzon_marinus_7757_gene44:0.2708316616)98:0.3144480000,((Hejnol2009_Halocynthia_roretzi_7729_Tribe1039_0:0.0000028531,Ryan2013_est_Halocynthia_roretzi_7729_gene44:0.0000022029)100:0.5160720000,Ryan2013_est_Ciona_intestinalis_7719_gene44:1.5345314954)100:2.3077120000)83:0.5266990000)21:0.0000020000,(((((((Dunn2008_Hydra_vulgaris_01_6087_Tribe739:0.0000022029,Hejnol2009_Hydra_vulgaris_01_6087_Tribe1039_0:0.0000022029)78:0.0000030000,Ryan2013_est_Hydra_vulgaris_01_6087_gene44:0.0000022029)100:0.2503410000,(Ryan2013_est_Clytia_hemisphaerica_252671_gene44:0.0803334541,Ryan2013_est_Podocoryna_carnea_6096_gene44:0.1027415099)90:0.0379940000)97:0.3819810000,((((Dunn2008_Monosiga_ovata_81526_Tribe739:0.0000022029,Hejnol2009_Monosiga_ovata_81526_Tribe1039_0:0.0000022029)74:0.0000030000,Ryan2013_est_Monosiga_ovata_81526_gene44:0.0000022029)99:0.2061550000,((Hejnol2009_Monosiga_brevicollis_81824_Tribe1039_0:0.0000022221,Ryan2013_est_Monosiga_brevicollis_81824_gene44:0.0000022029)100:0.6671130000,Ryan2013_est_Salpingoeca_rosetta_946362_gene44:0.3441766266)87:0.3565010000)100:1.2453830000,(Hejnol2009_Suberites_domuncula_55567_Tribe1039_0:0.0000028531,Ryan2013_est_Suberites_domuncula_55567_gene44:0.0000022029)100:0.3444070000)64:0.2927220000)40:0.0418480000,Ryan2013_est_Lubomirskia_baicalensis_289074_gene44:0.2500679904)41:0.0465900000,((((Dunn2008_Nematostella_vectensis_45351_Tribe739:0.0000022029,Hejnol2009_Nematostella_vectensis_45351_Tribe1039_0:0.0000022029)76:0.0000030000,Ryan2013_est_Nematostella_vectensis_45351_gene44:0.0000022029)97:0.2016720000,Ryan2013_est_Anemonia_viridis_51769_gene44:0.4495571490)92:0.2376810000,((((Dunn2008_Oscarella_carmela_386100_Tribe739:0.0000022029,Hejnol2009_Oscarella_carmela_386100_Tribe1039_0:0.0000022029)73:0.0000020000,Ryan2013_est_Oscarella_carmela_386100_gene44:0.0000022029)100:0.4411740000,(Hejnol2009_Trichoplax_adhaerens_10228_Tribe1039_0:0.0000028235,Ryan2013_est_Trichoplax_adhaerens_10228_gene44:0.0000022029)100:0.6958840000)85:0.2299920000,((Ryan2013_est_Acropora_palmata_6131_gene44:0.0885225097,Ryan2013_est_Acropora_millepora_45264_gene44:0.0140972920)100:0.2657350000,Ryan2013_est_Orbicella_faveolata_48498_gene44:0.1836935257)100:0.2935150000)51:0.0729530000)44:0.0552570000)50:0.0255840000,(Hejnol2009_Amphimedon_queenslandica_400682_Tribe1039_0:0.0000028235,Ryan2013_est_Amphimedon_queenslandica_400682_gene44:0.0000022029)100:0.6087830000)81:0.2490560000)34:0.0250500000)48:0.2046200000,(((Dunn2008_Ptychodera_flava_63121_Tribe739:0.0000022029,Hejnol2009_Ptychodera_flava_63121_Tribe1039_0:0.0000022029)74:0.0000020000,Ryan2013_est_Ptychodera_flava_63121_gene44:0.0000022029)99:0.0869240000,Ryan2013_est_Saccoglossus_kowalevskii_10224_gene44:0.3336317322)98:0.2942730000)44:0.0754350000,((Dunn2008_Xenoturbella_bocki_242395_Tribe739:0.0000022029,Hejnol2009_Xenoturbella_bocki_242395_Tribe1039_0:0.0000022029)74:0.0000030000,Ryan2013_est_Xenoturbella_bocki_242395_gene44:0.0000022029)99:0.4857520000)64:0.1014800000)70:0.3029870000,((((((Dunn2008_Biomphalaria_glabrata_6526_Tribe739:0.0000022029,Hejnol2009_Biomphalaria_glabrata_6526_Tribe1039_0:0.0000022029)88:0.0000030000,((((Dunn2008_Saccharomyces_cerevisiae_4932_Tribe739:0.0000022029,Hejnol2009_Saccharomyces_cerevisiae_4932_Tribe1039_0:0.0000022029)89:0.0000030000,Ryan2013_est_Saccharomyces_cerevisiae_4932_gene44:0.0000022029)100:0.7924540000,(Ryan2013_est_Phycomyces_blakesleeanus_4837_gene44:0.1049085746,Ryan2013_est_Rhizopus_oryzae_64495_gene44:0.0691963877)100:0.3998220000)66:0.2300440000,Ryan2013_est_Cryptococcus_neoformans_5207_gene44:0.4350096171)100:2.7924860000)68:0.1812680000,Hejnol2009_Flaccisagitta_enflata_366393_Tribe1039_0:1.2473498098)45:0.1718740000,((((Dunn2008_Chaetopterus_variopedatus_34590_Tribe739:0.0000022029,Hejnol2009_Chaetopterus_sp_6379_Tribe1039_0:0.0000022029)100:0.1972340000,(((Dunn2008_Euprymna_scolopes_6613_Tribe739:0.0000022029,Hejnol2009_Euprymna_scolopes_6613_Tribe1039_0:0.0000022029)92:0.0000020000,Ryan2013_est_Euprymna_scolopes_6613_gene44:0.0000022029)99:0.2130320000,(Dunn2008_Paraplanocera_oligoglena_1468194_Tribe739:0.0000022029,Hejnol2009_Paraplanocera_oligoglena_1468194_Tribe1039_0:0.0000022029)100:1.3336060000)77:0.2444220000)42:0.0928460000,(((Dunn2008_Haementeria_depressa_279730_Tribe739:0.0000022029,Hejnol2009_Haementeria_depressa_279730_Tribe1039_0:0.0000022029)100:0.0204090000,Hejnol2009_Helobdella_robusta_6412_Tribe1039_0:0.0000022029)97:0.1565090000,(Dunn2008_Urechis_caupo_6431_Tribe739:0.0000022029,Hejnol2009_Urechis_caupo_6431_Tribe1039_0:0.0000022029)100:0.2492430000)43:0.0201890000)38:0.0657780000,(Dunn2008_Lumbricus_rubellus_35632_Tribe739:0.0456323948,Hejnol2009_Lumbricus_rubellus_35632_Tribe1039_0:0.0000022092)100:0.1342760000)33:0.1409190000)21:0.0173420000,((Dunn2008_Crassostrea_virginica_6565_Tribe739:0.0000022029,Hejnol2009_Crassostrea_virginica_6565_Tribe1039_0:0.0000022029)100:1.2812790000,Hejnol2009_Symbion_pandora_69817_Tribe1039_0:0.3776992167)39:0.1709020000)45:0.0679860000,((((Dunn2008_Capitella_teleta_283909_Tribe739:0.0000022029,Hejnol2009_Capitella_teleta_283909_Tribe1039_0:0.0000022029)87:0.0000020000,Ryan2013_est_Capitella_teleta_283909_gene44:0.0000022029)100:0.6338910000,Hejnol2009_Cristatella_mucedo_67896_Tribe1039_0:0.1554775414)76:0.1239470000,Hejnol2009_Bugula_neritina_10212_Tribe1039_0:0.9946091273)73:0.1577200000)69:0.3043510000)35:0.0337490000,(((Dunn2008_Richtersius_coronifer_245088_Tribe739:0.0000022029,Hejnol2009_Richtersius_coronifer_245088_Tribe1039_0:0.0000022029)100:0.4592460000,Hejnol2009_Onychiurus_arcticus_1071257_Tribe1039_0:0.4842179903)68:0.1022020000,((Dunn2008_Xiphinema_index_46003_Tribe739:0.0000022029,Hejnol2009_Xiphinema_index_46003_Tribe1039_0:0.0000022029)100:0.4333500000,Ryan2013_est_Xiphinema_index_46003_gene44:0.5325700658)100:0.6591400000)39:0.0578040000)40:0.0265550000,((Dunn2008_Mytilus_galloprovincialis_29158_Tribe739:0.0000022029,Hejnol2009_Mytilus_galloprovincialis_29158_Tribe1039_0:0.0000022029)100:1.8447290000,(Hejnol2009_Daphnia_pulex_6669_Tribe1039_0:0.0000028235,Ryan2013_est_Daphnia_pulex_6669_gene44:0.0000022029)99:0.2950450000)46:0.1893970000)31:0.0166690000,((((((Dunn2008_Boophilus_microplus_6941_Tribe739:0.0000022029,Hejnol2009_Boophilus_microplus_6941_Tribe1039_0:0.0000022029)74:0.0000020000,Ryan2013_est_Boophilus_microplus_6941_gene44:0.0000022029)100:0.2957090000,((Dunn2008_Drosophila_melanogaster_7227_Tribe739:0.0000022029,Hejnol2009_Drosophila_melanogaster_7227_Tribe1039_0:0.0000022029)82:0.0000020000,Ryan2013_est_Drosophila_melanogaster_7227_gene44:0.0000022029)100:0.3082810000)56:0.0501830000,(((Dunn2008_Echinoderes_horni_488522_Tribe739:0.0000022029,Hejnol2009_Echinoderes_horni_488522_Tribe1039_0:0.0000022029)76:0.0000020000,Ryan2013_est_Echinoderes_horni_488522_gene44:0.0000022029)100:1.5354400000,(Dunn2008_Scutigera_coleoptrata_29022_Tribe739:0.0000022029,Hejnol2009_Scutigera_coleoptrata_29022_Tribe1039_0:0.0000022029)83:0.0000020000)90:0.1356240000)56:0.0483160000,((Dunn2008_Carcinoscorpius_rotundicauda_6848_Tribe739:0.0000022029,Hejnol2009_Carcinoscorpius_rotundicauda_6848_Tribe1039_0:0.0000022029)100:0.0955210000,(Dunn2008_Fenneropenaeus_chinensis_139456_Tribe739:0.0000022029,Hejnol2009_Fenneropenaeus_chinensis_139456_Tribe1039_0:0.0000022029)100:0.4671710000)98:0.1604160000)56:0.0557330000,((Dunn2008_Euperipatoides_kanangrensis_488523_Tribe739:0.0000022029,Hejnol2009_Euperipatoides_kanangrensis_488523_Tribe1039_0:0.0000022029)100:0.0235460000,Ryan2013_est_Euperipatoides_kanangrensis_488523_gene44:0.0000022029)100:0.1791710000)53:0.0536950000)61:0.0640660000)100:0.3222780000,Hejnol2009_Acanthoscurria_gomesiana_115339_Tribe1039_0:0.0000022029);
+
+TIME STAMP
+----------
+
+Date and time: Mon Aug 29 20:36:46 2022
+Total CPU time used: 18236.44574 seconds (5h:3m:56s)
+Total wall-clock time used: 18306.54819 seconds (5h:5m:6s)
+

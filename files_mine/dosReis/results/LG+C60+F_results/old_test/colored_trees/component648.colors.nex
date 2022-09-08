@@ -1,0 +1,276 @@
+#NEXUS
+
+BEGIN TAXA;
+	DIMENSIONS NTAX = 102;
+	TAXLABELS
+		Dunn2008_Acanthoscurria_gomesiana_115339_Tribe1054[&!color=#0000FF]
+		Dunn2008_Acropora_millepora_45264_Tribe1054[&!color=#FF00FF]
+		Hejnol2009_Acropora_millepora_45264_Tribe1390_0[&!color=#FF00FF]
+		Ryan2013_est_Acropora_millepora_45264_gene367[&!color=#FF00FF]
+		Ryan2013_est_Acropora_palmata_6131_gene367[&!color=#FF00FF]
+		Ryan2013_est_Porites_astreoides_104758_gene367[&!color=#FF00FF]
+		Ryan2013_est_Orbicella_faveolata_48498_gene367[&!color=#FF00FF]
+		Dunn2008_Nematostella_vectensis_45351_Tribe1054[&!color=#FF00FF]
+		Hejnol2009_Nematostella_vectensis_45351_Tribe1390_0[&!color=#FF00FF]
+		Ryan2013_est_Nematostella_vectensis_45351_gene367[&!color=#FF00FF]
+		Ryan2013_est_Anemonia_viridis_51769_gene367[&!color=#FF00FF]
+		Ryan2013_est_Metridium_senile_6116_gene367[&!color=#FF00FF]
+		Dunn2008_Mnemiopsis_leidyi_27923_Tribe1054[&!color=#FF0000]
+		Hejnol2009_Mnemiopsis_leidyi_27923_Tribe1390_0[&!color=#FF0000]
+		Ryan2013_est_Mnemiopsis_leidyi_27923_gene367[&!color=#FF0000]
+		Dunn2008_Gallus_gallus_9031_Tribe1054[&!color=#FF8C00]
+		Hejnol2009_Gallus_gallus_9031_Tribe1390_0[&!color=#FF8C00]
+		Ryan2013_est_Gallus_gallus_9031_gene367[&!color=#FF8C00]
+		Dunn2008_Macrostomum_lignano_282301_Tribe1054[&!color=#FFD700]
+		Hejnol2009_Macrostomum_lignano_282301_Tribe1390_0[&!color=#FFD700]
+		Dunn2008_Ciona_intestinalis_7719_Tribe1054[&!color=#8B4513]
+		Hejnol2009_Ciona_intestinalis_7719_Tribe1390_0[&!color=#8B4513]
+		Ryan2013_est_Ciona_intestinalis_7719_gene367[&!color=#8B4513]
+		Ryan2013_est_Saccoglossus_kowalevskii_10224_gene367[&!color=#B8860B]
+		Dunn2008_Echinococcus_granulosus_6210_Tribe1054[&!color=#FFD700]
+		Hejnol2009_Echinococcus_granulosus_6210_Tribe1390_0[&!color=#FFD700]
+		Dunn2008_Xenoturbella_bocki_242395_Tribe1054[&!color=#808000]
+		Hejnol2009_Xenoturbella_bocki_242395_Tribe1390_0[&!color=#808000]
+		Ryan2013_est_Xenoturbella_bocki_242395_gene367[&!color=#808000]
+		Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe1054[&!color=#B8860B]
+		Hejnol2009_Strongylocentrotus_purpuratus_7668_Tribe1390_0[&!color=#B8860B]
+		Ryan2013_est_Strongylocentrotus_purpuratus_7668_gene367[&!color=#B8860B]
+		Dunn2008_Asterina_pectinifera_7594_Tribe1054[&!color=#B8860B]
+		Hejnol2009_Asterina_pectinifera_7594_Tribe1390_0[&!color=#B8860B]
+		Ryan2013_est_Asterina_pectinifera_7594_gene367[&!color=#B8860B]
+		Dunn2008_Cerebratulus_lacteus_6221_Tribe1054[&!color=#008080]
+		Hejnol2009_Cerebratulus_lacteus_6221_Tribe1390_0[&!color=#008080]
+		Ryan2013_est_Cerebratulus_lacteus_6221_gene367[&!color=#008080]
+		Dunn2008_Capitella_teleta_283909_Tribe1054[&!color=#00FFFF]
+		Hejnol2009_Capitella_teleta_283909_Tribe1390_0[&!color=#00FFFF]
+		Ryan2013_est_Capitella_teleta_283909_gene367[&!color=#00FFFF]
+		Hejnol2009_Helobdella_robusta_6412_Tribe1390_0[&!color=#00FFFF]
+		Ryan2013_est_Helobdella_robusta_6412_gene367[&!color=#00FFFF]
+		Hejnol2009_Symbion_pandora_69817_Tribe1390_0[&!color=#008080]
+		Dunn2008_Terebratalia_transversa_34513_Tribe1054[&!color=#87CEEB]
+		Hejnol2009_Terebratalia_transversa_34513_Tribe1390_0[&!color=#87CEEB]
+		Ryan2013_est_Terebratalia_transversa_34513_gene367[&!color=#87CEEB]
+		Dunn2008_Euprymna_scolopes_6613_Tribe1054[&!color=#008000]
+		Hejnol2009_Euprymna_scolopes_6613_Tribe1390_0[&!color=#008000]
+		Ryan2013_est_Euprymna_scolopes_6613_gene367[&!color=#008000]
+		Ryan2013_est_Lottia_gigantea_225164_gene367[&!color=#008000]
+		Hejnol2009_Branchiostoma_floridae_7739_Tribe1390_0[&!color=#8B4513]
+		Dunn2008_Capsaspora_owczarzaki_192875_Tribe1054[&!color=#708090]
+		Hejnol2009_Capsaspora_owczarzaki_192875_Tribe1390_0[&!color=#708090]
+		Ryan2013_est_Capsaspora_owczarzaki_192875_gene367[&!color=#708090]
+		Hejnol2009_Monosiga_brevicollis_81824_Tribe1390_0[&!color=#808080]
+		Ryan2013_est_Monosiga_brevicollis_81824_gene367[&!color=#808080]
+		Ryan2013_est_Salpingoeca_rosetta_946362_gene367[&!color=#808080]
+		Hejnol2009_Amphimedon_queenslandica_400682_Tribe1390_0[&!color=#800080]
+		Ryan2013_est_Amphimedon_queenslandica_400682_gene367[&!color=#800080]
+		Ryan2013_est_Phycomyces_blakesleeanus_4837_gene367[&!color=#696969]
+		Ryan2013_est_Rhizopus_oryzae_64495_gene367[&!color=#696969]
+		Ryan2013_est_Batrachochytrium_dendrobatidis_109871_gene367[&!color=#696969]
+		Ryan2013_est_Spizellomyces_punctatus_109760_gene367[&!color=#696969]
+		Ryan2013_est_Sycon_raphanus_56443_gene367[&!color=#800080]
+		Dunn2008_Hydra_vulgaris_01_6087_Tribe1054[&!color=#FF00FF]
+		Hejnol2009_Hydra_vulgaris_01_6087_Tribe1390_0[&!color=#FF00FF]
+		Ryan2013_est_Hydra_vulgaris_01_6087_gene367[&!color=#FF00FF]
+		Dunn2008_Hydractinia_echinata_35630_Tribe1054[&!color=#FF00FF]
+		Hejnol2009_Hydractinia_echinata_35630_Tribe1390_0[&!color=#FF00FF]
+		Ryan2013_est_Hydractinia_echinata_35630_gene367[&!color=#FF00FF]
+		Dunn2008_Paraplanocera_oligoglena_1468194_Tribe1054[&!color=#FFD700]
+		Hejnol2009_Paraplanocera_oligoglena_1468194_Tribe1390_0[&!color=#FFD700]
+		Ryan2013_est_Paraplanocera_oligoglena_1468194_gene367[&!color=#FFD700]
+		Dunn2008_Schmidtea_mediterranea_79327_Tribe1054[&!color=#FFD700]
+		Hejnol2009_Schmidtea_mediterranea_79327_Tribe1390_0[&!color=#FFD700]
+		Ryan2013_est_Schmidtea_mediterranea_79327_gene367[&!color=#FFD700]
+		Hejnol2009_Gnathostomula_peregrina_338297_Tribe1390_0[&!color=#F0E68C]
+		Hejnol2009_Nemertoderma_westbladi_172109_Tribe1390_0[&!color=#808000]
+		Ryan2013_est_Nemertoderma_westbladi_172109_gene367[&!color=#808000]
+		Dunn2008_Echinoderes_horni_488522_Tribe1054[&!color=#808000]
+		Hejnol2009_Echinoderes_horni_488522_Tribe1390_0[&!color=#808000]
+		Ryan2013_est_Echinoderes_horni_488522_gene367[&!color=#808000]
+		Dunn2008_Trichinella_spiralis_6334_Tribe1054[&!color=#808000]
+		Hejnol2009_Trichinella_spiralis_6334_Tribe1390_0[&!color=#808000]
+		Hejnol2009_Trichoplax_adhaerens_10228_Tribe1390_0[&!color=#FA8072]
+		Ryan2013_est_Trichoplax_adhaerens_10228_gene367[&!color=#FA8072]
+		Dunn2008_Boophilus_microplus_6941_Tribe1054[&!color=#0000FF]
+		Hejnol2009_Boophilus_microplus_6941_Tribe1390_0[&!color=#0000FF]
+		Ryan2013_est_Boophilus_microplus_6941_gene367[&!color=#0000FF]
+		Dunn2008_Sphaeroforma_arctica_72019_Tribe1054[&!color=#708090]
+		Hejnol2009_Sphaeroforma_arctica_72019_Tribe1390_0[&!color=#708090]
+		Ryan2013_est_Sphaeroforma_arctica_72019_gene367[&!color=#708090]
+		Hejnol2009_Onychiurus_arcticus_1071257_Tribe1390_0[&!color=#0000FF]
+		Dunn2008_Carcinus_maenas_6759_Tribe1054[&!color=#0000FF]
+		Hejnol2009_Carcinus_maenas_6759_Tribe1390_0[&!color=#0000FF]
+		Dunn2008_Drosophila_melanogaster_7227_Tribe1054[&!color=#0000FF]
+		Hejnol2009_Drosophila_melanogaster_7227_Tribe1390_0[&!color=#0000FF]
+		Ryan2013_est_Drosophila_melanogaster_7227_gene367[&!color=#0000FF]
+		Hejnol2009_Daphnia_pulex_6669_Tribe1390_0[&!color=#0000FF]
+		Ryan2013_est_Daphnia_pulex_6669_gene367[&!color=#0000FF]
+		Hejnol2009_Acanthoscurria_gomesiana_115339_Tribe1390_0[&!color=#0000FF]
+	;
+END;
+BEGIN TREES;
+	TRANSLATE
+		1	Dunn2008_Acanthoscurria_gomesiana_115339_Tribe1054,
+		2	Dunn2008_Acropora_millepora_45264_Tribe1054,
+		3	Hejnol2009_Acropora_millepora_45264_Tribe1390_0,
+		4	Ryan2013_est_Acropora_millepora_45264_gene367,
+		5	Ryan2013_est_Acropora_palmata_6131_gene367,
+		6	Ryan2013_est_Porites_astreoides_104758_gene367,
+		7	Ryan2013_est_Orbicella_faveolata_48498_gene367,
+		8	Dunn2008_Nematostella_vectensis_45351_Tribe1054,
+		9	Hejnol2009_Nematostella_vectensis_45351_Tribe1390_0,
+		10	Ryan2013_est_Nematostella_vectensis_45351_gene367,
+		11	Ryan2013_est_Anemonia_viridis_51769_gene367,
+		12	Ryan2013_est_Metridium_senile_6116_gene367,
+		13	Dunn2008_Mnemiopsis_leidyi_27923_Tribe1054,
+		14	Hejnol2009_Mnemiopsis_leidyi_27923_Tribe1390_0,
+		15	Ryan2013_est_Mnemiopsis_leidyi_27923_gene367,
+		16	Dunn2008_Gallus_gallus_9031_Tribe1054,
+		17	Hejnol2009_Gallus_gallus_9031_Tribe1390_0,
+		18	Ryan2013_est_Gallus_gallus_9031_gene367,
+		19	Dunn2008_Macrostomum_lignano_282301_Tribe1054,
+		20	Hejnol2009_Macrostomum_lignano_282301_Tribe1390_0,
+		21	Dunn2008_Ciona_intestinalis_7719_Tribe1054,
+		22	Hejnol2009_Ciona_intestinalis_7719_Tribe1390_0,
+		23	Ryan2013_est_Ciona_intestinalis_7719_gene367,
+		24	Ryan2013_est_Saccoglossus_kowalevskii_10224_gene367,
+		25	Dunn2008_Echinococcus_granulosus_6210_Tribe1054,
+		26	Hejnol2009_Echinococcus_granulosus_6210_Tribe1390_0,
+		27	Dunn2008_Xenoturbella_bocki_242395_Tribe1054,
+		28	Hejnol2009_Xenoturbella_bocki_242395_Tribe1390_0,
+		29	Ryan2013_est_Xenoturbella_bocki_242395_gene367,
+		30	Dunn2008_Strongylocentrotus_purpuratus_7668_Tribe1054,
+		31	Hejnol2009_Strongylocentrotus_purpuratus_7668_Tribe1390_0,
+		32	Ryan2013_est_Strongylocentrotus_purpuratus_7668_gene367,
+		33	Dunn2008_Asterina_pectinifera_7594_Tribe1054,
+		34	Hejnol2009_Asterina_pectinifera_7594_Tribe1390_0,
+		35	Ryan2013_est_Asterina_pectinifera_7594_gene367,
+		36	Dunn2008_Cerebratulus_lacteus_6221_Tribe1054,
+		37	Hejnol2009_Cerebratulus_lacteus_6221_Tribe1390_0,
+		38	Ryan2013_est_Cerebratulus_lacteus_6221_gene367,
+		39	Dunn2008_Capitella_teleta_283909_Tribe1054,
+		40	Hejnol2009_Capitella_teleta_283909_Tribe1390_0,
+		41	Ryan2013_est_Capitella_teleta_283909_gene367,
+		42	Hejnol2009_Helobdella_robusta_6412_Tribe1390_0,
+		43	Ryan2013_est_Helobdella_robusta_6412_gene367,
+		44	Hejnol2009_Symbion_pandora_69817_Tribe1390_0,
+		45	Dunn2008_Terebratalia_transversa_34513_Tribe1054,
+		46	Hejnol2009_Terebratalia_transversa_34513_Tribe1390_0,
+		47	Ryan2013_est_Terebratalia_transversa_34513_gene367,
+		48	Dunn2008_Euprymna_scolopes_6613_Tribe1054,
+		49	Hejnol2009_Euprymna_scolopes_6613_Tribe1390_0,
+		50	Ryan2013_est_Euprymna_scolopes_6613_gene367,
+		51	Ryan2013_est_Lottia_gigantea_225164_gene367,
+		52	Hejnol2009_Branchiostoma_floridae_7739_Tribe1390_0,
+		53	Dunn2008_Capsaspora_owczarzaki_192875_Tribe1054,
+		54	Hejnol2009_Capsaspora_owczarzaki_192875_Tribe1390_0,
+		55	Ryan2013_est_Capsaspora_owczarzaki_192875_gene367,
+		56	Hejnol2009_Monosiga_brevicollis_81824_Tribe1390_0,
+		57	Ryan2013_est_Monosiga_brevicollis_81824_gene367,
+		58	Ryan2013_est_Salpingoeca_rosetta_946362_gene367,
+		59	Hejnol2009_Amphimedon_queenslandica_400682_Tribe1390_0,
+		60	Ryan2013_est_Amphimedon_queenslandica_400682_gene367,
+		61	Ryan2013_est_Phycomyces_blakesleeanus_4837_gene367,
+		62	Ryan2013_est_Rhizopus_oryzae_64495_gene367,
+		63	Ryan2013_est_Batrachochytrium_dendrobatidis_109871_gene367,
+		64	Ryan2013_est_Spizellomyces_punctatus_109760_gene367,
+		65	Ryan2013_est_Sycon_raphanus_56443_gene367,
+		66	Dunn2008_Hydra_vulgaris_01_6087_Tribe1054,
+		67	Hejnol2009_Hydra_vulgaris_01_6087_Tribe1390_0,
+		68	Ryan2013_est_Hydra_vulgaris_01_6087_gene367,
+		69	Dunn2008_Hydractinia_echinata_35630_Tribe1054,
+		70	Hejnol2009_Hydractinia_echinata_35630_Tribe1390_0,
+		71	Ryan2013_est_Hydractinia_echinata_35630_gene367,
+		72	Dunn2008_Paraplanocera_oligoglena_1468194_Tribe1054,
+		73	Hejnol2009_Paraplanocera_oligoglena_1468194_Tribe1390_0,
+		74	Ryan2013_est_Paraplanocera_oligoglena_1468194_gene367,
+		75	Dunn2008_Schmidtea_mediterranea_79327_Tribe1054,
+		76	Hejnol2009_Schmidtea_mediterranea_79327_Tribe1390_0,
+		77	Ryan2013_est_Schmidtea_mediterranea_79327_gene367,
+		78	Hejnol2009_Gnathostomula_peregrina_338297_Tribe1390_0,
+		79	Hejnol2009_Nemertoderma_westbladi_172109_Tribe1390_0,
+		80	Ryan2013_est_Nemertoderma_westbladi_172109_gene367,
+		81	Dunn2008_Echinoderes_horni_488522_Tribe1054,
+		82	Hejnol2009_Echinoderes_horni_488522_Tribe1390_0,
+		83	Ryan2013_est_Echinoderes_horni_488522_gene367,
+		84	Dunn2008_Trichinella_spiralis_6334_Tribe1054,
+		85	Hejnol2009_Trichinella_spiralis_6334_Tribe1390_0,
+		86	Hejnol2009_Trichoplax_adhaerens_10228_Tribe1390_0,
+		87	Ryan2013_est_Trichoplax_adhaerens_10228_gene367,
+		88	Dunn2008_Boophilus_microplus_6941_Tribe1054,
+		89	Hejnol2009_Boophilus_microplus_6941_Tribe1390_0,
+		90	Ryan2013_est_Boophilus_microplus_6941_gene367,
+		91	Dunn2008_Sphaeroforma_arctica_72019_Tribe1054,
+		92	Hejnol2009_Sphaeroforma_arctica_72019_Tribe1390_0,
+		93	Ryan2013_est_Sphaeroforma_arctica_72019_gene367,
+		94	Hejnol2009_Onychiurus_arcticus_1071257_Tribe1390_0,
+		95	Dunn2008_Carcinus_maenas_6759_Tribe1054,
+		96	Hejnol2009_Carcinus_maenas_6759_Tribe1390_0,
+		97	Dunn2008_Drosophila_melanogaster_7227_Tribe1054,
+		98	Hejnol2009_Drosophila_melanogaster_7227_Tribe1390_0,
+		99	Ryan2013_est_Drosophila_melanogaster_7227_gene367,
+		100	Hejnol2009_Daphnia_pulex_6669_Tribe1390_0,
+		101	Ryan2013_est_Daphnia_pulex_6669_gene367,
+		102	Hejnol2009_Acanthoscurria_gomesiana_115339_Tribe1390_0
+	;
+	TREE * UNTITLED = [&U] (1:2.2951e-06,(((((((((((((((2:2.2951e-06,3:2.2951e-06)88:2e-06,4:2.2951e-06)99:0.015272,5:0.0166756604)99:0.026105,6:0.0238428818)99:0.0309,7:0.0621917536)99:0.10806,(((8:2.2951e-06,9:2.2951e-06)73:2e-06,10:2.2951e-06)100:0.176644,(11:0.1268725122,12:0.0720669123)96:0.064644)97:0.090716)93:0.063685,((13:2.2951e-06,14:2.2951e-06)63:3e-06,15:2.2951e-06)100:1.294055)51:0.138467,(((16:2.2951e-06,17:2.2951e-06)59:2e-06,18:2.2951e-06)99:0.228577,(19:2.2951e-06,20:2.2951e-06)100:0.916575)85:0.163869)29:0.04867,((((21:2.2951e-06,22:2.2951e-06)58:3e-06,23:2.2951e-06)100:0.646177,24:0.2923468316)92:0.091604,(((25:2.2951e-06,26:2.2951e-06)100:1.322533,((27:2.2951e-06,28:2.2951e-06)69:3e-06,29:2.2951e-06)100:0.554248)67:0.099703,((30:2.2951e-06,31:2.2951e-06)65:2e-06,32:2.2951e-06)100:0.349817)65:0.021407)74:0.091775)25:0.021655,(((((33:2.2951e-06,34:2.2951e-06)60:2e-06,35:2.2951e-06)100:0.362167,((36:2.2951e-06,37:2.2951e-06)69:2e-06,38:2.2951e-06)100:0.166462)51:0.03746,(((((39:2.2951e-06,(40:2.2951e-06,41:2.2951e-06)72:3e-06)100:0.209955,(42:2.2951e-06,43:2.2951e-06)100:0.277721)86:0.060203,44:0.9717378977)75:0.05773,((45:2.2951e-06,46:2.2951e-06)54:2e-06,47:2.2951e-06)99:0.126947)74:0.022412,(((48:2.2951e-06,49:2.2951e-06)67:3e-06,50:2.2951e-06)100:0.535203,51:0.2214296399)63:0.099704)63:0.101657)40:0.041409,52:0.2186122458)31:0.029179)33:0.054039,((((((53:2.2951e-06,54:2.2951e-06)76:3e-06,55:2.4909e-06)100:0.66912,((56:2.9539e-06,57:2.2951e-06)100:0.498465,58:0.3983770727)100:0.587373)46:0.09169,((59:0.3372837815,60:2.4909e-06)100:0.679244,((((61:0.1838627322,62:0.866196311)100:0.581242,63:1.348210893)78:0.07147,64:1.75319017)93:0.732595,65:0.3495240521)61:0.247301)49:0.048015)78:0.168852,(((66:2.2951e-06,67:2.2951e-06)78:2e-06,68:1.351026227)99:0.104582,((69:2.2951e-06,70:2.2951e-06)79:2e-06,71:2.2951e-06)100:0.449204)99:0.434133)35:0.070022,(((72:2.2951e-06,73:2.2951e-06)69:3e-06,74:2.2951e-06)100:0.45577,((75:2.2951e-06,76:2.2951e-06)69:3e-06,77:2.2951e-06)100:0.431873)91:0.270165)35:0.075298)55:0.031536,(78:0.6472842529,(79:2.3063e-06,80:2.2951e-06)100:0.98227)87:0.182384)68:0.141855,((((81:2.2951e-06,82:2.2951e-06)71:3e-06,83:2.2951e-06)97:0.146066,(84:2.2951e-06,85:2.2951e-06)100:1.838388)70:0.158023,(86:2.9539e-06,87:2.2989e-06)100:1.001632)72:0.168601)87:0.167838,((((88:2.2951e-06,89:2.2951e-06)78:2e-06,90:2.2951e-06)100:0.390647,(((91:2.2951e-06,92:2.2951e-06)92:2e-06,93:2.2951e-06)100:2.097304,94:0.2480507633)83:0.593457)73:0.105021,(95:0.1426647953,96:2.4227e-06)100:0.618429)80:0.0556)88:0.052821,(((97:2.2951e-06,98:2.2951e-06)81:2e-06,99:2.2951e-06)100:0.550986,(100:2.3063e-06,101:2.2989e-06)100:0.531067)87:0.138003)100:0.195273,102:2.2951e-06);
+End;
+
+begin figtree;
+        set appearance.backgroundColour=#-1;
+        set appearance.branchColorAttribute="User Selection";
+        set appearance.branchLineWidth=1.0;
+        set appearance.foregroundColour=#-16777216;
+        set appearance.selectionColour=#-2144520576;
+        set branchLabels.displayAttribute="bootstrap";
+        set branchLabels.fontName="Arial";
+        set branchLabels.fontSize=10;
+        set branchLabels.fontStyle=0;
+        set branchLabels.isShown=true;
+        set branchLabels.significantDigits=4;
+        set layout.layoutType="RECTILINEAR";
+        set layout.zoom=0;
+        set nodeBars.barWidth=4.0;
+        set nodeLabels.displayAttribute="Node ages";
+        set nodeLabels.fontName="Arial";
+        set nodeLabels.fontSize=8;
+        set nodeLabels.fontStyle=0;
+        set nodeLabels.isShown=false;
+        set nodeLabels.significantDigits=4;
+        set polarLayout.alignTipLabels=false;
+        set polarLayout.angularRange=0;
+        set polarLayout.rootAngle=0;
+        set polarLayout.rootLength=100;
+        set polarLayout.showRoot=true;
+        set radialLayout.spread=0.0;
+        set rectilinearLayout.alignTipLabels=false;
+        set rectilinearLayout.curvature=0;
+        set rectilinearLayout.rootLength=100;
+        set scale.offsetAge=0.0;
+        set scale.rootAge=1.0;
+        set scale.scaleFactor=1.0;
+        set scale.scaleRoot=false;
+        set scaleAxis.automaticScale=true;
+        set scaleAxis.fontSize=8.0;
+        set scaleAxis.isShown=false;
+        set scaleAxis.lineWidth=1.0;
+        set scaleAxis.majorTicks=0.1;
+        set scaleAxis.origin=0.0;
+        set scaleAxis.significantDigits=4;
+        set scaleBar.automaticScale=true;
+        set scaleBar.fontSize=10.0;
+        set scaleBar.isShown=true;
+        set scaleBar.lineWidth=1.0;
+        set scaleBar.scaleRange=0.0;
+        set scaleBar.significantDigits=4;
+        set tipLabels.displayAttribute="Names";
+        set tipLabels.fontName="Arial";
+        set tipLabels.fontSize=12;
+        set tipLabels.fontStyle=0;
+        set tipLabels.isShown=true;
+        set tipLabels.significantDigits=4;
+        set trees.order=false;
+        set trees.orderType="increasing";
+        set trees.rootingType="User Selection";
+        set trees.transform=false;
+        set trees.transformType="cladogram";
+end;

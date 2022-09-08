@@ -1,0 +1,761 @@
+IQ-TREE version 1.5.3 for Linux 64-bit built Mar 12 2017
+Copyright (c) 2011-2016 Nguyen Lam Tung, Olga Chernomor, Arndt von Haeseler and Bui Quang Minh.
+
+Host:    r1226.uppmax.uu.se (AVX2, FMA3, 243 GB RAM)
+Command: iqtree -s /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component190.mafft -m LG+C60+F -nt 1 -bb 1000 -pre /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component190/LG+C60+F_component190
+Seed:    501924 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 29 15:31:07 2022
+Kernel:  AVX+FMA
+
+NOTE: Consider using the multicore version because your CPU has 16 cores!
+
+Reading alignment file /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/mafft/component190.mafft ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 321 sequences with 134 columns and 134 patterns (99 informative sites, 18 constant sites)
+WARNING: Some sequence names are changed as follows:
+Chang2015:Acanthoeca_sp:81532:rps17 -> Chang2015_Acanthoeca_sp_81532_rps17
+Chang2015:Acropora_cervicornis:6130:rps17 -> Chang2015_Acropora_cervicornis_6130_rps17
+Chang2015:Aiptasia_pallida:1720309:rps17 -> Chang2015_Aiptasia_pallida_1720309_rps17
+Chang2015:Amoebidium_parasiticum:4881:rps17 -> Chang2015_Amoebidium_parasiticum_4881_rps17
+Chang2015:Amphimedon_queenslandica:400682:rps17 -> Chang2015_Amphimedon_queenslandica_400682_rps17
+Chang2015:Aphrocallistes_vastus:83887:rps17 -> Chang2015_Aphrocallistes_vastus_83887_rps17
+Chang2015:Aurelia_aurita:6145:rps17 -> Chang2015_Aurelia_aurita_6145_rps17
+Chang2015:Beroe_abyssicola:320166:rps17 -> Chang2015_Beroe_abyssicola_320166_rps17
+Chang2015:Bolocera_tuediae:1163374:rps17 -> Chang2015_Bolocera_tuediae_1163374_rps17
+Chang2015:Botryllus_schlosseri:30301:rps17 -> Chang2015_Botryllus_schlosseri_30301_rps17
+Chang2015:Branchiostoma_floridae:7739:rps17 -> Chang2015_Branchiostoma_floridae_7739_rps17
+Chang2015:Buddenbrockia_plumatellae:185687:rps17 -> Chang2015_Buddenbrockia_plumatellae_185687_rps17
+Chang2015:Capitella_teleta:283909:rps17 -> Chang2015_Capitella_teleta_283909_rps17
+Chang2015:Capsaspora_owczarzaki:192875:rps17 -> Chang2015_Capsaspora_owczarzaki_192875_rps17
+Chang2015:Chondrilla_nucula:220712:rps17 -> Chang2015_Chondrilla_nucula_220712_rps17
+Chang2015:Ciona_intestinalis:7719:rps17 -> Chang2015_Ciona_intestinalis_7719_rps17
+Chang2015:Clytia_hemisphaerica:252671:rps17 -> Chang2015_Clytia_hemisphaerica_252671_rps17
+Chang2015:Corticium_candelabrum:121492:rps17 -> Chang2015_Corticium_candelabrum_121492_rps17
+Chang2015:Craspedacusta_sowerbii:128124:rps17 -> Chang2015_Craspedacusta_sowerbii_128124_rps17
+Chang2015:Crassostrea_gigas:29159:rps17 -> Chang2015_Crassostrea_gigas_29159_rps17
+Chang2015:Cyanea_capillata:27804:rps17 -> Chang2015_Cyanea_capillata_27804_rps17
+Chang2015:Daphnia_pulex:6669:rps17 -> Chang2015_Daphnia_pulex_6669_rps17
+Chang2015:Ectopleura_larynx:264052:rps17 -> Chang2015_Ectopleura_larynx_264052_rps17
+Chang2015:Edwardsiella_lineata:132407:rps17 -> Chang2015_Edwardsiella_lineata_132407_rps17
+Chang2015:Enteromyxum_leei:188704:rps17 -> Chang2015_Enteromyxum_leei_188704_rps17
+Chang2015:Ephydatia_muelleri:6052:rps17 -> Chang2015_Ephydatia_muelleri_6052_rps17
+Chang2015:Eunicella_cavolinii:317547:rps17 -> Chang2015_Eunicella_cavolinii_317547_rps17
+Chang2015:Euplectella_aspergillum:936045:rps17 -> Chang2015_Euplectella_aspergillum_936045_rps17
+Chang2015:Euplokamis_dunlapae:1403701:rps17 -> Chang2015_Euplokamis_dunlapae_1403701_rps17
+Chang2015:Gorgonia_ventalina:204384:rps17 -> Chang2015_Gorgonia_ventalina_204384_rps17
+Chang2015:Helobdella_robusta:6412:rps17 -> Chang2015_Helobdella_robusta_6412_rps17
+Chang2015:Homo_sapiens:9606:rps17 -> Chang2015_Homo_sapiens_9606_rps17
+Chang2015:Hormathia_digitata:1163372:rps17 -> Chang2015_Hormathia_digitata_1163372_rps17
+Chang2015:Hydra_vulgaris_01:6087:rps17 -> Chang2015_Hydra_vulgaris_01_6087_rps17
+Chang2015:Hydractinia_polyclina:589945:rps17 -> Chang2015_Hydractinia_polyclina_589945_rps17
+Chang2015:Ilyanassa_obsoleta:1934733:rps17 -> Chang2015_Ilyanassa_obsoleta_1934733_rps17
+Chang2015:Ixodes_scapularis:6945:rps17 -> Chang2015_Ixodes_scapularis_6945_rps17
+Chang2015:Kudoa_iwatai:269814:rps17 -> Chang2015_Kudoa_iwatai_269814_rps17
+Chang2015:Latimeria_menadoensis:106881:rps17 -> Chang2015_Latimeria_menadoensis_106881_rps17
+Chang2015:Leucetta_chagosensis:185688:rps17 -> Chang2015_Leucetta_chagosensis_185688_rps17
+Chang2015:Ministeria_vibrans:134558:rps17 -> Chang2015_Ministeria_vibrans_134558_rps17
+Chang2015:Mnemiopsis_leidyi:27923:rps17 -> Chang2015_Mnemiopsis_leidyi_27923_rps17
+Chang2015:Monosiga_brevicollis:81824:rps17 -> Chang2015_Monosiga_brevicollis_81824_rps17
+Chang2015:Monosiga_ovata:81526:rps17 -> Chang2015_Monosiga_ovata_81526_rps17
+Chang2015:Orbicella_faveolata:48498:rps17 -> Chang2015_Orbicella_faveolata_48498_rps17
+Chang2015:Myxobolus_cerebralis:59783:rps17 -> Chang2015_Myxobolus_cerebralis_59783_rps17
+Chang2015:Nanomia_bijuga:168759:rps17 -> Chang2015_Nanomia_bijuga_168759_rps17
+Chang2015:Nasonia_vitripennis:7425:rps17 -> Chang2015_Nasonia_vitripennis_7425_rps17
+Chang2015:Nematostella_vectensis:45351:rps17 -> Chang2015_Nematostella_vectensis_45351_rps17
+Chang2015:Octopus_vulgaris:6645:rps17 -> Chang2015_Octopus_vulgaris_6645_rps17
+Chang2015:Oscarella_carmela:386100:rps17 -> Chang2015_Oscarella_carmela_386100_rps17
+Chang2015:Oscarella_sp_SN-2011:386100:rps17 -> Chang2015_Oscarella_sp_SN-2011_386100_rps17
+Chang2015:Patiria_miniata:46514:rps17 -> Chang2015_Patiria_miniata_46514_rps17
+Chang2015:Pediculus_humanus:121225:rps17 -> Chang2015_Pediculus_humanus_121225_rps17
+Chang2015:Petromyzon_marinus:7757:rps17 -> Chang2015_Petromyzon_marinus_7757_rps17
+Chang2015:Petrosia_ficiformis:68564:rps17 -> Chang2015_Petrosia_ficiformis_68564_rps17
+Chang2015:Pleurobrachia_pileus:140457:rps17 -> Chang2015_Pleurobrachia_pileus_140457_rps17
+Chang2015:Pocillopora_damicornis:46731:rps17 -> Chang2015_Pocillopora_damicornis_46731_rps17
+Chang2015:Polypodium_hydriforme:43186:rps17 -> Chang2015_Polypodium_hydriforme_43186_rps17
+Chang2015:Porites_australiensis:51061:rps17 -> Chang2015_Porites_australiensis_51061_rps17
+Chang2015:Saccoglossus_kowalevskii:10224:rps17 -> Chang2015_Saccoglossus_kowalevskii_10224_rps17
+Chang2015:Salpingoeca_sp:86017:rps17 -> Chang2015_Salpingoeca_sp_86017_rps17
+Chang2015:Sarcotragus_fasciculatus:1234657:rps17 -> Chang2015_Sarcotragus_fasciculatus_1234657_rps17
+Chang2015:Sphaeroforma_arctica:72019:rps17 -> Chang2015_Sphaeroforma_arctica_72019_rps17
+Chang2015:Sphaeromyxa_zaharoni:275449:rps17 -> Chang2015_Sphaeromyxa_zaharoni_275449_rps17
+Chang2015:Stephanoeca_diplocostata:81535:rps17 -> Chang2015_Stephanoeca_diplocostata_81535_rps17
+Chang2015:Stomolophus_meleagris:168796:rps17 -> Chang2015_Stomolophus_meleagris_168796_rps17
+Chang2015:Strigamia_maritima:126957:rps17 -> Chang2015_Strigamia_maritima_126957_rps17
+Chang2015:Strongylocentrotus_purpuratus:7668:rps17 -> Chang2015_Strongylocentrotus_purpuratus_7668_rps17
+Chang2015:Sycon_ciliatum:27933:rps17 -> Chang2015_Sycon_ciliatum_27933_rps17
+Chang2015:Sycon_coactum:1009717:rps17 -> Chang2015_Sycon_coactum_1009717_rps17
+Chang2015:Tetracapsuloides_bryosalmonae:271932:rps17 -> Chang2015_Tetracapsuloides_bryosalmonae_271932_rps17
+Chang2015:Thelohanellus_kitauei:669202:rps17 -> Chang2015_Thelohanellus_kitauei_669202_rps17
+Chang2015:Trichoplax_adhaerens:10228:rps17 -> Chang2015_Trichoplax_adhaerens_10228_rps17
+Chang2015:Tripedalia_cystophora:6141:rps17 -> Chang2015_Tripedalia_cystophora_6141_rps17
+Chang2015:Urticina_eques:417072:rps17 -> Chang2015_Urticina_eques_417072_rps17
+Chang2015:Vallicula_multiformis:140489:rps17 -> Chang2015_Vallicula_multiformis_140489_rps17
+Dunn2008:Acropora_millepora:45264:Tribe299 -> Dunn2008_Acropora_millepora_45264_Tribe299
+Dunn2008:Anoplodactylus_eroticus:488521:Tribe299 -> Dunn2008_Anoplodactylus_eroticus_488521_Tribe299
+Dunn2008:Argopecten_irradians:31199:Tribe299 -> Dunn2008_Argopecten_irradians_31199_Tribe299
+Dunn2008:Asterina_pectinifera:7594:Tribe299 -> Dunn2008_Asterina_pectinifera_7594_Tribe299
+Dunn2008:Biomphalaria_glabrata:6526:Tribe299 -> Dunn2008_Biomphalaria_glabrata_6526_Tribe299
+Dunn2008:Boophilus_microplus:6941:Tribe299 -> Dunn2008_Boophilus_microplus_6941_Tribe299
+Dunn2008:Capitella_teleta:283909:Tribe299 -> Dunn2008_Capitella_teleta_283909_Tribe299
+Dunn2008:Capsaspora_owczarzaki:192875:Tribe299 -> Dunn2008_Capsaspora_owczarzaki_192875_Tribe299
+Dunn2008:Carcinoscorpius_rotundicauda:6848:Tribe299 -> Dunn2008_Carcinoscorpius_rotundicauda_6848_Tribe299
+Dunn2008:Carinoma_mutabilis:187807:Tribe299 -> Dunn2008_Carinoma_mutabilis_187807_Tribe299
+Dunn2008:Cerebratulus_lacteus:6221:Tribe299 -> Dunn2008_Cerebratulus_lacteus_6221_Tribe299
+Dunn2008:Chaetoderma_nitidulum:256131:Tribe299 -> Dunn2008_Chaetoderma_nitidulum_256131_Tribe299
+Dunn2008:Chaetopleura_apiculata:58794:Tribe299 -> Dunn2008_Chaetopleura_apiculata_58794_Tribe299
+Dunn2008:Chaetopterus_variopedatus:34590:Tribe299 -> Dunn2008_Chaetopterus_variopedatus_34590_Tribe299
+Dunn2008:Ciona_intestinalis:7719:Tribe299 -> Dunn2008_Ciona_intestinalis_7719_Tribe299
+Dunn2008:Crassostrea_virginica:6565:Tribe299 -> Dunn2008_Crassostrea_virginica_6565_Tribe299
+Dunn2008:Cryptococcus_neoformans:5207:Tribe299 -> Dunn2008_Cryptococcus_neoformans_5207_Tribe299
+Dunn2008:Cyanea_capillata:27804:Tribe299 -> Dunn2008_Cyanea_capillata_27804_Tribe299
+Dunn2008:Daphnia_magna:35525:Tribe299 -> Dunn2008_Daphnia_magna_35525_Tribe299
+Dunn2008:Drosophila_melanogaster:7227:Tribe299 -> Dunn2008_Drosophila_melanogaster_7227_Tribe299
+Dunn2008:Dugesia_japonica:6161:Tribe299 -> Dunn2008_Dugesia_japonica_6161_Tribe299
+Dunn2008:Echinococcus_granulosus:6210:Tribe299 -> Dunn2008_Echinococcus_granulosus_6210_Tribe299
+Dunn2008:Echinoderes_horni:488522:Tribe299 -> Dunn2008_Echinoderes_horni_488522_Tribe299
+Dunn2008:Euperipatoides_kanangrensis:488523:Tribe299 -> Dunn2008_Euperipatoides_kanangrensis_488523_Tribe299
+Dunn2008:Fenneropenaeus_chinensis:139456:Tribe299 -> Dunn2008_Fenneropenaeus_chinensis_139456_Tribe299
+Dunn2008:Gallus_gallus:9031:Tribe299 -> Dunn2008_Gallus_gallus_9031_Tribe299
+Dunn2008:Haementeria_depressa:279730:Tribe299 -> Dunn2008_Haementeria_depressa_279730_Tribe299
+Dunn2008:Hydractinia_echinata:35630:Tribe299 -> Dunn2008_Hydractinia_echinata_35630_Tribe299
+Dunn2008:Hypsibius_dujardini:232323:Tribe299 -> Dunn2008_Hypsibius_dujardini_232323_Tribe299
+Dunn2008:Lumbricus_rubellus:35632:Tribe299 -> Dunn2008_Lumbricus_rubellus_35632_Tribe299
+Dunn2008:Macrostomum_lignano:282301:Tribe299 -> Dunn2008_Macrostomum_lignano_282301_Tribe299
+Dunn2008:Mertensiid_sp:140499:Tribe299 -> Dunn2008_Mertensiid_sp_140499_Tribe299
+Dunn2008:Mnemiopsis_leidyi:27923:Tribe299 -> Dunn2008_Mnemiopsis_leidyi_27923_Tribe299
+Dunn2008:Monosiga_ovata:81526:Tribe299 -> Dunn2008_Monosiga_ovata_81526_Tribe299
+Dunn2008:Nematostella_vectensis:45351:Tribe299 -> Dunn2008_Nematostella_vectensis_45351_Tribe299
+Dunn2008:Paraplanocera_oligoglena:1468194:Tribe299 -> Dunn2008_Paraplanocera_oligoglena_1468194_Tribe299
+Dunn2008:Priapulus_caudatus:37621:Tribe299 -> Dunn2008_Priapulus_caudatus_37621_Tribe299
+Dunn2008:Ptychodera_flava:63121:Tribe299 -> Dunn2008_Ptychodera_flava_63121_Tribe299
+Dunn2008:Saccharomyces_cerevisiae:4932:Tribe299 -> Dunn2008_Saccharomyces_cerevisiae_4932_Tribe299
+Dunn2008:Saccoglossus_kowalevskii:10224:Tribe299 -> Dunn2008_Saccoglossus_kowalevskii_10224_Tribe299
+Dunn2008:Schmidtea_mediterranea:79327:Tribe299 -> Dunn2008_Schmidtea_mediterranea_79327_Tribe299
+Dunn2008:Scutigera_coleoptrata:29022:Tribe299 -> Dunn2008_Scutigera_coleoptrata_29022_Tribe299
+Dunn2008:Sphaeroforma_arctica:72019:Tribe299 -> Dunn2008_Sphaeroforma_arctica_72019_Tribe299
+Dunn2008:Themiste_lageniformis:216211:Tribe299 -> Dunn2008_Themiste_lageniformis_216211_Tribe299
+Dunn2008:Trichinella_spiralis:6334:Tribe299 -> Dunn2008_Trichinella_spiralis_6334_Tribe299
+Dunn2008:Urechis_caupo:6431:Tribe299 -> Dunn2008_Urechis_caupo_6431_Tribe299
+Dunn2008:Xenoturbella_bocki:242395:Tribe299 -> Dunn2008_Xenoturbella_bocki_242395_Tribe299
+Dunn2008:Xiphinema_index:46003:Tribe299 -> Dunn2008_Xiphinema_index_46003_Tribe299
+Nosenko2013_ribo_11057:Amphimedon_queenslandica:400682:KOG0187 -> Nosenko2013_ribo_11057_Amphimedon_queenslandica_400682_KOG0187
+Nosenko2013_ribo_11057:Asbestopluma_sp:68560:KOG0187 -> Nosenko2013_ribo_11057_Asbestopluma_sp_68560_KOG0187
+Nosenko2013_ribo_11057:Carteriospongia_foliascens:593584:KOG0187 -> Nosenko2013_ribo_11057_Carteriospongia_foliascens_593584_KOG0187
+Nosenko2013_ribo_11057:Lubomirskia_baicalensis:289074:KOG0187 -> Nosenko2013_ribo_11057_Lubomirskia_baicalensis_289074_KOG0187
+Nosenko2013_ribo_11057:Pachydictyum_globosum:348075:KOG0187 -> Nosenko2013_ribo_11057_Pachydictyum_globosum_348075_KOG0187
+Nosenko2013_ribo_11057:Suberites_domuncula:55567:KOG0187 -> Nosenko2013_ribo_11057_Suberites_domuncula_55567_KOG0187
+Nosenko2013_ribo_11057:Tethya_wilhelma:463344:KOG0187 -> Nosenko2013_ribo_11057_Tethya_wilhelma_463344_KOG0187
+Nosenko2013_ribo_11057:Leucetta_chagosensis:185688:KOG0187 -> Nosenko2013_ribo_11057_Leucetta_chagosensis_185688_KOG0187
+Nosenko2013_ribo_11057:Sycon_ciliatum:27933:KOG0187 -> Nosenko2013_ribo_11057_Sycon_ciliatum_27933_KOG0187
+Nosenko2013_ribo_11057:Sycon_raphanus:56443:KOG0187 -> Nosenko2013_ribo_11057_Sycon_raphanus_56443_KOG0187
+Nosenko2013_ribo_11057:Hydra_magnipapillata:6087:KOG0187 -> Nosenko2013_ribo_11057_Hydra_magnipapillata_6087_KOG0187
+Nosenko2013_ribo_11057:Hydra_vulgaris:6087:KOG0187 -> Nosenko2013_ribo_11057_Hydra_vulgaris_6087_KOG0187
+Nosenko2013_ribo_11057:Hydractinia_echinata:35630:KOG0187 -> Nosenko2013_ribo_11057_Hydractinia_echinata_35630_KOG0187
+Nosenko2013_ribo_11057:Podocoryna_carnea:6096:KOG0187 -> Nosenko2013_ribo_11057_Podocoryna_carnea_6096_KOG0187
+Nosenko2013_ribo_11057:Acropora_hyacinthus:55974:KOG0187 -> Nosenko2013_ribo_11057_Acropora_hyacinthus_55974_KOG0187
+Nosenko2013_ribo_11057:Acropora_millepora:45264:KOG0187 -> Nosenko2013_ribo_11057_Acropora_millepora_45264_KOG0187
+Nosenko2013_ribo_11057:Metridium_senile:6116:KOG0187 -> Nosenko2013_ribo_11057_Metridium_senile_6116_KOG0187
+Nosenko2013_ribo_11057:Nematostella_vectensis:45351:KOG0187 -> Nosenko2013_ribo_11057_Nematostella_vectensis_45351_KOG0187
+Nosenko2013_ribo_11057:Porites:46719:KOG0187 -> Nosenko2013_ribo_11057_Porites_46719_KOG0187
+Nosenko2013_ribo_11057:Beroe_sp:10199:KOG0187 -> Nosenko2013_ribo_11057_Beroe_sp_10199_KOG0187
+Nosenko2013_ribo_11057:Mnemiopsis_leidyi:27923:KOG0187 -> Nosenko2013_ribo_11057_Mnemiopsis_leidyi_27923_KOG0187
+Nosenko2013_ribo_11057:Mertensiid_sp:140499:KOG0187 -> Nosenko2013_ribo_11057_Mertensiid_sp_140499_KOG0187
+Nosenko2013_ribo_11057:Branchiostoma_floridae:7739:KOG0187 -> Nosenko2013_ribo_11057_Branchiostoma_floridae_7739_KOG0187
+Nosenko2013_ribo_11057:Capitella_teleta:283909:KOG0187 -> Nosenko2013_ribo_11057_Capitella_teleta_283909_KOG0187
+Nosenko2013_ribo_11057:Ciona_intestinalis:7719:KOG0187 -> Nosenko2013_ribo_11057_Ciona_intestinalis_7719_KOG0187
+Nosenko2013_ribo_11057:Danio_rerio:7955:KOG0187 -> Nosenko2013_ribo_11057_Danio_rerio_7955_KOG0187
+Nosenko2013_ribo_11057:Molgula_tectiformis:30286:KOG0187 -> Nosenko2013_ribo_11057_Molgula_tectiformis_30286_KOG0187
+Nosenko2013_ribo_11057:Petromyzon_marinus:7757:KOG0187 -> Nosenko2013_ribo_11057_Petromyzon_marinus_7757_KOG0187
+Nosenko2013_ribo_11057:Saccoglossus_kowalevskii:10224:KOG0187 -> Nosenko2013_ribo_11057_Saccoglossus_kowalevskii_10224_KOG0187
+Nosenko2013_ribo_11057:Aplysia_californica:6500:KOG0187 -> Nosenko2013_ribo_11057_Aplysia_californica_6500_KOG0187
+Nosenko2013_ribo_11057:Crassostrea_gigas:29159:KOG0187 -> Nosenko2013_ribo_11057_Crassostrea_gigas_29159_KOG0187
+Nosenko2013_ribo_11057:Daphnia_pulex:6669:KOG0187 -> Nosenko2013_ribo_11057_Daphnia_pulex_6669_KOG0187
+Nosenko2013_ribo_11057:Helobdella_robusta:6412:KOG0187 -> Nosenko2013_ribo_11057_Helobdella_robusta_6412_KOG0187
+Nosenko2013_ribo_11057:Ixodes_scapularis:6945:KOG0187 -> Nosenko2013_ribo_11057_Ixodes_scapularis_6945_KOG0187
+Nosenko2013_ribo_11057:Nasonia_vitripennis:7425:KOG0187 -> Nosenko2013_ribo_11057_Nasonia_vitripennis_7425_KOG0187
+Nosenko2013_ribo_11057:Tubifex_tubifex:6386:KOG0187 -> Nosenko2013_ribo_11057_Tubifex_tubifex_6386_KOG0187
+Nosenko2013_ribo_11057:Trichoplax_sp_H4:10227:KOG0187 -> Nosenko2013_ribo_11057_Trichoplax_sp_H4_10227_KOG0187
+Nosenko2013_ribo_11057:Trichoplax_adhaerens:10228:KOG0187 -> Nosenko2013_ribo_11057_Trichoplax_adhaerens_10228_KOG0187
+Nosenko2013_ribo_11057:Monosiga_ovata:81526:KOG0187 -> Nosenko2013_ribo_11057_Monosiga_ovata_81526_KOG0187
+Nosenko2013_ribo_11057:Monosiga_brevicollis:81824:KOG0187 -> Nosenko2013_ribo_11057_Monosiga_brevicollis_81824_KOG0187
+Nosenko2013_ribo_11057:Proterospongia_sp:218847:KOG0187 -> Nosenko2013_ribo_11057_Proterospongia_sp_218847_KOG0187
+Nosenko2013_ribo_14615:Acropora_hyacinthus:55974:KOG0187 -> Nosenko2013_ribo_14615_Acropora_hyacinthus_55974_KOG0187
+Nosenko2013_ribo_14615:Acropora_millepora:45264:KOG0187 -> Nosenko2013_ribo_14615_Acropora_millepora_45264_KOG0187
+Nosenko2013_ribo_14615:Allomyces_macrogynus:28583:KOG0187 -> Nosenko2013_ribo_14615_Allomyces_macrogynus_28583_KOG0187
+Nosenko2013_ribo_14615:Amphimedon_queenslandica:400682:KOG0187 -> Nosenko2013_ribo_14615_Amphimedon_queenslandica_400682_KOG0187
+Nosenko2013_ribo_14615:Anoplodactylus_eroticus:488521:KOG0187 -> Nosenko2013_ribo_14615_Anoplodactylus_eroticus_488521_KOG0187
+Nosenko2013_ribo_14615:Aplysia_californica:6500:KOG0187 -> Nosenko2013_ribo_14615_Aplysia_californica_6500_KOG0187
+Nosenko2013_ribo_14615:Asbestopluma_sp:68560:KOG0187 -> Nosenko2013_ribo_14615_Asbestopluma_sp_68560_KOG0187
+Nosenko2013_ribo_14615:Batrachochytrium_dendrobatidis:109871:KOG0187 -> Nosenko2013_ribo_14615_Batrachochytrium_dendrobatidis_109871_KOG0187
+Nosenko2013_ribo_14615:Beroe_sp:10199:KOG0187 -> Nosenko2013_ribo_14615_Beroe_sp_10199_KOG0187
+Nosenko2013_ribo_14615:Branchiostoma_floridae:7739:KOG0187 -> Nosenko2013_ribo_14615_Branchiostoma_floridae_7739_KOG0187
+Nosenko2013_ribo_14615:Capitella_teleta:283909:KOG0187 -> Nosenko2013_ribo_14615_Capitella_teleta_283909_KOG0187
+Nosenko2013_ribo_14615:Capsaspora_owczarzaki:192875:KOG0187 -> Nosenko2013_ribo_14615_Capsaspora_owczarzaki_192875_KOG0187
+Nosenko2013_ribo_14615:Carteriospongia_foliascens:593584:KOG0187 -> Nosenko2013_ribo_14615_Carteriospongia_foliascens_593584_KOG0187
+Nosenko2013_ribo_14615:Ciona_intestinalis:7719:KOG0187 -> Nosenko2013_ribo_14615_Ciona_intestinalis_7719_KOG0187
+Nosenko2013_ribo_14615:Crassostrea_gigas:29159:KOG0187 -> Nosenko2013_ribo_14615_Crassostrea_gigas_29159_KOG0187
+Nosenko2013_ribo_14615:Cyanea_capillata:27804:KOG0187 -> Nosenko2013_ribo_14615_Cyanea_capillata_27804_KOG0187
+Nosenko2013_ribo_14615:Danio_rerio:7955:KOG0187 -> Nosenko2013_ribo_14615_Danio_rerio_7955_KOG0187
+Nosenko2013_ribo_14615:Daphnia_pulex:6669:KOG0187 -> Nosenko2013_ribo_14615_Daphnia_pulex_6669_KOG0187
+Nosenko2013_ribo_14615:Euprymna_scolopes:6613:KOG0187 -> Nosenko2013_ribo_14615_Euprymna_scolopes_6613_KOG0187
+Nosenko2013_ribo_14615:Helobdella_robusta:6412:KOG0187 -> Nosenko2013_ribo_14615_Helobdella_robusta_6412_KOG0187
+Nosenko2013_ribo_14615:Hydra_magnipapillata:6087:KOG0187 -> Nosenko2013_ribo_14615_Hydra_magnipapillata_6087_KOG0187
+Nosenko2013_ribo_14615:Hydra_vulgaris:6087:KOG0187 -> Nosenko2013_ribo_14615_Hydra_vulgaris_6087_KOG0187
+Nosenko2013_ribo_14615:Hydractinia_echinata:35630:KOG0187 -> Nosenko2013_ribo_14615_Hydractinia_echinata_35630_KOG0187
+Nosenko2013_ribo_14615:Ixodes_scapularis:6945:KOG0187 -> Nosenko2013_ribo_14615_Ixodes_scapularis_6945_KOG0187
+Nosenko2013_ribo_14615:Leucetta_chagosensis:185688:KOG0187 -> Nosenko2013_ribo_14615_Leucetta_chagosensis_185688_KOG0187
+Nosenko2013_ribo_14615:Lubomirskia_baicalensis:289074:KOG0187 -> Nosenko2013_ribo_14615_Lubomirskia_baicalensis_289074_KOG0187
+Nosenko2013_ribo_14615:Mertensiid_sp:140499:KOG0187 -> Nosenko2013_ribo_14615_Mertensiid_sp_140499_KOG0187
+Nosenko2013_ribo_14615:Metridium_senile:6116:KOG0187 -> Nosenko2013_ribo_14615_Metridium_senile_6116_KOG0187
+Nosenko2013_ribo_14615:Mnemiopsis_leidyi:27923:KOG0187 -> Nosenko2013_ribo_14615_Mnemiopsis_leidyi_27923_KOG0187
+Nosenko2013_ribo_14615:Molgula_tectiformis:30286:KOG0187 -> Nosenko2013_ribo_14615_Molgula_tectiformis_30286_KOG0187
+Nosenko2013_ribo_14615:Monosiga_brevicollis:81824:KOG0187 -> Nosenko2013_ribo_14615_Monosiga_brevicollis_81824_KOG0187
+Nosenko2013_ribo_14615:Monosiga_ovata:81526:KOG0187 -> Nosenko2013_ribo_14615_Monosiga_ovata_81526_KOG0187
+Nosenko2013_ribo_14615:Montastraea_faveolata:48498:KOG0187 -> Nosenko2013_ribo_14615_Montastraea_faveolata_48498_KOG0187
+Nosenko2013_ribo_14615:Nasonia_vitripennis:7425:KOG0187 -> Nosenko2013_ribo_14615_Nasonia_vitripennis_7425_KOG0187
+Nosenko2013_ribo_14615:Nematostella_vectensis:45351:KOG0187 -> Nosenko2013_ribo_14615_Nematostella_vectensis_45351_KOG0187
+Nosenko2013_ribo_14615:Pachydictyum_globosum:348075:KOG0187 -> Nosenko2013_ribo_14615_Pachydictyum_globosum_348075_KOG0187
+Nosenko2013_ribo_14615:Pedicellina_cernua:43123:KOG0187 -> Nosenko2013_ribo_14615_Pedicellina_cernua_43123_KOG0187
+Nosenko2013_ribo_14615:Pediculus_humanus_capitis:121226:KOG0187 -> Nosenko2013_ribo_14615_Pediculus_humanus_capitis_121226_KOG0187
+Nosenko2013_ribo_14615:Petromyzon_marinus:7757:KOG0187 -> Nosenko2013_ribo_14615_Petromyzon_marinus_7757_KOG0187
+Nosenko2013_ribo_14615:Phycomyces_blakesleeanus:4837:KOG0187 -> Nosenko2013_ribo_14615_Phycomyces_blakesleeanus_4837_KOG0187
+Nosenko2013_ribo_14615:Podocoryna_carnea:6096:KOG0187 -> Nosenko2013_ribo_14615_Podocoryna_carnea_6096_KOG0187
+Nosenko2013_ribo_14615:Porites:46719:KOG0187 -> Nosenko2013_ribo_14615_Porites_46719_KOG0187
+Nosenko2013_ribo_14615:Proterospongia_sp:218847:KOG0187 -> Nosenko2013_ribo_14615_Proterospongia_sp_218847_KOG0187
+Nosenko2013_ribo_14615:Saccoglossus_kowalevskii:10224:KOG0187 -> Nosenko2013_ribo_14615_Saccoglossus_kowalevskii_10224_KOG0187
+Nosenko2013_ribo_14615:Scutigera_coleoptrata:29022:KOG0187 -> Nosenko2013_ribo_14615_Scutigera_coleoptrata_29022_KOG0187
+Nosenko2013_ribo_14615:Spizellomyces_punctatus:109760:KOG0187 -> Nosenko2013_ribo_14615_Spizellomyces_punctatus_109760_KOG0187
+Nosenko2013_ribo_14615:Sphaeroforma_arctica:72019:KOG0187 -> Nosenko2013_ribo_14615_Sphaeroforma_arctica_72019_KOG0187
+Nosenko2013_ribo_14615:Strongylocentrotus_purpuratus:7668:KOG0187 -> Nosenko2013_ribo_14615_Strongylocentrotus_purpuratus_7668_KOG0187
+Nosenko2013_ribo_14615:Suberites_domuncula:55567:KOG0187 -> Nosenko2013_ribo_14615_Suberites_domuncula_55567_KOG0187
+Nosenko2013_ribo_14615:Sycon_raphanus:56443:KOG0187 -> Nosenko2013_ribo_14615_Sycon_raphanus_56443_KOG0187
+Nosenko2013_ribo_14615:Tethya_wilhelma:463344:KOG0187 -> Nosenko2013_ribo_14615_Tethya_wilhelma_463344_KOG0187
+Nosenko2013_ribo_14615:Trichoplax_adhaerens:10228:KOG0187 -> Nosenko2013_ribo_14615_Trichoplax_adhaerens_10228_KOG0187
+Nosenko2013_ribo_14615:Trichoplax_sp_H4:10227:KOG0187 -> Nosenko2013_ribo_14615_Trichoplax_sp_H4_10227_KOG0187
+Nosenko2013_ribo_14615:Tubifex_tubifex:6386:KOG0187 -> Nosenko2013_ribo_14615_Tubifex_tubifex_6386_KOG0187
+Nosenko2013_ribo_14615:Xenoturbella_bocki:242395:KOG0187 -> Nosenko2013_ribo_14615_Xenoturbella_bocki_242395_KOG0187
+Philippe2009:Acropora_millepora:45264:Gene_0097 -> Philippe2009_Acropora_millepora_45264_Gene_0097
+Philippe2009:Allomyces_macrogynus:28583:Gene_0097 -> Philippe2009_Allomyces_macrogynus_28583_Gene_0097
+Philippe2009:Anoplodactylus_eroticus:488521:Gene_0097 -> Philippe2009_Anoplodactylus_eroticus_488521_Gene_0097
+Philippe2009:Aplysia_californica:6500:Gene_0097 -> Philippe2009_Aplysia_californica_6500_Gene_0097
+Philippe2009:Batrachochytrium_dendrobatidis:109871:Gene_0097 -> Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0097
+Philippe2009:Branchiostoma_floridae:7739:Gene_0097 -> Philippe2009_Branchiostoma_floridae_7739_Gene_0097
+Philippe2009:Capitella_teleta:283909:Gene_0097 -> Philippe2009_Capitella_teleta_283909_Gene_0097
+Philippe2009:Capsaspora_owczarzaki:192875:Gene_0097 -> Philippe2009_Capsaspora_owczarzaki_192875_Gene_0097
+Philippe2009:Carteriospongia_foliascens:593584:Gene_0097 -> Philippe2009_Carteriospongia_foliascens_593584_Gene_0097
+Philippe2009:Ciona_savignyi:51511:Gene_0097 -> Philippe2009_Ciona_savignyi_51511_Gene_0097
+Philippe2009:Crassostrea_gigas:29159:Gene_0097 -> Philippe2009_Crassostrea_gigas_29159_Gene_0097
+Philippe2009:Cyanea_capillata:27804:Gene_0097 -> Philippe2009_Cyanea_capillata_27804_Gene_0097
+Philippe2009:Danio_rerio:7955:Gene_0097 -> Philippe2009_Danio_rerio_7955_Gene_0097
+Philippe2009:Daphnia_pulex:6669:Gene_0097 -> Philippe2009_Daphnia_pulex_6669_Gene_0097
+Philippe2009:Euperipatoides_kanangrensis:488523:Gene_0097 -> Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0097
+Philippe2009:Euprymna_scolopes:6613:Gene_0097 -> Philippe2009_Euprymna_scolopes_6613_Gene_0097
+Philippe2009:Helobdella_robusta:6412:Gene_0097 -> Philippe2009_Helobdella_robusta_6412_Gene_0097
+Philippe2009:Hydra_magnipapillata:6087:Gene_0097 -> Philippe2009_Hydra_magnipapillata_6087_Gene_0097
+Philippe2009:Hydractinia_echinata:35630:Gene_0097 -> Philippe2009_Hydractinia_echinata_35630_Gene_0097
+Philippe2009:Ixodes_scapularis:6945:Gene_0097 -> Philippe2009_Ixodes_scapularis_6945_Gene_0097
+Philippe2009:Leucetta_chagosensis:185688:Gene_0097 -> Philippe2009_Leucetta_chagosensis_185688_Gene_0097
+Philippe2009:Metridium_senile:6116:Gene_0097 -> Philippe2009_Metridium_senile_6116_Gene_0097
+Philippe2009:Mnemiopsis_leidyi:27923:Gene_0097 -> Philippe2009_Mnemiopsis_leidyi_27923_Gene_0097
+Philippe2009:Molgula_tectiformis:30286:Gene_0097 -> Philippe2009_Molgula_tectiformis_30286_Gene_0097
+Philippe2009:Monosiga_brevicollis:81824:Gene_0097 -> Philippe2009_Monosiga_brevicollis_81824_Gene_0097
+Philippe2009:Monosiga_ovata:81526:Gene_0097 -> Philippe2009_Monosiga_ovata_81526_Gene_0097
+Philippe2009:Montastraea_faveolata:48498:Gene_0097 -> Philippe2009_Montastraea_faveolata_48498_Gene_0097
+Philippe2009:Nasonia_vitripennis:7425:Gene_0097 -> Philippe2009_Nasonia_vitripennis_7425_Gene_0097
+Philippe2009:Nematostella_vectensis:45351:Gene_0097 -> Philippe2009_Nematostella_vectensis_45351_Gene_0097
+Philippe2009:Pedicellina_cernua:43123:Gene_0097 -> Philippe2009_Pedicellina_cernua_43123_Gene_0097
+Philippe2009:Pediculus_humanus:121225:Gene_0097 -> Philippe2009_Pediculus_humanus_121225_Gene_0097
+Philippe2009:Petromyzon_marinus:7757:Gene_0097 -> Philippe2009_Petromyzon_marinus_7757_Gene_0097
+Philippe2009:Phycomyces_blakesleeanus:4837:Gene_0097 -> Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0097
+Philippe2009:Podocoryne_carnea:6096:Gene_0097 -> Philippe2009_Podocoryne_carnea_6096_Gene_0097
+Philippe2009:Proterospongia_sp:218847:Gene_0097 -> Philippe2009_Proterospongia_sp_218847_Gene_0097
+Philippe2009:Amphimedon_queenslandica:400682:Gene_0097 -> Philippe2009_Amphimedon_queenslandica_400682_Gene_0097
+Philippe2009:Rhizopus_oryzae:64495:Gene_0097 -> Philippe2009_Rhizopus_oryzae_64495_Gene_0097
+Philippe2009:Saccoglossus_kowalevskii:10224:Gene_0097 -> Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0097
+Philippe2009:Scutigera_coleoptrata:29022:Gene_0097 -> Philippe2009_Scutigera_coleoptrata_29022_Gene_0097
+Philippe2009:Sphaeroforma_arctica:72019:Gene_0097 -> Philippe2009_Sphaeroforma_arctica_72019_Gene_0097
+Philippe2009:Spizellomyces_punctatus:109760:Gene_0097 -> Philippe2009_Spizellomyces_punctatus_109760_Gene_0097
+Philippe2009:Strongylocentrotus_purpuratus:7668:Gene_0097 -> Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0097
+Philippe2009:Suberites_domuncula:55567:Gene_0097 -> Philippe2009_Suberites_domuncula_55567_Gene_0097
+Philippe2009:Sycon_raphanus:56443:Gene_0097 -> Philippe2009_Sycon_raphanus_56443_Gene_0097
+Philippe2009:Trichoplax_adhaerens:10228:Gene_0097 -> Philippe2009_Trichoplax_adhaerens_10228_Gene_0097
+Philippe2009:Tubifex_tubifex:6386:Gene_0097 -> Philippe2009_Tubifex_tubifex_6386_Gene_0097
+Philippe2009:Xenoturbella_bocki:242395:Gene_0097 -> Philippe2009_Xenoturbella_bocki_242395_Gene_0097
+Philippe2009:Mertensiid_sp:140499:Gene_0097 -> Philippe2009_Mertensiid_sp_140499_Gene_0097
+Ryan2013_est:Asterina_pectinifera:7594:gene323 -> Ryan2013_est_Asterina_pectinifera_7594_gene323
+Ryan2013_est:Strongylocentrotus_purpuratus:7668:gene323 -> Ryan2013_est_Strongylocentrotus_purpuratus_7668_gene323
+Ryan2013_est:Capitella_teleta:283909:gene323 -> Ryan2013_est_Capitella_teleta_283909_gene323
+Ryan2013_est:Branchiostoma_floridae:7739:gene323 -> Ryan2013_est_Branchiostoma_floridae_7739_gene323
+Ryan2013_est:Helobdella_robusta:6412:gene323 -> Ryan2013_est_Helobdella_robusta_6412_gene323
+Ryan2013_est:Lottia_gigantea:225164:gene323 -> Ryan2013_est_Lottia_gigantea_225164_gene323
+Ryan2013_est:Saccoglossus_kowalevskii:10224:gene323 -> Ryan2013_est_Saccoglossus_kowalevskii_10224_gene323
+Ryan2013_est:Drosophila_melanogaster:7227:gene323 -> Ryan2013_est_Drosophila_melanogaster_7227_gene323
+Ryan2013_est:Anoplodactylus_eroticus:488521:gene323 -> Ryan2013_est_Anoplodactylus_eroticus_488521_gene323
+Ryan2013_est:Daphnia_pulex:6669:gene323 -> Ryan2013_est_Daphnia_pulex_6669_gene323
+Ryan2013_est:Petromyzon_marinus:7757:gene323 -> Ryan2013_est_Petromyzon_marinus_7757_gene323
+Ryan2013_est:Ciona_intestinalis:7719:gene323 -> Ryan2013_est_Ciona_intestinalis_7719_gene323
+Ryan2013_est:Acropora_palmata:6131:gene323 -> Ryan2013_est_Acropora_palmata_6131_gene323
+Ryan2013_est:Acropora_millepora:45264:gene323 -> Ryan2013_est_Acropora_millepora_45264_gene323
+Ryan2013_est:Nematostella_vectensis:45351:gene323 -> Ryan2013_est_Nematostella_vectensis_45351_gene323
+Ryan2013_est:Anemonia_viridis:51769:gene323 -> Ryan2013_est_Anemonia_viridis_51769_gene323
+Ryan2013_est:Capsaspora_owczarzaki:192875:gene323 -> Ryan2013_est_Capsaspora_owczarzaki_192875_gene323
+Ryan2013_est:Monosiga_brevicollis:81824:gene323 -> Ryan2013_est_Monosiga_brevicollis_81824_gene323
+Ryan2013_est:Salpingoeca_rosetta:946362:gene323 -> Ryan2013_est_Salpingoeca_rosetta_946362_gene323
+Ryan2013_est:Amphimedon_queenslandica:400682:gene323 -> Ryan2013_est_Amphimedon_queenslandica_400682_gene323
+Ryan2013_est:Lubomirskia_baicalensis:289074:gene323 -> Ryan2013_est_Lubomirskia_baicalensis_289074_gene323
+Ryan2013_est:Mnemiopsis_leidyi:27923:gene323 -> Ryan2013_est_Mnemiopsis_leidyi_27923_gene323
+Ryan2013_est:Hydra_vulgaris_01:6087:gene323 -> Ryan2013_est_Hydra_vulgaris_01_6087_gene323
+Ryan2013_est:Trichoplax_adhaerens:10228:gene323 -> Ryan2013_est_Trichoplax_adhaerens_10228_gene323
+Ryan2013_est:Cyanea_capillata:27804:gene323 -> Ryan2013_est_Cyanea_capillata_27804_gene323
+Ryan2013_est:Crassostrea_virginica:6565:gene323 -> Ryan2013_est_Crassostrea_virginica_6565_gene323
+Ryan2013_est:Schmidtea_mediterranea:79327:gene323 -> Ryan2013_est_Schmidtea_mediterranea_79327_gene323
+Ryan2013_est:Cerebratulus_lacteus:6221:gene323 -> Ryan2013_est_Cerebratulus_lacteus_6221_gene323
+Ryan2013_est:Suberites_domuncula:55567:gene323 -> Ryan2013_est_Suberites_domuncula_55567_gene323
+Ryan2013_est:Hydractinia_echinata:35630:gene323 -> Ryan2013_est_Hydractinia_echinata_35630_gene323
+Ryan2013_est:Metridium_senile:6116:gene323 -> Ryan2013_est_Metridium_senile_6116_gene323
+Ryan2013_est:Porites_astreoides:104758:gene323 -> Ryan2013_est_Porites_astreoides_104758_gene323
+Ryan2013_est:Orbicella_faveolata:48498:gene323 -> Ryan2013_est_Orbicella_faveolata_48498_gene323
+Ryan2013_est:Boophilus_microplus:6941:gene323 -> Ryan2013_est_Boophilus_microplus_6941_gene323
+Ryan2013_est:Symsagittifera_roscoffensis:84072:gene323 -> Ryan2013_est_Symsagittifera_roscoffensis_84072_gene323
+Ryan2013_est:Monosiga_ovata:81526:gene323 -> Ryan2013_est_Monosiga_ovata_81526_gene323
+Ryan2013_est:Gallus_gallus:9031:gene323 -> Ryan2013_est_Gallus_gallus_9031_gene323
+Ryan2013_est:Meara_stichopi:84115:gene323 -> Ryan2013_est_Meara_stichopi_84115_gene323
+Ryan2013_est:Euperipatoides_kanangrensis:488523:gene323 -> Ryan2013_est_Euperipatoides_kanangrensis_488523_gene323
+Ryan2013_est:Xiphinema_index:46003:gene323 -> Ryan2013_est_Xiphinema_index_46003_gene323
+Ryan2013_est:Convolutriloba_longifissura:536236:gene323 -> Ryan2013_est_Convolutriloba_longifissura_536236_gene323
+Ryan2013_est:Mertensiid_sp:140499:gene323 -> Ryan2013_est_Mertensiid_sp_140499_gene323
+Ryan2013_est:Paraplanocera_oligoglena:1468194:gene323 -> Ryan2013_est_Paraplanocera_oligoglena_1468194_gene323
+Ryan2013_est:Nemertoderma_westbladi:172109:gene323 -> Ryan2013_est_Nemertoderma_westbladi_172109_gene323
+Ryan2013_est:Echinoderes_horni:488522:gene323 -> Ryan2013_est_Echinoderes_horni_488522_gene323
+Ryan2013_est:Ptychodera_flava:63121:gene323 -> Ryan2013_est_Ptychodera_flava_63121_gene323
+Ryan2013_est:Sphaeroforma_arctica:72019:gene323 -> Ryan2013_est_Sphaeroforma_arctica_72019_gene323
+Ryan2013_est:Podocoryna_carnea:6096:gene323 -> Ryan2013_est_Podocoryna_carnea_6096_gene323
+Ryan2013_est:Sycon_raphanus:56443:gene323 -> Ryan2013_est_Sycon_raphanus_56443_gene323
+Ryan2013_est:Xenoturbella_bocki:242395:gene323 -> Ryan2013_est_Xenoturbella_bocki_242395_gene323
+Ryan2013_est:Carteriospongia_foliascens:593584:gene323 -> Ryan2013_est_Carteriospongia_foliascens_593584_gene323
+Ryan2013_est:Leucetta_chagosensis:185688:gene323 -> Ryan2013_est_Leucetta_chagosensis_185688_gene323
+
+WARNING: W is not present in alignment that may cause numerical problems
+                                                                      Gap/Ambiguity  Composition  p-value
+   1  Chang2015_Acanthoeca_sp_81532_rps17                                    23.13%    passed     99.50%
+   2  Chang2015_Acropora_cervicornis_6130_rps17                              23.13%    passed    100.00%
+   3  Chang2015_Aiptasia_pallida_1720309_rps17                               23.13%    passed    100.00%
+   4  Chang2015_Amoebidium_parasiticum_4881_rps17                            23.13%    passed     99.62%
+   5  Chang2015_Amphimedon_queenslandica_400682_rps17                        23.13%    passed    100.00%
+   6  Chang2015_Aphrocallistes_vastus_83887_rps17                            23.13%    passed     99.86%
+   7  Chang2015_Aurelia_aurita_6145_rps17                                    23.13%    passed    100.00%
+   8  Chang2015_Beroe_abyssicola_320166_rps17                                23.13%    passed     99.97%
+   9  Chang2015_Bolocera_tuediae_1163374_rps17                               23.13%    passed    100.00%
+  10  Chang2015_Botryllus_schlosseri_30301_rps17                             23.13%    passed    100.00%
+  11  Chang2015_Branchiostoma_floridae_7739_rps17                            23.13%    passed    100.00%
+  12  Chang2015_Buddenbrockia_plumatellae_185687_rps17                       23.13%    passed     95.76%
+  13  Chang2015_Capitella_teleta_283909_rps17                                23.13%    passed     99.75%
+  14  Chang2015_Capsaspora_owczarzaki_192875_rps17                           23.13%    passed     99.87%
+  15  Chang2015_Chondrilla_nucula_220712_rps17                               52.24%    passed     98.65%
+  16  Chang2015_Ciona_intestinalis_7719_rps17                                23.13%    passed    100.00%
+  17  Chang2015_Clytia_hemisphaerica_252671_rps17                            23.13%    passed    100.00%
+  18  Chang2015_Corticium_candelabrum_121492_rps17                           23.88%    passed    100.00%
+  19  Chang2015_Craspedacusta_sowerbii_128124_rps17                          23.13%    passed    100.00%
+  20  Chang2015_Crassostrea_gigas_29159_rps17                                23.13%    passed    100.00%
+  21  Chang2015_Cyanea_capillata_27804_rps17                                 23.13%    passed    100.00%
+  22  Chang2015_Daphnia_pulex_6669_rps17                                     23.13%    passed     99.97%
+  23  Chang2015_Ectopleura_larynx_264052_rps17                               23.13%    passed     99.98%
+  24  Chang2015_Edwardsiella_lineata_132407_rps17                            28.36%    passed    100.00%
+  25  Chang2015_Enteromyxum_leei_188704_rps17                                33.58%    passed     99.16%
+  26  Chang2015_Ephydatia_muelleri_6052_rps17                                23.13%    passed    100.00%
+  27  Chang2015_Eunicella_cavolinii_317547_rps17                             73.88%    passed     93.56%
+  28  Chang2015_Euplectella_aspergillum_936045_rps17                         23.13%    passed    100.00%
+  29  Chang2015_Euplokamis_dunlapae_1403701_rps17                            23.13%    passed    100.00%
+  30  Chang2015_Gorgonia_ventalina_204384_rps17                              23.88%    passed    100.00%
+  31  Chang2015_Helobdella_robusta_6412_rps17                                32.84%    passed     99.99%
+  32  Chang2015_Homo_sapiens_9606_rps17                                      23.13%    passed    100.00%
+  33  Chang2015_Hormathia_digitata_1163372_rps17                             23.13%    passed    100.00%
+  34  Chang2015_Hydra_vulgaris_01_6087_rps17                                 23.13%    passed    100.00%
+  35  Chang2015_Hydractinia_polyclina_589945_rps17                           23.13%    passed    100.00%
+  36  Chang2015_Ilyanassa_obsoleta_1934733_rps17                             23.13%    passed    100.00%
+  37  Chang2015_Ixodes_scapularis_6945_rps17                                 23.13%    passed     99.99%
+  38  Chang2015_Kudoa_iwatai_269814_rps17                                    23.13%    passed     96.82%
+  39  Chang2015_Latimeria_menadoensis_106881_rps17                           23.13%    passed    100.00%
+  40  Chang2015_Leucetta_chagosensis_185688_rps17                            23.13%    passed     99.99%
+  41  Chang2015_Ministeria_vibrans_134558_rps17                              23.88%    passed     99.83%
+  42  Chang2015_Mnemiopsis_leidyi_27923_rps17                                23.13%    passed     99.97%
+  43  Chang2015_Monosiga_brevicollis_81824_rps17                             23.13%    passed     99.10%
+  44  Chang2015_Monosiga_ovata_81526_rps17                                   23.13%    passed     99.55%
+  45  Chang2015_Orbicella_faveolata_48498_rps17                              23.13%    passed    100.00%
+  46  Chang2015_Myxobolus_cerebralis_59783_rps17                             23.13%    passed     60.36%
+  47  Chang2015_Nanomia_bijuga_168759_rps17                                  23.13%    passed     99.97%
+  48  Chang2015_Nasonia_vitripennis_7425_rps17                               23.13%    passed     99.92%
+  49  Chang2015_Nematostella_vectensis_45351_rps17                           23.13%    passed    100.00%
+  50  Chang2015_Octopus_vulgaris_6645_rps17                                  30.60%    passed    100.00%
+  51  Chang2015_Oscarella_carmela_386100_rps17                               24.63%    passed    100.00%
+  52  Chang2015_Oscarella_sp_SN-2011_386100_rps17                            23.13%    passed    100.00%
+  53  Chang2015_Patiria_miniata_46514_rps17                                  23.13%    passed    100.00%
+  54  Chang2015_Pediculus_humanus_121225_rps17                               23.13%    passed     99.99%
+  55  Chang2015_Petromyzon_marinus_7757_rps17                                23.13%    passed    100.00%
+  56  Chang2015_Petrosia_ficiformis_68564_rps17                              23.13%    passed    100.00%
+  57  Chang2015_Pleurobrachia_pileus_140457_rps17                            23.13%    passed     99.81%
+  58  Chang2015_Pocillopora_damicornis_46731_rps17                           26.12%    passed    100.00%
+  59  Chang2015_Polypodium_hydriforme_43186_rps17                            23.13%    passed     98.01%
+  60  Chang2015_Porites_australiensis_51061_rps17                            27.61%    passed    100.00%
+  61  Chang2015_Saccoglossus_kowalevskii_10224_rps17                         23.13%    passed    100.00%
+  62  Chang2015_Salpingoeca_sp_86017_rps17                                   23.13%    passed     99.75%
+  63  Chang2015_Sarcotragus_fasciculatus_1234657_rps17                       23.88%    passed    100.00%
+  64  Chang2015_Sphaeroforma_arctica_72019_rps17                             23.13%    passed     98.15%
+  65  Chang2015_Sphaeromyxa_zaharoni_275449_rps17                            24.63%    passed     96.97%
+  66  Chang2015_Stephanoeca_diplocostata_81535_rps17                         23.13%    passed     99.91%
+  67  Chang2015_Stomolophus_meleagris_168796_rps17                           23.13%    passed    100.00%
+  68  Chang2015_Strigamia_maritima_126957_rps17                              24.63%    passed    100.00%
+  69  Chang2015_Strongylocentrotus_purpuratus_7668_rps17                     23.13%    passed    100.00%
+  70  Chang2015_Sycon_ciliatum_27933_rps17                                   23.13%    passed    100.00%
+  71  Chang2015_Sycon_coactum_1009717_rps17                                  23.13%    passed     99.99%
+  72  Chang2015_Tetracapsuloides_bryosalmonae_271932_rps17                   23.13%    passed     94.31%
+  73  Chang2015_Thelohanellus_kitauei_669202_rps17                           32.09%    passed     95.33%
+  74  Chang2015_Trichoplax_adhaerens_10228_rps17                             23.13%    passed     99.97%
+  75  Chang2015_Tripedalia_cystophora_6141_rps17                             23.13%    passed    100.00%
+  76  Chang2015_Urticina_eques_417072_rps17                                  23.13%    passed    100.00%
+  77  Chang2015_Vallicula_multiformis_140489_rps17                           23.13%    passed     99.99%
+  78  Dunn2008_Acropora_millepora_45264_Tribe299                             11.19%    passed     99.98%
+  79  Dunn2008_Anoplodactylus_eroticus_488521_Tribe299                       11.19%    passed     99.84%
+  80  Dunn2008_Argopecten_irradians_31199_Tribe299                           10.45%    passed     99.99%
+  81  Dunn2008_Asterina_pectinifera_7594_Tribe299                            11.19%    passed    100.00%
+  82  Dunn2008_Biomphalaria_glabrata_6526_Tribe299                           22.39%    passed     99.86%
+  83  Dunn2008_Boophilus_microplus_6941_Tribe299                             11.19%    passed     99.59%
+  84  Dunn2008_Capitella_teleta_283909_Tribe299                              11.19%    passed     99.95%
+  85  Dunn2008_Capsaspora_owczarzaki_192875_Tribe299                         14.93%    passed     99.83%
+  86  Dunn2008_Carcinoscorpius_rotundicauda_6848_Tribe299                    11.19%    passed     99.96%
+  87  Dunn2008_Carinoma_mutabilis_187807_Tribe299                            11.19%    passed    100.00%
+  88  Dunn2008_Cerebratulus_lacteus_6221_Tribe299                            10.45%    passed     99.99%
+  89  Dunn2008_Chaetoderma_nitidulum_256131_Tribe299                         11.19%    passed    100.00%
+  90  Dunn2008_Chaetopleura_apiculata_58794_Tribe299                         11.19%    failed      0.00%
+  91  Dunn2008_Chaetopterus_variopedatus_34590_Tribe299                      11.19%    passed     99.84%
+  92  Dunn2008_Ciona_intestinalis_7719_Tribe299                              60.45%    passed     84.41%
+  93  Dunn2008_Crassostrea_virginica_6565_Tribe299                           10.45%    passed    100.00%
+  94  Dunn2008_Cryptococcus_neoformans_5207_Tribe299                          5.97%    passed     44.18%
+  95  Dunn2008_Cyanea_capillata_27804_Tribe299                               11.19%    passed    100.00%
+  96  Dunn2008_Daphnia_magna_35525_Tribe299                                  11.19%    passed     99.60%
+  97  Dunn2008_Drosophila_melanogaster_7227_Tribe299                         23.88%    passed     98.15%
+  98  Dunn2008_Dugesia_japonica_6161_Tribe299                                51.49%    passed     98.97%
+  99  Dunn2008_Echinococcus_granulosus_6210_Tribe299                         14.18%    passed     91.58%
+ 100  Dunn2008_Echinoderes_horni_488522_Tribe299                             11.19%    passed    100.00%
+ 101  Dunn2008_Euperipatoides_kanangrensis_488523_Tribe299                   11.19%    passed     99.68%
+ 102  Dunn2008_Fenneropenaeus_chinensis_139456_Tribe299                      22.39%    passed     99.95%
+ 103  Dunn2008_Gallus_gallus_9031_Tribe299                                   11.19%    passed    100.00%
+ 104  Dunn2008_Haementeria_depressa_279730_Tribe299                          11.19%    passed     99.98%
+ 105  Dunn2008_Hydractinia_echinata_35630_Tribe299                           11.19%    passed    100.00%
+ 106  Dunn2008_Hypsibius_dujardini_232323_Tribe299                            8.96%    passed     99.40%
+ 107  Dunn2008_Lumbricus_rubellus_35632_Tribe299                             11.19%    passed     99.97%
+ 108  Dunn2008_Macrostomum_lignano_282301_Tribe299                           14.18%    passed     99.62%
+ 109  Dunn2008_Mertensiid_sp_140499_Tribe299                                 11.94%    passed     99.99%
+ 110  Dunn2008_Mnemiopsis_leidyi_27923_Tribe299                              11.19%    passed     99.92%
+ 111  Dunn2008_Monosiga_ovata_81526_Tribe299                                  9.70%    passed     99.90%
+ 112  Dunn2008_Nematostella_vectensis_45351_Tribe299                         11.19%    passed    100.00%
+ 113  Dunn2008_Paraplanocera_oligoglena_1468194_Tribe299                     11.94%    passed     83.73%
+ 114  Dunn2008_Priapulus_caudatus_37621_Tribe299                             23.13%    passed     98.75%
+ 115  Dunn2008_Ptychodera_flava_63121_Tribe299                               11.19%    passed    100.00%
+ 116  Dunn2008_Saccharomyces_cerevisiae_4932_Tribe299                         7.46%    passed     53.00%
+ 117  Dunn2008_Saccoglossus_kowalevskii_10224_Tribe299                       11.19%    passed    100.00%
+ 118  Dunn2008_Schmidtea_mediterranea_79327_Tribe299                         10.45%    passed     96.26%
+ 119  Dunn2008_Scutigera_coleoptrata_29022_Tribe299                          23.13%    passed     98.25%
+ 120  Dunn2008_Sphaeroforma_arctica_72019_Tribe299                           53.73%    passed     96.73%
+ 121  Dunn2008_Themiste_lageniformis_216211_Tribe299                         11.19%    passed    100.00%
+ 122  Dunn2008_Trichinella_spiralis_6334_Tribe299                            11.19%    passed     98.88%
+ 123  Dunn2008_Urechis_caupo_6431_Tribe299                                   11.19%    passed    100.00%
+ 124  Dunn2008_Xenoturbella_bocki_242395_Tribe299                            11.94%    passed     99.98%
+ 125  Dunn2008_Xiphinema_index_46003_Tribe299                                 9.70%    passed     99.69%
+ 126  Nosenko2013_ribo_11057_Amphimedon_queenslandica_400682_KOG0187         21.64%    passed    100.00%
+ 127  Nosenko2013_ribo_11057_Asbestopluma_sp_68560_KOG0187                   21.64%    passed     99.99%
+ 128  Nosenko2013_ribo_11057_Carteriospongia_foliascens_593584_KOG0187       44.78%    passed     98.66%
+ 129  Nosenko2013_ribo_11057_Lubomirskia_baicalensis_289074_KOG0187          21.64%    passed    100.00%
+ 130  Nosenko2013_ribo_11057_Pachydictyum_globosum_348075_KOG0187            21.64%    passed     99.91%
+ 131  Nosenko2013_ribo_11057_Suberites_domuncula_55567_KOG0187               21.64%    passed    100.00%
+ 132  Nosenko2013_ribo_11057_Tethya_wilhelma_463344_KOG0187                  21.64%    passed    100.00%
+ 133  Nosenko2013_ribo_11057_Leucetta_chagosensis_185688_KOG0187             21.64%    passed     99.97%
+ 134  Nosenko2013_ribo_11057_Sycon_ciliatum_27933_KOG0187                    22.39%    passed     98.72%
+ 135  Nosenko2013_ribo_11057_Sycon_raphanus_56443_KOG0187                    21.64%    passed     99.94%
+ 136  Nosenko2013_ribo_11057_Hydra_magnipapillata_6087_KOG0187               21.64%    passed     99.99%
+ 137  Nosenko2013_ribo_11057_Hydra_vulgaris_6087_KOG0187                     21.64%    passed     99.99%
+ 138  Nosenko2013_ribo_11057_Hydractinia_echinata_35630_KOG0187              21.64%    passed    100.00%
+ 139  Nosenko2013_ribo_11057_Podocoryna_carnea_6096_KOG0187                  21.64%    passed     99.99%
+ 140  Nosenko2013_ribo_11057_Acropora_hyacinthus_55974_KOG0187               57.46%    passed     96.46%
+ 141  Nosenko2013_ribo_11057_Acropora_millepora_45264_KOG0187                21.64%    passed    100.00%
+ 142  Nosenko2013_ribo_11057_Metridium_senile_6116_KOG0187                   21.64%    passed    100.00%
+ 143  Nosenko2013_ribo_11057_Nematostella_vectensis_45351_KOG0187            21.64%    passed    100.00%
+ 144  Nosenko2013_ribo_11057_Porites_46719_KOG0187                           21.64%    passed    100.00%
+ 145  Nosenko2013_ribo_11057_Beroe_sp_10199_KOG0187                          21.64%    passed     99.97%
+ 146  Nosenko2013_ribo_11057_Mnemiopsis_leidyi_27923_KOG0187                 21.64%    passed     99.97%
+ 147  Nosenko2013_ribo_11057_Mertensiid_sp_140499_KOG0187                    21.64%    passed     99.98%
+ 148  Nosenko2013_ribo_11057_Branchiostoma_floridae_7739_KOG0187             21.64%    passed    100.00%
+ 149  Nosenko2013_ribo_11057_Capitella_teleta_283909_KOG0187                 21.64%    passed     99.92%
+ 150  Nosenko2013_ribo_11057_Ciona_intestinalis_7719_KOG0187                 21.64%    passed    100.00%
+ 151  Nosenko2013_ribo_11057_Danio_rerio_7955_KOG0187                        21.64%    passed    100.00%
+ 152  Nosenko2013_ribo_11057_Molgula_tectiformis_30286_KOG0187               21.64%    passed    100.00%
+ 153  Nosenko2013_ribo_11057_Petromyzon_marinus_7757_KOG0187                 21.64%    passed    100.00%
+ 154  Nosenko2013_ribo_11057_Saccoglossus_kowalevskii_10224_KOG0187          21.64%    passed    100.00%
+ 155  Nosenko2013_ribo_11057_Aplysia_californica_6500_KOG0187                21.64%    passed    100.00%
+ 156  Nosenko2013_ribo_11057_Crassostrea_gigas_29159_KOG0187                 21.64%    passed    100.00%
+ 157  Nosenko2013_ribo_11057_Daphnia_pulex_6669_KOG0187                      21.64%    passed     99.98%
+ 158  Nosenko2013_ribo_11057_Helobdella_robusta_6412_KOG0187                 21.64%    passed     99.97%
+ 159  Nosenko2013_ribo_11057_Ixodes_scapularis_6945_KOG0187                  21.64%    passed    100.00%
+ 160  Nosenko2013_ribo_11057_Nasonia_vitripennis_7425_KOG0187                21.64%    passed     99.98%
+ 161  Nosenko2013_ribo_11057_Tubifex_tubifex_6386_KOG0187                    21.64%    passed     99.99%
+ 162  Nosenko2013_ribo_11057_Trichoplax_sp_H4_10227_KOG0187                  21.64%    passed    100.00%
+ 163  Nosenko2013_ribo_11057_Trichoplax_adhaerens_10228_KOG0187              21.64%    passed     99.97%
+ 164  Nosenko2013_ribo_11057_Monosiga_ovata_81526_KOG0187                    21.64%    passed     99.57%
+ 165  Nosenko2013_ribo_11057_Monosiga_brevicollis_81824_KOG0187              21.64%    passed     99.78%
+ 166  Nosenko2013_ribo_11057_Proterospongia_sp_218847_KOG0187                21.64%    passed     99.79%
+ 167  Nosenko2013_ribo_14615_Acropora_hyacinthus_55974_KOG0187               56.72%    passed     97.86%
+ 168  Nosenko2013_ribo_14615_Acropora_millepora_45264_KOG0187                20.90%    passed    100.00%
+ 169  Nosenko2013_ribo_14615_Allomyces_macrogynus_28583_KOG0187              20.90%    passed     95.24%
+ 170  Nosenko2013_ribo_14615_Amphimedon_queenslandica_400682_KOG0187         20.90%    passed    100.00%
+ 171  Nosenko2013_ribo_14615_Anoplodactylus_eroticus_488521_KOG0187          20.90%    passed    100.00%
+ 172  Nosenko2013_ribo_14615_Aplysia_californica_6500_KOG0187                20.90%    passed    100.00%
+ 173  Nosenko2013_ribo_14615_Asbestopluma_sp_68560_KOG0187                   20.90%    passed    100.00%
+ 174  Nosenko2013_ribo_14615_Batrachochytrium_dendrobatidis_109871_KOG0187   26.12%    passed     99.98%
+ 175  Nosenko2013_ribo_14615_Beroe_sp_10199_KOG0187                          20.90%    passed     99.96%
+ 176  Nosenko2013_ribo_14615_Branchiostoma_floridae_7739_KOG0187             20.90%    passed    100.00%
+ 177  Nosenko2013_ribo_14615_Capitella_teleta_283909_KOG0187                 20.90%    passed     99.95%
+ 178  Nosenko2013_ribo_14615_Capsaspora_owczarzaki_192875_KOG0187            20.90%    passed     99.97%
+ 179  Nosenko2013_ribo_14615_Carteriospongia_foliascens_593584_KOG0187       44.78%    passed     98.66%
+ 180  Nosenko2013_ribo_14615_Ciona_intestinalis_7719_KOG0187                 20.90%    passed    100.00%
+ 181  Nosenko2013_ribo_14615_Crassostrea_gigas_29159_KOG0187                 20.90%    passed    100.00%
+ 182  Nosenko2013_ribo_14615_Cyanea_capillata_27804_KOG0187                  20.90%    passed    100.00%
+ 183  Nosenko2013_ribo_14615_Danio_rerio_7955_KOG0187                        20.90%    passed    100.00%
+ 184  Nosenko2013_ribo_14615_Daphnia_pulex_6669_KOG0187                      20.90%    passed    100.00%
+ 185  Nosenko2013_ribo_14615_Euprymna_scolopes_6613_KOG0187                  27.61%    passed    100.00%
+ 186  Nosenko2013_ribo_14615_Helobdella_robusta_6412_KOG0187                 20.90%    passed     99.98%
+ 187  Nosenko2013_ribo_14615_Hydra_magnipapillata_6087_KOG0187               20.90%    passed    100.00%
+ 188  Nosenko2013_ribo_14615_Hydra_vulgaris_6087_KOG0187                     20.90%    passed     99.99%
+ 189  Nosenko2013_ribo_14615_Hydractinia_echinata_35630_KOG0187              20.90%    passed    100.00%
+ 190  Nosenko2013_ribo_14615_Ixodes_scapularis_6945_KOG0187                  20.90%    passed    100.00%
+ 191  Nosenko2013_ribo_14615_Leucetta_chagosensis_185688_KOG0187             20.90%    passed     99.98%
+ 192  Nosenko2013_ribo_14615_Lubomirskia_baicalensis_289074_KOG0187          20.90%    passed    100.00%
+ 193  Nosenko2013_ribo_14615_Mertensiid_sp_140499_KOG0187                    20.90%    passed     99.98%
+ 194  Nosenko2013_ribo_14615_Metridium_senile_6116_KOG0187                   20.90%    passed    100.00%
+ 195  Nosenko2013_ribo_14615_Mnemiopsis_leidyi_27923_KOG0187                 20.90%    passed     99.96%
+ 196  Nosenko2013_ribo_14615_Molgula_tectiformis_30286_KOG0187               20.90%    passed    100.00%
+ 197  Nosenko2013_ribo_14615_Monosiga_brevicollis_81824_KOG0187              20.90%    passed     99.86%
+ 198  Nosenko2013_ribo_14615_Monosiga_ovata_81526_KOG0187                    20.90%    passed     99.70%
+ 199  Nosenko2013_ribo_14615_Montastraea_faveolata_48498_KOG0187             20.90%    passed    100.00%
+ 200  Nosenko2013_ribo_14615_Nasonia_vitripennis_7425_KOG0187                20.90%    passed    100.00%
+ 201  Nosenko2013_ribo_14615_Nematostella_vectensis_45351_KOG0187            20.90%    passed    100.00%
+ 202  Nosenko2013_ribo_14615_Pachydictyum_globosum_348075_KOG0187            21.64%    passed     99.91%
+ 203  Nosenko2013_ribo_14615_Pedicellina_cernua_43123_KOG0187                20.90%    passed    100.00%
+ 204  Nosenko2013_ribo_14615_Pediculus_humanus_capitis_121226_KOG0187        21.64%    passed    100.00%
+ 205  Nosenko2013_ribo_14615_Petromyzon_marinus_7757_KOG0187                 20.90%    passed    100.00%
+ 206  Nosenko2013_ribo_14615_Phycomyces_blakesleeanus_4837_KOG0187           20.90%    passed     99.58%
+ 207  Nosenko2013_ribo_14615_Podocoryna_carnea_6096_KOG0187                  20.90%    passed     99.99%
+ 208  Nosenko2013_ribo_14615_Porites_46719_KOG0187                           20.90%    passed    100.00%
+ 209  Nosenko2013_ribo_14615_Proterospongia_sp_218847_KOG0187                20.90%    passed     99.75%
+ 210  Nosenko2013_ribo_14615_Saccoglossus_kowalevskii_10224_KOG0187          20.90%    passed    100.00%
+ 211  Nosenko2013_ribo_14615_Scutigera_coleoptrata_29022_KOG0187             20.90%    passed    100.00%
+ 212  Nosenko2013_ribo_14615_Spizellomyces_punctatus_109760_KOG0187          20.90%    passed     94.82%
+ 213  Nosenko2013_ribo_14615_Sphaeroforma_arctica_72019_KOG0187              20.90%    passed     99.55%
+ 214  Nosenko2013_ribo_14615_Strongylocentrotus_purpuratus_7668_KOG0187      20.90%    passed    100.00%
+ 215  Nosenko2013_ribo_14615_Suberites_domuncula_55567_KOG0187               20.90%    passed    100.00%
+ 216  Nosenko2013_ribo_14615_Sycon_raphanus_56443_KOG0187                    20.90%    passed     99.97%
+ 217  Nosenko2013_ribo_14615_Tethya_wilhelma_463344_KOG0187                  20.90%    passed    100.00%
+ 218  Nosenko2013_ribo_14615_Trichoplax_adhaerens_10228_KOG0187              20.90%    passed     99.98%
+ 219  Nosenko2013_ribo_14615_Trichoplax_sp_H4_10227_KOG0187                  20.90%    passed    100.00%
+ 220  Nosenko2013_ribo_14615_Tubifex_tubifex_6386_KOG0187                    20.90%    passed    100.00%
+ 221  Nosenko2013_ribo_14615_Xenoturbella_bocki_242395_KOG0187               20.90%    passed    100.00%
+ 222  Philippe2009_Acropora_millepora_45264_Gene_0097                        20.15%    passed    100.00%
+ 223  Philippe2009_Allomyces_macrogynus_28583_Gene_0097                      20.15%    passed     96.10%
+ 224  Philippe2009_Anoplodactylus_eroticus_488521_Gene_0097                  20.15%    passed    100.00%
+ 225  Philippe2009_Aplysia_californica_6500_Gene_0097                        20.90%    passed    100.00%
+ 226  Philippe2009_Batrachochytrium_dendrobatidis_109871_Gene_0097           26.12%    passed     99.98%
+ 227  Philippe2009_Branchiostoma_floridae_7739_Gene_0097                     20.15%    passed    100.00%
+ 228  Philippe2009_Capitella_teleta_283909_Gene_0097                         20.15%    passed     99.79%
+ 229  Philippe2009_Capsaspora_owczarzaki_192875_Gene_0097                    20.15%    passed     99.94%
+ 230  Philippe2009_Carteriospongia_foliascens_593584_Gene_0097               44.78%    passed     98.66%
+ 231  Philippe2009_Ciona_savignyi_51511_Gene_0097                            20.15%    passed    100.00%
+ 232  Philippe2009_Crassostrea_gigas_29159_Gene_0097                         20.15%    passed    100.00%
+ 233  Philippe2009_Cyanea_capillata_27804_Gene_0097                          20.15%    passed    100.00%
+ 234  Philippe2009_Danio_rerio_7955_Gene_0097                                20.15%    passed    100.00%
+ 235  Philippe2009_Daphnia_pulex_6669_Gene_0097                              20.15%    passed     99.99%
+ 236  Philippe2009_Euperipatoides_kanangrensis_488523_Gene_0097              21.64%    passed     99.97%
+ 237  Philippe2009_Euprymna_scolopes_6613_Gene_0097                          27.61%    passed    100.00%
+ 238  Philippe2009_Helobdella_robusta_6412_Gene_0097                         20.15%    passed     99.99%
+ 239  Philippe2009_Hydra_magnipapillata_6087_Gene_0097                       20.15%    passed    100.00%
+ 240  Philippe2009_Hydractinia_echinata_35630_Gene_0097                      20.15%    passed    100.00%
+ 241  Philippe2009_Ixodes_scapularis_6945_Gene_0097                          20.15%    passed    100.00%
+ 242  Philippe2009_Leucetta_chagosensis_185688_Gene_0097                     20.15%    passed     99.99%
+ 243  Philippe2009_Metridium_senile_6116_Gene_0097                           20.15%    passed    100.00%
+ 244  Philippe2009_Mnemiopsis_leidyi_27923_Gene_0097                         20.15%    passed     99.98%
+ 245  Philippe2009_Molgula_tectiformis_30286_Gene_0097                       20.15%    passed    100.00%
+ 246  Philippe2009_Monosiga_brevicollis_81824_Gene_0097                      20.15%    passed     99.55%
+ 247  Philippe2009_Monosiga_ovata_81526_Gene_0097                            20.15%    passed     99.79%
+ 248  Philippe2009_Montastraea_faveolata_48498_Gene_0097                     20.15%    passed    100.00%
+ 249  Philippe2009_Nasonia_vitripennis_7425_Gene_0097                        20.15%    passed     99.99%
+ 250  Philippe2009_Nematostella_vectensis_45351_Gene_0097                    20.15%    passed    100.00%
+ 251  Philippe2009_Pedicellina_cernua_43123_Gene_0097                        20.15%    passed    100.00%
+ 252  Philippe2009_Pediculus_humanus_121225_Gene_0097                        21.64%    passed    100.00%
+ 253  Philippe2009_Petromyzon_marinus_7757_Gene_0097                         20.15%    passed    100.00%
+ 254  Philippe2009_Phycomyces_blakesleeanus_4837_Gene_0097                   20.90%    passed     99.58%
+ 255  Philippe2009_Podocoryne_carnea_6096_Gene_0097                          20.15%    passed     99.99%
+ 256  Philippe2009_Proterospongia_sp_218847_Gene_0097                        20.15%    passed     99.31%
+ 257  Philippe2009_Amphimedon_queenslandica_400682_Gene_0097                 20.15%    passed    100.00%
+ 258  Philippe2009_Rhizopus_oryzae_64495_Gene_0097                           20.15%    passed     99.99%
+ 259  Philippe2009_Saccoglossus_kowalevskii_10224_Gene_0097                  20.15%    passed    100.00%
+ 260  Philippe2009_Scutigera_coleoptrata_29022_Gene_0097                     20.15%    passed     99.99%
+ 261  Philippe2009_Sphaeroforma_arctica_72019_Gene_0097                      20.15%    passed     99.38%
+ 262  Philippe2009_Spizellomyces_punctatus_109760_Gene_0097                  20.15%    passed     97.13%
+ 263  Philippe2009_Strongylocentrotus_purpuratus_7668_Gene_0097              20.15%    passed    100.00%
+ 264  Philippe2009_Suberites_domuncula_55567_Gene_0097                       20.15%    passed    100.00%
+ 265  Philippe2009_Sycon_raphanus_56443_Gene_0097                            21.64%    passed     99.99%
+ 266  Philippe2009_Trichoplax_adhaerens_10228_Gene_0097                      20.15%    passed     99.99%
+ 267  Philippe2009_Tubifex_tubifex_6386_Gene_0097                            20.90%    passed    100.00%
+ 268  Philippe2009_Xenoturbella_bocki_242395_Gene_0097                       20.15%    passed    100.00%
+ 269  Philippe2009_Mertensiid_sp_140499_Gene_0097                            20.15%    passed     99.99%
+ 270  Ryan2013_est_Asterina_pectinifera_7594_gene323                         11.94%    passed    100.00%
+ 271  Ryan2013_est_Strongylocentrotus_purpuratus_7668_gene323                61.94%    passed     99.06%
+ 272  Ryan2013_est_Capitella_teleta_283909_gene323                           11.94%    passed    100.00%
+ 273  Ryan2013_est_Branchiostoma_floridae_7739_gene323                       36.57%    passed     99.97%
+ 274  Ryan2013_est_Helobdella_robusta_6412_gene323                           11.94%    passed     99.99%
+ 275  Ryan2013_est_Lottia_gigantea_225164_gene323                            11.94%    passed     92.87%
+ 276  Ryan2013_est_Saccoglossus_kowalevskii_10224_gene323                    11.94%    passed    100.00%
+ 277  Ryan2013_est_Drosophila_melanogaster_7227_gene323                      11.94%    passed     99.96%
+ 278  Ryan2013_est_Anoplodactylus_eroticus_488521_gene323                    11.94%    passed     99.94%
+ 279  Ryan2013_est_Daphnia_pulex_6669_gene323                                11.94%    passed     99.82%
+ 280  Ryan2013_est_Petromyzon_marinus_7757_gene323                           11.94%    passed     99.31%
+ 281  Ryan2013_est_Ciona_intestinalis_7719_gene323                           60.45%    passed     84.41%
+ 282  Ryan2013_est_Acropora_palmata_6131_gene323                             11.94%    passed     99.94%
+ 283  Ryan2013_est_Acropora_millepora_45264_gene323                          11.94%    passed     99.99%
+ 284  Ryan2013_est_Nematostella_vectensis_45351_gene323                      11.94%    passed     99.99%
+ 285  Ryan2013_est_Anemonia_viridis_51769_gene323                            11.94%    passed    100.00%
+ 286  Ryan2013_est_Capsaspora_owczarzaki_192875_gene323                      11.94%    passed     99.74%
+ 287  Ryan2013_est_Monosiga_brevicollis_81824_gene323                        13.43%    passed     99.80%
+ 288  Ryan2013_est_Salpingoeca_rosetta_946362_gene323                        11.19%    passed     99.81%
+ 289  Ryan2013_est_Amphimedon_queenslandica_400682_gene323                   11.94%    passed    100.00%
+ 290  Ryan2013_est_Lubomirskia_baicalensis_289074_gene323                    26.12%    passed     99.98%
+ 291  Ryan2013_est_Mnemiopsis_leidyi_27923_gene323                           11.94%    passed     99.85%
+ 292  Ryan2013_est_Hydra_vulgaris_01_6087_gene323                            35.82%    passed     99.78%
+ 293  Ryan2013_est_Trichoplax_adhaerens_10228_gene323                        11.19%    passed     99.95%
+ 294  Ryan2013_est_Cyanea_capillata_27804_gene323                            11.94%    passed    100.00%
+ 295  Ryan2013_est_Crassostrea_virginica_6565_gene323                        13.43%    passed     99.98%
+ 296  Ryan2013_est_Schmidtea_mediterranea_79327_gene323                      11.19%    passed     96.40%
+ 297  Ryan2013_est_Cerebratulus_lacteus_6221_gene323                         11.19%    passed     99.99%
+ 298  Ryan2013_est_Suberites_domuncula_55567_gene323                         13.43%    passed    100.00%
+ 299  Ryan2013_est_Hydractinia_echinata_35630_gene323                        11.94%    passed    100.00%
+ 300  Ryan2013_est_Metridium_senile_6116_gene323                             11.94%    passed    100.00%
+ 301  Ryan2013_est_Porites_astreoides_104758_gene323                         17.16%    passed     99.50%
+ 302  Ryan2013_est_Orbicella_faveolata_48498_gene323                         11.94%    passed     99.95%
+ 303  Ryan2013_est_Boophilus_microplus_6941_gene323                          11.94%    passed     99.91%
+ 304  Ryan2013_est_Symsagittifera_roscoffensis_84072_gene323                 11.19%    passed     58.73%
+ 305  Ryan2013_est_Monosiga_ovata_81526_gene323                              11.19%    passed     95.88%
+ 306  Ryan2013_est_Gallus_gallus_9031_gene323                                11.94%    passed    100.00%
+ 307  Ryan2013_est_Meara_stichopi_84115_gene323                              11.94%    passed     74.40%
+ 308  Ryan2013_est_Euperipatoides_kanangrensis_488523_gene323                11.94%    passed     99.86%
+ 309  Ryan2013_est_Xiphinema_index_46003_gene323                              9.70%    passed     98.40%
+ 310  Ryan2013_est_Convolutriloba_longifissura_536236_gene323                11.19%    passed     71.24%
+ 311  Ryan2013_est_Mertensiid_sp_140499_gene323                              11.94%    passed     99.99%
+ 312  Ryan2013_est_Paraplanocera_oligoglena_1468194_gene323                  12.69%    passed     87.14%
+ 313  Ryan2013_est_Nemertoderma_westbladi_172109_gene323                     11.94%    passed     97.52%
+ 314  Ryan2013_est_Echinoderes_horni_488522_gene323                          11.94%    passed    100.00%
+ 315  Ryan2013_est_Ptychodera_flava_63121_gene323                            11.94%    passed    100.00%
+ 316  Ryan2013_est_Sphaeroforma_arctica_72019_gene323                        54.48%    passed     95.97%
+ 317  Ryan2013_est_Podocoryna_carnea_6096_gene323                            52.24%    passed     63.19%
+ 318  Ryan2013_est_Sycon_raphanus_56443_gene323                              13.43%    passed     99.98%
+ 319  Ryan2013_est_Xenoturbella_bocki_242395_gene323                         11.94%    passed     99.98%
+ 320  Ryan2013_est_Carteriospongia_foliascens_593584_gene323                 35.07%    passed     95.10%
+ 321  Ryan2013_est_Leucetta_chagosensis_185688_gene323                       12.69%    passed     94.06%
+WARNING: 11 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                                                  20.92%  1 sequences failed composition chi2 test (p-value<5%; df=19)
+NOTE: 1 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: Philippe2009_Carteriospongia_foliascens_593584_Gene_0097 (identical to Nosenko2013_ribo_11057_Carteriospongia_foliascens_593584_KOG0187) is ignored but added at the end
+
+For your convenience alignment with unique sequences printed to /proj/metazoa_phylo/private/animal_tree_root_fork/add_new_data_test/LG+C60+F_results/iqtree/component190/LG+C60+F_component190.uniqueseq.phy
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.089 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 501924)...
+Model LG+C60+F is alias for LG+POISSON+G+FMIX{C60pi1:1:0.0169698865,C60pi2:1:0.0211683374,C60pi3:1:0.0276589079,C60pi4:1:0.0065675964,C60pi5:1:0.0141221416,C60pi6:1:0.0068774834,C60pi7:1:0.0146909701,C60pi8:1:0.0067225777,C60pi9:1:0.0018396660,C60pi10:1:0.0102547197,C60pi11:1:0.0230896163,C60pi12:1:0.0057941033,C60pi13:1:0.0125394534,C60pi14:1:0.0204526478,C60pi15:1:0.0070629602,C60pi16:1:0.0117982741,C60pi17:1:0.0068334668,C60pi18:1:0.0433775839,C60pi19:1:0.0318278731,C60pi20:1:0.0222546108,C60pi21:1:0.0102264969,C60pi22:1:0.0150545891,C60pi23:1:0.0134159878,C60pi24:1:0.0148552065,C60pi25:1:0.0239111516,C60pi26:1:0.0128776278,C60pi27:1:0.0222318842,C60pi28:1:0.0247444742,C60pi29:1:0.0214274810,C60pi30:1:0.0115001882,C60pi31:1:0.0076017389,C60pi32:1:0.0130258568,C60pi33:1:0.0093701965,C60pi34:1:0.0467194264,C60pi35:1:0.0441940314,C60pi36:1:0.0322263154,C60pi37:1:0.0402999891,C60pi38:1:0.0150234227,C60pi39:1:0.0104589903,C60pi40:1:0.0214742395,C60pi41:1:0.0154957836,C60pi42:1:0.0101789953,C60pi43:1:0.0227980379,C60pi44:1:0.0123204539,C60pi45:1:0.0066777583,C60pi46:1:0.0004150083,C60pi47:1:0.0344385130,C60pi48:1:0.0113663379,C60pi49:1:0.0127143049,C60pi50:1:0.0124323741,C60pi51:1:0.0262124415,C60pi52:1:0.0064994957,C60pi53:1:0.0103203293,C60pi54:1:0.0142463512,C60pi55:1:0.0215600067,C60pi56:1:0.0199150700,C60pi57:1:0.0038964200,C60pi58:1:0.0113448855,C60pi59:1:0.0128595846,C60pi60:1:0.0117656776}+F
+WARNING: W is not present in alignment that may cause numerical problems
+
+NOTE: 1883 MB RAM (1 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -7688.387
+2. Current log-likelihood: -7139.382
+3. Current log-likelihood: -7129.264
+4. Current log-likelihood: -7126.555
+5. Current log-likelihood: -7125.675
+6. Current log-likelihood: -7125.462
+Optimal log-likelihood: -7125.366
+Mixture weights: 0.169 0.003 0.000 0.000 0.000 0.000 0.025 0.000 0.000 0.000 0.109 0.000 0.000 0.000 0.000 0.000 0.000 0.017 0.030 0.000 0.000 0.000 0.032 0.000 0.000 0.010 0.000 0.000 0.000 0.046 0.062 0.000 0.000 0.000 0.018 0.058 0.015 0.010 0.047 0.000 0.000 0.000 0.000 0.037 0.025 0.036 0.000 0.000 0.017 0.041 0.063 0.025 0.029 0.000 0.020 0.000 0.000 0.000 0.047 0.000 0.012
+Gamma shape alpha: 0.534
+Parameters optimization took 6 rounds (252.235 sec)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+Computing ML distances based on estimated model parameters... 27.931 sec
+WARNING: Some pairwise ML distances are too long (saturated)
+Computing BIONJ tree...
+0.119 seconds
+Log-likelihood of BIONJ tree: -7224.450
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 10.436 second
+Computing log-likelihood of 98 initial trees ... 1728.880 seconds
+Current best score: -7084.328
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 1: -7017.303
+Iteration 10 / LogL: -7041.323 / Time: 1h:44m:15s
+Iteration 20 / LogL: -7064.081 / Time: 2h:54m:7s
+Finish initializing candidate tree set (20)
+Current best tree score: -7017.303 / CPU time: 10052.323
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 23: -7009.143
+Iteration 30 / LogL: -7012.690 / Time: 4h:6m:34s (13h:10m:42s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 37: -7008.413
+Iteration 40 / LogL: -7018.069 / Time: 5h:21m:30s (13h:19m:37s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 46: -7005.549
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 47: -6999.254
+Iteration 50 / LogL: -7034.964 / Time: 6h:37m:59s (13h:7m:52s left)
+Log-likelihood cutoff on original alignment: -7080.271
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 51: -6997.593
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 58: -6996.168
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 60: -6994.693
+Iteration 60 / LogL: -6994.693 / Time: 7h:53m:45s (13h:22m:58s left)
+Iteration 70 / LogL: -6997.060 / Time: 9h:11m:44s (11h:59m:40s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 72: -6990.671
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 74: -6990.339
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 77: -6987.904
+Iteration 80 / LogL: -7128.419 / Time: 10h:34m:20s (12h:58m:51s left)
+Iteration 90 / LogL: -7004.198 / Time: 11h:45m:6s (11h:29m:15s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 100: -6984.503
+Iteration 100 / LogL: -6984.503 / Time: 12h:57m:46s (13h:5m:37s left)
+Log-likelihood cutoff on original alignment: -7080.271
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.966
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 110 / LogL: -7041.408 / Time: 14h:8m:28s (11h:40m:34s left)
+Iteration 120 / LogL: -6993.636 / Time: 15h:17m:26s (10h:16m:46s left)
+Iteration 130 / LogL: -6986.790 / Time: 16h:26m:14s (8h:55m:10s left)
+Estimate model parameters (epsilon = 0.100)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BETTER TREE FOUND at iteration 133: -6984.450
+Iteration 140 / LogL: -7112.044 / Time: 17h:26m:36s (11h:40m:15s left)
